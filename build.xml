@@ -9,11 +9,27 @@
     <!-- Make these commands available by default. -->
     <import file="vendor/palantirnet/the-build/tasks/drupal.xml" />
     <import file="vendor/palantirnet/the-build/tasks/acquia.xml" />
+    <import file="build/styleguide.xml" />
 
 
     <!-- Default target: build -->
     <target name="build" description="Build the application.">
         <phingcall target="drupal-build" />
+        <property name="styleguide.dir" value="styleguide" />
+        <resolvepath propertyName="styleguide.dir.absolute_path" file="${styleguide.dir}" />
+        <resolvepath propertyname="styleguide_code" file="${styleguide.dir}/build/assets" />
+
+        <resolvepath propertyname="custom_theme" file="${drupal.root}/themes/custom/famsf_digital_stories_theme" />
+        <phingcall target="styleguide-link">
+            <property name="css_source" value="${styleguide_code}/css" />
+            <property name="css_dest" value="${custom_theme}/css" />
+
+            <property name="js_source" value="${styleguide_code}/js" />
+            <property name="js_dest" value="${custom_theme}/js" />
+
+            <property name="imgs_source" value="${styleguide_code}/imgs" />
+            <property name="imgs_dest" value="${custom_theme}/imgs" />
+        </phingcall>
     </target>
 
 
