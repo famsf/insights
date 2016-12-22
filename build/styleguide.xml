@@ -1,0 +1,34 @@
+<project name="Styleguide" default="styleguide-generate">
+    <!--
+      Include this file in your build.xml with:
+        <import file="build/styleguide.xml" />
+      -->
+
+
+    <!--
+        Target: styleguide-link-css
+
+        Link the styleguide css into the theme.
+        -->
+    <target name="styleguide-link">
+        <phing phingfile="${phing.dir.boilerplate}/lib/artifacts.xml" target="include-resource" inheritAll="false" dir=".">
+            <property name="artifact_mode" value="${build.artifact_mode}" />
+            <property name="resource_source" value="${css_source}" />
+            <property name="resource_dest" value="${css_dest}" />
+        </phing>
+
+        <phing phingfile="${phing.dir.boilerplate}/lib/artifacts.xml" target="include-resource" inheritAll="false" dir=".">
+            <property name="artifact_mode" value="${build.artifact_mode}" />
+            <property name="resource_source" value="${imgs_source}" />
+            <property name="resource_dest" value="${imgs_dest}" />
+        </phing>
+
+        <phing phingfile="${phing.dir.boilerplate}/lib/artifacts.xml" target="include-resource" inheritAll="false" dir=".">
+            <property name="artifact_mode" value="${build.artifact_mode}" />
+            <property name="resource_source" value="${js_source}" />
+            <property name="resource_dest" value="${js_dest}" />
+        </phing>
+
+    </target>
+
+</project>
