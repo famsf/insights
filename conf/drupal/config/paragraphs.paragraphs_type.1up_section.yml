@@ -1,0 +1,6 @@
+uuid: e121dfb4-6edd-4db2-b2f8-52ca6bfcc3fe
+langcode: en
+status: true
+dependencies: {  }
+id: 1up_section
+label: 'Full Width Section (1up)'

@@ -1,0 +1,19 @@
+uuid: 09eea6ed-393e-4128-884e-1ba089425842
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_nav_title
+    - paragraphs.paragraphs_type.2up_section
+id: paragraph.2up_section.field_section_nav_title
+field_name: field_section_nav_title
+entity_type: paragraph
+bundle: 2up_section
+label: Section_nav_title
+description: 'Optional title to be displayed in the main navigation menu, linking to this section.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
