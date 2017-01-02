@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.digital_story.field_header_section
     - field.field.node.digital_story.field_main_navigation
     - field.field.node.digital_story.field_section
     - field.field.node.digital_story.field_skin
@@ -15,6 +16,14 @@ targetEntityType: node
 bundle: digital_story
 mode: default
 content:
+  field_header_section:
+    type: entity_reference_revisions_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
   field_section:
     type: entity_reference_revisions_entity_view
     weight: 101
