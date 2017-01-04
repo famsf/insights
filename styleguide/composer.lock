@@ -920,6 +920,7 @@
         },
         {
             "name": "react/socket",
+<<<<<<< HEAD
             "version": "v0.4.4",
             "source": {
                 "type": "git",
@@ -930,15 +931,38 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/reactphp/socket/zipball/d61930e1aefb2a704b0adbe6bb97ee4a835d6a96",
                 "reference": "d61930e1aefb2a704b0adbe6bb97ee4a835d6a96",
+=======
+            "version": "v0.4.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/reactphp/socket.git",
+                "reference": "ce015ec5879b96f5d30905f035f223aa85013fcc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/reactphp/socket/zipball/ce015ec5879b96f5d30905f035f223aa85013fcc",
+                "reference": "ce015ec5879b96f5d30905f035f223aa85013fcc",
+>>>>>>> d74b52a2943ca527f82470e3f695c1ae6783a097
                 "shasum": ""
             },
             "require": {
                 "evenement/evenement": "~2.0|~1.0",
                 "php": ">=5.3.0",
                 "react/event-loop": "0.4.*|0.3.*",
+<<<<<<< HEAD
                 "react/stream": "^0.4.2"
             },
             "type": "library",
+=======
+                "react/stream": "0.4.*|0.3.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.4-dev"
+                }
+            },
+>>>>>>> d74b52a2943ca527f82470e3f695c1ae6783a097
             "autoload": {
                 "psr-4": {
                     "React\\Socket\\": "src"
@@ -952,7 +976,11 @@
             "keywords": [
                 "Socket"
             ],
+<<<<<<< HEAD
             "time": "2016-12-19 22:52:38"
+=======
+            "time": "2016-03-01 20:10:35"
+>>>>>>> d74b52a2943ca527f82470e3f695c1ae6783a097
         },
         {
             "name": "react/stream",

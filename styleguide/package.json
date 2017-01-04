@@ -1,20 +1,25 @@
 {
   "name": "styleguide",
   "version": "1.0.0",
-  "description": "",
+  "description": "FAMSF Digital Stories Styleguide",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "butler": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js",
+    "develop": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js develop",
+    "tests": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js test",
+    "deploy": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js deploy"
   },
-  "author": "Michellanne Li",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/palantirnet/famsf-digital-stories.git"
+  },
+  "author": "Palantir.net",
   "license": "ISC",
-  "dependencies": {
-    "butler": "github:palantirnet/butler#spress-task"
+  "bugs": {
+    "url": "https://github.com/palantirnet/famsf-digital-stories/issues"
   },
-  "scripts": {
-  "butler": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js",
-  "develop": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js develop",
-  "tests": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js test",
-  "deploy": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js deploy"
+  "homepage": "https://github.com/palantirnet/famsf-digital-stories#readme",
+  "dependencies": {
+    "butler": "git://github.com/palantirnet/butler.git#b327e859b8d94969188dd35d056eb473d7706664"
   }
 }
