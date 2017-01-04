@@ -34,6 +34,13 @@ html {
   @include breakpoint($bp3) {
     font-size: ($base-font-size / 16px) * 124%;
   }
+  // Styles below are needed for the pagepiling js library
+  overflow:hidden;
+  margin:0;
+  padding:0;
+
+  /*Avoid flicker on slides transitions for mobile phones #336 */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 /**
