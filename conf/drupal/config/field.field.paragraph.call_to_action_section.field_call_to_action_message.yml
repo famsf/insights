@@ -1,0 +1,21 @@
+uuid: 4990597b-6c95-4bf1-b35f-0802ecf63680
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_call_to_action_message
+    - paragraphs.paragraphs_type.call_to_action_section
+  module:
+    - text
+id: paragraph.call_to_action_section.field_call_to_action_message
+field_name: field_call_to_action_message
+entity_type: paragraph
+bundle: call_to_action_section
+label: 'Call to Action Message'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

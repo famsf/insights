@@ -4,3 +4,9 @@ description: A custom drupal theme for FAMSF Digital Stories.
 core: 8.x
 libraries:
   - famsf_digital_stories_theme/global-styling
+
+regions:
+  main_nav: 'Main navigation'
+  content: Content
+  header: Header
+  footer: Footer

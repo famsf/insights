@@ -1,0 +1,53 @@
+uuid: 712a3078-8064-466a-887e-931f8f68496b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_section
+    - node.type.digital_story
+    - paragraphs.paragraphs_type.1up_section
+    - paragraphs.paragraphs_type.2up_section
+    - paragraphs.paragraphs_type.3up_section
+    - paragraphs.paragraphs_type.call_to_action_section
+    - paragraphs.paragraphs_type.section_divider
+  module:
+    - entity_reference_revisions
+id: node.digital_story.field_section
+field_name: field_section
+entity_type: node
+bundle: digital_story
+label: Sections
+description: 'Add a section of content.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      1up_section: 1up_section
+      2up_section: 2up_section
+      3up_section: 3up_section
+      call_to_action_section: call_to_action_section
+      section_divider: section_divider
+    target_bundles_drag_drop:
+      1up_section:
+        enabled: true
+        weight: 7
+      2up_section:
+        enabled: true
+        weight: 8
+      3up_section:
+        enabled: true
+        weight: 9
+      call_to_action_section:
+        enabled: true
+        weight: 10
+      section_divider:
+        enabled: true
+        weight: 11
+      text_area:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

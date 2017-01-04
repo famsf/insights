@@ -1,0 +1,21 @@
+uuid: 2713b8bc-44ac-4666-9553-53395b5e8a1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_call_to_action_message
+    - paragraphs.paragraphs_type.section_divider
+  module:
+    - text
+id: paragraph.section_divider.field_call_to_action_message
+field_name: field_call_to_action_message
+entity_type: paragraph
+bundle: section_divider
+label: 'Call to Action Message'
+description: 'The message text associated with the call to action section.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

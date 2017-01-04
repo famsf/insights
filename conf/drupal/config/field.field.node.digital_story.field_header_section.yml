@@ -1,0 +1,45 @@
+uuid: 4e710ed9-4819-48fd-bb78-e1eba54f6e41
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_header_section
+    - node.type.digital_story
+    - paragraphs.paragraphs_type.section_divider
+  module:
+    - entity_reference_revisions
+id: node.digital_story.field_header_section
+field_name: field_header_section
+entity_type: node
+bundle: digital_story
+label: 'header section'
+description: 'Use this section to follow the convention of having a main title section at the top of the page. '
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      section_divider: section_divider
+    target_bundles_drag_drop:
+      1up_section:
+        weight: 7
+        enabled: false
+      2up_section:
+        weight: 8
+        enabled: false
+      3up_section:
+        weight: 9
+        enabled: false
+      call_to_action_section:
+        weight: 10
+        enabled: false
+      section_divider:
+        enabled: true
+        weight: 11
+      text_area:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions
