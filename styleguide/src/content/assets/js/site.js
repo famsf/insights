@@ -33,7 +33,10 @@
         animateAnchor: false,
 
         //events
-        onLeave: function(index, nextIndex, direction){},
+        onLeave: function(index, nextIndex, direction){
+          var nextActiveSection = nextIndex - 1;
+          $('section.section').eq(nextActiveSection).find('*.animated').addClass('go');
+        },
         afterLoad: function(anchorLink, index){},
         afterRender: function(){},
       });
