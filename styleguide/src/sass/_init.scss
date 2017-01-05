@@ -81,12 +81,12 @@ $base-font-family: $helvetica; // The font family set on the html element.
 $font-monospace: $courier;
 
 // Sass color variables, etc.
-$black: #222222;
-$gray-dark: #444444;
-$gray-medium: #888888;
-$gray-light: #F0F0F0;
+$black: #000;
+$gray-dark: #3e3e3e;
+$gray-medium: #a8abad;
+$gray-light: #ececec;
 $off-white: #fbfbfb;
-$white: #ffffff;
+$white: #fff;
 $white-60: rgba($white, .6);
 $white-30: rgba($white, .3);
 $yellow: #ff0;
