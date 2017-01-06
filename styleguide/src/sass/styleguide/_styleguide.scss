@@ -31,7 +31,7 @@
 
 // Update this class as needed to differentiate styleguide header from the header component
 .styleguide-header {
-  background-color: $white;
+
 }
 
 .styleguide-copyright {
@@ -43,7 +43,7 @@
 }
 
 .styleguide-label {
-  color: $gray-dark;
+  color: $gray-light;
 }
 
 .styleguide-section {
@@ -57,12 +57,11 @@
 }
 
 .styleguide-component {
-  background-color: $white;
   padding: rhythm(2) 0;
 }
 
 .styleguide-description {
-  background-color: $gray-light;
+  background-color: transparentize($background-dk, .5);
   margin: rhythm(1) 0;
   padding: rhythm(1) 0;
 }
