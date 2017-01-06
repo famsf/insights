@@ -4,11 +4,13 @@ title: Styleguide
 ---
 
 {% block content %}
-<ul id="myMenu" style="position: fixed; left:0; top:0; z-index: 100;">
+<ul id="myMenu" style="position: fixed; left:0; top:0; z-index: 100; list-style: none; background: rgba(125, 125, 125, .7); padding: 1em;">
     <li data-menuanchor="firstPage" class="active"><a href="#firstPage">First section</a></li>
     <li data-menuanchor="secondPage"><a href="#secondPage">Second section</a></li>
     <li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li>
     <li data-menuanchor="fourthPage"><a href="#fourthPage">Fourth section</a></li>
+    <li data-menuanchor="fifthPage"><a href="#fifthPage">Fifth section</a></li>
+    <li data-menuanchor="sixthPage"><a href="#sixthPage">sixth section</a></li>
 </ul>
 <main id="pagepiling" >
   <section class="section animatedParent" id="firstPage" style="background-image: url('/assets/imgs/proof-of-concept/12_forest_Ordrupgaard-Museum.jpg'); background-attachment: fixed;
@@ -18,8 +20,9 @@ title: Styleguide
     <div class="container">
       <main class="l-column">
         <br><br><br><br><br><br><br><br>
-        <h1 class="animated fadeInRight">something animated</h1>
+        <h1 class="animated fadeInRight">Animated Header</h1>
         Some section 1
+        <button class="next-page animated fadeInDownShort delay-250" style="position: absolute; bottom: 1em; left: 50%;">next</button>
       </main>
     </div>
   </section>
@@ -62,6 +65,22 @@ title: Styleguide
         <p>
         Debet sensibus vel ad, ut dico diceret verterem usu, mel aliquip consectetuer id. Et mei regione iracundia suscipiantur, at sed quidam consequat, ius patrioque democritum moderatius id. Mentitum recteque forensibus et per, duo populo scripta eu. Ridens minimum liberavisse mel in.
         </p>
+        <div class="segment--expandable">
+          <div class="expander-target expander__is-closed">
+            <h3>Additional details here if you are interested</h3>
+            <p>
+            Diam vocibus ei his, et pro mollis principes, duo ad nullam offendit neglegentur. Eros invidunt in eos, nam case legimus explicari ea, mel te option quaerendum mediocritatem. Ad per elitr delenit omittam, ea qui vivendo docendi. Per ex simul essent, quo ut tale tollit, ex amet nulla est. Vel nisl vivendum interesset et. Vim accusam euripidis referrentur eu.
+            </p>
+            <p>
+            Eum feugiat eruditi appetere ei, ei mei melius aliquip reprehendunt, no mea malorum molestiae liberavisse. Ne meliore evertitur sit. Impetus dolores periculis mel in, mei falli nullam eripuit cu. Pri ea impetus dolorem, nemore maiorum mandamus ex qui. An nec convenire vituperatoribus. At nec fugit dissentiunt.
+            </p>
+            <p>
+            Debet sensibus vel ad, ut dico diceret verterem usu, mel aliquip consectetuer id. Et mei regione iracundia suscipiantur, at sed quidam consequat, ius patrioque democritum moderatius id. Mentitum recteque forensibus et per, duo populo scripta eu. Ridens minimum liberavisse mel in.
+            </p>
+          </div>
+          <button class="expander-link">Read more about this</button>
+        </div>
+        <button class="next-page animated fadeInDownShort delay-1000" style="margin: 1em auto; display: block">next</button>
       </main>
     </div>
   </section>
@@ -70,8 +89,7 @@ title: Styleguide
     <div class="container">
       <main class="l-column">
         <h2>Some section 3</h2>
-
-<p>Lorem ipsum dolor sit amet, pri eu virtute hendrerit, pro labores debitis deserunt ei, cu ius audire reformidans. Ex timeam impedit mel, id mea veri numquam efficiantur. Duo facete bonorum abhorreant ad, pro nisl apeirian ut. In mei decore tacimates, malis accommodare his ei. Et quaeque scripserit vel.
+        <p>Lorem ipsum dolor sit amet, pri eu virtute hendrerit, pro labores debitis deserunt ei, cu ius audire reformidans. Ex timeam impedit mel, id mea veri numquam efficiantur. Duo facete bonorum abhorreant ad, pro nisl apeirian ut. In mei decore tacimates, malis accommodare his ei. Et quaeque scripserit vel.
         </p>
         <p>
         His dicam homero fabulas et, ea duo error altera honestatis, modo percipitur scripserit at eos. His te admodum praesent dissentiunt, duo id iracundia definitionem. An delectus forensibus duo. Adhuc populo percipitur ea nam. Cotidieque interpretaris vim et.
@@ -80,20 +98,68 @@ title: Styleguide
         <p>
         Iisque suscipit mea ea, at ubique partiendo iracundia usu. Alii mollis omittantur nam ut, in eum diam solet definiebas, ea eos stet voluptatum. Eos delectus temporibus no, nam ad nulla admodum scripserit. Munere equidem te has. Duis facete et sea, ei appetere nominati consetetur mel. Eam in tation iudicabit evertitur, ea impetus antiopam sit, falli imperdiet at qui.
         </p>
+        <button class="next-page animated fadeInDownShort delay-250" style="margin: 1em auto; display: block">next</button>
       </main>
     </div>
   </section>
   <section class="section pp-scrollable" id="fourthPage" style="background: #000000;">
-    <video autoplay="autoplay" style="width:100%" title="Etretat GettyImages-150708198" loop="loop" class="video-background">
-      <source src="{{ site.url }}/assets/imgs/proof-of-concept/Etretat_GettyImages-150708198.m4v" type="video/mp4" />
+    <video autoplay="autoplay" muted="muted" preload="metadata" style="width:100%" title="Etretat GettyImages-150708198" loop="loop" class="video-background">
+      <source src="{{ site.url }}/assets/imgs/proof-of-concept/Etretat_GettyImages-150708198.mp4" type="video/mp4" />
       <source src="{{ site.url }}/assets/imgs/proof-of-concept/Etretat_GettyImages-150708198.webm" type="video/webm" />
     </video>
+    <div class="container">
+      <footer class="l-column" style="color: white; position: absolute; bottom: 0;">
+        Text in front of video
+      </footer>
+      <button class="next-page animated fadeInDownShort delay-250" style="position: absolute; bottom: 1em; left: 50%;">next</button>
+    </div>
+
+  </section>
+  <section class="section pp-scrollable" id="fifthPage" style="color: #ffffff; background: #000000;">
+      <div class="video-holder" style="position: relative; height: 50vh; overflow: hidden; display: flex; align-items: center; text-align: center;">
+        <video autoplay muted preload="metadata"  style="width:100%" title="Etretat GettyImages-150708198" loop="loop" class="video-background">
+          <source src="{{ site.url }}/assets/imgs/proof-of-concept/Etretat_GettyImages-150708198.mp4" type="video/mp4" />
+          <source src="{{ site.url }}/assets/imgs/proof-of-concept/Etretat_GettyImages-150708198.webm" type="video/webm" />
+        </video>
+        <div class="container">
+          <main class="l-column">
+            <h2 class="animated growIn">Hero header section</h2>
+          </main>
+        </div>
+      </div>
+    <div class="container">
+      <main class="l-column">
+        <div class="segment--expandable">
+          <div class="expander-target expander__is-closed">
+            <h3>Additional details here if you are interested</h3>
+            <p>
+            Diam vocibus ei his, et pro mollis principes, duo ad nullam offendit neglegentur. Eros invidunt in eos, nam case legimus explicari ea, mel te option quaerendum mediocritatem. Ad per elitr delenit omittam, ea qui vivendo docendi. Per ex simul essent, quo ut tale tollit, ex amet nulla est. Vel nisl vivendum interesset et. Vim accusam euripidis referrentur eu.
+            </p>
+            <p>
+            Eum feugiat eruditi appetere ei, ei mei melius aliquip reprehendunt, no mea malorum molestiae liberavisse. Ne meliore evertitur sit. Impetus dolores periculis mel in, mei falli nullam eripuit cu. Pri ea impetus dolorem, nemore maiorum mandamus ex qui. An nec convenire vituperatoribus. At nec fugit dissentiunt.
+            </p>
+            <p>
+            Debet sensibus vel ad, ut dico diceret verterem usu, mel aliquip consectetuer id. Et mei regione iracundia suscipiantur, at sed quidam consequat, ius patrioque democritum moderatius id. Mentitum recteque forensibus et per, duo populo scripta eu. Ridens minimum liberavisse mel in.
+            </p>
+          </div>
+          <button class="expander-link">Read more about this</button>
+        </div>
+        <p>
+        Ne eum ridens causae splendide. Eros commune suscipit ius an. Affert iudico partem eam te, id invidunt scriptorem signiferumque mei. Eu mea recteque percipitur, ut denique interesset omittantur sit, ex fugit perpetua vel. Vel soluta petentium constituam cu. Regione intellegat no mei, ne dicat consul integre vix.
+        </p>
+        <p>
+        Ubique argumentum est cu, per ad cetero vocent civibus. Te cum simul convenire splendide, denique sapientem instructior an quo. Vix modo modus oportere ei. Ad blandit oporteat his, sint recusabo necessitatibus pro et. Ceteros democritum contentiones ex eos, id clita inciderint sit. At vel homero sententiae, ne his alterum fabulas ancillae.
+        </p>
+        <button class="next-page animated fadeInDownShort delay-250" style="margin: 1em auto; display: block">next</button>
+      </main>
+    </div>
+  </section>
+  <section class="section pp-scrollable" id="sixthPage" style="background: #000000;">
     <div class="container">
       <footer class="l-column" style="color: white; position: absolute; bottom: 0;">
         what happens with the footer?
       </footer>
     </div>
-
   </section>
 </main>
 
