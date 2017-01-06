@@ -79,14 +79,14 @@
 
 // Grid demo styles
 .demo {
-  background-color: $gray-light;
+  border: 1px solid $gray-light;
   padding: rhythm(1);
 }
 
 // Set example nest wrap styles
 .nest-wrap {
   @extend %clearfix;
-  background-color: $gray-light;
+  border: 1px solid $gray-light;
   padding: 0;
 }
 
@@ -94,7 +94,7 @@
 @include layout(8) {
   .nest-item {
     @include isolation-span(8, 1, 'both');
-    background-color: darken($gray-light, 4%);
+    background-color: darken($background-dk, 4%);
     padding: rhythm(1);
 
     @include breakpoint($bp1) {
