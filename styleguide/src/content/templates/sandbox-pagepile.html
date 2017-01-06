@@ -10,8 +10,11 @@ title: Styleguide
     <li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li>
     <li data-menuanchor="fourthPage"><a href="#fourthPage">Fourth section</a></li>
 </ul>
-<main id="pagepiling">
-  <section class="section animatedParent" id="firstPage" style="background: #ffffff;">
+<main id="pagepiling" >
+  <section class="section animatedParent" id="firstPage" style="background-image: url('/assets/imgs/proof-of-concept/12_forest_Ordrupgaard-Museum.jpg'); background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;color: white; ">
     <div class="container">
       <main class="l-column">
         <br><br><br><br><br><br><br><br>
@@ -20,7 +23,7 @@ title: Styleguide
       </main>
     </div>
   </section>
-  <section class="section pp-scrollable" id="secondPage" style="background: #ff0000;">
+  <section class="section pp-scrollable" id="secondPage" style="color: white; background: #333333;">
     <div class="container">
       <main class="l-column">
         <p>Lorem ipsum dolor sit amet, pri eu virtute hendrerit, pro labores debitis deserunt ei, cu ius audire reformidans. Ex timeam impedit mel, id mea veri numquam efficiantur. Duo facete bonorum abhorreant ad, pro nisl apeirian ut. In mei decore tacimates, malis accommodare his ei. Et quaeque scripserit vel.
@@ -63,13 +66,28 @@ title: Styleguide
     </div>
   </section>
   <section class="section pp-scrollable" id="thirdPage" style="background: #00ff00;">
+  <img src="{{ site.url }}/assets/imgs/proof-of-concept/12_forest_Ordrupgaard-Museum.jpg">
     <div class="container">
       <main class="l-column">
-        Some section 3
+        <h2>Some section 3</h2>
+
+<p>Lorem ipsum dolor sit amet, pri eu virtute hendrerit, pro labores debitis deserunt ei, cu ius audire reformidans. Ex timeam impedit mel, id mea veri numquam efficiantur. Duo facete bonorum abhorreant ad, pro nisl apeirian ut. In mei decore tacimates, malis accommodare his ei. Et quaeque scripserit vel.
+        </p>
+        <p>
+        His dicam homero fabulas et, ea duo error altera honestatis, modo percipitur scripserit at eos. His te admodum praesent dissentiunt, duo id iracundia definitionem. An delectus forensibus duo. Adhuc populo percipitur ea nam. Cotidieque interpretaris vim et.
+        </p>
+        <h1 class="animated fadeInRight">something animated</h1>
+        <p>
+        Iisque suscipit mea ea, at ubique partiendo iracundia usu. Alii mollis omittantur nam ut, in eum diam solet definiebas, ea eos stet voluptatum. Eos delectus temporibus no, nam ad nulla admodum scripserit. Munere equidem te has. Duis facete et sea, ei appetere nominati consetetur mel. Eam in tation iudicabit evertitur, ea impetus antiopam sit, falli imperdiet at qui.
+        </p>
       </main>
     </div>
   </section>
   <section class="section pp-scrollable" id="fourthPage" style="background: #000000;">
+    <video autoplay="autoplay" style="width:100%" title="Etretat GettyImages-150708198" loop="loop" class="video-background">
+      <source src="{{ site.url }}/assets/imgs/proof-of-concept/Etretat_GettyImages-150708198.m4v" type="video/mp4" />
+      <source src="{{ site.url }}/assets/imgs/proof-of-concept/Etretat_GettyImages-150708198.webm" type="video/webm" />
+    </video>
     <div class="container">
       <footer class="l-column" style="color: white; position: absolute; bottom: 0;">
         what happens with the footer?
@@ -78,6 +96,5 @@ title: Styleguide
 
   </section>
 </main>
-
 
 {% endblock %}
