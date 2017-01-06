@@ -1,0 +1,67 @@
+/**
+ * @file
+ * Form styles
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+select,
+textarea {
+  background-color: $background-dk;
+  box-shadow: 0 0 12px $black inset;
+  border: 2px solid $white-10;
+  color: $text-color;
+  padding: .3em .5em;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border: 2px solid $white-20;
+  }
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+select {
+  height: 2.5em;
+}
+
+.form__section { 
+  margin-bottom: 1em;
+}
+
+label {
+  font-size: .8em;
+}
+
+.form__label-top {
+  display: block;
+  margin-bottom: .2em;
+}
