@@ -112,17 +112,17 @@ $input-invalid-border: #ee5f5b;
 $input-invalid-border-focus: #e9322d;
 $input-check-outline: #e9322d;
 $select-background: $white;
-$select-border: $gray-light;
-$select-border-hover: $gray-medium;
-$placeholder-text: $gray-light;
+$select-border: $white-30;
+$select-border-hover: $white-60;
+$placeholder-text: $gray-medium;
 /* Buttons */
-$button-background: $gray-medium;
-$button-text: $white;
-$button-hover-background: $gray-dark;
-$button-hover-text: $white;
-$button-focus-outline: $gray-dark;
-$button-reset-text: $gray-medium;
-$button-reset-text-hover: $gray-dark;
+$button-background: $primary;
+$button-text: $text-color-invert;
+$button-hover-background: $primary-dark;
+$button-hover-text: $text-color-invert;
+$button-focus-outline: $gray-light;
+$button-reset-text: $text-color-invert;
+$button-reset-text-hover: $text-color-invert;
 ///////////////////////////////////////////////////////////
 
 // Breakpoint Variables
