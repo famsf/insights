@@ -22,8 +22,8 @@ input[type="color"],
 select,
 textarea {
   background-color: $background-b;
-  box-shadow: 0 0 12px $black inset;
-  border: 2px solid $white-10;
+  box-shadow: 0 0 12px darken($background-b, 7%) inset;
+  border: 1px solid $white-20;
   color: $text-color;
   padding: .3em .5em;
   box-sizing: border-box;
