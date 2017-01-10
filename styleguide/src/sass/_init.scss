@@ -82,7 +82,7 @@ $font-monospace: $roboto-mono;
 // $background-color: $white;
 /* Link (a:) */
 $link-color: $primary;
-$link-hover: $primary-dark;
+$link-hover: $primary-active;
 /* Blockquote*/
 $blockquote-color: $primary;
 /* Figcaption */
@@ -90,7 +90,7 @@ $figcaption-color: $text-color;
 /* Buttons */
 $button-background: $primary;
 $button-text: $text-color-invert;
-$button-hover-background: $primary-dark;
+$button-hover-background: $primary-active;
 $button-hover-text: $text-color-invert;
 $button-focus-outline: $gray-light;
 $button-reset-text: $text-color-invert;

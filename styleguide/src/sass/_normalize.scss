@@ -14,10 +14,10 @@
 html {
   // Correct text resizing oddly in IE 6/7 when body `font-size` is set using
   // `em` units.
-  background: $background-dk; /* Old browsers */
-  background: -moz-linear-gradient(left,  $background-lt 0%, $background-dk 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left,  $background-lt 0%,$background-dk 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right,  $background-lt 0%,$background-dk 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background: $background-b; /* Old browsers */
+  background: -moz-linear-gradient(left,  $background-a 0%, $background-b 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  $background-a 0%,$background-b 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  $background-a 0%,$background-b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   color: $text-color;
   font-size: ($base-font-size / 16px) * 100%;
   line-height: ($base-line-height / $base-font-size) * 1em;

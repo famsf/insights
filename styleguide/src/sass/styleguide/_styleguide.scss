@@ -62,7 +62,7 @@
 }
 
 .styleguide-description {
-  background-color: transparentize($background-dk, .5);
+  background-color: transparentize($background-b, .5);
   margin: rhythm(1) 0;
   padding: rhythm(1) 0;
 }
@@ -94,7 +94,7 @@
 @include layout(8) {
   .nest-item {
     @include isolation-span(8, 1, 'both');
-    background-color: darken($background-dk, 4%);
+    background-color: darken($background-b, 4%);
     padding: rhythm(1);
 
     @include breakpoint($bp1) {
