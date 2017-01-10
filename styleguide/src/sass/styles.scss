@@ -5,6 +5,9 @@
  * @see http://smacss.com/book/
  */
 
+/* color rules */
+@import "colors-dark";
+
 /* Import Sass mixins, variables, Compass modules, etc. */
 @import "init";
 
@@ -28,7 +31,8 @@
 @import "grid-layouts/_l-singularity";
 
 /* Component (SMACSS module) rules */
-/* @import "components/my-component"; */
+@import "components/_forms";
+@import "components/_lede";
 
 /* Styleguide Specific rules */
 @import "styleguide/styleguide";
