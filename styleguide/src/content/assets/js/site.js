@@ -83,10 +83,6 @@
   };
   Drupal.behaviors.zoom_toggle = {
     attach: function(context, settings) {
-      // Function for expander component to expand and collapse.
-      $('.zoom-child').click(function(){
-        $(this).toggleClass('zoomed');
-      });
       $('.zoom-marker-inner').click(function(){
         var marker = $(this);
         marker.closest('.zoom-parent').find('.zoom-child').toggleClass('zoomed');
@@ -94,10 +90,11 @@
           marker.closest('.zoom-parent').find('.zoom-detail-view').toggleClass('show-detail');
           setTimeout(function() {
             marker.closest('.zoom-parent').find('.zoom-detail-view').toggleClass('zoomin');
-          }, 300);
-        }, 300);
-
+          }, 200);
+        }, 200);
+        $('.zoom-marker-outer').hide();
       });
+
       $('.zoom-close').click(function(){
         var closeButton = $(this);
         closeButton.closest('.zoom-parent').find('.zoom-detail-view').toggleClass('zoomin');
@@ -105,8 +102,9 @@
           closeButton.closest('.zoom-parent').find('.zoom-detail-view').toggleClass('show-detail');
           setTimeout(function() {
             closeButton.closest('.zoom-parent').find('.zoom-child').toggleClass('zoomed');
-          }, 300);
-        }, 300);
+          }, 200);
+        }, 200);
+        $('.zoom-marker-outer').show();
       });
     }
   };

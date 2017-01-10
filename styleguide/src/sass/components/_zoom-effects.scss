@@ -27,7 +27,6 @@
   position: relative;
   float: left;
   display: inline-block;
-  cursor: pointer;
 }
 
 // This is the zoomable image
@@ -37,10 +36,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .zoom-detail-view {
@@ -52,10 +51,10 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  -webkit-transition: all .5s ease;
-  -moz-transition: all .5s ease;
-  -o-transition: all .5s ease;
-  transition: all .5s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
   opacity: 0;
 }
 
@@ -65,4 +64,10 @@
 .zoom-close,
 .zoom-marker-outer {
   z-index: 1;
+}
+
+.zoom-close,
+.zoom-marker-inner {
+  display: block;
+  padding: 1em;
 }
