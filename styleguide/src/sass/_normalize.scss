@@ -22,6 +22,7 @@ html {
   font-size: ($base-font-size / 16px) * 100%;
   line-height: ($base-line-height / $base-font-size) * 1em;
   font-family: $base-font-family; /* 1 */
+  font-weight: 400;
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -webkit-font-smoothing: antialiased;
@@ -126,7 +127,11 @@ a {
   background-color: transparent; /* 1 */
   -webkit-text-decoration-skip: objects; /* 2 */
   color: $link-color;
-  text-decoration: none;
+  text-decoration: underline;
+}
+
+p a {
+  font-weight: 500;
 }
 
 /**
