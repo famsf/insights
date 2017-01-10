@@ -13,12 +13,21 @@
 
   Drupal.behaviors.site = {
     attach: function (context, settings) {
+      // Start the slider
+      $('.bxslider').bxSlider({
+        mode: 'fade',
+        pager: false,
+        auto: true,
+        speed: 1000,
+        pause: 1500
+
+      });
       $('#pagepiling').pagepiling({
         menu: null,
         direction: 'vertical',
         verticalCentered: false,
         sectionsColor: [],
-        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'lastPage'],
+        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'lastPage'],
         scrollingSpeed: 700,
         easing: 'swing',
         loopBottom: false,
@@ -47,7 +56,6 @@
   };
   Drupal.behaviors.expander_toggle = {
     attach: function(context, settings) {
-
       // Close all expander elenments that need to be closed initially.
       $('.expander__is-closed').hide(0);
       // Function for expander component to expand and collapse.
@@ -70,6 +78,14 @@
           changeThisPanel.removeClass("expander__is-open").addClass("expander__is-closed").slideUp(300);
           $(this).html(collapsedText).attr('title', collapsedText);
         }
+      });
+    }
+  };
+  Drupal.behaviors.zoom_toggle = {
+    attach: function(context, settings) {
+      // Function for expander component to expand and collapse.
+      $('.zoom-child').click(function(){
+        $(this).toggleClass('zoomed');
       });
     }
   };
