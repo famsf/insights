@@ -1,0 +1,20 @@
+{#
+  name: Read Less CTA
+  usage: Read Less CTA is used to trigger the closing of deep dive information.
+#}
+
+{% block component %}
+
+<div class="read-less--cta">
+  <div class="container">
+    <button class="button-with-icon">
+      {% include('svg/famsf-arrow-up.html') %}
+      <div>
+        Click to Close
+      </div>
+    </button>
+  </div>
+</div>
+  
+{% endblock %}
+

@@ -1,0 +1,20 @@
+{#
+  name: Read More CTA
+  usage: Read More CTA is used to trigger the reveal of deep dive information.
+#}
+
+{% block component %}
+
+<div class="read-more--cta">
+  <div class="container">
+    <button class="button-with-icon">
+      {% include('svg/famsf-arrow-down.html') %}
+      <div>
+        Click to Read More About Monet's Influences
+      </div>
+    </button>
+  </div>
+</div>
+  
+{% endblock %}
+
