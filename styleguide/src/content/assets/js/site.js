@@ -59,24 +59,31 @@
       // Close all expander elenments that need to be closed initially.
       $('.expander__is-closed').hide(0);
       // Function for expander component to expand and collapse.
-      $('.expander-link').click(function(){
+      $('.button-with-icon').click(function(){
         // Define the target expandable div.
-        var changeThisPanel = $(this).parents('.segment--expandable').find('.expander-target');
+        var changeThisPanel = $(this).parents('.deep-dive').find('.expander');
 
         // Load button text from data attribute when div is expanded.
-        var expandedText = 'read less about this';
+        var expandedText = 'Click to Close';
 
         // Load button text from data attribute when div is collapsed.
-        var collapsedText = 'read more about this';
+        var collapsedText = 'Click to Read More About Monet\'s Influences';
 
         // Toggle the button and panel states.
         if (changeThisPanel.hasClass("expander__is-closed")) {
+          $('.icon-arrow--up').show(0);
+          $('.icon-arrow--down').hide(0);
           changeThisPanel.removeClass("expander__is-closed").addClass("expander__is-open").slideDown(300);
-          $(this).html(expandedText).attr('title', expandedText);
+          $(this).find('div').html(expandedText).attr('title', expandedText);
+          $('html, body').animate({
+            scrollTop: changeThisPanel.offset().top
+          }, 2000);
         }
         else if (changeThisPanel.hasClass("expander__is-open")) {
+          $('.icon-arrow--down').show(0);
+          $('.icon-arrow--up').hide(0);
           changeThisPanel.removeClass("expander__is-open").addClass("expander__is-closed").slideUp(300);
-          $(this).html(collapsedText).attr('title', collapsedText);
+          $(this).find('div').html(collapsedText).attr('title', collapsedText);
         }
       });
     }
