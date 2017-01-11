@@ -8,15 +8,12 @@ title: FAMSF Digital Stories Interaction Demo
     <li data-menuanchor="firstPage" class="active"><a href="#firstPage">First section</a></li>
     <li data-menuanchor="secondPage"><a href="#secondPage">Second section</a></li>
     <li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li>
+    <li data-menuanchor="fourthPage"><a href="#fourthPage">Fourth section</a></li>
     <li data-menuanchor="fifthPage"><a href="#fifthPage">Fifth section</a></li>
     <li data-menuanchor="sixthPage"><a href="#sixthPage">Sixth section</a></li>
-    <li data-menuanchor="seventhPage"><a href="#seventhPage">Seventh section</a></li>
 </ul>
 <main id="pagepiling" >
-  <section class="section animatedParent" id="firstPage" style="background-image: url('/assets/imgs/proof-of-concept/12_forest_Ordrupgaard-Museum.jpg'); background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;color: white; ">
+  <section class="section animatedParent" id="firstPage" style="background-image: url('/assets/imgs/proof-of-concept/12_forest_Ordrupgaard-Museum.jpg'); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;color: white; ">
     <div class="container">
       <div class="l-column">
           <ul class="bxslider" style="text-align: center;">
@@ -95,20 +92,10 @@ title: FAMSF Digital Stories Interaction Demo
       </div>
     </div>
   </section>
-  <section class="section animatedParent" id="thirdPage" style="background: rgba(200, 200, 200, .5); color: #333333; ">
-    <div class="container">
-      <div class="l-column">
-        <br><br><br><br><br><br><br><br>
-        <h1 class="animated fadeInRight">Animated Header</h1>
-        Some section 1
-        <button class="next-page animated fadeInDownShort delay-250" style="position: absolute; bottom: 1em; left: 50%;">next</button>
-      </div>
+  <section class="section pp-scrollable" id="thirdPage" style="background: #555555; color: #ffffff;">
+    <div style="overflow:hidden; height: 100vh;">
+      <img src="{{ site.url }}/assets/imgs/proof-of-concept/12_forest_Ordrupgaard-Museum.jpg">
     </div>
-  </section>
-  <section class="section pp-scrollable" id="fourthPage" style="background: #555555; color: #ffffff;">
-  <div style="overflow:hidden; height: 100vh;">
-    <img src="{{ site.url }}/assets/imgs/proof-of-concept/12_forest_Ordrupgaard-Museum.jpg">
-  </div>
     <div class="container">
       <div class="l-column">
         <h2>Some section 3</h2>
@@ -125,7 +112,7 @@ title: FAMSF Digital Stories Interaction Demo
       </div>
     </div>
   </section>
-  <section class="section pp-scrollable" id="fifthPage" style="background: #000000;">
+  <section class="section pp-scrollable" id="fourthPage" style="background: #000000;">
     <video autoplay="autoplay" muted="muted" preload="metadata" style="width:100%" title="Etretat GettyImages-150708198" loop="loop" class="video-background">
       <source src="{{ site.url }}/assets/imgs/proof-of-concept/Etretat_GettyImages-150708198.mp4" type="video/mp4" />
       <source src="{{ site.url }}/assets/imgs/proof-of-concept/Etretat_GettyImages-150708198.webm" type="video/webm" />
@@ -137,7 +124,7 @@ title: FAMSF Digital Stories Interaction Demo
       <button class="next-page animated fadeInDownShort delay-250" style="position: absolute; bottom: 1em; left: 50%;">next</button>
     </div>
   </section>
-  <section class="section pp-scrollable" id="sixthPage" style="color: #ffffff; background: #000000;">
+  <section class="section pp-scrollable" id="fifthPage" style="color: #ffffff; background: #000000;">
       <div class="video-holder" style="position: relative; height: 50vh; overflow: hidden; display: flex; align-items: center; text-align: center;">
         <video autoplay muted preload="metadata"  style="width:100%" title="Etretat GettyImages-150708198" loop="loop" class="video-background">
           <source src="{{ site.url }}/assets/imgs/proof-of-concept/Etretat_GettyImages-150708198.mp4" type="video/mp4" />
@@ -176,7 +163,7 @@ title: FAMSF Digital Stories Interaction Demo
       </div>
     </div>
   </section>
-  <section class="section pp-scrollable" id="seventhPage" style="background: #000000; color: #ffffff;">
+  <section class="section pp-scrollable" id="sixthPage" style="background: #000000; color: #ffffff;">
     <div class="zoom-parent" style="text-align: center;">
         <div class="zoom-child" style="background-image: url({{ site.url }}/assets/imgs/proof-of-concept/12_forest_Ordrupgaard-Museum-zoomable.jpg); transform-origin: 70% 70%;">
         </div>
