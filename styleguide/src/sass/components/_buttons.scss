@@ -1,0 +1,35 @@
+/**
+ * @file
+ * button styles
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+button {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.button-with-icon {
+  background-color: transparent;
+  color: $primary;
+  border: none;
+  text-align: left;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+
+  &:active,
+  &:hover {
+    color: $primary-active;
+
+    .icon--background {
+      fill: $primary-active;
+    }
+  }
+
+  svg {
+    margin-right: .7em;
+  }
+}
