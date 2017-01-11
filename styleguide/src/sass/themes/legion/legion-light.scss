@@ -20,22 +20,24 @@ $azure: #1c90cf;
 $azure-60: #77bce2;
 $indigo: #0f6088;
 $pink: #d3a9ba;
+$pink-10: #fbf6f8;
 $pink-70: #e0c3cf;
 $magenta: #922b55;
 $yellow: #ffd878;
 $gold: #edb23e;
-$sea: #ccc;
-$ink: #666;
+$sea: #216780;
+$ink: #10465b;
+$peach: #f4e9e5;
 
-$background-a: $sea;
-$background-b: $ink;
-$border: $sea;
-$text-color: $white;
-$text-color-invert: $sea;
-$primary: $yellow;
-$primary-active: $gold;
-$secondary: $azure-60;
-$tertiary: $pink-70;
+$background-a: $pink-10;
+$background-b: $peach;
+$border: $pink-70;
+$text-color: $ink;
+$text-color-invert: $pink-10;
+$primary: $indigo;
+$primary-active: $ink;
+$secondary: $magenta;
+$tertiary: $azure;
 
 // Import the global theme styles.
 @import '../../global';
