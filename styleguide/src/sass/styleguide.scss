@@ -1,0 +1,15 @@
+/**
+ * @file
+ * Defines the custom Optimism Dark Teal theme.
+ *
+ * When loaded, this file will override the base color scheme.
+ */
+
+/* import colors */
+@import "colors-default";
+
+// Import the global theme styles.
+@import 'global';
+
+// Import theme specific components
+// @import 'components/banner';
