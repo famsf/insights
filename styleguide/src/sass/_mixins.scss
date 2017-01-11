@@ -110,10 +110,13 @@
    ============================================================== */
 
 .rectangles-bg,
-%rectangles-bg {
-  border: 40px solid transparent;
-  border-image-source: $rectangles-border;
-  border-image-slice: 25%;
-  border-image-repeat: repeat;
+%rectangles-bg { 
+
+  @include breakpoint($bp3) {
+    border: 40px solid transparent;
+    border-image-source: $rectangles-border;
+    border-image-slice: 25%;
+    border-image-repeat: repeat;
+  }
 }
 
