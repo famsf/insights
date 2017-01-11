@@ -1,0 +1,45 @@
+/**
+ * @file
+ * Defines the custom Optimism Dark Teal theme.
+ *
+ * When loaded, this file will override the base color scheme.
+ */
+
+// Override color scheme variables set in _init.scss
+$black: #000;
+$gray-dark: #3e3e3e;
+$gray-medium: #a8abad;
+$gray-light: #ececec;
+$white: #fff;
+$white-10: rgba($white, .1);
+$white-20: rgba($white, .2);
+$white-30: rgba($white, .3);
+$white-60: rgba($white, .6);
+
+$azure: #1c90cf;
+$azure-60: #77bce2;
+$indigo: #0f6088;
+$pink: #d3a9ba;
+$pink-70: #e0c3cf;
+$magenta: #922b55;
+$yellow: #ffd878;
+$gold: #edb23e;
+$sea: #216780;
+$ink: #10465b;
+
+$background-a: $sea;
+$background-b: $ink;
+$border: $sea;
+$text-color: $white;
+$text-color-invert: $sea;
+$primary: $yellow;
+$primary-active: $gold;
+$secondary: $azure-60;
+$tertiary: $pink-70;
+
+// Import the global theme styles.
+@import '../../global';
+
+// Import theme specific components
+// @import 'components/banner';
+
