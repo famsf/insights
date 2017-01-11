@@ -14,11 +14,15 @@
 html {
   // Correct text resizing oddly in IE 6/7 when body `font-size` is set using
   // `em` units.
-  background: $background-color;
+  background: $background-b; /* Old browsers */
+  background: -moz-linear-gradient(left,  $background-a 0%, $background-b 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  $background-a 0%,$background-b 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  $background-a 0%,$background-b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   color: $text-color;
   font-size: ($base-font-size / 16px) * 100%;
   line-height: ($base-line-height / $base-font-size) * 1em;
   font-family: $base-font-family; /* 1 */
+  font-weight: 400;
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -webkit-font-smoothing: antialiased;
@@ -35,7 +39,7 @@ html {
     font-size: ($base-font-size / 16px) * 124%;
   }
   // Styles below are needed for the pagepiling js library
-  overflow:hidden;
+  // overflow:hidden;
   margin:0;
   padding:0;
 
@@ -130,7 +134,8 @@ a {
   background-color: transparent; /* 1 */
   -webkit-text-decoration-skip: objects; /* 2 */
   color: $link-color;
-  text-decoration: none;
+  text-decoration: underline;
+  font-weight: 500;
 }
 
 /**
@@ -188,7 +193,7 @@ kbd,
 samp {
   font-family: monospace, monospace; /* 1 */
   @if support-for(ie, 6) {
-    _font-family: 'courier new', monospace;
+    _font-family: 'roboto-mono', monospace;
   }
   font-size: 1em; /* 2 */
 }
@@ -209,10 +214,12 @@ dfn {
 h1 {
   @extend %display-type;
   // Set the font-size and line-height while keeping a proper vertical rhythm.
-  @include adjust-font-size-to($h1-font-size, 2);
+  @include adjust-font-size-to($h1-font-size, 1.8);
   // Set 1 unit of vertical rhythm on the top and bottom margins.
   @include leader(1.25, $h1-font-size);
   @include trailer(.5, $h1-font-size);
+  font-weight: 300;
+  font-family: $roboto-slab;
 }
 
 h2 {
@@ -264,7 +271,8 @@ mark {
  * Add the correct font size in all browsers.
  */
 
-small {
+small,
+label {
   font-size: 80%;
 }
 
