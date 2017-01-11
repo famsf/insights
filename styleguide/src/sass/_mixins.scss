@@ -104,3 +104,16 @@
 @mixin trans($property: all, $timing: .3s, $easing: ease) {
   transition: $property $timing $easing;
 }
+
+/* ==============================================================
+   Rectangles background mixin
+   ============================================================== */
+
+.rectangles-bg,
+%rectangles-bg {
+  border: 40px solid transparent;
+  border-image-source: $rectangles-border;
+  border-image-slice: 25%;
+  border-image-repeat: repeat;
+}
+
