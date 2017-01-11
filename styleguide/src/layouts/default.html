@@ -4,9 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{{ page.title }}{% endblock %} | {{ site.title }}</title>
-    <link rel="stylesheet" href="{{ site.url }}/assets/css/styles.css">
-    <link rel="shortcut icon" href="{{ site.url }}/assets/favicon.ico" />
-    <!-- inject roboto font family -->
+    {% block stylesheet %}
+      {% if page.theme == 'legion-dark' %}
+        <link href="{{ site.url }}/assets/css/themes/legion/legion-dark.css" rel="stylesheet" type="text/css" />
+      {% elseif page.theme == 'legion-light' %}
+        <link href="{{ site.url }}/assets/css/themes/legion/legion-light.css" rel="stylesheet" type="text/css" />
+      {% else %}
+        <link href="{{ site.url }}/assets/css/styleguide.css" rel="stylesheet" type="text/css" />
+      {% endif %}
+    {% endblock %}
     <script src="https://use.typekit.net/vbv6sfx.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
