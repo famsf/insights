@@ -17,6 +17,19 @@ figure {
     margin: 0;
     display: block;
   }
+
+  svg {
+    margin-left: .7rem;
+  }
+}
+
+.figure--wrapper {
+  position: relative;
+  margin-bottom: 1em;
+
+  @include breakpoint($bp3) {
+    margin-bottom: 1.5em;
+  }
 }
 
 figcaption {
