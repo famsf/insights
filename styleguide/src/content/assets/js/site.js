@@ -69,15 +69,23 @@
         // Load button text from data attribute when div is collapsed.
         var collapsedText = 'Click to Read More About Monet\'s Influences';
 
+        var ThisSection = $(this).parents('.section');
+
         // Toggle the button and panel states.
         if (changeThisPanel.hasClass("expander__is-closed")) {
           $('.icon-arrow--up').show(0);
           $('.icon-arrow--down').hide(0);
           changeThisPanel.removeClass("expander__is-closed").addClass("expander__is-open").slideDown(300);
           $(this).find('div').html(expandedText).attr('title', expandedText);
+          /* @Todo:  scroll section up to top of page after expanding. */
+          /* ThisSection.animate({
+            scrollTop: changeThisPanel.offset().top
+          }, 2000);
+*/
           $('html, body').animate({
             scrollTop: changeThisPanel.offset().top
           }, 2000);
+
         }
         else if (changeThisPanel.hasClass("expander__is-open")) {
           $('.icon-arrow--down').show(0);
