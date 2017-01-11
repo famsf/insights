@@ -1,0 +1,15 @@
+/**
+ * @file
+ * styles for "deep dive" component
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+ .deep-dive {
+  box-shadow: 0 0 15px darken($background-b, 20%) inset;
+  background: darken($background-b, 3%);
+}
+
+.deep-dive--wrapper {
+  padding: 2em 0;
+}
