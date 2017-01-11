@@ -1,7 +1,7 @@
 ---
 layout: component
 section: component
-type: main
+type: full-width
 
 title: Read More
 description: This hides and reveals additional information.
@@ -10,7 +10,12 @@ description: This hides and reveals additional information.
 {% block content_wrapper %}
   {% block content %}
 
+<section>
+  <div class="container">
     {% include('read-more--cta.html') %}
+    {% include('read-more--deep-dive.html') %}
+  </div>
+</section>
 
   {% endblock %}
 {% endblock %}
