@@ -24,17 +24,20 @@ $pink-5: #fdfbfc;
 $pink-10: #fbf6f8;
 $pink-20: #f4edf0;
 $magenta: #922b55;
-$sea: #216780;
-$ink: #10465b;
-$midnight: #03161e;
+$sea: #216780; 
+$denim: #10465b;
+$midnight: #0a2f3d;
+$ink: #03161e;
 
 $background-a: $pink-5;
 $background-b: $pink-20;
+$background-c: null;
+$background-d: null;
 $border: $pink-5;
-$text-color: $midnight;
+$text-color: $ink;
 $text-color-invert: $pink-5;
 $primary: $indigo;
-$primary-active: $ink;
+$primary-active: $denim;
 $secondary: $magenta;
 $tertiary: $azure;
 
