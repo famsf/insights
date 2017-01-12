@@ -44,7 +44,23 @@
         //events
         onLeave: function(index, nextIndex, direction){
           var nextActiveSection = nextIndex - 1;
-          $('section.section').eq(nextActiveSection).find('*.animated').addClass('go');
+          var sectionSelector = $('section.section').eq(nextActiveSection);
+          var animatedItems = sectionSelector.find('*.animated');
+          var numberOfAnimatedItems = animatedItems.length;
+          console.log(animatedItems);
+          function checkAnimationInSectionView() {
+            for (var i = 0; i < numberOfAnimatedItems; i++) {
+              console.log(animatedItems[i]);
+              if ($(animatedItems[i]).position().top < $(sectionSelector).height()){
+                // alert("footer visible");
+                $(animatedItems[i]).addClass('go');
+              }
+            }
+          }
+          checkAnimationInSectionView();
+          sectionSelector.scroll(function () {
+            checkAnimationInSectionView();
+          });
         },
         afterLoad: function(anchorLink, index){},
         afterRender: function(){},
