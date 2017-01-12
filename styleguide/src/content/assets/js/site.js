@@ -43,23 +43,28 @@
 
         //events
         onLeave: function(index, nextIndex, direction){
+          // Select the next active index section element by it's index.
           var nextActiveSection = nextIndex - 1;
           var sectionSelector = $('section.section').eq(nextActiveSection);
+          // Get all the animated item in the section.
           var animatedItems = sectionSelector.find('*.animated');
           var numberOfAnimatedItems = animatedItems.length;
-          console.log(animatedItems);
-          function checkAnimationInSectionView() {
+
+          // Function to animate things in the viewport.
+          function animateInSectionView() {
             for (var i = 0; i < numberOfAnimatedItems; i++) {
               console.log(animatedItems[i]);
               if ($(animatedItems[i]).position().top < $(sectionSelector).height()){
-                // alert("footer visible");
                 $(animatedItems[i]).addClass('go');
               }
             }
           }
-          checkAnimationInSectionView();
+          // Run animations when the new card is initially visible.
+          animateInSectionView();
+
+          // Trigger all animation in view on scroll.
           sectionSelector.scroll(function () {
-            checkAnimationInSectionView();
+            animateInSectionView();
           });
         },
         afterLoad: function(anchorLink, index){},
