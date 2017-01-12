@@ -61,7 +61,7 @@
       // Function for expander component to expand and collapse.
       $('.button-with-icon').click(function(){
         // Define the target expandable div.
-        var changeThisPanel = $(this).parents('.deep-dive').find('.expander');
+        var changeThisPanel = $(this).parents('.deep-dive').find('.deep-dive--wrapper');
 
         // Load button text from data attribute when div is expanded.
         var expandedText = 'Click to Close';

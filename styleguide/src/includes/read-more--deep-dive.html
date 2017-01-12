@@ -6,20 +6,18 @@
 {% block component %}
 
 <div class="deep-dive">
-  <div class="deep-dive--wrapper">
-    <div class="expander expander__is-closed">
-      <div class="container rectangles-bg">
-        <div class="l-33-66--1">
-          <p class="lede"><span class="dropcap">M</span>onet was influenced by a slightly older generation of landscape painters.</p>
-          <p>The painters of the so-called Barbizon School (named after a village in the Fontainebleau Forest) were interested in capturing direct, unadorned observations of nature. Their landscapes challenged contemporary academic ideas of art that imbued nature with noble values and presented it in balanced, polished scenes. These painters desired to capture nature’s rough textures with spontaneity and vitality.</p>
-        </div>
-        <div class="l-33-66--2">
-          {% include('image-with-credit--read-more.html') %}
-        </div>
+  <div class="deep-dive--wrapper expander__is-closed">
+    <div class="container rectangles-bg">
+      <div class="l-33-66--1">
+        <p class="lede"><span class="dropcap">M</span>onet was influenced by a slightly older generation of landscape painters.</p>
+        <p>The painters of the so-called Barbizon School (named after a village in the Fontainebleau Forest) were interested in capturing direct, unadorned observations of nature. Their landscapes challenged contemporary academic ideas of art that imbued nature with noble values and presented it in balanced, polished scenes. These painters desired to capture nature’s rough textures with spontaneity and vitality.</p>
+      </div>
+      <div class="l-33-66--2">
+        {% include('image-with-credit--read-more.html') %}
       </div>
     </div>
-    {% include('read-more--cta.html') %}
   </div>
+  {% include('read-more--cta.html') %}
 </div>
 
 {% endblock %}
