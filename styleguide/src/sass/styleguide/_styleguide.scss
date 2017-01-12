@@ -43,7 +43,7 @@
 }
 
 .styleguide-label {
-  color: $gray-light;
+  color: $text-color;
 }
 
 .styleguide-section {
@@ -69,8 +69,12 @@
 
 .styleguide-swatch {
   padding: 25px;
-  color: $white;
+  color: $black;
   margin-bottom: 1em;
+
+  code {
+    background-color: $white-60;
+  }
 }
 
 .styleguide-body {
@@ -79,14 +83,14 @@
 
 // Grid demo styles
 .demo {
-  border: 1px solid $gray-light;
+  border: 1px solid $text-color;
   padding: rhythm(1);
 }
 
 // Set example nest wrap styles
 .nest-wrap {
   @extend %clearfix;
-  border: 1px solid $gray-light;
+  border: 1px solid $text-color;
   padding: 0;
 }
 

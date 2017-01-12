@@ -1,6 +1,6 @@
 # Site configuration
 
-title: 'STYLEGUIDE TEMPLATE'
+title: 'Fine Arts Museums of San Francisco Digital Stories'
 url: ''
 
 server_watch_ext: ['html', 'htm', 'xml', 'css', 'js', 'twig', 'md']
