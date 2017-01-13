@@ -53,7 +53,6 @@
           // Function to animate things in the viewport.
           function animateInSectionView() {
             for (var i = 0; i < numberOfAnimatedItems; i++) {
-              console.log(animatedItems[i]);
               if ($(animatedItems[i]).position().top < $(sectionSelector).height()){
                 $(animatedItems[i]).addClass('go');
               }
@@ -80,7 +79,7 @@
       // Close all expander elenments that need to be closed initially.
       $('.expander__is-closed').hide(0);
       // Function for expander component to expand and collapse.
-      $('.button-with-icon').click(function(){
+      $('.icon--read-more').click(function(){
         // Define the target expandable div.
         var changeThisPanel = $(this).parents('.deep-dive').find('.deep-dive--wrapper');
 
@@ -99,13 +98,10 @@
           changeThisPanel.removeClass("expander__is-closed").addClass("expander__is-open").slideDown(300);
           $(this).find('div').html(expandedText).attr('title', expandedText);
           /* @Todo:  scroll section up to top of page after expanding. */
-          /* ThisSection.animate({
-            scrollTop: changeThisPanel.offset().top
-          }, 2000);
-*/
           $('html, body').animate({
             scrollTop: changeThisPanel.offset().top
-          }, 2000);
+            // changeThisPanel.offset().top - sectionHeight
+          }, 1000);
 
         }
         else if (changeThisPanel.hasClass("expander__is-open")) {
@@ -121,11 +117,12 @@
     attach: function(context, settings) {
       $('.zoom-marker-inner').click(function(){
         var marker = $(this);
-        marker.closest('.zoom-parent').find('.zoom-child').toggleClass('zoomed');
+        marker.closest('.figure__zoomable').find('.figure__zoomable-child').toggleClass('zoomed');
         setTimeout(function() {
-          marker.closest('.zoom-parent').find('.zoom-detail-view').toggleClass('show-detail');
+          marker.closest('.figure__zoomable').find('.zoom-detail-view').toggleClass('show-detail');
           setTimeout(function() {
-            marker.closest('.zoom-parent').find('.zoom-detail-view').toggleClass('zoomin');
+            marker.closest('.figure__zoomable').find('.zoom-detail-view').toggleClass('zoomin');
+            $('.zoom-close').show();
           }, 200);
         }, 200);
         $('.zoom-marker-outer').hide();
@@ -133,16 +130,23 @@
 
       $('.zoom-close').click(function(){
         var closeButton = $(this);
-        closeButton.closest('.zoom-parent').find('.zoom-detail-view').toggleClass('zoomin');
+        closeButton.closest('.figure__zoomable').find('.zoom-detail-view').toggleClass('zoomin');
         setTimeout(function() {
-          closeButton.closest('.zoom-parent').find('.zoom-detail-view').toggleClass('show-detail');
+          closeButton.closest('.figure__zoomable').find('.zoom-detail-view').toggleClass('show-detail');
           setTimeout(function() {
-            closeButton.closest('.zoom-parent').find('.zoom-child').toggleClass('zoomed');
+            closeButton.closest('.figure__zoomable').find('.figure__zoomable-child').toggleClass('zoomed');
+             $('.zoom-close').hide();
           }, 200);
         }, 200);
         $('.zoom-marker-outer').show();
       });
     }
   };
-
+  Drupal.behaviors.captionInfo_toggle = {
+    attach: function(context, settings) {
+      $('.button-with-icon--caption-info').click(function() {
+        $(this).closest('figure').find('figcaption').toggleClass('revealed');
+      });
+    }
+  };
 })(jQuery, Drupal);

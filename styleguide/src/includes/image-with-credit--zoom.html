@@ -1,0 +1,22 @@
+{#
+  name: Image with credit zoomable
+  usage: Images with credits may appear in several contexts throughout the site.
+#}
+
+{% block component %}
+  <figure class="figure__zoomable" >
+    <div class="figure--wrapper figure__zoomable-child" style="background-image: url('../assets/imgs/art/Corot_French_Banks.jpg'); transform-origin: 60% 70%;">
+    </div>
+    <img style="visibility: hidden;" src="../assets/imgs/art/Corot_French_Banks.jpg" alt="painting of river" />
+    <div class="zoom-marker-outer" style="position: absolute; left:60%; top: 70%;">
+        <a class="zoom-marker-inner" style="position: absolute; top: -50%; left: -50%" href="javascript:;">zoom</a>
+    </div>
+    <div class="zoom-detail-view" style="background-image: url({{ site.url }}/assets/imgs/proof-of-concept/31_Corot_French-Banks-detail.jpg); transform-origin: 60% 70%;">
+    </div>
+    <a class="zoom-close" href="javascript:;" style="position: absolute; top: 20%; left:45%; display: none;">close</a>
+    <figcaption><span class="title-of-art">Banks of the Somme at Picquigny</span> Jean-Baptiste-Camille Corot</figcaption>
+    <button class="button-with-icon button-with-icon--caption-info">{% include('svg/famsf-info.html') %}</button>
+  </figure>
+
+{% endblock %}
+

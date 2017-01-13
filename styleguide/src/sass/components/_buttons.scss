@@ -35,3 +35,10 @@ button {
     margin-right: .7em;
   }
 }
+
+.button-with-icon--caption-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}

@@ -1,17 +1,15 @@
----
-layout: pagepile
-theme: legion-dark
-title: FAMSF Digital Stories Interaction Demo - Dark
----
+{#
+  name: interaction demo
+  usage: Fullpage site to be displayed in template section with various themes.
+#}
 
-{% block content %}
+{% block component %}
 <ul id="myMenu" style="position: fixed; left:0; top:0; z-index: 100; list-style: none; background: rgba(125, 125, 125, .7); padding: 1em;">
     <li data-menuanchor="firstPage" class="active"><a href="#firstPage">First section</a></li>
     <li data-menuanchor="secondPage"><a href="#secondPage">Second section</a></li>
     <li data-menuanchor="thirdPage"><a href="#thirdPage">Third section</a></li>
     <li data-menuanchor="fourthPage"><a href="#fourthPage">Fourth section</a></li>
     <li data-menuanchor="fifthPage"><a href="#fifthPage">Fifth section</a></li>
-    <li data-menuanchor="sixthPage"><a href="#sixthPage">Sixth section</a></li>
 </ul>
 <main id="pagepiling" >
   <section class="section animatedParent" id="firstPage" style="background-image: url('/assets/imgs/proof-of-concept/12_forest_Ordrupgaard-Museum.jpg'); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;color: white; ">
@@ -40,7 +38,9 @@ title: FAMSF Digital Stories Interaction Demo - Dark
         <p>
         His dicam homero fabulas et, ea duo error altera honestatis, modo percipitur scripserit at eos. His te admodum praesent dissentiunt, duo id iracundia definitionem. An delectus forensibus duo. Adhuc populo percipitur ea nam. Cotidieque interpretaris vim et.
         </p>
-        <h1 class="animated fadeInRight">something animated</h1>
+        <h1 class="animated fadeInRight">something animated 1</h1>
+        <h2 class="animated fadeInRight delay-1000">something animated 2</h3>
+        <h3 class="animated fadeInRight delay-2000">something animated 3</h3>
         <p>
         Iisque suscipit mea ea, at ubique partiendo iracundia usu. Alii mollis omittantur nam ut, in eum diam solet definiebas, ea eos stet voluptatum. Eos delectus temporibus no, nam ad nulla admodum scripserit. Munere equidem te has. Duis facete et sea, ei appetere nominati consetetur mel. Eam in tation iudicabit evertitur, ea impetus antiopam sit, falli imperdiet at qui.
         </p>
@@ -133,28 +133,6 @@ title: FAMSF Digital Stories Interaction Demo - Dark
       </div>
     </div>
   </section>
-  <section class="section pp-scrollable" id="sixthPage" >
-    <div class="zoom-parent" style="text-align: center;">
-        <div class="zoom-child" style="background-image: url({{ site.url }}/assets/imgs/proof-of-concept/12_forest_Ordrupgaard-Museum-zoomable.jpg); transform-origin: 70% 70%;">
-        </div>
-        <div class="zoom-marker-outer" style="position: absolute; top: 70%; left:70%">
-          <a class="zoom-marker-inner" style="position: absolute; top: -50%; left: -50%" href="#">zoom</a>
-        </div>
-        <div class="zoom-detail-view" style="background-image: url({{ site.url }}/assets/imgs/proof-of-concept/12_forest_Ordrupgaard-Museum-zoommed.jpg); transform-origin: 70% 70%;">
-          <a class="zoom-close" href="#" style="position: absolute; top: 20%; left:45%">close</a>
-        </div>
-        <h1 style="position: absolute; top: 0;">zoom effects: click to zoom on a targeted area</h1>
-    </div>
-    <div class="container">
-      <div class="l-column">
-      <p>In 1863, the 23 year old Monet traveled to the majestic Forest of Fontainebleau. What was once the private reserve of
-
-      the kings, had become a tourist destination a short railway trip from Paris. He returned the following year and wrote... In Fontainebleau, Monet endeavored to paint entirely out of doors to capture nature directly. This was facilitated by the
-      recent innovation of paint in tubes and portable easels. Monet also began his practice of returning to a site again and again experimenting with many different ways of registering light.</p>
-      <button class="next-page animated fadeInDownShort delay-1000" style="margin: 1em auto; display: block">next</button>
-      </div>
-    </div>
-  </section>
   <section class="section pp-scrollable" id="lastPage" >
     <div class="container">
       <div class="l-column">
@@ -168,3 +146,4 @@ title: FAMSF Digital Stories Interaction Demo - Dark
 </main>
 
 {% endblock %}
+
