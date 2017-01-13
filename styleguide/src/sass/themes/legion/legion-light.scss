@@ -19,27 +19,30 @@ $white-60: rgba($white, .6);
 $azure: #1c90cf;
 $azure-60: #77bce2;
 $indigo: #0f6088;
-$pink: #d3a9ba;
-$pink-5: #fdfbfc;
-$pink-10: #fbf6f8;
-$pink-20: #f4edf0;
+$pink-30: #f2e5ea;
+$pink-60: #ebd0d2;
+$peach: #e5cbcc;
+$melon: #e0b9bb;
 $magenta: #922b55;
 $sea: #216780;
-$ink: #10465b;
-$midnight: #03161e;
+$denim: #10465b;
+$midnight: #0a2f3d;
+$ink: #03161e;
 
-$background-a: $pink-5;
-$background-b: $pink-20;
-$border: $pink-5;
-$text-color: $midnight;
-$text-color-invert: $pink-5;
-$primary: $indigo;
-$primary-active: $ink;
-$secondary: $magenta;
-$tertiary: $azure;
+$background-a: $pink-30;
+$background-b: $peach;
+$background-c: $pink-60;
+$background-d: $melon;
+$border: $pink-30;
+$text-color: $ink;
+$text-color-invert: $pink-30;
+$primary: $denim;
+$primary-active: $midnight;
+$secondary: $azure;
+$tertiary: darken($magenta, 5%);
 
-$dotted-border: null;
-$rectangles-border: null;
+$dotted-border: url('../../../imgs/dots-light.svg');
+$rectangles-border: url('../../../imgs/rectangles-light.svg');
 
 // Import the global theme styles.
 @import '../../global';

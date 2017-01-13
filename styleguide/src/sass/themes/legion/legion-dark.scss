@@ -25,10 +25,14 @@ $magenta: #922b55;
 $yellow: #ffd878;
 $gold: #edb23e;
 $sea: #216780;
-$ink: #10465b;
+$denim: #10465b;
+$midnight: #0a2f3d;
+$ink: #03161e;
 
 $background-a: $sea;
-$background-b: $ink;
+$background-b: $denim;
+$background-c: $midnight;
+$background-d: $ink;
 $border: $sea;
 $text-color: $white;
 $text-color-invert: $sea;
@@ -37,8 +41,8 @@ $primary-active: $gold;
 $secondary: $azure-60;
 $tertiary: $pink-70;
 
-$dotted-border: url('../../../imgs/dots-pink.svg');
-$rectangles-border: url('../../../imgs/rectangles-sea-60.svg');
+$dotted-border: url('../../../imgs/dots-dark.svg');
+$rectangles-border: url('../../../imgs/rectangles-dark.svg');
 
 // Import the global theme styles.
 @import '../../global';
