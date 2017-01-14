@@ -1,0 +1,19 @@
+{#
+  name: Section Hero with image
+  usage: The section hero is used at the beginning of as section or chapter. This version has a background image.
+#}
+
+{% block component %}
+
+{% if page.title == "Dark Section Hero with Light Background Image" or page.title == "Light Section Hero with Light Background Image" %}
+  <div class="section-hero has-image light-background-image landscape-orientation">
+    {% include('section-hero-title--optiona.html') %}
+  </div> 
+
+{% elseif page.title == "Dark Section Hero with Dark Background Image" or page.title == "Light Section Hero with Dark Background Image" %}
+  <div class="section-hero has-image dark-background-image portrait-orientation">
+    {% include('section-hero-title--optionc.html') %}
+  </div> 
+{% endif %}
+
+{% endblock %}
