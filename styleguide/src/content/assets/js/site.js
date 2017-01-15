@@ -27,7 +27,7 @@
         direction: 'vertical',
         verticalCentered: false,
         sectionsColor: [],
-        anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'fifthPage', 'sixthPage', 'seventhPage', 'lastPage'],
+        anchors: ['intro', 'section4-light', 'section4-dark', 'section-with-video', 'image-and-caption', 'image-and-caption', 'lastPage'],
         scrollingSpeed: 700,
         easing: 'swing',
         loopBottom: false,

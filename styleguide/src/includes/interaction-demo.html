@@ -5,16 +5,18 @@
 
 {% block component %}
 <main id="pagepiling" >
-  <section class="section animatedParent" id="firstPage" style="background-image: url('/assets/imgs/proof-of-concept/12_forest_Ordrupgaard-Museum.jpg'); background-attachment: fixed; background-position: center; background-repeat: no-repeat; background-size: cover;color: white; ">
-    <div class="container">
-      <div class="l-column">
-
-        <h1 class="animated fadeInRight">Monet the Early Years</h1>
-        <button class="next-page animated fadeInDownShort delay-250" style="position: absolute; bottom: 1em; left: 50%;">next</button>
+  <section class="animatedParent section pp-scrollable" id="intro">
+    <div class="section-hero landscape-orientation">
+      <div class="section-hero--title">
+        <h1><span class="section-hero--number">FAMSF Digital Sories:</span><br />Interaction Demo</h1>
       </div>
+      <button class="next-page animated fadeInDownShort delay-250" style="position: absolute; bottom: 1em; left: 50%;">next</button>
     </div>
   </section>
-  <section class="section pp-scrollable" id="secondPage">
+  <section class="section pp-scrollable" id="section4-light">
+    <div class="section-hero has-image light-background-image landscape-orientation">
+      {% include('section-hero-title--optiona.html') %}
+    </div>
     <div class="container">
       <div class="l-column">
         <ul class="bxslider" style="text-align: center; height: 5em; display: block;">
@@ -55,6 +57,36 @@
         Eam ei agam oporteat, urbanitas abhorreant nam ut. Pri et discere appareat, ferri elitr eu eam. Feugiat constituto vix ei, vide soleat mentitum ne mel, meis affert inimicus eam ei. No agam platonem assentior mel, mea quis equidem ut, pri id luptatum conceptam. Ut lobortis incorrupte quo, ex vis prompta nostrum adipisci, at vim exerci comprehensam.
         </p>
         <p>
+        Iisque suscipit mea ea, at ubique partiendo iracundia usu. Alii mollis omittantur nam ut, in eum diam solet definiebas, ea eos stet voluptatum. Eos delectus temporibus no, nam ad nulla admodum scripserit. Munere equidem te has. Duis facete et sea, ei appetere nominati consetetur mel. Eam in tation iudicabit evertitur, ea impetus antiopam sit, falli imperdiet at qui.
+        </p>
+        <button class="next-page animated fadeInDownShort delay-1000" style="margin: 1em auto; display: block">next</button>
+      </div>
+    </div>
+  </section>
+  <section class="section pp-scrollable" id="section4-dark">
+    <div class="section-hero has-image dark-background-image portrait-orientation">
+    {% include('section-hero-title--optionc.html') %}
+  </div>
+  <div class="container">
+      <div class="l-column">
+
+        <h1 class="animated fadeInRight">What is this &ldquo;new and revolutionary art?&rdquo;</h1>
+
+        <h2 class="animated fadeInRight delay-1000">something animated 2</h2>
+        <h3 class="animated fadeInRight delay-2000">something animated 3</h3>
+        <p>
+        Iisque suscipit mea ea, at ubique partiendo iracundia usu. Alii mollis omittantur nam ut, in eum diam solet definiebas, ea eos stet voluptatum. Eos delectus temporibus no, nam ad nulla admodum scripserit. Munere equidem te has. Duis facete et sea, ei appetere nominati consetetur mel. Eam in tation iudicabit evertitur, ea impetus antiopam sit, falli imperdiet at qui.
+        </p>
+        <p>
+        Vim no ignota mollis disputationi, sonet graecis pri an, per in lorem viderer reprehendunt. Id tota option graecis est, per et oportere maiestatis. Sea eius augue an. Libris malorum admodum mea id.
+        </p>
+        <p>
+        Ne eum ridens causae splendide. Eros commune suscipit ius an. Affert iudico partem eam te, id invidunt scriptorem signiferumque mei. Eu mea recteque percipitur, ut denique interesset omittantur sit, ex fugit perpetua vel. Vel soluta petentium constituam cu. Regione intellegat no mei, ne dicat consul integre vix.
+        </p>
+        <p>
+        Eam ei agam oporteat, urbanitas abhorreant nam ut. Pri et discere appareat, ferri elitr eu eam. Feugiat constituto vix ei, vide soleat mentitum ne mel, meis affert inimicus eam ei. No agam platonem assentior mel, mea quis equidem ut, pri id luptatum conceptam. Ut lobortis incorrupte quo, ex vis prompta nostrum adipisci, at vim exerci comprehensam.
+        </p>
+        <p>
         Diam vocibus ei his, et pro mollis principes, duo ad nullam offendit neglegentur. Eros invidunt in eos, nam case legimus explicari ea, mel te option quaerendum mediocritatem. Ad per elitr delenit omittam, ea qui vivendo docendi. Per ex simul essent, quo ut tale tollit, ex amet nulla est. Vel nisl vivendum interesset et. Vim accusam euripidis referrentur eu.
         </p>
         <p>
@@ -70,17 +102,31 @@
       </div>
     </div>
   </section>
-  <section class="section pp-scrollable" id="thirdPage">
+  <section class="section pp-scrollable" id="section-with-video">
+  {% include('section-hero--video.html') %}
+    <div class="container">
+      <div class="l-column">
+        <p>
+        Ne eum ridens causae splendide. Eros commune suscipit ius an. Affert iudico partem eam te, id invidunt scriptorem signiferumque mei. Eu mea recteque percipitur, ut denique interesset omittantur sit, ex fugit perpetua vel. Vel soluta petentium constituam cu. Regione intellegat no mei, ne dicat consul integre vix.
+        </p>
+        <p>
+        Ubique argumentum est cu, per ad cetero vocent civibus. Te cum simul convenire splendide, denique sapientem instructior an quo. Vix modo modus oportere ei. Ad blandit oporteat his, sint recusabo necessitatibus pro et. Ceteros democritum contentiones ex eos, id clita inciderint sit. At vel homero sententiae, ne his alterum fabulas ancillae.
+        </p>
+        <button class="next-page animated fadeInDownShort delay-250" style="margin: 1em auto; display: block">next</button>
+      </div>
+    </div>
+  </section>
+  <section class="section pp-scrollable" id="image-and-caption">
     {% include('image-with-credit.html') %}
     <div class="container">
       <div class="l-column">
-        <h2>Some section 3</h2>
+        <h1 class="animated fadeInRight">H1 fade in animated</h1>
         <p>Lorem ipsum dolor sit amet, pri eu virtute hendrerit, pro labores debitis deserunt ei, cu ius audire reformidans. Ex timeam impedit mel, id mea veri numquam efficiantur. Duo facete bonorum abhorreant ad, pro nisl apeirian ut. In mei decore tacimates, malis accommodare his ei. Et quaeque scripserit vel.
         </p>
         <p>
         His dicam homero fabulas et, ea duo error altera honestatis, modo percipitur scripserit at eos. His te admodum praesent dissentiunt, duo id iracundia definitionem. An delectus forensibus duo. Adhuc populo percipitur ea nam. Cotidieque interpretaris vim et.
         </p>
-        <h1 class="animated fadeInRight">something animated</h1>
+        <h2>h2 Section Header</h2>
         <p>
         Iisque suscipit mea ea, at ubique partiendo iracundia usu. Alii mollis omittantur nam ut, in eum diam solet definiebas, ea eos stet voluptatum. Eos delectus temporibus no, nam ad nulla admodum scripserit. Munere equidem te has. Duis facete et sea, ei appetere nominati consetetur mel. Eam in tation iudicabit evertitur, ea impetus antiopam sit, falli imperdiet at qui.
         </p>
@@ -89,30 +135,12 @@
     {% include('read-more--deep-dive.html') %}
     <button class="next-page animated fadeInDownShort delay-250" style="margin: 1em auto; display: block">next</button>
   </section>
-  <section class="section pp-scrollable" id="fourthPage">
-    <video autoplay="autoplay" muted="muted" preload="metadata" style="width:100%" title="Etretat GettyImages-150708198" loop="loop" class="video-background">
-      <source src="{{ site.url }}/assets/imgs/proof-of-concept/Etretat_GettyImages-150708198.mp4" type="video/mp4" />
-      <source src="{{ site.url }}/assets/imgs/proof-of-concept/Etretat_GettyImages-150708198.webm" type="video/webm" />
-    </video>
+  <section class="section pp-scrollable" id="section-with-zoom">
     <div class="container">
-      <footer class="l-column" style="color: white; position: absolute; bottom: 0;">
-        Text in front of video
-      </footer>
-      <button class="next-page animated fadeInDownShort delay-250" style="position: absolute; bottom: 1em; left: 50%;">next</button>
-    </div>
-  </section>
-  <section class="section pp-scrollable" id="fifthPage">
-      <div class="video-holder" style="position: relative; height: 50vh; overflow: hidden; display: flex; align-items: center; text-align: center;">
-        <video autoplay muted preload="metadata"  style="width:100%" title="Etretat GettyImages-150708198" loop="loop" class="video-background">
-          <source src="{{ site.url }}/assets/imgs/proof-of-concept/Etretat_GettyImages-150708198.mp4" type="video/mp4" />
-          <source src="{{ site.url }}/assets/imgs/proof-of-concept/Etretat_GettyImages-150708198.webm" type="video/webm" />
-        </video>
-        <div class="container">
-          <div class="l-column">
-            <h2 class="animated growIn">Hero header section</h2>
-          </div>
-        </div>
+      <div class="l-column">
+      {% include('image-with-credit--zoom.html') %}
       </div>
+    </div>
     <div class="container">
       <div class="l-column">
         <p>
