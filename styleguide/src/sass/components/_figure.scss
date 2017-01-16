@@ -35,9 +35,11 @@ figure {
 figcaption {
   position: absolute;
   bottom: -100%; // Hide caption until it is ready to reveal.
+  left: 2.2rem;
   z-index: 2;
   background-color: transparentize($black, .2);
-  padding: .5rem .7rem;
+  padding: .5rem 2.9rem .5rem .7rem;
+  min-height: 2.2rem;
   margin: 0;
   color: $white;
   font-size: .7rem;
@@ -56,6 +58,7 @@ figcaption {
   font-family: $roboto-slab;
   font-weight: 700;
 }
+
 .figure__zoomable {
   overflow: hidden;
   position: relative;
