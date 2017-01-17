@@ -20,6 +20,6 @@
   },
   "homepage": "https://github.com/palantirnet/famsf-digital-stories#readme",
   "dependencies": {
-    "butler": "git://github.com/palantirnet/butler.git#b327e859b8d94969188dd35d056eb473d7706664"
+    "butler": "github:palantirnet/butler#spress-task"
   }
 }
