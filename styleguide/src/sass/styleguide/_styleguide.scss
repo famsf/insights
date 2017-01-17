@@ -31,7 +31,7 @@
 
 // Update this class as needed to differentiate styleguide header from the header component
 .styleguide-header {
-  background-color: $white;
+
 }
 
 .styleguide-copyright {
@@ -43,7 +43,7 @@
 }
 
 .styleguide-label {
-  color: $gray-dark;
+  color: $text-color;
 }
 
 .styleguide-section {
@@ -53,23 +53,28 @@
 }
 
 .styleguide-list {
-  list-style-type: disc;
+  list-style-type: none;
+  padding: 0;
 }
 
 .styleguide-component {
-  background-color: $white;
   padding: rhythm(2) 0;
 }
 
 .styleguide-description {
-  background-color: $gray-light;
+  background-color: transparentize($background-b, .5);
   margin: rhythm(1) 0;
   padding: rhythm(1) 0;
 }
 
 .styleguide-swatch {
-  width: 50%;
   padding: 25px;
+  color: $black;
+  margin-bottom: 1em;
+
+  code {
+    background-color: $white-60;
+  }
 }
 
 .styleguide-body {
@@ -78,14 +83,14 @@
 
 // Grid demo styles
 .demo {
-  background-color: $gray-light;
+  border: 1px solid $text-color;
   padding: rhythm(1);
 }
 
 // Set example nest wrap styles
 .nest-wrap {
   @extend %clearfix;
-  background-color: $gray-light;
+  border: 1px solid $text-color;
   padding: 0;
 }
 
@@ -93,7 +98,7 @@
 @include layout(8) {
   .nest-item {
     @include isolation-span(8, 1, 'both');
-    background-color: darken($gray-light, 4%);
+    background-color: darken($background-b, 4%);
     padding: rhythm(1);
 
     @include breakpoint($bp1) {

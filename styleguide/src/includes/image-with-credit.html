@@ -1,0 +1,23 @@
+{#
+  name: Image with credit
+  usage: Images with credits may appear in several contexts throughout the site.
+#}
+
+{% block component %}
+  <figure>
+    <div class="figure--wrapper">
+      {% if page.title == "Legion Dark: Image with credit" %}
+        <img src="../assets/imgs/art/Forest_Fontainebleau.jpg" alt="painting of trees" />
+        <figcaption><span class="title-of-art">The Pave de Chailly in the Forest Fontainebleau (cat 7)</span> 1865 | Monet | oil on canvas | Ordrupgaard Museum</figcaption>
+      {% endif %}
+
+      {% if page.title == "Read More" %}
+        <img src="../assets/imgs/art/Corot_French_Banks.jpg" alt="painting of river" />
+        <figcaption><span class="title-of-art">Banks of the Somme at Picquigny</span> Jean-Baptiste-Camille Corot</figcaption>
+      {% endif %}
+    </div>
+    <button class="button-with-icon">{% include('svg/famsf-info.html') %}</button>
+  </figure>
+
+{% endblock %}
+

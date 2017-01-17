@@ -45,7 +45,7 @@ $text: 1 * $base-font-size;
 $label: .8 * $base-font-size;
 $crumb: .6 * $base-font-size;
 
-$h1-font-size: $lg-heading;
+$h1-font-size: $xl-heading;
 $h2-font-size: $md-heading;
 $h3-font-size: $sm-heading;
 $h4-font-size: $text;
@@ -64,76 +64,37 @@ $h6-font-size: $label;
 // find any of the fonts in the list.
 
 // First, let's create some font stacks.
-$times-new-roman: "Times New Roman", Times, Georgia, "DejaVu Serif", serif;
-$times: Times, "Times New Roman", Georgia, "DejaVu Serif", serif;
-$georgia: Georgia, "Times New Roman", "DejaVu Serif", serif;
-$verdana: Verdana, Tahoma, "DejaVu Sans", sans-serif;
-$tahoma: Tahoma, Verdana, "DejaVu Sans", sans-serif;
-$helvetica: Helvetica, Arial, "Nimbus Sans L", sans-serif;
-$arial: Arial, Helvetica, "Nimbus Sans L", sans-serif;
+$roboto: "roboto", sans-serif;
+$roboto-condensed: "roboto-condensed", sans-serif;
+$roboto-slab: "roboto-slab", sans-serif;
 
 // For an explanation of why "sans-serif" is at the end of this list, see
 // http://meyerweb.com/eric/thoughts/2510/02/12/fixed-monospace-sizing/
-$courier: "Courier New", "DejaVu Sans Mono", monospace, sans-serif;
+$roboto-mono: "roboto-mono", monospace, sans-serif;
 
 // Now create some variables for the font stacks we want to use on this site.
-$base-font-family: $helvetica; // The font family set on the html element.
-$font-monospace: $courier;
-
-// Sass color variables, etc.
-$black: #222222;
-$gray-dark: #444444;
-$gray-medium: #888888;
-$gray-light: #F0F0F0;
-$off-white: #fbfbfb;
-$white: #ffffff;
-$white-60: rgba($white, .6);
-$white-30: rgba($white, .3);
-$yellow: #ff0;
+$base-font-family: $roboto; // The font family set on the html element.
+$font-monospace: $roboto-mono;
 
 // Use above sass variables to define defaults in normalize.scss
 /* body */
-$text-color: $gray-dark;
-$background-color: $white;
+// $text-color: $white;
+// $background-color: $white;
 /* Link (a:) */
-$link-color: $gray-medium;
-$link-hover: $gray-dark;
+$link-color: $primary;
+$link-hover: $primary-active;
 /* Blockquote*/
-$blockquote-color: $gray-medium;
+$blockquote-color: $primary;
 /* Figcaption */
-$figcaption-color: $gray-medium;
-/* forms */
-$form-text: $gray-medium;
-$input-border-color: $gray-light;
-$input-border-hover: $gray-dark;
-$input-not: $gray-medium;
-$input-not-background: $gray-light;
-$input-not-border: $gray-medium;
-$input-not-hover: $gray-dark;
-$input-focus-outline: $gray-dark;
-$input-disabled-background: $gray-light;
-$input-disabled-text: $gray-medium;
-$input-disabled-not-background: $gray-light;
-$input-disabled-not-text: $gray-medium;
-$input-readonly-text: $gray-medium;
-$input-readonly-background: $gray-light;
-$input-readonly-border: $gray-medium;
-$input-invalid-text: #b94a48;
-$input-invalid-border: #ee5f5b;
-$input-invalid-border-focus: #e9322d;
-$input-check-outline: #e9322d;
-$select-background: $white;
-$select-border: $gray-light;
-$select-border-hover: $gray-medium;
-$placeholder-text: $gray-light;
+$figcaption-color: $text-color;
 /* Buttons */
-$button-background: $gray-medium;
-$button-text: $white;
-$button-hover-background: $gray-dark;
-$button-hover-text: $white;
-$button-focus-outline: $gray-dark;
-$button-reset-text: $gray-medium;
-$button-reset-text-hover: $gray-dark;
+$button-background: $primary;
+$button-text: $text-color-invert;
+$button-hover-background: $primary-active;
+$button-hover-text: $text-color-invert;
+$button-focus-outline: $gray-light;
+$button-reset-text: $text-color-invert;
+$button-reset-text-hover: $text-color-invert;
 ///////////////////////////////////////////////////////////
 
 // Breakpoint Variables

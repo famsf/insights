@@ -1,0 +1,41 @@
+/**
+ * @file
+ * Sass color variables for dark color palette.
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+$black: #000;
+$gray-dark: #3e3e3e;
+$gray-medium: #a8abad;
+$gray-light: #ececec;
+$white: #fff;
+$white-10: rgba($white, .1);
+$white-20: rgba($white, .2);
+$white-30: rgba($white, .3);
+$white-60: rgba($white, .6);
+
+$background-a: $white;
+$background-b: $white;
+$background-c: $gray-light;
+$background-d: $gray-light;
+$border: $gray-light;
+$text-color: $black;
+$text-color-invert: $white;
+$primary: darken($gray-medium, 20%);
+$primary-active: $black;
+$secondary: $gray-light;
+$tertiary: $gray-light;
+
+$azure: #1c90cf;
+$azure-60: #77bce2;
+$indigo: #0f6088;
+$pink-30: #f2e5ea;
+$pink-60: #ebd0d2;
+$peach: #e5cbcc;
+$melon: #e0b9bb;
+$magenta: #922b55;
+$sea: #216780;
+$denim: #10465b;
+$midnight: #0a2f3d;
+$ink: #03161e;
