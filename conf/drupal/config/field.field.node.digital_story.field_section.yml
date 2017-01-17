@@ -5,11 +5,7 @@ dependencies:
   config:
     - field.storage.node.field_section
     - node.type.digital_story
-    - paragraphs.paragraphs_type.1up_section
-    - paragraphs.paragraphs_type.2up_section
-    - paragraphs.paragraphs_type.3up_section
-    - paragraphs.paragraphs_type.call_to_action_section
-    - paragraphs.paragraphs_type.section_divider
+    - paragraphs.paragraphs_type.card_section
   module:
     - entity_reference_revisions
 id: node.digital_story.field_section
@@ -26,28 +22,27 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      1up_section: 1up_section
-      2up_section: 2up_section
-      3up_section: 3up_section
-      call_to_action_section: call_to_action_section
-      section_divider: section_divider
+      card_section: card_section
     target_bundles_drag_drop:
       1up_section:
-        enabled: true
         weight: 7
+        enabled: false
       2up_section:
-        enabled: true
         weight: 8
+        enabled: false
       3up_section:
-        enabled: true
         weight: 9
+        enabled: false
       call_to_action_section:
-        enabled: true
         weight: 10
+        enabled: false
       section_divider:
-        enabled: true
         weight: 11
+        enabled: false
       text_area:
         weight: 12
         enabled: false
+      card_section:
+        enabled: true
+        weight: 12
 field_type: entity_reference_revisions

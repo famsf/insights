@@ -15,4 +15,7 @@ content:
   links:
     weight: 100
 hidden:
+  field_header_section: true
+  field_main_navigation: true
   field_section: true
+  field_skin: true
