@@ -22,28 +22,27 @@
 .icon--large,
 %icon--large {
   @extend %icon;
-  
+  display: none;
+
+  @include breakpoint($bp3) {
+    display: block;
+  }
+
   svg {
     height: 70px;
-    display: none;
-
-    @include breakpoint($bp3) {
-      display: block;
-    }
   }
 }
 
-.icon--small
+.icon--small,
 %icon--small {
   @extend %icon;
+  display: block;
+
+  @include breakpoint($bp3) {
+    display: none;
+  }
 
   svg {
     height: 40px;
-    display: block;
-
-    @include breakpoint($bp3) {
-      display: none;
-    }
   }
 }
-
