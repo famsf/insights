@@ -17,12 +17,12 @@ If you have been running a previous version of Vagrant you may need to do: `vagr
  * `composer install`
  * `vagrant up`
 1. You will be prompted for the administration password on your host machine. Obey.
-1. SSH in and install Butler for the styleguide and compile sass:
+1. Access VM via SSH and install Butler for the styleguide and compile sass:
 ```
-    cd styleguide
-    composer install
     vagrant ssh
     cd /var/www/drupal-skeleton.local/styleguide
+    composer install
+    npm install
     npm run butler -- sass
 
 ```
@@ -30,7 +30,6 @@ If you have been running a previous version of Vagrant you may need to do: `vagr
 2. While still accessing the VM by ssh, install the site:
 
   ```
-    vagrant ssh
     cd /var/www/famsf-digital-stories.local
     vendor/bin/phing build install migrate
   ```
