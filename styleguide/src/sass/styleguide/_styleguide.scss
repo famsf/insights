@@ -111,3 +111,20 @@
     }
   }
 }
+
+.styleguide-icon--large {
+  @extend %icon;
+  margin-right: 2em;
+
+  svg {
+    height: 70px;
+  }
+}
+
+.styleguide-icon--small {
+  @extend %icon;
+
+  svg {
+    height: 40px;
+  }
+}

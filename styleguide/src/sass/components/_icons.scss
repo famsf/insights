@@ -5,28 +5,44 @@
  * @copyright Copyright (c) 2017 Palantir.net
  */
 
-.icon-large {
-  height: 70px;
+.icon,
+%icon {
+  svg {
+    fill: $primary;
+  }
+
+  &:active,
+  &:hover {
+    svg {
+      fill: $primary-active;
+    }
+  }
+}
+
+.icon--large,
+%icon--large {
+  @extend %icon;
   display: none;
 
   @include breakpoint($bp3) {
     display: block;
   }
+
+  svg {
+    height: 70px;
+  }
 }
 
-.icon-small {
-  height: 40px;
+.icon--small,
+%icon--small {
+  @extend %icon;
   display: block;
 
   @include breakpoint($bp3) {
     display: none;
   }
-}
 
-.icon--background {
-  fill: $primary;
-}
-
-.icon--stripes {
-  fill: $background-b;
+  svg {
+    height: 40px;
+  }
 }
