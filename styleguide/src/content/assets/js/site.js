@@ -115,30 +115,44 @@
   };
   Drupal.behaviors.zoom_toggle = {
     attach: function(context, settings) {
-      $('.zoom-marker-inner').click(function(){
+      var zoomMarker = $('.zoom-marker-inner');
+      var zoomClose = $('.zoom-close');
+
+      // Listener for click on any zoom marker.
+      zoomMarker.click(function(){
         var marker = $(this);
+        // Start to zoom in on the initial image.
         marker.closest('.zoom-group').find('.figure__zoomable-child').toggleClass('zoomed');
         setTimeout(function() {
+          // Reveal the detail image.
           marker.closest('.zoom-group').find('.zoom-detail-view').toggleClass('show-detail');
           setTimeout(function() {
+            // Zoom in on the detail image.
             marker.closest('.figure__zoomable').find('.zoom-detail-view').toggleClass('zoomin');
-            $('.zoom-close').show();
+            // Show the close button
+            marker.closest('.figure__zoomable').find(zoomClose).show();
           }, 200);
         }, 200);
-        $('.zoom-marker-outer').hide();
+        // Hide the marker.
+        marker.closest('.figure__zoomable').find('.zoom-marker-outer').hide();
       });
 
-      $('.zoom-close').click(function(){
+      // Listener for a click on any zoom close button.
+      zoomClose.click(function(){
         var closeButton = $(this);
+        // Zoom out of detail image
         closeButton.closest('.figure__zoomable').find('.zoom-detail-view.zoomin').toggleClass('zoomin');
         setTimeout(function() {
+          // Hide the detail image.
           closeButton.closest('.figure__zoomable').find('.zoom-detail-view.show-detail').toggleClass('show-detail');
           setTimeout(function() {
+            // Zoom out on main image.
             closeButton.closest('.figure__zoomable').find('.figure__zoomable-child.zoomed').toggleClass('zoomed');
-             $('.zoom-close').hide();
+            closeButton.hide();
           }, 200);
         }, 200);
-        $('.zoom-marker-outer').show();
+        // Show the markers.
+        zoomClose.closest('.figure__zoomable').find('.zoom-marker-outer').show();
       });
     }
   };
