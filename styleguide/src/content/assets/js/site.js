@@ -117,9 +117,9 @@
     attach: function(context, settings) {
       $('.zoom-marker-inner').click(function(){
         var marker = $(this);
-        marker.closest('.figure__zoomable').find('.figure__zoomable-child').toggleClass('zoomed');
+        marker.closest('.zoom-group').find('.figure__zoomable-child').toggleClass('zoomed');
         setTimeout(function() {
-          marker.closest('.figure__zoomable').find('.zoom-detail-view').toggleClass('show-detail');
+          marker.closest('.zoom-group').find('.zoom-detail-view').toggleClass('show-detail');
           setTimeout(function() {
             marker.closest('.figure__zoomable').find('.zoom-detail-view').toggleClass('zoomin');
             $('.zoom-close').show();
@@ -130,11 +130,11 @@
 
       $('.zoom-close').click(function(){
         var closeButton = $(this);
-        closeButton.closest('.figure__zoomable').find('.zoom-detail-view').toggleClass('zoomin');
+        closeButton.closest('.figure__zoomable').find('.zoom-detail-view.zoomin').toggleClass('zoomin');
         setTimeout(function() {
-          closeButton.closest('.figure__zoomable').find('.zoom-detail-view').toggleClass('show-detail');
+          closeButton.closest('.figure__zoomable').find('.zoom-detail-view.show-detail').toggleClass('show-detail');
           setTimeout(function() {
-            closeButton.closest('.figure__zoomable').find('.figure__zoomable-child').toggleClass('zoomed');
+            closeButton.closest('.figure__zoomable').find('.figure__zoomable-child.zoomed').toggleClass('zoomed');
              $('.zoom-close').hide();
           }, 200);
         }, 200);

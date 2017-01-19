@@ -9,9 +9,11 @@ description: This is an image with a credit. It will adjust to the size of its c
 ---
 
 {% block content_wrapper %}
+  <div class="animatedParent"> <!--trigger the animated markers to fade in -->
   {% block content %}
 
     {% include('image-with-credit--zoom.html') %}
 
   {% endblock %}
+  </div>
 {% endblock %}
