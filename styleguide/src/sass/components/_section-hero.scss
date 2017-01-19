@@ -42,7 +42,7 @@
   width: 90vw;
   color: $midnight;
   padding: rhythm(1);
-  background-color: transparentize($white, .2);
+  background-color: $white-60;
 
   @include breakpoint($bp2) {
     width: 27rem;
@@ -67,7 +67,7 @@
     @include breakpoint($bp2) {
       margin-top: rhythm(3);
       margin-left: rhythm(3);
-      background-color: $white-60;
+      background-color: $white-30;
     }
   }
 
@@ -96,13 +96,6 @@
   }
 }
 
-.section-hero--number {
-  font-family: $roboto;
-  font-weight: 700;
-  font-size: .5em;
-  margin: 0;
-}
-
 .section-hero--rectangle {
   display: none;
 
@@ -112,7 +105,7 @@
     z-index: 0;
     // the width and height of the rectangles should be .7rem more than the width and height of .section-hero--title to create overlap effect
     width: 27rem + .7rem;
-    height: 12rem + .7rem;
+    height: 8.7rem + .7rem;
 
     &.top {
       top: -.7rem;
