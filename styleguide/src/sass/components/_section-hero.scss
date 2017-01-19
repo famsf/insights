@@ -42,7 +42,7 @@
   width: 90vw;
   color: $midnight;
   padding: rhythm(1);
-  background-color: transparentize($white, .2);
+  background-color: $white-60;
 
   @include breakpoint($bp2) {
     width: 27rem;
@@ -67,7 +67,7 @@
     @include breakpoint($bp2) {
       margin-top: rhythm(3);
       margin-left: rhythm(3);
-      background-color: $white-60;
+      background-color: $white-30;
     }
   }
 
