@@ -1,0 +1,13 @@
+{#
+  name: Audio with button
+  usage: Audio file with play/stop toggle button
+#}
+<div class="audio__wrapper">
+  <audio class="audio__source">
+    <source src="{{ site.url }}/assets/audio/placeholder--horse.mp3" type="audio/mpeg">
+    <source src="{{ site.url }}/assets/audio/placeholder--horse.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <button class="audio__button play">play</button>
+</div>
