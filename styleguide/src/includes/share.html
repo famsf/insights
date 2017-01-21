@@ -1,0 +1,13 @@
+{#
+  name: Share This Section
+  usage: a button within a section to share things.
+#}
+
+{% block component %}
+<div class="share-wrapper">
+  <button class="share-button"><span class="styleguide-icon--small">{% include('svg/famsf-share-sm.html') %}</span></button>
+  <div class="share-expander share-expander__is-closed">
+    <div class="addthis_inline_share_toolbox"></div>
+  </div>
+</div>
+{% endblock %}
