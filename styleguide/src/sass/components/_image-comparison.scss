@@ -1,0 +1,65 @@
+/**
+ * @file
+ * styles for "image comparison" component
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+.comparison {
+  @extend %dotted-border;
+  @include breakpoint ($bp2) {
+    display: -webkit-flex;
+    display: flex;
+  }
+
+  figure {
+    margin: 0;
+  }
+}
+
+.comparison--2up,
+.comparison--3up {
+  width: 100%;
+  height: auto;
+  padding: 0;
+
+  @include breakpoint ($bp2) {
+    margin: 0;
+  }
+}
+
+.comparison--3up {
+  @include breakpoint ($bp2) {
+    width: 33%;
+  }
+}
+
+.comparison--2up {
+  @include breakpoint ($bp2) {
+    width: 50%;
+  }
+}
+
+.comparison--button {
+  @extend %color-block-button--full;
+  background-color: transparentize($primary, .2);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+
+  &:active,
+  &:hover {
+    background-color: $primary;
+  }
+}
+
+.comparison--answer { 
+  @include breakpoint ($bp2) {
+    padding: rhythm(1);
+
+    h3:first-child {
+      @include leader(0, $h3-font-size);
+    }
+  }
+}
