@@ -21,10 +21,6 @@ figure {
     margin: 0;
     display: block;
   }
-
-  svg {
-    margin-left: .7rem;
-  }
 }
 
 .figure--wrapper {
@@ -33,18 +29,26 @@ figure {
 }
 
 .figure--figcaption-reveal {
-  @extend %button-with-icon;
+  @extend %icon;
+  @extend %custom-focus;
+  display: flex;
+  display: -webkit-flex;
   position: absolute;
   bottom: 0;
   left: 0;
   z-index: 2;
   background-color: transparentize($background-d, .2);
-  padding: .5rem 0;
   width: 2.2rem;
+  height: 2.2rem;
+  border: 0;
 
   svg {
     height: 1.2rem;
     margin: 0 auto;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
   }
 
   &:active,
@@ -89,6 +93,7 @@ p.figcaption {
   overflow: hidden;
   position: relative;
 }
+
 .figure__zoomable-child {
   position: absolute;
   height: 100%;
