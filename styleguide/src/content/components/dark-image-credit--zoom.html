@@ -1,7 +1,7 @@
 ---
 layout: component
 section: component
-type: full-width
+type: main
 theme: legion-dark
 
 title: Dark Image with credit and zoom
@@ -9,11 +9,20 @@ description: This is an image with a credit. It will adjust to the size of its c
 ---
 
 {% block content_wrapper %}
-  <div class="animatedParent"> <!--trigger the animated markers to fade in -->
+
   {% block content %}
-
+  <div class="animatedParent"> <!--trigger the animated markers to fade in -->
     {% include('image-with-credit--zoom.html') %}
-
-  {% endblock %}
   </div>
+  {% endblock %}
+
 {% endblock %}
+<div class="zoom-overlay-background">
+</div>
+<div class="zoom-window animatedParent">
+  <div class="zoom-window__content">
+  </div>
+  <footer class="zoom-footer">
+    <a class="zoom-close animated fadeInDownShort" href="javascript:;" style="display: none;"><span class="styleguide-icon--small">{% include('svg/famsf-zoom-in-sm.html') %}</span> close</a>
+  </footer>
+</div>

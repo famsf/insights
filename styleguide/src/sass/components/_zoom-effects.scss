@@ -43,31 +43,65 @@
 }
 
 .zoom-detail-view {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
-  opacity: 0;
+  display: none;
 }
 
 .show-detail {
-  opacity: 1;
+  display: block;
 }
-.zoom-close,
+
 .zoom-marker-outer {
   z-index: 1;
 }
 
-.zoom-close,
 .zoom-marker-inner {
   display: block;
   padding: 1em;
 }
+
+.zoom-close {
+  display: inline-block;
+}
+
+.zoom-footer {
+  text-align: center;
+}
+
+.zoom-overlay-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #333;
+  opacity: .75;
+  z-index: 50;
+  display: none;
+}
+
+.zoom--is-open {
+  display: block;
+}
+
+.zoom-window {
+  position: absolute;
+  background: $background-a;
+  position: fixed;
+  top: 2em;
+  right: 2em;
+  left: 2em;
+  opacity: 0;
+  padding: 2em;
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.zoom-window__content {
+  opacity: 0;
+}
+
+.zoom-window--is-visible {
+  opacity: 1;
+}
+

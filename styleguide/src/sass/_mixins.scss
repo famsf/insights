@@ -110,7 +110,7 @@
    ============================================================== */
 
 .rectangles-bg,
-%rectangles-bg { 
+%rectangles-bg {
 
   @include breakpoint($bp3) {
     border: 40px solid transparent;
@@ -129,4 +129,10 @@
     outline: none;
     background-color: darken($background-b, 7%);
   }
+}
+
+// Scroll lock for preventing background scrolling on the body when a modal opens
+
+.scroll-lock {
+  overflow: hidden;
 }

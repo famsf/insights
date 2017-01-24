@@ -117,6 +117,9 @@
     attach: function(context, settings) {
       var zoomMarker = $('.zoom-marker-inner');
       var zoomClose = $('.zoom-close');
+      var modalContent= $('.zoom-window__content');
+      var modalWindow= $('.zoom-window');
+      var modalOverlay = $('.zoom-overlay-background');
 
       // Listener for click on any zoom marker.
       zoomMarker.click(function(){
@@ -125,34 +128,30 @@
         marker.closest('.zoom-group').find('.figure__zoomable-child').toggleClass('zoomed');
         setTimeout(function() {
           // Reveal the detail image.
-          marker.closest('.zoom-group').find('.zoom-detail-view').toggleClass('show-detail');
-          setTimeout(function() {
-            // Zoom in on the detail image.
-            marker.closest('.figure__zoomable').find('.zoom-detail-view').toggleClass('zoomin');
-            // Show the close button
-            marker.closest('.figure__zoomable').find(zoomClose).show();
-          }, 200);
+          var detailedView = marker.closest('.zoom-group').find('.zoom-detail-view').clone();
+          modalContent.toggleClass('zoom-window--is-visible').html(detailedView);
+          modalWindow.toggleClass('zoom-window--is-visible');
+          modalOverlay.toggleClass('zoom--is-open');
+          modalContent.find('.zoom-detail-view').toggleClass('show-detail');
+          zoomClose.show();
+          $('body').toggleClass('scroll-lock');
         }, 200);
-        // Hide the marker.
-        marker.closest('.figure__zoomable').find('.zoom-marker-outer').hide();
       });
 
       // Listener for a click on any zoom close button.
       zoomClose.click(function(){
         var closeButton = $(this);
-        // Zoom out of detail image
-        closeButton.closest('.figure__zoomable').find('.zoom-detail-view.zoomin').toggleClass('zoomin');
+        // Hide the detail image.
+        modalContent.find('.zoom-detail-view').toggleClass('show-detail');
+        modalOverlay.toggleClass('zoom--is-open');
+        modalWindow.toggleClass('zoom-window--is-visible');
+        modalContent.toggleClass('zoom-window--is-visible').html();
+        $('body').toggleClass('scroll-lock');
         setTimeout(function() {
-          // Hide the detail image.
-          closeButton.closest('.figure__zoomable').find('.zoom-detail-view.show-detail').toggleClass('show-detail');
-          setTimeout(function() {
             // Zoom out on main image.
             closeButton.closest('.figure__zoomable').find('.figure__zoomable-child.zoomed').toggleClass('zoomed');
             closeButton.hide();
           }, 200);
-        }, 200);
-        // Show the markers.
-        zoomClose.closest('.figure__zoomable').find('.zoom-marker-outer').show();
       });
     }
   };
