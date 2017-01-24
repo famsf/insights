@@ -34,27 +34,6 @@ button {
   }
 }
 
-.button-with-icon--caption-info {
-  @extend %button-with-icon;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-  background-color: transparentize($background-d, .2);
-  padding: .5rem 0;
-  width: 2.2rem;
-
-  svg {
-    height: 1.2rem;
-    margin: 0 auto;
-  }
-
-  &:active,
-  &:hover {
-    background-color: $background-d;
-  }
-}
-
 .color-block-button,
 %color-block-button {
   display: block;
@@ -76,4 +55,3 @@ button {
   width: 100%;
   text-align: center;
 }
-

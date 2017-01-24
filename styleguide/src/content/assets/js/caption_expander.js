@@ -13,7 +13,7 @@
 
   Drupal.behaviors.caption_expander = {
     attach: function(context, settings) {
-      $('.button-with-icon--caption-info').click(function() {
+      $('.figure--figcaption-reveal').click(function() {
         $(this).closest('figure').find('figcaption').toggleClass('revealed');
       });
     }

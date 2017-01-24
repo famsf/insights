@@ -32,6 +32,27 @@ figure {
   overflow: hidden;
 }
 
+.figure--figcaption-reveal {
+  @extend %button-with-icon;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background-color: transparentize($background-d, .2);
+  padding: .5rem 0;
+  width: 2.2rem;
+
+  svg {
+    height: 1.2rem;
+    margin: 0 auto;
+  }
+
+  &:active,
+  &:hover {
+    background-color: $background-d;
+  }
+}
+
 figcaption {
   position: absolute;
   bottom: -100%; // Hide caption until it is ready to reveal.
