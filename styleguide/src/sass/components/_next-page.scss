@@ -14,17 +14,17 @@
   box-shadow: 0 0 15px darken($background-d, 20%) inset;
   display: block;
   margin: 1em auto 0;
-  padding: 1em 0;
+  padding: .7em 0 .2em 0;
   position: relative;
   text-align: center;
-  width: 100%;
+  width: 4em;
 
-  .icon--small {
+  .icon--tiny {
     left: 0;
     position: absolute;
     text-indent: 0;
-    top: .75em;
-    bottom: .75em;
+    top: .7em;
+    bottom: .5em;
     width: 100%;
   }
 }
