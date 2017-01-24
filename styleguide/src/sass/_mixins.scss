@@ -106,7 +106,7 @@
 }
 
 /* ==============================================================
-   Rectangles background mixin
+   Rectangles background extend
    ============================================================== */
 
 .rectangles-bg,
@@ -129,4 +129,15 @@
     outline: none;
     background-color: darken($background-b, 7%);
   }
+}
+
+/* ==============================================================
+   Dotted border extend
+   ============================================================== */
+
+%dotted-border {
+  border-bottom: 8px solid transparent;
+  border-image-source: $dotted-border;
+  border-image-slice: 26%;
+  border-image-repeat: round;
 }

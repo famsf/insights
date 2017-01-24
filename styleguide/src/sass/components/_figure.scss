@@ -12,6 +12,10 @@ figure {
   width: 100%;
   height: auto;
 
+  @include breakpoint($bp3) {
+    margin-bottom: 1.5em;
+  }
+
   img {
     z-index: 0;
     margin: 0;
@@ -25,11 +29,7 @@ figure {
 
 .figure--wrapper {
   position: relative;
-  margin-bottom: 1em;
   overflow: hidden;
-  @include breakpoint($bp3) {
-    margin-bottom: 1.5em;
-  }
 }
 
 figcaption {
@@ -52,6 +52,11 @@ figcaption {
   &.revealed {
     bottom: 0;
   }
+}
+
+p.figcaption {
+  font-size: .7rem;
+  line-height: 1.1rem;
 }
 
 .title-of-art {

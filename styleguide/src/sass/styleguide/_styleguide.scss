@@ -7,14 +7,6 @@
 
 .l-styleguide-column {
   @include isolation-span(12, 1, 'both');
-
-  @include breakpoint($bp1) {
-    @include isolation-span(8, 1, 'none');
-  }
-
-  @include breakpoint($bp2) {
-    @include isolation-span(7, 1, 'none');
-  }
 }
 
 .l-styleguide-rail {

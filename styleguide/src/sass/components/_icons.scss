@@ -26,10 +26,11 @@
 
   @include breakpoint($bp3) {
     display: block;
+    height: 70px;
   }
 
   svg {
-    height: 70px;
+    height: 100%;
   }
 }
 
@@ -37,12 +38,13 @@
 %icon--small {
   @extend %icon;
   display: block;
+  height: 40px;
 
   @include breakpoint($bp3) {
     display: none;
   }
 
   svg {
-    height: 40px;
+    height: 100%;
   }
 }
