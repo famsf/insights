@@ -95,9 +95,9 @@
   position: absolute;
   background: $background-a;
   position: fixed;
-  top: 2em;
-  right: 2em;
-  left: 2em;
+  top: 1em;
+  right: 1em;
+  left: 1em;
   opacity: 0;
   padding: 2em;
   max-height: 90vh;
@@ -105,6 +105,21 @@
   z-index: 100;
   visibility: hidden;
   transition: visibility 0s, opacity 0.5s linear;
+  @include breakpoint($bp1) {
+    top: 5vh;
+    right: 5vw;
+    left: 5vw;
+  }
+  @include breakpoint($bp2) {
+    top: 10vh;
+    right: 10vw;
+    left: 10vw;
+  }
+  @include breakpoint($bp3) {
+    top: 10vh;
+    right: 15vw;
+    left: 15vw;
+  }
 }
 
 .zoom-window__content {
