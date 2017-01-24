@@ -1,0 +1,10 @@
+/**
+ * @file
+ * audio player styles
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+.audio__button {
+  @extend %button-with-icon;
+}

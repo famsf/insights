@@ -19,31 +19,35 @@
   }
 }
 
-.icon--large,
-%icon--large {
+.icon--large {
   @extend %icon;
   display: none;
 
   @include breakpoint($bp3) {
     display: block;
-    height: 70px;
-  }
-
-  svg {
-    height: 100%;
+    height: 4.375rem;
   }
 }
 
-.icon--small,
-%icon--small {
+.icon--small {
   @extend %icon;
   display: block;
-  height: 40px;
+  height: 2.5rem;
 
   @include breakpoint($bp3) {
     display: none;
   }
+}
 
+.icon--tiny {
+  @extend %icon;
+  height: 1.2rem;
+  display: block;
+}
+
+.icon--large,
+.icon--small,
+.icon--tiny {
   svg {
     height: 100%;
   }
