@@ -88,10 +88,7 @@
 
     h1 {
       padding-bottom: .5em;
-      border-bottom: 8px solid transparent;
-      border-image-source: $dotted-border;
-      border-image-slice: 26%;
-      border-image-repeat: round;
+      @extend %dotted-border;
     }
   }
 }

@@ -8,12 +8,12 @@
 button {
   cursor: pointer;
   font-weight: 700;
-  @extend %custom-focus;
 }
 
 .button-with-icon,
 %button-with-icon {
   @extend %icon;
+  @extend %custom-focus;
   background-color: transparent;
   color: $primary;
   border: none;
@@ -34,23 +34,24 @@ button {
   }
 }
 
-.button-with-icon--caption-info {
-  @extend %button-with-icon;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-  background-color: transparentize($background-d, .2);
-  padding: .5rem 0;
-  width: 2.2rem;
+.color-block-button,
+%color-block-button {
+  display: block;
+  border: 0;
+  padding: .5rem;
+  background-color: $primary;
+  color: $text-color-invert;
 
-  svg {
-    height: 1.2rem;
-    margin: 0 auto;
-  }
-
+  &:hover,
   &:active,
-  &:hover {
-    background-color: $background-d;
+  &:focus {
+    background-color: $primary-active;
   }
+}
+
+.color-block-button--full,
+%color-block-button--full {
+  @extend %color-block-button;
+  width: 100%;
+  text-align: center;
 }

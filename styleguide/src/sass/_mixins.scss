@@ -116,7 +116,7 @@ http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacemen
 }
 
 /* ==============================================================
-   Rectangles background mixin
+   Rectangles background extend
    ============================================================== */
 
 .rectangles-bg,
@@ -139,4 +139,15 @@ http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacemen
     outline: none;
     background-color: darken($background-b, 7%);
   }
+}
+
+/* ==============================================================
+   Dotted border extend
+   ============================================================== */
+
+%dotted-border {
+  border-bottom: 8px solid transparent;
+  border-image-source: $dotted-border;
+  border-image-slice: 26%;
+  border-image-repeat: round;
 }
