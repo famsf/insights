@@ -123,29 +123,36 @@
 
       // Listener for click on any zoom marker.
       zoomMarker.click(function(){
+        // The marker the user has clicked.
         var marker = $(this);
+        // Get the outside wrapper for the marker so we can get its position.
         var zoomPosition = marker.closest('.zoom-marker-outer');
-        //Get the top and left properties of the marker
+        // Get the top and left properties of the marker
         var markerTop = zoomPosition.css('top');
-        console.log(markerTop);
         var markerLeft = zoomPosition.css('left');
-        console.log(markerLeft);
+        // Get the image we are zooming in on.
         var zoomImage = marker.closest('.figure__zoomable').find('.figure__zoomable-child');
-        // Start to zoom in on the initial image.
+        // Make sure the image will zoom to the marker location.
         var zoomValues = markerLeft+" "+markerTop;
         zoomImage.get(0).style.transformOrigin = zoomValues;
+        // Populate the modal with the marker content.
         var detailedView = marker.closest('.zoom-group').find('.zoom-detail-view').clone();
         modalContent.toggleClass('zoom-window--is-visible').html(detailedView);
         setTimeout(function() {
-          zoomImage.toggleClass('zoomed');
+            // Start to zoom in on the initial image.
+            // This requires delay after setting transformOrigin.
+            zoomImage.toggleClass('zoomed');
             setTimeout(function() {
-              // Reveal the detail image.
+              // Fade in the background overlay
               modalOverlay.toggleClass('zoom--is-open');
               setTimeout(function() {
+                // reveal the content window.
                 modalWindow.toggleClass('zoom-window--is-visible');
                 modalContent.find('.zoom-detail-view').toggleClass('show-detail');
                 setTimeout(function() {
+                  // Show the close button.
                   zoomClose.show();
+                  // Lock the body scrolling so only the modal is scrollable while open.
                   $('body').toggleClass('scroll-lock');
                 }, 200);
               }, 200);
@@ -156,16 +163,19 @@
       // Listener for a click on any zoom close button.
       zoomClose.click(function(){
         var closeButton = $(this);
+        // Hide the close button.
         zoomClose.hide();
-        // Hide the detail image.
+        // Hide the modal window
         modalContent.find('.zoom-detail-view').toggleClass('show-detail');
         modalContent.toggleClass('zoom-window--is-visible').html();
         modalWindow.toggleClass('zoom-window--is-visible');
         setTimeout(function() {
+          // Hide the background overlay.
           modalOverlay.toggleClass('zoom--is-open');
           // Zoom out on main image.
           $('.figure__zoomable-child.zoomed').toggleClass('zoomed');
           setTimeout(function() {
+            // Release the scroll locking so the user can scroll the main page again.
             $('body').toggleClass('scroll-lock');
           }, 200);
         }, 200);
