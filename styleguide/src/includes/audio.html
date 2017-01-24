@@ -9,5 +9,13 @@
     Your browser does not support the audio element.
   </audio>
 
-  <button class="audio__button play">play</button>
+  <button class="audio__button play button-with-icon">
+    <i class="icon--play">
+      <span class="icon--tiny">{% include('svg/famsf-play-sm.html') %}</span>
+    </i>
+    <i class="icon--pause" style="display:none;">
+      <span class="icon--tiny">{% include('svg/famsf-pause-sm.html') %}</span>
+    </i>
+    <div>play</div>
+  </button>
 </div>
