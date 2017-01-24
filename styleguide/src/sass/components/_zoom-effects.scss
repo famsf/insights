@@ -44,10 +44,15 @@
 
 .zoom-detail-view {
   display: none;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.2s ease;
+  opacity: 0;
 }
 
 .show-detail {
   display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .zoom-marker-outer {
@@ -74,13 +79,15 @@
   right: 0;
   left: 0;
   background: #333;
-  opacity: .75;
+  opacity: 0;
   z-index: 50;
-  display: none;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 
 .zoom--is-open {
-  display: block;
+  visibility: visible;
+  opacity: .75;
 }
 
 .zoom-window {
@@ -95,13 +102,18 @@
   max-height: 90vh;
   overflow-y: auto;
   z-index: 100;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 
 .zoom-window__content {
   opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.5s linear;
 }
 
 .zoom-window--is-visible {
   opacity: 1;
+  visibility: visible;
 }
 

@@ -124,18 +124,31 @@
       // Listener for click on any zoom marker.
       zoomMarker.click(function(){
         var marker = $(this);
+        var zoomPosition = marker.closest('.zoom-marker-outer');
+        //Get the top and left properties of the marker
+        var markerTop = zoomPosition.css('top');
+        console.log(markerTop);
+        var markerLeft = zoomPosition.css('left');
+        console.log(markerLeft);
+        var zoomImage = marker.closest('.figure__zoomable').find('.figure__zoomable-child');
         // Start to zoom in on the initial image.
-        marker.closest('.zoom-group').find('.figure__zoomable-child').toggleClass('zoomed');
+        var zoomValues = markerLeft+" "+markerTop;
+        zoomImage.get(0).style.transformOrigin = zoomValues;
+        var detailedView = marker.closest('.zoom-group').find('.zoom-detail-view').clone();
+        modalContent.toggleClass('zoom-window--is-visible').html(detailedView);
         setTimeout(function() {
-          // Reveal the detail image.
-          var detailedView = marker.closest('.zoom-group').find('.zoom-detail-view').clone();
-          modalContent.toggleClass('zoom-window--is-visible').html(detailedView);
-          modalWindow.toggleClass('zoom-window--is-visible');
-          modalOverlay.toggleClass('zoom--is-open');
-          modalContent.find('.zoom-detail-view').toggleClass('show-detail');
-          zoomClose.show();
-          $('body').toggleClass('scroll-lock');
-        }, 200);
+          zoomImage.toggleClass('zoomed');
+            setTimeout(function() {
+              // Reveal the detail image.
+              modalOverlay.toggleClass('zoom--is-open');
+              setTimeout(function() {
+                modalWindow.toggleClass('zoom-window--is-visible');
+                modalContent.find('.zoom-detail-view').toggleClass('show-detail');
+                zoomClose.show();
+                $('body').toggleClass('scroll-lock');
+              }, 200);
+            }, 200);
+        }, 300);
       });
 
       // Listener for a click on any zoom close button.
@@ -143,15 +156,17 @@
         var closeButton = $(this);
         // Hide the detail image.
         modalContent.find('.zoom-detail-view').toggleClass('show-detail');
-        modalOverlay.toggleClass('zoom--is-open');
-        modalWindow.toggleClass('zoom-window--is-visible');
-        modalContent.toggleClass('zoom-window--is-visible').html();
-        $('body').toggleClass('scroll-lock');
         setTimeout(function() {
+          modalWindow.toggleClass('zoom-window--is-visible');
+          modalContent.toggleClass('zoom-window--is-visible').html();
+          $('body').toggleClass('scroll-lock');
+          setTimeout(function() {
+            modalOverlay.toggleClass('zoom--is-open');
             // Zoom out on main image.
-            closeButton.closest('.figure__zoomable').find('.figure__zoomable-child.zoomed').toggleClass('zoomed');
-            closeButton.hide();
+            $('.figure__zoomable-child.zoomed').toggleClass('zoomed');
+            zoomClose.hide();
           }, 200);
+        }, 200);
       });
     }
   };
