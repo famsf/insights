@@ -17,6 +17,7 @@
       $('.expander__is-closed').hide(0);
       // Function for expander component to expand and collapse.
       $('.icon--read-more').click(function(){
+        var buttonClicked = $(this);
         // Define the target expandable div.
         var changeThisPanel = $(this).parents('.deep-dive').find('.deep-dive--wrapper');
 
@@ -30,10 +31,10 @@
 
         // Toggle the button and panel states.
         if (changeThisPanel.hasClass("expander__is-closed")) {
-          $('.icon-arrow--up').show(0);
-          $('.icon-arrow--down').hide(0);
+          buttonClicked.find('.icon-arrow--up').show(0);
+          buttonClicked.find('.icon-arrow--down').hide(0);
           changeThisPanel.removeClass("expander__is-closed").addClass("expander__is-open").slideDown(300);
-          $(this).find('div').html(expandedText).attr('title', expandedText);
+          buttonClicked.find('div').html(expandedText).attr('title', expandedText);
           /* @Todo:  scroll section up to top of page after expanding. */
           $('html, body').animate({
             scrollTop: changeThisPanel.offset().top
@@ -42,10 +43,10 @@
 
         }
         else if (changeThisPanel.hasClass("expander__is-open")) {
-          $('.icon-arrow--down').show(0);
-          $('.icon-arrow--up').hide(0);
+          buttonClicked.find('.icon-arrow--down').show(0);
+          buttonClicked.find('.icon-arrow--up').hide(0);
           changeThisPanel.removeClass("expander__is-open").addClass("expander__is-closed").slideUp(300);
-          $(this).find('div').html(collapsedText).attr('title', collapsedText);
+          buttonClicked.find('div').html(collapsedText).attr('title', collapsedText);
         }
       });
     }

@@ -14,28 +14,38 @@
 </div>
 
 <div class="container comparison">
-  <div class="comparison--2up">
+  <div class="comparison--2up comparison--group">
     <figure>
       <div class="figure--wrapper">
         <img src="../assets/imgs/art/Low_tide.jpg" alt="The Pointe de La Hève at Low Tide" />
-        <button class="comparison--button">Option A</button>
+        <button class="comparison--button">Option A
+          <i class="icon-arrow--down">&#65514;{# remove html entity code and add down arrow include here #}</i>
+          <i class="icon-arrow--up" style="display:none;">&#65516;{# remove html entity code up arrow include here #}</i>
+        </button>
       </div>
     </figure>
-    <div class="comparison--answer">
+    <div class="comparison--answer comparison--answer__is-closed">
       <h3>Accepted!</h3>
       <p class="figcaption"><span class="title-of-art">The Pointe de La Hève at Low Tide</span> 1865 | accepted Salon 1865</p>
       <p>The 24-year-old Monet was successful in having his first submission approved for exhibition at the Salon. This work was also praised in the press: “Monet, unknown yesterday, has immediately made a name for himself with this single painting.” </p>
+      {% include('audio.html') %}
+      <blockquote>
+      &ldquo;The most original … and harmoniously painted seascape exhibited in a long time … M. Monet, unknown yesterday, has immediately made a name for himself with this single painting.&rdquo;
+      </blockquote>
     </div>
   </div>
 
-  <div class="comparison--2up">
+  <div class="comparison--2up comparison--group">
     <figure>
       <div class="figure--wrapper">
         <img src="../assets/imgs/art/Havre_dOrsay.jpg" alt="The Jetty at Le Havre" />
-        <button class="comparison--button">Option B</button>
+        <button class="comparison--button">Option B
+          <i class="icon-arrow--down">&#65514;{# remove html entity code and add down arrow include here #}</i>
+          <i class="icon-arrow--up" style="display:none;">&#65516;{# remove html entity code and add up arrow include here #}</i>
+        </button>
       </div>
     </figure>
-    <div class="comparison--answer">
+    <div class="comparison--answer comparison--answer__is-closed">
       <h3>Rejected!</h3>
       <p class="figcaption"><span class="title-of-art">The Jetty at Le Havre</span> 1868 | rejected Salon 1868</p>
       <p>Monet submitted this seascape in 1868. It was rejected. The young artist had invested a significant sum of money in this large-scale canvas and had to beg his family for money to survive.</p>
