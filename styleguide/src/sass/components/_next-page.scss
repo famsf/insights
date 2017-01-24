@@ -1,0 +1,30 @@
+/**
+ * @file
+ * button styles
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+.next-page {
+  @extend %text-hidden;
+  background: $background-d; /* Old browsers */
+  background: -moz-linear-gradient(left,  $background-c 0%, $background-d 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  $background-c 0%,$background-d 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  $background-c 0%,$background-d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  border: 0;
+  box-shadow: 0 0 15px darken($background-d, 20%) inset;
+  display: block;
+  margin: 1em auto 0;
+  padding: 1em 0;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  .styleguide-icon--small {
+    left: 0;
+    position: absolute;
+    text-indent: 0;
+    top: .75em;
+    width: 100%;
+  }
+}
+
