@@ -23,20 +23,23 @@
         // loads as part of the lazy loader functionality.
         audioSource.get(0).preload = "auto";
         // Toggle the class.
-        button.toggleClass('pause play');
         // Toggle the button text and audio.
-        if (button.text() == 'play') {
-          button.text('pause');
+        var playButton = button.find('.icon--play');
+        var pauseButton = button.find('.icon--pause');
+        if (playButton.is(':visible')) {
           audioSource.get(0).play();
+          playButton.hide(0);
+          pauseButton.show(0);
         }
         else {
-          button.text('play');
           audioSource.get(0).pause();
+          playButton.show(0);
+          pauseButton.hide(0);
         }
         // When the sound finishes playing, restore the button states.
         audioSource.get(0).onended = function(){
-          button.text('play');
-          button.toggleClass('pause play');
+          playButton.show(0);
+          pauseButton.hide(0);
         };
       };
       // Listener for the play button.
