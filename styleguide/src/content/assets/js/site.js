@@ -144,8 +144,10 @@
               setTimeout(function() {
                 modalWindow.toggleClass('zoom-window--is-visible');
                 modalContent.find('.zoom-detail-view').toggleClass('show-detail');
-                zoomClose.show();
-                $('body').toggleClass('scroll-lock');
+                setTimeout(function() {
+                  zoomClose.show();
+                  $('body').toggleClass('scroll-lock');
+                }, 200);
               }, 200);
             }, 200);
         }, 300);
@@ -154,17 +156,17 @@
       // Listener for a click on any zoom close button.
       zoomClose.click(function(){
         var closeButton = $(this);
+        zoomClose.hide();
         // Hide the detail image.
         modalContent.find('.zoom-detail-view').toggleClass('show-detail');
+        modalContent.toggleClass('zoom-window--is-visible').html();
+        modalWindow.toggleClass('zoom-window--is-visible');
         setTimeout(function() {
-          modalWindow.toggleClass('zoom-window--is-visible');
-          modalContent.toggleClass('zoom-window--is-visible').html();
-          $('body').toggleClass('scroll-lock');
+          modalOverlay.toggleClass('zoom--is-open');
+          // Zoom out on main image.
+          $('.figure__zoomable-child.zoomed').toggleClass('zoomed');
           setTimeout(function() {
-            modalOverlay.toggleClass('zoom--is-open');
-            // Zoom out on main image.
-            $('.figure__zoomable-child.zoomed').toggleClass('zoomed');
-            zoomClose.hide();
+            $('body').toggleClass('scroll-lock');
           }, 200);
         }, 200);
       });

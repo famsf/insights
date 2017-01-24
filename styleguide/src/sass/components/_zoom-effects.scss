@@ -82,7 +82,7 @@
   opacity: 0;
   z-index: 50;
   visibility: hidden;
-  transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.3s ease;
 }
 
 .zoom--is-open {
