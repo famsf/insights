@@ -108,3 +108,8 @@
   margin-right: 2em;
   display: inline-block;
 }
+
+.icon--carrot {
+  @extend %icon;
+  height: .7em;
+}
