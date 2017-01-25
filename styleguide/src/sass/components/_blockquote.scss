@@ -1,0 +1,13 @@
+/**
+ * @file
+ * blockquote styles
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+blockquote {
+  @extend %dotted-border;
+  padding-bottom: 1em;
+  @include adjust-font-size-to($h3-font-size, 1.4);
+  font-family: $roboto-slab;
+}
