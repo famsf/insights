@@ -17,10 +17,10 @@
         // Define the target expandable div.
         var targetImage = $(this).parents('.overlay-container').find('.overlay-image');
         targetImage.toggleClass('overlay-image__hidden overlay-image__revealed');
-        if ($(this).text() == 'Show composition overlay') {
-          $(this).text('Hide composition overlay');
+        if ($(this).find('.overlay-button__text').text() == 'See cool stuff') {
+          $(this).find('.overlay-button__text').text('Hide stuff');
         } else {
-          $(this).text('Show composition overlay');
+          $(this).find('.overlay-button__text').text('See cool stuff');
         }
       });
     }
