@@ -11,7 +11,7 @@
 
 (function ($) {
 
-  Drupal.behaviors.expander_toggle = {
+  Drupal.behaviors.share_expander = {
     attach: function(context, settings) {
       // Close all expander elenments that need to be closed initially.
       $('.share-expander__is-closed').hide(0);
