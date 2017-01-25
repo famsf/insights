@@ -36,15 +36,22 @@ button {
 
 .color-block-button,
 %color-block-button {
-  border: 0;
-  padding: .5rem;
+  border: 3px solid $background-a;
+  outline: 2px solid $primary;
+  padding: .3em 1em;
   background-color: $primary;
   color: $text-color-invert;
+  margin-bottom: rhythm(1);
+  text-align: center;
+  display: inline-block;
 
   &:hover,
   &:active,
   &:focus {
     background-color: $primary-active;
+    outline: 2px solid $primary-active;
+    border: 3px solid $background-c;
+    color: $background-c;
   }
 }
 
@@ -52,29 +59,4 @@ button {
 %color-block-button--full {
   @extend %color-block-button;
   width: 100%;
-  text-align: center;
-}
-
-.color-block-button-with-icon,
-%color-block-button-with-icon {
-  @extend %color-block-button;
-  @extend %custom-focus;
-  text-align: center;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-
-  svg {
-    margin-right: .4em;
-    color: $text-color-invert;
-  }
-
-  &:hover,
-  &:active,
-  &:focus {
-    svg {
-      color: $text-color-invert;
-    }
-  }
 }
