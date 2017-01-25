@@ -233,6 +233,8 @@ h2 {
   @include adjust-font-size-to($h2-font-size, 1.5);
   @include leader(1.25, $h2-font-size);
   @include trailer(.5, $h2-font-size);
+  font-weight: 400;
+  font-family: $roboto-slab;
 }
 
 h3 {

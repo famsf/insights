@@ -8,6 +8,7 @@
 blockquote {
   @extend %dotted-border;
   padding-bottom: rhythm(1);
-  @include adjust-font-size-to($h3-font-size, 1.4);
+  @include adjust-font-size-to($h3-font-size, 1.25);
   font-family: $roboto-slab;
+  font-weight: 300;
 }
