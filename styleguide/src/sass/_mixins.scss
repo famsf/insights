@@ -87,6 +87,16 @@
   overflow: auto;
 }
 
+/*  Hides text only on an element while maintaining accessibility,
+typically for image replacement:
+http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/ */
+%text-hidden,
+.text-hidden {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .element-focusable,
 %element-focusable {
   @extend %element-invisible;
@@ -106,11 +116,11 @@
 }
 
 /* ==============================================================
-   Rectangles background mixin
+   Rectangles background extend
    ============================================================== */
 
 .rectangles-bg,
-%rectangles-bg { 
+%rectangles-bg {
 
   @include breakpoint($bp3) {
     border: 40px solid transparent;
@@ -129,4 +139,15 @@
     outline: none;
     background-color: darken($background-b, 7%);
   }
+}
+
+/* ==============================================================
+   Dotted border extend
+   ============================================================== */
+
+%dotted-border {
+  border-bottom: 8px solid transparent;
+  border-image-source: $dotted-border;
+  border-image-slice: 26%;
+  border-image-repeat: round;
 }
