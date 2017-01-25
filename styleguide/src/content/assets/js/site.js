@@ -27,7 +27,7 @@
         direction: 'vertical',
         verticalCentered: false,
         sectionsColor: [],
-        anchors: ['title', 'introduction', 'section4-light', 'section4-dark', 'section-with-video', 'image-and-caption', 'section-with-zoom', 'image-and-caption', 'lastPage'],
+        anchors: ['title', 'introduction', 'contending-with-convention', 'section4-dark', 'section-with-video', 'image-and-caption', 'section-with-zoom', 'image-and-caption', 'lastPage'],
         scrollingSpeed: 700,
         easing: 'swing',
         loopBottom: false,
