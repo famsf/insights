@@ -1,0 +1,21 @@
+{#
+  name: Audio with button
+  usage: Audio file with play/stop toggle button
+#}
+<div class="audio__wrapper">
+  <audio class="audio__source">
+    <source src="{{ site.url }}/assets/audio/placeholder--horse.mp3" type="audio/mpeg">
+    <source src="{{ site.url }}/assets/audio/placeholder--horse.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <button class="audio__button button-with-icon">
+    <i class="icon--play">
+      <span class="icon--tiny">{% include('svg/famsf-play-sm.html') %}</span>
+    </i>
+    <i class="icon--pause" style="display:none;">
+      <span class="icon--tiny">{% include('svg/famsf-pause-sm.html') %}</span>
+    </i>
+    <div>play</div>
+  </button>
+</div>
