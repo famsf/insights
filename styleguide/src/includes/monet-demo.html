@@ -1,0 +1,141 @@
+{#
+  name: interaction demo
+  usage: Fullpage site to be displayed in template section with various themes.
+#}
+
+{% block component %}
+<main id="pagepiling" >
+  <section class="animatedParent section pp-scrollable" id="Title">
+    <div class="section-hero landscape-orientation">
+      <div class="section-hero--title">
+        <h1>Monet: The Early Years</h1>
+        <h2>Legion of Honor(logo)</h2>
+        <h3>February 25&endash;May 29, 2017</h3>
+        <p>Background image: The Beach at Trouville, 1870</p>
+      </div>
+    </div>
+    {% include('share.html') %}
+    {% include('next-page.html') %}
+  </section>
+  <section class="section pp-scrollable" id="introduction">
+    <div class="section-hero has-image light-background-image landscape-orientation">
+      {% include('section-hero-title--optiona.html') %}
+    </div>
+    <div class="container">
+      <div class="l-column">
+        <p>What is this &ldquo;new and revolutionary art?&rdquo;</p>
+        <p>Before his success, before there was even the term “Impressionism,” Claude Monet labored to define his style and promote himself as an artist. Explore the first 14 years of Monet’s career, when he struggled to provide food and shelter for himself and his family while creating innovations that would turn the art world upside down. Monet: The Early Years begins in 1858 with the first painting Monet showed publicly and closes in 1872, just before he exhibited that year with the group of artists who would come to be known as the Impressionists.</p>
+        <h3>Photo of young Monet</h3>
+        <p>Who was this young man from a small coastal community, trying to establish himself in the Parisian art world in the 1860s? Two forces drove Monet: his will to be a painter and his will to become critically and commercially successful.</p>
+        <ul class="bxslider" style="text-align: center; height: 5em; display: block;">
+          <li><h1>ambition</h1></li>
+          <li><h1>recognition</h1></li>
+          <li><h1>risk</h1></li>
+          <li><h1>innovation</h1></li>
+          <li><h1>financial ruin</h1></li>
+          <li><h1>success</h1></li>
+          <li><h1>fame</h1></li>
+        </ul>
+      </div>
+    </div>
+    {% include('share.html') %}
+    {% include('next-page.html') %}
+  </section>
+  <section class="section pp-scrollable" id="section4-dark">
+    <div class="section-hero has-image dark-background-image portrait-orientation">
+    {% include('section-hero-title--optionc.html') %}
+  </div>
+  <div class="container">
+      <div class="l-column">
+
+        <h1 class="animated fadeInRight">What is this &ldquo;new and revolutionary art?&rdquo;</h1>
+
+        <h2 class="animated fadeInRight delay-1000">something animated 2</h2>
+        <h3 class="animated fadeInRight delay-2000">something animated 3</h3>
+        <p>
+        Iisque suscipit mea ea, at ubique partiendo iracundia usu. Alii mollis omittantur nam ut, in eum diam solet definiebas, ea eos stet voluptatum. Eos delectus temporibus no, nam ad nulla admodum scripserit. Munere equidem te has. Duis facete et sea, ei appetere nominati consetetur mel. Eam in tation iudicabit evertitur, ea impetus antiopam sit, falli imperdiet at qui.
+        </p>
+        <p>
+        Vim no ignota mollis disputationi, sonet graecis pri an, per in lorem viderer reprehendunt. Id tota option graecis est, per et oportere maiestatis. Sea eius augue an. Libris malorum admodum mea id.
+        </p>
+        <p>
+        Ne eum ridens causae splendide. Eros commune suscipit ius an. Affert iudico partem eam te, id invidunt scriptorem signiferumque mei. Eu mea recteque percipitur, ut denique interesset omittantur sit, ex fugit perpetua vel. Vel soluta petentium constituam cu. Regione intellegat no mei, ne dicat consul integre vix.
+        </p>
+      </div>
+    </div>
+    {% include('share.html') %}
+    {% include('next-page.html') %}
+  </section>
+  <section class="section pp-scrollable" id="section-with-video">
+  {% include('section-hero--video.html') %}
+    <div class="container">
+      <div class="l-column">
+        <p>
+        Ne eum ridens causae splendide. Eros commune suscipit ius an. Affert iudico partem eam te, id invidunt scriptorem signiferumque mei. Eu mea recteque percipitur, ut denique interesset omittantur sit, ex fugit perpetua vel. Vel soluta petentium constituam cu. Regione intellegat no mei, ne dicat consul integre vix.
+        </p>
+        <p>
+        Ubique argumentum est cu, per ad cetero vocent civibus. Te cum simul convenire splendide, denique sapientem instructior an quo. Vix modo modus oportere ei. Ad blandit oporteat his, sint recusabo necessitatibus pro et. Ceteros democritum contentiones ex eos, id clita inciderint sit. At vel homero sententiae, ne his alterum fabulas ancillae.
+        </p>
+      </div>
+    </div>
+    {% include('share.html') %}
+    {% include('next-page.html') %}
+  </section>
+  <section class="section pp-scrollable" id="image-and-caption">
+    {% include('image-with-credit.html') %}
+    <div class="container">
+      <div class="l-column">
+        <h1 class="animated fadeInRight">H1 fade in animated</h1>
+        <p>Lorem ipsum dolor sit amet, pri eu virtute hendrerit, pro labores debitis deserunt ei, cu ius audire reformidans. Ex timeam impedit mel, id mea veri numquam efficiantur. Duo facete bonorum abhorreant ad, pro nisl apeirian ut. In mei decore tacimates, malis accommodare his ei. Et quaeque scripserit vel.
+        </p>
+        <p>
+        His dicam homero fabulas et, ea duo error altera honestatis, modo percipitur scripserit at eos. His te admodum praesent dissentiunt, duo id iracundia definitionem. An delectus forensibus duo. Adhuc populo percipitur ea nam. Cotidieque interpretaris vim et.
+        </p>
+        <h2>h2 Section Header</h2>
+        <p>
+        Iisque suscipit mea ea, at ubique partiendo iracundia usu. Alii mollis omittantur nam ut, in eum diam solet definiebas, ea eos stet voluptatum. Eos delectus temporibus no, nam ad nulla admodum scripserit. Munere equidem te has. Duis facete et sea, ei appetere nominati consetetur mel. Eam in tation iudicabit evertitur, ea impetus antiopam sit, falli imperdiet at qui.
+        </p>
+      </div>
+    </div>
+    {% include('read-more--deep-dive.html') %}
+    <div class="container">
+      <div class="l-column">
+        <h3>h3 Section Header</h3>
+        <p>
+        Iisque suscipit mea ea, at ubique partiendo iracundia usu. Alii mollis omittantur nam ut, in eum diam solet definiebas, ea eos stet voluptatum. Eos delectus temporibus no, nam ad nulla admodum scripserit. Munere equidem te has. Duis facete et sea, ei appetere nominati consetetur mel. Eam in tation iudicabit evertitur, ea impetus antiopam sit, falli imperdiet at qui.
+        </p>
+      </div>
+    </div>
+    {% include('share.html') %}
+    {% include('next-page.html') %}
+  </section>
+  <section class="section pp-scrollable" id="section-with-zoom">
+    <div class="container">
+      <div class="l-column">
+      {% include('image-with-credit--zoom.html') %}
+      </div>
+    </div>
+    <div class="container">
+      <div class="l-column">
+        <p>
+        Ne eum ridens causae splendide. Eros commune suscipit ius an. Affert iudico partem eam te, id invidunt scriptorem signiferumque mei. Eu mea recteque percipitur, ut denique interesset omittantur sit, ex fugit perpetua vel. Vel soluta petentium constituam cu. Regione intellegat no mei, ne dicat consul integre vix.
+        </p>
+        <p>
+        Ubique argumentum est cu, per ad cetero vocent civibus. Te cum simul convenire splendide, denique sapientem instructior an quo. Vix modo modus oportere ei. Ad blandit oporteat his, sint recusabo necessitatibus pro et. Ceteros democritum contentiones ex eos, id clita inciderint sit. At vel homero sententiae, ne his alterum fabulas ancillae.
+        </p>
+      </div>
+    </div>
+    {% include('share.html') %}
+    {% include('next-page.html') %}
+  </section>
+  <section class="section pp-scrollable" id="lastPage" >
+    <div class="container">
+      <div class="l-column">
+
+      </div>
+    </div>
+  </section>
+</main>
+
+{% endblock %}
+
