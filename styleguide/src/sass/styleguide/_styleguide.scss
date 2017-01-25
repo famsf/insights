@@ -104,19 +104,12 @@
   }
 }
 
-.styleguide-icon--large {
-  @extend %icon;
+.styleguide-icon {
   margin-right: 2em;
-
-  svg {
-    height: 70px;
-  }
+  display: inline-block;
 }
 
-.styleguide-icon--small {
+.icon--carrot {
   @extend %icon;
-
-  svg {
-    height: 40px;
-  }
+  height: .7em;
 }

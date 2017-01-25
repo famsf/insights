@@ -12,23 +12,47 @@ figure {
   width: 100%;
   height: auto;
 
+  @include breakpoint($bp3) {
+    margin-bottom: 1.5em;
+  }
+
   img {
     z-index: 0;
     margin: 0;
     display: block;
   }
-
-  svg {
-    margin-left: .7rem;
-  }
 }
 
 .figure--wrapper {
   position: relative;
-  margin-bottom: 1em;
   overflow: hidden;
-  @include breakpoint($bp3) {
-    margin-bottom: 1.5em;
+}
+
+.figure--figcaption-reveal {
+  @extend %icon;
+  @extend %custom-focus;
+  display: flex;
+  display: -webkit-flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background-color: transparentize($background-d, .2);
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 0;
+
+  .icon--tiny {
+    margin: 0 auto;
+    justify-content: center;
+    -webkit-justify-content: center;
+    align-items: center;
+    -webkit-align-items: center;
+  }
+
+  &:active,
+  &:hover {
+    background-color: $background-d;
   }
 }
 
@@ -54,6 +78,11 @@ figcaption {
   }
 }
 
+p.figcaption {
+  font-size: .7rem;
+  line-height: 1.1rem;
+}
+
 .title-of-art {
   font-family: $roboto-slab;
   font-weight: 700;
@@ -63,6 +92,7 @@ figcaption {
   overflow: hidden;
   position: relative;
 }
+
 .figure__zoomable-child {
   position: absolute;
   height: 100%;
