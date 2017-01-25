@@ -8,6 +8,7 @@
 %icon {
   svg {
     fill: $primary;
+    height: 100%;
   }
 
   &:active,
@@ -22,11 +23,7 @@
 .icon--small,
 .icon--tiny {
   @extend %icon;
-  display: block;
-
-  svg {
-    height: 100%;
-  }
+  display: inline-block;
 }
 
 .icon--large {
