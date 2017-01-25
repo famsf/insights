@@ -61,7 +61,10 @@
 
 .zoom-marker-inner {
   display: block;
-  padding: 1em;
+  background-color: $background-d;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .zoom-close {
