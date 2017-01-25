@@ -36,7 +36,6 @@ button {
 
 .color-block-button,
 %color-block-button {
-  display: block;
   border: 0;
   padding: .5rem;
   background-color: $primary;
@@ -54,4 +53,28 @@ button {
   @extend %color-block-button;
   width: 100%;
   text-align: center;
+}
+
+.color-block-button-with-icon,
+%color-block-button-with-icon {
+  @extend %color-block-button;
+  @extend %custom-focus;
+  text-align: center;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+
+  svg {
+    margin-right: .4em;
+    color: $text-color-invert;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    svg {
+      color: $text-color-invert;
+    }
+  }
 }
