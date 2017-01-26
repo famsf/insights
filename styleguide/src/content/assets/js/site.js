@@ -27,7 +27,7 @@
         direction: 'vertical',
         verticalCentered: false,
         sectionsColor: [],
-        anchors: ['title', 'introduction', 'contending-with-convention', 'see-the-forest-through-the-trees', 'ambition-and-risk', 'paris-modernity-and-leisure', 'lastPage'],
+        anchors: ['title', 'introduction', 'contending-with-convention', 'see-the-forest-through-the-trees', 'ambition-and-risk', 'paris-modernity-and-leisure', 'monet-and-the-sea', 'camille-monet-the-known-and-the-unknown', 'lastPage'],
         scrollingSpeed: 700,
         easing: 'swing',
         loopBottom: false,
