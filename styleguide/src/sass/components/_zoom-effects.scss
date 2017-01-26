@@ -74,12 +74,20 @@
 }
 
 .zoom-close {
-  display: inline-block;
-}
-.zoom-header,
-.zoom-footer {
-  text-align: center;
-  padding: .5em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.2rem;
+  height: 2.2em;
+  display: flex;
+  display: -webkit-flex;
+  background-color: transparentize($background-d, .2);
+  padding: .2rem;
+  border: 0;
+
+  .icon--small {
+    margin: auto;
+  }
 }
 
 .zoom-overlay-background {
