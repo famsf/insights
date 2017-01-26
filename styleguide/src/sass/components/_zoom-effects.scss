@@ -96,7 +96,7 @@
 
 .zoom-window {
   position: absolute;
-  background: transparentize($background-b, .2);
+  background: transparentize($zoom-background, .2);
   position: fixed;
   top: 1em;
   right: 1em;
