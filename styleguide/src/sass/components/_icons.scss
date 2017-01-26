@@ -20,8 +20,8 @@
 }
 
 .icon--large,
-.icon--small,
-.icon--tiny {
+.icon--med,
+.icon--small {
   @extend %icon;
   display: inline-block;
 }
@@ -30,11 +30,11 @@
   height: 4.375rem;
 }
 
-.icon--small {
+.icon--med {
   height: 2.5rem;
 }
 
-.icon--tiny {
+.icon--small {
   height: 1.2rem;
 }
 
@@ -48,8 +48,8 @@
   }
 }
 
-.icon--small-responsive {
-  @extend .icon--small;
+.icon--med-responsive {
+  @extend .icon--med;
 
   @include breakpoint($bp3) {
     display: none;

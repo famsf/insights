@@ -60,20 +60,35 @@
 }
 
 .zoom-marker-inner {
-  display: block;
+  display: flex;
+  display: -webkit-flex;
   background-color: transparentize($background-d, .2);
   border-radius: 50%;
   width: 2.2rem;
   height: 2.2em;
+
+  .icon--small {
+    margin: auto;
+    
+  }
 }
 
 .zoom-close {
-  display: inline-block;
-}
-.zoom-header,
-.zoom-footer {
-  text-align: center;
-  padding: .5em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.2rem;
+  height: 2.2em;
+  display: flex;
+  display: -webkit-flex;
+  background-color: transparentize($background-d, .2);
+  padding: .2rem;
+  border: 0;
+  box-shadow: 0 0 5px darken($background-d, 20%) inset;
+
+  .icon--small {
+    margin: auto;
+  }
 }
 
 .zoom-overlay-background {
@@ -96,7 +111,7 @@
 
 .zoom-window {
   position: absolute;
-  background: transparentize($background-b, .2);
+  background: transparentize($zoom-background, .2);
   position: fixed;
   top: 1em;
   right: 1em;

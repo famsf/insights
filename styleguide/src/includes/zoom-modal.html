@@ -6,22 +6,12 @@
 <div class="zoom-overlay-background">
 </div>
 <div class="zoom-window animatedParent">
-  <footer class="zoom-header">
-    <button class="zoom-close animated fadeInDownShort button-with-icon" href="javascript:;" style="display: none;">
-      <i>
-        <span class="icon--small">{% include('svg/famsf-zoom-out-sm.html') %}</span>
-      </i>
-      <div>close</div>
-    </button>
-  </footer>
+  <button class="zoom-close animated fadeInDownShort" href="javascript:;" style="display: none;">
+    <i class="icon--small">
+      {% include('svg/famsf-zoom-out-sm.html') %}
+    </i>
+    <div class="zoom-marker__text">close</div>
+  </button>
   <div class="zoom-window__content">
   </div>
-  <footer class="zoom-footer">
-    <button class="zoom-close animated fadeInDownShort button-with-icon" href="javascript:;" style="display: none;">
-      <i>
-        <span class="icon--small">{% include('svg/famsf-zoom-out-sm.html') %}</span>
-      </i>
-      <div>close</div>
-    </button>
-  </footer>
 </div>
