@@ -14,22 +14,6 @@
     background-size: cover;
   }
 
-  &.light-background-image {
-    background-image: url('../../../imgs/art/Plaut_pont-neuf_BNF.jpg');
-  }
-
-  &.dark-background-image {
-    background-image: url('../../../imgs/art/Camille_green_dress.jpg');
-  }
-
-  &.landscape-orientation {
-    background-position: center;
-  }
-
-  &.portrait-orientation {
-    background-position: top center;
-  }
-
   &.has-video {
     position: absolute;
     top: 0;
@@ -44,7 +28,7 @@
   padding: rhythm(1);
   background-color: $white-60;
 
-  @include breakpoint($bp2) {
+  @include breakpoint($bp1) {
     width: 27rem;
   }
 
@@ -64,7 +48,7 @@
   &.has-outlined-rectangles {
     @extend %has-rectangles;
 
-    @include breakpoint($bp2) {
+    @include breakpoint($bp1) {
       margin-top: rhythm(3);
       margin-left: rhythm(3);
       background-color: $white-30;
@@ -73,7 +57,7 @@
 
   &.has-solid-rectangles {
     @extend %has-rectangles;
-    @include breakpoint($bp2) {
+    @include breakpoint($bp1) {
       margin-bottom: rhythm(3);
       margin-right: rhythm(3);
       background-color: transparent;
@@ -81,7 +65,7 @@
   }
 
   &.has-dotted-border {
-    @include breakpoint($bp2) {
+    @include breakpoint($bp1) {
       margin-bottom: rhythm(3);
       margin-left: rhythm(3);
     }
@@ -96,7 +80,7 @@
 .section-hero--rectangle {
   display: none;
 
-  @include breakpoint($bp2) {
+  @include breakpoint($bp1) {
     display: block;
     position: absolute;
     z-index: 0;
