@@ -20,39 +20,10 @@
   transform: scale(1.2);
 }
 
-.zoom-parent {
-  height: 90vh; // how do we determine the height?
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  float: left;
-  display: inline-block;
-}
-
-// This is the zoomable image
-.zoom-child {
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
-}
-
 .zoom-detail-view {
-  display: none;
-  visibility: hidden;
-  transition: visibility 0s, opacity 0.2s ease;
-  opacity: 0;
 }
 
 .show-detail {
-  display: block;
-  visibility: visible;
-  opacity: 1;
 }
 
 .zoom-marker-outer {
@@ -66,10 +37,9 @@
   border-radius: 50%;
   width: 2.2rem;
   height: 2.2em;
-
   .icon--small {
     margin: auto;
-    
+
   }
 }
 
@@ -98,15 +68,11 @@
   right: 0;
   left: 0;
   background: #333;
-  opacity: 0;
   z-index: 50;
-  visibility: hidden;
-  transition: visibility 0s, opacity 0.3s ease;
+  opacity: .75;
 }
 
 .zoom--is-open {
-  visibility: visible;
-  opacity: .75;
 }
 
 .zoom-window {
@@ -116,13 +82,10 @@
   top: 1em;
   right: 1em;
   left: 1em;
-  opacity: 0;
   padding: rhythm(2);
   max-height: 90vh;
   overflow-y: auto;
   z-index: 100;
-  visibility: hidden;
-  transition: visibility 0s, opacity 0.5s linear;
   @include breakpoint($bp1) {
     top: 5vh;
     right: 5vw;
@@ -141,14 +104,9 @@
 }
 
 .zoom-window__content {
-  opacity: 0;
-  visibility: hidden;
-  transition: visibility 0s, opacity 0.5s linear;
 }
 
 .zoom-window--is-visible {
-  opacity: 1;
-  visibility: visible;
 }
 
 // Hide text except for screen readers.

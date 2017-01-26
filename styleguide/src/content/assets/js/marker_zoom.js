@@ -34,18 +34,42 @@
         zoomImage.get(0).style.transformOrigin = zoomValues;
         // Populate the modal with the marker content.
         var detailedView = marker.closest('.zoom-group').find('.zoom-detail-view').clone();
-        modalContent.toggleClass('zoom-window--is-visible').html(detailedView);
+        if (modalContent.hasClass('zoom-window--is-visible')) {
+          modalContent.hide(0);
+          modalContent.toggleClass('zoom-window--is-visible');
+        } else {
+          modalContent.show(0);
+          modalContent.toggleClass('zoom-window--is-visible').html(detailedView);
+        }
+
         setTimeout(function() {
             // Start to zoom in on the initial image.
             // This requires delay after setting transformOrigin.
             zoomImage.toggleClass('zoomed');
             setTimeout(function() {
               // Fade in the background overlay
-              modalOverlay.toggleClass('zoom--is-open');
+                if (modalOverlay.hasClass('zoom--is-open')) {
+                  modalOverlay.fadeOut(500);
+                  modalOverlay.toggleClass('zoom--is-open');
+                } else {
+                  modalOverlay.fadeIn(500);
+                  modalOverlay.toggleClass('zoom--is-open');
+                }
               setTimeout(function() {
                 // reveal the content window.
-                modalWindow.toggleClass('zoom-window--is-visible');
-                modalContent.find('.zoom-detail-view').toggleClass('show-detail');
+                if (modalWindow.hasClass('zoom-window--is-visible')) {
+                  modalWindow.fadeOut(500);
+                  modalWindow.toggleClass('zoom-window--is-visible');
+                } else {
+                  modalWindow.fadeIn(500);
+                  modalWindow.toggleClass('zoom-window--is-visible');
+                }
+                var detailView = modalContent.find('.zoom-detail-view');
+                if (detailView.hasClass('show-detail')) {
+                  detailView.toggleClass('show-detail').fadeOut(500);
+                } else {
+                  detailView.toggleClass('show-detail').fadeIn(500);
+                }
                 setTimeout(function() {
                   // Show the close button.
                   zoomClose.show();
@@ -60,17 +84,18 @@
       // Listener for a click on any zoom close button.
       zoomClose.click(function(){
         var closeButton = $(this);
+        var zoomedImage =$('.figure__zoomable-child.zoomed');
         // Hide the close button.
         zoomClose.hide();
         // Hide the modal window
-        modalContent.find('.zoom-detail-view').toggleClass('show-detail');
-        modalContent.toggleClass('zoom-window--is-visible').html();
-        modalWindow.toggleClass('zoom-window--is-visible');
+        modalContent.find('.zoom-detail-view').removeClass('show-detail').fadeOut(500);
+        modalContent.removeClass('zoom-window--is-visible').fadeOut(500).html();
+        modalWindow.removeClass('zoom-window--is-visible').fadeOut(500);
         setTimeout(function() {
           // Hide the background overlay.
-          modalOverlay.toggleClass('zoom--is-open');
+          modalOverlay.removeClass('zoom--is-open').fadeOut(500);
           // Zoom out on main image.
-          $('.figure__zoomable-child.zoomed').toggleClass('zoomed');
+          zoomedImage.removeClass('zoomed');
           setTimeout(function() {
             // Release the scroll locking so the user can scroll the main page again.
             $('body').toggleClass('scroll-lock');
