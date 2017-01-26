@@ -1,0 +1,58 @@
+---
+layout: element
+section: element
+theme: legion-light
+
+title: Light Buttons
+description: These buttons are used as ctas to indicate where a user should take action.
+
+---
+
+<div class="styleguide-section">
+  <div class="container">
+    <div class="l-2up--1">
+      <h3>Basic Color Block Button</h3>
+    </div>
+    <div class="l-2up--2">
+      <button class="color-block-button">
+        Click Here
+      </button>
+      <button class="color-block-button--full">
+        Click Here
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="styleguide-section">
+  <div class="container">
+    <div class="l-2up--1">
+      <h3>Button with Responsive Icon</h3>
+    </div>
+    <div class="l-2up--2">
+      <button class="button-with-icon"> 
+        <i>
+          <span class="icon--large-responsive">{% include('svg/famsf-arrow-down-lg.html') %}</span>
+          <span class="icon--med-responsive">{% include('svg/famsf-arrow-down-md.html') %}</span>
+        </i>
+        <div>Click to Read More</div>
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="styleguide-section">
+  <div class="container">
+    <div class="l-2up--1">
+      <h3>Button with Not Responsive Icon</h3>
+    </div>
+    <div class="l-2up--2">
+      <button class="button-with-icon"> 
+        <i class="icon--small">
+          {% include('svg/famsf-play-sm.html') %}
+        </i>
+        <div>Play Audio</div>
+      </button>
+    </div>
+  </div>
+</div>

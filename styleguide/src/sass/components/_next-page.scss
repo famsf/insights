@@ -14,18 +14,20 @@
   box-shadow: 0 0 15px darken($background-d, 20%) inset;
   display: block;
   margin: 1em auto 0;
-  padding: .7em 0 .2em 0;
   position: relative;
   text-align: center;
-  width: 4em;
+  width: 5rem;
+  height: 3rem;
+  padding: 0;
 
-  .icon--tiny {
+  .icon--med {
     left: 0;
     position: absolute;
     text-indent: 0;
-    top: .7em;
-    bottom: .5em;
+    top: .65rem;
+    bottom: .65rem;
     width: 100%;
+    display: block;
   }
 }
 

@@ -12,7 +12,6 @@
     <p>Below are several paintings he submitted for exhibition to the Salon. <em><strong>Guess which one was accepted.</strong></em></p>
   </div>
 </div>
-
 <div class="container comparison">
   <!-- Do we need a header here? -->
   <!-- <h2>Example One: Comparing Seascapes</h2> -->
@@ -20,9 +19,10 @@
     <figure>
       <div class="figure--wrapper">
         <img src="../assets/imgs/art/Low_tide.jpg" alt="The Pointe de La Hève at Low Tide" />
-        <button class="comparison--button">Option A
-          <i class="icon-arrow--down">&#65514;{# remove html entity code and add down arrow include here #}</i>
-          <i class="icon-arrow--up" style="display:none;">&#65516;{# remove html entity code up arrow include here #}</i>
+        <button class="comparison--button">
+          <i class="icon-arrow--down">{% include('svg/famsf-carrot-down-sm.html') %}</i>
+          <i class="icon-arrow--up" style="display:none;">{% include('svg/famsf-carrot-up-sm.html') %}</i>
+          Option A
         </button>
       </div>
     </figure>
@@ -41,9 +41,10 @@
     <figure>
       <div class="figure--wrapper">
         <img src="../assets/imgs/art/Havre_dOrsay.jpg" alt="The Jetty at Le Havre" />
-        <button class="comparison--button">Option B
-          <i class="icon-arrow--down">&#65514;{# remove html entity code and add down arrow include here #}</i>
-          <i class="icon-arrow--up" style="display:none;">&#65516;{# remove html entity code and add up arrow include here #}</i>
+        <button class="comparison--button">
+          <i class="icon-arrow--down">{% include('svg/famsf-carrot-down-sm.html') %}</i>
+          <i class="icon-arrow--up" style="display:none;">{% include('svg/famsf-carrot-up-sm.html') %}</i>
+          Option B
         </button>
       </div>
     </figure>

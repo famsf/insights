@@ -5,6 +5,9 @@
  * @copyright Copyright (c) 2017 Palantir.net
  */
 
-.audio__button {
-  @extend %button-with-icon;
+.audio__wrapper {
+  display: inline-block;
+  border: 1px solid $primary;
+  padding: .5em 1em;
 }
+
