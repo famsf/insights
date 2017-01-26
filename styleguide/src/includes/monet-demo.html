@@ -196,7 +196,15 @@
       <p>Since Fontainebleau was originally a royal preserve, its trees were able to reach majestic heights seldom seen in other landscapes. One such tree that Monet painted several times was this massive oak.</p>
       </div>
     </div>
-    {% include('image-with-credit--zoom.html') %}
+    <div class="container">
+      <div class="l-2up">
+        <h3>Looking Closely</h3>
+        <p>In this painting Monet deployed several techniques that would evolve into hallmarks of his mature style. First the artist dramatically cropped the tree, bringing the viewer up close and into the deep shadows created by the enormous branches overhead.</p>
+      </div>
+      <div class="l-2up">
+        {% include('image-with-credit--zoom.html') %}
+      </div>
+    </div>
     {% include('share.html') %}
     {% include('next-page.html') %}
   </section>
@@ -231,20 +239,32 @@
     {% include('share.html') %}
     {% include('next-page.html') %}
   </section>
-  <section class="section pp-scrollable" id="section-with-zoom">
+  <section class="section pp-scrollable" id="paris-modernity-and-leisure">
+    <h2>Paris: Modernity and Leisure</h2>
     <div class="container">
-      <div class="l-column">
-      {% include('image-with-credit--zoom.html') %}
+      <div class="l-1up">
+        <h3>Charles-Henri Plaut, Le Pont-Neuf and Île de la Cité, 1865–1870</h3>
+        <p>Between 1853 and 1870, Paris was in the midst of a vast urban redesign, commissioned by Napoleon III and executed by Baron Haussmann, that included the demolition of overcrowded neighborhoods dating to medieval times. The construction of wide avenues, parks and squares, and new apartment buildings transformed Paris into a modern city.</p>
+
+        <h3>Quai de Louvre, 1867</h3>
+        <p>Monet was fascinated by the manifestations of modern urban life on view throughout Paris. He requested, from the French superintendent of the arts, special access to an exterior colonnade of the museum building to paint views of the center of Paris. There the young artist quite literally turned his back to the great repository of art on display in the Louvre. His vantage point provided a platform from which to paint the present and move art toward modernity. Monet visited the Louvre to see the collection of masterworks hanging in the galleries, but unlike other artists in his circle, he did not paint or draw from them.</p>
+
+        <h3>La Grenouillère, 1869</h3>
+        <p>Seeking refuge from the intensity of city living, the new middle class traveled to leisure locations easily accessible by train. One such popular destination was a bathing spot on the banks of the Seine, called La Grenouillère (literally “frog pond”).</p>
       </div>
     </div>
     <div class="container">
-      <div class="l-column">
-        <p>
-        Ne eum ridens causae splendide. Eros commune suscipit ius an. Affert iudico partem eam te, id invidunt scriptorem signiferumque mei. Eu mea recteque percipitur, ut denique interesset omittantur sit, ex fugit perpetua vel. Vel soluta petentium constituam cu. Regione intellegat no mei, ne dicat consul integre vix.
-        </p>
-        <p>
-        Ubique argumentum est cu, per ad cetero vocent civibus. Te cum simul convenire splendide, denique sapientem instructior an quo. Vix modo modus oportere ei. Ad blandit oporteat his, sint recusabo necessitatibus pro et. Ceteros democritum contentiones ex eos, id clita inciderint sit. At vel homero sententiae, ne his alterum fabulas ancillae.
-        </p>
+      <div class="l-1up">
+        <h3>Looking Closer</h3>
+        <!-- zoom component here -->
+        <!-- image: La Grenouillère -->
+        <!-- split the following text with croppings of the painting La Grenouillère -->
+        <p>Monet became interested in conveying the immediate sensation of being in the places he painted. In La Grenouillère, the artist carefully captured through color and brushstrokes the effects of light, rendering a composition infused with a sense of pleasure. Viewers can witness multiple activities enjoyed by the figures: sitting leisurely at the café, conversing under the central tree, partaking in a swim, and preparing for a boat ride out on the sun-drenched water. Yet for some observers, the true subject of this painting is the water itself. While the activity of the figures is evoked through quick, energetic dashes of the brush, Monet lavished attention on the water, its multiple colors, its reflections, and its depths. </p>
+        <!-- audio component. sound needed -->
+        <p>Audio: Kimball Art Museum Curator, George Shackelford</p>
+        <blockquote>
+        I think it's one of the most important passages of paint that Monet ever laid down.
+        </blockquote>
       </div>
     </div>
     {% include('share.html') %}
@@ -252,12 +272,12 @@
   </section>
   <section class="section pp-scrollable" id="lastPage" >
     <div class="container">
-      <div class="l-column">
+      <div class="l-1up">
 
       </div>
     </div>
   </section>
 </main>
-
+{% include('zoom-modal.html') %}
 {% endblock %}
 
