@@ -84,6 +84,7 @@
   background-color: transparentize($background-d, .2);
   padding: .2rem;
   border: 0;
+  box-shadow: 0 0 5px darken($background-d, 20%) inset;
 
   .icon--small {
     margin: auto;
