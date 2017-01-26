@@ -1,0 +1,17 @@
+{#
+  name: Modal for zooming in on an image
+  usage: Placed at bootom of the page and used with Image zoom.
+#}
+
+<div class="zoom-overlay-background">
+</div>
+<div class="zoom-window animatedParent">
+  <button class="zoom-close animated fadeInDownShort" href="javascript:;" style="display: none;">
+    <i class="icon--small">
+      {% include('svg/famsf-zoom-out-sm.html') %}
+    </i>
+    <div class="zoom-marker__text">close</div>
+  </button>
+  <div class="zoom-window__content">
+  </div>
+</div>

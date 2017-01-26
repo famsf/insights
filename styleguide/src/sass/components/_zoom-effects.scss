@@ -43,31 +43,117 @@
 }
 
 .zoom-detail-view {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
+  display: none;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.2s ease;
   opacity: 0;
 }
 
 .show-detail {
+  display: block;
+  visibility: visible;
   opacity: 1;
 }
-.zoom-close,
+
 .zoom-marker-outer {
   z-index: 1;
 }
 
-.zoom-close,
 .zoom-marker-inner {
-  display: block;
-  padding: 1em;
+  display: flex;
+  display: -webkit-flex;
+  background-color: transparentize($background-d, .2);
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2em;
+
+  .icon--small {
+    margin: auto;
+    
+  }
+}
+
+.zoom-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.2rem;
+  height: 2.2em;
+  display: flex;
+  display: -webkit-flex;
+  background-color: transparentize($background-d, .2);
+  padding: .2rem;
+  border: 0;
+  box-shadow: 0 0 5px darken($background-d, 20%) inset;
+
+  .icon--small {
+    margin: auto;
+  }
+}
+
+.zoom-overlay-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #333;
+  opacity: 0;
+  z-index: 50;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.3s ease;
+}
+
+.zoom--is-open {
+  visibility: visible;
+  opacity: .75;
+}
+
+.zoom-window {
+  position: absolute;
+  background: transparentize($zoom-background, .2);
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  left: 1em;
+  opacity: 0;
+  padding: rhythm(2);
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: 100;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.5s linear;
+  @include breakpoint($bp1) {
+    top: 5vh;
+    right: 5vw;
+    left: 5vw;
+  }
+  @include breakpoint($bp2) {
+    top: 10vh;
+    right: 10vw;
+    left: 10vw;
+  }
+  @include breakpoint($bp3) {
+    top: 10vh;
+    right: 15vw;
+    left: 15vw;
+  }
+}
+
+.zoom-window__content {
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.zoom-window--is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+// Hide text except for screen readers.
+.zoom-marker__text {
+  @extend %text-hidden;
+  height: 1px;
+  width: 1px;
 }

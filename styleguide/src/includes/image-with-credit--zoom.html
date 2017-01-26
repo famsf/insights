@@ -1,20 +1,47 @@
 {#
   name: Image with credit zoomable
-  usage: Images with credits may appear in several contexts throughout the site.
+  usage: Images with credits may appear in several contexts throughout the site. Zoom must be used with zoom modal include.
 #}
 
 {% block component %}
   <figure class="figure__zoomable" >
-    <div class="figure--wrapper figure__zoomable-child" style="background-image: url('../assets/imgs/art/Corot_French_Banks.jpg'); transform-origin: 60% 70%;">
+    <div class="figure--wrapper figure__zoomable-child" style="background-image: url('../assets/imgs/art/bodmer_fullsize.jpg');">
     </div>
-    <img style="visibility: hidden;" src="../assets/imgs/art/Corot_French_Banks.jpg" alt="painting of river" />
-    <div class="zoom-marker-outer" style="position: absolute; left:60%; top: 70%;">
-        <a class="zoom-marker-inner animated fadeInDownShort delay-1000" style="position: absolute; top: -50%; left: -50%" href="javascript:;">zoom</a>
+    <img style="visibility: hidden;" src="../assets/imgs/art/bodmer_fullsize.jpg" alt="bodmer" />
+
+    <div class="zoom-group">
+      <div class="zoom-marker-outer" style="position: absolute; left:65%; top: 60%;">
+          <a class="zoom-marker-inner animated fadeInDownShort delay-1000" href="javacript:;" title="Click to zoom"><span class="icon--small">{% include('svg/famsf-zoom-in-sm.html') %}</span> <div class="zoom-marker__text">Click to zoom</div></a>
+      </div>
+      <div class="zoom-detail-view">
+        <h2>Color</h2>
+        <p>In contrast to this restrained study of light and color, Monet captures direct sunlight through the use of intense white as seen on the trunk of the oak. </p>
+        <img src="{{ site.url }}/assets/imgs/art/bodmer_color.jpg" alt="image detail">
+      </div>
     </div>
-    <div class="zoom-detail-view" style="background-image: url({{ site.url }}/assets/imgs/proof-of-concept/31_Corot_French-Banks-detail.jpg); transform-origin: 60% 70%;">
+    <div class="zoom-group">
+      <div class="zoom-marker-outer" style="position: absolute; left:20%; top: 65%;">
+          <a class="zoom-marker-inner animated fadeInDownShort delay-1000" href="javacript:;" title="Click to zoom"><span class="icon--small">{% include('svg/famsf-zoom-in-sm.html') %}</span> <div class="zoom-marker__text">Click to zoom</div></a>
+      </div>
+      <div class="zoom-detail-view">
+        <h2>Light</h2>
+        <p>The background of the composition is only defined by varied light green tones, flattening any sense of depth beyond the oak.</p>
+        <img src="{{ site.url }}/assets/imgs/art/bodmer_light.jpg" alt="image detail">
+      </div>
     </div>
-    <a class="zoom-close animated fadeInDownShort" href="javascript:;" style="position: absolute; top: 20%; left:45%; display: none;">close</a>
-    <figcaption><span class="title-of-art">Banks of the Somme at Picquigny</span> Jean-Baptiste-Camille Corot</figcaption>
+    <div class="zoom-group">
+      <div class="zoom-marker-outer" style="position: absolute; left:40%; top: 80%;">
+          <a class="zoom-marker-inner animated fadeInDownShort delay-1000" href="javacript:;" title="Click to zoom"><span class="icon--small">{% include('svg/famsf-zoom-in-sm.html') %}</span> <div class="zoom-marker__text">Click to zoom</div></a>
+      </div>
+      <div class="zoom-detail-view">
+        <h2>Shadow</h2>
+        <p>Perhaps most striking is the artist’s ability to capture the dancing quality of shadows through his varied use of color. In the foreground, the forest floor is covered in muddied grays, yellows, and greens creating a sense of a soft light breaking through the forest canopy</p>
+        <img src="{{ site.url }}/assets/imgs/art/bodmer_shadow.jpg" alt="image detail">
+      </div>
+    </div>
+    <figcaption>
+      <span class="title-of-art">Banks of the Somme at Picquigny</span> Jean-Baptiste-Camille Corot
+    </figcaption>
     {% include('caption-info--cta.html') %}
   </figure>
 
