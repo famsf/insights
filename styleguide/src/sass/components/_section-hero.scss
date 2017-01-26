@@ -39,38 +39,50 @@
     z-index: 2;
   }
 
-  &.has-outlined-rectangles,
-  &.has-solid-rectangles {
-    padding: rhythm(.6) rhythm(1);
-    // ideally, the height would be automatically detected by java
-    height: 12rem;
+  &.top-left {
+    @include breakpoint($bp1) {
+      margin-top: rhythm(3);
+      margin-left: rhythm(3);
+    }
+  }
+
+  &.top-right {
+    @include breakpoint($bp1) {
+      margin-top: rhythm(3);
+      margin-right: rhythm(3);
+    }
+  }
+
+  &.bottom-left {
+    @include breakpoint($bp1) {
+      margin-bottom: rhythm(3);
+      margin-left: rhythm(3);
+    }
+  }
+
+  &.bottom-right {
+    @include breakpoint($bp1) {
+      margin-bottom: rhythm(3);
+      margin-right: rhythm(3);
+    }
   }
 
   &.has-outlined-rectangles {
     @include breakpoint($bp1) {
-      margin-top: rhythm(3);
-      margin-left: rhythm(3);
       background-color: $white-30;
     }
   }
 
   &.has-solid-rectangles {
     @include breakpoint($bp1) {
-      margin-bottom: rhythm(3);
-      margin-right: rhythm(3);
       background-color: transparent;
     }
   }
 
   &.has-dotted-border {
-    @include breakpoint($bp1) {
-      margin-bottom: rhythm(3);
-      margin-left: rhythm(3);
-    }
-
     h1 {
-      padding-bottom: .5em;
       @extend %dotted-border;
+      padding-bottom: .5em;
     }
   }
 }
