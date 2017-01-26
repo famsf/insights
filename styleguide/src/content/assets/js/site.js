@@ -14,7 +14,7 @@
   Drupal.behaviors.site = {
     attach: function (context, settings) {
       // Start the slider
-      $('.bxslider').bxSlider({
+      $('.wordslider').bxSlider({
         mode: 'fade',
         pager: false,
         auto: true,
