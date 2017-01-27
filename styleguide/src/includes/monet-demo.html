@@ -6,12 +6,13 @@
 {% block component %}
 <main id="pagepiling" >
   <section class="animatedParent section pp-scrollable" id="Title">
-    <div class="section-hero landscape-orientation">
-      <div class="section-hero--title">
-        <h1>Monet: The Early Years</h1>
-        <h2>Legion of Honor(logo)</h2>
-        <h3>February 25&ndash;May 29, 2017</h3>
+    <div class="section-hero" >
+      <div class="section-hero__title has-solid-rectangles">
+        <h1 class="animated fadeIn delay-1500">Monet: The Early Years</h1>
+        <div class="section-hero__rectangle top animated fadeInLeft delay-250"></div>
+        <div class="section-hero__rectangle bottom animated fadeInRight delay-250"></div>
         <!--<p>Background image: The Beach at Trouville, 1870</p>-->
+        </div>
       </div>
     </div>
     {% include('next-page.html') %}
@@ -56,12 +57,17 @@
     {% include('next-page.html') %}
   </section>
   <section class="section pp-scrollable" id="contending-with-convention">
-    <div class="section-hero">
+
+    <div class="section-hero" style="background-image: url('{{ site.url }}/assets/imgs/art/section-header-Exposition_universelle_des_beaux-arts.jpg');">
+      <div class="section-hero__title has-solid-rectangles top-left">
+        <h1 class="animated fadeIn delay-1500">Contending with Convention</h1>
+        <div class="section-hero__rectangle top animated fadeInLeft delay-250"></div>
+        <div class="section-hero__rectangle bottom animated fadeInRight delay-250"></div>
+      </div>
+    </div>
     <!-- section header formatting -->
-    <h2>Contending with Convention</h2>
     <!-- background: Salon Engraving from 1865 – -->
     <!-- or Exposition_universelle_des_beaux-arts_-_[...]Doré_Gustave_btv1b10319593v -->
-  </div>
   <div class="container">
     <div class="l-1up">
       <h3>Salon Engraving from 1865</h3>
@@ -217,7 +223,7 @@
         Your browser does not support the video tag.
       </video>
       <div class="section-hero has-video">
-        <div class="section-hero--title has-dotted-border">
+        <div class="section-hero__title has-dotted-border bottom-left">
           <h1>See the Forest for the Trees</h1>
         </div>
       </div>
@@ -273,10 +279,14 @@
     {% include('next-page.html') %}
   </section>
   <section class="section pp-scrollable" id="ambition-and-risk">
-    <div class="section-hero">
-      <h2>Ambition and Risk</h2>
-      <!-- section image: Luncheon on the Grass -->
+    <div class="section-hero" style="background-image: url('{{ site.url }}/assets/imgs/art/section-header-14_Monet_luncheon_Art-Resource.jpg');">
+      <div class="section-hero__title has-solid-rectangles top-right">
+        <h1 class="animated fadeIn delay-1500">Ambition and Risk</h1>
+        <div class="section-hero__rectangle top animated fadeInLeft delay-250"></div>
+        <div class="section-hero__rectangle bottom animated fadeInRight delay-250"></div>
+      </div>
     </div>
+      <!-- section image: Luncheon on the Grass -->
     <div class="container">
       <div class="l-1up">
 
@@ -318,9 +328,8 @@
     {% include('next-page.html') %}
   </section>
   <section class="section pp-scrollable" id="paris-modernity-and-leisure">
-    <div class="section-hero">
-    <!-- image for section header: Le Pont-Neuf and Île de la Cité -->
-      <h2>Paris: Modernity and Leisure</h2>
+    <div class="section-hero" style="background-image: url('../assets/imgs/art/Plaut_pont-neuf_BNF.jpg');">
+      {% include('section-hero-title--optiona.html') %}
     </div>
     <div class="container">
       <div class="l-1up">
@@ -394,7 +403,7 @@
         Your browser does not support the video tag.
       </video>
       <div class="section-hero has-video">
-        <div class="section-hero--title has-dotted-border">
+        <div class="section-hero__title has-dotted-border top-right">
           <h1>Monet and the Sea</h1>
         </div>
       </div>
@@ -452,12 +461,18 @@
       <blockquote>But this painting isn't as spontaneous, perhaps, as it might initially seem. Notice … the succession of staircases at right. Monet has spent a great deal of time working on the perspective and the geometry of these structures.  It's deliberately organized, carefully worked, and inherently balanced.</blockquote>
       </div>
     </div>
+    {% include('share.html') %}
+    {% include('next-page.html') %}
   </section>
   <section class="section pp-scrollable" id="camille-monet-the-known-and-the-unknown">
-    <div class="section-hero">
-      <!-- images for section: Woman in a Green Dress or photo of Camille -->
-      <h2>Camille Monet: The Known and the Unknown</h2>
+    <div class="section-hero" style="background-image: url('../assets/imgs/art/Camille_green_dress.jpg');">
+      <div class="section-hero__title has-solid-rectangles bottom-right">
+        <h1 class="animated fadeIn delay-1500">Camille Monet: The Known and the Unknown</h1>
+        <div class="section-hero__rectangle top animated fadeInLeft delay-250"></div>
+        <div class="section-hero__rectangle bottom animated fadeInRight delay-250"></div>
+      </div>
     </div>
+    <!-- images for section: Woman in a Green Dress or photo of Camille -->
     <div class="container">
       <div class="l-33-66--1">
       <figure>
@@ -474,12 +489,18 @@
         <p>Camille personally endured considerable hardship during the early years of their relationship. By 1867 she was pregnant, unmarried, and living alone in Paris in a one-room apartment paid for by Monet. Even after she married Monet, the family  endured eviction and constant hounding by creditors. Camille&rsquo;s motivations, experiences, and opinions as they relate to the artist remain mysterious and inaccessible, principally because Monet&rsquo;s second wife demanded that he destroy Camille&rsquo;s personal effects after his first wife&rsquo;s death, although the artist did keep with him all of his life the center panel of Luncheon on the Grass, depicting Camille. </p>
       </div>
     </div>
+    {% include('share.html') %}
+    {% include('next-page.html') %}
   </section>
   <section class="section pp-scrollable" id="political-unrest">
-    <div class="section-hero">
-      <!-- section background: Hyde Park -->
-      <h2>Political Unrest</h2>
+    <div class="section-hero" style="background-image: url('../assets/imgs/art/section-header-33_Franco-Prussian-War_-Paris.jpg');">
+      <div class="section-hero__title has-solid-rectangles top-right">
+        <h1 class="animated fadeIn delay-1500">Political Unrest</h1>
+        <div class="section-hero__rectangle top animated fadeInLeft delay-250"></div>
+        <div class="section-hero__rectangle bottom animated fadeInRight delay-250"></div>
+      </div>
     </div>
+    <!-- section background: Hyde Park -->
     <div class="container">
       <div class="l-1up">
         <figure>
@@ -545,12 +566,18 @@
         <p>Monet&rsquo;s The Port of Zaandam features a landing stage, or dock. The work is remarkable for the artist&rsquo;s increasingly abstract treatment of water, painted using rectangular dashes of paint. The setting sun creates a sense of quietude for this scene of buildings lining the port and boats in the harbor, flags waving from their masts. The tall harbor pier, just right of center, interrupts the horizon line, breaking the repetition of the boats and buildings, and directly connects the sky with the reflecting water. </p>
       </div>
     </div>
+    {% include('share.html') %}
+    {% include('next-page.html') %}
   </section>
   <section class="section pp-scrollable" id="training-your-eye-color">
-    <div class="section-hero">
-      <!-- use either magpie or bank of siene for background of section header? -->
-      <h2>Training Your Eye: Color</h2>
+    <div class="section-hero" style="background-image: url('../assets/imgs/art/section-header-20_Magpie_Art-Resource.jpg');">
+      <div class="section-hero__title has-solid-rectangles top-left">
+        <h1 class="animated fadeIn delay-1500">Training Your Eye: Color</h1>
+        <div class="section-hero__rectangle top animated fadeInLeft delay-250"></div>
+        <div class="section-hero__rectangle bottom animated fadeInRight delay-250"></div>
+      </div>
     </div>
+      <!-- use either magpie or bank of siene for background of section header? -->
     <div class="container">
       <div class="l-2up">
       <h3>The Magpie, 1869</h3>
@@ -581,19 +608,31 @@
         <p>Where The Magpie is a study in nuance, On the Bank of the Seine, Bennecourt reveals Monet&rsquo;s working process and his willingness to let the viewer&rsquo;s eye do the work. Monet has divided the composition diagonally in half. The deep greens of the foreground add a sense of weight to the riverbank that contrasts with the pastels of the sun-drenched background. Yet within this composition, there are areas where the artist applies paint in startling ways. For example, the bright green patch in the foreground reads purely as a brushstroke and contrasts directly with the darker greens, which are applied in an even pattern that evokes blades of grass. The slight tonal variation between the flesh tone of the figure&rsquo;s face and the putty reflection of a roof of a building across the bank is another point where the viewer&rsquo;s eye works, filling in the distance needed to make this transition read as face and roof opposed to the juxtaposition of two squares of color.</p>
       </div>
     </div>
+    {% include('share.html') %}
+    {% include('next-page.html') %}
   </section>
   <section class="section pp-scrollable" id="training-your-eye-composition">
-    <div class="section-hero">
-      <h2>Training your Eye: Composition</h2>
-      <!-- use one of the images in overlay for section background? -->
+    <div class="section-hero" >
+      <div class="section-hero__title has-solid-rectangles">
+        <h1 class="animated fadeIn delay-1500">Training your Eye: Composition</h1>
+        <div class="section-hero__rectangle top animated fadeInLeft delay-250"></div>
+        <div class="section-hero__rectangle bottom animated fadeInRight delay-250"></div>
+      </div>
     </div>
+      <!-- use one of the images in overlay for section background? -->
     {% include('image-overlay.html') %}
+    {% include('share.html') %}
+    {% include('next-page.html') %}
   </section>
   <section class="section pp-scrollable" id="observing-nature">
-    <div class="section-hero">
-      <!-- find conservancy photos in recent email -->
-      <h2>Observing Nature</h2>
+    <div class="section-hero" >
+      <div class="section-hero__title has-solid-rectangles">
+        <h1 class="animated fadeIn delay-1500">Observing Nature</h1>
+        <div class="section-hero__rectangle top animated fadeInLeft delay-250"></div>
+        <div class="section-hero__rectangle bottom animated fadeInRight delay-250"></div>
+      </div>
     </div>
+    <h2>Observing Nature</h2>
     <div class="container">
       <div class="l-1up">
         <p><span class="dropcap">M</span>onet: The Early Years reveals both the struggles and successes of the artist&rsquo;s early career. Throughout this period one thing remained a constant&mdash;Monet&rsquo;s avid preference for working directly from nature. Taking advantage of the stunning trails that meander through Lands End, the area surrounding the Legion of Honor, provides an immediate opportunity to gain insights into the artist&rsquo;s experience and process.</p>
@@ -607,6 +646,8 @@
         <p><strong>Sensory Connections:</strong> How can you convey the experience among your other senses of being in nature? What do you hear? What is the temperature? What sensations are constant and what changes? </p>
       </div>
     </div>
+    {% include('share.html') %}
+    {% include('next-page.html') %}
   </section>
 
   <section class="section pp-scrollable" id="lastPage" >
@@ -617,6 +658,8 @@
         </p>
       </div>
     </div>
+    {% include('share.html') %}
+    {% include('next-page.html') %}
   </section>
 </main>
 {% include('zoom-modal.html') %}
