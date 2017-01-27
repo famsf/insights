@@ -5,14 +5,14 @@
  * @see http://smacss.com/book/
  */
 
+/* Set the vertical rhythm */
+@import "vertical-rhythm/vertical_rhythm";
+
 /* Import Sass mixins, variables, Compass modules, etc. */
 @import "init";
 
 /* Set browser support */
 @import "support-for";
-
-/* Set the vertical rhythm */
-@import "vertical-rhythm/vertical_rhythm";
 
 /* HTML element (SMACSS base) rules */
 @import "normalize";
@@ -46,6 +46,7 @@
 @import "components/audio";
 @import "components/overlay";
 @import "components/blockquote";
+@import "components/site-hero";
 
 /* Styleguide Specific rules */
 @import "styleguide/styleguide";

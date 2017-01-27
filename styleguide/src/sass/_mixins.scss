@@ -157,3 +157,117 @@ http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacemen
   border-image-slice: 26%;
   border-image-repeat: round;
 }
+
+/* ==============================================================
+   Hero extends
+   ============================================================== */
+
+%hero {
+  width: 100%;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+}
+
+%hero__content {
+  margin: auto;
+  position: relative;
+  width: 90vw;
+  color: $midnight;
+  padding: rhythm(1);
+  background-color: $white-60;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  button {
+    position: relative;
+    z-index: 2;
+  }
+
+  @include breakpoint($bp1) {
+    width: 27rem;
+  }
+
+  &.top-left {
+    @include breakpoint($bp1) {
+      margin-top: rhythm(3);
+      margin-left: rhythm(3);
+    }
+  }
+
+  &.top-right {
+    @include breakpoint($bp1) {
+      margin-top: rhythm(3);
+      margin-right: rhythm(3);
+    }
+  }
+
+  &.bottom-left {
+    @include breakpoint($bp1) {
+      margin-bottom: rhythm(3);
+      margin-left: rhythm(3);
+    }
+  }
+
+  &.bottom-right {
+    @include breakpoint($bp1) {
+      margin-bottom: rhythm(3);
+      margin-right: rhythm(3);
+    }
+  }
+
+  &.has-outlined-rectangles {
+    @include breakpoint($bp1) {
+      background-color: $white-30;
+    }
+  }
+
+  &.has-solid-rectangles {
+    @include breakpoint($bp1) {
+      background-color: transparent;
+    }
+  }
+
+  &.has-dotted-border {
+    h1 {
+      @extend %dotted-border;
+      padding-bottom: .5em;
+    }
+  }
+}
+
+%hero__rectangle {
+  display: none;
+
+  @include breakpoint($bp1) {
+    display: block;
+    position: absolute;
+    z-index: 0;
+    // the width and height of the rectangles should be .7rem more than the width and height of %hero__title to create overlap effect
+    width: 27rem + .7rem;
+
+    &.top {
+      top: -.7rem;
+      left: -.7rem;
+    }
+
+    &.bottom {
+      bottom: -.7rem;
+      right: -.7rem;
+    }
+
+    .has-outlined-rectangles & {
+      border: 2px solid transparentize($azure, .7);
+    }
+
+    .has-solid-rectangles & {
+      background-color: $white-60;
+    }
+  }
+}
