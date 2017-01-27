@@ -6,15 +6,7 @@
 {% block component %}
 <main id="pagepiling" >
   <section class="animatedParent section pp-scrollable" id="Title">
-    <div class="section-hero" >
-      <div class="section-hero__title has-solid-rectangles">
-        <h1 class="animated fadeIn delay-1500">Monet: The Early Years</h1>
-        <div class="section-hero__rectangle top animated fadeInLeft delay-250"></div>
-        <div class="section-hero__rectangle bottom animated fadeInRight delay-250"></div>
-        <!--<p>Background image: The Beach at Trouville, 1870</p>-->
-        </div>
-      </div>
-    </div>
+    {% include('site-hero.html') %}
     {% include('next-page.html') %}
   </section>
   <section class="section pp-scrollable" id="introduction">
