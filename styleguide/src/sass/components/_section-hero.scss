@@ -6,19 +6,26 @@
  */
 
 .section-hero {
-  width: 100%;
   height: 90vh;
+  width: 100%;
   display: flex;
   background-size: cover;
   background-position: center;
-  
+
   &.has-video {
     position: absolute;
     top: 0;
   }
 }
 
-.section-hero--title {
+.section-hero__title {
+  h1 {
+    margin: 0;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+  }
+
   margin: auto;
   position: relative;
   width: 90vw;
@@ -28,13 +35,6 @@
 
   @include breakpoint($bp1) {
     width: 27rem;
-  }
-
-  h1 {
-    margin: 0;
-    text-transform: uppercase;
-    position: relative;
-    z-index: 2;
   }
 
   &.top-left {
@@ -85,7 +85,7 @@
   }
 }
 
-.section-hero--rectangle {
+.section-hero__rectangle {
   display: none;
 
   @include breakpoint($bp1) {
@@ -115,6 +115,7 @@
     }
   }
 }
+
 .section-hero__video-wrapper {
   position: relative;
   height: 90vh;
