@@ -5,30 +5,11 @@
  * @copyright Copyright (c) 2017 Palantir.net
  */
 
+
+
 .section-hero {
-  width: 100%;
+  @extend %hero;
   height: 90vh;
-  display: flex;
-
-  &.has-image {
-    background-size: cover;
-  }
-
-  &.light-background-image {
-    background-image: url('../../../imgs/art/Plaut_pont-neuf_BNF.jpg');
-  }
-
-  &.dark-background-image {
-    background-image: url('../../../imgs/art/Camille_green_dress.jpg');
-  }
-
-  &.landscape-orientation {
-    background-position: center;
-  }
-
-  &.portrait-orientation {
-    background-position: top center;
-  }
 
   &.has-video {
     position: absolute;
@@ -36,17 +17,8 @@
   }
 }
 
-.section-hero--title {
-  margin: auto;
-  position: relative;
-  width: 90vw;
-  color: $midnight;
-  padding: rhythm(1);
-  background-color: $white-60;
-
-  @include breakpoint($bp2) {
-    width: 27rem;
-  }
+.section-hero__title {
+  @extend %hero__content;
 
   h1 {
     margin: 0;
@@ -54,75 +26,12 @@
     position: relative;
     z-index: 2;
   }
-
-  %has-rectangles {
-    padding: rhythm(.6) rhythm(1);
-    // ideally, the height would be automatically detected by java
-    height: 12rem;
-  }
-
-  &.has-outlined-rectangles {
-    @extend %has-rectangles;
-
-    @include breakpoint($bp2) {
-      margin-top: rhythm(3);
-      margin-left: rhythm(3);
-      background-color: $white-30;
-    }
-  }
-
-  &.has-solid-rectangles {
-    @extend %has-rectangles;
-    @include breakpoint($bp2) {
-      margin-bottom: rhythm(3);
-      margin-right: rhythm(3);
-      background-color: transparent;
-    }
-  }
-
-  &.has-dotted-border {
-    @include breakpoint($bp2) {
-      margin-bottom: rhythm(3);
-      margin-left: rhythm(3);
-    }
-
-    h1 {
-      padding-bottom: .5em;
-      @extend %dotted-border;
-    }
-  }
 }
 
-.section-hero--rectangle {
-  display: none;
-
-  @include breakpoint($bp2) {
-    display: block;
-    position: absolute;
-    z-index: 0;
-    // the width and height of the rectangles should be .7rem more than the width and height of .section-hero--title to create overlap effect
-    width: 27rem + .7rem;
-    height: 8.7rem + .7rem;
-
-    &.top {
-      top: -.7rem;
-      left: -.7rem;
-    }
-
-    &.bottom {
-      bottom: -.7rem;
-      right: -.7rem;
-    }
-
-    .has-outlined-rectangles & {
-      border: 2px solid transparentize($azure, .7);
-    }
-
-    .has-solid-rectangles & {
-      background-color: $white-60;
-    }
-  }
+.section-hero__rectangle {
+  @extend %hero__rectangle;
 }
+
 .section-hero__video-wrapper {
   position: relative;
   height: 90vh;
