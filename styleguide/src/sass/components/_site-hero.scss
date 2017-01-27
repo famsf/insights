@@ -1,0 +1,38 @@
+/**
+ * @file
+ * styles for "site hero" component
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+.site-hero {
+  @extend %hero;
+  height: 90vh;
+
+  &.has-video {
+    position: absolute;
+    top: 0;
+  }
+}
+
+.site-hero__title {
+  @extend %hero__content;
+
+  h1 {
+    @include leader(0);
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 3px 3px transparentize($text-shadow-color, .2);
+  }
+
+  h2 {
+    @include trailer(0);
+  }
+}
+
+.site-hero__rectangle {
+  @extend %hero__rectangle;
+
+  // the width and height of the rectangles should be .7rem more than the width and height of %hero__title to create overlap effect
+  height: 13rem + .7rem;
+}
