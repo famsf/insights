@@ -21,13 +21,14 @@
   h1 {
     margin: 0;
     text-transform: uppercase;
-    position: relative;
-    z-index: 2;
   }
 }
 
 .section-hero__rectangle {
   @extend %hero__rectangle;
+
+  // the width and height of the rectangles should be .7rem more than the width and height of %hero__title to create overlap effect
+  height: 8.7rem + .7rem;
 }
 
 .section-hero__video-wrapper {
