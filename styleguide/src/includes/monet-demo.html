@@ -14,32 +14,42 @@
         <!--<p>Background image: The Beach at Trouville, 1870</p>-->
       </div>
     </div>
-    {% include('share.html') %}
     {% include('next-page.html') %}
   </section>
   <section class="section pp-scrollable" id="introduction">
-    <div class="section-hero">
+    <!--<div class="section-hero"> -->
       <!-- section header formatting -->
       <!-- Young Monet here as a section header? -->
-    </div>
+    <!-- </div> -->
     <div class="container">
       <div class="l-1up">
         <!-- not sure this is really a header as much as an intro question -->
-        <h3>What is this &ldquo;new and revolutionary art?&rdquo;</h3>
-        <p>Before his success, before there was even the term &ldquo;Impressionism,&rdquo; Claude Monet labored to define his style and promote himself as an artist. Explore the first 14 years of Monet&rsquo;s career, when he struggled to provide food and shelter for himself and his family while creating innovations that would turn the art world upside down. Monet: The Early Years begins in 1858 with the first painting Monet showed publicly and closes in 1872, just before he exhibited that year with the group of artists who would come to be known as the Impressionists.</p>
-        <h3>Photo of young Monet</h3>
+        <h2>What is this &ldquo;new and revolutionary art?&rdquo;</h2>
+        <p><span class="dropcap">B</span>efore his success, before there was even the term &ldquo;Impressionism,&rdquo; Claude Monet labored to define his style and promote himself as an artist. Explore the first 14 years of Monet&rsquo;s career, when he struggled to provide food and shelter for himself and his family while creating innovations that would turn the art world upside down. Monet: The Early Years begins in 1858 with the first painting Monet showed publicly and closes in 1872, just before he exhibited that year with the group of artists who would come to be known as the Impressionists.</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="l-2up">
         <!-- image: photo of young Monet -->
-        <h2>Photo of young Monet</h2>
-        <p>Who was this young man from a small coastal community, trying to establish himself in the Parisian art world in the 1860s? Two forces drove Monet: his will to be a painter and his will to become critically and commercially successful.</p>
         <ul class="wordslider" style="text-align: center; height: 5em; display: block;">
-          <li><h1>ambition</h1></li>
-          <li><h1>recognition</h1></li>
-          <li><h1>risk</h1></li>
-          <li><h1>innovation</h1></li>
-          <li><h1>financial ruin</h1></li>
-          <li><h1>success</h1></li>
-          <li><h1>fame</h1></li>
+          <li><h2>ambition</h2></li>
+          <li><h2>recognition</h2></li>
+          <li><h2>risk</h2></li>
+          <li><h2>innovation</h2></li>
+          <li><h2>financial ruin</h2></li>
+          <li><h2>success</h2></li>
+          <li><h2>fame</h2></li>
         </ul>
+        <p>Who was this young man from a small coastal community, trying to establish himself in the Parisian art world in the 1860s? Two forces drove Monet: his will to be a painter and his will to become critically and commercially successful.</p>
+      </div>
+      <div class="l-2up">
+       <figure>
+        <div class="figure--wrapper">
+          <img src="{{ site.url }}/assets/imgs/art/Monet.jpg" alt="painting of trees" />
+          <figcaption><span class="title-of-art">The Pave de Chailly in the Forest Fontainebleau (cat 7)</span> 1865 | Monet | oil on canvas | Ordrupgaard Museum</figcaption>
+          {% include('caption-info--cta.html') %}
+        </div>
+      </figure>
       </div>
     </div>
     {% include('share.html') %}
@@ -52,19 +62,53 @@
     <!-- background: Salon Engraving from 1865 – -->
   </div>
   <div class="container">
-      <div class="l-1up">
-        <h3>Salon Engraving from 1865</h3>
-        <p>The Salon was the official, juried art exhibition of the Académie des Beaux-Arts in Paris, the dominant arts institution in France. Before the rise of private art dealers, exhibiting at the Salon was the best way for artists to gain recognition and make sales. Both the public&mdash;around 300,000 people annually&mdash;and the critics flocked to the Salons. For the artists, who competed furiously for the right to exhibit, success at the Salon could lead to fame, wealth, social standing, and influence. Buyers liked pictures presenting pretty nudes, sentimental stories, religious subjects, heroic deeds, patriotic scenes, and touching tales.</p>
-        <!-- deep dive here -->
-        <p>As a result of industrial expansion, a newly prosperous middle class was replacing the state, the church, and the nobility as primary sources of income for artists. The middle class relied heavily on reviews they read in the press, and they wanted to purchase works that had an official stamp of approval.  This increased the importance for artists to have their work be shown and well reviewed in the Salons. </p>
-        <!-- two column section with image and photo -->
-        <!-- image: William-Adolphe Bouguereau, The Broken Pitcher, 1891 -->
-        <h2>William-Adolphe Bouguereau, The Broken Pitcher, 1891</h2>
-        <p>This work by William-Adolphe Bouguereau in the Legion of Honor&rsquo;s collection exemplifies the style of painting championed by the Salon. Careful to hide all traces of brushwork, Bouguereau painted a convincing illusion of space. Behind the girl&rsquo;s shoulder, farmland stretches as far as the eye can see. Bouguereau created a realistic sense of depth within this theatrical and moralizing scene; Salon audiences would have understood that the broken pitcher represents the girl&rsquo;s lost virtue. </p>
+    <div class="l-1up">
+      <h3>Salon Engraving from 1865</h3>
+      <p><span class="dropcap">T</span>he Salon was the official, juried art exhibition of the Académie des Beaux-Arts in Paris, the dominant arts institution in France. Before the rise of private art dealers, exhibiting at the Salon was the best way for artists to gain recognition and make sales. Both the public&mdash;around 300,000 people annually&mdash;and the critics flocked to the Salons. For the artists, who competed furiously for the right to exhibit, success at the Salon could lead to fame, wealth, social standing, and influence. Buyers liked pictures presenting pretty nudes, sentimental stories, religious subjects, heroic deeds, patriotic scenes, and touching tales.</p>
+    </div>
+  </div>
+  <div class="deep-dive">
+    <div class="deep-dive--wrapper expander__is-closed">
+      <div class="container rectangles-bg">
+        <div class="l-1up">
+          <p class="lede"><span class="dropcap">A</span>s a result of industrial expansion, a newly prosperous middle class was replacing the state, the church, and the nobility as primary sources of income for artists. The middle class relied heavily on reviews they read in the press, and they wanted to purchase works that had an official stamp of approval.  This increased the importance for artists to have their work be shown and well reviewed in the Salons. </p>
+        </div>
       </div>
     </div>
-    <!-- begin image comparison -->
+    <!-- based on read more cta -->
     <div class="container">
+      <button class="button-with-icon icon--read-more">
+        <i class="icon-arrow--down">
+          <span class="icon--large-responsive">{% include('svg/famsf-arrow-down-lg.html') %}</span>
+          <span class="icon--med-responsive">{% include('svg/famsf-arrow-down-md.html') %}</span>
+        </i>
+        <i class="icon-arrow--up" style="display:none;">
+          <span class="icon--large-responsive">{% include('svg/famsf-arrow-up-lg.html') %}</span>
+          <span class="icon--med-responsive">{% include('svg/famsf-arrow-up-md.html') %}</span>
+        </i>
+        <div>Click to Read More</div>
+      </button>
+    </div>
+  </div>
+  <div class="container">
+    <div class="l-2up">
+      <!-- two column section with image and photo -->
+      <!-- image: William-Adolphe Bouguereau, The Broken Pitcher, 1891 -->
+      <figure>
+        <div class="figure--wrapper">
+          <img src="{{ site.url }}/assets/imgs/art/30_Bouguereau_Broken-Pitcher.jpg" alt="painting of trees" />
+          <figcaption><span class="title-of-art">The Pave de Chailly in the Forest Fontainebleau (cat 7)</span> 1865 | Monet | oil on canvas | Ordrupgaard Museum</figcaption>
+            {% include('caption-info--cta.html') %}
+        </div>
+      </figure>
+    </div>
+    <div class="l-2up">
+      <h2>William-Adolphe Bouguereau, The Broken Pitcher, 1891</h2>
+      <p>This work by William-Adolphe Bouguereau in the Legion of Honor&rsquo;s collection exemplifies the style of painting championed by the Salon. Careful to hide all traces of brushwork, Bouguereau painted a convincing illusion of space. Behind the girl&rsquo;s shoulder, farmland stretches as far as the eye can see. Bouguereau created a realistic sense of depth within this theatrical and moralizing scene; Salon audiences would have understood that the broken pitcher represents the girl&rsquo;s lost virtue. </p>
+    </div>
+  </div>
+  <!-- begin image comparison -->
+  <div class="container">
       <div class="l-1up">
         <h2>Monet&rsquo;s Experience with the Salon</h2>
         <p>Painting was a career, and as in any other, Monet had to figure out the rules to succeed. He knew that acceptance to the Salon was the most assured road to success. Monet actively solicited advice from fellow painters on how to make his paintings acceptable, yet it was difficult to know what would please the Salon jurors.</p>
@@ -125,9 +169,11 @@
         <h2>Example Two: Comparing Figurative Works</h2>
       </div>
     </div>
+    <div class="container comparison">
     <div class="comparison--2up comparison--group">
       <figure>
         <div class="figure--wrapper">
+        <img src="../assets/imgs/art/Camille_green_dress.jpg" alt="" />
         <!-- image: Camille (The Woman with a Green Dress) -->
         <button class="comparison--button">
           <i class="icon-arrow--down">{% include('svg/famsf-carrot-down-sm.html') %}</i>
@@ -137,13 +183,14 @@
         </div>
       </figure>
       <div class="comparison--answer comparison--answer__is-closed">
+        <h3>Accepted!</h3>
         <p>Camille (The Woman with a Green Dress), 1866 (accepted Salon 1866). This painting was not only accepted to the Salon of 1866, it was well received. This success reassured Monet&rsquo;s family, and his aunt agreed to lend him financial support.</p>
       </div>
     </div>
     <div class="comparison--2up comparison--group">
       <figure>
         <div class="figure--wrapper">
-          <!-- image: The Luncheon -->
+          <img src="../assets/imgs/art/14_Monet_luncheon_Art-Resource.jpg" alt="" />
           <button class="comparison--button">
             <i class="icon-arrow--down">{% include('svg/famsf-carrot-down-sm.html') %}</i>
             <i class="icon-arrow--up" style="display:none;">{% include('svg/famsf-carrot-up-sm.html') %}</i>
@@ -152,6 +199,7 @@
         </div>
       </figure>
       <div class="comparison--answer comparison--answer__is-closed">
+        <h3>Rejected!</h3>
         <p>The Luncheon, 1868 (rejected Salon 1870). This scene of Monet&rsquo;s young family was rejected by the Salon of 1870. Monet could afford to rent the cozy house depicted here because he had recently been commissioned to paint portraits of a businessman&rsquo;s family.</p>
       </div>
     </div>
@@ -177,21 +225,34 @@
       <div class="l-1up">
 
         <h3>The Pavé de Chailly in the Forest of Fontainebleau, 1865</h3>
-        <p>In 1863, the 23-year-old Monet traveled to the majestic forest of Fontainebleau. What was once the private reserve of the kings had become a tourist destination a short railway trip from Paris. He returned the following year and wrote, &ldquo;The forest is delicious; I should have been here long ago. . . . Everything is superb here.&rdquo; In Fontainebleau, Monet endeavored to paint entirely out of doors to capture nature directly. This was facilitated by the recent innovation of paint in tubes and portable easels. During this time, Monet also began his practice of returning to a site again and again to experiment with many different ways of registering light under various atmospheric conditions.
+        <p><span class="dropcap">I</span>n 1863, the 23-year-old Monet traveled to the majestic forest of Fontainebleau. What was once the private reserve of the kings had become a tourist destination a short railway trip from Paris. He returned the following year and wrote, &ldquo;The forest is delicious; I should have been here long ago. . . . Everything is superb here.&rdquo; In Fontainebleau, Monet endeavored to paint entirely out of doors to capture nature directly. This was facilitated by the recent innovation of paint in tubes and portable easels. During this time, Monet also began his practice of returning to a site again and again to experiment with many different ways of registering light under various atmospheric conditions.
         </p>
       </div>
     </div>
-    <div class="container">
-      <div class="l-1up">
+
       <!-- deep dive begin -->
-      <!-- image: Jean-Baptiste-Camille Corot, Banks of the Somme at Picquigny -->
-      <!-- do weneed a header with painting name: <h3>Jean-Baptiste-Camille Corot, Banks of the Somme at Picquigny, ca. 1865–1870</h3> -->
+      <!-- do we need a header with painting name: <h3>Jean-Baptiste-Camille Corot, Banks of the Somme at Picquigny, ca. 1865–1870</h3> -->
       {% include('read-more--deep-dive.html') %}
       <!-- end deep dive -->
       <!-- or should all 3 paintings be in deep dive? -->
       <!-- image: Gustave Le Gray, The Pavé de Chailly -->
-      <h3>Gustave Le Gray, The Pavé de Chailly, 1852</h3>
-      <p>In Fontainebleau, painters and photographers often worked side by side. The relatively new art form of photography freed artists like Monet from the responsibility of making pure visual records and allowed them to move in the direction of capturing immediate sensations and experimenting with form and color. This artistic tendency would eventually lead to modern art styles that dispensed altogether with recreating the physical world.</p>
+    <div class="container">
+      <div class="l-66-33--1">
+      <figure>
+        <div class="figure--wrapper">
+          <img src="{{ site.url }}/assets/imgs/art/6_Le-Gray_Chailly_BNF.jpg" alt="painting of trees" />
+          <figcaption><span class="title-of-art">The Pave de Chailly in the Forest Fontainebleau (cat 7)</span> 1865 | Monet | oil on canvas | Ordrupgaard Museum</figcaption>
+          {% include('caption-info--cta.html') %}
+        </div>
+      </figure>
+      </div>
+      <div class="l-66-33--2">
+        <h3>Gustave Le Gray, The Pavé de Chailly, 1852</h3>
+        <p>In Fontainebleau, painters and photographers often worked side by side. The relatively new art form of photography freed artists like Monet from the responsibility of making pure visual records and allowed them to move in the direction of capturing immediate sensations and experimenting with form and color. This artistic tendency would eventually lead to modern art styles that dispensed altogether with recreating the physical world.</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="l-1up">
       <!-- image: An Oak at Bas-Bréau (The Bodmer) -->
       <h3>An Oak at Bas-Bréau (The Bodmer), 1865</h3>
       <p>Since Fontainebleau was originally a royal preserve, its trees were able to reach majestic heights seldom seen in other landscapes. One such tree that Monet painted several times was this massive oak.</p>
@@ -218,12 +279,33 @@
       <div class="l-1up">
 
         <h3>Luncheon on the Grass, 1865–1866</h3>
-        <p>In 1865, Monet began an ambitious painting to be submitted to the Salon. Monet knew that scale was important to attract attention at the Salon, and this canvas was more than 13 x 10 feet. Although the work was too large to paint out of doors, he painted many preparatory sketches outside in nature, creating a bravado demonstration of his landscape achievements from Fontainebleau. He populated the picnic scene with life-size figures in modern dress; his friends, acquaintances, and future wife Camille Doncieux posed. Monet wrote that year, &ldquo;I can think of nothing but my painting, and if I had to leave it, I think I would go mad.&rdquo; Unfortunately, Monet was too ambitious, and he was unable to complete the canvas in time to submit for the Salon. Economics, always an issue during Monet&rsquo;s early years, played a role: needing to pay his rent, Monet gave the canvas to his landlord as security. The landlord kept the painting in a damp basement, where parts of the canvas mildewed. When Monet retrieved the painting in 1884, he had to cut away the destroyed parts. These two fragments remain. </p>
-
+        <p><span class="dropcap">I</span>n 1865, Monet began an ambitious painting to be submitted to the Salon. Monet knew that scale was important to attract attention at the Salon, and this canvas was more than 13 x 10 feet. Although the work was too large to paint out of doors, he painted many preparatory sketches outside in nature, creating a bravado demonstration of his landscape achievements from Fontainebleau. He populated the picnic scene with life-size figures in modern dress; his friends, acquaintances, and future wife Camille Doncieux posed. Monet wrote that year, &ldquo;I can think of nothing but my painting, and if I had to leave it, I think I would go mad.&rdquo; Unfortunately, Monet was too ambitious, and he was unable to complete the canvas in time to submit for the Salon. Economics, always an issue during Monet&rsquo;s early years, played a role: needing to pay his rent, Monet gave the canvas to his landlord as security. The landlord kept the painting in a damp basement, where parts of the canvas mildewed. When Monet retrieved the painting in 1884, he had to cut away the destroyed parts. These two fragments remain. </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="l-1up">
+      <figure>
+        <div class="figure--wrapper">
+          <img src="{{ site.url }}/assets/imgs/art/4_Watteau_Hunt_Bridgeman.jpg" alt="" />
+          <figcaption><span class="title-of-art">The Pave de Chailly in the Forest Fontainebleau (cat 7)</span> 1865 | Monet | oil on canvas | Ordrupgaard Museum</figcaption>
+          {% include('caption-info--cta.html') %}
+        </div>
+      </figure>
         <!-- two col section with photo on one side and text on other -->
         <!-- image: Antoine Watteau, The Halt During the Chase -->
         <h3>Antoine Watteau, The Halt During the Chase, 1718–1720</h3>
         <p>Monet was inspired not only by the Barbizon school, but also by French art of the previous century, which he cleverly referenced in his work. By proving to Salon jurors and fellow artists his deep working knowledge of art historical precedents, he hoped to elevate his profile as an artist. He admired the 18th-century paintings of Antoine Watteau, who was well known for his scenes of elegantly dressed people playing music, flirting, or picnicking in idyllic outdoor settings. Monet restaged this elite activity with contemporary middle-class tourists from the city.</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="l-1up">
+      <figure>
+        <div class="figure--wrapper">
+          <img src="{{ site.url }}/assets/imgs/art/3_Manet_luncheon_Art-Resource.jpg" alt="" />
+          <figcaption><span class="title-of-art">The Pave de Chailly in the Forest Fontainebleau (cat 7)</span> 1865 | Monet | oil on canvas | Ordrupgaard Museum</figcaption>
+          {% include('caption-info--cta.html') %}
+        </div>
+      </figure>
         <!-- two col section with photo on one side and text on other -->
         <!-- image: Édouard Manet, Luncheon on the Grass -->
         <h3>Édouard Manet, Luncheon on the Grass, 1863</h3>
@@ -235,32 +317,68 @@
   </section>
   <section class="section pp-scrollable" id="paris-modernity-and-leisure">
     <div class="section-hero">
+    <!-- image for section header: Le Pont-Neuf and Île de la Cité -->
       <h2>Paris: Modernity and Leisure</h2>
     </div>
     <div class="container">
       <div class="l-1up">
         <h3>Charles-Henri Plaut, Le Pont-Neuf and Île de la Cité, 1865–1870</h3>
-        <p>Between 1853 and 1870, Paris was in the midst of a vast urban redesign, commissioned by Napoleon III and executed by Baron Haussmann, that included the demolition of overcrowded neighborhoods dating to medieval times. The construction of wide avenues, parks and squares, and new apartment buildings transformed Paris into a modern city.</p>
-
+        <p><span class="dropcap">B</span>etween 1853 and 1870, Paris was in the midst of a vast urban redesign, commissioned by Napoleon III and executed by Baron Haussmann, that included the demolition of overcrowded neighborhoods dating to medieval times. The construction of wide avenues, parks and squares, and new apartment buildings transformed Paris into a modern city.</p>
+        <figure>
+          <div class="figure--wrapper">
+            <img src="{{ site.url }}/assets/imgs/art/19_Quai_Art-Resource.jpg" alt="" />
+            <figcaption><span class="title-of-art">The Pave de Chailly in the Forest Fontainebleau (cat 7)</span> 1865 | Monet | oil on canvas | Ordrupgaard Museum</figcaption>
+            {% include('caption-info--cta.html') %}
+          </div>
+        </figure>
         <h3>Quai de Louvre, 1867</h3>
         <p>Monet was fascinated by the manifestations of modern urban life on view throughout Paris. He requested, from the French superintendent of the arts, special access to an exterior colonnade of the museum building to paint views of the center of Paris. There the young artist quite literally turned his back to the great repository of art on display in the Louvre. His vantage point provided a platform from which to paint the present and move art toward modernity. Monet visited the Louvre to see the collection of masterworks hanging in the galleries, but unlike other artists in his circle, he did not paint or draw from them.</p>
-
-        <h3>La Grenouillère, 1869</h3>
-        <p>Seeking refuge from the intensity of city living, the new middle class traveled to leisure locations easily accessible by train. One such popular destination was a bathing spot on the banks of the Seine, called La Grenouillère (literally &ldquo;frog pond&rdquo;).</p>
       </div>
     </div>
     <div class="container">
       <div class="l-1up">
+        <h3>La Grenouillère, 1869</h3>
+        <p>Seeking refuge from the intensity of city living, the new middle class traveled to leisure locations easily accessible by train. One such popular destination was a bathing spot on the banks of the Seine, called La Grenouillère (literally &ldquo;frog pond&rdquo;).</p>
         <h3>Looking Closer</h3>
+      </div>
+    </div>
+    <div class="container">
+      <div class="l-66-33--1">
         <!-- zoom component here -->
         <!-- image: La Grenouillère -->
         <!-- split the following text with croppings of the painting La Grenouillère -->
-        <p>Monet became interested in conveying the immediate sensation of being in the places he painted. In La Grenouillère, the artist carefully captured through color and brushstrokes the effects of light, rendering a composition infused with a sense of pleasure. Viewers can witness multiple activities enjoyed by the figures: sitting leisurely at the café, conversing under the central tree, partaking in a swim, and preparing for a boat ride out on the sun-drenched water. Yet for some observers, the true subject of this painting is the water itself. While the activity of the figures is evoked through quick, energetic dashes of the brush, Monet lavished attention on the water, its multiple colors, its reflections, and its depths. </p>
-        <!-- audio component. sound needed -->
-        <p>Audio: Kimball Art Museum Curator, George Shackelford</p>
+        <figure>
+          <div class="figure--wrapper">
+            <img src="{{ site.url }}/assets/imgs/art/23_Grenouillere_MET-download.jpg" alt="" />
+            <figcaption><span class="title-of-art">The Pave de Chailly in the Forest Fontainebleau (cat 7)</span> 1865 | Monet | oil on canvas | Ordrupgaard Museum</figcaption>
+            {% include('caption-info--cta.html') %}
+          </div>
+        </figure>
+        <div class="audio__wrapper">
+          <audio class="audio__source">
+            <source src="{{ site.url }}/assets/audio/placeholder--horse.mp3" type="audio/mpeg">
+            <source src="{{ site.url }}/assets/audio/placeholder--horse.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+          </audio>
+
+          <button class="audio__button button-with-icon">
+            <i class="icon--play icon--small">
+              {% include('svg/famsf-play-sm.html') %}
+            </i>
+            <i class="icon--pause icon--small" style="display:none;">
+              {% include('svg/famsf-pause-sm.html') %}
+            </i>
+            <div>listen to Kimball Art Museum Curator, George Shackelford</div>
+          </button>
+        </div>
         <blockquote>
         I think it's one of the most important passages of paint that Monet ever laid down.
         </blockquote>
+        </div>
+        <div class="l-66-33--2">
+        <h2 style="color:#ff0000;">Zoom or overlay here?</h2>
+        <p>Monet became interested in conveying the immediate sensation of being in the places he painted. In La Grenouillère, the artist carefully captured through color and brushstrokes the effects of light, rendering a composition infused with a sense of pleasure. Viewers can witness multiple activities enjoyed by the figures: sitting leisurely at the café, conversing under the central tree, partaking in a swim, and preparing for a boat ride out on the sun-drenched water. Yet for some observers, the true subject of this painting is the water itself. While the activity of the figures is evoked through quick, energetic dashes of the brush, Monet lavished attention on the water, its multiple colors, its reflections, and its depths. </p>
+
       </div>
     </div>
     {% include('share.html') %}
@@ -284,7 +402,7 @@
       <!-- use either zoom or overlay on The Porte d'Amont, Étretat -->
       <!-- image: The Porte d'Amont -->
       <h3>The Porte d'Amont, Étretat, 1868–1869</h3>
-      <p>In 1868, Monet and his family moved to the small fishing village of Étretat, on the Normandy coast. There he focused on painting the unique rock formations, where the tide and wind had created fantastic arches such as the one seen here. Monet returned time and again throughout his lifetime to paint these magnificent geological features. </p>
+      <p><span class="dropcap">I</span>n 1868, Monet and his family moved to the small fishing village of Étretat, on the Normandy coast. There he focused on painting the unique rock formations, where the tide and wind had created fantastic arches such as the one seen here. Monet returned time and again throughout his lifetime to paint these magnificent geological features. </p>
 
 
       <h2>Looking Closely</h2>
@@ -303,12 +421,12 @@
   </section>
   <section class="section pp-scrollable" id="camille-monet-the-known-and-the-unknown">
     <div class="section-hero">
-      <!-- images for section: Woman in a Green Dress -->
+      <!-- images for section: Woman in a Green Dress or photo of Camille -->
       <h2>Camille Monet: The Known and the Unknown</h2>
     </div>
     <div class="container">
       <div class="l-1up">
-        <p>The single most painted individual in this exhibition is Camille Monet, née Doncieux. Camille met Monet in 1865 when she was 18 and working as a studio model. He was 25. Some art historians credit Monet&rsquo;s success in wooing the beautiful Camille with giving him the confidence to attempt the ambitious Luncheon on the Grass. When he was unable to finish that painting in time for the Salon, Camille posed for the painting Camille (Woman in a Green Dress), which proved a success. Camille herself may have actively participated in the creation of this work by providing Monet with fashion prints and possible suggestions for the pose. </p>
+        <p><span class="dropcap">T</span>he single most painted individual in this exhibition is Camille Monet, née Doncieux. Camille met Monet in 1865 when she was 18 and working as a studio model. He was 25. Some art historians credit Monet&rsquo;s success in wooing the beautiful Camille with giving him the confidence to attempt the ambitious Luncheon on the Grass. When he was unable to finish that painting in time for the Salon, Camille posed for the painting Camille (Woman in a Green Dress), which proved a success. Camille herself may have actively participated in the creation of this work by providing Monet with fashion prints and possible suggestions for the pose. </p>
 
         <p>Camille personally endured considerable hardship during the early years of their relationship. By 1867 she was pregnant, unmarried, and living alone in Paris in a one-room apartment paid for by Monet. Even after she married Monet, the family  endured eviction and constant hounding by creditors. Camille&rsquo;s motivations, experiences, and opinions as they relate to the artist remain mysterious and inaccessible, principally because Monet&rsquo;s second wife demanded that he destroy Camille&rsquo;s personal effects after his first wife&rsquo;s death, although the artist did keep with him all of his life the center panel of Luncheon on the Grass, depicting Camille. </p>
       </div>
@@ -322,7 +440,7 @@
     <div class="container">
       <div class="l-1up">
         <h3>Hyde Park, 1871</h3>
-        <p>In 1870 France declared war on the German kingdom of Prussia, and the French forces were defeated. Emperor Napoleon III was captured and Paris was occupied by German troops. In October of that year the Monets left France and settled in London. There, Monet met the Parisian art dealer Paul Durand-Ruel who helped to have Monet&rsquo;s work shown and sold in London, providing the artist with some economic relief. While in London, Monet painted the chilly, humid winter weather. </p>
+        <p><span class="dropcap">I</span>n 1870 France declared war on the German kingdom of Prussia, and the French forces were defeated. Emperor Napoleon III was captured and Paris was occupied by German troops. In October of that year the Monets left France and settled in London. There, Monet met the Parisian art dealer Paul Durand-Ruel who helped to have Monet&rsquo;s work shown and sold in London, providing the artist with some economic relief. While in London, Monet painted the chilly, humid winter weather. </p>
         <!-- audio component -->
         <p>Audio: Fine Arts Museums of San Francisco Curator, Esther Bell</p>
         <blockquote>The people are dressed in dark colors, trying to protect themselves from that damp, cold weather. The gloom and anxiety of being in exile is very much present in this painting.</blockquote>
@@ -348,7 +466,7 @@
         <!-- image comparison of the magpie and Bnak of the Seine -->
         <h3>The Magpie, 1869</h3>
         <h3>On the Bank of the Seine, Bennecourt, 1868</h3>
-        <p>Comparing and contrasting these two works reveals Monet&rsquo;s nuanced mastery of color. While at first glance, The Magpie reads as a study in white, upon closer examination one discovers a careful orchestration of pink and blue undertones. This variation in tonal quality adds a sense of warmth to the composition while simultaneously creating depth through deep shadows. </p>
+        <p><span class="dropcap">C</span>omparing and contrasting these two works reveals Monet&rsquo;s nuanced mastery of color. While at first glance, The Magpie reads as a study in white, upon closer examination one discovers a careful orchestration of pink and blue undertones. This variation in tonal quality adds a sense of warmth to the composition while simultaneously creating depth through deep shadows. </p>
 
         <p>Where The Magpie is a study in nuance, On the Bank of the Seine, Bennecourt reveals Monet&rsquo;s working process and his willingness to let the viewer&rsquo;s eye do the work. Monet has divided the composition diagonally in half. The deep greens of the foreground add a sense of weight to the riverbank that contrasts with the pastels of the sun-drenched background. Yet within this composition, there are areas where the artist applies paint in startling ways. For example, the bright green patch in the foreground reads purely as a brushstroke and contrasts directly with the darker greens, which are applied in an even pattern that evokes blades of grass. The slight tonal variation between the flesh tone of the figure&rsquo;s face and the putty reflection of a roof of a building across the bank is another point where the viewer&rsquo;s eye works, filling in the distance needed to make this transition read as face and roof opposed to the juxtaposition of two squares of color.</p>
       </div>
@@ -368,7 +486,7 @@
     </div>
     <div class="container">
       <div class="l-1up">
-        <p>Monet: The Early Years reveals both the struggles and successes of the artist&rsquo;s early career. Throughout this period one thing remained a constant&mdash;Monet&rsquo;s avid preference for working directly from nature. Taking advantage of the stunning trails that meander through Lands End, the area surrounding the Legion of Honor, provides an immediate opportunity to gain insights into the artist&rsquo;s experience and process.</p>
+        <p><span class="dropcap">M</span>onet: The Early Years reveals both the struggles and successes of the artist&rsquo;s early career. Throughout this period one thing remained a constant&mdash;Monet&rsquo;s avid preference for working directly from nature. Taking advantage of the stunning trails that meander through Lands End, the area surrounding the Legion of Honor, provides an immediate opportunity to gain insights into the artist&rsquo;s experience and process.</p>
 
         <p>Maintained by the National Park Service with assistance from the Golden Gate National Parks Conservancy, Lands End boasts recently updated trails that offer easy to moderate walks that range in duration from 25 minutes to 1.5 hours. While enjoying the trails, consider the following, using either a sketchbook or camera-phone to capture your surroundings:</p>
 
