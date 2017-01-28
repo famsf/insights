@@ -5,9 +5,9 @@
 
 {% block component %}
   <figure class="figure__zoomable" >
-    <div class="figure--wrapper figure__zoomable-child" style="background-image: url('../assets/imgs/art/bodmer_fullsize.jpg');">
+    <div class="figure--wrapper figure__zoomable-child" style="background-image: url('{{ site.url }}/assets/imgs/art/bodmer_fullsize.jpg');">
     </div>
-    <img style="visibility: hidden;" src="../assets/imgs/art/bodmer_fullsize.jpg" alt="bodmer" />
+    <img style="visibility: hidden;" src="{{ site.url }}/assets/imgs/art/bodmer_fullsize.jpg" alt="bodmer" />
 
     <div class="zoom-group">
       <div class="zoom-marker-outer" style="position: absolute; left:65%; top: 60%;">
