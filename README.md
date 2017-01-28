@@ -20,7 +20,7 @@ If you have been running a previous version of Vagrant you may need to do: `vagr
 1. Access VM via SSH and install Butler for the styleguide and compile sass:
 ```
     vagrant ssh
-    cd /var/www/drupal-skeleton.local/styleguide
+    cd /var/www/famsf-digital-stories.local/styleguide
     composer install
     npm install
     npm run butler -- sass
