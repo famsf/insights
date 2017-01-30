@@ -23,7 +23,6 @@ If you have been running a previous version of Vagrant you may need to do: `vagr
     cd /var/www/famsf-digital-stories.local/styleguide
     composer install
     npm install
-    npm run butler -- sass
 
 ```
 
