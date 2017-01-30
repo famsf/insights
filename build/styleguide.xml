@@ -3,7 +3,9 @@
       Include this file in your build.xml with:
         <import file="build/styleguide.xml" />
       -->
-
+    <target name="starwood-generate-css">
+        <exec command="npm run butler --sass" dir="styleguide" logouput="true" failonerror="true" />
+    </target>
 
     <!--
         Target: styleguide-link-css

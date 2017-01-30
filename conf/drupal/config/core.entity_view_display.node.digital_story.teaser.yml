@@ -1,0 +1,21 @@
+uuid: 63091f27-58fe-49f4-b985-eef534ef250a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.digital_story
+  module:
+    - user
+id: node.digital_story.teaser
+targetEntityType: node
+bundle: digital_story
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  field_header_section: true
+  field_main_navigation: true
+  field_section: true
+  field_skin: true

@@ -1,0 +1,30 @@
+uuid: 329d2a8b-7114-46a2-a846-d5ca9b3dcf49
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_skin
+field_name: field_skin
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: legion
+      label: Legion
+    -
+      value: 'de young'
+      label: 'De Young'
+    -
+      value: other
+      label: Other
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
