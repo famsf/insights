@@ -2,6 +2,6 @@ global-styling:
   version: 1.x
   css:
     theme:
-      css/styles.css: {}
+      css/themes/legion/legion-dark.css: {}
   dependencies:
     - core/jquery

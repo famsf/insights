@@ -1,0 +1,45 @@
+uuid: d1ec878b-a6c7-4713-ba26-24ed24ee0cf5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_right_column
+    - paragraphs.paragraphs_type.2up_section
+    - paragraphs.paragraphs_type.text_area
+  module:
+    - entity_reference_revisions
+id: paragraph.2up_section.field_right_column
+field_name: field_right_column
+entity_type: paragraph
+bundle: 2up_section
+label: 'right column'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      text_area: text_area
+    target_bundles_drag_drop:
+      1up_section:
+        weight: 6
+        enabled: false
+      2up_section:
+        weight: 7
+        enabled: false
+      3up_section:
+        weight: 8
+        enabled: false
+      call_to_action_section:
+        weight: 9
+        enabled: false
+      section_divider:
+        weight: 10
+        enabled: false
+      text_area:
+        enabled: true
+        weight: 12
+field_type: entity_reference_revisions

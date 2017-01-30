@@ -1,0 +1,6 @@
+uuid: 7e122995-ca2e-429d-a8ef-1a5c0eae29a4
+langcode: en
+status: true
+dependencies: {  }
+id: card_section
+label: 'Card Section'
