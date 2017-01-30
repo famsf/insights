@@ -1,0 +1,12 @@
+{#
+  name: Figure Info button
+  usage: This button hides/reveals extra info about a work of art.
+#}
+
+{% if page.title == "Dark Image overlay" or "Light Image overlay" %}
+<button class="figure--info-reveal overlay-button"><span class="icon--small">{% include('svg/famsf-eye-sm.html') %}</span></button>
+
+{% else %}
+<button class="figure--info-reveal"><span class="icon--small">{% include('svg/famsf-eye-sm.html') %}</span></button>
+
+{% endif %}
