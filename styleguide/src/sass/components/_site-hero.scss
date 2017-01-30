@@ -7,7 +7,7 @@
 
 .site-hero {
   @extend %hero;
-  height: 90vh;
+  height: 100vh;
 
   &.has-video {
     position: absolute;

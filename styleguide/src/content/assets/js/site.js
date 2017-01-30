@@ -14,7 +14,7 @@
   Drupal.behaviors.site = {
     attach: function (context, settings) {
       // Start the slider
-      $('.bxslider').bxSlider({
+      $('.wordslider').bxSlider({
         mode: 'fade',
         pager: false,
         auto: true,
@@ -27,7 +27,7 @@
         direction: 'vertical',
         verticalCentered: false,
         sectionsColor: [],
-        anchors: ['intro', 'section4-light', 'section4-dark', 'section-with-video', 'image-and-caption', 'lastPage'],
+        anchors: ['title', 'introduction', 'contending-with-convention', 'see-the-forest-through-the-trees', 'ambition-and-risk', 'paris-modernity-and-leisure', 'monet-and-the-sea', 'camille-monet-the-known-and-the-unknown', 'political-unrest', 'training-your-eye-color', 'training-your-eye-composition', 'observing-nature', 'lastPage'],
         scrollingSpeed: 700,
         easing: 'swing',
         loopBottom: false,

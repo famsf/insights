@@ -19,7 +19,8 @@
       var modalOverlay = $('.zoom-overlay-background');
 
       // Listener for click on any zoom marker.
-      zoomMarker.click(function(){
+      zoomMarker.click(function(event){
+        event.preventDefault();
         // The marker the user has clicked.
         var marker = $(this);
         // Get the outside wrapper for the marker so we can get its position.
@@ -82,7 +83,8 @@
       });
 
       // Listener for a click on any zoom close button.
-      zoomClose.click(function(){
+      zoomClose.click(function(event){
+        event.preventDefault();
         var closeButton = $(this);
         var zoomedImage =$('.figure__zoomable-child.zoomed');
         // Hide the close button.
