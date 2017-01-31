@@ -14,25 +14,25 @@
   Drupal.behaviors.image_compare = {
     attach: function(context, settings) {
       // Close all expander elenments that need to be closed initially.
-      $('.comparison--answer__is-closed').hide(0);
+      $('.js-comparison__answer--is-closed').hide(0);
       // Function for expander component to expand and collapse.
-      $('.comparison--button').click(function(){
+      $('.js-comparison__button').click(function(){
 
         var buttonClicked = $(this);
 
         // Define the target expandable div.
-        var changeThisPanel = $(this).parents('.comparison--group').find('.comparison--answer');
+        var changeThisPanel = $(this).parents('.js-comparison__group').find('.js-comparison__answer');
 
         // Toggle the button and panel states.
-        if (changeThisPanel.hasClass("comparison--answer__is-closed")) {
-          buttonClicked.find('.icon-arrow--up').show(0);
-          buttonClicked.find('.icon-arrow--down').hide(0);
-          changeThisPanel.removeClass("comparison--answer__is-closed").addClass("comparison--answer__is-open").slideDown(300);
+        if (changeThisPanel.hasClass("js-comparison__answer--is-closed")) {
+          buttonClicked.find('.js-icon-arrow--up').show(0);
+          buttonClicked.find('.js-icon-arrow--down').hide(0);
+          changeThisPanel.removeClass("js-comparison__answer--is-closed").addClass("js-comparison__answer--is-open").slideDown(300);
         }
-        else if (changeThisPanel.hasClass("comparison--answer__is-open")) {
-          buttonClicked.find('.icon-arrow--down').show(0);
-          buttonClicked.find('.icon-arrow--up').hide(0);
-          changeThisPanel.removeClass("comparison--answer__is-open").addClass("comparison--answer__is-closed").slideUp(300);
+        else if (changeThisPanel.hasClass("js-comparison__answer--is-open")) {
+          buttonClicked.find('.js-icon-arrow--down').show(0);
+          buttonClicked.find('.js-icon-arrow--up').hide(0);
+          changeThisPanel.removeClass("js-comparison__answer--is-open").addClass("js-comparison__answer--is-closed").slideUp(300);
         }
       });
     }
