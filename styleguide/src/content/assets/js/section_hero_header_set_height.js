@@ -13,6 +13,13 @@
 
   Drupal.behaviors.section_hero_header_set_height = {
     attach: function(context, settings) {
+      // Debounce function to keep  resize events from firing to frequently.
+      function debounce(method, delay) {
+          clearTimeout(method._tId);
+          method._tId= setTimeout(function(){
+              method();
+          }, delay);
+      }
       // Helper function to get the default rem size.
       var rem = function rem() {
         var html = $('html');
@@ -35,9 +42,17 @@
       var sectionHeroes = $('.section-hero');
       var siteHeroes = $('.site-hero');
 
+      // Function for setting all headers on load and resize.
+      var setAllHeroHeaderHeights = function() {
+        setHeights(siteHeroes);
+        setHeights(sectionHeroes);
+      };
+
       // Get and set all site hero and section hero headers.
-      setHeights(sectionHeroes);
-      setHeights(siteHeroes);
+      $(window).on("load resize",function(e){
+        debounce(setAllHeroHeaderHeights, 20);
+      });
+
     }
   };
 })(jQuery, Drupal);
