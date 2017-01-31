@@ -19,7 +19,7 @@
   @extend %hero__content;
 
   h1 {
-    @include leader(0);
+    @include leader(.5, $h1-font-size);
     text-transform: uppercase;
     font-weight: 700;
     text-shadow: 3px 3px transparentize($text-shadow-color, .2);
@@ -27,6 +27,13 @@
 
   h2 {
     @include trailer(0);
+  }
+
+  .site-hero__logo {
+    @include adjust-font-size-to($h3-font-size, 1.25);
+    @include trailer(.5, $h3-font-size);
+    font-weight: 700;
+    letter-spacing: -.01em;
   }
 }
 
