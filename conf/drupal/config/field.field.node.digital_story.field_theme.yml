@@ -1,19 +1,19 @@
-uuid: cb907ffe-5e5e-4c0f-b899-aa4ea4f0a813
+uuid: d7a14d17-412c-4530-92d3-15b08996506b
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_skin
+    - field.storage.node.field_theme
     - node.type.digital_story
   module:
     - options
-id: node.digital_story.field_skin
-field_name: field_skin
+id: node.digital_story.field_theme
+field_name: field_theme
 entity_type: node
 bundle: digital_story
-label: Skin
-description: 'Choose a skin for the general look & feel of the site.'
-required: true
+label: Theme
+description: 'Change the look & feel of the digital story'
+required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
