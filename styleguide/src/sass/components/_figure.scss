@@ -23,60 +23,27 @@ figure {
   }
 }
 
-.figure--wrapper {
+.figure__wrapper {
   position: relative;
   overflow: hidden;
 }
 
-.figure--info-reveal {
-  @extend %icon;
-  @extend %custom-focus;
-  display: flex;
-  display: -webkit-flex;
+.figure__overlay {
   position: absolute;
-  bottom: 0;
-  left: 0;
   z-index: 2;
-  background-color: transparentize($background-d, .2);
-  width: 2.5rem;
-  height: 2.2rem;
-  border: 0;
-
-  .icon--small {
-    margin: 0 auto;
-    justify-content: center;
-    -webkit-justify-content: center;
-    align-items: center;
-    -webkit-align-items: center;
-  }
-
-  &:active,
-  &:hover {
-    background-color: $background-d;
-  }
-}
-
-.figure--info {
-  position: absolute;
   bottom: -100%; // Hide info until it is ready to reveal.
-  left: 2.2rem;
-  z-index: 2;
-  background-color: transparentize($black, .2);
-  padding: .5rem 2.9rem .5rem .7rem;
-  min-height: 2.2rem;
-  margin: 0;
-  color: $white;
-  font-size: .7rem;
-  line-height: 1.1rem;
-  width: 100%;
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease;
 
-  &.revealed {
+  &.js-overlay-image--revealed {
     bottom: 0;
   }
+}
+
+.figure__overlay-cta {
+  margin-top: .5em;
 }
 
 figcaption {

@@ -13,15 +13,10 @@
 
   Drupal.behaviors.image_overlay = {
     attach: function(context, settings) {
-      $('.overlay-button').click(function(){
+      $('.js-overlay-button').click(function(){
         // Define the target expandable div.
-        var targetImage = $(this).parents('.overlay-container').find('.overlay-image');
-        targetImage.toggleClass('overlay-image__hidden overlay-image__revealed');
-        if ($(this).find('.overlay-button__text').text() == 'See cool stuff') {
-          $(this).find('.overlay-button__text').text('Hide stuff');
-        } else {
-          $(this).find('.overlay-button__text').text('See cool stuff');
-        }
+        var targetImage = $(this).parents('.js-overlay-container').find('.js-overlay-image');
+        targetImage.toggleClass('js-overlay-image--hidden js-overlay-image--revealed');
       });
     }
   };
