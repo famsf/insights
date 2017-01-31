@@ -69,7 +69,7 @@
         afterLoad: function(anchorLink, index){},
         afterRender: function(){},
       });
-      $('.next-page').click( function() {
+      $('.js-next-page').click( function() {
         $.fn.pagepiling.moveSectionDown();
       });
     }
