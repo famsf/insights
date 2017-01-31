@@ -28,7 +28,7 @@ figure {
   overflow: hidden;
 }
 
-.figure--figcaption-reveal {
+.figure--info-reveal {
   @extend %icon;
   @extend %custom-focus;
   display: flex;
@@ -38,7 +38,7 @@ figure {
   left: 0;
   z-index: 2;
   background-color: transparentize($background-d, .2);
-  width: 2.2rem;
+  width: 2.5rem;
   height: 2.2rem;
   border: 0;
 
@@ -56,9 +56,9 @@ figure {
   }
 }
 
-figcaption {
+.figure--info {
   position: absolute;
-  bottom: -100%; // Hide caption until it is ready to reveal.
+  bottom: -100%; // Hide info until it is ready to reveal.
   left: 2.2rem;
   z-index: 2;
   background-color: transparentize($black, .2);
@@ -73,19 +73,27 @@ figcaption {
   -moz-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease;
+
   &.revealed {
     bottom: 0;
   }
 }
 
-p.figcaption {
-  font-size: .7rem;
-  line-height: 1.1rem;
-}
+figcaption {
+  padding: .5rem 0;
+  margin: 0;
+  font-size: .65rem;
+  line-height: 1rem;
+  width: 100%;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
 
-.title-of-art {
-  font-family: $roboto-slab;
-  font-weight: 700;
+  .title-of-art {
+    font-family: $roboto-slab;
+    font-weight: 700;
+  }
 }
 
 .figure__zoomable {
