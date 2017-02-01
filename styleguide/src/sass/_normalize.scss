@@ -12,8 +12,7 @@
  }
 
 // Main background gradient for body and slide sections.
-%general-background,
-.general-background {
+%general-background {
   background: $background-b; /* Old browsers */
   background: -moz-linear-gradient(left,  $background-a 0%, $background-b 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(left,  $background-a 0%,$background-b 100%); /* Chrome10-25,Safari5.1-6 */
@@ -32,7 +31,6 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @extend %general-background;
 
   // Adjust font-size globally per breakpoint.
   // As you adjust the percentage growth of font-size, translate
