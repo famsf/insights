@@ -14,7 +14,7 @@
   Drupal.behaviors.site = {
     attach: function (context, settings) {
       // Start the slider
-      $('.wordslider').bxSlider({
+      $('.js-wordslider').bxSlider({
         mode: 'fade',
         pager: false,
         auto: true,
@@ -22,7 +22,7 @@
         pause: 1500
 
       });
-      $('#pagepiling').pagepiling({
+      $('.js-pagepiling').pagepiling({
         menu: null,
         direction: 'vertical',
         verticalCentered: false,
@@ -38,14 +38,14 @@
         normalScrollElementTouchThreshold: 5,
         touchSensitivity: 5,
         keyboardScrolling: true,
-        sectionSelector: '.section',
+        sectionSelector: '.js-section',
         animateAnchor: false,
 
         //events
         onLeave: function(index, nextIndex, direction){
           // Select the next active index section element by it's index.
           var nextActiveSection = nextIndex - 1;
-          var sectionSelector = $('section.section').eq(nextActiveSection);
+          var sectionSelector = $('section.js-section').eq(nextActiveSection);
           // Get all the animated item in the section.
           var animatedItems = sectionSelector.find('*.animated');
           var numberOfAnimatedItems = animatedItems.length;
@@ -69,7 +69,7 @@
         afterLoad: function(anchorLink, index){},
         afterRender: function(){},
       });
-      $('.next-page').click( function() {
+      $('.js-next-page').click( function() {
         $.fn.pagepiling.moveSectionDown();
       });
     }

@@ -3,15 +3,15 @@
   usage: Placed at bootom of the page and used with Image zoom.
 #}
 
-<div class="zoom-overlay-background" style="display: none;">
+<div class="zoom-overlay-background js-zoom-overlay-background" style="display: none;">
 </div>
-<div class="zoom-window animatedParent" style="display: none;">
-  <button class="zoom-close" href="#" style="display: none;">
+<div class="zoom-window animatedParent js-zoom-window" style="display: none;">
+  <button class="zoom-close js-zoom-close" href="#" style="display: none;">
     <i class="icon--small">
       {% include('svg/famsf-zoom-out-sm.html') %}
     </i>
     <div class="zoom-marker__text">close</div>
   </button>
-  <div class="zoom-window__content" style="display: none;">
+  <div class="zoom-window__content js-zoom-window__content" style="display: none;">
   </div>
 </div>

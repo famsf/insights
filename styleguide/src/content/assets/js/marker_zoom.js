@@ -12,11 +12,11 @@
 (function ($) {
   Drupal.behaviors.marker_zoom = {
     attach: function(context, settings) {
-      var zoomMarker = $('.zoom-marker-inner');
-      var zoomClose = $('.zoom-close');
-      var modalContent= $('.zoom-window__content');
-      var modalWindow= $('.zoom-window');
-      var modalOverlay = $('.zoom-overlay-background');
+      var zoomMarker = $('.js-zoom-marker-inner');
+      var zoomClose = $('.js-zoom-close');
+      var modalContent= $('.js-zoom-window__content');
+      var modalWindow= $('.js-zoom-window');
+      var modalOverlay = $('.js-zoom-overlay-background');
 
       // Listener for click on any zoom marker.
       zoomMarker.click(function(event){
@@ -24,58 +24,58 @@
         // The marker the user has clicked.
         var marker = $(this);
         // Get the outside wrapper for the marker so we can get its position.
-        var zoomPosition = marker.closest('.zoom-marker-outer');
+        var zoomPosition = marker.closest('.js-zoom-marker-outer');
         // Get the top and left properties of the marker
         var markerTop = zoomPosition.css('top');
         var markerLeft = zoomPosition.css('left');
         // Get the image we are zooming in on.
-        var zoomImage = marker.closest('.figure__zoomable').find('.figure__zoomable-child');
+        var zoomImage = marker.closest('.js-figure__zoomable').find('.js-figure__zoomable-child');
         // Make sure the image will zoom to the marker location.
         var zoomValues = markerLeft+" "+markerTop;
         zoomImage.get(0).style.transformOrigin = zoomValues;
         // Populate the modal with the marker content.
-        var detailedView = marker.closest('.zoom-group').find('.zoom-detail-view').clone();
-        if (modalContent.hasClass('zoom-window--is-visible')) {
+        var detailedView = marker.closest('.js-zoom-group').find('.js-zoom-detail-view').clone();
+        if (modalContent.hasClass('js-zoom-window--is-visible')) {
           modalContent.hide(0);
-          modalContent.toggleClass('zoom-window--is-visible');
+          modalContent.toggleClass('js-zoom-window--is-visible');
         } else {
           modalContent.show(0);
-          modalContent.toggleClass('zoom-window--is-visible').html(detailedView);
+          modalContent.toggleClass('js-zoom-window--is-visible').html(detailedView);
         }
 
         setTimeout(function() {
             // Start to zoom in on the initial image.
             // This requires delay after setting transformOrigin.
-            zoomImage.toggleClass('zoomed');
+            zoomImage.toggleClass('js-zoomed');
             setTimeout(function() {
               // Fade in the background overlay
-                if (modalOverlay.hasClass('zoom--is-open')) {
+                if (modalOverlay.hasClass('js-zoom--is-open')) {
                   modalOverlay.fadeOut(500);
-                  modalOverlay.toggleClass('zoom--is-open');
+                  modalOverlay.toggleClass('js-zoom--is-open');
                 } else {
                   modalOverlay.fadeIn(500);
-                  modalOverlay.toggleClass('zoom--is-open');
+                  modalOverlay.toggleClass('js-zoom--is-open');
                 }
               setTimeout(function() {
                 // reveal the content window.
-                if (modalWindow.hasClass('zoom-window--is-visible')) {
+                if (modalWindow.hasClass('js-zoom-window--is-visible')) {
                   modalWindow.fadeOut(500);
-                  modalWindow.toggleClass('zoom-window--is-visible');
+                  modalWindow.toggleClass('js-zoom-window--is-visible');
                 } else {
                   modalWindow.fadeIn(500);
-                  modalWindow.toggleClass('zoom-window--is-visible');
+                  modalWindow.toggleClass('js-zoom-window--is-visible');
                 }
-                var detailView = modalContent.find('.zoom-detail-view');
-                if (detailView.hasClass('show-detail')) {
-                  detailView.toggleClass('show-detail').fadeOut(500);
+                var detailView = modalContent.find('.js-zoom-detail-view');
+                if (detailView.hasClass('js-show-detail')) {
+                  detailView.toggleClass('js-show-detail').fadeOut(500);
                 } else {
-                  detailView.toggleClass('show-detail').fadeIn(500);
+                  detailView.toggleClass('js-show-detail').fadeIn(500);
                 }
                 setTimeout(function() {
                   // Show the close button.
                   zoomClose.show();
                   // Lock the body scrolling so only the modal is scrollable while open.
-                  $('body').toggleClass('scroll-lock');
+                  $('body').toggleClass('js-scroll-lock');
                 }, 200);
               }, 200);
             }, 200);
@@ -86,21 +86,21 @@
       zoomClose.click(function(event){
         event.preventDefault();
         var closeButton = $(this);
-        var zoomedImage =$('.figure__zoomable-child.zoomed');
+        var zoomedImage =$('.js-figure__zoomable-child.js-zoomed');
         // Hide the close button.
         zoomClose.hide();
         // Hide the modal window
-        modalContent.find('.zoom-detail-view').removeClass('show-detail').fadeOut(500);
-        modalContent.removeClass('zoom-window--is-visible').fadeOut(500).html();
-        modalWindow.removeClass('zoom-window--is-visible').fadeOut(500);
+        modalContent.find('.js-zoom-detail-view').removeClass('js-show-detail').fadeOut(500);
+        modalContent.removeClass('js-zoom-window--is-visible').fadeOut(500).html();
+        modalWindow.removeClass('js-zoom-window--is-visible').fadeOut(500);
         setTimeout(function() {
           // Hide the background overlay.
-          modalOverlay.removeClass('zoom--is-open').fadeOut(500);
+          modalOverlay.removeClass('js-zoom--is-open').fadeOut(500);
           // Zoom out on main image.
-          zoomedImage.removeClass('zoomed');
+          zoomedImage.removeClass('js-zoomed');
           setTimeout(function() {
             // Release the scroll locking so the user can scroll the main page again.
-            $('body').toggleClass('scroll-lock');
+            $('body').toggleClass('js-scroll-lock');
           }, 200);
         }, 200);
       });

@@ -14,12 +14,12 @@
   Drupal.behaviors.expander_toggle = {
     attach: function(context, settings) {
       // Close all expander elenments that need to be closed initially.
-      $('.expander__is-closed').hide(0);
+      $('.js-expander--is-closed').hide(0);
       // Function for expander component to expand and collapse.
-      $('.icon--read-more').click(function(){
+      $('.js-icon--read-more').click(function(){
         var buttonClicked = $(this);
         // Define the target expandable div.
-        var changeThisPanel = $(this).parents('.deep-dive').find('.deep-dive--wrapper');
+        var changeThisPanel = $(this).parents('.js-deep-dive').find('.js-deep-dive__wrapper');
 
         // Load button text from data attribute when div is expanded.
         var expandedText = 'Click to Close';
@@ -30,10 +30,10 @@
         var ThisSection = $(this).parents('.section');
 
         // Toggle the button and panel states.
-        if (changeThisPanel.hasClass("expander__is-closed")) {
-          buttonClicked.find('.icon-arrow--up').show(0);
-          buttonClicked.find('.icon-arrow--down').hide(0);
-          changeThisPanel.removeClass("expander__is-closed").addClass("expander__is-open").slideDown(300);
+        if (changeThisPanel.hasClass("js-expander--is-closed")) {
+          buttonClicked.find('.js-icon-arrow--up').show(0);
+          buttonClicked.find('.js-icon-arrow--down').hide(0);
+          changeThisPanel.removeClass("js-expander--is-closed").addClass("js-expander--is-open").slideDown(300);
           buttonClicked.find('div').html(expandedText).attr('title', expandedText);
           /* @Todo:  scroll section up to top of page after expanding. */
           $('html, body').animate({
@@ -42,10 +42,10 @@
           }, 1000);
 
         }
-        else if (changeThisPanel.hasClass("expander__is-open")) {
-          buttonClicked.find('.icon-arrow--down').show(0);
-          buttonClicked.find('.icon-arrow--up').hide(0);
-          changeThisPanel.removeClass("expander__is-open").addClass("expander__is-closed").slideUp(300);
+        else if (changeThisPanel.hasClass("js-expander--is-open")) {
+          buttonClicked.find('.js-icon-arrow--down').show(0);
+          buttonClicked.find('.js-icon-arrow--up').hide(0);
+          changeThisPanel.removeClass("js-expander--is-open").addClass("js-expander--is-closed").slideUp(300);
           buttonClicked.find('div').html(collapsedText).attr('title', collapsedText);
         }
       });
