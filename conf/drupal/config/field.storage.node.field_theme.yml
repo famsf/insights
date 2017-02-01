@@ -1,25 +1,22 @@
-uuid: 329d2a8b-7114-46a2-a846-d5ca9b3dcf49
+uuid: e54be64c-f2cc-4be6-a9ad-e2ba20d1641f
 langcode: en
 status: true
 dependencies:
   module:
     - node
     - options
-id: node.field_skin
-field_name: field_skin
+id: node.field_theme
+field_name: field_theme
 entity_type: node
 type: list_string
 settings:
   allowed_values:
     -
-      value: legion
-      label: Legion
+      value: legion-dark
+      label: 'Legion of Honor Dark'
     -
-      value: 'de young'
-      label: 'De Young'
-    -
-      value: other
-      label: Other
+      value: legion-light
+      label: 'Legion of Honor Light'
   allowed_values_function: ''
 module: options
 locked: false
