@@ -4,12 +4,12 @@
 #}
 
 {% block component %}
-<main id="pagepiling" >
-  <section class="animatedParent section pp-scrollable" id="Title">
+<main class="js-pagepiling" >
+  <section class="animatedParent js-section pp-scrollable" id="Title">
     {% include('site-hero.html') %}
     {% include('next-page.html') %}
   </section>
-  <section class="section pp-scrollable" id="introduction">
+  <section class="js-section pp-scrollable" id="introduction">
     <!--<div class="section-hero"> -->
       <!-- section header formatting -->
       <!-- Young Monet here as a section header? -->
@@ -24,7 +24,7 @@
     <div class="container">
       <div class="l-2up">
         <!-- image: photo of young Monet -->
-        <ul class="wordslider" style="text-align: center; height: 5em; display: block;">
+        <ul class="js-wordslider" style="text-align: center; height: 5em; display: block;">
           <li><h2>ambition</h2></li>
           <li><h2>recognition</h2></li>
           <li><h2>risk</h2></li>
@@ -47,7 +47,7 @@
     {% include('share.html') %}
     {% include('next-page.html') %}
   </section>
-  <section class="section pp-scrollable" id="contending-with-convention">
+  <section class="js-section pp-scrollable" id="contending-with-convention">
 
     <div class="section-hero" style="background-image: url('{{ site.url }}/assets/imgs/art/section-header-Exposition_universelle_des_beaux-arts.jpg');">
       <div class="section-hero__title has-solid-rectangles top-left">
@@ -139,12 +139,12 @@
         </div>
       </div>
     </div>
-  
+
 
     {% include('share.html') %}
     {% include('next-page.html') %}
   </section>
-  <section class="section pp-scrollable" id="see-the-forest-through-the-trees">
+  <section class="js-section pp-scrollable" id="see-the-forest-through-the-trees">
     <div class="section-hero__video-wrapper">
       <video autoplay="autoplay" muted="muted" preload="metadata" title="Forest" loop="loop" class="video-background">
         <source src="{{ site.url }}/assets/vid/Forest_GettyImages-614587492.mp4" />
@@ -207,7 +207,7 @@
     {% include('share.html') %}
     {% include('next-page.html') %}
   </section>
-  <section class="section pp-scrollable" id="ambition-and-risk">
+  <section class="js-section pp-scrollable" id="ambition-and-risk">
     <div class="section-hero" style="background-image: url('{{ site.url }}/assets/imgs/art/section-header-14_Monet_luncheon_Art-Resource.jpg');">
       <div class="section-hero__title has-solid-rectangles top-right">
         <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Ambition and Risk</h1>
@@ -256,7 +256,7 @@
     {% include('share.html') %}
     {% include('next-page.html') %}
   </section>
-  <section class="section pp-scrollable" id="paris-modernity-and-leisure">
+  <section class="js-section pp-scrollable" id="paris-modernity-and-leisure">
     <div class="section-hero" style="background-image: url('{{ site.url }}/assets/imgs/art/Plaut_pont-neuf_BNF.jpg');">
       {% include('section-hero-title--optiona.html') %}
     </div>
@@ -324,7 +324,7 @@
     {% include('share.html') %}
     {% include('next-page.html') %}
   </section>
-  <section class="section pp-scrollable" id="monet-and-the-sea">
+  <section class="js-section pp-scrollable" id="monet-and-the-sea">
     <div class="section-hero__video-wrapper">
       <video autoplay="autoplay" muted="muted" preload="metadata" title="Forest" loop="loop" class="video-background">
         <source src="{{ site.url }}/assets/vid/Etretat_GettyImages_150708198.mp4" />
@@ -393,7 +393,7 @@
     {% include('share.html') %}
     {% include('next-page.html') %}
   </section>
-  <section class="section pp-scrollable" id="camille-monet-the-known-and-the-unknown">
+  <section class="js-section pp-scrollable" id="camille-monet-the-known-and-the-unknown">
     <div class="section-hero" style="background-image: url('{{ site.url }}/assets/imgs/art/Camille_green_dress.jpg');">
       <div class="section-hero__title has-solid-rectangles bottom-right">
         <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Camille Monet: The Known and the Unknown</h1>
@@ -421,7 +421,7 @@
     {% include('share.html') %}
     {% include('next-page.html') %}
   </section>
-  <section class="section pp-scrollable" id="political-unrest">
+  <section class="js-section pp-scrollable" id="political-unrest">
     <div class="section-hero" style="background-image: url('{{ site.url }}/assets/imgs/art/section-header-33_Franco-Prussian-War_-Paris.jpg');">
       <div class="section-hero__title has-solid-rectangles top-right">
         <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Political Unrest</h1>
@@ -498,7 +498,7 @@
     {% include('share.html') %}
     {% include('next-page.html') %}
   </section>
-  <section class="section pp-scrollable" id="training-your-eye-color">
+  <section class="js-section pp-scrollable" id="training-your-eye-color">
     <div class="section-hero" style="background-image: url('{{ site.url }}/assets/imgs/art/section-header-20_Magpie_Art-Resource.jpg');">
       <div class="section-hero__title has-solid-rectangles top-left">
         <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Training Your Eye: Color</h1>
@@ -540,7 +540,7 @@
     {% include('share.html') %}
     {% include('next-page.html') %}
   </section>
-  <section class="section pp-scrollable" id="training-your-eye-composition">
+  <section class="js-section pp-scrollable" id="training-your-eye-composition">
     <div class="section-hero" >
       <div class="section-hero__title has-solid-rectangles">
         <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Training your Eye: Composition</h1>
@@ -553,7 +553,7 @@
     {% include('share.html') %}
     {% include('next-page.html') %}
   </section>
-  <section class="section pp-scrollable" id="observing-nature">
+  <section class="js-section pp-scrollable" id="observing-nature">
     <div class="section-hero" >
       <div class="section-hero__title has-solid-rectangles">
         <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Observing Nature</h1>
@@ -578,7 +578,7 @@
     {% include('next-page.html') %}
   </section>
 
-  <section class="section pp-scrollable" id="lastPage" >
+  <section class="js-section pp-scrollable" id="lastPage" >
     <div class="container">
       <div class="l-1up">
         <p>https://shop.famsf.org/collections/monet-the-early-years<br>
