@@ -6,7 +6,7 @@ dependencies:
     - field.field.node.digital_story.field_header_section
     - field.field.node.digital_story.field_main_navigation
     - field.field.node.digital_story.field_section
-    - field.field.node.digital_story.field_skin
+    - field.field.node.digital_story.field_theme
     - node.type.digital_story
   module:
     - paragraphs
@@ -47,8 +47,8 @@ content:
       add_mode: dropdown
       form_display_mode: default
     third_party_settings: {  }
-  field_skin:
-    weight: 8
+  field_theme:
+    weight: 26
     settings: {  }
     third_party_settings: {  }
     type: options_select
