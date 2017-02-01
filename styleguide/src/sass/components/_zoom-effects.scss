@@ -10,6 +10,9 @@
   -o-transform: scale(1.5);
   transform: scale(1.5);
 }
+.js-zoomed {
+  @extend %zoomed;
+}
 
 %zoomin,
 .zoomin {
@@ -18,12 +21,6 @@
   -webkit-transform: scale(1.2);
   -o-transform: scale(1.2);
   transform: scale(1.2);
-}
-
-.zoom-detail-view {
-}
-
-.show-detail {
 }
 
 .zoom-marker-outer {
@@ -72,9 +69,6 @@
   opacity: .75;
 }
 
-.zoom--is-open {
-}
-
 .zoom-window {
   position: absolute;
   background: transparentize($zoom-background, .2);
@@ -101,12 +95,6 @@
     right: 15vw;
     left: 15vw;
   }
-}
-
-.zoom-window__content {
-}
-
-.zoom-window--is-visible {
 }
 
 // Hide text except for screen readers.
