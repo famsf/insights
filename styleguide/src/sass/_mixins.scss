@@ -143,8 +143,13 @@ http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacemen
 
 // Scroll lock for preventing background scrolling on the body when a modal opens
 
+%scroll-lock,
 .scroll-lock {
   overflow: hidden;
+}
+
+.js-scroll-lock {
+  @extend %scroll-lock;
 }
 
 /* ==============================================================
@@ -177,15 +182,7 @@ http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacemen
   padding: rhythm(1);
   background-color: $white-60;
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  a,
-  button {
+  * {
     position: relative;
     z-index: 2;
   }

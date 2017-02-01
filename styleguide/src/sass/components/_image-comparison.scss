@@ -16,8 +16,8 @@
   }
 }
 
-.comparison--2up,
-.comparison--3up {
+.comparison__2up,
+.comparison__3up {
   width: 100%;
   height: auto;
   padding: 0;
@@ -27,19 +27,19 @@
   }
 }
 
-.comparison--3up {
+.comparison__3up {
   @include breakpoint ($bp2) {
     width: 33%;
   }
 }
 
-.comparison--2up {
+.comparison__2up {
   @include breakpoint ($bp2) {
     width: 50%;
   }
 }
 
-.comparison--button {
+.comparison__button {
   @extend %custom-focus;
   @extend %icon;
   display: block;
@@ -66,7 +66,7 @@
   }
 }
 
-.comparison--answer { 
+.comparison__answer { 
   @include breakpoint ($bp2) {
     padding: rhythm(1);
 

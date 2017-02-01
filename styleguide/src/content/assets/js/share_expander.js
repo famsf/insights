@@ -14,19 +14,19 @@
   Drupal.behaviors.share_expander = {
     attach: function(context, settings) {
       // Close all expander elenments that need to be closed initially.
-      $('.share-expander__is-closed').hide(0);
+      $('.js-share-expander--is-closed').hide(0);
       // Function for expander component to expand and collapse.
-      $('.share-button').click(function(){
+      $('.js-share-button').click(function(){
         // Define the target expandable div.
-        var changeThisPanel = $(this).parents('.share-wrapper').find('.share-expander');
+        var changeThisPanel = $(this).parents('.js-share').find('.js-share-expander');
 
         // Toggle the button and panel states.
-        if (changeThisPanel.hasClass("share-expander__is-closed")) {
-          changeThisPanel.removeClass("share-expander__is-closed").addClass("share-expander__is-open").slideDown(300);
+        if (changeThisPanel.hasClass("js-share-expander--is-closed")) {
+          changeThisPanel.removeClass("js-share-expander--is-closed").addClass("js-share-expander--is-open").slideDown(300);
 
         }
-        else if (changeThisPanel.hasClass("share-expander__is-open")) {
-          changeThisPanel.removeClass("share-expander__is-open").addClass("share-expander__is-closed").slideUp(300);
+        else if (changeThisPanel.hasClass("js-share-expander--is-open")) {
+          changeThisPanel.removeClass("js-share-expander--is-open").addClass("js-share-expander--is-closed").slideUp(300);
         }
       });
     }
