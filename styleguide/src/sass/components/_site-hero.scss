@@ -32,8 +32,20 @@
   .site-hero__logo {
     @include adjust-font-size-to($h3-font-size, 1.25);
     @include trailer(.5, $h3-font-size);
-    font-weight: 700;
     letter-spacing: -.01em;
+
+    a:link,
+    a:visited {
+      font-weight: 700;
+      text-decoration: none;
+      color: $midnight;
+    }
+
+    a:hover,
+    a:active,
+    a:focus {
+      color: $sea;
+    }
   }
 }
 
