@@ -85,9 +85,11 @@ figcaption {
   background-color: $primary;
   position: relative;
   color: $text-color-invert;
+  font-weight: 300;
 
   .title-of-art {
     font-family: $roboto-slab;
+    font-style: italic;
     font-weight: 700;
   }
 
