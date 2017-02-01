@@ -43,23 +43,56 @@ figure {
 }
 
 .figure__overlay-cta {
-  margin-top: .5em;
+  padding: .5rem 0;
+}
+
+.figcaption-cta {
+  cursor: pointer;
+  padding: .5rem 0;
+}
+
+.figcaption-cta,
+figcaption {
+  font-size: .65rem;
+  line-height: .9rem;
+}
+
+figcaption::after {
+  bottom: 100%;
+  left: 1.5rem;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  border-bottom-color: $primary;
+  border-width: 12px;
+  margin-left: -12px;
 }
 
 figcaption {
-  padding: .5rem 0;
-  margin: 0;
-  font-size: .65rem;
-  line-height: 1rem;
+  padding: .75rem;
+  margin-top: .8rem;
+  margin-bottom: .8rem;
   width: 100%;
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
   -o-transition: all .5s ease;
   transition: all .5s ease;
+  display: none;
+  background-color: $primary;
+  position: relative;
+  color: $text-color-invert;
 
   .title-of-art {
     font-family: $roboto-slab;
     font-weight: 700;
+  }
+
+  &.js-figcaption--revealed {
+    display: block;
   }
 }
 
