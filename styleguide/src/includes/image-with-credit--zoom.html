@@ -5,38 +5,40 @@
 
 {% block component %}
   <figure class="figure__zoomable js-figure__zoomable" >
-    <div class="figure--wrapper figure__zoomable-child js-figure__zoomable-child" style="background-image: url('{{ site.url }}/assets/imgs/art/bodmer_fullsize.jpg');">
-    </div>
-    <img style="visibility: hidden;" src="{{ site.url }}/assets/imgs/art/bodmer_fullsize.jpg" alt="bodmer" />
+    <div class="figure__zoomable-boundary">
+      <div class="figure--wrapper figure__zoomable-child js-figure__zoomable-child" style="background-image: url('{{ site.url }}/assets/imgs/art/bodmer_fullsize.jpg');">
+      </div>
+      <img style="visibility: hidden;" src="{{ site.url }}/assets/imgs/art/bodmer_fullsize.jpg" alt="bodmer" />
 
-    <div class="zoom-group js-zoom-group">
-      <div class="zoom-marker-outer js-zoom-marker-outer" style="position: absolute; left:65%; top: 60%;">
-          <a class="zoom-marker-inner animated fadeInDownShort delay-1000 js-zoom-marker-inner" href="#" title="Click to zoom"><span class="icon--small">{% include('svg/famsf-zoom-in-sm.html') %}</span> <div class="zoom-marker__text">Click to zoom</div></a>
+      <div class="zoom-group js-zoom-group">
+        <div class="zoom-marker-outer js-zoom-marker-outer" style="position: absolute; left:65%; top: 60%;">
+            <a class="zoom-marker-inner animated fadeInDownShort delay-1000 js-zoom-marker-inner" href="#" title="Click to zoom"><span class="icon--small">{% include('svg/famsf-zoom-in-sm.html') %}</span> <div class="zoom-marker__text">Click to zoom</div></a>
+        </div>
+        <div class="zoom-detail-view js-zoom-detail-view" style="display:none;">
+          <h2>Color</h2>
+          <p>In contrast to this restrained study of light and color, Monet captures direct sunlight through the use of intense white as seen on the trunk of the oak. </p>
+          <img src="{{ site.url }}/assets/imgs/art/bodmer_color.jpg" alt="image detail">
+        </div>
       </div>
-      <div class="zoom-detail-view js-zoom-detail-view" style="display:none;">
-        <h2>Color</h2>
-        <p>In contrast to this restrained study of light and color, Monet captures direct sunlight through the use of intense white as seen on the trunk of the oak. </p>
-        <img src="{{ site.url }}/assets/imgs/art/bodmer_color.jpg" alt="image detail">
+      <div class="zoom-group js-zoom-group">
+        <div class="zoom-marker-outer js-zoom-marker-outer" style="position: absolute; left:20%; top: 65%;">
+            <a class="zoom-marker-inner animated fadeInDownShort delay-1000 js-zoom-marker-inner" href="#" title="Click to zoom"><span class="icon--small">{% include('svg/famsf-zoom-in-sm.html') %}</span> <div class="zoom-marker__text">Click to zoom</div></a>
+        </div>
+        <div class="zoom-detail-view js-zoom-detail-view" style="display:none;">
+          <h2>Light</h2>
+          <p>The background of the composition is only defined by varied light green tones, flattening any sense of depth beyond the oak.</p>
+          <img src="{{ site.url }}/assets/imgs/art/bodmer_light.jpg" alt="image detail">
+        </div>
       </div>
-    </div>
-    <div class="zoom-group js-zoom-group">
-      <div class="zoom-marker-outer js-zoom-marker-outer" style="position: absolute; left:20%; top: 65%;">
-          <a class="zoom-marker-inner animated fadeInDownShort delay-1000 js-zoom-marker-inner" href="#" title="Click to zoom"><span class="icon--small">{% include('svg/famsf-zoom-in-sm.html') %}</span> <div class="zoom-marker__text">Click to zoom</div></a>
-      </div>
-      <div class="zoom-detail-view js-zoom-detail-view" style="display:none;">
-        <h2>Light</h2>
-        <p>The background of the composition is only defined by varied light green tones, flattening any sense of depth beyond the oak.</p>
-        <img src="{{ site.url }}/assets/imgs/art/bodmer_light.jpg" alt="image detail">
-      </div>
-    </div>
-    <div class="zoom-group js-zoom-group">
-      <div class="zoom-marker-outer js-zoom-marker-outer" style="position: absolute; left:40%; top: 80%;">
-          <a class="zoom-marker-inner animated fadeInDownShort delay-1000 js-zoom-marker-inner" href="#" title="Click to zoom"><span class="icon--small">{% include('svg/famsf-zoom-in-sm.html') %}</span> <div class="zoom-marker__text">Click to zoom</div></a>
-      </div>
-      <div class="zoom-detail-view js-zoom-detail-view" style="display:none;">
-        <h2>Shadow</h2>
-        <p>Perhaps most striking is the artist’s ability to capture the dancing quality of shadows through his varied use of color. In the foreground, the forest floor is covered in muddied grays, yellows, and greens creating a sense of a soft light breaking through the forest canopy</p>
-        <img src="{{ site.url }}/assets/imgs/art/bodmer_shadow.jpg" alt="image detail">
+      <div class="zoom-group js-zoom-group">
+        <div class="zoom-marker-outer js-zoom-marker-outer" style="position: absolute; left:40%; top: 80%;">
+            <a class="zoom-marker-inner animated fadeInDownShort delay-1000 js-zoom-marker-inner" href="#" title="Click to zoom"><span class="icon--small">{% include('svg/famsf-zoom-in-sm.html') %}</span> <div class="zoom-marker__text">Click to zoom</div></a>
+        </div>
+        <div class="zoom-detail-view js-zoom-detail-view" style="display:none;">
+          <h2>Shadow</h2>
+          <p>Perhaps most striking is the artist’s ability to capture the dancing quality of shadows through his varied use of color. In the foreground, the forest floor is covered in muddied grays, yellows, and greens creating a sense of a soft light breaking through the forest canopy</p>
+          <img src="{{ site.url }}/assets/imgs/art/bodmer_shadow.jpg" alt="image detail">
+        </div>
       </div>
     </div>
     <a class="figcaption-cta js-figcaption-cta">image credit</a>
