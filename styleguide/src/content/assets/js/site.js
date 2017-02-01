@@ -18,8 +18,8 @@
         mode: 'fade',
         pager: false,
         auto: true,
-        speed: 1500,
-        pause: 2000
+        speed: 2000,
+        pause: 3000
 
       });
       $('.js-pagepiling').pagepiling({
