@@ -5,3 +5,12 @@ global-styling:
       css/themes/legion/legion-dark.css: {}
   dependencies:
     - core/jquery
+legion-dark:
+  css:
+      theme:
+        css/themes/legion/legion-dark.css: {}
+
+legion-light:
+  css:
+      theme:
+        css/themes/legion/legion-light.css: {}
