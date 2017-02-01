@@ -3,10 +3,20 @@ global-styling:
   css:
     theme:
       css/themes/legion/legion-dark.css: {}
-  dependencies:
-    - core/jquery
   js:
      js/jquery.bxslider.js: {}
      js/jquery.pagepiling.js: {}
      js/css3-animate-it.js: {}
      js/site.js: {}
+  dependencies:
+    - core/jquery
+legion-dark:
+  css:
+      theme:
+        css/themes/legion/legion-dark.css: {}
+
+legion-light:
+  css:
+      theme:
+        css/themes/legion/legion-light.css: {}
+	

@@ -32,7 +32,6 @@
 
 .site-hero__rectangle {
   @extend %hero__rectangle;
-
-  // the width and height of the rectangles should be .7rem more than the width and height of %hero__title to create overlap effect
-  height: 13rem + .7rem;
+  // the width and height of the rectangles should be 3.7rem more than the width and height of %hero__title to create overlap effect
+  // This is calculated and set with js.
 }

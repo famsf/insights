@@ -6,10 +6,11 @@ dependencies:
     - field.field.node.digital_story.field_header_section
     - field.field.node.digital_story.field_main_navigation
     - field.field.node.digital_story.field_section
-    - field.field.node.digital_story.field_skin
+    - field.field.node.digital_story.field_theme
     - node.type.digital_story
   module:
     - entity_reference_revisions
+    - options
     - user
 id: node.digital_story.default
 targetEntityType: node
@@ -19,7 +20,7 @@ content:
   field_header_section:
     type: entity_reference_revisions_entity_view
     weight: 102
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
@@ -32,7 +33,12 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+  field_theme:
+    type: list_key
+    weight: 103
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_main_navigation: true
-  field_skin: true
   links: true
