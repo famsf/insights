@@ -24,7 +24,7 @@ html {
   // Correct text resizing oddly in IE 6/7 when body `font-size` is set using
   // `em` units.
   color: $text-color;
-  font-size: ($base-font-size / 16px) * 100%;
+  font-size: ($base-font-size / 18px) * 100%;
   line-height: ($base-line-height / $base-font-size) * 1em;
   font-family: $base-font-family; /* 1 */
   font-weight: 300;
@@ -39,10 +39,10 @@ html {
   // to the value to the mixin adjust-font-size-to in the mixins
   // file as a point value to maintain font-size across breakpoints.
   @include breakpoint($bp2) {
-    font-size: ($base-font-size / 16px) * 112%;
+    font-size: ($base-font-size / 18px) * 112%;
   }
   @include breakpoint($bp3) {
-    font-size: ($base-font-size / 16px) * 124%;
+    font-size: ($base-font-size / 18px) * 124%;
   }
   // Styles below are needed for the pagepiling js library
   // overflow:hidden;
