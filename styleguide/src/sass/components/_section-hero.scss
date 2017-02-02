@@ -18,6 +18,10 @@
 .section-hero__title {
   @extend %hero__content;
 
+  @include breakpoint($bp1) {
+    width: 27rem;
+  }
+
   h1 {
     margin: 0;
     text-transform: uppercase;
@@ -26,6 +30,7 @@
 
 .section-hero__rectangle {
   @extend %hero__rectangle;
+  width: 27.7rem;
 
   // the width and height of the rectangles should be 3.7rem more than the width and height of %hero__title to create overlap effect
   // This is calculated and set with js.
