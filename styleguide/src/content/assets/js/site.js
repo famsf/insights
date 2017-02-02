@@ -15,9 +15,9 @@
     attach: function (context, settings) {
 
       if ($('.js-pagepiling').length) {
-        // We are on a page that uses pagepiling.js.
+        // The user is on a page that uses pagepiling.js.
         // Create an array of section IDs for the pagepiling card deck.
-        // This is required to create hashtag sections.
+        // This is required to create hashtag sections and scroll-to links.
         var sectionElements = $('.js-section');
         var sectionIds = [];
         var getSectionIds = function () {
@@ -26,7 +26,7 @@
           }
         };
         getSectionIds();
-
+        // Configure Lazy load to not run automatically.
         $.extend($.lazyLoadXT, {
           autoInit: false,
           edgeY:  10000,
@@ -58,11 +58,12 @@
 
           //events
           onLeave: function(index, nextIndex, direction){
+            // Actions when the user transitions to a new card.
             // Select the next active index section element by it's index.
             var nextActiveSection = nextIndex - 1;
             var sectionSelector = $('section.js-section').eq(nextActiveSection);
             lazyloadSection(sectionSelector);
-            // Get all the animated item in the section.
+            // Get all the animated items in the section.
             var animatedItems = sectionSelector.find('*.animated');
             var numberOfAnimatedItems = animatedItems.length;
             // Function to animate things in the viewport.
@@ -83,7 +84,7 @@
           },
           afterLoad: function(anchorLink, index){},
           afterRender: function(){
-            // Start lazy load on the first active section and hide the loader.
+            // Complete lazy load on the first active section and hide the loader.
             var firstSection = $('.js-section.active');
             var hideLoader = function() {
               $('.js-loading').fadeOut(200);
@@ -95,7 +96,7 @@
           $.fn.pagepiling.moveSectionDown();
         });
       } else {
-        // We are not using pagepiling so we should lazy load with auto init.
+        // The user is on a page that is  not using pagepiling so we should lazy load with auto init.
         $.extend($.lazyLoadXT, {
           autoInit: true,
           visibleOnly: false,
@@ -103,14 +104,13 @@
         });
       }
 
-      // Start the word slider
+      // Start the word fade slider
       $('.js-wordslider').bxSlider({
         mode: 'fade',
         pager: false,
         auto: true,
         speed: 2000,
         pause: 3000
-
       });
     }
   };
