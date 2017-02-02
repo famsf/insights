@@ -86,12 +86,14 @@
           });
         },
         afterLoad: function(anchorLink, index){
+        },
+        afterRender: function(){
           // Start lazy load on the first active section.
           var firstSection = $('.js-section.active');
+          console.log(firstSection);
           lazyloadSection(firstSection);
           $('.js-loading').fadeOut(100);
         },
-        afterRender: function(){},
       });
       $('.js-next-page').click( function() {
         $.fn.pagepiling.moveSectionDown();
