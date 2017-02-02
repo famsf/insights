@@ -13,6 +13,16 @@
 
   Drupal.behaviors.site = {
     attach: function (context, settings) {
+      // Create an array of section IDs for the page card deck.
+      var sectionElements = $('.js-section');
+      var sectionIds = [];
+      function getSectionIds() {
+        for (var i = sectionElements.length - 1; i >= 0; i--) {
+          sectionIds.unshift($(sectionElements[i]).attr('id'));
+        }
+      }
+      getSectionIds();
+
       // Start the slider
       $.extend($.lazyLoadXT, {
         autoInit: false,
@@ -36,7 +46,7 @@
         direction: 'vertical',
         verticalCentered: false,
         sectionsColor: [],
-        anchors: ['title', 'introduction', 'contending-with-convention', 'see-the-forest-through-the-trees', 'ambition-and-risk', 'paris-modernity-and-leisure', 'monet-and-the-sea', 'camille-monet-the-known-and-the-unknown', 'political-unrest', 'training-your-eye-color', 'training-your-eye-composition', 'observing-nature', 'lastPage'],
+        anchors: sectionIds,
         scrollingSpeed: 700,
         easing: 'swing',
         loopBottom: false,
