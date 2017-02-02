@@ -24,7 +24,7 @@
 
 {% if label_hidden %}
     {% if multiple %}
-        <main{{ attributes.setAttribute('id', 'pagepiling') }}>
+        <main{{ attributes.addClass('js-pagepiling') }}>
             {% for item in items %}
                 {{ item.content }}
             {% endfor %}

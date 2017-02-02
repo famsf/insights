@@ -19,3 +19,4 @@ hidden:
   field_main_navigation: true
   field_section: true
   field_skin: true
+  field_theme: true
