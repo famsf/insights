@@ -49,6 +49,7 @@ figure {
 .figcaption-cta {
   cursor: pointer;
   padding: .5rem 0;
+  display: block;
 }
 
 .figcaption-cta,
@@ -76,7 +77,6 @@ figcaption {
   padding: .75rem;
   margin-top: .8rem;
   margin-bottom: .8rem;
-  width: 100%;
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
   -o-transition: all .5s ease;
@@ -94,7 +94,7 @@ figcaption {
   }
 
   &.js-figcaption--revealed {
-    display: block;
+    display: inline-block;
   }
 }
 
