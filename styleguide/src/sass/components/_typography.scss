@@ -20,4 +20,10 @@
 .dropcap {
   font-size: 150%;
   color: $tertiary;
+  font-weight: 700;
+}
+
+.columns-2 {
+  column-count: 2;
+  column-gap: 2em;
 }
