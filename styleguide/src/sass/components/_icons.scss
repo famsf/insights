@@ -37,21 +37,3 @@
 .icon--small {
   height: 1.1rem;
 }
-
-
-.icon--large-responsive {
-  @extend .icon--large;
-  display: none;
-
-  @include breakpoint($bp3) {
-    display: block;
-  }
-}
-
-.icon--med-responsive {
-  @extend .icon--med;
-
-  @include breakpoint($bp3) {
-    display: none;
-  }
-}
