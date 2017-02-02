@@ -1,0 +1,20 @@
+/**
+ * @file
+ * word slider styles
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+.wordslider {
+  height: 5em;
+  display: block;
+  color: $tertiary;
+  margin-top: 0;
+  padding-left: 0;
+  @extend %dotted-border;
+  text-align: center;
+
+  h1 {
+    font-weight: 700;
+  }
+}
