@@ -9,7 +9,7 @@
  * @copyright Copyright 2016 Palantir.net
  */
 
-(function ($) {
+(function ($, Drupal) {
 
   Drupal.behaviors.site = {
     attach: function (context, settings) {

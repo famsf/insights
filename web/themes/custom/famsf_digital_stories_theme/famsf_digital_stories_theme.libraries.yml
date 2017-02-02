@@ -9,6 +9,7 @@ global-styling:
     js/css3-animate-it.js: {}
     js/site.js: {}
   dependencies:
+    - core/drupal
     - core/jquery
 
 legion-dark:

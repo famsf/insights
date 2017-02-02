@@ -39,6 +39,7 @@
 {% set classes = [
 'js-section',
 content.field_scrollable|render|striptags==1 ? 'pp-scrollable',
+    'animatedParent',
 'paragraph',
 'paragraph--type--' ~ paragraph.bundle|clean_class,
 view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
