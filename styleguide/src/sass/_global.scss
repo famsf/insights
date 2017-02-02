@@ -28,6 +28,8 @@
 @import "grid-layouts/l-66-33";
 
 /* Component (SMACSS module) rules */
+@import "components/loading";
+@import "components/lazy";
 @import "components/audio";
 @import "components/blockquote";
 @import "components/buttons";

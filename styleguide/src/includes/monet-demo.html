@@ -4,6 +4,7 @@
 #}
 
 {% block component %}
+{% include('loading-page.html') %}
 <main class="js-pagepiling" >
   <section class="animatedParent js-section pp-scrollable" id="Title">
     {% include('site-hero.html') %}
@@ -28,7 +29,7 @@
       <div class="l-2up">
        <figure>
         <div class="figure__wrapper">
-          <img src="{{ site.url }}/assets/imgs/art/Monet.jpg" alt="painting of trees" />
+          <img data-src="{{ site.url }}/assets/imgs/art/Monet.jpg" alt="painting of trees" />
           <figcaption><span class="title-of-art">The Pave de Chailly in the Forest Fontainebleau (cat 7)</span> 1865 | Monet | oil on canvas | Ordrupgaard Museum</figcaption>
         </div>
       </figure>
@@ -39,7 +40,7 @@
   </section>
   <section class="js-section pp-scrollable" id="contending-with-convention">
 
-    <div class="section-hero" style="background-image: url('{{ site.url }}/assets/imgs/art/section-header-Exposition_universelle_des_beaux-arts.jpg');">
+    <div class="section-hero" data-bg="{{ site.url }}/assets/imgs/art/section-header-Exposition_universelle_des_beaux-arts.jpg">
       <div class="section-hero__title has-solid-rectangles top-left">
         <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Contending with Convention</h1>
         <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
@@ -61,6 +62,7 @@
           <div class="l-1up">
             <p class="lede"><span class="dropcap">A</span>s a result of industrial expansion, a newly prosperous middle class was replacing the state, the church, and the nobility as primary sources of income for artists. The middle class relied heavily on reviews they read in the press, and they wanted to purchase works that had an official stamp of approval.  This increased the importance for artists to have their work be shown and well reviewed in the Salons. </p>
           </div>
+        </div>
       </div>
       {% include('read-more--cta.html') %}
     </div>
@@ -70,7 +72,7 @@
         <!-- image: William-Adolphe Bouguereau, The Broken Pitcher, 1891 -->
         <figure>
           <div class="figure__wrapper">
-            <img src="{{ site.url }}/assets/imgs/art/30_Bouguereau_Broken-Pitcher.jpg" alt="painting of trees" />
+            <img data-src="{{ site.url }}/assets/imgs/art/30_Bouguereau_Broken-Pitcher.jpg" alt="painting of trees" />
           </div>
           <a class="figcaption-cta js-figcaption-cta">image credit</a>
           <figcaption><span class="title-of-art">The Pave de Chailly in the Forest Fontainebleau (cat 7)</span> 1865 | Monet | oil on canvas | Ordrupgaard Museum</figcaption>
@@ -94,7 +96,7 @@
       <div class="comparison__2up js-comparison__group">
         <figure>
           <div class="figure__wrapper">
-            <img src="{{ site.url }}/assets/imgs/art/Camille_green_dress.jpg" alt="" />
+            <img data-src="{{ site.url }}/assets/imgs/art/Camille_green_dress.jpg" alt="" />
             <button class="comparison__button js-comparison__button">
               <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-carrot-down-sm.html') %}</i>
               <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-carrot-up-sm.html') %}</i>
@@ -113,7 +115,7 @@
       <div class="comparison__2up js-comparison__group">
         <figure>
           <div class="figure__wrapper">
-            <img src="{{ site.url }}/assets/imgs/art/14_Monet_luncheon_Art-Resource.jpg" alt="" />
+            <img data-src="{{ site.url }}/assets/imgs/art/14_Monet_luncheon_Art-Resource.jpg" alt="" />
             <button class="comparison__button js-comparison__button">
               <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-carrot-down-sm.html') %}</i>
               <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-carrot-up-sm.html') %}</i>
@@ -136,7 +138,7 @@
   </section>
   <section class="js-section pp-scrollable" id="see-the-forest-through-the-trees">
     <div class="section-hero__video-wrapper">
-      <video autoplay="autoplay" muted="muted" preload="metadata" title="Forest" loop="loop" class="video-background">
+      <video autoplay="autoplay" muted="muted" preload="metadata" title="Forest" loop="loop" playsinline="playsinline" class="video-background">
         <source src="{{ site.url }}/assets/vid/Forest_GettyImages-614587492.mp4" />
         <source src="{{ site.url }}/assets/vid/Forest_GettyImages-614587492.webmhd.webm" type="video/webm" />
         Your browser does not support the video tag.
@@ -166,7 +168,7 @@
       <div class="l-66-33--1">
       <figure>
         <div class="figure__wrapper">
-          <img src="{{ site.url }}/assets/imgs/art/6_Le-Gray_Chailly_BNF.jpg" alt="painting of trees" />
+          <img data-src="{{ site.url }}/assets/imgs/art/6_Le-Gray_Chailly_BNF.jpg" alt="painting of trees" />
         </div>
         <a class="figcaption-cta js-figcaption-cta">image credit</a>
         <figcaption><span class="title-of-art">The Pave de Chailly in the Forest Fontainebleau (cat 7)</span> 1865 | Monet | oil on canvas | Ordrupgaard Museum</figcaption>
@@ -198,7 +200,7 @@
     {% include('next-page.html') %}
   </section>
   <section class="js-section pp-scrollable" id="ambition-and-risk">
-    <div class="section-hero" style="background-image: url('{{ site.url }}/assets/imgs/art/section-header-14_Monet_luncheon_Art-Resource.jpg');">
+    <div class="section-hero" data-bg="{{ site.url }}/assets/imgs/art/section-header-14_Monet_luncheon_Art-Resource.jpg">
       <div class="section-hero__title has-solid-rectangles top-right">
         <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Ambition and Risk</h1>
         <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
@@ -217,7 +219,7 @@
       <div class="l-1up">
       <figure>
         <div class="figure__wrapper">
-          <img src="{{ site.url }}/assets/imgs/art/4_Watteau_Hunt_Bridgeman.jpg" alt="" />
+          <img data-src="{{ site.url }}/assets/imgs/art/4_Watteau_Hunt_Bridgeman.jpg" alt="" />
         </div>
         <a class="figcaption-cta js-figcaption-cta">image credit</a>
         <figcaption><span class="title-of-art">The Pave de Chailly in the Forest Fontainebleau (cat 7)</span> 1865 | Monet | oil on canvas | Ordrupgaard Museum</figcaption>
@@ -232,7 +234,7 @@
       <div class="l-1up">
       <figure>
         <div class="figure__wrapper">
-          <img src="{{ site.url }}/assets/imgs/art/3_Manet_luncheon_Art-Resource.jpg" alt="" />
+          <img data-src="{{ site.url }}/assets/imgs/art/3_Manet_luncheon_Art-Resource.jpg" alt="" />
         </div>
         <a class="figcaption-cta js-figcaption-cta">image credit</a>
         <figcaption><span class="title-of-art">The Pave de Chailly in the Forest Fontainebleau (cat 7)</span> 1865 | Monet | oil on canvas | Ordrupgaard Museum</figcaption>
@@ -247,7 +249,7 @@
     {% include('next-page.html') %}
   </section>
   <section class="js-section pp-scrollable" id="paris-modernity-and-leisure">
-    <div class="section-hero" style="background-image: url('{{ site.url }}/assets/imgs/art/Plaut_pont-neuf_BNF.jpg');">
+    <div class="section-hero" data-bg="{{ site.url }}/assets/imgs/art/Plaut_pont-neuf_BNF.jpg">
       {% include('section-hero-title--optiona.html') %}
     </div>
     <div class="container">
@@ -256,7 +258,7 @@
         <p><span class="dropcap">B</span>etween 1853 and 1870, Paris was in the midst of a vast urban redesign, commissioned by Napoleon III and executed by Baron Haussmann, that included the demolition of overcrowded neighborhoods dating to medieval times. The construction of wide avenues, parks and squares, and new apartment buildings transformed Paris into a modern city.</p>
         <figure>
           <div class="figure__wrapper">
-            <img src="{{ site.url }}/assets/imgs/art/19_Quai_Art-Resource.jpg" alt="" />
+            <img data-src="{{ site.url }}/assets/imgs/art/19_Quai_Art-Resource.jpg" alt="" />
           </div>
           <a class="figcaption-cta js-figcaption-cta">image credit</a>
           <figcaption><span class="title-of-art">The Pave de Chailly in the Forest Fontainebleau (cat 7)</span> 1865 | Monet | oil on canvas | Ordrupgaard Museum</figcaption>
@@ -279,7 +281,7 @@
         <!-- split the following text with croppings of the painting La Grenouillère -->
         <figure>
           <div class="figure__wrapper">
-            <img src="{{ site.url }}/assets/imgs/art/23_Grenouillere_MET-download.jpg" alt="" />
+            <img data-src="{{ site.url }}/assets/imgs/art/23_Grenouillere_MET-download.jpg" alt="" />
           </div>
           <a class="figcaption-cta js-figcaption-cta">image credit</a>
           <figcaption><span class="title-of-art">The Pave de Chailly in the Forest Fontainebleau (cat 7)</span> 1865 | Monet | oil on canvas | Ordrupgaard Museum</figcaption>
@@ -316,7 +318,7 @@
   </section>
   <section class="js-section pp-scrollable" id="monet-and-the-sea">
     <div class="section-hero__video-wrapper">
-      <video autoplay="autoplay" muted="muted" preload="metadata" title="Forest" loop="loop" class="video-background">
+      <video autoplay="autoplay" muted="muted" preload="metadata" title="Forest" loop="loop" playsinline="playsinline" class="video-background">
         <source src="{{ site.url }}/assets/vid/Etretat_GettyImages_150708198.mp4" />
         <source src="{{ site.url }}/assets/vid/Etretat_GettyImages_150708198.webmhd.webm" type="video/webm" />
         Your browser does not support the video tag.
@@ -335,7 +337,7 @@
       <h2 style="color:#ff0000;">Zoom or overlay here?</h2>
       <figure>
         <div class="figure__wrapper">
-          <img src="{{ site.url }}/assets/imgs/art/21_Etretat_Harvard.jpg" alt="" />
+          <img data-src="{{ site.url }}/assets/imgs/art/21_Etretat_Harvard.jpg" alt="" />
         </div>
         <a class="figcaption-cta js-figcaption-cta">image credit</a>
         <figcaption><span class="title-of-art">The Pave de Chailly in the Forest Fontainebleau (cat 7)</span> 1865 | Monet | oil on canvas | Ordrupgaard Museum</figcaption>
@@ -352,7 +354,7 @@
 
       <figure>
         <div class="figure__wrapper">
-          <img src="{{ site.url }}/assets/imgs/art/25_Trouville_Art-Resource.jpg" alt="" />
+          <img data-src="{{ site.url }}/assets/imgs/art/25_Trouville_Art-Resource.jpg" alt="" />
         </div>
         <a class="figcaption-cta js-figcaption-cta">image credit</a>
         <figcaption><span class="title-of-art">The Pave de Chailly in the Forest Fontainebleau (cat 7)</span> 1865 | Monet | oil on canvas | Ordrupgaard Museum</figcaption>
@@ -384,7 +386,7 @@
     {% include('next-page.html') %}
   </section>
   <section class="js-section pp-scrollable" id="camille-monet-the-known-and-the-unknown">
-    <div class="section-hero" style="background-image: url('{{ site.url }}/assets/imgs/art/Camille_green_dress.jpg');">
+    <div class="section-hero" data-bg="{{ site.url }}/assets/imgs/art/Camille_green_dress.jpg">
       <div class="section-hero__title has-solid-rectangles bottom-right">
         <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Camille Monet: The Known and the Unknown</h1>
         <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
@@ -396,7 +398,7 @@
       <div class="l-33-66--1">
       <figure>
         <div class="figure__wrapper">
-          <img src="{{ site.url }}/assets/imgs/art/15_Camile-Monet_Wikimedia-Commons.jpg" alt="" />
+          <img data-src="{{ site.url }}/assets/imgs/art/15_Camile-Monet_Wikimedia-Commons.jpg" alt="" />
         </div>
         <a class="figcaption-cta js-figcaption-cta">image credit</a>
         <figcaption><span class="title-of-art">The Pave de Chailly in the Forest Fontainebleau (cat 7)</span> 1865 | Monet | oil on canvas | Ordrupgaard Museum</figcaption>
@@ -412,7 +414,7 @@
     {% include('next-page.html') %}
   </section>
   <section class="js-section pp-scrollable" id="political-unrest">
-    <div class="section-hero" style="background-image: url('{{ site.url }}/assets/imgs/art/section-header-33_Franco-Prussian-War_-Paris.jpg');">
+    <div class="section-hero" data-bg="{{ site.url }}/assets/imgs/art/section-header-33_Franco-Prussian-War_-Paris.jpg">
       <div class="section-hero__title has-solid-rectangles top-right">
         <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Political Unrest</h1>
         <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
@@ -424,7 +426,7 @@
       <div class="l-1up">
         <figure>
           <div class="figure__wrapper">
-            <img src="{{ site.url }}/assets/imgs/art/26_Hyde-Park_NO-CREDIT-IN-BOOK.jpg" alt="" />
+            <img data-src="{{ site.url }}/assets/imgs/art/26_Hyde-Park_NO-CREDIT-IN-BOOK.jpg" alt="" />
           </div>
           <a class="figcaption-cta js-figcaption-cta">image credit</a>
           <figcaption><span class="title-of-art">The Pave de Chailly in the Forest Fontainebleau (cat 7)</span> 1865 | Monet | oil on canvas | Ordrupgaard Museum</figcaption>
@@ -453,7 +455,7 @@
         <blockquote>The people are dressed in dark colors, trying to protect themselves from that damp, cold weather. The gloom and anxiety of being in exile is very much present in this painting.</blockquote>
         <figure>
           <div class="figure__wrapper">
-            <img src="{{ site.url }}/assets/imgs/art/The-Port-of-Zaandam-Monet-1871.jpg" alt="" />
+            <img data-src="{{ site.url }}/assets/imgs/art/The-Port-of-Zaandam-Monet-1871.jpg" alt="" />
           <a class="figcaption-cta js-figcaption-cta">image credit</a>
           <figcaption><span class="title-of-art">The Pave de Chailly in the Forest Fontainebleau (cat 7)</span> 1865 | Monet | oil on canvas | Ordrupgaard Museum</figcaption>
           </div>
@@ -489,7 +491,7 @@
     {% include('next-page.html') %}
   </section>
   <section class="js-section pp-scrollable" id="training-your-eye-color">
-    <div class="section-hero" style="background-image: url('{{ site.url }}/assets/imgs/art/section-header-20_Magpie_Art-Resource.jpg');">
+    <div class="section-hero" data-bg="{{ site.url }}/assets/imgs/art/section-header-20_Magpie_Art-Resource.jpg">
       <div class="section-hero__title has-solid-rectangles top-left">
         <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Training Your Eye: Color</h1>
         <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
@@ -502,7 +504,7 @@
       <h3>The Magpie, 1869</h3>
         <figure>
           <div class="figure__wrapper">
-            <img src="{{ site.url }}/assets/imgs/art/20_Magpie_Art-Resource.jpg" alt="" />
+            <img data-src="{{ site.url }}/assets/imgs/art/20_Magpie_Art-Resource.jpg" alt="" />
           </div>
           <a class="figcaption-cta js-figcaption-cta">image credit</a>
           <figcaption><span class="title-of-art">The Pave de Chailly in the Forest Fontainebleau (cat 7)</span> 1865 | Monet | oil on canvas | Ordrupgaard Museum</figcaption>
@@ -512,7 +514,7 @@
         <h3>On the Bank of the Seine, Bennecourt, 1868</h3>
         <figure>
           <div class="figure__wrapper">
-            <img src="{{ site.url }}/assets/imgs/art/22_Bennecourt_Art-Resource.jpg" alt="" />
+            <img data-src="{{ site.url }}/assets/imgs/art/22_Bennecourt_Art-Resource.jpg" alt="" />
           </div>
           <a class="figcaption-cta js-figcaption-cta">image credit</a>
           <figcaption><span class="title-of-art">The Pave de Chailly in the Forest Fontainebleau (cat 7)</span> 1865 | Monet | oil on canvas | Ordrupgaard Museum</figcaption>

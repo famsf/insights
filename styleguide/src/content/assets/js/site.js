@@ -14,6 +14,15 @@
   Drupal.behaviors.site = {
     attach: function (context, settings) {
       // Start the slider
+      $.extend($.lazyLoadXT, {
+        autoInit: false,
+        edgeY:  10000,
+        visibleOnly: false
+      });
+      var lazyloadSection = function(section) {
+        $(section).find('img[data-src],div[data-bg]').lazyLoadXT();
+        console.log(section);
+      };
       $('.js-wordslider').bxSlider({
         mode: 'fade',
         pager: false,
@@ -46,10 +55,10 @@
           // Select the next active index section element by it's index.
           var nextActiveSection = nextIndex - 1;
           var sectionSelector = $('section.js-section').eq(nextActiveSection);
+          lazyloadSection(sectionSelector);
           // Get all the animated item in the section.
           var animatedItems = sectionSelector.find('*.animated');
           var numberOfAnimatedItems = animatedItems.length;
-
           // Function to animate things in the viewport.
           function animateInSectionView() {
             for (var i = 0; i < numberOfAnimatedItems; i++) {
@@ -66,7 +75,12 @@
             animateInSectionView();
           });
         },
-        afterLoad: function(anchorLink, index){},
+        afterLoad: function(anchorLink, index){
+          // Start lazy load on the first active section.
+          var firstSection = $('.js-section.active');
+          lazyloadSection(firstSection);
+          $('.js-loading').fadeOut(100);
+        },
         afterRender: function(){},
       });
       $('.js-next-page').click( function() {
