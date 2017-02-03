@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.digital_story.field_addthis_code
     - field.field.node.digital_story.field_header_section
     - field.field.node.digital_story.field_main_navigation
     - field.field.node.digital_story.field_section
@@ -40,5 +41,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
+  field_addthis_code: true
   field_main_navigation: true
   links: true

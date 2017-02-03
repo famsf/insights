@@ -92,7 +92,7 @@
             lazyloadSection(firstSection, hideLoader());
           },
         });
-        $('.js-next-page').click( function() {
+        $('.js-next-page', context).click( function() {
           $.fn.pagepiling.moveSectionDown();
         });
       } else {

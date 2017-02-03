@@ -16,7 +16,7 @@
       // Close all expander elenments that need to be closed initially.
       $('.js-share-expander--is-closed').hide(0);
       // Function for expander component to expand and collapse.
-      $('.js-share-button').click(function(){
+      $('.js-share-button', context).click(function(){
         // Define the target expandable div.
         var changeThisPanel = $(this).parents('.js-share').find('.js-share-expander');
 

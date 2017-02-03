@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.card_section.field_card_section_title
+    - field.field.paragraph.card_section.field_display_share_widget
     - field.field.paragraph.card_section.field_scrollable
     - field.field.paragraph.card_section.field_sections_in_card
     - paragraphs.paragraphs_type.card_section
@@ -21,6 +22,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_display_share_widget:
+    weight: 3
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
   field_scrollable:
     weight: 2
     label: hidden
