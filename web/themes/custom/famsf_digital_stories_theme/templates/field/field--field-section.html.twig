@@ -24,11 +24,11 @@
 
 {% if label_hidden %}
     {% if multiple %}
-        <main{{ attributes.addClass('js-pagepiling') }}>
+        <div{{ attributes }}>
             {% for item in items %}
                 {{ item.content }}
             {% endfor %}
-        </main>
+        </div>
     {% else %}
         {% for item in items %}
             {{ item.content }}

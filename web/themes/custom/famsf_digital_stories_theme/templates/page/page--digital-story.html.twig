@@ -37,26 +37,13 @@
  */
 #}
 
-
-<header role="banner">
-  {{ page.header }}
-</header>
-
 {{ page.main_nav }}
 
 
-<main role="main" class="digital-story">
+<main role="main" class="digital-story js-pagepiling">
 
   <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
   {{ page.content }}
 
 </main>
-
-{% if page.footer %}
-  <footer role="contentinfo">
-    {{ page.footer }}
-  </footer>
-{% endif %}
-
-
