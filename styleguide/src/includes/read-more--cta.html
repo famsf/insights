@@ -6,7 +6,7 @@
 {% block component %}
 
 <div class="container">
-  <button class="button-with-icon js-icon--read-more"> 
+  <button class="button-with-icon js-icon--read-more" data-text-collapsed="Click to Read More About Monet&rsquo;s Influences" data-text-expanded="Hide this section">
     <i class="js-icon-arrow--down">
       <span class="icon--large-responsive">{% include('svg/famsf-arrow-down-lg.html') %}</span>
       <span class="icon--med-responsive">{% include('svg/famsf-arrow-down-md.html') %}</span>
@@ -15,7 +15,7 @@
       <span class="icon--large-responsive">{% include('svg/famsf-arrow-up-lg.html') %}</span>
       <span class="icon--med-responsive">{% include('svg/famsf-arrow-up-md.html') %}</span>
     </i>
-    <div>Click to Read More About Monet&rsquo;s Influences</div>
+    <div class="button-with-icon__text">Click to Read More About Monet&rsquo;s Influences</div>
   </button>
 </div>
 
