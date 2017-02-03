@@ -6,6 +6,7 @@
  */
 
 .comparison {
+  margin-bottom: rhythm(2);
   @include breakpoint ($bp2) {
     display: -webkit-flex;
     display: flex;

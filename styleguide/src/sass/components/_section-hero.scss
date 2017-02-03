@@ -8,6 +8,7 @@
 .section-hero {
   @extend %hero;
   height: 90vh;
+  margin-bottom: rhythm(2);
 
   &.has-video {
     position: absolute;
