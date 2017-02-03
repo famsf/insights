@@ -7,19 +7,23 @@
 
 figure {
   position: relative;
-  margin: 0;
   padding: 0;
   width: 100%;
   height: auto;
-
-  @include breakpoint($bp3) {
-    margin-bottom: 1.5em;
-  }
+  margin: 0;
 
   img {
     z-index: 0;
     margin: 0;
     display: block;
+  }
+
+  .l-2up &,
+  .l-33-66--1 &,
+  .l-33-66--2 &,
+  .l-66-33--1 &,
+  .l-66-33--2 & {
+    margin-bottom: rhythm(1);
   }
 }
 
@@ -49,6 +53,7 @@ figure {
 .figcaption-cta {
   cursor: pointer;
   padding: .5rem 0;
+  display: block;
 }
 
 .figcaption-cta,
@@ -79,7 +84,6 @@ figcaption,
   padding: .75rem;
   margin-top: .8rem;
   margin-bottom: .8rem;
-  width: 100%;
   -webkit-transition: all .5s ease;
   -moz-transition: all .5s ease;
   -o-transition: all .5s ease;
@@ -88,7 +92,7 @@ figcaption,
   background-color: $primary;
   position: relative;
   color: $text-color-invert;
-  font-weight: 300;
+  font-weight: 400;
 
   .title-of-art {
     font-family: $roboto-slab;
@@ -97,7 +101,7 @@ figcaption,
   }
 
   &.js-figcaption--revealed {
-    display: block;
+    display: inline-block;
   }
 }
 
