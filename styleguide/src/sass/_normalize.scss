@@ -218,8 +218,8 @@ dfn {
  */
 
 p {
-  @include leader(.75, $text);
-  @include trailer(.75, $text);
+  @include leader(1, $text);
+  @include trailer(1, $text);
 }
 
 h1 {
