@@ -22,10 +22,10 @@
         var changeThisPanel = $(this).parents('.js-deep-dive').find('.js-deep-dive__wrapper');
 
         // Load button text from data attribute when div is expanded.
-        var expandedText = 'Click to Close';
+        var expandedText = $(this).data('text-expanded');
 
         // Load button text from data attribute when div is collapsed.
-        var collapsedText = 'Click to Read More About Monet\'s Influences';
+        var collapsedText = $(this).data('text-collapsed');
 
         var ThisSection = $(this).parents('.section');
 
@@ -34,7 +34,7 @@
           buttonClicked.find('.js-icon-arrow--up').show(0);
           buttonClicked.find('.js-icon-arrow--down').hide(0);
           changeThisPanel.removeClass("js-expander--is-closed").addClass("js-expander--is-open").slideDown(300);
-          buttonClicked.find('div').html(expandedText).attr('title', expandedText);
+          buttonClicked.find('.button-with-icon__text').html(expandedText).attr('title', expandedText);
           /* @Todo:  scroll section up to top of page after expanding. */
           $('html, body').animate({
             scrollTop: changeThisPanel.offset().top
@@ -46,7 +46,7 @@
           buttonClicked.find('.js-icon-arrow--down').show(0);
           buttonClicked.find('.js-icon-arrow--up').hide(0);
           changeThisPanel.removeClass("js-expander--is-open").addClass("js-expander--is-closed").slideUp(300);
-          buttonClicked.find('div').html(collapsedText).attr('title', collapsedText);
+          buttonClicked.find('.button-with-icon__text').html(collapsedText).attr('title', collapsedText);
         }
       });
     }
