@@ -7,6 +7,7 @@ global-styling:
     js/jquery.bxslider.js: {}
     js/jquery.pagepiling.js: {}
     js/css3-animate-it.js: {}
+    js/share_expander.js: {}
     js/site.js: {}
   dependencies:
     - core/drupal

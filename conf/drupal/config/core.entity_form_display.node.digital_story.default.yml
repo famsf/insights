@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.digital_story.field_addthis_code
     - field.field.node.digital_story.field_header_section
     - field.field.node.digital_story.field_main_navigation
     - field.field.node.digital_story.field_section
@@ -21,6 +22,13 @@ content:
     weight: 2
     settings: {  }
     third_party_settings: {  }
+  field_addthis_code:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   field_header_section:
     type: entity_reference_paragraphs
     weight: 6
