@@ -82,8 +82,6 @@
       $('.js-next-page').click( function() {
         $.fn.pagepiling.moveSectionDown();
       });
-      // hide last card "next page" button
-      $('.js-next-page:last').hide();
     }
   };
 })(jQuery, Drupal);

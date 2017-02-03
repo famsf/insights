@@ -67,7 +67,10 @@
  *
  */
 #}
-<article{{ attributes }}>
+{% set classes = [
+logged_in? 'admin__article'
+] %}
+<article{{ attributes.addClass(classes) }}>
 
     {{ title_prefix }}
     {% if not page %}
