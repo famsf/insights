@@ -18,7 +18,11 @@ figure {
     display: block;
   }
 
-  .l-2up & {
+  .l-2up &,
+  .l-33-66--1 &,
+  .l-33-66--2 &,
+  .l-66-33--1 &,
+  .l-66-33--2 & {
     margin-bottom: rhythm(1);
   }
 }
