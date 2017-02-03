@@ -5,6 +5,8 @@ global-styling:
       css/themes/legion/legion-dark.css: {}
   js:
     js/jquery.bxslider.js: {}
+    js/jquery.lazyloadxt.extra.js: {}
+    js/jquery.lazyloadxt.bg.js: {}
     js/jquery.pagepiling.js: {}
     js/css3-animate-it.js: {}
     js/share_expander.js: {}
