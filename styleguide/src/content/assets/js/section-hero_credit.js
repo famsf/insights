@@ -11,7 +11,7 @@
 
 (function ($) {
 
-  Drupal.behaviors.image_credit = {
+  Drupal.behaviors.section_hero_image_credit = {
     attach: function(context, settings) {
       $('.js-section-hero__figcaption-cta').click(function(){
         // Define the target expandable div.
