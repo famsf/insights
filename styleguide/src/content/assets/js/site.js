@@ -13,74 +13,104 @@
 
   Drupal.behaviors.site = {
     attach: function (context, settings) {
-      // Create an array of section IDs for the page card deck.
-      var sectionElements = $('.js-section');
-      var sectionIds = [];
-      function getSectionIds() {
-        for (var i = sectionElements.length - 1; i >= 0; i--) {
-          sectionIds.unshift($(sectionElements[i]).attr('id'));
-        }
-      }
-      getSectionIds();
 
-      // Start the slider
+      if ($('.js-pagepiling').length) {
+        // The user is on a page that uses pagepiling.js.
+        // Create an array of section IDs for the pagepiling card deck.
+        // This is required to create hashtag sections and scroll-to links.
+        var sectionElements = $('.js-section');
+        var sectionIds = [];
+        var getSectionIds = function () {
+          for (var i = sectionElements.length - 1; i >= 0; i--) {
+            sectionIds.unshift($(sectionElements[i]).attr('id'));
+          }
+        };
+        getSectionIds();
+        // Configure Lazy load to not run automatically.
+        $.extend($.lazyLoadXT, {
+          autoInit: false,
+          edgeY:  10000,
+          visibleOnly: false
+        });
+        // Helper function so we can activate lazy load by section.
+        var lazyloadSection = function(section, complete) {
+          $(section).find('img[data-src],div[data-bg]').lazyLoadXT({oncomplete: complete});
+        };
+        // Initialize pagepiling.
+        $('.js-pagepiling').pagepiling({
+          menu: null,
+          direction: 'vertical',
+          verticalCentered: false,
+          sectionsColor: [],
+          anchors: sectionIds,
+          scrollingSpeed: 700,
+          easing: 'swing',
+          loopBottom: false,
+          loopTop: false,
+          css3: true,
+          navigation: false,
+          normalScrollElements: null,
+          normalScrollElementTouchThreshold: 5,
+          touchSensitivity: 5,
+          keyboardScrolling: true,
+          sectionSelector: '.js-section',
+          animateAnchor: false,
+
+          //events
+          onLeave: function(index, nextIndex, direction){
+            // Actions when the user transitions to a new card.
+            // Select the next active index section element by it's index.
+            var nextActiveSection = nextIndex - 1;
+            var sectionSelector = $('section.js-section').eq(nextActiveSection);
+            lazyloadSection(sectionSelector);
+            // Get all the animated items in the section.
+            var animatedItems = sectionSelector.find('*.animated');
+            var numberOfAnimatedItems = animatedItems.length;
+            // Function to animate things in the viewport.
+            function animateInSectionView() {
+              for (var i = 0; i < numberOfAnimatedItems; i++) {
+                if ($(animatedItems[i]).position().top < $(sectionSelector).height()){
+                  $(animatedItems[i]).addClass('go');
+                }
+              }
+            }
+            // Run animations when the new card is initially visible.
+            animateInSectionView();
+
+            // Trigger all animation in view on scroll.
+            sectionSelector.scroll(function () {
+              animateInSectionView();
+            });
+          },
+          afterLoad: function(anchorLink, index){},
+          afterRender: function(){
+            // Complete lazy load on the first active section and hide the loader.
+            var firstSection = $('.js-section.active');
+            var hideLoader = function() {
+              $('.js-loading').fadeOut(200);
+            };
+            lazyloadSection(firstSection, hideLoader());
+          },
+        });
+        $('.js-next-page').click( function() {
+          $.fn.pagepiling.moveSectionDown();
+        });
+      } else {
+        // The user is on a page that is  not using pagepiling so we should lazy load with auto init.
+        $.extend($.lazyLoadXT, {
+          autoInit: true,
+          visibleOnly: false,
+          selector: 'img[data-src],div[data-bg]'
+        });
+      }
+
+      // Start the word fade slider
       $('.js-wordslider').bxSlider({
         mode: 'fade',
         pager: false,
         auto: true,
-        speed: 1000,
-        pause: 1500
-
-      });
-      $('.js-pagepiling').pagepiling({
-        menu: null,
-        direction: 'vertical',
-        verticalCentered: false,
-        sectionsColor: [],
-        anchors: sectionIds,
-        scrollingSpeed: 700,
-        easing: 'swing',
-        loopBottom: false,
-        loopTop: false,
-        css3: true,
-        navigation: false,
-        normalScrollElements: null,
-        normalScrollElementTouchThreshold: 5,
-        touchSensitivity: 5,
-        keyboardScrolling: true,
-        sectionSelector: '.js-section',
-        animateAnchor: false,
-
-        //events
-        onLeave: function(index, nextIndex, direction){
-          // Select the next active index section element by it's index.
-          var nextActiveSection = nextIndex - 1;
-          var sectionSelector = $('section.js-section').eq(nextActiveSection);
-          // Get all the animated item in the section.
-          var animatedItems = sectionSelector.find('*.animated');
-          var numberOfAnimatedItems = animatedItems.length;
-
-          // Function to animate things in the viewport.
-          function animateInSectionView() {
-            for (var i = 0; i < numberOfAnimatedItems; i++) {
-              if ($(animatedItems[i]).position().top < $(sectionSelector).height()){
-                $(animatedItems[i]).addClass('go');
-              }
-            }
-          }
-          // Run animations when the new card is initially visible.
-          animateInSectionView();
-
-          // Trigger all animation in view on scroll.
-          sectionSelector.scroll(function () {
-            animateInSectionView();
-          });
-        },
-        afterLoad: function(anchorLink, index){},
-        afterRender: function(){},
-      });
-      $('.js-next-page').click( function() {
-        $.fn.pagepiling.moveSectionDown();
+        speed: 2000,
+        pause: 3000
       });
     }
   };

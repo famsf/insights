@@ -28,6 +28,8 @@
 @import "grid-layouts/l-66-33";
 
 /* Component (SMACSS module) rules */
+@import "components/loading";
+@import "components/lazy";
 @import "components/admin";
 @import "components/audio";
 @import "components/blockquote";
@@ -47,6 +49,7 @@
 @import "components/site-hero";
 @import "components/typography";
 @import "components/video-background";
+@import "components/wordslider";
 @import "components/zoom-effects";
 
 /* Styleguide Specific rules */
