@@ -220,6 +220,12 @@ dfn {
 p {
   @include leader(1, $text);
   @include trailer(1, $text);
+
+  .l-1up & {
+    @include breakpoint($bp3) {
+      max-width: 75%;
+    }
+  }
 }
 
 h1 {
