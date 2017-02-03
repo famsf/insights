@@ -217,6 +217,11 @@ dfn {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
+p {
+  @include leader(.75, $text);
+  @include trailer(.75, $text);
+}
+
 h1 {
   @extend %display-type;
   // Set the font-size and line-height while keeping a proper vertical rhythm.
