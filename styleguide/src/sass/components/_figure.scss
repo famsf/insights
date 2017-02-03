@@ -52,12 +52,14 @@ figure {
 }
 
 .figcaption-cta,
-figcaption {
+figcaption,
+.figcaption {
   font-size: .65rem;
   line-height: .9rem;
 }
 
-figcaption::after {
+figcaption::after,
+.figcaption::after {
   bottom: 100%;
   left: 1.5rem;
   border: solid transparent;
@@ -72,7 +74,8 @@ figcaption::after {
   margin-left: -12px;
 }
 
-figcaption {
+figcaption,
+.figcaption {
   padding: .75rem;
   margin-top: .8rem;
   margin-bottom: .8rem;

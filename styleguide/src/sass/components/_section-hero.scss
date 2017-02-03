@@ -5,6 +5,7 @@
  * @copyright Copyright (c) 2017 Palantir.net
  */
 
+
 .section-hero {
   @extend %hero;
   height: 90vh;
@@ -13,6 +14,10 @@
     position: absolute;
     top: 0;
   }
+}
+
+.section-hero__figcaption {
+  padding: 0 rhythm(.5);
 }
 
 .section-hero__title {
