@@ -28,7 +28,7 @@
   @extend %clearfix;
   width: 100%;
   min-width: 260px; /* enforces a min-width in FF. */
-  padding: 0 rhythm(1);
+  padding: rhythm(1);
   margin: 0 auto;
 
   @include breakpoint($bp2) {
