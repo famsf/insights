@@ -3,12 +3,14 @@
   usage: Images with credits may appear in several contexts throughout the site. Zoom must be used with zoom modal include.
 #}
 
+<!-- note: modal content does not currently lazy load. -->
+
 {% block component %}
   <figure class="figure__zoomable js-figure__zoomable" >
     <div class="figure__zoomable-boundary">
-      <div class="figure--wrapper figure__zoomable-child js-figure__zoomable-child" style="background-image: url('{{ site.url }}/assets/imgs/art/bodmer_fullsize.jpg');">
+      <div class="figure--wrapper figure__zoomable-child js-figure__zoomable-child" data-bg="{{ site.url }}/assets/imgs/art/bodmer_fullsize.jpg">
       </div>
-      <img style="visibility: hidden;" src="{{ site.url }}/assets/imgs/art/bodmer_fullsize.jpg" alt="bodmer" />
+      <img style="visibility: hidden;" data-src="{{ site.url }}/assets/imgs/art/bodmer_fullsize.jpg" alt="bodmer" />
 
       <div class="zoom-group js-zoom-group">
         <div class="zoom-marker-outer js-zoom-marker-outer" style="position: absolute; left:65%; top: 60%;">
