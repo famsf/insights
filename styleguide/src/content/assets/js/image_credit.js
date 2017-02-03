@@ -13,7 +13,7 @@
 
   Drupal.behaviors.image_credit = {
     attach: function(context, settings) {
-      $('.js-figcaption-cta').click(function(){
+      $('.js-figcaption-cta', context).click(function(){
         // Define the target expandable div.
         var targetImage = $(this).parents('figure').find('figcaption');
         targetImage.toggleClass('js-figcaption--hidden js-figcaption--revealed');

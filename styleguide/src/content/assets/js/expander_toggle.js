@@ -16,7 +16,7 @@
       // Close all expander elenments that need to be closed initially.
       $('.js-expander--is-closed').hide(0);
       // Function for expander component to expand and collapse.
-      $('.js-icon--read-more').click(function(){
+      $('.js-icon--read-more', context).click(function(){
         var buttonClicked = $(this);
         // Define the target expandable div.
         var changeThisPanel = $(this).parents('.js-deep-dive').find('.js-deep-dive__wrapper');

@@ -16,7 +16,7 @@
       // Close all expander elenments that need to be closed initially.
       $('.js-comparison__answer--is-closed').hide(0);
       // Function for expander component to expand and collapse.
-      $('.js-comparison__button').click(function(){
+      $('.js-comparison__button', context).click(function(){
 
         var buttonClicked = $(this);
 
