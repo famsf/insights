@@ -20,3 +20,22 @@ function famsf_digital_stories_theme_preprocess_node(&$variables) {
         $variables['#attached']['library'][] = 'famsf_digital_stories_theme/' . $library->value;
     }
 }
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function famsf_digital_stories_theme_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+        $content_type = $node->bundle();
+        $suggestions[] = 'page__' . $content_type;
+    }
+}
+
+/**
+ * Implements hook_theme_suggestions_region_alter().
+ */
+function famsf_digital_stories_theme_theme_suggestions_region_alter(array &$suggestions, array $variables) {
+    if ($node = \Drupal::routeMatch()->getParameter('node')) {
+        $content_type = $node->bundle();
+        $suggestions[] = 'region__' . $content_type;
+    }
+}

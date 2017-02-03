@@ -3,8 +3,16 @@ global-styling:
   css:
     theme:
       css/themes/legion/legion-dark.css: {}
+  js:
+    js/jquery.bxslider.js: {}
+    js/jquery.pagepiling.js: {}
+    js/css3-animate-it.js: {}
+    js/site.js: {}
   dependencies:
+    - core/drupal
+    - core/drupalSettings
     - core/jquery
+
 legion-dark:
   css:
       theme:

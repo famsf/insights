@@ -3,6 +3,8 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.card_section.field_card_section_title
+    - field.field.paragraph.card_section.field_scrollable
     - field.field.paragraph.card_section.field_sections_in_card
     - paragraphs.paragraphs_type.card_section
   module:
@@ -12,9 +14,22 @@ targetEntityType: paragraph
 bundle: card_section
 mode: default
 content:
+  field_card_section_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_scrollable:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
   field_sections_in_card:
     type: entity_reference_paragraphs
-    weight: 0
+    weight: 2
     settings:
       title: Paragraph
       title_plural: Paragraphs
