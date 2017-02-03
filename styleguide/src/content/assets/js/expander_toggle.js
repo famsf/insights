@@ -31,8 +31,8 @@
 
         // Toggle the button and panel states.
         if (changeThisPanel.hasClass("js-expander--is-closed")) {
-          buttonClicked.find('.js-icon-arrow--up').show(0);
-          buttonClicked.find('.js-icon-arrow--down').hide(0);
+          buttonClicked.find('.js-icon-arrow--minus').show(0);
+          buttonClicked.find('.js-icon-arrow--plus').hide(0);
           changeThisPanel.removeClass("js-expander--is-closed").addClass("js-expander--is-open").slideDown(300);
           buttonClicked.find('.button-with-icon__text').html(expandedText).attr('title', expandedText);
           /* @Todo:  scroll section up to top of page after expanding. */
@@ -43,8 +43,8 @@
 
         }
         else if (changeThisPanel.hasClass("js-expander--is-open")) {
-          buttonClicked.find('.js-icon-arrow--down').show(0);
-          buttonClicked.find('.js-icon-arrow--up').hide(0);
+          buttonClicked.find('.js-icon-arrow--plus').show(0);
+          buttonClicked.find('.js-icon-arrow--minus').hide(0);
           changeThisPanel.removeClass("js-expander--is-open").addClass("js-expander--is-closed").slideUp(300);
           buttonClicked.find('.button-with-icon__text').html(collapsedText).attr('title', collapsedText);
         }

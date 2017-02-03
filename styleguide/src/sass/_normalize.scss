@@ -24,10 +24,10 @@ html {
   // Correct text resizing oddly in IE 6/7 when body `font-size` is set using
   // `em` units.
   color: $text-color;
-  font-size: ($base-font-size / 16px) * 100%;
+  font-size: ($base-font-size / 18px) * 100%;
   line-height: ($base-line-height / $base-font-size) * 1em;
   font-family: $base-font-family; /* 1 */
-  font-weight: 400;
+  font-weight: 300;
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -webkit-font-smoothing: antialiased;
@@ -39,10 +39,10 @@ html {
   // to the value to the mixin adjust-font-size-to in the mixins
   // file as a point value to maintain font-size across breakpoints.
   @include breakpoint($bp2) {
-    font-size: ($base-font-size / 16px) * 112%;
+    font-size: ($base-font-size / 18px) * 112%;
   }
   @include breakpoint($bp3) {
-    font-size: ($base-font-size / 16px) * 124%;
+    font-size: ($base-font-size / 18px) * 124%;
   }
   // Styles below are needed for the pagepiling js library
   // overflow:hidden;
@@ -217,6 +217,17 @@ dfn {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
+p {
+  @include leader(1, $text);
+  @include trailer(1, $text);
+
+  .l-1up & {
+    @include breakpoint($bp3) {
+      max-width: 75%;
+    }
+  }
+}
+
 h1 {
   @extend %display-type;
   // Set the font-size and line-height while keeping a proper vertical rhythm.
@@ -233,7 +244,7 @@ h2 {
   @include adjust-font-size-to($h2-font-size, 1.5);
   @include leader(1.25, $h2-font-size);
   @include trailer(.5, $h2-font-size);
-  font-weight: 400;
+  font-weight: 300;
   font-family: $roboto-slab;
 }
 
