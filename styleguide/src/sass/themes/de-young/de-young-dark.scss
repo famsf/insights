@@ -1,6 +1,6 @@
 /**
  * @file
- * Defines the custom Legion Light theme.
+ * Defines the custom De Young Dark theme.
  *
  * When loaded, this file will override the base color scheme.
  */
@@ -19,35 +19,36 @@ $white-60: rgba($white, .6);
 $azure: #1c90cf;
 $azure-60: #77bce2;
 $indigo: #0f6088;
-$pink-10: #fbf6f8;
-$pink-30: #f2e5ea;
-$peach: #ebd0d2;
-$melon: #e0b9bb;
+$pink: #d3a9ba;
+$pink-70: #e0c3cf;
 $magenta: #922b55;
+$yellow: #ffd878;
+$gold: #edb23e;
 $sea: #216780;
 $denim: #10465b;
 $midnight: #0a2f3d;
 $ink: #03161e;
 
-$background-a: $pink-30;
-$background-b: $peach;
-$background-c: $peach;
-$background-d: $melon;
-$border: $pink-30;
-$text-color: $ink;
-$text-color-invert: $pink-30;
-$primary: $denim;
-$primary-active: $midnight;
-$secondary: $azure;
-$tertiary: darken($magenta, 5%);
+$background-a: $sea;
+$background-b: $denim;
+$background-c: $midnight;
+$background-d: $ink;
+$border: $sea;
+$text-color: $white;
+$text-color-invert: $midnight;
+$primary: $yellow;
+$primary-active: $gold;
+$secondary: $azure-60;
+$tertiary: $pink-70;
 
-$dotted-border: url('../../../imgs/dots-light.svg');
-$rectangles-border: url('../../../imgs/rectangles-light.svg');
-$zoom-background: $pink-10;
-$text-shadow-color: $azure-60;
+$dotted-border: url('../../../imgs/dots-dark.svg');
+$rectangles-border: url('../../../imgs/rectangles-dark.svg');
+$zoom-background: $midnight;
+$text-shadow-color: $yellow;
 
 // Import the global theme styles.
 @import '../../global';
 
 // Import theme specific components
 // @import 'components/banner';
+

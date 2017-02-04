@@ -1,8 +1,5 @@
 global-styling:
   version: 1.x
-  css:
-    theme:
-      css/themes/legion/legion-dark.css: {}
   js:
     js/jquery.bxslider.js: {}
     js/jquery.lazyloadxt.extra.js: {}
@@ -25,3 +22,13 @@ legion-light:
   css:
       theme:
         css/themes/legion/legion-light.css: {}
+
+de-young-light:
+  css:
+      theme:
+        css/themes/de-young/de-young-light.css: {}
+
+de-young-dark:
+  css:
+      theme:
+        css/themes/de-young/de-young-dark.css: {}
