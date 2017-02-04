@@ -5,15 +5,23 @@
  * @copyright Copyright (c) 2017 Palantir.net
  */
 
+
 .section-hero {
+  margin-bottom: rhythm(1);
+}
+
+.section-hero__wrapper {
   @extend %hero;
   height: 90vh;
-  margin-bottom: rhythm(1);
 
   &.has-video {
     position: absolute;
     top: 0;
   }
+}
+
+.section-hero__figcaption {
+  padding: 0 rhythm(.5);
 }
 
 .section-hero__title {

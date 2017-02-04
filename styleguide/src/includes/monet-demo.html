@@ -47,11 +47,17 @@
   <!-- Contending with Convention -->
 
   <section class="js-section pp-scrollable" id="contending-with-convention">
-    <div class="section-hero" data-bg="{{ site.url }}/assets/imgs/art/section-header-Exposition_universelle_des_beaux-arts.jpg">
-      <div class="section-hero__title has-solid-rectangles top-left">
-        <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Contending with Convention</h1>
-        <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
-        <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
+    <div class="section-hero">
+      <div class="section-hero__wrapper" data-bg="{{ site.url }}/assets/imgs/art/section-header-Exposition_universelle_des_beaux-arts.jpg">
+        <div class="section-hero__title has-solid-rectangles top-left">
+          <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Contending with Convention</h1>
+          <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
+          <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
+        </div>
+      </div>
+      <div class="section-hero__figcaption">
+        <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
+        <span class="figcaption"><span class="title-of-art">L’exposition des Beaux-Arts</span> Gustave Doré | 1868 | Engraving | 32 x 55.3 cm | Bibliothèque nationale, Paris.</span>
       </div>
     </div>
     <section class="card-section">
@@ -151,18 +157,7 @@
   <!-- See the Forest for the Trees -->
 
   <section class="js-section pp-scrollable" id="see-the-forest-through-the-trees">
-    <div class="section-hero__video-wrapper">
-      <video autoplay="autoplay" muted="muted" preload="metadata" title="Forest" loop="loop" playsinline="playsinline" class="video-background">
-        <source src="{{ site.url }}/assets/vid/Forest_GettyImages-614587492.mp4" />
-        <source src="{{ site.url }}/assets/vid/Forest_GettyImages-614587492.webmhd.webm" type="video/webm" />
-        Your browser does not support the video tag.
-      </video>
-      <div class="section-hero has-video">
-        <div class="section-hero__title has-dotted-border bottom-left">
-          <h1>See the Forest for the Trees</h1>
-        </div>
-      </div>
-    </div>
+    {% include('section-hero--video.html') %}
     <section class="card-section">
       <div class="container">
         <div class="l-1up">
@@ -209,11 +204,17 @@
   <!-- Ambition and Risk -->
 
   <section class="js-section pp-scrollable" id="ambition-and-risk">
-    <div class="section-hero" data-bg="{{ site.url }}/assets/imgs/art/section-header-14_Monet_luncheon_Art-Resource.jpg">
-      <div class="section-hero__title has-solid-rectangles top-right">
-        <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Ambition and Risk</h1>
-        <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
-        <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
+    <div class="section-hero">
+      <div class="section-hero__wrapper" data-bg="{{ site.url }}/assets/imgs/art/section-header-14_Monet_luncheon_Art-Resource.jpg">
+        <div class="section-hero__title has-solid-rectangles top-right">
+          <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Ambition and Risk</h1>
+          <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
+          <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
+        </div>
+      </div>
+      <div class="section-hero__figcaption">
+        <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
+        <span class="figcaption"><span class="title-of-art">Luncheon on the Grass</span> Claude Monet | 1865–1866 | Oil on canvas | 97 5/8 x 85 3/8 in. (248 x 217 cm) | Musée d'Orsay, Paris, RF 1987 12</span>
       </div>
     </div>
     <section class="card-section">
@@ -262,16 +263,15 @@
   <!-- Paris and Modernity -->
 
   <section class="js-section pp-scrollable" id="paris-modernity-and-leisure">
-    <div class="section-hero" data-bg="{{ site.url }}/assets/imgs/art/Plaut_pont-neuf_BNF.jpg">
-      {% include('section-hero-title--optiona.html') %}
-    </div>
-    <section class="card-section">
-      <div class="container">
-        <div class="l-1up">
-          <p><span class="dropcap">B</span>etween 1853 and 1870, Paris was in the midst of a vast urban redesign, commissioned by Napoleon III and executed by Baron Haussmann, that included the demolition of overcrowded neighborhoods dating to medieval times. The construction of wide avenues, parks and squares, and new apartment buildings transformed Paris into a modern city.</p>
-        </div>
+    <div class="section-hero">
+      <div class="section-hero__wrapper" data-bg="{{ site.url }}/assets/imgs/art/Plaut_pont-neuf_BNF.jpg">
+        {% include('section-hero-title--optiona.html') %}
       </div>
-    </section>
+      <div class="section-hero__figcaption">
+        <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
+        <span class="figcaption"><span class="title-of-art">Le Pont-Neuf et Île de la Cité</span> Charles-Henri Plaut | ca. 1865–1870 | Photograph | 13 3/8 x 12 5/8 in. (34 x 32 cm) | Bibliothèque nationale de France, Paris, PETFOL-VE-1431 | © Bibliothèque nationale de France</span>
+      </div>
+    </div>
     <section class="card-section">
       <div class="container">
         <div class="l-2up">
@@ -465,11 +465,13 @@
   <!-- Camille Monet: The Known and the Unknown -->
 
   <section class="js-section pp-scrollable" id="camille-monet-the-known-and-the-unknown">
-    <div class="section-hero" data-bg="{{ site.url }}/assets/imgs/art/Camille_green_dress.jpg">
-      <div class="section-hero__title has-solid-rectangles bottom-right">
-        <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Camille Monet: The Known and the Unknown</h1>
-        <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
-        <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
+    <div class="section-hero">
+      <div class="section-hero__wrapper" data-bg="{{ site.url }}/assets/imgs/art/Camille_green_dress.jpg">
+        {% include('section-hero-title--optionc.html') %}
+      </div>
+      <div class="section-hero__figcaption">
+        <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
+        <span class="figcaption"><span class="title-of-art">Camille (The Woman with a Green Dress)</span> Claude Monet | 1866 | Oil on canvas | 91 x 59 1/2 in. (231 x 151 cm) | Kunsthalle Bremen, acquired with the assistance of  Galerievereins, 1906, Inv. Nr. 298-1906/1 | © Kunsthalle Bremen. Foto: Karen Blindow</span>
       </div>
     </div>
     <section class="card-section">
@@ -495,11 +497,17 @@
   <!-- Political Unrest -->
 
   <section class="js-section pp-scrollable" id="political-unrest">
-    <div class="section-hero" data-bg="{{ site.url }}/assets/imgs/art/section-header-33_Franco-Prussian-War_-Paris.jpg">
-      <div class="section-hero__title has-solid-rectangles top-right">
-        <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Political Unrest</h1>
-        <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
-        <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
+    <div class="section-hero">
+      <div class="section-hero__wrapper" data-bg="{{ site.url }}/assets/imgs/art/section-header-33_Franco-Prussian-War_-Paris.jpg">
+        <div class="section-hero__title has-solid-rectangles top-right">
+          <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Political Unrest</h1>
+          <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
+          <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
+        </div>
+      </div>
+      <div class="section-hero__figcaption">
+        <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
+        <span class="figcaption"><span class="title-of-art">MISSING IMAGE CREDIT</span>
       </div>
     </div>
     <section class="card-section">
@@ -587,11 +595,17 @@
   <!-- Training Your Eye: Color -->
 
   <section class="js-section pp-scrollable" id="training-your-eye-color">
-    <div class="section-hero" data-bg="{{ site.url }}/assets/imgs/art/section-header-20_Magpie_Art-Resource.jpg">
-      <div class="section-hero__title has-solid-rectangles top-left">
-        <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Training Your Eye: Color</h1>
-        <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
-        <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
+    <div class="section-hero">
+      <div class="section-hero__wrapper" data-bg="{{ site.url }}/assets/imgs/art/section-header-20_Magpie_Art-Resource.jpg">
+        <div class="section-hero__title has-solid-rectangles top-left">
+          <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Training Your Eye: Color</h1>
+          <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
+          <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
+        </div>
+      </div>
+      <div class="section-hero__figcaption">
+        <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
+        <span class="figcaption"><span class="title-of-art">The Magpie</span> Claude Monet | 1869 | Oil on canvas | 35 1/8 x 51 1/8 in. (89 x 130 cm) | Musée d'Orsay, Paris, RF 1984 164 | © RMN-Grand Palais (Musée d'Orsay) / Hervé Lewandowski | CAT : © RMN-Grand Palais / Art Resource, NY</span>
       </div>
     </div>
     <section class="card-section">
@@ -632,11 +646,17 @@
   <!-- Training your Eye: Composition -->
 
   <section class="js-section pp-scrollable" id="training-your-eye-composition">
-    <div class="section-hero" >
-      <div class="section-hero__title has-solid-rectangles">
-        <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Training your Eye: Composition</h1>
-        <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
-        <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
+    <div class="section-hero">
+      <div class="section-hero__wrapper" >
+        <div class="section-hero__title has-solid-rectangles">
+          <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Training your Eye: Composition</h1>
+          <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
+          <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
+        </div>
+      </div>
+      <div class="section-hero__figcaption">
+        <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
+        <span class="figcaption"><span class="title-of-art">IMAGE CREDIT GOES HERE</span></span>
       </div>
     </div>
     <section class="card-section">
@@ -649,11 +669,17 @@
   <!-- Observing Nature -->
 
   <section class="js-section pp-scrollable" id="observing-nature">
-    <div class="section-hero" >
-      <div class="section-hero__title has-solid-rectangles">
-        <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Observing Nature</h1>
-        <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
-        <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
+    <div class="section-hero">
+      <div class="section-hero__wrapper">
+        <div class="section-hero__title has-solid-rectangles">
+          <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Observing Nature</h1>
+          <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
+          <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
+        </div>
+      </div>
+      <div class="section-hero__figcaption">
+        <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
+        <span class="figcaption"><span class="title-of-art">IMAGE CREDIT GOES HERE</span></span>
       </div>
     </div>
     <section class="card-section">
