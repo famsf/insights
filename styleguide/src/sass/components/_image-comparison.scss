@@ -71,9 +71,11 @@
   }
 }
 
-.comparison__answer { 
-  @include breakpoint ($bp2) {
-    padding: rhythm(1);
+.comparison__answer {
+  background-color: $background-c;
+
+  @include breakpoint($bp2) {
+    padding: rhythm(1) rhythm(1) rhythm(2);
 
     h3:first-child {
       @include leader(0, $h3-font-size);
