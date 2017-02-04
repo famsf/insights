@@ -1,0 +1,16 @@
+{#
+  name: Image Comparison CTA
+  usage: Image Comparison CTA is used to trigger the reveal of whatever is hiding behind option A or B.
+#}
+
+{% block component %}
+
+<button class="comparison__button js-comparison__button">
+  <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.html') %}</i>
+  <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
+  Option A
+</button>
+
+{% endblock %}
+
+

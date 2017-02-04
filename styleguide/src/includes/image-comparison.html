@@ -19,11 +19,7 @@
     <figure>
       <div class="figure__wrapper">
         <img data-src="{{ site.url }}/assets/imgs/art/Low_tide.jpg" alt="The Pointe de La Hève at Low Tide" />
-        <button class="comparison__button js-comparison__button">
-          <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.html') %}</i>
-          <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
-          Option A
-        </button>
+        {% include('comparison--cta.html') %}
       </div>
       <a class="figcaption-cta js-figcaption-cta">image credit</a>
       <figcaption><span class="title-of-art">The Pointe de La Hève at Low Tide</span> 1865</figcaption>
