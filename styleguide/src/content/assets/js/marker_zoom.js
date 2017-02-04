@@ -12,8 +12,8 @@
 (function ($) {
   Drupal.behaviors.marker_zoom = {
     attach: function(context, settings) {
-      var zoomMarker = $('.js-zoom-marker-inner');
-      var zoomClose = $('.js-zoom-close');
+      var zoomMarker = $('.js-zoom-marker-inner', context);
+      var zoomClose = $('.js-zoom-close', context);
       var modalContent= $('.js-zoom-window__content');
       var modalWindow= $('.js-zoom-window');
       var modalOverlay = $('.js-zoom-overlay-background');
@@ -41,10 +41,6 @@
         } else {
           modalContent.show(0);
           modalContent.toggleClass('js-zoom-window--is-visible').html(detailedView);
-          setTimeout(function() {
-            console.log("loading...");
-            $(modalContent).find('img[data-src]').lazyLoadXT();
-          }, 200);
         }
 
         setTimeout(function() {

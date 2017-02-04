@@ -13,7 +13,7 @@
 
   Drupal.behaviors.image_overlay = {
     attach: function(context, settings) {
-      $('.js-overlay-button').click(function(){
+      $('.js-overlay-button', context).click(function(){
         var buttonClicked = $(this);
         // Load button text from data attribute when div is expanded.
         var expandedText = $(this).data('text-expanded');

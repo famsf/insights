@@ -13,7 +13,7 @@
   Drupal.behaviors.audio_toggle = {
     attach: function(context, settings) {
       // Define audio play buttons
-      var audioButton = $('.js-audio__button');
+      var audioButton = $('.js-audio__button', context);
       // Function to play and pause audio and toggle button states.
       var buttonToggle = function(button) {
         // Find the audio source related to this button.
