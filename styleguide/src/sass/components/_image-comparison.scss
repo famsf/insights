@@ -45,7 +45,6 @@
 }
 
 .comparison__button {
-  @extend %custom-focus;
   @extend %icon;
   display: block;
   border: 0;
@@ -63,6 +62,11 @@
   &:hover {
     background-color: $background-d;
     color: $primary-active;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $background-d;
   }
 
   svg {
