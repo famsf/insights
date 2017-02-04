@@ -27,7 +27,7 @@
           &ldquo;The most original … and harmoniously painted seascape exhibited in a long time … M. Monet, unknown yesterday, has immediately made a name for himself with this single painting.&rdquo;
           </blockquote>
         </div>
-        {% include('comparison--cta-optiona.html') %}
+        {% include('comparison--cta-a.html') %}
       </div>
       <a class="figcaption-cta js-figcaption-cta">image credit</a>
       <figcaption><span class="title-of-art">The Pointe de La Hève at Low Tide</span> 1865</figcaption>
@@ -38,19 +38,15 @@
     <figure>
       <div class="figure__wrapper">
         <img data-src="{{ site.url }}/assets/imgs/art/Havre_dOrsay.jpg" alt="The Jetty at Le Havre" />
-        <button class="comparison__button js-comparison__button">
-          <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.html') %}</i>
-          <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
-          Option B
-        </button>
+        <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
+          <h3>Rejected!</h3>
+          <p>Monet submitted this seascape in 1868. The young artist had invested a significant sum of money in this large-scale canvas and had to beg his family for money to survive.</p>
+        </div>
+        {% include('comparison--cta-b.html') %}
       </div>
       <a class="figcaption-cta js-figcaption-cta">image credit</a>
       <figcaption><span class="title-of-art">The Jetty at Le Havre</span> 1868</figcaption>
     </figure>
-    <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
-      <h3>Rejected!</h3>
-      <p>Monet submitted this seascape in 1868. The young artist had invested a significant sum of money in this large-scale canvas and had to beg his family for money to survive.</p>
-    </div>
   </div>
 </div>
 
