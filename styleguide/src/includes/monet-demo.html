@@ -115,38 +115,30 @@
           <figure>
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/Camille_green_dress_image-comparison.jpg" alt="" />
-              <button class="comparison__button js-comparison__button">
-                <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.html') %}</i>
-                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
-                Option A
-              </button>
+              {% include('comparison--cta-a.html') %}
+              <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
+                <a class="figcaption-cta js-figcaption-cta">image credit</a>
+                <figcaption><span class="title-of-art">Camille (The Woman with a Green Dress)</span> | 1866</figcaption>
+                <h3>Accepted!</h3>
+                <p>This painting was not only accepted to the Salon of 1866, it was well received. This success reassured Monet&rsquo;s family, and his aunt agreed to lend him financial support.</p>
+              </div>
             </div>
-            <a class="figcaption-cta js-figcaption-cta">image credit</a>
-            <figcaption><span class="title-of-art">Camille (The Woman with a Green Dress)</span> | 1866</figcaption>
           </figure>
-          <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
-            <h3>Accepted!</h3>
-            <p>This painting was not only accepted to the Salon of 1866, it was well received. This success reassured Monet&rsquo;s family, and his aunt agreed to lend him financial support.</p>
-          </div>
         </div>
 
         <div class="comparison__2up js-comparison__group">
           <figure>
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/16_luncheon_Bridgeman.jpg" alt="" />
-              <button class="comparison__button js-comparison__button">
-                <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.html') %}</i>
-                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
-                Option B
-              </button>
+              {% include('comparison--cta-b.html') %}
+              <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
+                <a class="figcaption-cta js-figcaption-cta">image credit</a>
+                <figcaption><span class="title-of-art">The Luncheon</span> | 1868 </figcaption>
+                <h3>Rejected!</h3>
+                <p>This scene of Monet&rsquo;s young family was rejected by the Salon of 1870. Monet could afford to rent the cozy house depicted here because he had recently been commissioned to paint portraits of a businessman&rsquo;s family.</p>
+              </div>
             </div>
-            <a class="figcaption-cta js-figcaption-cta">image credit</a>
-            <figcaption><span class="title-of-art">The Luncheon</span> | 1868 </figcaption>
           </figure>
-          <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
-            <h3>Rejected!</h3>
-            <p>This scene of Monet&rsquo;s young family was rejected by the Salon of 1870. Monet could afford to rent the cozy house depicted here because he had recently been commissioned to paint portraits of a businessman&rsquo;s family.</p>
-          </div>
         </div>
       </div>
     </section>
