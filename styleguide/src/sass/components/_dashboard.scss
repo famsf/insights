@@ -17,7 +17,6 @@
 
   a:link,
   a:visited {
-    color: $text-color-invert;
     text-decoration: none;
 
   }
@@ -25,7 +24,7 @@
   a:active,
   a:hover,
   a:focus {
-    color: $text-color-invert-active;
+    
   }
 }
 
