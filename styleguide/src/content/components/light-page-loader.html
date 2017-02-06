@@ -1,0 +1,17 @@
+---
+layout: component
+section: component
+type: full-width
+theme: legion-light
+
+title: Light Page Loader
+description: This graphic tells the user that content is loading.
+---
+
+{% block content_wrapper %}
+  {% block content %}
+
+    {% include('loading-page.html') %}
+
+  {% endblock %}
+{% endblock %}
