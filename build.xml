@@ -30,8 +30,8 @@
             <property name="imgs_source" value="${styleguide_code}/imgs" />
             <property name="imgs_dest" value="${custom_theme}/imgs" />
 
-            <property name="svgs_source" value="${styleguide_code}/svgs" />
-            <property name="svgs_dest" value="${custom_theme}/svgs" />
+            <property name="svgs_source" value="${styleguide_code}/svg" />
+            <property name="svgs_dest" value="${custom_theme}/svg" />
         </phingcall>
     </target>
 
