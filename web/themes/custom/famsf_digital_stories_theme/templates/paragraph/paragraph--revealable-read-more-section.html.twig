@@ -49,10 +49,10 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
     </div>
     <button class="button-with-icon js-icon--read-more">
         <i class="js-icon-arrow--plus icon--med">
-            {% include('svg/famsf-plus-md.svg') %}
+            {{ include(active_theme_path() ~ '/svg/famsf-plus-md.svg')  }}
         </i>
         <i class="js-icon-arrow--minus icon--med" style="display:none;">
-            {% include('svg/famsf-minus-md.svg') %}
+            {{ include(active_theme_path() ~ '/svg/famsf-minus-md.svg')  }}
         </i>
         <div class="button-with-icon__text" data-text-collapsed="{{ paragraph.field_collapsed_button_text.value }}" data-text-expanded="{{ paragraph.field_expanded_button_text.value }}">{{ paragraph.field_collapsed_button_text.value }}</div>
     </button>
