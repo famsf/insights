@@ -4,3 +4,27 @@
  *
  * @copyright Copyright (c) 2017 Palantir.net
  */
+
+.main-nav__list {
+  list-style-type: none;
+  margin: 0;
+  padding: .5rem;
+}
+
+.main-nav__item {
+  font-size: 80%;
+  line-height: 1.4em;
+
+  a:link,
+  a:visited {
+    color: $text-color-invert;
+    text-decoration: none;
+
+  }
+
+  a:active,
+  a:hover,
+  a:focus {
+    color: $text-color-invert-active;
+  }
+}
