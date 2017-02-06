@@ -21,6 +21,7 @@
   width: 100%;
   height: auto;
   padding: 0;
+  margin-bottom: rhythm(1);
 
   @include breakpoint ($bp2) {
     margin: 0;
@@ -45,7 +46,6 @@
 }
 
 .comparison__button {
-  @extend %custom-focus;
   @extend %icon;
   display: block;
   border: 0;
@@ -65,18 +65,19 @@
     color: $primary-active;
   }
 
+  &:focus {
+    outline: none;
+    background-color: $background-d;
+  }
+
   svg {
     height: .7em;
     margin-right: .3em;
   }
 }
 
-.comparison__answer { 
-  @include breakpoint ($bp2) {
-    padding: rhythm(1);
+.comparison__answer {
+  background-color: $background-c;
+  padding: 0 rhythm(1) rhythm(2);
 
-    h3:first-child {
-      @include leader(0, $h3-font-size);
-    }
-  }
 }
