@@ -5,34 +5,75 @@
  * @copyright Copyright (c) 2017 Palantir.net
  */
 
+.dashboard {
+  @extend %general-background;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  z-index: 100;
+  display: block;
+  padding: rhythm(2) 0;
+  box-shadow: 5px 0 10px $background-d;
+
+  @include breakpoint($bp2) {
+    width: 30vw;
+  }
+}
+
+nav,
+footer {
+  position: relative;
+  margin: rhythm(2) 0;
+}
+
+// nav {
+//   @include breakpoint($bp3) {
+//     display: inline-block;
+//   }
+// }
+
 .main-nav__list {
   list-style-type: none;
   margin: 0;
-  padding: .5rem;
+  padding: 0;
 }
 
 .main-nav__item {
-  font-size: 80%;
-  line-height: 1.4em;
+  padding: 0 rhythm(1);
+  display: block;
+
+  a:link {
+    display: block;
+    font-size: 80%;
+    line-height: 1.4em;
+    border-bottom: 1px solid $background-c;
+    padding: rhythm(.6) 0;
+
+    @include breakpoint($bp2) {
+      padding: rhythm(.4) 0;
+    }
+  }
 
   a:link,
   a:visited {
     text-decoration: none;
-
   }
 
-  a:active,
-  a:hover,
-  a:focus {
-    
+  &:active,
+  &:hover,
+  &:focus,
+  .active {
+    background-color: $background-c;
   }
 }
 
 footer {
-  background-color: $background-c;
+  
 }
 
-.footer__sponsor-logos {
+.footer__sponsors {
   background-color: $white;
   padding: rhythm(1) 0;
 }
