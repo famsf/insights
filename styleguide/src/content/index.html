@@ -6,20 +6,10 @@ title: Styleguide
 {% block content %}
 
 <main>
-  <!-- <section class="styleguide-section container">
-    <h3 class="styleguide-title">Static Comps</h3>
-      <p>These high-fidelity mockups guide the creation of the elements, components, and templates.</p>
-    <ul class="styleguide-list">
-    {% for comp in site.comps %}
-      <li><a href="{{ site.url }}{{ comp.url }}">{{ comp.title }}</a></li>
-    {% endfor %}
-    </ul>
-  </section> -->
-
   <section class="styleguide-section container">
     <h3 class="styleguide-title">Elements</h3>
     <p>Elements are the foundation of the system. Simply using typography and color, well designed Elements can begin to express the site's personality.</p>
-    <div class="l-2up--1">
+    <div class="l-4up--1">
       <h4>Legion Dark</h4>
       <ul class="styleguide-list">
         {% for element in site.elements %}
@@ -29,11 +19,31 @@ title: Styleguide
         {% endfor %}
       </ul>
     </div>
-    <div class="l-2up--2">
+    <div class="l-4up--2">
       <h4>Legion Light</h4>
       <ul class="styleguide-list">
         {% for element in site.elements %}
           {% if element.theme == 'legion-light' %}
+          <li><a href="{{ site.url }}{{ element.url }}">{{ element.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="l-4up--3">
+      <h4>deYoung A</h4>
+      <ul class="styleguide-list">
+        {% for element in site.elements %}
+          {% if element.theme == 'deyoung-a' %}
+          <li><a href="{{ site.url }}{{ element.url }}">{{ element.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="l-4up--4">
+      <h4>deYoung B</h4>
+      <ul class="styleguide-list">
+        {% for element in site.elements %}
+          {% if element.theme == 'deyoung-b' %}
           <li><a href="{{ site.url }}{{ element.url }}">{{ element.title }}</a></li>
           {% endif %}
         {% endfor %}
@@ -44,7 +54,7 @@ title: Styleguide
   <section class="styleguide-section container">
     <h3 class="styleguide-title">Components</h3>
     <p>Based on the needs of the content, Components are arranged into specific layouts to create Templates.</p>
-    <div class="l-2up--1">
+    <div class="l-4up--1">
       <h4>Legion Dark</h4>
       <ul class="styleguide-list">
       {% for component in site.components %}
@@ -54,11 +64,31 @@ title: Styleguide
       {% endfor %}
       </ul>
     </div>
-    <div class="l-2up--2">
+    <div class="l-4up--2">
       <h4>Legion Light</h4>
       <ul class="styleguide-list">
       {% for component in site.components %}
         {% if component.theme == 'legion-light' %}
+          <li><a href="{{ site.url }}{{ component.url }}">{{ component.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+    </div>
+    <div class="l-4up--3">
+      <h4>deYoung A</h4>
+      <ul class="styleguide-list">
+      {% for component in site.components %}
+        {% if component.theme == 'deyoung-a' %}
+          <li><a href="{{ site.url }}{{ component.url }}">{{ component.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+    </div>
+    <div class="l-4up--4">
+      <h4>deYoung B</h4>
+      <ul class="styleguide-list">
+      {% for component in site.components %}
+        {% if component.theme == 'deyoung-b' %}
           <li><a href="{{ site.url }}{{ component.url }}">{{ component.title }}</a></li>
         {% endif %}
       {% endfor %}
@@ -69,7 +99,7 @@ title: Styleguide
   <section class="styleguide-section container">
     <h3 class="styleguide-title">Templates</h3>
     <p>Based on the needs of the content, Components are arranged into specific layouts to create Templates.</p>
-    <div class="l-2up--1">
+    <div class="l-4up--1">
       <h4>Legion Dark</h4>
       <ul class="styleguide-list">
       {% for template in site.templates %}
@@ -79,11 +109,31 @@ title: Styleguide
       {% endfor %}
       </ul>
     </div>
-    <div class="l-2up--2">
+    <div class="l-4up--2">
       <h4>Legion Light</h4>
       <ul class="styleguide-list">
       {% for template in site.templates %}
         {% if template.theme == 'legion-light' %}
+          <li><a href="{{ site.url }}{{ template.url }}">{{ template.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+    </div>
+    <div class="l-4up--3">
+      <h4>deYoung A</h4>
+      <ul class="styleguide-list">
+      {% for template in site.templates %}
+        {% if template.theme == 'deyoung-a' %}
+          <li><a href="{{ site.url }}{{ template.url }}">{{ template.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+    </div>
+    <div class="l-4up--4">
+      <h4>deYoung B</h4>
+      <ul class="styleguide-list">
+      {% for template in site.templates %}
+        {% if template.theme == 'deyoung-b' %}
           <li><a href="{{ site.url }}{{ template.url }}">{{ template.title }}</a></li>
         {% endif %}
       {% endfor %}
