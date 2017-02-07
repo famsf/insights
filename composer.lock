@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9669ca95c14272e1f58a247d9edc30ab",
+    "hash": "6537a9c31f58dee3f2a43f144d495c1a",
+    "content-hash": "49e93c011943947b224da3c0827920b1",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -47,7 +48,7 @@
                 "cors",
                 "stack"
             ],
-            "time": "2016-08-01T12:05:04+00:00"
+            "time": "2016-08-01 12:05:04"
         },
         {
             "name": "codegyre/robo",
@@ -103,7 +104,7 @@
             ],
             "description": "Modern task runner",
             "abandoned": "consolidation/robo",
-            "time": "2016-04-13T20:14:17+00:00"
+            "time": "2016-04-13 20:14:17"
         },
         {
             "name": "composer/installers",
@@ -210,7 +211,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-08-13T20:53:52+00:00"
+            "time": "2016-08-13 20:53:52"
         },
         {
             "name": "composer/semver",
@@ -272,7 +273,7 @@
                 "validation",
                 "versioning"
             ],
-            "time": "2016-08-30T16:08:34+00:00"
+            "time": "2016-08-30 16:08:34"
         },
         {
             "name": "consolidation/annotated-command",
@@ -324,7 +325,7 @@
                 }
             ],
             "description": "Initialize Symfony Console commands from annotated command class methods.",
-            "time": "2016-11-14T23:51:12+00:00"
+            "time": "2016-11-14 23:51:12"
         },
         {
             "name": "consolidation/output-formatters",
@@ -373,7 +374,7 @@
                 }
             ],
             "description": "Format text by applying transformations provided by plug-in formatters.",
-            "time": "2016-11-10T23:25:21+00:00"
+            "time": "2016-11-10 23:25:21"
         },
         {
             "name": "continuousphp/phing-drush-task",
@@ -415,7 +416,7 @@
             ],
             "description": "Drush task for Phing",
             "homepage": "https://github.com/continuousphp/phing-drush-task",
-            "time": "2016-07-04T20:39:23+00:00"
+            "time": "2016-07-04 20:39:23"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -448,7 +449,7 @@
                 "MIT"
             ],
             "description": "implementation of xdg base directory specification for php",
-            "time": "2014-10-24T07:27:01+00:00"
+            "time": "2014-10-24 07:27:01"
         },
         {
             "name": "doctrine/annotations",
@@ -516,7 +517,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2015-08-31T12:32:49+00:00"
+            "time": "2015-08-31 12:32:49"
         },
         {
             "name": "doctrine/cache",
@@ -586,7 +587,7 @@
                 "cache",
                 "caching"
             ],
-            "time": "2016-10-29T11:16:17+00:00"
+            "time": "2016-10-29 11:16:17"
         },
         {
             "name": "doctrine/collections",
@@ -652,7 +653,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2015-04-14T22:21:58+00:00"
+            "time": "2015-04-14 22:21:58"
         },
         {
             "name": "doctrine/common",
@@ -725,7 +726,7 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2015-12-25T13:10:16+00:00"
+            "time": "2015-12-25 13:10:16"
         },
         {
             "name": "doctrine/inflector",
@@ -792,7 +793,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2014-12-20T21:24:13+00:00"
+            "time": "2014-12-20 21:24:13"
         },
         {
             "name": "doctrine/lexer",
@@ -846,7 +847,7 @@
                 "lexer",
                 "parser"
             ],
-            "time": "2014-09-09T13:34:57+00:00"
+            "time": "2014-09-09 13:34:57"
         },
         {
             "name": "drupal-composer/drupal-scaffold",
@@ -892,7 +893,7 @@
                 "GPL-2.0+"
             ],
             "description": "Composer Plugin for updating the Drupal scaffold files when using drupal/core",
-            "time": "2016-04-13T15:46:44+00:00"
+            "time": "2016-04-13 15:46:44"
         },
         {
             "name": "drupal/coder",
@@ -929,7 +930,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2016-09-17T16:49:15+00:00"
+            "time": "2016-09-17 16:49:15"
         },
         {
             "name": "drupal/config_installer",
@@ -1148,7 +1149,7 @@
                 "GPL-2.0+"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2016-12-07T18:31:42+00:00"
+            "time": "2016-12-07 18:31:42"
         },
         {
             "name": "drupal/entity_reference_revisions",
@@ -1326,6 +1327,66 @@
             }
         },
         {
+            "name": "drupal/video",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/video",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/video-8.x-1.2.zip",
+                "reference": null,
+                "shasum": "d0af8254ad0e3c496fda89d5b796d6fb86ebda7d"
+            },
+            "require": {
+                "drupal/core": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.x",
+                    "datestamp": "1455470039",
+                    "package": "Field types"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Jorrit",
+                    "homepage": "https://www.drupal.org/user/161217"
+                },
+                {
+                    "name": "abhishek-anand",
+                    "homepage": "https://www.drupal.org/user/468982"
+                },
+                {
+                    "name": "brycefisherfleig",
+                    "homepage": "https://www.drupal.org/user/1300764"
+                },
+                {
+                    "name": "chaitanya17",
+                    "homepage": "https://www.drupal.org/user/1998300"
+                },
+                {
+                    "name": "heshanlk",
+                    "homepage": "https://www.drupal.org/user/199102"
+                }
+            ],
+            "description": "Video module allows you to embedded videos from YouTube, Vimeo, Facebook, Vine etc (Drupal 8 only) and upload videos and play using HTML5 video player.",
+            "homepage": "https://www.drupal.org/project/video",
+            "support": {
+                "source": "http://cgit.drupalcode.org/video"
+            }
+        },
+        {
             "name": "drush/drush",
             "version": "8.1.8",
             "source": {
@@ -1428,7 +1489,7 @@
             ],
             "description": "Drush is a command line shell and scripting interface for Drupal, a veritable Swiss Army knife designed to make life easier for those of us who spend some of our working hours hacking away at the command prompt.",
             "homepage": "http://www.drush.org",
-            "time": "2016-11-30T07:01:02+00:00"
+            "time": "2016-11-30 07:01:02"
         },
         {
             "name": "easyrdf/easyrdf",
@@ -1490,7 +1551,7 @@
                 "rdfa",
                 "sparql"
             ],
-            "time": "2015-02-27T09:45:49+00:00"
+            "time": "2015-02-27 09:45:49"
         },
         {
             "name": "egulias/email-validator",
@@ -1542,7 +1603,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2016-07-03T21:52:18+00:00"
+            "time": "2016-07-03 21:52:18"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -1604,7 +1665,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2016-10-08T15:01:37+00:00"
+            "time": "2016-10-08 15:01:37"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1655,7 +1716,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2016-11-18T17:47:58+00:00"
+            "time": "2016-11-18 17:47:58"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -1713,7 +1774,7 @@
                 "stream",
                 "uri"
             ],
-            "time": "2016-06-24T23:00:38+00:00"
+            "time": "2016-06-24 23:00:38"
         },
         {
             "name": "henrikbjorn/lurker",
@@ -1772,7 +1833,7 @@
                 "resource",
                 "watching"
             ],
-            "time": "2016-03-16T15:22:20+00:00"
+            "time": "2016-03-16 15:22:20"
         },
         {
             "name": "ircmaxell/password-compat",
@@ -1814,7 +1875,7 @@
                 "hashing",
                 "password"
             ],
-            "time": "2014-11-20T16:49:30+00:00"
+            "time": "2014-11-20 16:49:30"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -1857,7 +1918,7 @@
                     "homepage": "http://www.acci.cz"
                 }
             ],
-            "time": "2014-04-08T15:00:19+00:00"
+            "time": "2014-04-08 15:00:19"
         },
         {
             "name": "jakub-onderka/php-console-highlighter",
@@ -1901,7 +1962,7 @@
                     "homepage": "http://www.acci.cz/"
                 }
             ],
-            "time": "2015-04-20T18:58:01+00:00"
+            "time": "2015-04-20 18:58:01"
         },
         {
             "name": "masterminds/html5",
@@ -1966,7 +2027,7 @@
                 "serializer",
                 "xml"
             ],
-            "time": "2016-09-22T11:01:11+00:00"
+            "time": "2016-09-22 11:01:11"
         },
         {
             "name": "nikic/php-parser",
@@ -2017,7 +2078,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2016-12-06T11:30:35+00:00"
+            "time": "2016-12-06 11:30:35"
         },
         {
             "name": "nilportugues/php_todo",
@@ -2073,7 +2134,7 @@
                 "git",
                 "php"
             ],
-            "time": "2015-11-10T00:04:39+00:00"
+            "time": "2015-11-10 00:04:39"
         },
         {
             "name": "palantirnet/the-build",
@@ -2112,7 +2173,7 @@
                 "source": "https://github.com/palantirnet/the-build/tree/1.1.0",
                 "issues": "https://github.com/palantirnet/the-build/issues"
             },
-            "time": "2016-11-21T18:48:33+00:00"
+            "time": "2016-11-21 18:48:33"
         },
         {
             "name": "paragonie/random_compat",
@@ -2160,7 +2221,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2016-11-07T23:38:38+00:00"
+            "time": "2016-11-07 23:38:38"
         },
         {
             "name": "pdepend/pdepend",
@@ -2200,7 +2261,7 @@
                 "BSD-3-Clause"
             ],
             "description": "Official version of pdepend to be handled with Composer",
-            "time": "2016-11-23T20:25:02+00:00"
+            "time": "2016-11-23 20:25:02"
         },
         {
             "name": "pear/archive_tar",
@@ -2266,7 +2327,7 @@
                 "archive",
                 "tar"
             ],
-            "time": "2016-02-25T10:30:39+00:00"
+            "time": "2016-02-25 10:30:39"
         },
         {
             "name": "pear/console_getopt",
@@ -2313,7 +2374,7 @@
                 }
             ],
             "description": "More info available on: http://pear.php.net/package/Console_Getopt",
-            "time": "2015-07-20T20:28:12+00:00"
+            "time": "2015-07-20 20:28:12"
         },
         {
             "name": "pear/console_table",
@@ -2368,7 +2429,7 @@
             "keywords": [
                 "console"
             ],
-            "time": "2016-01-21T16:14:31+00:00"
+            "time": "2016-01-21 16:14:31"
         },
         {
             "name": "pear/pear-core-minimal",
@@ -2412,7 +2473,7 @@
                 }
             ],
             "description": "Minimal set of PEAR core files to be used as composer dependency",
-            "time": "2015-10-17T11:41:19+00:00"
+            "time": "2015-10-17 11:41:19"
         },
         {
             "name": "pear/pear_exception",
@@ -2467,7 +2528,7 @@
             "keywords": [
                 "exception"
             ],
-            "time": "2015-02-10T20:07:52+00:00"
+            "time": "2015-02-10 20:07:52"
         },
         {
             "name": "pear/versioncontrol_git",
@@ -2511,7 +2572,7 @@
                 }
             ],
             "description": "VersionControl_Git is a library that provides OO interface to handle Git repository.",
-            "time": "2015-11-04T13:03:54+00:00"
+            "time": "2015-11-04 13:03:54"
         },
         {
             "name": "phing/phing",
@@ -2604,7 +2665,7 @@
                 "task",
                 "tool"
             ],
-            "time": "2016-10-13T09:01:45+00:00"
+            "time": "2016-10-13 09:01:45"
         },
         {
             "name": "phpdocumentor/reflection-docblock",
@@ -2653,7 +2714,7 @@
                     "email": "mike.vanriel@naenius.com"
                 }
             ],
-            "time": "2015-02-03T12:10:50+00:00"
+            "time": "2015-02-03 12:10:50"
         },
         {
             "name": "phpmd/phpmd",
@@ -2718,7 +2779,7 @@
                 "phpmd",
                 "pmd"
             ],
-            "time": "2016-11-23T20:33:32+00:00"
+            "time": "2016-11-23 20:33:32"
         },
         {
             "name": "psr/http-message",
@@ -2768,7 +2829,7 @@
                 "request",
                 "response"
             ],
-            "time": "2016-08-06T14:39:51+00:00"
+            "time": "2016-08-06 14:39:51"
         },
         {
             "name": "psr/log",
@@ -2815,7 +2876,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10T12:19:37+00:00"
+            "time": "2016-10-10 12:19:37"
         },
         {
             "name": "psy/psysh",
@@ -2888,7 +2949,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2016-12-07T17:15:07+00:00"
+            "time": "2016-12-07 17:15:07"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -2966,7 +3027,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2016-11-30T04:02:31+00:00"
+            "time": "2016-11-30 04:02:31"
         },
         {
             "name": "stack/builder",
@@ -3015,7 +3076,7 @@
             "keywords": [
                 "stack"
             ],
-            "time": "2016-06-02T06:58:42+00:00"
+            "time": "2016-06-02 06:58:42"
         },
         {
             "name": "symfony-cmf/routing",
@@ -3074,7 +3135,7 @@
                 "database",
                 "routing"
             ],
-            "time": "2016-03-31T09:11:39+00:00"
+            "time": "2016-03-31 09:11:39"
         },
         {
             "name": "symfony/class-loader",
@@ -3127,7 +3188,7 @@
             ],
             "description": "Symfony ClassLoader Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-29T08:25:54+00:00"
+            "time": "2016-11-29 08:25:54"
         },
         {
             "name": "symfony/config",
@@ -3183,7 +3244,7 @@
             ],
             "description": "Symfony Config Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-10T08:21:45+00:00"
+            "time": "2016-12-10 08:21:45"
         },
         {
             "name": "symfony/console",
@@ -3244,7 +3305,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-06T11:59:35+00:00"
+            "time": "2016-12-06 11:59:35"
         },
         {
             "name": "symfony/debug",
@@ -3301,7 +3362,7 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-15T12:53:17+00:00"
+            "time": "2016-11-15 12:53:17"
         },
         {
             "name": "symfony/dependency-injection",
@@ -3364,7 +3425,7 @@
             ],
             "description": "Symfony DependencyInjection Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-08T14:41:31+00:00"
+            "time": "2016-12-08 14:41:31"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -3424,7 +3485,7 @@
             ],
             "description": "Symfony EventDispatcher Component",
             "homepage": "https://symfony.com",
-            "time": "2016-10-13T01:43:15+00:00"
+            "time": "2016-10-13 01:43:15"
         },
         {
             "name": "symfony/filesystem",
@@ -3473,7 +3534,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2016-10-18T04:28:30+00:00"
+            "time": "2016-10-18 04:28:30"
         },
         {
             "name": "symfony/finder",
@@ -3522,7 +3583,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-13T09:38:12+00:00"
+            "time": "2016-12-13 09:38:12"
         },
         {
             "name": "symfony/http-foundation",
@@ -3577,7 +3638,7 @@
             ],
             "description": "Symfony HttpFoundation Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-27T04:20:28+00:00"
+            "time": "2016-11-27 04:20:28"
         },
         {
             "name": "symfony/http-kernel",
@@ -3659,7 +3720,7 @@
             ],
             "description": "Symfony HttpKernel Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-13T12:16:15+00:00"
+            "time": "2016-12-13 12:16:15"
         },
         {
             "name": "symfony/polyfill-apcu",
@@ -3712,7 +3773,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2016-11-14 01:06:16"
         },
         {
             "name": "symfony/polyfill-iconv",
@@ -3771,7 +3832,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2016-11-14 01:06:16"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -3830,7 +3891,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2016-11-14 01:06:16"
         },
         {
             "name": "symfony/polyfill-php54",
@@ -3888,7 +3949,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2016-11-14 01:06:16"
         },
         {
             "name": "symfony/polyfill-php55",
@@ -3944,7 +4005,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2016-11-14 01:06:16"
         },
         {
             "name": "symfony/process",
@@ -3993,7 +4054,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-24T00:43:03+00:00"
+            "time": "2016-11-24 00:43:03"
         },
         {
             "name": "symfony/psr-http-message-bridge",
@@ -4047,7 +4108,7 @@
                 "http-message",
                 "psr-7"
             ],
-            "time": "2015-05-29T17:57:12+00:00"
+            "time": "2015-05-29 17:57:12"
         },
         {
             "name": "symfony/routing",
@@ -4122,7 +4183,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2016-11-25T12:26:42+00:00"
+            "time": "2016-11-25 12:26:42"
         },
         {
             "name": "symfony/serializer",
@@ -4186,7 +4247,7 @@
             ],
             "description": "Symfony Serializer Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-03T07:52:58+00:00"
+            "time": "2016-11-03 07:52:58"
         },
         {
             "name": "symfony/translation",
@@ -4250,7 +4311,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-18T21:10:01+00:00"
+            "time": "2016-11-18 21:10:01"
         },
         {
             "name": "symfony/validator",
@@ -4323,7 +4384,7 @@
             ],
             "description": "Symfony Validator Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-08T15:59:39+00:00"
+            "time": "2016-12-08 15:59:39"
         },
         {
             "name": "symfony/var-dumper",
@@ -4386,7 +4447,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2016-12-06T16:05:07+00:00"
+            "time": "2016-12-06 16:05:07"
         },
         {
             "name": "symfony/yaml",
@@ -4435,7 +4496,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-14T16:15:57+00:00"
+            "time": "2016-11-14 16:15:57"
         },
         {
             "name": "twig/twig",
@@ -4496,7 +4557,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2016-12-13T17:28:18+00:00"
+            "time": "2016-12-13 17:28:18"
         },
         {
             "name": "victorjonsson/markdowndocs",
@@ -4540,7 +4601,7 @@
             ],
             "description": "Command line tool for generating markdown-formatted class documentation",
             "homepage": "https://github.com/victorjonsson/PHP-Markdown-Documentation-Generator",
-            "time": "2016-10-11T21:10:19+00:00"
+            "time": "2016-10-11 21:10:19"
         },
         {
             "name": "webmozart/assert",
@@ -4590,7 +4651,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2016-11-23T20:04:58+00:00"
+            "time": "2016-11-23 20:04:58"
         },
         {
             "name": "webmozart/path-util",
@@ -4636,7 +4697,7 @@
                 }
             ],
             "description": "A robust cross-platform utility for normalizing, comparing and modifying file paths.",
-            "time": "2015-12-17T08:42:14+00:00"
+            "time": "2015-12-17 08:42:14"
         },
         {
             "name": "zendframework/zend-diactoros",
@@ -4686,7 +4747,7 @@
                 "psr",
                 "psr-7"
             ],
-            "time": "2016-10-11T13:25:21+00:00"
+            "time": "2016-10-11 13:25:21"
         },
         {
             "name": "zendframework/zend-escaper",
@@ -4730,7 +4791,7 @@
                 "escaper",
                 "zf2"
             ],
-            "time": "2016-06-30T19:48:38+00:00"
+            "time": "2016-06-30 19:48:38"
         },
         {
             "name": "zendframework/zend-feed",
@@ -4791,7 +4852,7 @@
                 "feed",
                 "zf2"
             ],
-            "time": "2016-02-11T18:54:29+00:00"
+            "time": "2016-02-11 18:54:29"
         },
         {
             "name": "zendframework/zend-stdlib",
@@ -4836,7 +4897,7 @@
                 "stdlib",
                 "zf2"
             ],
-            "time": "2016-09-13T14:38:50+00:00"
+            "time": "2016-09-13 14:38:50"
         }
     ],
     "packages-dev": [
@@ -4900,7 +4961,7 @@
                 "tar",
                 "zip"
             ],
-            "time": "2016-02-15T22:46:40+00:00"
+            "time": "2016-02-15 22:46:40"
         },
         {
             "name": "behat/behat",
@@ -4980,7 +5041,7 @@
                 "symfony",
                 "testing"
             ],
-            "time": "2016-03-28T07:04:45+00:00"
+            "time": "2016-03-28 07:04:45"
         },
         {
             "name": "behat/gherkin",
@@ -5039,7 +5100,7 @@
                 "gherkin",
                 "parser"
             ],
-            "time": "2016-10-30T11:50:56+00:00"
+            "time": "2016-10-30 11:50:56"
         },
         {
             "name": "behat/mink",
@@ -5097,7 +5158,7 @@
                 "testing",
                 "web"
             ],
-            "time": "2016-03-05T08:26:18+00:00"
+            "time": "2016-03-05 08:26:18"
         },
         {
             "name": "behat/mink-browserkit-driver",
@@ -5153,7 +5214,7 @@
                 "browser",
                 "testing"
             ],
-            "time": "2016-03-05T08:59:47+00:00"
+            "time": "2016-03-05 08:59:47"
         },
         {
             "name": "behat/mink-extension",
@@ -5212,7 +5273,7 @@
                 "test",
                 "web"
             ],
-            "time": "2016-02-15T07:55:18+00:00"
+            "time": "2016-02-15 07:55:18"
         },
         {
             "name": "behat/mink-goutte-driver",
@@ -5267,7 +5328,7 @@
                 "headless",
                 "testing"
             ],
-            "time": "2016-03-05T09:04:22+00:00"
+            "time": "2016-03-05 09:04:22"
         },
         {
             "name": "behat/mink-selenium2-driver",
@@ -5328,7 +5389,7 @@
                 "testing",
                 "webdriver"
             ],
-            "time": "2016-03-05T09:10:18+00:00"
+            "time": "2016-03-05 09:10:18"
         },
         {
             "name": "behat/transliterator",
@@ -5368,7 +5429,7 @@
                 "slug",
                 "transliterator"
             ],
-            "time": "2015-09-28T16:26:35+00:00"
+            "time": "2015-09-28 16:26:35"
         },
         {
             "name": "composer/ca-bundle",
@@ -5426,7 +5487,7 @@
                 "ssl",
                 "tls"
             ],
-            "time": "2016-11-02T18:11:27+00:00"
+            "time": "2016-11-02 18:11:27"
         },
         {
             "name": "composer/composer",
@@ -5503,7 +5564,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2016-12-06T21:00:51+00:00"
+            "time": "2016-12-06 21:00:51"
         },
         {
             "name": "composer/spdx-licenses",
@@ -5564,7 +5625,7 @@
                 "spdx",
                 "validator"
             ],
-            "time": "2016-09-28T07:17:45+00:00"
+            "time": "2016-09-28 07:17:45"
         },
         {
             "name": "dflydev/ant-path-matcher",
@@ -5613,7 +5674,7 @@
                 "path",
                 "pattern"
             ],
-            "time": "2012-12-03T05:03:00+00:00"
+            "time": "2012-12-03 05:03:00"
         },
         {
             "name": "dflydev/apache-mime-types",
@@ -5668,7 +5729,7 @@
                 "mime",
                 "mimetypes"
             ],
-            "time": "2013-05-14T02:02:01+00:00"
+            "time": "2013-05-14 02:02:01"
         },
         {
             "name": "dflydev/canal",
@@ -5723,7 +5784,7 @@
                 "mime",
                 "type"
             ],
-            "time": "2013-05-14T05:22:25+00:00"
+            "time": "2013-05-14 05:22:25"
         },
         {
             "name": "dflydev/dot-access-configuration",
@@ -5783,7 +5844,7 @@
                 "config",
                 "configuration"
             ],
-            "time": "2014-11-14T03:26:12+00:00"
+            "time": "2014-11-14 03:26:12"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -5837,7 +5898,7 @@
                 "dot",
                 "notation"
             ],
-            "time": "2015-08-13T03:51:18+00:00"
+            "time": "2015-08-13 03:51:18"
         },
         {
             "name": "dflydev/embedded-composer",
@@ -5904,7 +5965,7 @@
                 "embedded",
                 "extensibility"
             ],
-            "time": "2016-05-21T00:49:42+00:00"
+            "time": "2016-05-21 00:49:42"
         },
         {
             "name": "dflydev/placeholder-resolver",
@@ -5956,7 +6017,7 @@
                 "placeholder",
                 "resolver"
             ],
-            "time": "2012-10-28T21:08:28+00:00"
+            "time": "2012-10-28 21:08:28"
         },
         {
             "name": "dflydev/symfony-finder-factory",
@@ -6009,7 +6070,7 @@
                 "finder",
                 "syfony"
             ],
-            "time": "2012-11-09T16:45:28+00:00"
+            "time": "2012-11-09 16:45:28"
         },
         {
             "name": "drupal/console",
@@ -6094,7 +6155,7 @@
                 "drupal",
                 "symfony"
             ],
-            "time": "2016-04-14T06:45:29+00:00"
+            "time": "2016-04-14 06:45:29"
         },
         {
             "name": "drupal/drupal-driver",
@@ -6151,7 +6212,7 @@
                 "test",
                 "web"
             ],
-            "time": "2016-06-20T16:29:51+00:00"
+            "time": "2016-06-20 16:29:51"
         },
         {
             "name": "drupal/drupal-extension",
@@ -6212,7 +6273,7 @@
                 "test",
                 "web"
             ],
-            "time": "2016-06-30T21:12:18+00:00"
+            "time": "2016-06-30 21:12:18"
         },
         {
             "name": "evenement/evenement",
@@ -6252,7 +6313,7 @@
             "keywords": [
                 "event-dispatcher"
             ],
-            "time": "2012-05-30T15:01:08+00:00"
+            "time": "2012-05-30 15:01:08"
         },
         {
             "name": "fabpot/goutte",
@@ -6301,7 +6362,7 @@
             "keywords": [
                 "scraper"
             ],
-            "time": "2016-11-15T16:27:29+00:00"
+            "time": "2016-11-15 16:27:29"
         },
         {
             "name": "gabordemooij/redbean",
@@ -6342,7 +6403,7 @@
             "keywords": [
                 "orm"
             ],
-            "time": "2016-10-03T21:25:17+00:00"
+            "time": "2016-10-03 21:25:17"
         },
         {
             "name": "guzzle/guzzle",
@@ -6435,7 +6496,7 @@
                 "web service"
             ],
             "abandoned": "guzzlehttp/guzzle",
-            "time": "2012-12-19T23:06:35+00:00"
+            "time": "2012-12-19 23:06:35"
         },
         {
             "name": "instaclick/php-webdriver",
@@ -6493,7 +6554,7 @@
                 "webdriver",
                 "webtest"
             ],
-            "time": "2015-06-15T20:19:33+00:00"
+            "time": "2015-06-15 20:19:33"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -6559,7 +6620,7 @@
                 "json",
                 "schema"
             ],
-            "time": "2016-06-02T10:59:52+00:00"
+            "time": "2016-06-02 10:59:52"
         },
         {
             "name": "michelf/php-markdown",
@@ -6610,7 +6671,7 @@
             "keywords": [
                 "markdown"
             ],
-            "time": "2014-05-05T02:43:50+00:00"
+            "time": "2014-05-05 02:43:50"
         },
         {
             "name": "netcarver/textile",
@@ -6663,7 +6724,7 @@
                 "plaintext",
                 "textile"
             ],
-            "time": "2014-01-02T09:39:06+00:00"
+            "time": "2014-01-02 09:39:06"
         },
         {
             "name": "padraic/humbug_get_contents",
@@ -6720,7 +6781,7 @@
                 "ssl",
                 "tls"
             ],
-            "time": "2015-04-22T18:45:00+00:00"
+            "time": "2015-04-22 18:45:00"
         },
         {
             "name": "padraic/phar-updater",
@@ -6772,7 +6833,7 @@
                 "self-update",
                 "update"
             ],
-            "time": "2016-01-05T23:08:01+00:00"
+            "time": "2016-01-05 23:08:01"
         },
         {
             "name": "palantirnet/the-vagrant",
@@ -6802,7 +6863,7 @@
                 }
             ],
             "description": "Install a vagrant environment into a project.",
-            "time": "2016-12-01T19:32:09+00:00"
+            "time": "2016-12-01 19:32:09"
         },
         {
             "name": "phpseclib/phpseclib",
@@ -6894,7 +6955,7 @@
                 "x.509",
                 "x509"
             ],
-            "time": "2016-10-04T00:57:04+00:00"
+            "time": "2016-10-04 00:57:04"
         },
         {
             "name": "react/event-loop",
@@ -6937,7 +6998,7 @@
             "keywords": [
                 "event-loop"
             ],
-            "time": "2013-01-05T11:41:26+00:00"
+            "time": "2013-01-05 11:41:26"
         },
         {
             "name": "react/http",
@@ -6979,7 +7040,7 @@
             "keywords": [
                 "http"
             ],
-            "time": "2012-12-26T16:33:04+00:00"
+            "time": "2012-12-26 16:33:04"
         },
         {
             "name": "react/socket",
@@ -7021,7 +7082,7 @@
             "keywords": [
                 "Socket"
             ],
-            "time": "2012-12-14T00:58:14+00:00"
+            "time": "2012-12-14 00:58:14"
         },
         {
             "name": "react/stream",
@@ -7066,7 +7127,7 @@
                 "pipe",
                 "stream"
             ],
-            "time": "2012-12-14T00:58:14+00:00"
+            "time": "2012-12-14 00:58:14"
         },
         {
             "name": "seld/cli-prompt",
@@ -7114,7 +7175,7 @@
                 "input",
                 "prompt"
             ],
-            "time": "2016-04-18T09:31:41+00:00"
+            "time": "2016-04-18 09:31:41"
         },
         {
             "name": "seld/jsonlint",
@@ -7160,7 +7221,7 @@
                 "parser",
                 "validator"
             ],
-            "time": "2016-11-14T17:59:58+00:00"
+            "time": "2016-11-14 17:59:58"
         },
         {
             "name": "seld/phar-utils",
@@ -7204,7 +7265,7 @@
             "keywords": [
                 "phra"
             ],
-            "time": "2015-10-13T18:44:15+00:00"
+            "time": "2015-10-13 18:44:15"
         },
         {
             "name": "stecman/symfony-console-completion",
@@ -7249,7 +7310,7 @@
                 }
             ],
             "description": "Automatic BASH completion for Symfony Console Component based applications.",
-            "time": "2015-05-07T12:21:50+00:00"
+            "time": "2015-05-07 12:21:50"
         },
         {
             "name": "symfony/browser-kit",
@@ -7306,7 +7367,7 @@
             ],
             "description": "Symfony BrowserKit Component",
             "homepage": "https://symfony.com",
-            "time": "2016-10-13T13:35:11+00:00"
+            "time": "2016-10-13 13:35:11"
         },
         {
             "name": "symfony/css-selector",
@@ -7359,7 +7420,7 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
-            "time": "2016-11-03T07:52:58+00:00"
+            "time": "2016-11-03 07:52:58"
         },
         {
             "name": "symfony/dom-crawler",
@@ -7415,7 +7476,7 @@
             ],
             "description": "Symfony DomCrawler Component",
             "homepage": "https://symfony.com",
-            "time": "2016-12-10T14:24:35+00:00"
+            "time": "2016-12-10 14:24:35"
         },
         {
             "name": "twig/extensions",
@@ -7467,7 +7528,7 @@
                 "i18n",
                 "text"
             ],
-            "time": "2016-10-25T17:34:14+00:00"
+            "time": "2016-10-25 17:34:14"
         },
         {
             "name": "webignition/internet-media-type",
@@ -7517,7 +7578,7 @@
                 "media type",
                 "media-type"
             ],
-            "time": "2015-02-20T16:52:30+00:00"
+            "time": "2015-02-20 16:52:30"
         },
         {
             "name": "webignition/quoted-string",
@@ -7558,7 +7619,7 @@
                 "parser",
                 "quoted-string"
             ],
-            "time": "2012-08-15T16:52:06+00:00"
+            "time": "2012-08-15 16:52:06"
         },
         {
             "name": "webignition/string-parser",
@@ -7599,14 +7660,12 @@
                 "parser",
                 "string"
             ],
-            "time": "2014-04-23T09:31:03+00:00"
+            "time": "2014-04-23 09:31:03"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "drupal/field_group": 5
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],

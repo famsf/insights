@@ -3,18 +3,47 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.card_section.field_artist
+    - field.field.paragraph.card_section.field_background_image
     - field.field.paragraph.card_section.field_card_section_title
+    - field.field.paragraph.card_section.field_copyright
+    - field.field.paragraph.card_section.field_display_hero_section
     - field.field.paragraph.card_section.field_display_share_widget
+    - field.field.paragraph.card_section.field_general_credit
+    - field.field.paragraph.card_section.field_image_title
+    - field.field.paragraph.card_section.field_location
+    - field.field.paragraph.card_section.field_medium
     - field.field.paragraph.card_section.field_scrollable
+    - field.field.paragraph.card_section.field_section_title_position
+    - field.field.paragraph.card_section.field_section_title_style
     - field.field.paragraph.card_section.field_sections_in_card
+    - field.field.paragraph.card_section.field_video_source
     - paragraphs.paragraphs_type.card_section
   module:
     - entity_reference_revisions
+    - image
+    - options
+    - video
 id: paragraph.card_section.default
 targetEntityType: paragraph
 bundle: card_section
 mode: default
 content:
+  field_artist:
+    weight: 9
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_background_image:
+    weight: 5
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
   field_card_section_title:
     weight: 1
     label: hidden
@@ -22,6 +51,22 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_copyright:
+    weight: 13
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_display_hero_section:
+    weight: 4
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
   field_display_share_widget:
     weight: 3
     label: hidden
@@ -31,6 +76,34 @@ content:
       format_custom_false: ''
     third_party_settings: {  }
     type: boolean
+  field_general_credit:
+    weight: 14
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_image_title:
+    weight: 10
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_location:
+    weight: 12
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_medium:
+    weight: 11
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
   field_scrollable:
     weight: 2
     label: hidden
@@ -40,6 +113,18 @@ content:
       format_custom_false: ''
     third_party_settings: {  }
     type: boolean
+  field_section_title_position:
+    weight: 8
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_section_title_style:
+    weight: 7
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
   field_sections_in_card:
     type: entity_reference_revisions_entity_view
     weight: 0
@@ -48,6 +133,15 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+  field_video_source:
+    weight: 6
+    label: hidden
+    settings:
+      width: '854'
+      height: '480'
+      autoplay: true
+    third_party_settings: {  }
+    type: video_embed_player
 hidden:
   created: true
   uid: true

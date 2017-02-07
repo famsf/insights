@@ -7,13 +7,17 @@ global-styling:
     js/jquery.pagepiling.js: {}
     js/css3-animate-it.js: {}
     js/share_expander.js: {}
+    js/section-hero_credit.js: {}
+    js/section_hero_header_set_height.js: {}
     js/expander_toggle.js: {}
     js/site.js: {}
   dependencies:
     - core/drupal
     - core/drupalSettings
     - core/jquery
-
+  css:
+      theme:
+        css/themes/legion/legion-dark.css: {}
 legion-dark:
   css:
       theme:
