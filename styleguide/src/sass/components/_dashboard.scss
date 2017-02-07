@@ -20,6 +20,10 @@
   @include breakpoint($bp2) {
     width: 50vw;
   }
+
+  @include breakpoint($bp3) {
+    width: 30vw;
+  }
 }
 
 nav,
@@ -41,7 +45,6 @@ footer {
 }
 
 .main-nav__item {
-  padding: 0 rhythm(1);
   display: block;
 
   a:link {
@@ -49,10 +52,10 @@ footer {
     font-size: 80%;
     line-height: 1.4em;
     border-bottom: 1px solid $background-c;
-    padding: rhythm(.6) 0;
+    padding: rhythm(.6);
 
     @include breakpoint($bp2) {
-      padding: rhythm(.4) 0;
+      padding: rhythm(.4);
     }
   }
 
