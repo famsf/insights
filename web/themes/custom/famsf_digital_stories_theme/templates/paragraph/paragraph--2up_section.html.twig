@@ -44,11 +44,13 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
 'l-1up',
 ]
 %}
-<div{{ attributes.addClass(classes) }}>
-  <div class="l-2up">
-    {{ content.field_left_column }}
+<section class="card-section">
+  <div{{ attributes.addClass(classes) }}>
+    <div class="l-2up">
+      {{ content.field_left_column }}
+    </div>
+    <div class="l-2up">
+      {{ content.field_right_column }}
+    </div>
   </div>
-  <div class="l-2up">
-    {{ content.field_right_column }}
-  </div>
-</div>
+</section>
