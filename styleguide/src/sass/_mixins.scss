@@ -178,7 +178,7 @@ http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacemen
   margin: auto;
   position: relative;
   width: 90vw;
-  color: $midnight;
+  color: $hero-content-text;
   padding: rhythm(1);
   background-color: $white-60;
 
@@ -254,7 +254,7 @@ http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacemen
     }
 
     .has-outlined-rectangles & {
-      border: 2px solid transparentize($azure, .7);
+      border: 2px solid transparentize($tertiary, .7);
     }
 
     .has-solid-rectangles & {

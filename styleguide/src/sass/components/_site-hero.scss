@@ -43,13 +43,13 @@
     a:visited {
       font-weight: 700;
       text-decoration: none;
-      color: $midnight;
+      color: $hero-content-text;
     }
 
     a:hover,
     a:active,
     a:focus {
-      color: $sea;
+      color: $hero-content-text-active;
     }
   }
 }

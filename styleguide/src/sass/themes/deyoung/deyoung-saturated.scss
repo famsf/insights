@@ -16,28 +16,30 @@ $white-20: rgba($white, .2);
 $white-30: rgba($white, .3);
 $white-60: rgba($white, .6);
 
-$orange: #d15127;
+$orange: #c14c2d;
 $red: #a83223;
 $blue: #72b9c1;
 $green: #005244;
 $yellow: #efe36e;
 
-$background-a: $sea;
-$background-b: $denim;
-$background-c: $midnight;
-$background-d: $ink;
-$border: $sea;
-$text-color: $white;
-$text-color-invert: $midnight;
-$primary: $yellow;
-$primary-active: $gold;
-$secondary: $azure-60;
-$tertiary: $pink-70;
+$background-a: $white;
+$background-b: $white;
+$background-c: $orange;
+$background-d: $orange;
+$border: $yellow;
+$text-color: $gray-dark;
+$text-color-invert: $white;
+$primary: $orange;
+$primary-active: $red;
+$secondary: $blue;
+$tertiary: $green;
 
 $dotted-border: url('../../../imgs/dots-dark.svg');
 $rectangles-border: url('../../../imgs/rectangles-dark.svg');
-$zoom-background: $midnight;
-$text-shadow-color: $yellow;
+$zoom-background: $white;
+$text-shadow-color: $gray-medium;
+$hero-content-text: $gray-dark;
+$hero-content-text-active: $black;
 
 // Import the global theme styles.
 @import '../../global';

@@ -45,6 +45,8 @@ $dotted-border: url('../../../imgs/dots-dark.svg');
 $rectangles-border: url('../../../imgs/rectangles-dark.svg');
 $zoom-background: $midnight;
 $text-shadow-color: $yellow;
+$hero-content-text: $midnight;
+$hero-content-text-active: $sea;
 
 // Import the global theme styles.
 @import '../../global';
