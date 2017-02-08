@@ -12,14 +12,17 @@
 (function ($) {
   Drupal.behaviors.dashboard_toggle = {
     attach: function(context, settings) {
-      // Define audio play buttons
+      // Define dashboard elements
       var dashboardButton = $('.js-dashboard-toggle', context);
       var dashboard = $('.dashboard');
       var dashboardOverlay = $('.js-dashboard-overlay-background');
       var dashboardClose = $('.js-dashboard-close');
       dashboardButton.click(function() {
+        // Toggle button state
         dashboardButton.toggleClass('js-closed js-opened');
+        // Lock the main page scrolling so only nav is scrollable.
         $('body').toggleClass('js-scroll-lock');
+        // Fade in overlay.
         if (dashboardOverlay.hasClass('js-zoom--is-open')) {
           dashboardOverlay.fadeOut(500);
           dashboardOverlay.toggleClass('js-zoom--is-open');
@@ -27,6 +30,7 @@
           dashboardOverlay.fadeIn(500);
           dashboardOverlay.toggleClass('js-zoom--is-open');
         }
+        // Slide the dashboard to position.
         if (dashboard.hasClass('js-closed')) {
           dashboard.css('left', '0');
           dashboard.removeClass('js-closed');
@@ -35,12 +39,14 @@
           dashboard.addClass('js-closed');
         }
       });
-    dashboardOverlay.click(function() {
-      dashboardButton.trigger('click', context);
-    });
-    dashboardClose.click(function() {
-      dashboardButton.trigger('click', context);
-    });
+      // Click the background to close the dashboard.
+      dashboardOverlay.click(function() {
+        dashboardButton.trigger('click', context);
+      });
+      // Click the close button inside the dashboard to close the dashboard.
+      dashboardClose.click(function() {
+        dashboardButton.trigger('click', context);
+      });
     }
   };
 })(jQuery, Drupal);
