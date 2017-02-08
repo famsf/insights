@@ -5,9 +5,14 @@
 <a href="#" class="dashboard-toggle js-dashboard-toggle js-closed button-with-icon"><i class="icon--med">{% include('svg/famsf-caret-left-md.html') %}</i><div>Explore</div></a>
 <div class="dashboard js-dashboard js-closed" style="left:-50vw;">
   <nav>
-  <div class="dashboard-header">
-    <a href="#" class="dashboard-close js-dashboard-close">close</a>
-  </div>
+    <div class="dashboard-header">
+      <div class="container">
+        <div class="l-1up">
+          <a href="#" class="dashboard-close js-dashboard-close button-with-icon"><div>Close</div><i class="icon--med">{% include('svg/famsf-caret-right-md.html') %}</i></a>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
       <div class="l-1up">
         <ul class="dashboard__nav-list" id="myMenu">
@@ -29,38 +34,29 @@
     </div>
   </nav>
 
-  <div class="dashboard__promotion">
+  <section class="dashboard-section">
     <div class="container">
       <div class="l-2up">
-        <div class="dashboard__promotion-item">
-          <a href="https://shop.famsf.org/collections/monet-the-early-years">
-            <img src="{{ site.url }}/assets/imgs/Monet-collection.jpg" alt="#">
-            Monet Exhibition Store Boutique
-          </a>
-        </div>
+        <a href="https://shop.famsf.org/collections/monet-the-early-years">
+          <img src="{{ site.url }}/assets/imgs/Monet-collection.jpg" alt="#">
+          Monet Exhibition Store Boutique
+        </a>
       </div>
       <div class="l-2up">
-        <div class="dashboard__promotion-item">
-          <a href="https://shop.famsf.org/collections/monet-the-early-years/products/monet-the-early-years-hc">
-            <img src="{{ site.url }}/assets/imgs/monet-spread.jpg" alt="#">
-            Monet: The Early Years Exhibition Catalogue
-          </a>
-        </div>
+        <a href="https://shop.famsf.org/collections/monet-the-early-years/products/monet-the-early-years-hc">
+          <img src="{{ site.url }}/assets/imgs/monet-spread.jpg" alt="#">
+          Monet: The Early Years Exhibition Catalogue
+        </a>
       </div>
     </div>
-  </div>
-
-  <div class="dashboard__promotion">
+  </section>
+  <section class="dashboard-section">
     <div class="container">
       <div class="l-2up">
-        <div class="dashboard__promotion-item">
-          <a class="color-block-button--full" href="https://tickets.famsf.org/events/283/detail/5849f9d058ccc4722edbce35">Nonmember Tickets</a>
-        </div>
+        <a class="color-block-button--full" href="https://tickets.famsf.org/events/283/detail/5849f9d058ccc4722edbce35">Nonmember Tickets</a>
       </div>
       <div class="l-2up">
-        <div class="dashboard__promotion-item">
-          <a class="color-block-button--full" href="https://tickets.famsf.org/events/283/detail/583e2a2704907371a3bbbd58">Member Tickets</a>
-        </div>
+        <a class="color-block-button--full" href="https://tickets.famsf.org/events/283/detail/583e2a2704907371a3bbbd58">Member Tickets</a>
       </div>
       <!-- Condensed original copy into these two ctas -->
     </div>
@@ -80,17 +76,13 @@
         <p><a href="https://www.famsf.org/press-room/monet-early-years">More about the exhibition</a></p>
         <h4>Visiting</h4>
         <p>Legion of Honor <br />Lincoln Park, 100 34th Avenue, San Francisco<br />Open 9:30 a.m.– 5:15 p.m.<br />Tuesdays–Sundays.<br />Open select holidays; closed most Mondays.<br />415 750-3600</p>
-        <p><a href="https://www.famsf.org/">https://www.famsf.org/</a><br /><a href="https://deyoung.famsf.org/">https://deyoung.famsf.org/</a><br /><a href="https://legionofhonor.famsf.org/">https://legionofhonor.famsf.org/ </a>
-        <p><a href="https://deyoung.famsf.org/contact">Contact</a></p>
-        <p><a href="https://deyoung.famsf.org/privacy">Privacy</a></p>
-        <p><a href="https://deyoung.famsf.org/terms">Terms &amp; Conditions</a></p>
-        <p>©2017 Fine Arts Museums of San Francisco</p>
+        <p><a href="https://www.famsf.org/">https://www.famsf.org/</a><br /><a href="https://deyoung.famsf.org/">https://deyoung.famsf.org/</a><br /><a href="https://legionofhonor.famsf.org/">https://legionofhonor.famsf.org/ </a></p>
       </div>
     </div>
-  </div>
+  </section>
 
   <footer>
-    <div class="footer__sponsors">
+    <section class="footer__sponsors dashboard-section">
       <div class="container">
         <div class="l-2up">
           <a href="https://www.bankofthewest.com/"><img src="{{ site.url }}/assets/imgs/sponsor-logos/BOTW-H-540.jpg" alt="bank of the west" /></a>
@@ -99,8 +91,15 @@
           <a href="https://www.bankofthewest.com/"><img src="{{ site.url }}/assets/imgs/sponsor-logos/artmentor.png" alt="bank of the west" /></a>
         </div>
       </div>
+    </section>
+    <div class="container">
+      <div class="l-1up">
+        <p><a href="https://deyoung.famsf.org/contact">Contact</a> |
+        <a href="https://deyoung.famsf.org/privacy">Privacy</a> |
+        <a href="https://deyoung.famsf.org/terms">Terms &amp; Conditions</a></p>
+        <p>©2017 Fine Arts Museums of San Francisco</p>
+      </div>
     </div>
   </footer>
-
 </div>
 <div class="dashboard-overlay-background js-dashboard-overlay-background" style="display: none;"></div>
