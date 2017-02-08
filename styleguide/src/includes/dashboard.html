@@ -2,13 +2,21 @@
   name: User Dashboard
   usage: Present at all times
 #}
-<a href="#" class="dashboard-toggle js-dashboard-toggle js-closed button-with-icon"><i class="icon--med">{% include('svg/famsf-caret-left-md.html') %}</i><div>Explore</div></a>
+<a href="#" class="dashboard-toggle js-dashboard-toggle js-closed button-with-icon">
+  <i class="icon--med">{% include('svg/famsf-caret-left-md.html') %}</i>
+  <i class="icon--small">{% include('svg/famsf-caret-left-sm.html') %}</i>
+  <div>Explore</div>
+</a>
 <div class="dashboard js-dashboard js-closed">
   <nav>
     <div class="dashboard-header">
       <div class="container">
         <div class="l-1up">
-          <a href="#" class="dashboard-close js-dashboard-close button-with-icon"><div>Close</div><i class="icon--med">{% include('svg/famsf-caret-right-md.html') %}</i></a>
+          <a href="#" class="dashboard-close js-dashboard-close button-with-icon">
+            <div>Close</div>
+            <i class="icon--med">{% include('svg/famsf-caret-right-md.html') %}</i>
+            <i class="icon--small">{% include('svg/famsf-caret-right-sm.html') %}</i>
+          </a>
         </div>
       </div>
     </div>

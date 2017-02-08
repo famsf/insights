@@ -22,10 +22,12 @@
 
   &.js-closed {
     left: -110vw;
+
     @include breakpoint($bp2) {
       left: -50vw;
     }
   }
+
   &.js-open {
     left: 0;
   }
@@ -97,21 +99,34 @@ footer {
   @extend %general-background;
   box-shadow: 5px 0 10px $gray-medium;
   position: fixed;
-  top: 2em;
+  top: 0;
   left: 0;
   z-index: 200;
-  padding: rhythm(.5);
   cursor: pointer;
   transition: all .25s ease;
-  width: 2.78em;
+  width: 2.5em;
+  height: 2.5em;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: rhythm(.5);
+
+  @include breakpoint($bp1) {
+    top: 2em;
+    width: 2.78em;
+    height: auto;
+    display: inline-block;
+  }
+
   div {
     display: none;
   }
+
   &:hover,
   &:focus,
   &:active {
     width: 6em;
+
     div {
       display: inline-block;
     }
@@ -141,4 +156,27 @@ footer {
     margin-right: 0;
     margin-left: .4em;
   }
+}
+
+.dashboard-toggle,
+.dashboard-close {
+  .icon--med {
+    display: none;
+  }
+
+  @include breakpoint($bp1) {
+    top: 2em;
+    width: 2.78em;
+    height: auto;
+    display: inline-block;
+
+    .icon--med {
+      display: inline-block;
+    }
+
+    .icon--small {
+      display: none;
+    }
+  }
+
 }
