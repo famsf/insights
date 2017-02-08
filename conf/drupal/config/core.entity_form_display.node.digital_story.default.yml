@@ -4,12 +4,16 @@ status: true
 dependencies:
   config:
     - field.field.node.digital_story.field_addthis_code
+    - field.field.node.digital_story.field_exhibition_dates
     - field.field.node.digital_story.field_header_section
     - field.field.node.digital_story.field_main_navigation
     - field.field.node.digital_story.field_section
+    - field.field.node.digital_story.field_site_hero_background_image
     - field.field.node.digital_story.field_theme
+    - image.style.thumbnail
     - node.type.digital_story
   module:
+    - image
     - paragraphs
     - path
 id: node.digital_story.default
@@ -19,11 +23,18 @@ mode: default
 content:
   created:
     type: datetime_timestamp
-    weight: 2
+    weight: 7
     settings: {  }
     third_party_settings: {  }
   field_addthis_code:
-    weight: 27
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_exhibition_dates:
+    weight: 1
     settings:
       size: 60
       placeholder: ''
@@ -31,7 +42,7 @@ content:
     type: string_textfield
   field_header_section:
     type: entity_reference_paragraphs
-    weight: 6
+    weight: 11
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -40,14 +51,14 @@ content:
       form_display_mode: default
     third_party_settings: {  }
   field_main_navigation:
-    weight: 9
+    weight: 12
     settings:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
   field_section:
     type: entity_reference_paragraphs
-    weight: 7
+    weight: 4
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -55,27 +66,34 @@ content:
       add_mode: dropdown
       form_display_mode: default
     third_party_settings: {  }
+  field_site_hero_background_image:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
   field_theme:
-    weight: 26
+    weight: 3
     settings: {  }
     third_party_settings: {  }
     type: options_select
   path:
     type: path
-    weight: 5
+    weight: 10
     settings: {  }
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 3
+    weight: 8
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 4
+    weight: 9
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -86,7 +104,7 @@ content:
     third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
-    weight: 1
+    weight: 6
     settings:
       match_operator: CONTAINS
       size: 60

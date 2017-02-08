@@ -89,7 +89,21 @@ logged_in? 'admin__article'
             </div>
         </footer>
     {% endif %}
-
-    {{ content }}
+    {% if node.field_site_hero_background_image.value is not empty %}
+        <div class="site-hero" style="background-image: url('{{ file_url(node.field_site_hero_background_image.entity.fileuri) }}');">
+            <div class="site-hero__title has-solid-rectangles top-left">
+                <div class="js-section-hero--get_height">
+                    {% if node.field_theme.value is not empty %}
+                    <span class="site-hero__logo animated fadeIn delay-1500"><a href="#">Legion of Honor Museum</a></span>
+                    {% endif %}
+                    <h1 class="animated fadeIn delay-1500"> {{ label|striptags|trim }}</h1>
+                    <h2 class="animated fadeIn delay-1500">{{ node.field_exhibition_dates.value }}</h2>
+                </div>
+                <div class="site-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
+                <div class="site-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
+            </div>
+        </div>
+    {% endif %}
+    {{ content.field_section }}
 
 </article>

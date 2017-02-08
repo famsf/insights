@@ -13,7 +13,6 @@ global-styling:
     - core/drupal
     - core/drupalSettings
     - core/jquery
-
 legion-dark:
   css:
       theme:
