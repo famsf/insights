@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Default theme implementation to display a paragraph.
+ * Custom theme implementation to display a card section paragraph.
  *
  * Available variables:
  * - paragraph: Full paragraph entity.
@@ -36,24 +36,28 @@
  * @ingroup themeable
  */
 #}
-{%
-set classes = [
+{% set classes = [
 'paragraph',
 'paragraph--type--' ~ paragraph.bundle|clean_class,
 view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-'l-1up',
-]
-%}
+] %}
 <section class="card-section">
-  <div{{ attributes.addClass(classes) }}>
-    <div class="l-3up">
-      {{ content.field_3up_left_column }}
+    <div class="deep-dive js-deep-dive">
+        <div class="deep-dive__wrapper js-deep-dive__wrapper js-expander--is-closed">
+            <div class="rectangles-bg container">
+                {{ content.field_sections_in_card }}
+            </div>
+        </div>
+        <div class="container">
+            <button class="button-with-icon js-icon--read-more" data-text-collapsed="{{ paragraph.field_collapsed_button_text.value }}" data-text-expanded="{{ paragraph.field_expanded_button_text.value }}">
+                <i class="js-icon-arrow--plus icon--med">
+                    {{ include(active_theme_path() ~ '/svg/famsf-plus-md.svg')  }}
+                </i>
+                <i class="js-icon-arrow--minus icon--med" style="display:none;">
+                    {{ include(active_theme_path() ~ '/svg/famsf-minus-md.svg')  }}
+                </i>
+                <div class="button-with-icon__text" >{{ paragraph.field_collapsed_button_text.value }}</div>
+            </button>
+        </div>
     </div>
-    <div class="l-3up">
-      {{ content.field_center_column }}
-    </div>
-    <div class="l-3up">
-      {{ content.field_3up_right_column }}
-    </div>
-  </div>
 </section>
