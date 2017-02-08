@@ -48,6 +48,9 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
 
 <section{{ attributes.addClass(classes).setAttribute('id', containerId) }}>
     {% if paragraph.field_display_hero_section.value == 1 %}
+        <!-- VIDEO -->
+        {{ dump(content.field_video_source|render) }}
+        <!-- /VIDEO -->
         {% if content.field_video_source|render is not empty %}
         <div class="section-hero__video-wrapper">
             <video autoplay="autoplay" muted="muted" preload="metadata" title="{{ paragraph.field_card_section_title.value }}" loop="loop" class="video-background">
@@ -69,21 +72,32 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
                     <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
                 </div>
             </div>
-            {% if paragraph.field_image_title.value is not empty or
-            paragraph.field_artist.value is not empty or
-            paragraph.field_medium.value is not empty or
-            paragraph.field_location.value is not empty or
-            paragraph.field_copyright.value is not empty or
-            paragraph.field_general_credit.value
-            %}
+
+            {% set credits = [] %}
+            {% if paragraph.field_artist.value is not empty %}
+                {% set credits = credits|merge([paragraph.field_artist.value ]) %}
+            {% endif %}
+            {% if paragraph.field_medium.value is not empty %}
+                {% set credits = credits|merge([paragraph.field_medium.value ]) %}
+            {% endif %}
+            {% if paragraph.field_location.value is not empty %}
+                {% set credits = credits|merge([paragraph.field_location.value ]) %}
+            {% endif %}
+            {% if paragraph.field_copyright.value is not empty %}
+                {% set credits = credits|merge([paragraph.field_copyright.value ]) %}
+            {% endif %}
+            {% if paragraph.field_general_credit.value is not empty %}
+                {% set credits = credits|merge([paragraph.field_general_credit.value ]) %}
+            {% endif %}
+
+            {% if credits is not empty or paragraph.field_image_title.value is not empty %}
             <div class="section-hero__figcaption">
                 <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
-                <span class="figcaption js-figcaption--hidden"><span class="title-of-art"> {{ paragraph.field_image_title.value }} </span>{% if  paragraph.field_artist.value is not empty or
-                    paragraph.field_medium.value is not empty or
-                    paragraph.field_location.value is not empty or
-                    paragraph.field_copyright.value is not empty or
-                    paragraph.field_general_credit.value
-                    %} {{ [paragraph.field_artist.value, paragraph.field_medium.value, paragraph.field_location.value, paragraph.field_copyright.value, paragraph.field_general_credit.value]|join(' | ') }} {% endif %}</span>
+                <span class="figcaption js-figcaption--hidden">
+                    {% if paragraph.field_image_title.value is not empty %}
+                    <span class="title-of-art"> {{ paragraph.field_image_title.value }} </span>
+                    {% endif %}
+                    {% if  credits is not empty  %} {{ credits|join(' | ') }} {% endif %}</span>
             </div>
             {% endif %}
         </div>

@@ -39,6 +39,7 @@
         "drupal/entity_reference_revisions": "^1.0",
         "drupal/field_group": "^1.0@RC",
         "drupal/paragraphs": "^1.0",
+        "drupal/video": "1.2",
         "palantirnet/the-build": "^1.0"
     },
     "require-dev": {

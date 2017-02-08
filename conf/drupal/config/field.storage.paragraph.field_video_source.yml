@@ -1,18 +1,24 @@
-uuid: 2318baf7-f813-4aae-924f-b3a0a768ebf8
+uuid: 6b1ea1f0-5617-49c3-af52-70c759e9fd74
 langcode: en
 status: true
 dependencies:
   module:
+    - file
     - paragraphs
+    - video
 id: paragraph.field_video_source
 field_name: field_video_source
 entity_type: paragraph
-type: string
+type: video
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
-module: core
+  default_video:
+    uuid: null
+    data: null
+  target_type: file
+  display_field: false
+  display_default: false
+  uri_scheme: public
+module: video
 locked: false
 cardinality: -1
 translatable: true

@@ -24,16 +24,16 @@ dependencies:
     - field_group
     - image
     - paragraphs
+    - video
 third_party_settings:
   field_group:
     group_hero_section:
       children:
         - field_display_hero_section
         - field_background_image
-        - field_video_source
         - field_section_title_style
         - field_section_title_position
-        - group_photo_credit
+        - field_video_source
       parent_name: ''
       weight: 1
       format_type: fieldset
@@ -51,8 +51,8 @@ third_party_settings:
         - field_location
         - field_copyright
         - field_general_credit
-      parent_name: group_hero_section
-      weight: 9
+      parent_name: ''
+      weight: 2
       format_type: fieldset
       format_settings:
         id: ''
@@ -151,7 +151,7 @@ content:
     type: options_select
   field_sections_in_card:
     type: entity_reference_paragraphs
-    weight: 2
+    weight: 3
     settings:
       title: Paragraph
       title_plural: Paragraphs
@@ -160,12 +160,15 @@ content:
       form_display_mode: default
     third_party_settings: {  }
   field_video_source:
-    weight: 6
+    weight: 31
     settings:
-      size: 60
-      placeholder: ''
+      file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
+      uri_scheme: public
+      file_extensions: 'mp4 ogv webm'
+      max_filesize: ''
+      progress_indicator: throbber
     third_party_settings: {  }
-    type: string_textfield
+    type: video_upload
 hidden:
   created: true
   status: true
