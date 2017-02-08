@@ -23,7 +23,6 @@ dependencies:
     - entity_reference_revisions
     - image
     - options
-    - video
 id: paragraph.card_section.default
 targetEntityType: paragraph
 bundle: card_section
@@ -134,14 +133,12 @@ content:
       link: ''
     third_party_settings: {  }
   field_video_source:
-    weight: 6
-    label: hidden
+    weight: 15
+    label: above
     settings:
-      width: '854'
-      height: '480'
-      autoplay: true
+      link_to_entity: false
     third_party_settings: {  }
-    type: video_embed_player
+    type: string
 hidden:
   created: true
   uid: true

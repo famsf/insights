@@ -1,12 +1,10 @@
-uuid: 3cd9f038-5fea-4173-bad6-f25730786029
+uuid: b03d1ad8-5a5a-4dd0-b6e1-7739cf841d49
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_video_source
     - paragraphs.paragraphs_type.card_section
-  module:
-    - video
 id: paragraph.card_section.field_video_source
 field_name: field_video_source
 entity_type: paragraph
@@ -17,10 +15,5 @@ required: false
 translatable: false
 default_value: {  }
 default_value_callback: ''
-settings:
-  file_extensions: ''
-  file_directory: 'videos/[date:custom:Y]-[date:custom:m]'
-  max_filesize: ''
-  handler: 'default:file'
-  handler_settings: {  }
-field_type: video
+settings: {  }
+field_type: string
