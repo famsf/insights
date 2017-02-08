@@ -81,6 +81,11 @@
             sectionSelector.scroll(function () {
               animateInSectionView();
             });
+            var dashboardButton = $('.js-dashboard-toggle', context);
+            // Close the dashboard after arriving at destination.
+            if (dashboardButton.hasClass('js-opened')) {
+              dashboardButton.trigger('click', context);
+            }
           },
           afterLoad: function(anchorLink, index){},
           afterRender: function(){

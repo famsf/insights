@@ -2,10 +2,12 @@
   name: User Dashboard
   usage: Present at all times
 #}
-
-<div class="dashboard">
-
+<a href="#" class="dashboard-toggle js-dashboard-toggle js-closed">Explore</a>
+<div class="dashboard js-dashboard js-closed" style="left:-50vw;">
   <nav>
+  <div class="dashboard-header">
+    <a href="#" class="dashboard-close js-dashboard-close">close</a>
+  </div>
     <div class="container">
       <div class="l-1up">
         <ul class="dashboard__nav-list" id="myMenu">
@@ -101,3 +103,4 @@
   </footer>
 
 </div>
+<div class="dashboard-overlay-background js-dashboard-overlay-background" style="display: none;"></div>
