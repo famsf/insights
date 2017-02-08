@@ -14,11 +14,10 @@
   height: 100vh;
   z-index: 200;
   display: block;
-  padding: rhythm(1) 0;
   font-size: 80%;
   line-height: 1.4em;
   overflow-y: auto;
-  transition: left 0.7s ease;
+  transition: left .7s ease;
 
   @include breakpoint($bp2) {
     width: 40vw;
@@ -83,6 +82,18 @@ footer {
   z-index: 200;
   padding: rhythm(.5);
   cursor: pointer;
+
+  div {
+    display: none;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    div {
+      display: inline-block;
+    }
+  }
 }
 
 .dashboard-overlay-background {
