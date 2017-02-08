@@ -14,8 +14,7 @@
   height: 100vh;
   z-index: 200;
   display: block;
-  padding: rhythm(2) 0;
-  box-shadow: 5px 0 10px $background-d;
+  padding: rhythm(1) 0;
   font-size: 80%;
   line-height: 1.4em;
   overflow-y: auto;
@@ -32,11 +31,6 @@ footer {
   margin: rhythm(2) 0;
 }
 
-// nav {
-//   @include breakpoint($bp3) {
-//     display: inline-block;
-//   }
-// }
 
 .dashboard__nav-list {
   list-style-type: none;
@@ -81,10 +75,14 @@ footer {
 }
 
 .dashboard-toggle {
+  @extend %general-background;
+  box-shadow: 5px 0 10px $gray-medium;
   position: fixed;
   top: 2em;
-  right: 2em;
+  left: 0;
   z-index: 200;
+  padding: rhythm(.5);
+  cursor: pointer;
 }
 
 .dashboard-overlay-background {
@@ -93,7 +91,7 @@ footer {
   bottom: 0;
   right: 0;
   left: 0;
-  background: #333;
+  background: $gray-medium;
   z-index: 50;
   opacity: .75;
 }
