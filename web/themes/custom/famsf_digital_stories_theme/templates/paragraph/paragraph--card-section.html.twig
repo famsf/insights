@@ -78,7 +78,7 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
             %}
             <div class="section-hero__figcaption">
                 <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
-                <span class="figcaption"><span class="title-of-art"> {{ paragraph.field_image_title.value }} </span>{% if  paragraph.field_artist.value is not empty or
+                <span class="figcaption js-figcaption--hidden"><span class="title-of-art"> {{ paragraph.field_image_title.value }} </span>{% if  paragraph.field_artist.value is not empty or
                     paragraph.field_medium.value is not empty or
                     paragraph.field_location.value is not empty or
                     paragraph.field_copyright.value is not empty or
