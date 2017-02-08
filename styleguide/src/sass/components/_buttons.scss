@@ -23,10 +23,12 @@ button {
   -webkit-align-items: center;
   align-items: center;
   padding: 0;
+  text-decoration: none;
 
   &:active,
   &:hover {
     color: $primary-active;
+    text-decoration: none;
   }
 
   svg {
