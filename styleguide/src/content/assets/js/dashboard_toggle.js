@@ -31,13 +31,7 @@
           dashboardOverlay.toggleClass('js-zoom--is-open');
         }
         // Slide the dashboard to position.
-        if (dashboard.hasClass('js-closed')) {
-          dashboard.css('left', '0');
-          dashboard.removeClass('js-closed');
-        } else {
-          dashboard.css('left', '-50vw');
-          dashboard.addClass('js-closed');
-        }
+        dashboard.toggleClass('js-closed js-open');
       });
       // Click the background to close the dashboard.
       dashboardOverlay.click(function() {

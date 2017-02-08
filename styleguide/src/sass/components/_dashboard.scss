@@ -9,7 +9,6 @@
   @extend %general-background;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100vw;
   height: 100vh;
   z-index: 200;
@@ -19,6 +18,16 @@
 
   @include breakpoint($bp2) {
     width: 40vw;
+  }
+
+  &.js-closed {
+    left: -110vw;
+    @include breakpoint($bp2) {
+      left: -50vw;
+    }
+  }
+  &.js-open {
+    left: 0;
   }
 }
 
@@ -93,14 +102,16 @@ footer {
   z-index: 200;
   padding: rhythm(.5);
   cursor: pointer;
-
+  transition: all .25s ease;
+  width: 2.78em;
+  overflow: hidden;
   div {
     display: none;
   }
-
   &:hover,
   &:focus,
   &:active {
+    width: 6em;
     div {
       display: inline-block;
     }
