@@ -1,0 +1,20 @@
+---
+layout: component
+section: component
+type: main
+theme: deyoung-desaturated
+
+title: Desaturated Image with credit and zoom
+description: This is an image with a credit. It will adjust to the size of its container.
+---
+
+{% block content_wrapper %}
+
+  {% block content %}
+    <div class="animatedParent"> <!--trigger the animated markers to fade in -->
+      {% include('image-with-credit--zoom.html') %}
+    </div>
+  {% endblock %}
+
+{% endblock %}
+{% include('zoom-modal.html') %}
