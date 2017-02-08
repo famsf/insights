@@ -11,15 +11,6 @@
    box-sizing: border-box;
  }
 
-// Main background gradient for body and slide sections.
-%general-background,
-.general-background {
-  background: $background-b; /* Old browsers */
-  background: -moz-linear-gradient(left,  $background-a 0%, $background-b 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left,  $background-a 0%,$background-b 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right,  $background-a 0%,$background-b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
-
 html {
   // Correct text resizing oddly in IE 6/7 when body `font-size` is set using
   // `em` units.
