@@ -47,6 +47,10 @@
 .styleguide-list {
   list-style-type: none;
   padding: 0;
+
+  li {
+    margin-bottom: rhythm(.5);
+  }
 }
 
 .styleguide-component {
