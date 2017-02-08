@@ -13,9 +13,9 @@
 
   Drupal.behaviors.section_hero_image_credit = {
     attach: function(context, settings) {
-      $('.js-section-hero__figcaption-cta').click(function(){
+      $('.js-section-hero__figcaption-cta', context).click(function(){
         // Define the target expandable div.
-        var targetImage = $(this).parents('.section-hero').find('.figcaption');
+        var targetImage = $(this).parents('.section-hero__figcaption').find('.figcaption');
         targetImage.toggleClass('js-figcaption--hidden js-figcaption--revealed');
       });
     }
