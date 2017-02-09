@@ -16,22 +16,38 @@ $white-20: rgba($white, .2);
 $white-30: rgba($white, .3);
 $white-60: rgba($white, .6);
 
+// oranges
+$sunshine: #ffedbd;
+$sherbet: #ffcfa4;
 $citrus: #d86c36;
 $orange: #c14c2d;
-$clay: #a0341f;
+$clay: #a04327;
+$rust: #892704;
+$earth: #721d03;
+
+// red
 $red: #a83223;
-$rust: #7c2615;
-$earth: #491108;
+
+// blues
 $blue: #72b9c1;
 $blue-70: #9cced4;
 $blue-40: #c7e3e6;
 $blue-30: #d5eaec;
 $blue-20: #e3f1f3;
+
+// greens
 $green: #005244;
+$forest: #4c867c;
+$sage: #b2cbc7;
+$mint: #e5eeec;
+
+// yellows
 $yellow: #efe36e;
 $yellow-70: #f4eb99;
 $yellow-50: #f7f1b6;
 $yellow-30: #faf7d3;
+
+// teals
 $seafoam: #bacdce;
 $teal: #36545b;
 $blue-gray: #213538;
@@ -41,15 +57,15 @@ $background-a: $orange;
 $background-b: $clay;
 $background-c: $rust;
 $background-d: $earth;
-$border: $blue-40;
+$border: $blue;
 $text-color: $white;
 $text-color-invert: $teal;
-$primary: $blue-70;
-$primary-active: $blue;
+$primary: $white;
+$primary-active: $sherbet;
 $secondary: $seafoam;
 $tertiary: $yellow;
 
-$decorative-border: 2px solid $yellow;
+$decorative-border: 2px solid $blue-70;
 $decorative-border-image: null;
 $rectangles-border: url('../../../imgs/rectangles-dark.svg');
 $zoom-background: $white;

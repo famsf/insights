@@ -120,7 +120,7 @@ http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacemen
    ============================================================== */
 
 %decorative-border {
-  border: $decorative-border;
+  border-bottom: $decorative-border;
   border-image: $decorative-border-image;
 }
 

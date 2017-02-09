@@ -19,18 +19,19 @@ h6 {
   font-family: $roboto-condensed;
 }
 
-h1 {
+h1,
+h2,
+h3 {
   font-weight: 700;
 }
 
-h2 {
-  font-weight: 400;
-}
-
-h3,
 h4,
 h5,
 h6 {
   font-weight: 300;
 }
 
+blockquote {
+  font-family: $roboto-condensed;
+  font-weight: 400;
+}
