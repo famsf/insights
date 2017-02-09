@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.2up_section.field_background_image
+    - field.field.paragraph.2up_section.field_column_distribution
     - field.field.paragraph.2up_section.field_left_column
     - field.field.paragraph.2up_section.field_plaintext_section_title
     - field.field.paragraph.2up_section.field_right_column
@@ -12,6 +13,7 @@ dependencies:
   module:
     - entity_reference_revisions
     - image
+    - options
 id: paragraph.2up_section.default
 targetEntityType: paragraph
 bundle: 2up_section
@@ -25,6 +27,12 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+  field_column_distribution:
+    weight: 9
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
   field_left_column:
     type: entity_reference_revisions_entity_view
     weight: 1
