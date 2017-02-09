@@ -135,13 +135,17 @@ content:
     third_party_settings: {  }
   field_video_source:
     weight: 15
-    label: above
+    label: hidden
     settings:
       width: '854'
       height: '480'
       autoplay: true
+      muted: true
+      preload: metadata
+      controls: false
+      loop: false
     third_party_settings: {  }
-    type: video_embed_player
+    type: video_player_list
 hidden:
   created: true
   uid: true
