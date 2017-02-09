@@ -11,10 +11,6 @@
   line-height: 1.4em;
 }
 
-.dropcap {
-  font-size: 150%;
-}
-
 blockquote {
   @extend %decorative-border;
   padding-bottom: rhythm(1);

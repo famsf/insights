@@ -16,8 +16,11 @@
   background-color: $white;
   color: $background-d;
   padding: 0 .2em;
-  margin-right: .1em;
+  margin-right: .3em;
   font-weight: 400;
+  outline: 2px solid $background-a;
+  box-shadow: 4px 4px $border;
+  font-size: 140%;
 }
 
 h1,
