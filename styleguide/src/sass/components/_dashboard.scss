@@ -59,19 +59,16 @@ footer {
   font-size: 80%;
   line-height: 1.3em;
 
-  a:link {
+  a:link,
+  a:visited {
     display: block;
     border-bottom: 1px solid $background-c;
     padding: rhythm(.6);
+    text-decoration: none;
 
     @include breakpoint($bp2) {
       padding: rhythm(.4);
     }
-  }
-
-  a:link,
-  a:visited {
-    text-decoration: none;
   }
 
   &:active,
@@ -125,7 +122,7 @@ footer {
   &:hover,
   &:focus,
   &:active {
-    width: 6em;
+    width: 6.5em;
 
     div {
       display: inline-block;

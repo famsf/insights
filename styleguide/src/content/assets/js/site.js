@@ -86,6 +86,19 @@
             if (dashboardButton.hasClass('js-opened')) {
               dashboardButton.trigger('click', context);
             }
+            // Highlight the active section in the nav.
+            var activeId = sectionSelector.attr('id');
+            var dashboardLinks = $('.dashboard__nav-list').find('a');
+            for (var i = dashboardLinks.length - 1; i >= 0; i--) {
+              // Trim hash tag
+              var href = $(dashboardLinks[i]).attr('href');
+              var trimmed = href.substring(1);
+              if (trimmed === activeId) {
+                $(dashboardLinks[i]).addClass('active');
+              } else {
+                $(dashboardLinks[i]).removeClass('active');
+              }
+            }
           },
           afterLoad: function(anchorLink, index){},
           afterRender: function(){
