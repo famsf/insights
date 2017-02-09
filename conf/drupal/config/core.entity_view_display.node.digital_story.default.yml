@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.digital_story.field_addthis_code
     - field.field.node.digital_story.field_exhibition_dates
-    - field.field.node.digital_story.field_header_section
     - field.field.node.digital_story.field_main_navigation
     - field.field.node.digital_story.field_section
     - field.field.node.digital_story.field_site_hero_background_image
@@ -28,14 +27,6 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-  field_header_section:
-    type: entity_reference_revisions_entity_view
-    weight: 102
-    label: hidden
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
   field_section:
     type: entity_reference_revisions_entity_view
     weight: 101

@@ -89,6 +89,7 @@ logged_in? 'admin__article'
             </div>
         </footer>
     {% endif %}
+    <section class="js-section pp-scrollable" id="start">
     {% if node.field_site_hero_background_image.value is not empty %}
         <div class="site-hero" style="background-image: url('{{ file_url(node.field_site_hero_background_image.entity.fileuri) }}');">
             <div class="site-hero__title has-solid-rectangles top-left">
@@ -105,5 +106,5 @@ logged_in? 'admin__article'
         </div>
     {% endif %}
     {{ content.field_section }}
-
+    </section>
 </article>
