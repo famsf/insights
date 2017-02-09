@@ -44,10 +44,10 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
 'l-1up',
 ]
 %}
-{% if paragraph.field_column_distribution.value is '50-50' %}
+{% if paragraph.field_column_distribution.value  == '50-50' %}
 {% set leftClass, rightClass = 'l-2up', 'l-2up' %}
 {% else %}
-{% set leftClass, rightClass = 'l-'~ paragraph.field_column_distribution.value ~'--1', 'l-'~ paragraph.field_column_distribution.value ~'--2' %}
+{% set leftClass, rightClass = ['l-', paragraph.field_column_distribution.value ,'--1']|join, ['l-', paragraph.field_column_distribution.value ,'--2']|join%}
 {% endif %}
 <section class="card-section">
   <div{{ attributes.addClass(classes) }}>
