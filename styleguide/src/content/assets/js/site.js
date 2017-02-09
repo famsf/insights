@@ -25,6 +25,14 @@
             sectionIds.unshift($(sectionElements[i]).attr('id'));
           }
         };
+        // Function to animate things in the viewport.
+        var animateInSectionView  = function(animatedItems, numberOfAnimatedItems, sectionSelector) {
+          for (var i = 0; i < numberOfAnimatedItems; i++) {
+            if ($(animatedItems[i]).position().top < $(sectionSelector).height()){
+              $(animatedItems[i]).addClass('go');
+            }
+          }
+        };
         getSectionIds();
         // Configure Lazy load to not run automatically.
         $.extend($.lazyLoadXT, {
@@ -66,20 +74,12 @@
             // Get all the animated items in the section.
             var animatedItems = sectionSelector.find('*.animated');
             var numberOfAnimatedItems = animatedItems.length;
-            // Function to animate things in the viewport.
-            function animateInSectionView() {
-              for (var i = 0; i < numberOfAnimatedItems; i++) {
-                if ($(animatedItems[i]).position().top < $(sectionSelector).height()){
-                  $(animatedItems[i]).addClass('go');
-                }
-              }
-            }
             // Run animations when the new card is initially visible.
-            animateInSectionView();
+            animateInSectionView(animatedItems, numberOfAnimatedItems, sectionSelector);
 
             // Trigger all animation in view on scroll.
             sectionSelector.scroll(function () {
-              animateInSectionView();
+              animateInSectionView(animatedItems, numberOfAnimatedItems, sectionSelector);
             });
           },
           afterLoad: function(anchorLink, index){},
@@ -90,6 +90,17 @@
               $('.js-loading').fadeOut(200);
             };
             lazyloadSection(firstSection, hideLoader());
+
+            var animatedItems = firstSection.find('*.animated');
+            var numberOfAnimatedItems = animatedItems.length;
+            // Run animations when the new card is initially visible.
+            setTimeout(function() {
+              animateInSectionView(animatedItems, numberOfAnimatedItems, firstSection);
+            }, 1000);
+            // Trigger all animation in view on scroll.
+            firstSection.scroll(function () {
+              animateInSectionView(animatedItems, numberOfAnimatedItems, firstSection);
+            });
           },
         });
         $('.js-next-page', context).click( function() {
