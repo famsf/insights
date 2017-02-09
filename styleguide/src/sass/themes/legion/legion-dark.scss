@@ -41,7 +41,8 @@ $primary-active: $gold;
 $secondary: $azure-60;
 $tertiary: $pink-70;
 
-$dotted-border: url('../../../imgs/dots-dark.svg');
+$decorative-border: 8px solid transparent;
+$decorative-border-image: url('../../../imgs/dots-dark.svg') 26% round;
 $rectangles-border: url('../../../imgs/rectangles-dark.svg');
 $zoom-background: $midnight;
 $text-shadow-color: $yellow;
@@ -54,5 +55,3 @@ $hero-content-text-active: $sea;
 // Import theme specific components
 @import 'legion-general-bg';
 @import 'legion-typography';
-@import 'legion-decorative-border';
-

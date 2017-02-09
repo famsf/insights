@@ -49,7 +49,8 @@ $primary-active: $blue;
 $secondary: $seafoam;
 $tertiary: $yellow;
 
-$dotted-border: url('../../../imgs/dots-dark.svg');
+$decorative-border: 2px solid $yellow;
+$decorative-border-image: null;
 $rectangles-border: url('../../../imgs/rectangles-dark.svg');
 $zoom-background: $white;
 $text-shadow-color: $gray-medium;
@@ -62,4 +63,3 @@ $hero-content-text-active: $black;
 // Import theme specific components
 @import 'deyoung-general-bg';
 @import 'deyoung-typography';
-@import 'deyoung-decorative-border';

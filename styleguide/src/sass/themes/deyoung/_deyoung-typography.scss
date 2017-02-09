@@ -8,19 +8,6 @@
 .lede {
   font-family: $roboto;
   font-weight: 700;
-  font-size: 1.1em;
-  line-height: 1.4em;
-  border-bottom: 8px solid transparent;
-  border-image-source: $dotted-border;
-  border-image-slice: 26%;
-  border-image-repeat: round;
-  padding-bottom: 1em;
-}
-
-.dropcap {
-  font-size: 150%;
-  color: $tertiary;
-  font-weight: 700;
 }
 
 h1,

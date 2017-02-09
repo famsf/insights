@@ -8,11 +8,9 @@
 // import colors //
 @import "colors-default";
 
-$dotted-border: null;
-$rectangles-border: null;
-
 // Import the global theme styles.
 @import 'global';
 
 // Import theme specific components
-// @import 'components/banner';
+@import 'themes/legion/legion-general-bg';
+@import 'themes/legion/legion-typography';
