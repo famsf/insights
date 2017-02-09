@@ -112,11 +112,13 @@ footer {
     top: 2em;
     width: 2.78em;
     height: auto;
-    display: inline-block;
+    // display: inline-block;
   }
 
   div {
-    display: none;
+    transition: opacity .7s ease;
+    opacity: 0;
+    display: inline-block;
   }
 
   &:hover,
@@ -125,7 +127,7 @@ footer {
     width: 6.5em;
 
     div {
-      display: inline-block;
+      opacity: 1;
     }
   }
 }
@@ -149,6 +151,13 @@ footer {
   float: right;
   text-align: right;
 
+  @include breakpoint($bp1) {
+    top: 2em;
+    width: 2.78em;
+    height: auto;
+    // display: inline-block;
+  }
+
   svg {
     margin-right: 0;
     margin-left: .4em;
@@ -162,11 +171,6 @@ footer {
   }
 
   @include breakpoint($bp1) {
-    top: 2em;
-    width: 2.78em;
-    height: auto;
-    display: inline-block;
-
     .icon--med {
       display: inline-block;
     }
@@ -175,5 +179,4 @@ footer {
       display: none;
     }
   }
-
 }
