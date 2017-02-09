@@ -33,6 +33,8 @@ $background-a: $sea;
 $background-b: $denim;
 $background-c: $midnight;
 $background-d: $ink;
+$pattern-a: $denim;
+$pattern-b: $midnight;
 $border: $sea;
 $text-color: $white;
 $text-color-invert: $midnight;
@@ -45,6 +47,9 @@ $dotted-border: url('../../../imgs/dots-dark.svg');
 $rectangles-border: url('../../../imgs/rectangles-dark.svg');
 $zoom-background: $midnight;
 $text-shadow-color: $yellow;
+
+// Import the specific theme styles.
+@import 'legion-section-hero';
 
 // Import the global theme styles.
 @import '../../global';

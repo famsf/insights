@@ -1,0 +1,14 @@
+{#
+  name: Section Hero 
+  usage: The section hero is used at the beginning of as section or chapter. This version has no accompanying background image or video.
+#}
+
+{% block component %}
+
+  <div class="section-hero">
+    <div class="section-hero__wrapper pattern">
+      {% include('section-hero-title.html') %}
+    </div>
+  </div>
+
+{% endblock %}
