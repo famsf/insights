@@ -153,17 +153,6 @@ http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacemen
 }
 
 /* ==============================================================
-   Dotted border extend
-   ============================================================== */
-
-%dotted-border {
-  border-bottom: 8px solid transparent;
-  border-image-source: $dotted-border;
-  border-image-slice: 26%;
-  border-image-repeat: round;
-}
-
-/* ==============================================================
    Hero extends
    ============================================================== */
 
@@ -229,7 +218,7 @@ http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacemen
 
   &.has-dotted-border {
     h1 {
-      @extend %dotted-border;
+      @extend %decorative-border;
       padding-bottom: .5em;
     }
   }
