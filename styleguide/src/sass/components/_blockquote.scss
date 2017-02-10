@@ -12,3 +12,17 @@ blockquote {
   font-family: $roboto-slab;
   font-weight: 300;
 }
+
+.pull-quote {
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.pull-quote__cite {
+  margin: rhythm(.25) 0 0 0;
+  font-family: $roboto;
+  font-style: italic;
+  color: $citation;
+}
