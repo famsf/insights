@@ -48,7 +48,7 @@ $decorative-border: 8px solid transparent;
 $decorative-border-image: url('../../../imgs/dots-dark.svg') 26% round;
 $rectangles-border: url('../../../imgs/legion-rectangles-dark.svg');
 $zoom-background: $midnight;
-$text-shadow-color: $yellow;
+$text-shadow-color: transparentize($yellow, .2);
 $hero-content-text: $midnight;
 $hero-content-text-active: $sea;
 
