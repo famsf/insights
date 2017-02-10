@@ -15,3 +15,18 @@
   margin: 1em 0;
   text-align: center;
 }
+
+// Social Media
+
+.social-media {
+  @extend %list--simple;
+}
+
+.social-media__item {
+  float: left;
+  margin-right: rhythm(1);
+
+  span {
+    @extend %element-invisible;
+  }
+}
