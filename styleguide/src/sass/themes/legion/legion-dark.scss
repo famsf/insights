@@ -33,7 +33,9 @@ $background-a: $sea;
 $background-b: $denim;
 $background-c: $midnight;
 $background-d: $ink;
-$border: $white-20;
+$pattern-a: $denim;
+$pattern-b: $midnight;
+$border: $sea;
 $text-color: $white;
 $text-color-invert: $midnight;
 $primary: $yellow;
@@ -49,6 +51,9 @@ $zoom-background: $midnight;
 $text-shadow-color: $yellow;
 $hero-content-text: $midnight;
 $hero-content-text-active: $sea;
+
+// Import the specific theme styles.
+@import 'legion-section-hero';
 
 // Import the global theme styles.
 @import '../../global';

@@ -177,8 +177,12 @@ http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacemen
   position: relative;
   width: 90vw;
   color: $hero-content-text;
-  padding: rhythm(1);
-  background-color: $white-60;
+  padding: rhythm(1.5);
+  background-color: transparentize($white, .2);
+
+  @include breakpoint($bp1) {
+    padding: rhythm(1);
+  }
 
   * {
     position: relative;

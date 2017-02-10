@@ -23,10 +23,12 @@ button {
   -webkit-align-items: center;
   align-items: center;
   padding: 0;
+  text-decoration: none;
 
   &:active,
   &:hover {
     color: $primary-active;
+    text-decoration: none;
   }
 
   svg {
@@ -45,12 +47,19 @@ button {
   text-align: center;
   display: inline-block;
   font-weight: 700;
+  text-decoration: none;
 
   &:hover,
   &:active,
   &:focus {
     background-color: $primary-active;
     outline: 2px solid $primary-active;
+<<<<<<< HEAD
+=======
+    border: 3px solid $background-c;
+    color: $background-c;
+    text-decoration: none;
+>>>>>>> develop
   }
 }
 

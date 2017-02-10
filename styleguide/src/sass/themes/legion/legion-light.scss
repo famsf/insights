@@ -33,15 +33,17 @@ $background-a: $pink-30;
 $background-b: $peach;
 $background-c: $peach;
 $background-d: $melon;
-$border: $white-20;
+$pattern-a: $pink-30;
+$pattern-b: $melon;
+$border: $pink-30;
 $text-color: $ink;
 $text-color-invert: $pink-30;
+$text-color-invert-active: $peach;
 $primary: $denim;
 $primary-active: $midnight;
 $secondary: $azure;
 $tertiary: darken($magenta, 5%);
 
-$border: $denim;
 $decorative-border: 8px solid transparent;
 $decorative-border-image: url('../../../imgs/dots-light.svg') 26% round;
 $rectangles-border: url('../../../imgs/legion-rectangles-light.svg');
@@ -50,9 +52,17 @@ $text-shadow-color: $azure-60;
 $hero-content-text: $midnight;
 $hero-content-text-active: $sea;
 
+// Import the specific theme styles.
+@import 'legion-section-hero';
+
 // Import the global theme styles.
 @import '../../global';
 
 // Import theme specific components
+<<<<<<< HEAD
 @import 'legion-typography';
 @import 'legion-general-bg';
+=======
+// @import 'components/banner';
+
+>>>>>>> develop
