@@ -44,7 +44,10 @@ content.field_scrollable|render|striptags==1 ? 'pp-scrollable',
 view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
 ] %}
 {% set containerId = paragraph.field_card_section_title.value|trim|clean_id %}
-
+{% set wrapperClasses = [
+paragraph.field_background_image.entity.fileuri is not empty?'pattern',
+'section-hero__wrapper'
+] %}
 
 <section{{ attributes.addClass(classes).setAttribute('id', containerId) }}>
     {% if paragraph.field_display_hero_section.value == 1 %}
@@ -60,7 +63,7 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
         </div>
         {% else %}
         <div class="section-hero">
-            <div class="section-hero__wrapper" data-bg="{{ file_url(paragraph.field_background_image.entity.fileuri) }}">
+            <div class="{{ wrapperClasses }}" {% if paragraph.field_background_image.entity.fileuri is not empty %}data-bg="{{ file_url(paragraph.field_background_image.entity.fileuri) }}"{% endif %}>
                 <div class="section-hero__title {{ paragraph.field_section_title_style.value }} {{ paragraph.field_section_title_position.value }}">
                     <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">{{ paragraph.field_card_section_title.value }}</h1>
                     <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
