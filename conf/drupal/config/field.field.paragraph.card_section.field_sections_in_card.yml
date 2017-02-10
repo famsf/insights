@@ -8,6 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.2up_section
     - paragraphs.paragraphs_type.3up_section
     - paragraphs.paragraphs_type.card_section
+    - paragraphs.paragraphs_type.revealable_read_more_section
     - paragraphs.paragraphs_type.section_divider
   module:
     - entity_reference_revisions
@@ -28,8 +29,12 @@ settings:
       1up_section: 1up_section
       2up_section: 2up_section
       3up_section: 3up_section
+      revealable_read_more_section: revealable_read_more_section
       section_divider: section_divider
     target_bundles_drag_drop:
+      text_area:
+        weight: -13
+        enabled: false
       1up_section:
         enabled: true
         weight: 8
@@ -42,10 +47,10 @@ settings:
       card_section:
         weight: 12
         enabled: false
+      revealable_read_more_section:
+        enabled: true
+        weight: 12
       section_divider:
         enabled: true
         weight: 13
-      text_area:
-        weight: -13
-        enabled: false
 field_type: entity_reference_revisions

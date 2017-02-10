@@ -1,0 +1,53 @@
+/**
+ * @file
+ * Defines the custom De Young Light theme.
+ *
+ * When loaded, this file will override the base color scheme.
+ */
+
+// Override color scheme variables set in _init.scss
+$black: #000;
+$gray-dark: #3e3e3e;
+$gray-medium: #a8abad;
+$gray-light: #ececec;
+$white: #fff;
+$white-10: rgba($white, .1);
+$white-20: rgba($white, .2);
+$white-30: rgba($white, .3);
+$white-60: rgba($white, .6);
+
+$azure: #1c90cf;
+$azure-60: #77bce2;
+$indigo: #0f6088;
+$pink-10: #fbf6f8;
+$pink-30: #f2e5ea;
+$peach: #ebd0d2;
+$melon: #e0b9bb;
+$magenta: #922b55;
+$sea: #216780;
+$denim: #10465b;
+$midnight: #0a2f3d;
+$ink: #03161e;
+
+$background-a: $pink-30;
+$background-b: $peach;
+$background-c: $peach;
+$background-d: $melon;
+$border: $pink-30;
+$text-color: $ink;
+$text-color-invert: $pink-30;
+$primary: $denim;
+$primary-active: $midnight;
+$secondary: $azure;
+$tertiary: darken($magenta, 5%);
+
+$dotted-border: url('../../../imgs/dots-light.svg');
+$rectangles-border: url('../../../imgs/rectangles-light.svg');
+$zoom-background: $pink-10;
+$text-shadow-color: $azure-60;
+
+// Import the global theme styles.
+@import '../../global';
+
+// Import theme specific components
+// @import 'components/banner';

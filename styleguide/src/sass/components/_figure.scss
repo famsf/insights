@@ -7,10 +7,10 @@
 
 figure {
   position: relative;
-  margin: 0;
   padding: 0;
   width: 100%;
   height: auto;
+  margin: 0;
 
   img {
     z-index: 0;
@@ -18,34 +18,109 @@ figure {
     display: block;
   }
 
-  svg {
-    margin-left: .7rem;
+  .l-2up &,
+  .l-33-66--1 &,
+  .l-33-66--2 &,
+  .l-66-33--1 &,
+  .l-66-33--2 & {
+    margin-bottom: rhythm(1);
   }
 }
 
-.figure--wrapper {
+.figure__wrapper {
   position: relative;
-  margin-bottom: 1em;
+  overflow: hidden;
+}
 
-  @include breakpoint($bp3) {
-    margin-bottom: 1.5em;
+.figure__overlay {
+  position: absolute;
+  z-index: 2;
+  bottom: -100%; // Hide info until it is ready to reveal.
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+
+  &.js-overlay-image--revealed {
+    bottom: 0;
   }
 }
 
-figcaption {
-  position: absolute;
-  bottom: 0;
-  z-index: 2;
-  background-color: transparentize($black, .2);
-  padding: .5rem .7rem;
-  margin: 0;
-  color: $white;
-  font-size: .7rem;
-  line-height: 1.1rem;
-  width: 100%;
+.figure__overlay-cta {
+  padding: .5rem 0;
 }
 
-.title-of-art {
-  font-family: $roboto-slab;
-  font-weight: 700;
+.figcaption-cta {
+  cursor: pointer;
+  padding: .5rem 0;
+  display: block;
+}
+
+.figcaption-cta,
+figcaption,
+.figcaption {
+  font-size: .65rem;
+  line-height: .9rem;
+}
+
+figcaption::after,
+.figcaption::after {
+  bottom: 100%;
+  left: 1.5rem;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  border-bottom-color: $primary;
+  border-width: 12px;
+  margin-left: -12px;
+}
+
+figcaption,
+.figcaption {
+  padding: .75rem;
+  margin-top: .8rem;
+  margin-bottom: .8rem;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  display: none;
+  background-color: $primary;
+  position: relative;
+  color: $text-color-invert;
+  font-weight: 400;
+
+  .title-of-art {
+    font-family: $roboto-slab;
+    font-style: italic;
+    font-weight: 700;
+  }
+
+  &.js-figcaption--revealed {
+    display: inline-block;
+  }
+}
+
+.figure__zoomable-boundary {
+  overflow: hidden;
+  position: relative;
+}
+
+.figure__zoomable-child {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: 100% auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  margin: 0;
+  padding: 0;
 }

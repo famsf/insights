@@ -1,6 +1,6 @@
 /**
  * @file
- * Defines the custom Optimism Dark Teal theme.
+ * Defines the custom Legion Dark theme.
  *
  * When loaded, this file will override the base color scheme.
  */
@@ -35,7 +35,7 @@ $background-c: $midnight;
 $background-d: $ink;
 $border: $sea;
 $text-color: $white;
-$text-color-invert: $sea;
+$text-color-invert: $midnight;
 $primary: $yellow;
 $primary-active: $gold;
 $secondary: $azure-60;
@@ -43,6 +43,8 @@ $tertiary: $pink-70;
 
 $dotted-border: url('../../../imgs/dots-dark.svg');
 $rectangles-border: url('../../../imgs/rectangles-dark.svg');
+$zoom-background: $midnight;
+$text-shadow-color: $yellow;
 
 // Import the global theme styles.
 @import '../../global';

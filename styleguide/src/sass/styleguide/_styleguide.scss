@@ -7,14 +7,6 @@
 
 .l-styleguide-column {
   @include isolation-span(12, 1, 'both');
-
-  @include breakpoint($bp1) {
-    @include isolation-span(8, 1, 'none');
-  }
-
-  @include breakpoint($bp2) {
-    @include isolation-span(7, 1, 'none');
-  }
 }
 
 .l-styleguide-rail {
@@ -31,7 +23,9 @@
 
 // Update this class as needed to differentiate styleguide header from the header component
 .styleguide-header {
-
+  position: relative;
+  background-color: transparent;
+  height: auto;
 }
 
 .styleguide-copyright {
@@ -110,4 +104,14 @@
       }
     }
   }
+}
+
+.styleguide-icon {
+  margin-right: 2em;
+  display: inline-block;
+}
+
+.icon--carrot {
+  @extend %icon;
+  height: .7em;
 }

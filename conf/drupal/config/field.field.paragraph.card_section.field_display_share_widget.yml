@@ -1,0 +1,23 @@
+uuid: 4e5de932-0117-4e2a-85ac-fd4d663f48f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_share_widget
+    - paragraphs.paragraphs_type.card_section
+id: paragraph.card_section.field_display_share_widget
+field_name: field_display_share_widget
+entity_type: paragraph
+bundle: card_section
+label: 'Display share widget'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

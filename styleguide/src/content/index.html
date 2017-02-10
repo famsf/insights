@@ -71,15 +71,23 @@ title: Styleguide
     <p>Based on the needs of the content, Components are arranged into specific layouts to create Templates.</p>
     <div class="l-2up--1">
       <h4>Legion Dark</h4>
-      <!-- <ul class="styleguide-list">
-        <li><a href="{{ site.url }}/home">Home Page</a></li>
-      </ul> -->
+      <ul class="styleguide-list">
+      {% for template in site.templates %}
+        {% if template.theme == 'legion-dark' %}
+          <li><a href="{{ site.url }}{{ template.url }}">{{ template.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+      </ul>
     </div>
     <div class="l-2up--2">
       <h4>Legion Light</h4>
-      <!-- <ul class="styleguide-list">
-        <li><a href="{{ site.url }}/home">Home Page</a></li>
-      </ul> -->
+      <ul class="styleguide-list">
+      {% for template in site.templates %}
+        {% if template.theme == 'legion-light' %}
+          <li><a href="{{ site.url }}{{ template.url }}">{{ template.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+      </ul>
     </div>
   </section>
 </main>

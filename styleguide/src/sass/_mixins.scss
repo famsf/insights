@@ -87,6 +87,16 @@
   overflow: auto;
 }
 
+/*  Hides text only on an element while maintaining accessibility,
+typically for image replacement:
+http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/ */
+%text-hidden,
+.text-hidden {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .element-focusable,
 %element-focusable {
   @extend %element-invisible;
@@ -106,11 +116,11 @@
 }
 
 /* ==============================================================
-   Rectangles background mixin
+   Rectangles background extend
    ============================================================== */
 
 .rectangles-bg,
-%rectangles-bg { 
+%rectangles-bg {
 
   @include breakpoint($bp3) {
     border: 40px solid transparent;
@@ -128,5 +138,131 @@
   &:focus {
     outline: none;
     background-color: darken($background-b, 7%);
+  }
+}
+
+// Scroll lock for preventing background scrolling on the body when a modal opens
+
+%scroll-lock,
+.scroll-lock {
+  overflow: hidden;
+}
+
+.js-scroll-lock {
+  @extend %scroll-lock;
+}
+
+/* ==============================================================
+   Dotted border extend
+   ============================================================== */
+
+%dotted-border {
+  border-bottom: 8px solid transparent;
+  border-image-source: $dotted-border;
+  border-image-slice: 26%;
+  border-image-repeat: round;
+}
+
+/* ==============================================================
+   Hero extends
+   ============================================================== */
+
+%hero {
+  width: 100%;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+}
+
+%hero__content {
+  margin: auto;
+  position: relative;
+  width: 90vw;
+  color: $midnight;
+  padding: rhythm(1.5);
+  background-color: transparentize($white, .2);
+
+  @include breakpoint($bp1) {
+    padding: rhythm(1);
+  }
+
+  * {
+    position: relative;
+    z-index: 2;
+  }
+
+  &.top-left {
+    @include breakpoint($bp1) {
+      margin-top: rhythm(3);
+      margin-left: rhythm(3);
+    }
+  }
+
+  &.top-right {
+    @include breakpoint($bp1) {
+      margin-top: rhythm(3);
+      margin-right: rhythm(3);
+    }
+  }
+
+  &.bottom-left {
+    @include breakpoint($bp1) {
+      margin-bottom: rhythm(3);
+      margin-left: rhythm(3);
+    }
+  }
+
+  &.bottom-right {
+    @include breakpoint($bp1) {
+      margin-bottom: rhythm(3);
+      margin-right: rhythm(3);
+    }
+  }
+
+  &.has-outlined-rectangles {
+    @include breakpoint($bp1) {
+      background-color: $white-30;
+    }
+  }
+
+  &.has-solid-rectangles {
+    @include breakpoint($bp1) {
+      background-color: transparent;
+    }
+  }
+
+  &.has-dotted-border {
+    h1 {
+      @extend %dotted-border;
+      padding-bottom: .5em;
+    }
+  }
+}
+
+%hero__rectangle {
+  display: none;
+
+  @include breakpoint($bp1) {
+    display: block;
+    position: absolute;
+    z-index: 0;
+
+    &.top {
+      top: -.7rem;
+      left: -.7rem;
+    }
+
+    &.bottom {
+      bottom: -.7rem;
+      right: -.7rem;
+    }
+
+    .has-outlined-rectangles & {
+      border: 2px solid transparentize($azure, .7);
+    }
+
+    .has-solid-rectangles & {
+      background-color: $white-60;
+    }
   }
 }

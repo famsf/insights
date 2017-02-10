@@ -1,0 +1,53 @@
+{#
+  name: Image comparison
+  usage: Images comparison may appear in several contexts throughout the site.
+#}
+
+{% block component %}
+
+<div class="container">
+  <div class="l-1up">
+    <h2>Monet’s Experience with the Salon</h2>
+  </div>
+  <div class="l-1up columns-2">
+    <p>Painting was a career, and as in any other, Monet had to figure out the rules to succeed. He knew that acceptance to the Salon was the most assured road to success. Monet actively solicited advice from fellow painters on how to make his paintings acceptable, yet it was difficult to know what would please the Salon jurors.</p>
+    <p>Below are several paintings he submitted for exhibition to the Salon. <strong><em>Guess which were accepted</em></strong>.</p>
+  </div>
+</div>
+<div class="container comparison">
+  <div class="comparison__2up js-comparison__group">
+    <figure>
+      <div class="figure__wrapper">
+        <img data-src="{{ site.url }}/assets/imgs/art/Low_tide.jpg" alt="The Pointe de La Hève at Low Tide" />
+        <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
+          <a class="figcaption-cta js-figcaption-cta">image credit</a>
+          <figcaption><span class="title-of-art">The Pointe de La Hève at Low Tide</span> 1865</figcaption>
+          <h3>Accepted!</h3>
+          <p>The 24-year-old Monet was successful in having his first submission approved for exhibition at the Salon. This work was also praised in the press: “Monet, unknown yesterday, has immediately made a name for himself with this single painting.” </p>
+          {% include('audio.html') %}
+          <blockquote>
+          &ldquo;The most original … and harmoniously painted seascape exhibited in a long time … M. Monet, unknown yesterday, has immediately made a name for himself with this single painting.&rdquo;
+          </blockquote>
+        </div>
+        {% include('comparison--cta-a.html') %}
+      </div>
+    </figure>
+  </div>
+
+  <div class="comparison__2up js-comparison__group">
+    <figure>
+      <div class="figure__wrapper">
+        <img data-src="{{ site.url }}/assets/imgs/art/Havre_dOrsay.jpg" alt="The Jetty at Le Havre" />
+        <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
+          <a class="figcaption-cta js-figcaption-cta">image credit</a>
+          <figcaption><span class="title-of-art">The Jetty at Le Havre</span> 1868</figcaption>
+          <h3>Rejected!</h3>
+          <p>Monet submitted this seascape in 1868. The young artist had invested a significant sum of money in this large-scale canvas and had to beg his family for money to survive.</p>
+        </div>
+        {% include('comparison--cta-b.html') %}
+      </div>
+    </figure>
+  </div>
+</div>
+
+{% endblock %}

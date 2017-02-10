@@ -31,6 +31,12 @@
             <property name="resource_dest" value="${js_dest}" />
         </phing>
 
+        <phing phingfile="${phing.dir.boilerplate}/lib/artifacts.xml" target="include-resource" inheritAll="false" dir=".">
+            <property name="artifact_mode" value="${build.artifact_mode}" />
+            <property name="resource_source" value="${svgs_source}" />
+            <property name="resource_dest" value="${svgs_dest}" />
+        </phing>
+
     </target>
 
 </project>

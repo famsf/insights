@@ -1,0 +1,50 @@
+{#
+  name: Image overlay
+  usage: Images overlay may appear in several contexts throughout the site.
+#}
+
+{% block component %}
+
+<div class="container">
+  <div class="l-1up">
+    <h2>Training your Eye: Composition</h2>
+  </div>
+</div>
+<div class="container js-overlay-container">
+  <div class="l-2up">
+    <figure>
+      <div class="figure__wrapper">
+          <img data-src="{{ site.url }}/assets/imgs/art/9_l'Hospice_Bridgeman.jpg" alt="Le Phare de l&rsquo;Hospice" />
+          <img class="figure__overlay js-overlay-image js-overlay-image--hidden" data-src="{{ site.url }}/assets/imgs/art/9_l'Hospice_Bridgeman_overlay.jpg" alt="Le Phare de l&rsquo;Hospice" />
+      </div>
+      <a class="figcaption-cta js-figcaption-cta">image credit</a>
+      <figcaption><span class="title-of-art">Le Phare de l&rsquo;Hospice</span> 1864 | Claude Monet | oil on canvas |  21 1/4 x 31 7/8 in. (54 x 81 cm) | Kunsthaus Zürich | Bridgeman Images</figcaption>
+      {% include('overlay-cta.html') %}
+    </figure>
+
+  </div>
+  <div class="l-2up">
+    <p>How an artist allocates the &ldquo;real estate&rdquo; of a canvas can indicate an acknowledgement of tradition or a decision to strive for innovation. With Le Phare de l&rsquo;Hospice&mdash;named for the lighthouse at the center of the painting&mdash;Monet deployed the ratio of one-third sea to two-thirds sky that traces back to 17th-century Dutch and Flemish precedents such as Jan van Goyen&rsquo;s Thunderstorm (1641), in the collection of the Legion of Honor.</p>
+  </div>
+</div>
+<div class="container js-overlay-container">
+  <div class="l-2up">
+    <figure>
+      <div class="figure__wrapper">
+          <img data-src="{{ site.url }}/assets/imgs/art/17_GreenWave_MET.jpg" alt="The Green Wave" />
+          <img class="figure__overlay js-overlay-image js-overlay-image--hidden" data-src="{{ site.url }}/assets/imgs/art/17_GreenWave_MET_overlay.jpg" alt="The Green Wave" />
+      </div>
+      <a class="figcaption-cta js-figcaption-cta">image credit</a>
+      <figcaption><span class="title-of-art">The Green Wave</span> ca. 1866–1867 | Claude Monet | oil on canvas | The Metropolitan Museum of Art, New York, H.O. Havemeyer Collection, Bequest of Mrs. H.O. Havemeyer, 1929, 29.100.111 | Metropolitan Museum of Art online</figcaption>
+      {% include('overlay-cta.html') %}
+    </figure>
+
+  </div>
+  <div class="l-2up">
+    <p>In contrast, The Green Wave reveals Monet&rsquo;s desire to disrupt viewing norms by dedicating the vast majority of the canvas to the sea. In fact, the lower half of the canvas is dedicated to nothing more than the varied tones of the water.</p>
+    <br>
+    <br>
+  </div>
+</div>
+
+{% endblock %}

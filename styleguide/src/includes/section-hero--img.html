@@ -6,14 +6,26 @@
 {% block component %}
 
 {% if page.title == "Dark Section Hero with Light Background Image" or page.title == "Light Section Hero with Light Background Image" %}
-  <div class="section-hero has-image light-background-image landscape-orientation">
-    {% include('section-hero-title--optiona.html') %}
-  </div> 
+  <div class="section-hero">
+    <div class="section-hero__wrapper" data-bg="{{ site.url }}/assets/imgs/art/Plaut_pont-neuf_BNF.jpg">
+      {% include('section-hero-title--optiona.html') %}
+    </div>
+    <div class="section-hero__figcaption">
+      <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
+      <span class="figcaption"><span class="title-of-art">Le Pont-Neuf et Île de la Cité</span> Charles-Henri Plaut | ca. 1865–1870 | Photograph | 13 3/8 x 12 5/8 in. (34 x 32 cm) | Bibliothèque nationale de France, Paris, PETFOL-VE-1431 | © Bibliothèque nationale de France</span>
+    </div>
+  </div>
 
 {% elseif page.title == "Dark Section Hero with Dark Background Image" or page.title == "Light Section Hero with Dark Background Image" %}
-  <div class="section-hero has-image dark-background-image portrait-orientation">
-    {% include('section-hero-title--optionc.html') %}
-  </div> 
+  <div class="section-hero">
+    <div class="section-hero__wrapper" data-bg="{{ site.url }}/assets/imgs/art/Camille_green_dress.jpg">
+      {% include('section-hero-title--optionc.html') %}
+    </div>
+    <div class="section-hero__figcaption">
+      <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
+      <span class="figcaption"><span class="title-of-art">Camille (The Woman with a Green Dress)</span> Claude Monet | 1866 | Oil on canvas | 91 x 59 1/2 in. (231 x 151 cm) | Kunsthalle Bremen, acquired with the assistance of  Galerievereins, 1906, Inv. Nr. 298-1906/1 | © Kunsthalle Bremen. Foto: Karen Blindow</span>
+    </div>
+  </div>
 {% endif %}
 
 {% endblock %}

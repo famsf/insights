@@ -1,0 +1,83 @@
+{#
+/**
+ * @file
+ * Custom theme implementation to display a card section paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   - id: The paragraph ID.
+ *   - bundle: The type of the paragraph, for example, "image" or "text".
+ *   - authorid: The user ID of the paragraph author.
+ *   - createdtime: Formatted creation date. Preprocess functions can
+ *     reformat it by calling format_date() with the desired parameters on
+ *     $variables['paragraph']->getCreatedTime().
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set classes = [
+'js-section',
+content.field_scrollable|render|striptags==1 ? 'pp-scrollable',
+    'animatedParent',
+'paragraph',
+'paragraph--type--' ~ paragraph.bundle|clean_class,
+view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+] %}
+
+{% set containerId = content.field_card_section_title|render|striptags|trim|clean_id %}
+<section{{ attributes.addClass(classes).setAttribute('id', containerId) }}>
+    {{ content.field_sections_in_card }}
+    {% if content.field_display_share_widget|render|striptags==1 %}
+        <div class="js-share">
+            <button class="share-button js-share-button button-with-icon">
+                <i class="icon--small"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                            viewBox="0 0 16.3 17.7" style="enable-background:new 0 0 16.3 17.7;" xml:space="preserve">
+<path class="st4" d="M12.4,1.8c1.2,0,2.1,0.9,2.1,2.1s-0.9,2.1-2.1,2.1c-0.6,0-1.1-0.2-1.4-0.6L6,8.4c0,0.2,0.1,0.3,0.1,0.5
+  C6.1,9,6,9.2,6,9.4l5,2.9c0.4-0.3,0.8-0.5,1.4-0.5c1.1,0,2,0.9,2,2s-0.9,2-2,2s-2-0.9-2-2c0-0.2,0-0.3,0.1-0.5l-5-2.9
+  C5,10.8,4.5,11,3.9,11C2.8,11,1.8,10,1.8,8.9c0-1.2,0.9-2.1,2.1-2.1C4.5,6.8,5,7,5.4,7.3l5-2.9c0-0.2-0.1-0.3-0.1-0.5
+  C10.3,2.8,11.2,1.8,12.4,1.8 M12.4,0c-2,0-3.6,1.5-3.9,3.4L5.4,5.2C4.9,5,4.4,4.9,3.9,4.9C1.8,4.9,0,6.7,0,8.9
+  c0,2.2,1.8,3.9,3.9,3.9c0.5,0,1-0.1,1.4-0.3l3.1,1.8c0.3,1.9,1.9,3.3,3.8,3.3c2.1,0,3.9-1.7,3.9-3.9s-1.7-3.9-3.9-3.9
+  c-0.5,0-0.9,0.1-1.4,0.3L8.8,8.9l2.1-1.2c0.5,0.2,0.9,0.3,1.4,0.3c2.2,0,3.9-1.8,3.9-3.9S14.6,0,12.4,0L12.4,0z"/>
+</svg>
+                </i>
+                <div>share</div>
+            </button>
+            <div class="share-expander js-share-expander js-share-expander--is-closed">
+                <div class="addthis_inline_share_toolbox"></div>
+            </div>
+        </div>
+    {% endif %}
+    <button class="js-next-page next-page animated fadeIn delay-100">
+        <div class="icon--med">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 29.2 27"
+                 style="enable-background:new 0 0 29.2 27;" xml:space="preserve">
+<path d="M14.6,27c-0.3,0-0.5-0.1-0.7-0.3L0.3,13.6c-0.3-0.3-0.4-0.7-0.2-1.1c0.2-0.4,0.5-0.6,0.9-0.6h6.8V1
+  c0-0.6,0.4-1,1-1h11.5c0.6,0,1,0.4,1,1v10.9h6.8c0.4,0,0.8,0.2,0.9,0.6s0.1,0.8-0.2,1.1L15.3,26.7C15.1,26.9,14.8,27,14.6,27z
+   M3.5,13.9l11.1,10.7l11.1-10.7h-5.3c-0.6,0-1-0.4-1-1V2H9.8v10.9c0,0.6-0.4,1-1,1H3.5z"></path>
+</svg>
+        </div>
+        next page
+    </button>
+</section>

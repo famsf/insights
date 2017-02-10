@@ -1,0 +1,117 @@
+{#
+  name: interaction demo
+  usage: Fullpage site to be displayed in template section with various themes.
+#}
+
+{% block component %}
+<main id="pagepiling" >
+  <section class="animatedParent section pp-scrollable" id="intro">
+    <div class="section-hero landscape-orientation">
+      <div class="section-hero--title">
+        <h1><span class="section-hero--number">FAMSF Digital Stories:</span><br />Interaction Demo</h1>
+      </div>
+    </div>
+    {% include('next-page.html') %}
+  </section>
+  <section class="section pp-scrollable" id="section4-light">
+    <div class="section-hero has-image light-background-image landscape-orientation">
+      {% include('section-hero-title--optiona.html') %}
+    </div>
+    <div class="container">
+      <div class="l-1up">
+        <ul class="bxslider" style="text-align: center; height: 5em; display: block;">
+          <li><h1>Ambition</h1></li>
+          <li><h1>Recognition</h1></li>
+          <li><h1>Risk</h1></li>
+          <li><h1>Innovation</h1></li>
+          <li><h1>Financial Ruin</h1></li>
+          <li><h1>Success</h1></li>
+          <li><h1>Fame</h1></li>
+        </ul>
+
+        <h2 class="animated fadeInRight">What is this &ldquo;new and revolutionary art?&rdquo;</h2>
+        <p>Before the success, before there was even the term impressionism, Claude Monet labored to define his style and promote himself as an artist.  Explore the first 14 years of Monet’s career when he struggled to provide food and shelter for himself and his family. <em>Monet the Early Years</em> begins with the first painting Monet exhibited in 1858 and closes in 1872, before he exhibited with the group of artists who would later be known as the Impressionists.
+        </p>
+
+        <h2 class="animated fadeInRight delay-1000">something animated 2</h3>
+        <h3 class="animated fadeInLeft delay-2000">something animated 3</h3>
+        <p>
+        Iisque suscipit mea ea, at ubique partiendo iracundia usu. Alii mollis omittantur nam ut, in eum diam solet definiebas, ea eos stet voluptatum. Eos delectus temporibus no, nam ad nulla admodum scripserit. Munere equidem te has. Duis facete et sea, ei appetere nominati consetetur mel. Eam in tation iudicabit evertitur, ea impetus antiopam sit, falli imperdiet at qui.
+        </p>
+      </div>
+    </div>
+    {% include('share.html') %}
+    {% include('next-page.html') %}
+  </section>
+  <section class="section pp-scrollable" id="section4-dark">
+    <div class="section-hero has-image dark-background-image portrait-orientation">
+    {% include('section-hero-title--optionc.html') %}
+  </div>
+
+        <!-- begin image comparison -->
+    {% include('image-comparison.html') %}
+
+    {% include('share.html') %}
+    {% include('next-page.html') %}
+  </section>
+  <section class="section pp-scrollable" id="section-with-video">
+  {% include('section-hero--video.html') %}
+
+    {% include('image-overlay.html') %}
+
+    <div class="container">
+      <div class="l-1up">
+        <h2>An Oak at Bas-Bréau (The Bodmer), 1865</h2>
+        <p>Since Fontainebleau was originally a royal preserve, its trees were able to reach majestic heights seldom seen in other landscapes. One such tree that Monet painted several times was this massive oak. </p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="l-2up">
+        <h3>Looking Closely</h3>
+        <p>In this painting Monet deployed several techniques that would evolve into hallmarks of his mature style. First the artist dramatically cropped the tree, bringing the viewer up close and into the deep shadows created by the enormous branches overhead.</p>
+      </div>
+      <div class="l-2up">
+        {% include('image-with-credit--zoom.html') %}
+      </div>
+    </div>
+    {% include('share.html') %}
+    {% include('next-page.html') %}
+  </section>
+  <section class="section pp-scrollable" id="image-and-caption">
+    {% include('image-with-credit.html') %}
+    <div class="container">
+      <div class="l-1up">
+        <h1 class="animated fadeInRight">H1 fade in animated</h1>
+        <p>Lorem ipsum dolor sit amet, pri eu virtute hendrerit, pro labores debitis deserunt ei, cu ius audire reformidans. Ex timeam impedit mel, id mea veri numquam efficiantur. Duo facete bonorum abhorreant ad, pro nisl apeirian ut. In mei decore tacimates, malis accommodare his ei. Et quaeque scripserit vel.
+        </p>
+        <p>
+        His dicam homero fabulas et, ea duo error altera honestatis, modo percipitur scripserit at eos. His te admodum praesent dissentiunt, duo id iracundia definitionem. An delectus forensibus duo. Adhuc populo percipitur ea nam. Cotidieque interpretaris vim et.
+        </p>
+        <h2>h2 Section Header</h2>
+        <p>
+        Iisque suscipit mea ea, at ubique partiendo iracundia usu. Alii mollis omittantur nam ut, in eum diam solet definiebas, ea eos stet voluptatum. Eos delectus temporibus no, nam ad nulla admodum scripserit. Munere equidem te has. Duis facete et sea, ei appetere nominati consetetur mel. Eam in tation iudicabit evertitur, ea impetus antiopam sit, falli imperdiet at qui.
+        </p>
+      </div>
+    </div>
+    {% include('read-more--deep-dive.html') %}
+    <div class="container">
+      <div class="l-1up">
+        <h3>h3 Section Header</h3>
+        <p>
+        Iisque suscipit mea ea, at ubique partiendo iracundia usu. Alii mollis omittantur nam ut, in eum diam solet definiebas, ea eos stet voluptatum. Eos delectus temporibus no, nam ad nulla admodum scripserit. Munere equidem te has. Duis facete et sea, ei appetere nominati consetetur mel. Eam in tation iudicabit evertitur, ea impetus antiopam sit, falli imperdiet at qui.
+        </p>
+      </div>
+    </div>
+    {% include('share.html') %}
+    {% include('next-page.html') %}
+  </section>
+  <section class="section pp-scrollable" id="lastPage" >
+    <div class="container">
+      <div class="l-1up">
+      </div>
+    </div>
+  </section>
+</main>
+{% include('zoom-modal.html') %}
+{% endblock %}
+

@@ -11,33 +11,45 @@
    box-sizing: border-box;
  }
 
-html {
-  // Correct text resizing oddly in IE 6/7 when body `font-size` is set using
-  // `em` units.
+// Main background gradient for body and slide sections.
+%general-background {
   background: $background-b; /* Old browsers */
   background: -moz-linear-gradient(left,  $background-a 0%, $background-b 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(left,  $background-a 0%,$background-b 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to right,  $background-a 0%,$background-b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+html {
+  // Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+  // `em` units.
   color: $text-color;
-  font-size: ($base-font-size / 16px) * 100%;
+  font-size: ($base-font-size / 18px) * 100%;
   line-height: ($base-line-height / $base-font-size) * 1em;
   font-family: $base-font-family; /* 1 */
-  font-weight: 400;
+  font-weight: 300;
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  @extend %general-background;
 
   // Adjust font-size globally per breakpoint.
   // As you adjust the percentage growth of font-size, translate
   // to the value to the mixin adjust-font-size-to in the mixins
   // file as a point value to maintain font-size across breakpoints.
   @include breakpoint($bp2) {
-    font-size: ($base-font-size / 16px) * 112%;
+    font-size: ($base-font-size / 18px) * 112%;
   }
   @include breakpoint($bp3) {
-    font-size: ($base-font-size / 16px) * 124%;
+    font-size: ($base-font-size / 18px) * 124%;
   }
+  // Styles below are needed for the pagepiling js library
+  // overflow:hidden;
+  margin:0;
+  padding:0;
+
+  /*Avoid flicker on slides transitions for mobile phones #336 */
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 /**
@@ -204,6 +216,17 @@ dfn {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
+p {
+  @include leader(1, $text);
+  @include trailer(1, $text);
+
+  .l-1up & {
+    @include breakpoint($bp3) {
+      max-width: 75%;
+    }
+  }
+}
+
 h1 {
   @extend %display-type;
   // Set the font-size and line-height while keeping a proper vertical rhythm.
@@ -220,6 +243,8 @@ h2 {
   @include adjust-font-size-to($h2-font-size, 1.5);
   @include leader(1.25, $h2-font-size);
   @include trailer(.5, $h2-font-size);
+  font-weight: 300;
+  font-family: $roboto-slab;
 }
 
 h3 {
@@ -230,7 +255,7 @@ h3 {
 }
 
 h4 {
-  @include adjust-font-size-to($h4-font-size, 1.25);
+  @include adjust-font-size-to($h4-font-size, 1);
   @include leader(1, $h4-font-size);
   @include trailer(.5, $h4-font-size);
 }
@@ -326,7 +351,7 @@ svg:not(:root) {
  */
 
 blockquote {
-  margin: rhythm(1);
+  margin: rhythm(1) 0;
 }
 
 /**

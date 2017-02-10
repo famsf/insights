@@ -5,16 +5,16 @@
 
 {% block component %}
 
-<div class="read-more--cta">
-  <div class="container">
-    <button class="button-with-icon">
-      {% include('svg/famsf-arrow-down.html') %}
-      <div>
-        Click to Read More About Monet's Influences
-      </div>
-    </button>
-  </div>
+<div class="container">
+  <button class="button-with-icon js-icon--read-more" data-text-collapsed="Click to Read More About Monet&rsquo;s Influences" data-text-expanded="Hide this section">
+    <i class="js-icon-arrow--plus icon--med">
+      {% include('svg/famsf-plus-md.html') %}
+    </i>
+    <i class="js-icon-arrow--minus icon--med" style="display:none;">
+      {% include('svg/famsf-minus-md.html') %}
+    </i>
+    <div class="button-with-icon__text">Click to Read More About Monet&rsquo;s Influences</div>
+  </button>
 </div>
-  
-{% endblock %}
 
+{% endblock %}

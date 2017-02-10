@@ -3,6 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.card_section.field_card_section_title
+    - field.field.paragraph.card_section.field_display_share_widget
+    - field.field.paragraph.card_section.field_scrollable
     - field.field.paragraph.card_section.field_sections_in_card
     - paragraphs.paragraphs_type.card_section
   module:
@@ -12,10 +15,35 @@ targetEntityType: paragraph
 bundle: card_section
 mode: default
 content:
+  field_card_section_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_display_share_widget:
+    weight: 3
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+  field_scrollable:
+    weight: 2
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
   field_sections_in_card:
     type: entity_reference_revisions_entity_view
     weight: 0
-    label: above
+    label: hidden
     settings:
       view_mode: default
       link: ''
