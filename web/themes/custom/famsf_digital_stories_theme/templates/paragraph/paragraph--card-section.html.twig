@@ -58,6 +58,10 @@ paragraph.field_background_image.entity.fileuri is not empty?'pattern',
             <div class="section-hero has-video">
                 <div class="section-hero__title {{ paragraph.field_section_title_style.value }} {{ paragraph.field_section_title_position.value }}">
                     <h1>{{ paragraph.field_card_section_title.value }}</h1>
+                    {% if paragraph.field_section_title_style.value != 'has-dotted-border' %}
+                    <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
+                    <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
+                    {% endif %}
                 </div>
             </div>
         </div>
