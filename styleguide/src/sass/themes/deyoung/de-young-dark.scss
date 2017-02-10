@@ -18,7 +18,7 @@ $white-60: rgba($white, .6);
 
 // oranges
 $sunshine: #ffedbd;
-$sherbet: #fcb275;
+$sherbet: #ffcea9;
 $citrus: #d86c36;
 $orange: #c14c2d;
 $clay: #bc432f;
@@ -69,7 +69,7 @@ $text-color-invert: $teal;
 $primary: $white;
 $primary-active: $sunshine;
 $secondary: $blue-70;
-$tertiary: $mint;
+$tertiary: $white;
 
 $border: $sherbet;
 $decorative-border: 2px solid $blue-70;
@@ -89,3 +89,4 @@ $hero-content-text-active: $black;
 // Import theme specific components
 @import 'deyoung-general-bg';
 @import 'deyoung-typography';
+@import 'deyoung-wysiwyg';
