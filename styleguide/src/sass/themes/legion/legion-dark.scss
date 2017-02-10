@@ -52,12 +52,10 @@ $text-shadow-color: $yellow;
 $hero-content-text: $midnight;
 $hero-content-text-active: $sea;
 
-// Import the specific theme styles.
-@import 'legion-section-hero';
-
 // Import the global theme styles.
 @import '../../global';
 
 // Import theme specific components
 @import 'legion-general-bg';
 @import 'legion-typography';
+@import 'legion-section-hero';
