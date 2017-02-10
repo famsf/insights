@@ -8,6 +8,7 @@
 .lede {
   font-family: $roboto-slab;
   font-weight: 400;
+  @extend %decorative-border;
 }
 
 .dropcap {
