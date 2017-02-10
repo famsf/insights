@@ -16,18 +16,28 @@
   margin: 1em auto 0;
   position: relative;
   text-align: center;
-  width: 5rem;
-  height: 3rem;
+  width: 3.5rem;
+  height: 2rem;
   padding: 0;
 
-  .icon--med {
+  .icon--xsmall {
     left: 0;
     position: absolute;
     text-indent: 0;
-    top: .65rem;
-    bottom: .65rem;
+    top: .35rem;
     width: 100%;
     display: block;
+
+    svg {
+      fill: $border;
+    }
+
+    &:active,
+    &:hover {
+      svg {
+        fill: $primary;
+      }
+    }
   }
 }
 

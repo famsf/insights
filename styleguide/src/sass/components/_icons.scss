@@ -21,7 +21,8 @@
 
 .icon--large,
 .icon--med,
-.icon--small {
+.icon--small,
+.icon--xsmall {
   @extend %icon;
   display: inline-block;
 }
@@ -36,4 +37,8 @@
 
 .icon--small {
   height: 1.1rem;
+}
+
+.icon--xsmall {
+  height: .75rem;
 }
