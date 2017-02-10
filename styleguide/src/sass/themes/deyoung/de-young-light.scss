@@ -16,19 +16,47 @@ $white-20: rgba($white, .2);
 $white-30: rgba($white, .3);
 $white-60: rgba($white, .6);
 
+// oranges
+$sunshine: #ffedbd;
+$sherbet: #ffcea9;
+$citrus: #d86c36;
 $orange: #c14c2d;
+$clay: #bc432f;
+$rust: #bc3c2f;
+$earth: #b7342a;
+
+// red
 $red: #a83223;
+
+// blues
 $blue: #72b9c1;
 $blue-70: #9cced4;
+$blue-40: #c7e3e6;
+$blue-30: #d5eaec;
+$blue-20: #e3f1f3;
+
+// greens
 $green: #005244;
+$forest: #4c867c;
+$sage: #b2cbc7;
+$mint: #e5eeec;
+
+// yellows
 $yellow: #efe36e;
+$yellow-70: #f4eb99;
+$yellow-50: #f7f1b6;
+$yellow-30: #faf7d3;
+
+// teals
+$seafoam: #bacdce;
 $teal: #36545b;
 $blue-gray: #213538;
+$blue-black: #0f1616;
 
-$background-a: $white;
-$background-b: $white;
-$background-c: $gray-light;
-$background-d: $gray-medium;
+$background-a: $blue-20;
+$background-b: $blue-40;
+$background-c: $blue-70;
+$background-d: $blue;
 $pattern-a: $white;
 $pattern-b: $gray-light;
 $border: $orange;
@@ -55,6 +83,5 @@ $hero-content-text-active: $black;
 @import '../../global';
 
 // Import theme specific components
-@import 'deyoung-general-bg';
 @import 'deyoung-typography';
 @import 'deyoung-wysiwyg';
