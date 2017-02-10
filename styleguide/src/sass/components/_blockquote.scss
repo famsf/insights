@@ -1,0 +1,28 @@
+/**
+ * @file
+ * blockquote styles
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+blockquote {
+  @extend %decorative-border;
+  padding-bottom: rhythm(1);
+  @include adjust-font-size-to($h3-font-size, 1.25);
+  font-family: $roboto-slab;
+  font-weight: 300;
+}
+
+.pull-quote {
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.pull-quote__cite {
+  margin: rhythm(.25) 0 0 0;
+  font-family: $roboto;
+  font-style: italic;
+  color: $citation;
+}
