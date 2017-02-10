@@ -1,0 +1,19 @@
+uuid: 7d12b2e3-c002-4209-ba77-fcd4f21d28f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_artist
+    - paragraphs.paragraphs_type.image_with_revealable_caption
+id: paragraph.image_with_revealable_caption.field_artist
+field_name: field_artist
+entity_type: paragraph
+bundle: image_with_revealable_caption
+label: Artist
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

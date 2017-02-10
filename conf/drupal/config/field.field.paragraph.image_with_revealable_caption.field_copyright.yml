@@ -1,0 +1,19 @@
+uuid: 4d852c8b-93ea-45bf-938c-4c638a019f60
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_copyright
+    - paragraphs.paragraphs_type.image_with_revealable_caption
+id: paragraph.image_with_revealable_caption.field_copyright
+field_name: field_copyright
+entity_type: paragraph
+bundle: image_with_revealable_caption
+label: Copyright
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
