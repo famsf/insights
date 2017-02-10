@@ -14,13 +14,15 @@
 .dropcap {
   font-family: $roboto-condensed;
   background-color: $white;
-  color: $background-d;
-  padding: 0 .2em;
+  color: $gray-dark;
+  padding: .2em;
   margin-right: .3em;
   font-weight: 400;
   outline: 2px solid $background-a;
-  box-shadow: 4px 4px $border;
-  font-size: 140%;
+  box-shadow: 5px 5px $secondary;
+  font-size: 300%;
+  float: left;
+  display: block;
 }
 
 h1,
