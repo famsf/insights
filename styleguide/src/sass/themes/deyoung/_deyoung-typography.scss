@@ -13,13 +13,13 @@
 
 .dropcap {
   font-family: $roboto-condensed;
-  background-color: $white;
-  color: $gray-dark;
-  padding: .2em;
+  background-color: $dropcap-bg;
+  color: $dropcap-color;
+  padding: .5em .3em;
   margin-right: .3em;
   font-weight: 400;
   outline: 2px solid $background-a;
-  box-shadow: 5px 5px $secondary;
+  box-shadow: 6px 6px $secondary;
   font-size: 300%;
   float: left;
   display: block;

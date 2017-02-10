@@ -18,8 +18,8 @@ $white-60: rgba($white, .6);
 
 // oranges
 $sunshine: #ffedbd;
-$sherbet: #ffcea9;
-$citrus: #d86c36;
+$sherbet: #fcb275;
+$citrus: #e58638;
 $orange: #c14c2d;
 $clay: #bc432f;
 $rust: #bc3c2f;
@@ -75,6 +75,8 @@ $zoom-background: $white;
 $text-shadow-color: $gray-medium;
 $hero-content-text: $gray-dark;
 $hero-content-text-active: $black;
+$dropcap-color: $white;
+$dropcap-bg: $teal;
 
 // Import theme specific components used in global
 @import 'deyoung-section-hero';
