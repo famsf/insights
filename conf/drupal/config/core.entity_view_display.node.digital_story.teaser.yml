@@ -16,8 +16,10 @@ content:
     weight: 100
 hidden:
   field_addthis_code: true
+  field_exhibition_dates: true
   field_header_section: true
   field_main_navigation: true
   field_section: true
+  field_site_hero_background_image: true
   field_skin: true
   field_theme: true

@@ -9,6 +9,8 @@ dependencies:
     - field.field.node.digital_story.field_section
     - field.field.node.digital_story.field_site_hero_background_image
     - field.field.node.digital_story.field_theme
+    - field.field.node.digital_story.field_title_position
+    - field.field.node.digital_story.field_title_style
     - node.type.digital_story
   module:
     - entity_reference_revisions
@@ -49,6 +51,18 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
+  field_title_position:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_title_style:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
 hidden:
   field_addthis_code: true
   field_main_navigation: true
