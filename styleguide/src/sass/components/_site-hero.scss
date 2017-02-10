@@ -30,8 +30,12 @@
     @include leader(.5, $h1-font-size);
     text-transform: uppercase;
     font-weight: 700;
-    text-shadow: 3px 3px transparentize($text-shadow-color, .2);
+    text-shadow: 3px 3px $text-shadow-color;
     font-size: 3em;
+
+    @include breakpoint($bp1) {
+      font-size: 4em;
+    }
   }
 
   h2 {
