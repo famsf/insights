@@ -105,7 +105,9 @@
             // Complete lazy load on the first active section and hide the loader.
             var firstSection = $('.js-section.active');
             var hideLoader = function() {
-              $('.js-loading').fadeOut(200);
+              setTimeout(function() {
+                $('.js-loading').fadeOut(500);
+              }, 1500);
             };
             lazyloadSection(firstSection, hideLoader());
 
