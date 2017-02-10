@@ -52,10 +52,12 @@ $text-shadow-color: $azure-60;
 $hero-content-text: $midnight;
 $hero-content-text-active: $sea;
 
+// Import theme specific components used in global
+@import 'legion-section-hero';
+
 // Import the global theme styles.
 @import '../../global';
 
 // Import theme specific components
 @import 'legion-typography';
 @import 'legion-general-bg';
-@import 'legion-section-hero';

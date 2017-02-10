@@ -48,10 +48,12 @@ $text-shadow-color: $gray-medium;
 $hero-content-text: $gray-dark;
 $hero-content-text-active: $black;
 
+// Import theme specific components used in global
+@import 'deyoung-section-hero';
+
 // Import the global theme styles.
 @import '../../global';
 
 // Import theme specific components
 @import 'deyoung-general-bg';
 @import 'deyoung-typography';
-@import 'deyoung-section-hero';
