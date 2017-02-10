@@ -5,11 +5,12 @@
 
 {% block component %}
 {% include('loading-page.html') %}
+{% include('dashboard.html') %}
 <main class="js-pagepiling" >
 
   <!-- Title -->
 
-  <section class="animatedParent js-section pp-scrollable" id="Title">
+  <section class="js-section pp-scrollable" id="Title">
     {% include('site-hero.html') %}
     {% include('next-page.html') %}
   </section>
@@ -699,4 +700,3 @@
 </main>
 {% include('zoom-modal.html') %}
 {% endblock %}
-
