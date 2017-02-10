@@ -70,6 +70,10 @@
 {% set classes = [
 logged_in? 'admin__article'
 ] %}
+{% set wrapperClasses = [
+'site-hero',
+node.field_background_image.entity.fileuri?'':'pattern'
+] %}
 <article{{ attributes.addClass(classes) }}>
 
     {{ title_prefix }}
@@ -90,7 +94,8 @@ logged_in? 'admin__article'
         </footer>
     {% endif %}
     <section class="js-section pp-scrollable" id="start">
-        <div class="site-hero" {% if node.field_site_hero_background_image.value is not empty %}data-bg="{{ file_url(node.field_site_hero_background_image.entity.fileuri) }}" {% endif %}>
+
+        <div class="{{ wrapperClasses|join(' ') }}" {% if node.field_site_hero_background_image.value is not empty %}data-bg="{{ file_url(node.field_site_hero_background_image.entity.fileuri) }}" {% endif %}>
             <div class="site-hero__title {{ node.field_section_title_style.value }} {{ node.field_section_title_position.value }}">
                 <div class="js-section-hero--get_height">
                     {% if node.field_theme.value starts with 'legion' %}
