@@ -6,6 +6,8 @@
  */
 
 .audio__wrapper {
+  @include leader(1, $text);
+  @include trailer(1, $text);
   display: inline-block;
   border: 2px solid $border;
   padding: .5em 1em;
