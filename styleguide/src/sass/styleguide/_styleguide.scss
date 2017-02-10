@@ -23,7 +23,9 @@
 
 // Update this class as needed to differentiate styleguide header from the header component
 .styleguide-header {
-
+  position: relative;
+  background-color: transparent;
+  height: auto;
 }
 
 .styleguide-copyright {

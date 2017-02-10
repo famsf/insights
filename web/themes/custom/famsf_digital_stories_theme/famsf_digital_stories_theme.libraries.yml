@@ -7,6 +7,7 @@ global-styling:
     js/jquery.pagepiling.js: {}
     js/css3-animate-it.js: {}
     js/share_expander.js: {}
+    js/section_hero_image_credit.js: {}
     js/section_hero_header_set_height.js: {}
     js/expander_toggle.js: {}
     js/site.js: {}
