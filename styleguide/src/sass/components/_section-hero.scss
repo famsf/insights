@@ -11,12 +11,16 @@
 }
 
 .section-hero__wrapper {
-  @extend %hero;
+  @extend %hero; 
   height: 90vh;
 
   &.has-video {
     position: absolute;
     top: 0;
+  }
+
+  &.pattern {
+    @extend %section-pattern !optional;
   }
 }
 

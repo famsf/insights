@@ -33,6 +33,8 @@ $background-a: $pink-30;
 $background-b: $peach;
 $background-c: $peach;
 $background-d: $melon;
+$pattern-a: $pink-30;
+$pattern-b: $melon;
 $border: $pink-30;
 $text-color: $ink;
 $text-color-invert: $pink-30;
@@ -48,8 +50,12 @@ $rectangles-border: url('../../../imgs/rectangles-light.svg');
 $zoom-background: $pink-10;
 $text-shadow-color: $azure-60;
 
+// Import the specific theme styles.
+@import 'legion-section-hero';
+
 // Import the global theme styles.
 @import '../../global';
 
 // Import theme specific components
 // @import 'components/banner';
+
