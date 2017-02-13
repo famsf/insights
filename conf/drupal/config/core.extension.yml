@@ -15,6 +15,7 @@ module:
   editor: 0
   entity_reference_revisions: 0
   field: 0
+  field_group: 0
   field_ui: 0
   file: 0
   filter: 0
@@ -39,6 +40,7 @@ module:
   tour: 0
   update: 0
   user: 0
+  video: 0
   views_ui: 0
   menu_link_content: 1
   views: 10

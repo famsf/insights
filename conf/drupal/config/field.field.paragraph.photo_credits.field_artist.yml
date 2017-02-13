@@ -1,0 +1,19 @@
+uuid: 5d4fcfab-8bbd-489b-a162-2d9323f79f75
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_artist
+    - paragraphs.paragraphs_type.photo_credits
+id: paragraph.photo_credits.field_artist
+field_name: field_artist
+entity_type: paragraph
+bundle: photo_credits
+label: Artist
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

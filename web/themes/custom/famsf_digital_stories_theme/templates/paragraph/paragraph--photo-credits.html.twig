@@ -1,0 +1,65 @@
+{#
+/**
+ * @file
+ * Custom theme implementation to display a card section paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   - id: The paragraph ID.
+ *   - bundle: The type of the paragraph, for example, "image" or "text".
+ *   - authorid: The user ID of the paragraph author.
+ *   - createdtime: Formatted creation date. Preprocess functions can
+ *     reformat it by calling format_date() with the desired parameters on
+ *     $variables['paragraph']->getCreatedTime().
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+{% set credits = [] %}
+{% if paragraph.field_artist.value is not empty %}
+    {% set credits = credits|merge([paragraph.field_artist.value ]) %}
+{% endif %}
+{% if paragraph.field_medium.value is not empty %}
+    {% set credits = credits|merge([paragraph.field_medium.value ]) %}
+{% endif %}
+{% if paragraph.field_location.value is not empty %}
+    {% set credits = credits|merge([paragraph.field_location.value ]) %}
+{% endif %}
+{% if paragraph.field_copyright.value is not empty %}
+    {% set credits = credits|merge([paragraph.field_copyright.value ]) %}
+{% endif %}
+{% if paragraph.field_general_credit.value is not empty %}
+    {% set credits = credits|merge([paragraph.field_general_credit.value ]) %}
+{% endif %}
+
+{% if credits is not empty or paragraph.field_image_title.value is not empty %}
+    <div class="section-hero__figcaption">
+        <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
+    <span class="figcaption js-figcaption--hidden">
+        {% if paragraph.field_image_title.value is not empty %}
+            <span class="title-of-art"> {{ paragraph.field_image_title.value }} </span>
+        {% endif %}
+        {% if  credits is not empty %} {{ credits|join(' | ') }} {% endif %}</span>
+    </div>
+{% endif %}

@@ -33,12 +33,14 @@
     ],
     "require": {
         "composer/installers": "^1.0",
+        "cweagans/composer-patches": "^1.6",
         "drupal-composer/drupal-scaffold": "^1.0",
         "drupal/config_installer": "^1.0",
         "drupal/core": "^8.0",
         "drupal/entity_reference_revisions": "^1.0",
         "drupal/field_group": "^1.0@RC",
         "drupal/paragraphs": "^1.0",
+        "drupal/video": "1.2",
         "palantirnet/the-build": "^1.0"
     },
     "require-dev": {
@@ -68,6 +70,11 @@
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "patches": {
+            "drupal/paragraphs": {
+                "Fix field group integration": "https://www.drupal.org/files/issues/field_group_not_working-2675136-53.patch"
+            }
         }
     }
 }

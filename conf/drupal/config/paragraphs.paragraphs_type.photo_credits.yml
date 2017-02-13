@@ -1,0 +1,6 @@
+uuid: c7f96574-5615-481b-9395-e9414b861be0
+langcode: en
+status: true
+dependencies: {  }
+id: photo_credits
+label: 'Photo Credits'
