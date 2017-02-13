@@ -93,11 +93,10 @@ content:
       height: '480'
       autoplay: true
       muted: true
-      preload: metadata
+      view_mode: default
       controls: false
       loop: false
     third_party_settings: {  }
-    type: video_player_list
-hidden:
+    type: video_player_listhidden:
   created: true
   uid: true

@@ -3,27 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.1up_section.field_background_image
     - field.field.paragraph.1up_section.field_main_column
-    - field.field.paragraph.1up_section.field_plaintext_section_title
-    - field.field.paragraph.1up_section.field_section_nav_title
-    - image.style.thumbnail
     - paragraphs.paragraphs_type.1up_section
   module:
-    - image
     - paragraphs
 id: paragraph.1up_section.default
 targetEntityType: paragraph
 bundle: 1up_section
 mode: default
 content:
-  field_background_image:
-    weight: 3
-    settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
   field_main_column:
     type: entity_reference_paragraphs
     weight: 0
@@ -34,20 +22,6 @@ content:
       add_mode: dropdown
       form_display_mode: default
     third_party_settings: {  }
-  field_plaintext_section_title:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-  field_section_nav_title:
-    weight: 2
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
 hidden:
   created: true
   status: true

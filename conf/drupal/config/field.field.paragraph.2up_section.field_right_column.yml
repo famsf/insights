@@ -12,7 +12,7 @@ id: paragraph.2up_section.field_right_column
 field_name: field_right_column
 entity_type: paragraph
 bundle: 2up_section
-label: 'right column'
+label: 'Right Column'
 description: ''
 required: false
 translatable: false
@@ -30,11 +30,11 @@ settings:
       2up_section:
         weight: 7
         enabled: false
-      3up_section:
-        weight: 8
-        enabled: false
-      call_to_action_section:
+      card_section:
         weight: 9
+        enabled: false
+      revealable_read_more_section:
+        weight: 10
         enabled: false
       section_divider:
         weight: 10
