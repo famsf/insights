@@ -44,9 +44,7 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
 <section class="card-section">
     <div class="deep-dive js-deep-dive">
         <div class="deep-dive__wrapper js-deep-dive__wrapper js-expander--is-closed">
-            <div class="rectangles-bg container">
-                {{ content.field_sections_in_card }}
-            </div>
+            {{ content.field_sections_in_card }}
         </div>
         <div class="container">
             <button class="button-with-icon js-icon--read-more" data-text-collapsed="{{ paragraph.field_collapsed_button_text.value }}" data-text-expanded="{{ paragraph.field_expanded_button_text.value }}">
