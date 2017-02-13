@@ -37,3 +37,10 @@ settings:
       2up_section:
         enabled: true
         weight: 9
+      card_section:
+        weight: 12
+        enabled: false
+      revealable_read_more_section:
+        enabled: true
+        weight: 12
+field_type: entity_reference_revisions
