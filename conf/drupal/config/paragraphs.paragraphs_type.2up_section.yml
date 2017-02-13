@@ -3,4 +3,4 @@ langcode: en
 status: true
 dependencies: {  }
 id: 2up_section
-label: '2 Column Section (2up)'
+label: '2 Column Card Section (2up)'
