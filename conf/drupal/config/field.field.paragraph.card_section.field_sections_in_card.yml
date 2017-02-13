@@ -1,4 +1,4 @@
-uuid: 0d640479-50e5-41ae-956f-e286690f3ff4
+uuid: e418dfc0-d5f0-4620-9b60-ecb3f1ab8b10
 langcode: en
 status: true
 dependencies:
@@ -6,10 +6,8 @@ dependencies:
     - field.storage.paragraph.field_sections_in_card
     - paragraphs.paragraphs_type.1up_section
     - paragraphs.paragraphs_type.2up_section
-    - paragraphs.paragraphs_type.3up_section
     - paragraphs.paragraphs_type.card_section
     - paragraphs.paragraphs_type.revealable_read_more_section
-    - paragraphs.paragraphs_type.section_divider
   module:
     - entity_reference_revisions
 id: paragraph.card_section.field_sections_in_card
@@ -28,9 +26,7 @@ settings:
     target_bundles:
       1up_section: 1up_section
       2up_section: 2up_section
-      3up_section: 3up_section
       revealable_read_more_section: revealable_read_more_section
-      section_divider: section_divider
     target_bundles_drag_drop:
       text_area:
         weight: -13
@@ -41,16 +37,10 @@ settings:
       2up_section:
         enabled: true
         weight: 9
-      3up_section:
-        enabled: true
-        weight: 10
       card_section:
         weight: 12
         enabled: false
       revealable_read_more_section:
         enabled: true
         weight: 12
-      section_divider:
-        enabled: true
-        weight: 13
 field_type: entity_reference_revisions

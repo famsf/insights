@@ -1,0 +1,10 @@
+uuid: 963ae62d-31b0-4b75-bdf5-986c8dc0c46c
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.revealable_child
+label: 'Revealable child'
+targetEntityType: paragraph
+cache: true
