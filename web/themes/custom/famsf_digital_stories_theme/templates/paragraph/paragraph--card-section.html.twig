@@ -56,7 +56,7 @@ paragraph.field_background_image.entity.fileuri?'':'pattern'
         <div class="section-hero__video-wrapper">
             {{ content.field_video_source }}
             <div class="section-hero has-video">
-                <div class="section-hero__title {{ paragraph.field_section_title_style.value }} {{ paragraph.field_section_title_position.value }}">
+                <div class="section-hero__title js-section-hero--get_height {{ paragraph.field_section_title_style.value }} {{ paragraph.field_section_title_position.value }}">
                     <h1>{{ paragraph.field_card_section_title.value }}</h1>
                     {% if paragraph.field_section_title_style.value != 'has-dotted-border' %}
                     <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
@@ -74,34 +74,7 @@ paragraph.field_background_image.entity.fileuri?'':'pattern'
                     <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
                 </div>
             </div>
-
-            {% set credits = [] %}
-            {% if paragraph.field_artist.value is not empty %}
-                {% set credits = credits|merge([paragraph.field_artist.value ]) %}
-            {% endif %}
-            {% if paragraph.field_medium.value is not empty %}
-                {% set credits = credits|merge([paragraph.field_medium.value ]) %}
-            {% endif %}
-            {% if paragraph.field_location.value is not empty %}
-                {% set credits = credits|merge([paragraph.field_location.value ]) %}
-            {% endif %}
-            {% if paragraph.field_copyright.value is not empty %}
-                {% set credits = credits|merge([paragraph.field_copyright.value ]) %}
-            {% endif %}
-            {% if paragraph.field_general_credit.value is not empty %}
-                {% set credits = credits|merge([paragraph.field_general_credit.value ]) %}
-            {% endif %}
-
-            {% if credits is not empty or paragraph.field_image_title.value is not empty %}
-            <div class="section-hero__figcaption">
-                <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
-                <span class="figcaption js-figcaption--hidden">
-                    {% if paragraph.field_image_title.value is not empty %}
-                    <span class="title-of-art"> {{ paragraph.field_image_title.value }} </span>
-                    {% endif %}
-                    {% if  credits is not empty  %} {{ credits|join(' | ') }} {% endif %}</span>
-            </div>
-            {% endif %}
+            {{ content.field_photo_credits }}
         </div>
         {% endif %}
     {% endif %}

@@ -3,20 +3,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.card_section.field_artist
     - field.field.paragraph.card_section.field_background_image
     - field.field.paragraph.card_section.field_card_section_title
-    - field.field.paragraph.card_section.field_copyright
     - field.field.paragraph.card_section.field_display_hero_section
     - field.field.paragraph.card_section.field_display_share_widget
-    - field.field.paragraph.card_section.field_general_credit
-    - field.field.paragraph.card_section.field_image_title
-    - field.field.paragraph.card_section.field_location
-    - field.field.paragraph.card_section.field_medium
+    - field.field.paragraph.card_section.field_photo_credits
     - field.field.paragraph.card_section.field_scrollable
     - field.field.paragraph.card_section.field_section_title_position
     - field.field.paragraph.card_section.field_section_title_style
-    - field.field.paragraph.card_section.field_sections_in_card
     - field.field.paragraph.card_section.field_video_source
     - image.style.thumbnail
     - paragraphs.paragraphs_type.card_section
@@ -31,6 +25,7 @@ third_party_settings:
       children:
         - field_display_hero_section
         - field_background_image
+        - field_photo_credits
         - field_section_title_style
         - field_section_title_position
         - field_video_source
@@ -43,35 +38,11 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Hero Section'
-    group_photo_credit:
-      children:
-        - field_artist
-        - field_image_title
-        - field_medium
-        - field_location
-        - field_copyright
-        - field_general_credit
-      parent_name: ''
-      weight: 2
-      format_type: fieldset
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        required_fields: true
-      label: 'Photo credit'
 id: paragraph.card_section.default
 targetEntityType: paragraph
 bundle: card_section
 mode: default
 content:
-  field_artist:
-    weight: 25
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
   field_background_image:
     weight: 5
     settings:
@@ -81,13 +52,6 @@ content:
     type: image_image
   field_card_section_title:
     weight: 0
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-  field_copyright:
-    weight: 29
     settings:
       size: 60
       placeholder: ''
@@ -105,34 +69,16 @@ content:
       display_label: true
     third_party_settings: {  }
     type: boolean_checkbox
-  field_general_credit:
-    weight: 30
+  field_photo_credits:
+    type: entity_reference_paragraphs
+    weight: 6
     settings:
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
     third_party_settings: {  }
-    type: string_textfield
-  field_image_title:
-    weight: 26
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-  field_location:
-    weight: 28
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-  field_medium:
-    weight: 27
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
   field_scrollable:
     weight: 5
     settings:
@@ -149,18 +95,8 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
-  field_sections_in_card:
-    type: entity_reference_paragraphs
-    weight: 3
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      add_mode: dropdown
-      form_display_mode: default
-    third_party_settings: {  }
   field_video_source:
-    weight: 31
+    weight: 9
     settings:
       file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
       uri_scheme: public

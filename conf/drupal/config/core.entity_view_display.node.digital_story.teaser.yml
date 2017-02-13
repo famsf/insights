@@ -23,3 +23,5 @@ hidden:
   field_site_hero_background_image: true
   field_skin: true
   field_theme: true
+  field_title_position: true
+  field_title_style: true
