@@ -41,6 +41,43 @@
   }
 }
 
+// border animation
+
+@-webkit-keyframes expand-width {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.animated-border--top {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  display: block;
+  width: 0%;
+  background: linear-gradient( to right, $pattern-a, $pattern-b );
+  height: 2px;
+  animation: expand-width 1.5s forwards;
+  animation-delay: 3.5s;
+}
+
+.animated-border--bottom {
+  position: absolute;
+  bottom: -10px;
+  right: 0;
+  display: block;
+  width: 0%;
+  background: linear-gradient( to right, $pattern-b, $pattern-a );
+  height: 2px;
+  animation: expand-width 1.5s forwards;
+  animation-delay: 3.5s;
+}
+
+
 .section-hero__rectangle {
   @extend %hero__rectangle;
   width: 27.7rem;
