@@ -7,8 +7,8 @@
 
 .comparison {
   @include breakpoint ($bp2) {
-    display: -webkit-flex;
     display: flex;
+    display: -webkit-flex;
   }
 
   figure {

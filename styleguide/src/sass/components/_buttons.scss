@@ -18,9 +18,7 @@ button {
   color: $primary;
   border: none;
   text-align: left;
-  display: -webkit-flex;
   display: flex;
-  -webkit-align-items: center;
   align-items: center;
   padding: 0;
   text-decoration: none;
@@ -33,6 +31,11 @@ button {
 
   svg {
     margin-right: .4em;
+  }
+
+  > i ,
+  > div {
+    float: left; // Fixes alignment issue in Firefox of icon and and text inside button element.
   }
 }
 
