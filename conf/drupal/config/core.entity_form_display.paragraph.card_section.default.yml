@@ -11,6 +11,7 @@ dependencies:
     - field.field.paragraph.card_section.field_scrollable
     - field.field.paragraph.card_section.field_section_title_position
     - field.field.paragraph.card_section.field_section_title_style
+    - field.field.paragraph.card_section.field_sections_in_card
     - field.field.paragraph.card_section.field_video_source
     - image.style.thumbnail
     - paragraphs.paragraphs_type.card_section
@@ -64,7 +65,7 @@ content:
     third_party_settings: {  }
     type: boolean_checkbox
   field_display_share_widget:
-    weight: 4
+    weight: 3
     settings:
       display_label: true
     third_party_settings: {  }
@@ -80,7 +81,7 @@ content:
       form_display_mode: default
     third_party_settings: {  }
   field_scrollable:
-    weight: 5
+    weight: 4
     settings:
       display_label: true
     third_party_settings: {  }
@@ -95,6 +96,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+  field_sections_in_card:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
   field_video_source:
     weight: 9
     settings:
