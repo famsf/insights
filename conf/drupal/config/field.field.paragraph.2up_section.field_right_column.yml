@@ -6,6 +6,7 @@ dependencies:
     - field.storage.paragraph.field_right_column
     - paragraphs.paragraphs_type.2up_section
     - paragraphs.paragraphs_type.text_area
+    - paragraphs.paragraphs_type.word_fader
   module:
     - entity_reference_revisions
 id: paragraph.2up_section.field_right_column
@@ -23,6 +24,7 @@ settings:
   handler_settings:
     target_bundles:
       text_area: text_area
+      word_fader: word_fader
     target_bundles_drag_drop:
       1up_section:
         weight: 6
@@ -42,4 +44,7 @@ settings:
       text_area:
         enabled: true
         weight: 12
+      word_fader:
+        enabled: true
+        weight: 16
 field_type: entity_reference_revisions
