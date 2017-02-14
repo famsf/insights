@@ -32,11 +32,6 @@ button {
   svg {
     margin-right: .4em;
   }
-
-  > i ,
-  > div {
-    float: left; // Fixes alignment issue in Firefox of icon and and text inside button element.
-  }
 }
 
 .color-block-button,

@@ -115,9 +115,10 @@ footer {
   }
 
   div {
-    transition: opacity .7s ease;
+    transition: all .7s ease;
     opacity: 0;
     display: inline-block;
+    width: 0;
   }
 
   &:hover,
@@ -127,6 +128,7 @@ footer {
 
     div {
       opacity: 1;
+      width: 3.75em;
     }
   }
 }
