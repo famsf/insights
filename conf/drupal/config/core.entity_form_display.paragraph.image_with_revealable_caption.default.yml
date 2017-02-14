@@ -3,63 +3,18 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.image_with_revealable_caption.field_artist
-    - field.field.paragraph.image_with_revealable_caption.field_copyright
-    - field.field.paragraph.image_with_revealable_caption.field_general_credit
     - field.field.paragraph.image_with_revealable_caption.field_image
-    - field.field.paragraph.image_with_revealable_caption.field_image_title
-    - field.field.paragraph.image_with_revealable_caption.field_location
-    - field.field.paragraph.image_with_revealable_caption.field_medium
+    - field.field.paragraph.image_with_revealable_caption.field_photo_credits
     - image.style.thumbnail
     - paragraphs.paragraphs_type.image_with_revealable_caption
   module:
-    - field_group
     - image
-third_party_settings:
-  field_group:
-    group_credits:
-      children:
-        - field_image_title
-        - field_artist
-        - field_medium
-        - field_location
-        - field_copyright
-        - field_general_credit
-      parent_name: ''
-      weight: 20
-      format_type: fieldset
-      format_settings:
-        id: ''
-        classes: ''
-        description: ''
-        required_fields: true
-      label: Credits
+    - paragraphs
 id: paragraph.image_with_revealable_caption.default
 targetEntityType: paragraph
 bundle: image_with_revealable_caption
 mode: default
 content:
-  field_artist:
-    weight: 10
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-  field_copyright:
-    weight: 13
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-  field_general_credit:
-    weight: 14
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
   field_image:
     weight: 0
     settings:
@@ -67,27 +22,16 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
-  field_image_title:
-    weight: 9
+  field_photo_credits:
+    weight: 21
     settings:
-      size: 60
-      placeholder: ''
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
     third_party_settings: {  }
-    type: string_textfield
-  field_location:
-    weight: 12
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-  field_medium:
-    weight: 11
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
+    type: entity_reference_paragraphs
 hidden:
   created: true
   status: true
