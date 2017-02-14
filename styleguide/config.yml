@@ -1,7 +1,7 @@
 # Site configuration
 
 title: 'Fine Arts Museums of San Francisco Digital Stories'
-url: ''
+url: 'http://digitalstories.famsf.org/early-monet/'
 
 server_watch_ext: ['html', 'htm', 'xml', 'css', 'js', 'twig', 'md']
 
