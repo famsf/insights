@@ -1,0 +1,6 @@
+uuid: 2097ba72-7250-4707-9644-48ca50b37125
+langcode: en
+status: true
+dependencies: {  }
+id: image_with_revealable_caption
+label: 'Image with Revealable Caption'
