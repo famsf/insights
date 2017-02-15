@@ -1,0 +1,48 @@
+uuid: 21060b19-2c88-4a68-800a-e99528c3dc1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_photo_credits
+    - paragraphs.paragraphs_type.image_with_revealable_caption
+    - paragraphs.paragraphs_type.photo_credits
+  module:
+    - entity_reference_revisions
+id: paragraph.image_with_revealable_caption.field_photo_credits
+field_name: field_photo_credits
+entity_type: paragraph
+bundle: image_with_revealable_caption
+label: 'Photo Credits'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      photo_credits: photo_credits
+    target_bundles_drag_drop:
+      1up_section:
+        weight: 8
+        enabled: false
+      2up_section:
+        weight: 9
+        enabled: false
+      card_section:
+        weight: 10
+        enabled: false
+      image_with_revealable_caption:
+        weight: 11
+        enabled: false
+      photo_credits:
+        enabled: true
+        weight: 12
+      revealable_read_more_section:
+        weight: 13
+        enabled: false
+      text_area:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions
