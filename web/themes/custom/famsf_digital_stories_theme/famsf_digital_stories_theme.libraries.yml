@@ -10,6 +10,7 @@ global-styling:
     js/section_hero_image_credit.js: {}
     js/section_hero_header_set_height.js: {}
     js/expander_toggle.js: {}
+    js/marker_zoom.js: {}
     js/site.js: {}
   dependencies:
     - core/drupal

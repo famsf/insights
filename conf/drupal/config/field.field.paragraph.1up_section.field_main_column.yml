@@ -6,6 +6,7 @@ dependencies:
     - field.storage.paragraph.field_main_column
     - paragraphs.paragraphs_type.1up_section
     - paragraphs.paragraphs_type.image_with_revealable_caption
+    - paragraphs.paragraphs_type.image_with_zoomable_markers
     - paragraphs.paragraphs_type.text_area
   module:
     - entity_reference_revisions
@@ -25,6 +26,7 @@ settings:
     target_bundles:
       image_with_revealable_caption: image_with_revealable_caption
       text_area: text_area
+      image_with_zoomable_markers: image_with_zoomable_markers
     target_bundles_drag_drop:
       1up_section:
         weight: 7
@@ -38,13 +40,19 @@ settings:
       image_with_revealable_caption:
         enabled: true
         weight: 11
-      photo_credits:
-        weight: 12
-        enabled: false
       text_area:
         enabled: true
         weight: 12
+      photo_credits:
+        weight: 12
+        enabled: false
       revealable_read_more_section:
         weight: 13
+        enabled: false
+      image_with_zoomable_markers:
+        enabled: true
+        weight: 14
+      zoomable_area:
+        weight: 18
         enabled: false
 field_type: entity_reference_revisions
