@@ -6,6 +6,7 @@ dependencies:
     - field.storage.paragraph.field_right_column
     - paragraphs.paragraphs_type.2up_section
     - paragraphs.paragraphs_type.audio_component
+    - paragraphs.paragraphs_type.image_with_revealable_caption
     - paragraphs.paragraphs_type.text_area
   module:
     - entity_reference_revisions
@@ -24,6 +25,7 @@ settings:
   handler_settings:
     target_bundles:
       audio_component: audio_component
+      image_with_revealable_caption: image_with_revealable_caption
       text_area: text_area
     target_bundles_drag_drop:
       1up_section:
@@ -41,10 +43,13 @@ settings:
       audio_component:
         enabled: true
         weight: 10
+      image_with_revealable_caption:
+        enabled: true
+        weight: 11
       text_area:
         enabled: true
         weight: 12
       photo_credits:
-        weight: 12
+        weight: 13
         enabled: false
 field_type: entity_reference_revisions
