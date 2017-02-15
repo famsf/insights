@@ -6,6 +6,7 @@ dependencies:
     - field.storage.paragraph.field_left_column
     - paragraphs.paragraphs_type.2up_section
     - paragraphs.paragraphs_type.image_with_revealable_caption
+    - paragraphs.paragraphs_type.audio_component
     - paragraphs.paragraphs_type.text_area
   module:
     - entity_reference_revisions
@@ -23,6 +24,7 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
+      audio_component: audio_component
       image_with_revealable_caption: image_with_revealable_caption
       text_area: text_area
     target_bundles_drag_drop:
@@ -38,6 +40,9 @@ settings:
       revealable_read_more_section:
         weight: 10
         enabled: false
+      audio_component:
+        enabled: true
+        weight: 10
       image_with_revealable_caption:
         enabled: true
         weight: 11
