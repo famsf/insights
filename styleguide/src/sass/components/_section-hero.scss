@@ -41,6 +41,52 @@
   }
 }
 
+
+// DeYoung Alternate
+.section-hero__title--bold {
+  @extend %hero__content;
+  background-color: transparent;
+  color: $section-hero-text;
+  padding: rhythm(1.5) 0;
+
+  @include breakpoint($bp1) {
+    width: 27rem;
+    padding: rhythm(1) 0;
+  }
+
+  h1 {
+    @include adjust-font-size-to($xxl-heading, 2.5);
+    margin: 0;
+    text-shadow:
+      0 1px 0px $section-hero-shadow,
+      1px 0 0px $section-hero-shadow-b,
+      1px 2px 1px $section-hero-shadow,
+      2px 1px 1px $section-hero-shadow-b,
+      2px 3px 2px $section-hero-shadow,
+      3px 2px 2px $section-hero-shadow-b,
+      3px 4px 2px $section-hero-shadow,
+      4px 3px 3px $section-hero-shadow-b,
+      4px 5px 3px $section-hero-shadow,
+      5px 4px 2px $section-hero-shadow-b,
+      5px 6px 2px $section-hero-shadow,
+      6px 5px 2px $section-hero-shadow-b,
+      6px 7px 1px $section-hero-shadow,
+      7px 6px 1px $section-hero-shadow-b,
+      7px 8px 0px $section-hero-shadow,
+      8px 7px 0px $section-hero-shadow-b;
+  }
+
+  &.has-backdrop {
+    background-color: rgba(darken($section-hero-shadow-b, 5%), .8);
+    padding: rhythm(1.5);
+
+    @include breakpoint($bp1) {
+      width: 27rem;
+      padding: rhythm(1);
+    }
+  }
+}
+
 // border animation
 
 @-webkit-keyframes expand-width {
@@ -59,7 +105,7 @@
   left: 0;
   display: block;
   width: 0%;
-  background: linear-gradient( to right, $pattern-a, $pattern-b );
+  background: linear-gradient( to right, $section-hero-border-a, $section-hero-border-b );
   height: 2px;
   animation: expand-width 1.5s forwards;
   animation-delay: 3.5s;
@@ -71,7 +117,7 @@
   right: 0;
   display: block;
   width: 0%;
-  background: linear-gradient( to right, $pattern-b, $pattern-a );
+  background: linear-gradient( to right, $section-hero-border-b, $section-hero-border-a );
   height: 2px;
   animation: expand-width 1.5s forwards;
   animation-delay: 3.5s;
