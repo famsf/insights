@@ -6,7 +6,7 @@ dependencies:
     - field.storage.paragraph.field_main_column
     - paragraphs.paragraphs_type.1up_section
     - paragraphs.paragraphs_type.audio_component
-    paragraphs.paragraphs_type.image_with_revealable_caption
+    - paragraphs.paragraphs_type.image_with_revealable_caption
     - paragraphs.paragraphs_type.text_area
   module:
     - entity_reference_revisions

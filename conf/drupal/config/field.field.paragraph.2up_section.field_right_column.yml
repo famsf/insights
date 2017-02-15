@@ -50,6 +50,6 @@ settings:
         enabled: true
         weight: 12
       photo_credits:
-        weight: 13
+        weight: 12
         enabled: false
 field_type: entity_reference_revisions

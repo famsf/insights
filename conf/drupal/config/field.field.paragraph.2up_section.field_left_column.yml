@@ -6,7 +6,7 @@ dependencies:
     - field.storage.paragraph.field_left_column
     - paragraphs.paragraphs_type.2up_section
     - paragraphs.paragraphs_type.image_with_revealable_caption
-    paragraphs.paragraphs_type.audio_component
+    - paragraphs.paragraphs_type.audio_component
     - paragraphs.paragraphs_type.text_area
   module:
     - entity_reference_revisions
@@ -50,6 +50,6 @@ settings:
         enabled: true
         weight: 12
       photo_credits:
-        weight: 13
+        weight: 12
         enabled: false
 field_type: entity_reference_revisions
