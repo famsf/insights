@@ -1,0 +1,188 @@
+/**
+ * @file
+ * footer styles
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+.footer {
+  background: linear-gradient(90deg, $background-c, $background-c);
+}
+
+.footer-section__title {
+  @extend %clearfix;
+  position: relative;
+  border-bottom: 1px solid rgba($text-color, .4);
+  padding-right: .75em;
+  padding-bottom: rhythm(.25);
+  margin-top: rhythm(.25);
+  margin-bottom: rhythm(.25);
+
+  @include breakpoint($bp1) {
+    margin-top: rhythm(1.5);
+    margin-bottom: rhythm(.5);
+  }
+
+  .icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-left: rhythm(.5);
+
+    svg {
+      width: .6em;
+      height: .6em;
+      fill: rgba($text-color, .4);
+    }
+  }
+
+  a:link,
+  a:visited {
+    display: block;
+    font-weight: 700;
+    color: $text-color;
+    text-decoration: none;
+  }
+
+  a:active,
+  a:hover,
+  a:focus {
+    color: $primary;
+    text-decoration: underline;
+
+    .icon svg {
+      fill: $primary;
+    }
+  }
+}
+
+.footer-section__subtitle {
+  margin-top: 0;
+}
+
+.footer-section {
+
+  img {
+    display: none;
+
+    @include breakpoint($bp1) {
+      display: block;
+      margin-bottom: rhythm(1);
+    }
+  }
+
+  p {
+    margin-bottom: rhythm(.15);
+  }
+}
+
+.footer-small {
+  margin-top: rhythm(2);
+  font-weight: 400;
+
+  a:after {
+    content: "|";
+    display: inline-block;
+    margin: 0 rhythm(.5);
+  }
+
+  a:last-child:after {
+    content: "";
+    margin: 0;
+  }
+
+
+  a .icon {
+    margin-left: rhythm(.25);
+
+    svg {
+      width: .6em;
+      height: .6em;
+      fill: rgba($text-color, .4);
+    }
+  }
+
+  a:link,
+  a:visited {
+    font-weight: 700;
+    color: rgba($text-color, .6);
+    text-decoration: none;
+  }
+
+  a:active,
+  a:hover,
+  a:focus {
+    color: $primary;
+    text-decoration: none;
+
+    .icon svg {
+      fill: $primary;
+    }
+  }
+}
+
+.footer-small__copyright {
+  color: rgba($text-color, .6);
+  margin-top: rhythm(.5);
+  
+  @include breakpoint($bp1) {
+    float: right;
+    margin-top: 0;
+  }
+}
+
+.footer-img__half {
+  @include breakpoint($bp1) {
+    width: 40%;
+    float: left;
+    margin-bottom: rhythm(1);
+  }
+}
+
+.footer-block {
+  margin-bottom: rhythm(.5);
+}
+
+.footer-block__half {
+  @include breakpoint($bp1) {
+    width: 55%;
+    float: right;
+
+    h4 {
+      margin-top: 0;
+    }
+  }
+}
+
+.footer-link {
+  display: inline-block;
+
+  .icon {
+    margin-left: rhythm(.5);
+    margin-right: rhythm(1);
+
+    svg {
+      width: .6em;
+      height: .6em;
+      fill: rgba($text-color, .4);
+    }
+  }
+
+  &:link,
+  &:visited {
+    font-weight: 700;
+    color: $text-color;
+    text-decoration: none;
+  }
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: $primary;
+    text-decoration: underline;
+
+    .icon svg {
+      fill: $primary;
+    }
+  }
+}
