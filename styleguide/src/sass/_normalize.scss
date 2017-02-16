@@ -236,6 +236,7 @@ h1 {
   @include trailer(.5, $h1-font-size);
   font-weight: 300;
   font-family: $roboto-slab;
+  color: $tertiary;
 }
 
 h2 {
@@ -245,6 +246,7 @@ h2 {
   @include trailer(.5, $h2-font-size);
   font-weight: 300;
   font-family: $roboto-slab;
+  color: $tertiary;
 }
 
 h3 {
@@ -252,12 +254,14 @@ h3 {
   @include adjust-font-size-to($h3-font-size, 1.25);
   @include leader(1, $h3-font-size);
   @include trailer(.5, $h3-font-size);
+  color: $tertiary;
 }
 
 h4 {
   @include adjust-font-size-to($h4-font-size, 1);
   @include leader(1, $h4-font-size);
   @include trailer(.5, $h4-font-size);
+  color: $tertiary;
 }
 
 h5 {
@@ -265,6 +269,7 @@ h5 {
   @include adjust-font-size-to($h5-font-size, 1);
   @include leader(.75, $h5-font-size);
   @include trailer(.25, $h5-font-size);
+  color: $tertiary;
 }
 
 h6 {
@@ -273,6 +278,7 @@ h6 {
   @include leader(.75, $h6-font-size);
   @include trailer(.25, $h6-font-size);
   font-weight: 400;
+  color: $tertiary;
 }
 
 
