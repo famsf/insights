@@ -1,11 +1,10 @@
----
-layout: element
-section: element
-theme: legion-dark
+{#
+  name: Grid
+  usage: The grid forms the framework for the website.
+#}
 
-title: Dark Grid System
-description: This is the structural framework for the layout of the website.
----
+{% block component %}
+
 <div class="l-1up">
   <h1>12 Column "Isolation" grid layout classes</h1>
   <p>Perfect for single row layouts</p>
@@ -161,3 +160,6 @@ description: This is the structural framework for the layout of the website.
 <div class="l-66-33--2">
   <p class="demo">l-3up--2</p>
 </div>
+
+
+{% endblock %}

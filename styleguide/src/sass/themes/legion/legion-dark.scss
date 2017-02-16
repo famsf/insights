@@ -45,17 +45,22 @@ $tertiary: $pink-70;
 $citation: $pink-70;
 $hero-color: $midnight;
 
-$dotted-border: url('../../../imgs/dots-dark.svg');
-$rectangles-border: url('../../../imgs/rectangles-dark.svg');
+$border: $yellow;
+$decorative-border: 8px solid transparent;
+$decorative-border-image: url('../../../imgs/dots-dark.svg') 26% round;
+$rectangles-border: url('../../../imgs/legion-rectangles-dark.svg');
 $zoom-background: $midnight;
-$text-shadow-color: $yellow;
+$text-shadow-color: transparentize($yellow, .2);
+$hero-content-text: $midnight;
+$hero-content-text-active: $sea;
 
-// Import the specific theme styles.
+// Import theme specific components used in global
 @import 'legion-section-hero';
 
 // Import the global theme styles.
 @import '../../global';
 
 // Import theme specific components
-// @import 'components/banner';
-
+@import 'legion-typography';
+@import 'legion-wysiwyg';
+@import 'legion-figure';

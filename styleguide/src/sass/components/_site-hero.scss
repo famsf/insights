@@ -31,8 +31,12 @@
     color: $hero-color;
     text-transform: uppercase;
     font-weight: 700;
-    text-shadow: 3px 3px transparentize($text-shadow-color, .2);
+    text-shadow: 3px 3px $text-shadow-color;
     font-size: 3em;
+
+    @include breakpoint($bp1) {
+      font-size: 4em;
+    }
   }
 
   h2 {
@@ -50,13 +54,13 @@
     a:visited {
       font-weight: 700;
       text-decoration: none;
-      color: $midnight;
+      color: $hero-content-text;
     }
 
     a:hover,
     a:active,
     a:focus {
-      color: $sea;
+      color: $hero-content-text-active;
     }
   }
 }

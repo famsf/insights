@@ -11,14 +11,6 @@
    box-sizing: border-box;
  }
 
-// Main background gradient for body and slide sections.
-%general-background {
-  background: $background-b; /* Old browsers */
-  background: -moz-linear-gradient(left,  $background-a 0%, $background-b 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left,  $background-a 0%,$background-b 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right,  $background-a 0%,$background-b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
-
 html {
   // Correct text resizing oddly in IE 6/7 when body `font-size` is set using
   // `em` units.
@@ -26,7 +18,6 @@ html {
   font-size: ($base-font-size / 18px) * 100%;
   line-height: ($base-line-height / $base-font-size) * 1em;
   font-family: $base-font-family; /* 1 */
-  font-weight: 300;
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -webkit-font-smoothing: antialiased;
@@ -236,6 +227,7 @@ h1 {
   @include trailer(.5, $h1-font-size);
   font-family: $roboto-slab;
   color: $tertiary;
+
 }
 
 h2 {
@@ -249,7 +241,7 @@ h2 {
 
 h3 {
   @extend %display-type;
-  @include adjust-font-size-to($h3-font-size, 1.25);
+  @include adjust-font-size-to($h3-font-size, 1);
   @include leader(1, $h3-font-size);
   @include trailer(.5, $h3-font-size);
   color: $tertiary;
@@ -264,7 +256,7 @@ h4 {
 
 h5 {
   @extend %allcaps;
-  @include adjust-font-size-to($h5-font-size, 1);
+  @include adjust-font-size-to($h5-font-size, .8);
   @include leader(.75, $h5-font-size);
   @include trailer(.25, $h5-font-size);
   color: $tertiary;
@@ -272,11 +264,12 @@ h5 {
 
 h6 {
   @extend %allcaps;
-  @include adjust-font-size-to($h6-font-size, 1);
+  @include adjust-font-size-to($h6-font-size, .8);
   @include leader(.75, $h6-font-size);
   @include trailer(.25, $h6-font-size);
   font-weight: 400;
   color: $tertiary;
+
 }
 
 
@@ -286,7 +279,7 @@ h6 {
 
 mark {
   background-color: $primary;
-  color: $black;
+  color: $text-color-invert;
 }
 
 /**
@@ -329,7 +322,8 @@ sup {
 
 img {
   // Responsive images
-  max-width: 100%;
+  width: 100%;
+  height: auto;
   // Remove border when inside `a` element in IE 8/9.
   border: 0;
   @if support-for(ie, 7) {
