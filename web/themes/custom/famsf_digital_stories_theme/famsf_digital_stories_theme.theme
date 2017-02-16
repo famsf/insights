@@ -49,3 +49,21 @@ function famsf_digital_stories_theme_preprocess_html(&$variables) {
         $variables['addThis']  = $addThis->value;
     }
 }
+
+function famsf_digital_stories_theme_preprocess_field(&$variables) {
+    $element = $variables['element'];
+    if (isset($element['#field_name'])){
+        $elementName = $element['#field_name'];
+    }
+    if ($elementName == 'field_link' && $element['#bundle'] == 'link_or_download_button') {
+        /** @var Drupal\paragraphs\Entity\Paragraph $paragraph */
+        $paragraph = $element['#object'];
+        if (NULL !== $paragraph
+            && method_exists($paragraph, 'hasField')
+            && $paragraph->hasField('field_button_style')
+            && NULL !== $paragraph->get('field_button_style')->first()
+        ) {
+            $variables['items'][0]['content']['#options']['attributes']['class'][] = $paragraph->get('field_button_style')->first()->value;
+        }
+    }
+}

@@ -7,6 +7,7 @@ dependencies:
     - paragraphs.paragraphs_type.2up_section
     - paragraphs.paragraphs_type.audio_component
     - paragraphs.paragraphs_type.image_with_revealable_caption
+    - paragraphs.paragraphs_type.link_or_download_button
     - paragraphs.paragraphs_type.text_area
   module:
     - entity_reference_revisions
@@ -27,6 +28,7 @@ settings:
       audio_component: audio_component
       image_with_revealable_caption: image_with_revealable_caption
       text_area: text_area
+      link_or_download_button: link_or_download_button
     target_bundles_drag_drop:
       1up_section:
         weight: 6
@@ -37,19 +39,22 @@ settings:
       card_section:
         weight: 9
         enabled: false
-      revealable_read_more_section:
-        weight: 10
-        enabled: false
       audio_component:
         enabled: true
         weight: 10
+      revealable_read_more_section:
+        weight: 10
+        enabled: false
       image_with_revealable_caption:
         enabled: true
         weight: 11
-      text_area:
-        enabled: true
-        weight: 12
       photo_credits:
         weight: 12
         enabled: false
+      text_area:
+        enabled: true
+        weight: 12
+      link_or_download_button:
+        enabled: true
+        weight: 15
 field_type: entity_reference_revisions

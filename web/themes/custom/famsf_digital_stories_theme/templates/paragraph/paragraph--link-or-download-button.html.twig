@@ -36,19 +36,10 @@
  * @ingroup themeable
  */
 #}
-<div class="js-audio__wrapper audio__wrapper">
-    <audio class="js-audio__source">
-        <source src="{{ file_url(paragraph.field_audio_file.entity.fileuri) }}" type="{{ paragraph.field_audio_file.entity.getMimeType() }}">
-        Your browser does not support the audio element.
-    </audio>
+{% if content.field_link is not empty %}
+    <a target="_blank" href="{{ paragraph.field_link[0].uri }}" class="{{ paragraph.field_button_style.value }}">{{ paragraph.field_link[0].title }}</a>
 
-    <button class="js-audio__button button-with-icon">
-        <i class="js-icon--play icon--small">
-            {{ include(active_theme_path() ~ '/svg/famsf-play-sm.svg')  }}
-        </i>
-        <i class="js-icon--pause icon--small" style="display:none;">
-            {{ include(active_theme_path() ~ '/svg/famsf-pause-sm.svg')  }}
-        </i>
-        {{ content.field_play_button_text }}
-    </button>
-</div>
+{% elseif content.field_download_file is not empty %}
+    <a href="{{ file_url(paragraph.field_download_file.entity.fileuri) }}" class="{{ paragraph.field_button_style.value }}">{{ paragraph.field_download_file.description }}</a>
+
+{% endif %}

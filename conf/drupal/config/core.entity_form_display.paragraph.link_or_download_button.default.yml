@@ -1,0 +1,55 @@
+uuid: fdc12090-7f58-4dd5-b121-df688a13a80e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.link_or_download_button.field_button_style
+    - field.field.paragraph.link_or_download_button.field_download_file
+    - field.field.paragraph.link_or_download_button.field_link
+    - paragraphs.paragraphs_type.link_or_download_button
+  module:
+    - field_group
+    - file
+    - link
+third_party_settings:
+  field_group:
+    group_download_button:
+      children:
+        - field_download_file
+        - field_button_text
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Download Button'
+id: paragraph.link_or_download_button.default
+targetEntityType: paragraph
+bundle: link_or_download_button
+mode: default
+content:
+  field_button_style:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+  field_download_file:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+  field_link:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+hidden:
+  created: true
+  status: true
+  uid: true
