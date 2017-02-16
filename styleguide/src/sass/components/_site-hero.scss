@@ -78,6 +78,7 @@
 
   h1 {
     @include leader(.5, $h1-font-size);
+    color: $hero-color;
     font-weight: 700;
     text-shadow:
       0 1px 0px $section-hero-shadow,
@@ -106,6 +107,7 @@
   h2 {
     @include trailer(0);
     @include leader(.15);
+    color: $hero-color;
     font-size: 1.25em;
     display: inline-block;
     background-color: rgba($section-hero-shadow-b, .6);

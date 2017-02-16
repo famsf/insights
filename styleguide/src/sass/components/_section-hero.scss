@@ -58,6 +58,7 @@
 
   h1 {
     @include adjust-font-size-to($xxl-heading, 2.5);
+    color: $hero-color;
     margin: 0;
     text-shadow:
       0 1px 0px $section-hero-shadow,
