@@ -1,0 +1,43 @@
+uuid: 01dc0b8e-d674-4f24-8e60-2ae227fe61c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.revealable_child
+    - field.field.paragraph.2up_section.field_column_distribution
+    - field.field.paragraph.2up_section.field_left_column
+    - field.field.paragraph.2up_section.field_right_column
+    - paragraphs.paragraphs_type.2up_section
+  module:
+    - entity_reference_revisions
+    - options
+id: paragraph.2up_section.revealable_child
+targetEntityType: paragraph
+bundle: 2up_section
+mode: revealable_child
+content:
+  field_column_distribution:
+    weight: 9
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+  field_left_column:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_right_column:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

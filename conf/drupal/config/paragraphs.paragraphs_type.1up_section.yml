@@ -3,4 +3,4 @@ langcode: en
 status: true
 dependencies: {  }
 id: 1up_section
-label: 'Full Width Section (1up)'
+label: '1 Column Card Section (1up)'

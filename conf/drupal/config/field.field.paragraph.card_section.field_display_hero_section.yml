@@ -1,0 +1,23 @@
+uuid: 8096dd3f-3ddd-4e21-9cb9-37a29a24f75a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_hero_section
+    - paragraphs.paragraphs_type.card_section
+id: paragraph.card_section.field_display_hero_section
+field_name: field_display_hero_section
+entity_type: paragraph
+bundle: card_section
+label: 'Display hero section for this card'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -4,13 +4,17 @@ status: true
 dependencies:
   config:
     - field.field.node.digital_story.field_addthis_code
-    - field.field.node.digital_story.field_header_section
+    - field.field.node.digital_story.field_exhibition_dates
     - field.field.node.digital_story.field_main_navigation
     - field.field.node.digital_story.field_section
+    - field.field.node.digital_story.field_site_hero_background_image
     - field.field.node.digital_story.field_theme
+    - field.field.node.digital_story.field_title_position
+    - field.field.node.digital_story.field_title_style
     - node.type.digital_story
   module:
     - entity_reference_revisions
+    - image
     - options
     - user
 id: node.digital_story.default
@@ -18,14 +22,13 @@ targetEntityType: node
 bundle: digital_story
 mode: default
 content:
-  field_header_section:
-    type: entity_reference_revisions_entity_view
-    weight: 102
+  field_exhibition_dates:
+    weight: 105
     label: hidden
     settings:
-      view_mode: default
-      link: ''
+      link_to_entity: false
     third_party_settings: {  }
+    type: string
   field_section:
     type: entity_reference_revisions_entity_view
     weight: 101
@@ -34,12 +37,32 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+  field_site_hero_background_image:
+    weight: 106
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
   field_theme:
     type: list_key
     weight: 103
     label: hidden
     settings: {  }
     third_party_settings: {  }
+  field_title_position:
+    weight: 107
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+  field_title_style:
+    weight: 108
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
 hidden:
   field_addthis_code: true
   field_main_navigation: true

@@ -1,0 +1,30 @@
+uuid: 9733a0b1-e068-424a-b5ae-e820b25ccd20
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_title_style
+field_name: field_title_style
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: has-solid-rectangles
+      label: 'Solid Rectangles'
+    -
+      value: has-outlined-rectangles
+      label: 'Outlined Rectangles'
+    -
+      value: has-dotted-border
+      label: 'Dotted Border'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

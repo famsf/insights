@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.storage.paragraph.field_main_column
     - paragraphs.paragraphs_type.1up_section
+    - paragraphs.paragraphs_type.audio_component
+    - paragraphs.paragraphs_type.image_with_revealable_caption
     - paragraphs.paragraphs_type.text_area
   module:
     - entity_reference_revisions
@@ -22,6 +24,8 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
+      image_with_revealable_caption: image_with_revealable_caption
+      audio_component: audio_component
       text_area: text_area
     target_bundles_drag_drop:
       1up_section:
@@ -30,16 +34,22 @@ settings:
       2up_section:
         weight: 8
         enabled: false
-      3up_section:
-        weight: 9
-        enabled: false
-      call_to_action_section:
+      audio_component:
+        enabled: true
         weight: 10
-        enabled: false
-      section_divider:
+      card_section:
         weight: 11
+        enabled: false
+      image_with_revealable_caption:
+        enabled: true
+        weight: 11
+      photo_credits:
+        weight: 12
         enabled: false
       text_area:
         enabled: true
         weight: 12
+      revealable_read_more_section:
+        weight: 13
+        enabled: false
 field_type: entity_reference_revisions

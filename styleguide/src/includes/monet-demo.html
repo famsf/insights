@@ -11,10 +11,20 @@
   <!-- Title -->
 
   <section class="js-section pp-scrollable" id="Title">
-    {% include('site-hero.html') %}
-    {% include('next-page.html') %}
+    <div class="site-hero" data-bg="{{ site.url }}/assets/imgs/art/Trouville.jpg">
+      <div class="site-hero__title has-solid-rectangles top-left">
+        <div class="js-section-hero--get_height">
+          <span class="site-hero__logo animated fadeIn delay-1500"><a href="https://legionofhonor.famsf.org">Legion of Honor Museum</a></span>
+          <h1 class="animated fadeIn delay-1500">Monet: The Early Years</h1>
+          <h2 class="animated fadeIn delay-1500">February 25 &mdash; May 29, 2017</h2>
+        </div>
+        <div class="site-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
+        <div class="site-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
+      </div>
+    </div>
+    <button class="next-page js-next-page animated fadeIn delay-100" >
+        <div class="icon--xsmall">{% include('svg/famsf-caret-down-sm.html') %}</div>next page</button>
   </section>
-
   <!-- Intro -->
 
   <section class="js-section pp-scrollable" id="introduction">
@@ -36,7 +46,7 @@
               <img data-src="{{ site.url }}/assets/imgs/art/Monet.jpg" alt="Photo of young Monet" />
             </div>
             <a class="figcaption-cta js-figcaption-cta">image credit</a>
-            <figcaption><span class="title-of-art">Photograph of young Monet</span> Étienne Carjat | ca.1865</figcaption>
+            <figcaption><span class="title-of-art">Photograph of the young Monet </span> Étienne Carjat | ca.1865</figcaption>
           </figure>
         </div>
       </div>
@@ -58,7 +68,7 @@
       </div>
       <div class="section-hero__figcaption">
         <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
-        <span class="figcaption"><span class="title-of-art">L’exposition des Beaux-Arts</span> Gustave Doré | 1868 | Engraving | 32 x 55.3 cm | Bibliothèque nationale, Paris.</span>
+        <span class="figcaption"><span class="title-of-art">L’exposition des Beaux-Arts</span> Gustave Doré | 1868 | Engraving | 32 x 55.3 cm | Bibliothèque nationale, Paris. | Photograph courtesy of Bibliothèque Nationale de France</span>
       </div>
     </div>
     <section class="card-section">
@@ -78,11 +88,11 @@
                   <img src="{{ site.url }}/assets/imgs/art/Salon-of-1852-Gustave-Le-Gray.jpg" alt="" />
                 </div>
                 <a class="figcaption-cta js-figcaption-cta">image credit</a>
-                <figcaption><span class="title-of-art">Salon of 1852</span> Gustave Le Gray | 1852 | Salt paper print | 19.4 x 23.6 cm. | Musee d'Orsay, Paris, France | &copy; RMN-Grand Palais / Art Resource, NY</figcaption>
+                <figcaption><span class="title-of-art">Photograph of the  Archives of the Salon of 1852</span> Gustave Le Gray | 1852 | Salt paper print | 19.4 x 23.6 cm. | Musee d'Orsay, Paris, France | &copy; RMN-Grand Palais / Art Resource, NY</figcaption>
               </figure>
             </div>
             <div class="l-2up">
-              <p class="lede"><span class="dropcap">A</span>s a result of industrial expansion, a newly prosperous middle class was replacing the state, the church, and the nobility as primary sources of income for artists.</p><p>The middle class relied heavily on reviews they read in the press, and they wanted to purchase works that had an official stamp of approval.  This increased the importance for artists to have their work be shown and well reviewed in the Salons.</p>
+              <p class="lede"><span class="dropcap">A</span>s a result of industrial expansion, a newly prosperous middle class was replacing the state, the church, and the nobility as primary sources of income for artists.</p><p>The middle class relied heavily on reviews they read in the press, and they wanted to purchase works that had an official stamp of approval.  This increased the importance for artists to have their work be shown and well-reviewed in the Salons.</p>
             </div>
           </div>
         </div>
@@ -107,7 +117,53 @@
     </section>
     <section class="card-section">
       <!-- begin image comparison -->
-      {% include('image-comparison.html') %}
+      <div class="container">
+        <div class="l-1up">
+          <h2>Monet’s Experience with the Salon</h2>
+        </div>
+        <div class="l-1up columns-2">
+          <p>Painting was a career, and as in any other, Monet had to figure out the rules to succeed. He knew that acceptance to the Salon was the most assured road to success. Monet actively solicited advice from fellow painters on how to make his paintings acceptable, yet it was difficult to know what would please the Salon jurors.</p>
+          <p>Below are several paintings he submitted for exhibition to the Salon. <strong><em>Guess which were accepted</em></strong>.</p>
+        </div>
+      </div>
+      <div class="container comparison">
+        <div class="comparison__2up js-comparison__group">
+          <figure>
+            <div class="figure__wrapper">
+              <img data-src="{{ site.url }}/assets/imgs/art/Low_tide.jpg" alt="The Pointe de La Hève at Low Tide" />
+              <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
+                <a class="figcaption-cta js-figcaption-cta">image credit</a>
+                <figcaption><span class="title-of-art">The Pointe de La Hève at Low Tide</span> | Claude Monet | 1865 | Oil on canvas | 35 1/2 x 59 1/4 in. (90.2 x 150.5 cm). | Kimbell Art Museum, Fort Worth, AP 1968.07 | Photograph by Robert LaPrelle | &copy; Kimbell Art Museum</figcaption>
+                <h3>Accepted!</h3>
+                <p>The 24-year-old Monet was successful in having his first submission approved for exhibition at the Salon. This work was also praised in the press: “Monet, unknown yesterday, has immediately made a name for himself with this single painting.” </p>
+                {% include('audio.html') %}
+              </div>
+              <button class="comparison__button js-comparison__button">
+                <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.html') %}</i>
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
+              </button>
+            </div>
+          </figure>
+        </div>
+
+        <div class="comparison__2up js-comparison__group">
+          <figure>
+            <div class="figure__wrapper">
+              <img data-src="{{ site.url }}/assets/imgs/art/Havre_dOrsay.jpg" alt="The Jetty at Le Havre" />
+              <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
+                <a class="figcaption-cta js-figcaption-cta">image credit</a>
+                <figcaption><span class="title-of-art">The Jetty at Le Havre</span> | Claude Monet | 1868 | Oil on canvas | Private collection | Photograph courtesy of Service de Documentation, Musée d'Orsay</figcaption>
+                <h3>Rejected!</h3>
+                <p>Monet submitted this seascape in 1868. The young artist had invested a significant sum of money in this large-scale canvas and had to beg his family for money to survive.</p>
+              </div>
+              <button class="comparison__button js-comparison__button">
+                <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.html') %}</i>
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
+              </button>
+            </div>
+          </figure>
+        </div>
+      </div>
     </section>
     <section class="card-section">
       <!-- another image comparison -->
@@ -116,13 +172,16 @@
           <figure>
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/Camille_green_dress_image-comparison.jpg" alt="" />
-              {% include('comparison--cta-a.html') %}
               <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
                 <a class="figcaption-cta js-figcaption-cta">image credit</a>
-                <figcaption><span class="title-of-art">Camille (The Woman with a Green Dress)</span>  Claude Monet | 1866 | Oil on canvas | 91 x 59 1/2 in. (231 x 151 cm) | Kunsthalle Bremen, acquired with the assistance of  Galerievereins, 1906, Inv. Nr. 298-1906/1</figcaption>
+                <figcaption><span class="title-of-art">Camille (The Woman with a Green Dress)</span> Claude Monet | 1866 | Oil on canvas | 91 x 59 1/2 in. (231 x 151 cm) | Kunsthalle Bremen, acquired with the assistance of  Galerievereins, 1906, Inv. Nr. 298-1906/1 | &copy; Kunsthalle Bremen. Foto: Karen Blindow | &copy; Kunsthalle Bremen. Foto: Karen Blindow</figcaption>
                 <h3>Accepted!</h3>
                 <p>This painting was not only accepted to the Salon of 1866, it was well received. This success reassured Monet&rsquo;s family, and his aunt agreed to lend him financial support.</p>
               </div>
+              <button class="comparison__button js-comparison__button">
+                <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.html') %}</i>
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
+              </button>
             </div>
           </figure>
         </div>
@@ -131,13 +190,16 @@
           <figure>
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/16_luncheon_Bridgeman.jpg" alt="" />
-              {% include('comparison--cta-b.html') %}
               <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
                 <a class="figcaption-cta js-figcaption-cta">image credit</a>
                 <figcaption><span class="title-of-art">The Luncheon</span>  Claude Monet | 1868 | Oil on canvas |  91 1/8 x 59 1/2 in. (231.5 x 151 cm) | Städel Museum, Frankfurt, Inv. No. SG 170 | &copy; Städel Museum - U. Edelmann - ARTOTHEK</figcaption>
                 <h3>Rejected!</h3>
                 <p>This scene of Monet&rsquo;s young family was rejected by the Salon of 1870. Monet could afford to rent the cozy house depicted here because he had recently been commissioned to paint portraits of a businessman&rsquo;s family.</p>
               </div>
+              <button class="comparison__button js-comparison__button">
+                <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.html') %}</i>
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
+              </button>
             </div>
           </figure>
         </div>
@@ -177,7 +239,7 @@
               <img src="{{ site.url }}/assets/imgs/art/6_Le-Gray_Chailly_BNF.jpg" alt="" />
             </div>
             <a class="figcaption-cta js-figcaption-cta">image credit</a>
-            <figcaption><span class="title-of-art">The Pavé de Chailly</span> Gustave Le Gray | 1852 | Photograph | 10 7/8 x 15 1/8 in. (27.5 x 38.3 cm) | Bibliothèque nationale de France, Paris, Prints and Photographs Department | &copy; Bibliothèque nationale de France</figcaption>
+            <figcaption><span class="title-of-art">The Pavé de Chailly</span> Gustave Le Gray | 1852 | Photograph | 10 7/8 x 15 1/8 in. (27.5 x 38.3 cm) | Bibliothèque nationale de France, Paris, Prints and Photographs Department | RESERVE FOL-EO-13 (2). &copy; Bibliothèque nationale de France</figcaption>
           </figure>
         </div>
         <div class="l-66-33--2">
@@ -212,7 +274,7 @@
       </div>
       <div class="section-hero__figcaption">
         <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
-        <span class="figcaption"><span class="title-of-art">Luncheon on the Grass</span> Claude Monet | 1865–1866 | Oil on canvas | 97 5/8 x 85 3/8 in. (248 x 217 cm) | Musée d'Orsay, Paris, RF 1987 12 | &copy; Musée d'Orsay, dist. RMN-Grand Palais / Patrice Schmidt</span>
+        <span class="figcaption"><span class="title-of-art">Luncheon on the Grass</span> Claude Monet | 1865–1866 | Oil on canvas | 97 5/8 x 85 3/8 in. (248 x 217 cm) | Musée d'Orsay, Paris, RF 1987 12 | &copy; Musée d'Orsay, dist. RMN-Grand Palais / Patrice Schmidt. CAT: &copy; RMN-Grand Palais / Art Resource, NY</span>
       </div>
     </div>
     <section class="card-section">
@@ -253,7 +315,7 @@
               <img data-src="{{ site.url }}/assets/imgs/art/4_Watteau_Hunt_Bridgeman.jpg" alt="" />
             </div>
             <a class="figcaption-cta js-figcaption-cta">image credit</a>
-            <figcaption><span class="title-of-art">The Halt During the Chase</span>  Antoine Watteau | 1718 &mdash; 1720 | 49 x 74 3/8 in. (124.5 x 189 cm) | The Wallace Collection, London | &copy; The Wallace Collection</figcaption>
+            <figcaption><span class="title-of-art">The Halt during the Chase</span>  Antoine Watteau | 1718 &mdash; 1720 | 49 x 74 3/8 in. (124.5 x 189 cm) | The Wallace Collection, London, P416 | &copy; The Wallace Collection</figcaption>
           </figure>
         </div>
         <div class="l-2up">
@@ -264,7 +326,7 @@
     <div class="card-section">
       <div class="container">
         <div class="l-2up">
-          <p>Monet also intended his painting as a tribute and a challenge to fellow painter Édouard Manet, a revolutionary figure in the art world. Manet&rsquo;s Luncheon on the Grass had been rejected by the Salon in 1863; jurors were shocked by the presence of a nude woman among clothed men (in modern attire) who did not serve any mythological or allegorical purpose. The painting was displayed instead that year at the Salon des Refusés, an exhibition initiated by Napoleon III to show works that had been rejected by the Salon. There it became the principal attraction, generating both laughter and scandal.</p>
+          <p>Monet also intended his painting as a tribute and a challenge to fellow painter Édouard Manet, a revolutionary figure in the art world. Manet&rsquo;s <em>Luncheon on the Grass</em> had been rejected by the Salon in 1863; jurors were shocked by the presence of a nude woman among clothed men (in modern attire) who did not serve any mythological or allegorical purpose. The painting was displayed instead that year at the Salon des Refusés, an exhibition initiated by Napoleon III to show works that had been rejected by the Salon. There it became the principal attraction, generating both laughter and scandal.</p>
         </div>
         <div class="l-2up">
           <figure>
@@ -272,8 +334,7 @@
               <img data-src="{{ site.url }}/assets/imgs/art/3_Manet_luncheon_Art-Resource.jpg" alt="" />
             </div>
             <a class="figcaption-cta js-figcaption-cta">image credit</a>
-            <figcaption><span class="title-of-art">Édouard Manet</span> Luncheon on the Grass | 1863 | Oil on canvas | 81 7/8 x 104 1/8 in. (208 x 264.5 cm) | The Wallace Collection, London | &copy; RMN-Grand Palais (Musée d'Orsay) / Hervé Lewandowski
-</figcaption>
+            <figcaption><span class="title-of-art">Luncheon on the Grass (Le Déjeuner sur l&rsquo;herbe)</span> Édouard Manet | 1863 | Oil on canvas | 81 7/8 x 104 1/8 in. (208 x 264.5 cm) | The Wallace Collection, London | Musée d'Orsay, Paris, RF 1668 | &copy; RMN-Grand Palais (Musée d'Orsay) / Hervé Lewandowski. CAT: &copy; RMN-Grand Palais / Art Resource, NY</figcaption>
           </figure>
         </div>
       </div>
@@ -296,7 +357,8 @@
     </div>
     <section class="card-section">
       <div class="container">
-        <div class="l-2up">
+        <div class="l-1up">
+          <p><span class="wysiwyg-enlarged"><span class="dropcap">P</span>aris was in the midst of a vast urban redesign</span> (1853-1870), commissioned by Napoleon III and executed by Baron Haussmann, that included the demolition of overcrowded neighborhoods dating to medieval times. The construction of wide avenues, parks and squares, and new apartment buildings transformed Paris into a modern city.</p>
           <figure>
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/19_Quai_Art-Resource.jpg" alt="" />
@@ -305,16 +367,13 @@
             <figcaption><span class="title-of-art">Quai de Louvre</span> Claude Monet | 1867 | Oil on canvas |  25 5/8 x 36 1/4 in. (65 x 92 cm) | Gemeentemuseum Den Haag | &copy; Cameraphoto Arte, Venice | Art Resource, NY</figcaption>
           </figure>
         </div>
-        <div class="l-2up">
-          <p><span class="wysiwyg-enlarged"><span class="dropcap">P</span>aris was in the midst of a vast urban redesign</span>(1853-1870), commissioned by Napoleon III and executed by Baron Haussmann, that included the demolition of overcrowded neighborhoods dating to medieval times. The construction of wide avenues, parks and squares, and new apartment buildings transformed Paris into a modern city.</p>
-
-          <p><span class="wysiwyg-enlarged">Monet was fascinated by the manifestations of modern urban life</span> on view throughout Paris. He requested, from the French superintendent of the arts, special access to an exterior colonnade of the museum building to paint views of the center of Paris. There the young artist quite literally turned his back to the great repository of art on display in the Louvre. His vantage point provided a platform from which to paint the present and move art toward modernity. Monet visited the Louvre to see the collection of masterworks hanging in the galleries, but unlike other artists in his circle, he did not paint or draw from them.</p>
-        </div>
       </div>
     </section>
     <section class="card-section">
       <div class="container">
         <div class="l-1up">
+          <p><span class="wysiwyg-enlarged">Monet was fascinated by the manifestations of modern urban life</span> on view throughout Paris. He requested, from the French superintendent of the arts, special access to an exterior colonnade of the museum building to paint views of the center of Paris. There the young artist quite literally turned his back to the great repository of art on display in the Louvre. His vantage point provided a platform from which to paint the present and move art toward modernity. Monet visited the Louvre to see the collection of masterworks hanging in the galleries, but unlike other artists in his circle, he did not paint or draw from them.</p>
+
           <p>Seeking refuge from the intensity of city living, the new middle class traveled to leisure locations easily accessible by train. One such popular destination was a bathing spot on the banks of the Seine, called La Grenouillère (literally &ldquo;frog pond&rdquo;). Monet became interested in conveying the immediate sensation of being in the places he painted. In <em>La Grenouillère</em>, the artist carefully captured through color and brushstrokes the effects of light, rendering a composition infused with a sense of pleasure. Notice the multiple activities enjoyed by the figures.</p>
         </div>
       </div>
@@ -450,12 +509,16 @@
           <figure>
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/Etretat_Harvard_detail_1.jpg" alt="" />
-              {% include('comparison--cta-a.html') %}
               <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
               <a class="figcaption-cta js-figcaption-cta">image credit</a>
               <figcaption><span class="title-of-art">The Porte d'Amont, Étretat</span> 1868 &mdash; 1869 | Oil on canvas | 31 1/8 x 38 3/4 in. (79.1 x 98.4 cm) | Harvard Art Museums/Fogg Museum, Cambridge, Gift of Mr. and Mrs. Joseph Pulitzer, Jr., 1957.163 | Image courtesy Harvard Art Museums</figcaption>
-                <p>The rock formation is rendered in similar hues, contrasting with the heavy black that depicts wet stone revealed by the ebbing tide. </p>
+              <p>The rock formation is rendered in similar hues, contrasting with the heavy black that depicts wet stone revealed by the ebbing tide. </p>
               </div>
+              <button class="comparison__button js-comparison__button">
+                <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.html') %}</i>
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
+                Color
+              </button>
             </div>
           </figure>
         </div>
@@ -464,13 +527,16 @@
           <figure>
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/Etretat_Harvard_detail_2.jpg" alt="" />
-              {% include('comparison--cta-b.html') %}
               <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
               <a class="figcaption-cta js-figcaption-cta">image credit</a>
               <figcaption><span class="title-of-art">The Porte d'Amont, Étretat</span> 1868 &mdash; 1869 | Oil on canvas | 31 1/8 x 38 3/4 in. (79.1 x 98.4 cm) | Harvard Art Museums/Fogg Museum, Cambridge, Gift of Mr. and Mrs. Joseph Pulitzer, Jr., 1957.163 | Image courtesy Harvard Art Museums</figcaption>
-
-                <p>The firm and steady horizontal brushstrokes of the cliffs contrast with the fleeting horizontal bands of color that fill the sky.</p>
+              <p>The firm and steady horizontal brushstrokes of the cliffs contrast with the fleeting horizontal bands of color that fill the sky.</p>
               </div>
+              <button class="comparison__button js-comparison__button">
+                <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.html') %}</i>
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
+                Brushstroke
+              </button>
             </div>
           </figure>
         </div>
@@ -525,7 +591,7 @@
       </div>
       <div class="section-hero__figcaption">
         <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
-        <span class="figcaption"><span class="title-of-art">Camille (The Woman with a Green Dress)</span> Claude Monet | 1866 | Oil on canvas | 91 x 59 1/2 in. (231 x 151 cm) | Kunsthalle Bremen, acquired with the assistance of  Galerievereins, 1906, Inv. Nr. 298-1906/1 | © Kunsthalle Bremen. Foto: Karen Blindow</span>
+        <span class="figcaption"><span class="title-of-art">Camille (The Woman with a Green Dress)</span> Claude Monet | 1866 | Oil on canvas | 91 x 59 1/2 in. (231 x 151 cm) | Kunsthalle Bremen, acquired with the assistance of  Galerievereins, 1906, Inv. Nr. 298-1906/1 | &copy; Kunsthalle Bremen. Foto: Karen Blindow | &copy; Kunsthalle Bremen. Foto: Karen Blindow</span>
       </div>
     </div>
     <section class="card-section">
@@ -534,6 +600,8 @@
           <figure>
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/15_Camile-Monet_Wikimedia-Commons.jpg" alt="" />
+              <a class="figcaption-cta js-figcaption-cta">image credit</a>
+              <figcaption><span class="title-of-art">Camille Doncieux Monet</span> Greiner | 1871 | Photograph</figcaption>
             </div>
           </figure>
         </div>
@@ -549,9 +617,9 @@
     <section class="card-section">
       <div class="container">
         <div class="l-1up">
-          <p><span class="wysiwyg-enlarged"><span class="dropcap">T</span>he single most painted individual in this exhibition is Camille Monet,</span> née Doncieux. Camille met Monet in 1865 when she was 18 and working as a studio model. He was 25. Some art historians credit Monet&rsquo;s success in wooing the beautiful Camille with giving him the confidence to attempt the ambitious Luncheon on the Grass. When he was unable to finish that painting in time for the Salon, Camille posed for the painting Camille (Woman in a Green Dress), which proved a success. Camille herself may have actively participated in the creation of this work by providing Monet with fashion prints and possible suggestions for the pose. </p>
+          <p><span class="wysiwyg-enlarged"><span class="dropcap">T</span>he single most painted individual in this exhibition is Camille Monet,</span> née Doncieux. Camille met Monet in 1865 when she was 18 and working as a studio model. He was 25. Some art historians credit Monet&rsquo;s success in wooing the beautiful Camille with giving him the confidence to attempt the ambitious <em>Luncheon on the Grass</em>. When he was unable to finish that painting in time for the Salon, Camille posed for the painting Camille (Woman in a Green Dress), which proved a success. Camille herself may have actively participated in the creation of this work by providing Monet with fashion prints and possible suggestions for the pose. </p>
 
-          <p>Camille personally endured considerable hardship during the early years of their relationship. By 1867 she was pregnant, unmarried, and living alone in Paris in a one-room apartment paid for by Monet. Even after she married Monet, the family  endured eviction and constant hounding by creditors. Camille&rsquo;s motivations, experiences, and opinions as they relate to the artist remain mysterious and inaccessible, principally because Monet&rsquo;s second wife demanded that he destroy Camille&rsquo;s personal effects after his first wife&rsquo;s death, although the artist did keep with him all of his life the center panel of Luncheon on the Grass, depicting Camille. </p>
+          <p>Camille personally endured considerable hardship during the early years of their relationship. By 1867 she was pregnant, unmarried, and living alone in Paris in a one-room apartment paid for by Monet. Even after she married Monet, the family  endured eviction and constant hounding by creditors. Camille&rsquo;s motivations, experiences, and opinions as they relate to the artist remain mysterious and inaccessible, principally because Monet&rsquo;s second wife demanded that he destroy Camille&rsquo;s personal effects after his first wife&rsquo;s death, although the artist did keep with him all of his life the center panel of <em>Luncheon on the Grass</em>, depicting Camille. </p>
         </div>
       </div>
     </section>
@@ -570,10 +638,6 @@
           <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
         </div>
       </div>
-      <div class="section-hero__figcaption">
-        <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
-        <span class="figcaption"><span class="title-of-art">MISSING IMAGE CREDIT</span>
-      </div>
     </div>
     <section class="card-section">
       <div class="container">
@@ -584,7 +648,7 @@
               <img data-src="{{ site.url }}/assets/imgs/art/26_Hyde-Park_NO-CREDIT-IN-BOOK.jpg" alt="" />
             </div>
             <a class="figcaption-cta js-figcaption-cta">image credit</a>
-            <figcaption><span class="title-of-art">Hyde Park</span> Claude Monet | 1871 | Oil on canvas | 15 7/8 x 29 1/8 in. (40.5 x 74 cm) | Museum of Art, Rhode Island School of Design, Providence, Gift of Mrs. Murray S. Danforth | Photography by Erik Gould, courtesy of the Museum of Art, Rhode Island School of Design, Providence </figcaption>
+            <figcaption><span class="title-of-art">Hyde Park</span> Claude Monet | 1871 | Oil on canvas | 15 7/8 x 29 1/8 in. (40.5 x 74 cm) | Museum of Art, Rhode Island School of Design, Providence, Gift of Mrs. Murray S. Danforth, 42.218 | Photography by Erik Gould, courtesy of the Museum of Art, Rhode Island School of Design, Providence </figcaption>
           </figure>
           <!-- audio component -->
           <div class="js-audio__wrapper audio__wrapper">
@@ -622,7 +686,7 @@
     <section class="card-section">
       <div class="container">
         <div class="l-1up">
-          <p>In 1871&mdash;with France still reeling from the violence and chaos of the warand the Paris Commune&mdash;Monet and his family remained expatriates, leaving England for Holland and settling in Zaandam for four months. While there, Monet produced around two dozen paintings of windmills and water, including <em>The Port of Zaandam.</em> Monet&rsquo;s <em>The Port of Zaandam</em> features a landing stage, or dock. The work is remarkable for the artist&rsquo;s increasingly abstract treatment of water, painted using rectangular dashes of paint. The setting sun creates a sense of quietude for this scene of buildings lining the port and boats in the harbor, flags waving from their masts. The tall harbor pier, just right of center, interrupts the horizon line, breaking the repetition of the boats and buildings, and directly connects the sky with the reflecting water. </p>
+          <p>In 1871&mdash;with France still reeling from the violence and chaos of the war and the Paris Commune&mdash;Monet and his family remained expatriates, leaving England for Holland and settling in Zaandam for four months. While there, Monet produced around two dozen paintings of windmills and water, including <em>The Port of Zaandam.</em> Monet&rsquo;s <em>The Port of Zaandam</em> features a landing stage, or dock. The work is remarkable for the artist&rsquo;s increasingly abstract treatment of water, painted using rectangular dashes of paint. The setting sun creates a sense of quietude for this scene of buildings lining the port and boats in the harbor, flags waving from their masts. The setting sun, flags waving from the boat masts, and the buildings lining the port create a sense of quietude. The tall harbor pier, just right of center, interrupts the horizon line, breaking the repetition of the boats and buildings, and directly connects the sky with the reflecting water. </p>
           <!-- audio component -->
           <div class="js-audio__wrapper audio__wrapper">
             <audio class="js-audio__source">
@@ -679,12 +743,11 @@
               <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
                 <a class="figcaption-cta js-figcaption-cta">image credit</a>
                 <figcaption><span class="title-of-art">The Magpie</span> Claude Monet | 1869 | Oil on canvas | 35 1/8 x 51 1/8 in. (89 x 130 cm) | Musée d'Orsay, Paris, RF 1984 164 | © RMN-Grand Palais (Musée d'Orsay) / Hervé Lewandowski | CAT : © RMN-Grand Palais / Art Resource, NY</figcaption>
-                <p>While at first glance, The Magpie reads as a study in white, upon closer examination one discovers a careful orchestration of pink and blue undertones. This variation in tonal quality adds a sense of warmth to the composition while simultaneously creating depth through deep shadows.</p>
+                <p>While at first glance, <em>The Magpie</em> reads as a study in white, upon closer examination one discovers a careful orchestration of pink and blue undertones. This variation in tonal quality adds a sense of warmth to the composition while simultaneously creating depth through deep shadows.</p>
               </div>
               <button class="comparison__button js-comparison__button">
                 <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.html') %}</i>
                 <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
-                Read more
               </button>
             </div>
           </figure>
@@ -696,13 +759,12 @@
               <img data-src="{{ site.url }}/assets/imgs/art/22_Bennecourt_Art-Resource.jpg" alt="" />
               <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
                 <a class="figcaption-cta js-figcaption-cta">image credit</a>
-                <figcaption><span class="title-of-art">On the Bank of the Seine Bennecourt</span> Claude Monet | 1868 | Oil on canvas | 32 1/8 x 39 5/8 in. (81.5 x 100.7 cm) | The Art Institute of Chicago, Potter Palmer Collection | &copy; The Art Institute of Chicago</figcaption>
+                <figcaption><span class="title-of-art">On the Bank of the Seine Bennecourt</span> Claude Monet | 1868 | Oil on canvas | 32 1/8 x 39 5/8 in. (81.5 x 100.7 cm) | The Art Institute of Chicago, Potter Palmer Collection, 1922.427 | &copy; The Art Institute of Chicago</figcaption>
                 <p><em>On the Bank of the Seine, Bennecourt</em> reveals Monet&rsquo;s working process and his willingness to let the viewer&rsquo;s eye do the work. Monet has divided the composition diagonally in half. The deep greens of the foreground add a sense of weight to the riverbank that contrasts with the pastels of the sun-drenched background. Yet within this composition, there are areas where the artist applies paint in startling ways. For example, the bright green patch in the foreground reads purely as a brushstroke and contrasts directly with the darker greens, which are applied in an even pattern that evokes blades of grass. The slight tonal variation between the flesh tone of the figure&rsquo;s face and the putty reflection of a roof of a building across the bank is another point where the viewer&rsquo;s eye works, filling in the distance needed to make this transition read as face and roof opposed to the juxtaposition of two squares of color.</p>
               </div>
               <button class="comparison__button js-comparison__button">
                 <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.html') %}</i>
                 <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
-                Read more
               </button>
             </div>
           </figure>
@@ -726,7 +788,7 @@
       </div>
       <div class="section-hero__figcaption">
         <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
-        <span class="figcaption"><span class="title-of-art">The Green Wave</span> Claude Monet | Oil on canvas | 19 1/8 x 25 1/2 in. (48.6 x 64.8 cm) | The Metropolitan Museum of Art, New York, H.O. Havemeyer Collection, Bequest of Mrs. H.O. Havemeyer</span>
+        <span class="figcaption"><span class="title-of-art">The Green Wave</span> Claude Monet | Oil on canvas | 19 1/8 x 25 1/2 in. (48.6 x 64.8 cm) | The Metropolitan Museum of Art, New York, H.O. Havemeyer Collection, Bequest of Mrs. H.O. Havemeyer, 1929, 29.100.111 | Metropolitan Museum of Art online</span>
       </div>
     </div>
     <section class="card-section">
@@ -800,7 +862,7 @@
     <section class="card-section">
       <div class="container">
         <div class="l-33-66--1">
-          <p><strong>Sensory Connections:</strong> How can you convey the experience among your other senses of being in nature? What do you hear? What is the temperature? What sensations are constant and what changes? </p>
+          <p><strong>Sensory Connections:</strong> What does being in nature add to your experience? What do you hear? What is the temperature? What is constant and what changes?</p>
           <p><a href="{{ site.url }}/assets/pdf/Lands-End-Map.pdf" class="color-block-button">Download Map</a></p>
 
           <p><a href="https://www.nps.gov/goga/planyourvisit/landsend.htm" title="Land's End at NPS">Visit Land&rsquo;s on the National Park Service website.</a></p>

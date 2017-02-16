@@ -162,12 +162,28 @@ http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacemen
 }
 
 /* ==============================================================
+
+   Dotted border extend
+   ============================================================== */
+
+%dotted-border {
+  border-bottom: 8px solid transparent;
+  border-image-source: $decorative-border-image;
+  border-image-slice: 26% 26% 26% 26%;
+  border-image-repeat: round;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+/* ===============================================================
    Hero extends
    ============================================================== */
 
 %hero {
   width: 100%;
   display: flex;
+  display: -webkit-flex; // fixes header height in Safari.
   background-size: cover;
   background-position: center;
 }

@@ -41,15 +41,20 @@ set classes = [
 'paragraph',
 'paragraph--type--' ~ paragraph.bundle|clean_class,
 view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-'l-1up',
+'container'
 ]
 %}
+{% if paragraph.field_column_distribution.value  == '50-50' %}
+{% set leftClass, rightClass = 'l-2up', 'l-2up' %}
+{% else %}
+{% set leftClass, rightClass = ['l-', paragraph.field_column_distribution.value ,'--1']|join, ['l-', paragraph.field_column_distribution.value ,'--2']|join%}
+{% endif %}
 <section class="card-section">
   <div{{ attributes.addClass(classes) }}>
-    <div class="l-2up">
+    <div class="{{ leftClass }}">
       {{ content.field_left_column }}
     </div>
-    <div class="l-2up">
+    <div class="{{ rightClass }}">
       {{ content.field_right_column }}
     </div>
   </div>

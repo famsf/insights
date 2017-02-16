@@ -13,7 +13,7 @@ entity_type: node
 bundle: digital_story
 label: Theme
 description: 'Change the look & feel of the digital story'
-required: false
+required: true
 translatable: false
 default_value: {  }
 default_value_callback: ''
