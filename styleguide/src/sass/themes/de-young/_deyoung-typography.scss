@@ -1,0 +1,46 @@
+/**
+ * @file
+ * lede paragraph styles
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+.lede {
+  font-family: $roboto;
+  font-weight: 700;
+  padding-bottom: .75em;
+}
+
+.dropcap {
+  font-family: $roboto-condensed;
+  background-color: $dropcap-bg;
+  color: $dropcap-color;
+  text-shadow: 3px 3px $dropcap-text-shadow;
+  padding: .5em .3em;
+  margin-right: .3em;
+  font-weight: 400;
+  outline: 2px solid $background-a;
+  box-shadow: 6px 6px $secondary;
+  font-size: 300%;
+  float: left;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $roboto-condensed;
+  font-weight: 700;
+}
+
+blockquote {
+  font-family: $roboto-condensed;
+  font-weight: 400;
+}
+
+html {
+  font-weight: 400;
+}
