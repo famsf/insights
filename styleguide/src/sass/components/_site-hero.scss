@@ -28,6 +28,7 @@
 
   h1 {
     @include leader(.5, $h1-font-size);
+    color: $hero-color;
     text-transform: uppercase;
     font-weight: 700;
     text-shadow: 3px 3px transparentize($text-shadow-color, .2);
@@ -36,6 +37,8 @@
 
   h2 {
     @include trailer(0);
+    color: $hero-color;
+    font-weight: 300;
   }
 
   .site-hero__logo {
