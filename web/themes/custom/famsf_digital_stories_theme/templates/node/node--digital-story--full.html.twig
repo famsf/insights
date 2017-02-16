@@ -70,6 +70,10 @@
 {% set classes = [
 logged_in? 'admin__article'
 ] %}
+{% set wrapperClasses = [
+'site-hero',
+node.field_background_image.entity.fileuri?'':'pattern'
+] %}
 <article{{ attributes.addClass(classes) }}>
 
     {{ title_prefix }}
@@ -89,7 +93,28 @@ logged_in? 'admin__article'
             </div>
         </footer>
     {% endif %}
-
-    {{ content }}
-
+    <section class="js-section pp-scrollable" id="start">
+        <div class="{{ wrapperClasses|join(' ') }}" {% if node.field_site_hero_background_image.value is not empty %}data-bg="{{ file_url(node.field_site_hero_background_image.entity.fileuri) }}" {% endif %}>
+            <div class="site-hero__title {{ node.field_title_style.value }} {{ node.field_title_position.value }}">
+                <div class="js-section-hero--get_height">
+                    {% if node.field_theme.value starts with 'legion' %}
+                    <span class="site-hero__logo animated fadeIn delay-1500"><a href="https://legionofhonor.famsf.org/" >Legion of Honor Museum</a></span>
+                    {% else %}
+                    <span class="site-hero__logo animated fadeIn delay-1500"><a href="https://deyoung.famsf.org/" >de Young Museum</a></span>
+                    {% endif %}
+                    <h1 class="animated fadeIn delay-1500"> {{ label }}</h1>
+                    <h2 class="animated fadeIn delay-1500">{{ node.field_exhibition_dates.value }}</h2>
+                </div>
+                <div class="site-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
+                <div class="site-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
+            </div>
+        </div>
+        <button class="js-next-page next-page animated fadeIn delay-100">
+            <div class="icon--med">
+                {{ include(active_theme_path() ~ '/svg/famsf-arrow-down-md.svg') }}
+            </div>
+        next page
+        </button>
+    </section>
+    {{ content.field_section }}
 </article>

@@ -1,0 +1,19 @@
+uuid: 8d33a2c9-5199-4ab3-9a0d-81589416bac3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_copyright
+    - paragraphs.paragraphs_type.photo_credits
+id: paragraph.photo_credits.field_copyright
+field_name: field_copyright
+entity_type: paragraph
+bundle: photo_credits
+label: Copyright
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

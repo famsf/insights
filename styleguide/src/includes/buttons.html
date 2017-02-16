@@ -1,0 +1,38 @@
+{#
+  name: Buttons
+  usage: Buttons may appear in several contexts throughout the site.
+#}
+
+{% block component %}
+
+<div class="styleguide-section">
+  <div class="container">
+    <div class="l-2up--1">
+      <h3>Basic Color Block Button</h3>
+    </div>
+    <div class="l-2up--2">
+      <button class="color-block-button">Click Here</button><br />
+      <a class="color-block-button">Click Here</a>
+      <button class="color-block-button--full">Click Here</button>
+      <a class="color-block-button--full">Click Here</a>
+    </div>
+  </div>
+</div>
+
+<div class="styleguide-section">
+  <div class="container">
+    <div class="l-2up--1">
+      <h3>Button with Icon</h3>
+    </div>
+    <div class="l-2up--2">
+      <button class="button-with-icon"> 
+        <i class="icon--small">
+          {% include('svg/famsf-play-sm.html') %}
+        </i>
+        <div>Play Audio</div>
+      </button>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

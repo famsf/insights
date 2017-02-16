@@ -94,7 +94,6 @@ footer {
 
 .dashboard-toggle {
   @extend %general-background;
-  box-shadow: 5px 0 10px $gray-medium;
   position: fixed;
   top: 0;
   left: 0;
@@ -105,6 +104,7 @@ footer {
   height: 2.5em;
   overflow: hidden;
   display: flex;
+  display: -webkit-flex;
   align-items: center;
   padding: rhythm(.5);
 
@@ -115,7 +115,7 @@ footer {
   }
 
   div {
-    transition: opacity .7s ease;
+    transition: all .7s ease;
     opacity: 0;
     display: inline-block;
   }
@@ -127,6 +127,7 @@ footer {
 
     div {
       opacity: 1;
+      width: 3.75em;
     }
   }
 }

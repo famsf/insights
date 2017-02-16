@@ -18,9 +18,7 @@ button {
   color: $primary;
   border: none;
   text-align: left;
-  display: -webkit-flex;
   display: flex;
-  -webkit-align-items: center;
   align-items: center;
   padding: 0;
   text-decoration: none;
@@ -54,9 +52,8 @@ button {
   &:focus {
     background-color: $primary-active;
     outline: 2px solid $primary-active;
-    border: 3px solid $background-c;
-    color: $background-c;
     text-decoration: none;
+    color: $text-color-invert;
   }
 }
 

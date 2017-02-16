@@ -1,0 +1,26 @@
+uuid: 7008706f-8e56-4b04-bd41-4a03e0212fd4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_video_source
+    - paragraphs.paragraphs_type.card_section
+  module:
+    - video
+id: paragraph.card_section.field_video_source
+field_name: field_video_source
+entity_type: paragraph
+bundle: card_section
+label: 'Video Source'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: ''
+  file_directory: 'videos/[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: video

@@ -21,3 +21,10 @@
 .overlay-image__revealed {
   opacity: 1;
 }
+
+.js-overlay-button {
+  > i ,
+  > div {
+    float: left; // Fixes alignment issue in Firefox of icon and and text inside button element.
+  }
+}
