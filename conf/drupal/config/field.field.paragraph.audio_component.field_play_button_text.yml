@@ -1,4 +1,4 @@
-uuid: 144b9fbe-ccfa-494d-9510-ba052c2fddc7
+uuid: 018341de-e851-4211-bc07-d29197b52a39
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,8 @@ id: paragraph.audio_component.field_play_button_text
 field_name: field_play_button_text
 entity_type: paragraph
 bundle: audio_component
-label: 'Play button Text'
-description: 'The text to the right of the icon'
+label: 'Play button text'
+description: ''
 required: true
 translatable: false
 default_value: {  }

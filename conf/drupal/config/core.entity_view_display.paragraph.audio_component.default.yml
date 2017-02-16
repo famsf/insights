@@ -1,4 +1,4 @@
-uuid: 253d065a-8dd4-4f2b-bcde-37aa47cc7c50
+uuid: 67a98907-c0d4-47d5-8aa1-1a935dc07f3e
 langcode: en
 status: true
 dependencies:
@@ -14,11 +14,11 @@ bundle: audio_component
 mode: default
 content:
   field_audio_file:
-    weight: 2
+    weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: file_url_plain
+    type: file_default
   field_play_button_text:
     weight: 1
     label: hidden

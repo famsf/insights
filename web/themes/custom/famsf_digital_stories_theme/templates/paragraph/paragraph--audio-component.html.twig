@@ -38,7 +38,7 @@
 #}
 <div class="js-audio__wrapper audio__wrapper">
     <audio class="js-audio__source">
-        <source src="{{ file_url(paragraph.field_audio_file.entity.fileuri) }}" type="audio/mpeg">
+        <source src="{{ file_url(paragraph.field_audio_file.entity.fileuri) }}" type="{{ paragraph.field_audio_file.entity.getMimeType() }}">
         Your browser does not support the audio element.
     </audio>
 
