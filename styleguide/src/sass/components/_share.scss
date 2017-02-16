@@ -20,6 +20,8 @@
 
 .social-media {
   @extend %list--simple;
+  display: inline-block;
+  margin: 0 0 rhythm(1);
 }
 
 .social-media__item {
