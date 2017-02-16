@@ -12,9 +12,12 @@
   line-height: 1.4em;
   border-bottom: 8px solid transparent;
   border-image-source: $dotted-border;
-  border-image-slice: 26%;
+  border-image-slice: 26% 26% 26% 26%;
   border-image-repeat: round;
   padding-bottom: 1em;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
 }
 
 .dropcap {

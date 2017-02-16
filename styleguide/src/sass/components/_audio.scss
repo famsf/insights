@@ -13,3 +13,9 @@
   padding: .5em 1em;
 }
 
+.js-audio__button {
+  > i ,
+  > div {
+    float: left; // Fixes alignment issue in Firefox of icon and and text inside button element.
+  }
+}
