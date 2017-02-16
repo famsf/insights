@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.paragraph.field_main_column
     - paragraphs.paragraphs_type.1up_section
+    - paragraphs.paragraphs_type.audio_component
     - paragraphs.paragraphs_type.image_with_revealable_caption
     - paragraphs.paragraphs_type.image_with_zoomable_markers
     - paragraphs.paragraphs_type.text_area
@@ -25,6 +26,7 @@ settings:
   handler_settings:
     target_bundles:
       image_with_revealable_caption: image_with_revealable_caption
+      audio_component: audio_component
       text_area: text_area
       image_with_zoomable_markers: image_with_zoomable_markers
     target_bundles_drag_drop:
@@ -34,8 +36,11 @@ settings:
       2up_section:
         weight: 8
         enabled: false
-      card_section:
+      audio_component:
+        enabled: true
         weight: 10
+      card_section:
+        weight: 11
         enabled: false
       image_with_revealable_caption:
         enabled: true
