@@ -17,14 +17,13 @@
   @extend %clearfix;
   position: relative;
   padding-right: .75em;
-  margin-top: rhythm(.25);
+  margin-top: 0;
   margin-bottom: rhythm(.25);
 
   @include breakpoint($bp1) {
     border-bottom: 1px solid rgba($text-color, .4);
     padding-bottom: rhythm(.25);
-    margin-top: rhythm(1.5);
-    margin-bottom: rhythm(.5);
+    margin-bottom: rhythm(1);
   }
 
   .icon {
@@ -65,13 +64,14 @@
 }
 
 .footer-section {
+  margin-bottom: rhythm(2);
 
   img {
     display: none;
 
     @include breakpoint($bp1) {
       display: block;
-      margin-bottom: rhythm(1);
+      margin-bottom: rhythm(.5);
     }
   }
 
