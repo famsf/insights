@@ -7,18 +7,22 @@
 
 .footer {
   background: linear-gradient(90deg, $background-c, $background-c);
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $text-color;
+  }
 }
 
 .footer-section__title {
   @extend %clearfix;
   position: relative;
-  border-bottom: 1px solid rgba($text-color, .4);
   padding-right: .75em;
-  padding-bottom: rhythm(.25);
   margin-top: rhythm(.25);
   margin-bottom: rhythm(.25);
 
   @include breakpoint($bp1) {
+    border-bottom: 1px solid rgba($text-color, .4);
+    padding-bottom: rhythm(.25);
     margin-top: rhythm(1.5);
     margin-bottom: rhythm(.5);
   }

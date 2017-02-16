@@ -24,11 +24,12 @@
 
 .social-media {
   @extend %list--simple;
-  display: inline-block;
   margin: 0 0 rhythm(1);
 }
 
 .social-media__item {
+  display: inline-block;
+  margin-bottom: rhythm(.5);
   float: left;
   margin-right: rhythm(1);
 
