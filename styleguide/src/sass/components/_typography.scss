@@ -6,24 +6,14 @@
  */
 
 .lede {
-  font-family: $roboto-slab;
-  font-weight: 400;
   font-size: 1.1em;
   line-height: 1.4em;
-  border-bottom: 8px solid transparent;
-  border-image-source: $dotted-border;
-  border-image-slice: 26% 26% 26% 26%;
-  border-image-repeat: round;
-  padding-bottom: 1em;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
 }
 
-.dropcap {
-  font-size: 150%;
-  color: $tertiary;
-  font-weight: 700;
+blockquote {
+  @extend %decorative-border;
+  padding-bottom: rhythm(1);
+  @include adjust-font-size-to($h3-font-size, 1.25);
 }
 
 .inline-link {

@@ -28,8 +28,9 @@ $text-color-invert-active: $gray-light;
 $primary: darken($gray-medium, 20%);
 $primary-active: $black;
 $secondary: $gray-light;
-$tertiary: $gray-light;
+$tertiary: $black;
 $citation: $gray-light;
+$hero-color: $black;
 
 $azure: #1c90cf;
 $azure-60: #77bce2;
@@ -44,5 +45,11 @@ $denim: #10465b;
 $midnight: #0a2f3d;
 $ink: #03161e;
 
+$rectangles-border: null;
+$decorative-border: 2px solid $gray-light;
+$decorative-border-image: null;
 $zoom-background: $white;
 $text-shadow-color: $gray-light;
+$hero-content-text: $gray-dark;
+$hero-content-text-active: $black;
+

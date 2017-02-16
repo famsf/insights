@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ page.title }}{% endblock %} | {{ site.title }}</title>
+    {% block stylesheet %}
+      {% if page.theme == 'legion-dark' %}
+        <link href="{{ site.url }}/assets/css/themes/legion/legion-dark.css" rel="stylesheet" type="text/css" />
+      {% elseif page.theme == 'legion-light' %}
+        <link href="{{ site.url }}/assets/css/themes/legion/legion-light.css" rel="stylesheet" type="text/css" />
+      {% elseif page.theme == 'deyoung-dark' %}
+        <link href="{{ site.url }}/assets/css/themes/de-young/de-young-dark.css" rel="stylesheet" type="text/css" />
+      {% elseif page.theme == 'deyoung-light' %}
+        <link href="{{ site.url }}/assets/css/themes/de-young/de-young-light.css" rel="stylesheet" type="text/css" />
+      {% else %}
+        <link href="{{ site.url }}/assets/css/styleguide.css" rel="stylesheet" type="text/css" />
+      {% endif %}
+    {% endblock %}
+    <script src="https://use.typekit.net/lzs0fpb.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-936475-3', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+ <body>
+    {% block content_wrapper %}
+      {% block content %}
+        {{ page.content }}
+      {% endblock %}
+    {% endblock %}
+    {{ include("scripts-prod.html") }}
+  </body>
+</html>

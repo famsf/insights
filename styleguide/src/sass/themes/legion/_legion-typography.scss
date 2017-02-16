@@ -1,0 +1,43 @@
+/**
+ * @file
+ * lede paragraph styles
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+.lede {
+  font-family: $roboto-slab;
+  font-weight: 400;
+  @extend %decorative-border;
+}
+
+.dropcap {
+  font-family: $roboto-slab;
+  color: $tertiary;
+  font-weight: 700;
+  font-size: 150%;
+}
+
+h1,
+h2 {
+  font-family: $roboto-slab;
+}
+
+h3,
+h4,
+h5 {
+  font-weight: 700;
+}
+
+h6 {
+  font-weight: 400;
+}
+
+blockquote {
+  font-family: $roboto-slab;
+  font-weight: 300;
+}
+
+html {
+  font-weight: 300;
+}
