@@ -107,7 +107,53 @@
     </section>
     <section class="card-section">
       <!-- begin image comparison -->
-      {% include('image-comparison.html') %}
+      <div class="container">
+        <div class="l-1up">
+          <h2>Monet’s Experience with the Salon</h2>
+        </div>
+        <div class="l-1up columns-2">
+          <p>Painting was a career, and as in any other, Monet had to figure out the rules to succeed. He knew that acceptance to the Salon was the most assured road to success. Monet actively solicited advice from fellow painters on how to make his paintings acceptable, yet it was difficult to know what would please the Salon jurors.</p>
+          <p>Below are several paintings he submitted for exhibition to the Salon. <strong><em>Guess which were accepted</em></strong>.</p>
+        </div>
+      </div>
+      <div class="container comparison">
+        <div class="comparison__2up js-comparison__group">
+          <figure>
+            <div class="figure__wrapper">
+              <img data-src="{{ site.url }}/assets/imgs/art/Low_tide.jpg" alt="The Pointe de La Hève at Low Tide" />
+              <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
+                <a class="figcaption-cta js-figcaption-cta">image credit</a>
+                <figcaption><span class="title-of-art">The Pointe de La Hève at Low Tide</span> | Claude Monet | 1865 | Oil on canvas | 35 1/2 x 59 1/4 in. (90.2 x 150.5 cm). | Kimbell Art Museum, Fort Worth, AP 1968.07 | Photograph by Robert LaPrelle | &copy; Kimbell Art Museum</figcaption>
+                <h3>Accepted!</h3>
+                <p>The 24-year-old Monet was successful in having his first submission approved for exhibition at the Salon. This work was also praised in the press: “Monet, unknown yesterday, has immediately made a name for himself with this single painting.” </p>
+                {% include('audio.html') %}
+              </div>
+              <button class="comparison__button js-comparison__button">
+                <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.html') %}</i>
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
+              </button>
+            </div>
+          </figure>
+        </div>
+
+        <div class="comparison__2up js-comparison__group">
+          <figure>
+            <div class="figure__wrapper">
+              <img data-src="{{ site.url }}/assets/imgs/art/Havre_dOrsay.jpg" alt="The Jetty at Le Havre" />
+              <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
+                <a class="figcaption-cta js-figcaption-cta">image credit</a>
+                <figcaption><span class="title-of-art">The Jetty at Le Havre</span> | Claude Monet | 1868 | Oil on canvas | Private collection | Photograph courtesy of Service de Documentation, Musée d'Orsay</figcaption>
+                <h3>Rejected!</h3>
+                <p>Monet submitted this seascape in 1868. The young artist had invested a significant sum of money in this large-scale canvas and had to beg his family for money to survive.</p>
+              </div>
+              <button class="comparison__button js-comparison__button">
+                <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.html') %}</i>
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
+              </button>
+            </div>
+          </figure>
+        </div>
+      </div>
     </section>
     <section class="card-section">
       <!-- another image comparison -->
@@ -116,13 +162,16 @@
           <figure>
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/Camille_green_dress_image-comparison.jpg" alt="" />
-              {% include('comparison--cta-a.html') %}
               <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
                 <a class="figcaption-cta js-figcaption-cta">image credit</a>
                 <figcaption><span class="title-of-art">Camille (The Woman with a Green Dress)</span> Claude Monet | 1866 | Oil on canvas | 91 x 59 1/2 in. (231 x 151 cm) | Kunsthalle Bremen, acquired with the assistance of  Galerievereins, 1906, Inv. Nr. 298-1906/1 | &copy; Kunsthalle Bremen. Foto: Karen Blindow | &copy; Kunsthalle Bremen. Foto: Karen Blindow</figcaption>
                 <h3>Accepted!</h3>
                 <p>This painting was not only accepted to the Salon of 1866, it was well received. This success reassured Monet&rsquo;s family, and his aunt agreed to lend him financial support.</p>
               </div>
+              <button class="comparison__button js-comparison__button">
+                <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.html') %}</i>
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
+              </button>
             </div>
           </figure>
         </div>
@@ -131,13 +180,16 @@
           <figure>
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/16_luncheon_Bridgeman.jpg" alt="" />
-              {% include('comparison--cta-b.html') %}
               <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
                 <a class="figcaption-cta js-figcaption-cta">image credit</a>
                 <figcaption><span class="title-of-art">The Luncheon</span>  Claude Monet | 1868 | Oil on canvas |  91 1/8 x 59 1/2 in. (231.5 x 151 cm) | Städel Museum, Frankfurt, Inv. No. SG 170 | &copy; Städel Museum - U. Edelmann - ARTOTHEK</figcaption>
                 <h3>Rejected!</h3>
                 <p>This scene of Monet&rsquo;s young family was rejected by the Salon of 1870. Monet could afford to rent the cozy house depicted here because he had recently been commissioned to paint portraits of a businessman&rsquo;s family.</p>
               </div>
+              <button class="comparison__button js-comparison__button">
+                <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.html') %}</i>
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
+              </button>
             </div>
           </figure>
         </div>
@@ -449,12 +501,16 @@
           <figure>
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/Etretat_Harvard_detail_1.jpg" alt="" />
-              {% include('comparison--cta-a.html') %}
               <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
               <a class="figcaption-cta js-figcaption-cta">image credit</a>
               <figcaption><span class="title-of-art">The Porte d'Amont, Étretat</span> 1868 &mdash; 1869 | Oil on canvas | 31 1/8 x 38 3/4 in. (79.1 x 98.4 cm) | Harvard Art Museums/Fogg Museum, Cambridge, Gift of Mr. and Mrs. Joseph Pulitzer, Jr., 1957.163 | Image courtesy Harvard Art Museums</figcaption>
-                <p>The rock formation is rendered in similar hues, contrasting with the heavy black that depicts wet stone revealed by the ebbing tide. </p>
+              <p>The rock formation is rendered in similar hues, contrasting with the heavy black that depicts wet stone revealed by the ebbing tide. </p>
               </div>
+              <button class="comparison__button js-comparison__button">
+                <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.html') %}</i>
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
+                Color
+              </button>
             </div>
           </figure>
         </div>
@@ -463,13 +519,16 @@
           <figure>
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/Etretat_Harvard_detail_2.jpg" alt="" />
-              {% include('comparison--cta-b.html') %}
               <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
               <a class="figcaption-cta js-figcaption-cta">image credit</a>
               <figcaption><span class="title-of-art">The Porte d'Amont, Étretat</span> 1868 &mdash; 1869 | Oil on canvas | 31 1/8 x 38 3/4 in. (79.1 x 98.4 cm) | Harvard Art Museums/Fogg Museum, Cambridge, Gift of Mr. and Mrs. Joseph Pulitzer, Jr., 1957.163 | Image courtesy Harvard Art Museums</figcaption>
-
-                <p>The firm and steady horizontal brushstrokes of the cliffs contrast with the fleeting horizontal bands of color that fill the sky.</p>
+              <p>The firm and steady horizontal brushstrokes of the cliffs contrast with the fleeting horizontal bands of color that fill the sky.</p>
               </div>
+              <button class="comparison__button js-comparison__button">
+                <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.html') %}</i>
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
+                Brushstroke
+              </button>
             </div>
           </figure>
         </div>
@@ -681,7 +740,6 @@
               <button class="comparison__button js-comparison__button">
                 <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.html') %}</i>
                 <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
-                Read more
               </button>
             </div>
           </figure>
@@ -699,7 +757,6 @@
               <button class="comparison__button js-comparison__button">
                 <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.html') %}</i>
                 <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
-                Read more
               </button>
             </div>
           </figure>
