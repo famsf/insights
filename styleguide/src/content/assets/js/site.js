@@ -140,7 +140,7 @@
       }
 
       // Start the word fade slider
-      $('.js-wordslider').bxSlider({
+      $('.js-wordslider', context).once().bxSlider({
         mode: 'fade',
         pager: false,
         auto: true,
