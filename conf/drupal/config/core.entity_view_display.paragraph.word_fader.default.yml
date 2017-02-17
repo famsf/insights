@@ -1,0 +1,22 @@
+uuid: 137a4ea9-e3a6-4cdf-90be-79d08769b947
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.word_fader.field_fading_text
+    - paragraphs.paragraphs_type.word_fader
+id: paragraph.word_fader.default
+targetEntityType: paragraph
+bundle: word_fader
+mode: default
+content:
+  field_fading_text:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+hidden:
+  created: true
+  uid: true
