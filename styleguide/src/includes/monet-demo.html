@@ -852,6 +852,13 @@
     <section class="card-section">
       <div class="container">
         <div class="l-1up">
+          <figure>
+            <div class="figure__wrapper">
+              <img data-src="{{ site.url }}/assets/imgs/art/IMG_4845-pathway.jpg" alt="Land's End" />
+            </div>
+          </figure>
+        </div>
+        <div class="l-1up">
           <h2>Sensory Connections</h2>
           <p>What does being in nature add to your experience? What do you hear? What is the temperature? What is constant and what changes?
           </p>
@@ -859,17 +866,12 @@
 
           <p><a href="{{ site.url }}/assets/pdf/Lands-End-Map.pdf" class="color-block-button">Download Map</a><br /><a href="https://www.nps.gov/goga/planyourvisit/landsend.htm" title="Land's End at NPS">Visit Land&rsquo;s on the National Park Service website.</a></p>
         </div>
-        <div class="l-1up">
-          <figure>
-            <div class="figure__wrapper">
-              <img data-src="{{ site.url }}/assets/imgs/art/IMG_4845-pathway.jpg" alt="Land's End" />
-            </div>
-          </figure>
-        </div>
       </div>
     </section>
     {% include('share.html') %}
+    {% include('next-page.html') %}
   </section>
+  {% include('footer.html') %}
 </main>
 {% include('zoom-modal.html') %}
 {% endblock %}
