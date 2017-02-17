@@ -101,10 +101,10 @@ content:
       width: '854'
       height: '480'
       autoplay: true
-      muted: true
-      view_mode: default
+      loop: true
+      preload: auto
       controls: false
-      loop: false
+      muted: false
     third_party_settings: {  }
     type: video_player_list
 hidden:
