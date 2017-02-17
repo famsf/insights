@@ -11,12 +11,12 @@
 
 (function ($) {
 
-  Drupal.behaviors.image_credit = {
+  Drupal.behaviors.audio_transcript = {
     attach: function(context, settings) {
       $('.js-audio-transcript--trigger', context).click(function(){
         // Define the target expandable div.
         var targetDrawer = $(this).parents('audio-transcript').find('audio-transcript__drawer');
-        targetDrawer.toggleClass('js-is-hidden');
+        targetDrawer.toggleClass('js-audio-transcript--hidden');
       });
     }
   };
