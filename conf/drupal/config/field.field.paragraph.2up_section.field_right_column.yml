@@ -8,6 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.audio_component
     - paragraphs.paragraphs_type.image_with_revealable_caption
     - paragraphs.paragraphs_type.text_area
+    - paragraphs.paragraphs_type.word_fader
   module:
     - entity_reference_revisions
 id: paragraph.2up_section.field_right_column
@@ -27,6 +28,7 @@ settings:
       audio_component: audio_component
       image_with_revealable_caption: image_with_revealable_caption
       text_area: text_area
+      word_fader: word_fader
     target_bundles_drag_drop:
       1up_section:
         weight: 6
@@ -49,6 +51,9 @@ settings:
       text_area:
         enabled: true
         weight: 12
+      word_fader:
+        enabled: true
+        weight: 16
       photo_credits:
         weight: 12
         enabled: false

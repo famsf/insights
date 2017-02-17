@@ -1,0 +1,23 @@
+uuid: ce7cccb7-9f8f-4111-a0e1-53fb5d29dec8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.word_fader.field_fading_text
+    - paragraphs.paragraphs_type.word_fader
+id: paragraph.word_fader.default
+targetEntityType: paragraph
+bundle: word_fader
+mode: default
+content:
+  field_fading_text:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+hidden:
+  created: true
+  status: true
+  uid: true
