@@ -94,7 +94,6 @@ footer {
 
 .dashboard-toggle {
   @extend %general-background;
-  box-shadow: 5px 0 10px $gray-medium;
   position: fixed;
   top: 0;
   left: 0;

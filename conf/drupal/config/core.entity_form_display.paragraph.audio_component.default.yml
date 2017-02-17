@@ -1,0 +1,32 @@
+uuid: 67f839a1-d89f-4586-bf07-1ba6b38e8e5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.audio_component.field_audio_file
+    - field.field.paragraph.audio_component.field_play_button_text
+    - paragraphs.paragraphs_type.audio_component
+  module:
+    - file
+id: paragraph.audio_component.default
+targetEntityType: paragraph
+bundle: audio_component
+mode: default
+content:
+  field_audio_file:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+  field_play_button_text:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+hidden:
+  created: true
+  status: true
+  uid: true
