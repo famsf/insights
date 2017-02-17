@@ -36,8 +36,35 @@
  * @ingroup themeable
  */
 #}
-{{ content.field_image_to_compare }}
+{% set compareImageParagraph = paragraph.field_image_to_compare.entity %}
+{% set photoCredits = compareImageParagraph.field_photo_credits.entity %}
+{% set image = compareImageParagraph.field_image.entity %}
+<img data-src="{{ file_url(image.fileuri)  }}" alt="{{ image.alt }}" />
 <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
+    {% set credits = [] %}
+    {% if photoCredits.field_artist.value is not empty %}
+        {% set credits = credits|merge([photoCredits.field_artist.value ]) %}
+    {% endif %}
+    {% if photoCredits.field_medium.value is not empty %}
+        {% set credits = credits|merge([photoCredits.field_medium.value ]) %}
+    {% endif %}
+    {% if photoCredits.field_location.value is not empty %}
+        {% set credits = credits|merge([photoCredits.field_location.value ]) %}
+    {% endif %}
+    {% if photoCredits.field_copyright.value is not empty %}
+        {% set credits = credits|merge([photoCredits.field_copyright.value ]) %}
+    {% endif %}
+    {% if photoCredits.field_general_credit.value is not empty %}
+        {% set credits = credits|merge([photoCredits.field_general_credit.value ]) %}
+    {% endif %}
+    {% if credits is not empty or photoCredits.field_image_title.value is not empty %}
+        <a class="figcaption-cta js-figcaption-cta">image credit</a>
+        <figcaption>
+            {% if photoCredits.field_image_title.value is not empty %}
+                <span class="title-of-art"> {{ photoCredits.field_image_title.value }} </span>
+            {% endif %}
+            {% if  credits is not empty %} {{ credits|join(' | ') }} {% endif %}</figcaption>
+    {% endif %}
     {{ content.field_content }}
 </div>
 <button class="comparison__button js-comparison__button">
