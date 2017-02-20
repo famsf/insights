@@ -55,6 +55,12 @@ figure {
   cursor: pointer;
   padding: .5rem 0;
   display: block;
+  color: rgba($text-color, .8);
+
+  &:link,
+  &:visited {
+    color: rgba($text-color, .8);
+  }
 }
 
 .figcaption-cta,

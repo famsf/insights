@@ -28,6 +28,7 @@
 
   h1 {
     @include leader(.5, $h1-font-size);
+    color: $hero-color;
     text-transform: uppercase;
     font-weight: 700;
     text-shadow: 3px 3px $text-shadow-color;
@@ -40,6 +41,8 @@
 
   h2 {
     @include trailer(0);
+    color: $hero-color;
+    font-weight: 300;
   }
 
   .site-hero__logo {
@@ -58,6 +61,128 @@
     a:active,
     a:focus {
       color: $hero-content-text-active;
+    }
+  }
+}
+
+.site-hero__title--bold {
+  @extend %hero__content;
+  color: $section-hero-text;
+  background-color: transparent;
+  padding: rhythm(1.5) 0;
+
+  @include breakpoint($bp1) {
+    width: 34rem;
+    padding: rhythm(1) 0;
+  }
+
+  h1 {
+    @include leader(.5, $h1-font-size);
+    color: $hero-color;
+    font-weight: 700;
+    text-shadow:
+      0 1px 0px $section-hero-shadow,
+      1px 0 0px $section-hero-shadow-b,
+      1px 2px 1px $section-hero-shadow,
+      2px 1px 1px $section-hero-shadow-b,
+      2px 3px 2px $section-hero-shadow,
+      3px 2px 2px $section-hero-shadow-b,
+      3px 4px 2px $section-hero-shadow,
+      4px 3px 3px $section-hero-shadow-b,
+      4px 5px 3px $section-hero-shadow,
+      5px 4px 2px $section-hero-shadow-b,
+      5px 6px 2px $section-hero-shadow,
+      6px 5px 2px $section-hero-shadow-b,
+      6px 7px 1px $section-hero-shadow,
+      7px 6px 1px $section-hero-shadow-b,
+      7px 8px 0px $section-hero-shadow,
+      8px 7px 0px $section-hero-shadow-b;
+    font-size: 3em;
+
+    @include breakpoint($bp1) {
+      font-size: 4.5em;
+    }
+  }
+
+  h2 {
+    @include trailer(0);
+    @include leader(.15);
+    color: $hero-color;
+    font-size: 1.25em;
+    display: inline-block;
+    background-color: rgba($section-hero-shadow-b, .6);
+    padding: rhythm(.15) rhythm(.5);
+  }
+
+  .site-hero__logo {
+    @include adjust-font-size-to($h3-font-size, 1.25);
+    @include trailer(0);
+    display: inline-block;
+    letter-spacing: -.01em;
+    background-color: rgba($section-hero-shadow-b, .6);;
+
+    a:link,
+    a:visited {
+      font-weight: 700;
+      text-decoration: none;
+      color: $section-hero-text;
+      padding: rhythm(.15) rhythm(.5);
+    }
+
+    a:hover,
+    a:active,
+    a:focus {
+      color: $hero-content-text-active;
+    }
+  }
+
+  @-webkit-keyframes expand-width {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+  }
+
+  .animated-border--top {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    display: block;
+    width: 0%;
+    background: linear-gradient( to right, $section-hero-border-a, $section-hero-border-b );
+    height: 2px;
+    animation: expand-width 1.5s forwards;
+    animation-delay: 3.5s;
+  }
+
+  .animated-border--bottom {
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    display: block;
+    width: 0%;
+    background: linear-gradient( to right, $section-hero-border-b, $section-hero-border-a );
+    height: 2px;
+    animation: expand-width 1.5s forwards;
+    animation-delay: 3.5s;
+  }
+
+  &.has-backdrop {
+    background-color: rgba(darken($section-hero-shadow-b, 5%), .8);
+    padding: rhythm(1.5);
+
+    @include breakpoint($bp1) {
+      width: 27rem;
+      padding: rhythm(1);
+    }
+
+    .site-hero__logo,
+    h2 {
+      background-color: transparent;
+      padding: 0;
     }
   }
 }
