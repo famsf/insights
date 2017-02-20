@@ -45,7 +45,7 @@
           $(section).find('img[data-src],div[data-bg]').lazyLoadXT({oncomplete: complete});
         };
         // Initialize pagepiling.
-        $('.js-pagepiling').pagepiling({
+        $('.js-pagepiling', context).pagepiling({
           menu: null,
           direction: 'vertical',
           verticalCentered: false,
@@ -104,7 +104,7 @@
           },
           afterLoad: function(anchorLink, index){
               setTimeout(function() {
-                $('.js-loading').fadeOut(500);
+                $('.js-loading', context).fadeOut(500);
               }, 2000);
           },
           afterRender: function(){
@@ -112,7 +112,7 @@
             var firstSection = $('.js-section.active');
             var hideLoader = function() {
               setTimeout(function() {
-                $('.js-loading').fadeOut(500);
+                $('.js-loading', context).fadeOut(500);
               }, 2000);
             };
             lazyloadSection(firstSection, hideLoader());
@@ -142,7 +142,7 @@
       }
 
       // Start the word fade slider
-      $('.js-wordslider').bxSlider({
+      $('.js-wordslider', context).once().bxSlider({
         mode: 'fade',
         pager: false,
         auto: true,

@@ -1,0 +1,6 @@
+uuid: 8f991a25-bd4b-4b5a-9ef0-ef9e516e2fb8
+langcode: en
+status: true
+dependencies: {  }
+id: word_fader
+label: 'Word Fader'
