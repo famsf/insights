@@ -43,21 +43,21 @@ settings:
       audio_component:
         enabled: true
         weight: 10
-      image_with_revealable_caption:
-        enabled: true
-        weight: 11
-      word_fader:
-        enabled: true
-        weight: 16
       card_section:
         weight: 11
         enabled: false
+      image_with_revealable_caption:
+        enabled: true
+        weight: 11
       text_area:
         enabled: true
         weight: 12
       photo_credits:
         weight: 12
         enabled: false
+      word_fader:
+        enabled: true
+        weight: 16
       revealable_read_more_section:
         weight: 13
         enabled: false
