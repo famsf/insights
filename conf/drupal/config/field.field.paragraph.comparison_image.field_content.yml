@@ -1,0 +1,56 @@
+uuid: 3fd755b0-3984-49d2-b1c0-19a4dcca20c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.audio_component
+    - paragraphs.paragraphs_type.comparison_image
+    - paragraphs.paragraphs_type.text_area
+  module:
+    - entity_reference_revisions
+id: paragraph.comparison_image.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: comparison_image
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      audio_component: audio_component
+      text_area: text_area
+    target_bundles_drag_drop:
+      1up_section:
+        weight: 10
+        enabled: false
+      2up_section:
+        weight: 11
+        enabled: false
+      audio_component:
+        enabled: true
+        weight: 12
+      card_section:
+        weight: 13
+        enabled: false
+      comparison_image:
+        weight: 14
+        enabled: false
+      image_comparison_section:
+        weight: 15
+        enabled: false
+      photo_credits:
+        weight: 16
+        enabled: false
+      revealable_read_more_section:
+        weight: 17
+        enabled: false
+      text_area:
+        enabled: true
+        weight: 18
+field_type: entity_reference_revisions
