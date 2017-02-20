@@ -12,14 +12,13 @@ dependencies:
     - field.field.paragraph.card_section.field_section_title_position
     - field.field.paragraph.card_section.field_section_title_style
     - field.field.paragraph.card_section.field_sections_in_card
-    - field.field.paragraph.card_section.field_video_source
+    - field.field.paragraph.card_section.field_video_source_paragraph
     - image.style.thumbnail
     - paragraphs.paragraphs_type.card_section
   module:
     - field_group
     - image
     - paragraphs
-    - video
 third_party_settings:
   field_group:
     group_hero_section:
@@ -106,16 +105,16 @@ content:
       add_mode: dropdown
       form_display_mode: default
     third_party_settings: {  }
-  field_video_source:
+  field_video_source_paragraph:
+    type: entity_reference_paragraphs
     weight: 9
     settings:
-      file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
-      uri_scheme: public
-      file_extensions: 'mp4 ogv webm'
-      max_filesize: ''
-      progress_indicator: throbber
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
     third_party_settings: {  }
-    type: video_upload
 hidden:
   created: true
   status: true
