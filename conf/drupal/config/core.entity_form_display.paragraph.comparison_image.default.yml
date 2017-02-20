@@ -43,5 +43,7 @@ content:
     type: string_textfield
 hidden:
   created: true
+  field_image: true
+  field_photo_credits: true
   status: true
   uid: true

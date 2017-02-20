@@ -39,4 +39,6 @@ content:
     type: string
 hidden:
   created: true
+  field_image: true
+  field_photo_credits: true
   uid: true
