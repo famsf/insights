@@ -16,6 +16,8 @@ global-styling:
     - core/drupal
     - core/drupalSettings
     - core/jquery
+  ckeditor_stylesheets:
+    - css/styleguide.css
 legion-dark:
   css:
       theme:
