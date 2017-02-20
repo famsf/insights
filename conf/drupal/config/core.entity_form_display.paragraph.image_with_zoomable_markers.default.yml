@@ -1,0 +1,49 @@
+uuid: b1c42ee2-6f73-4877-85c8-832cf050b2ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_with_zoomable_markers.field_photo_credits
+    - field.field.paragraph.image_with_zoomable_markers.field_zoomable_area
+    - field.field.paragraph.image_with_zoomable_markers.field_zoomable_image
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.image_with_zoomable_markers
+  module:
+    - image
+    - paragraphs
+id: paragraph.image_with_zoomable_markers.default
+targetEntityType: paragraph
+bundle: image_with_zoomable_markers
+mode: default
+content:
+  field_photo_credits:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+  field_zoomable_area:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+  field_zoomable_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+hidden:
+  created: true
+  status: true
+  uid: true
