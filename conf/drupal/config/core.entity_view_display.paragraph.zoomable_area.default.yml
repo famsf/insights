@@ -1,0 +1,37 @@
+uuid: 924463f7-7dab-49c7-88ff-4a5a17820366
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.zoomable_area.field_image_close_up
+    - field.field.paragraph.zoomable_area.field_left_position
+    - field.field.paragraph.zoomable_area.field_text_area
+    - field.field.paragraph.zoomable_area.field_top_position
+    - paragraphs.paragraphs_type.zoomable_area
+  module:
+    - image
+    - text
+id: paragraph.zoomable_area.default
+targetEntityType: paragraph
+bundle: zoomable_area
+mode: default
+content:
+  field_image_close_up:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_text_area:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+hidden:
+  created: true
+  field_left_position: true
+  field_top_position: true
+  uid: true
