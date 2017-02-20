@@ -1,0 +1,54 @@
+uuid: 03a762f4-c7c0-47a6-afdf-e877693ceebe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_photo_credits
+    - paragraphs.paragraphs_type.comparison_image
+    - paragraphs.paragraphs_type.photo_credits
+  module:
+    - entity_reference_revisions
+id: paragraph.comparison_image.field_photo_credits
+field_name: field_photo_credits
+entity_type: paragraph
+bundle: comparison_image
+label: 'Photo Credits'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      photo_credits: photo_credits
+    target_bundles_drag_drop:
+      1up_section:
+        weight: 10
+        enabled: false
+      2up_section:
+        weight: 11
+        enabled: false
+      audio_component:
+        weight: 12
+        enabled: false
+      card_section:
+        weight: 13
+        enabled: false
+      comparison_image:
+        weight: 14
+        enabled: false
+      image_comparison_section:
+        weight: 15
+        enabled: false
+      photo_credits:
+        enabled: true
+        weight: 16
+      revealable_read_more_section:
+        weight: 17
+        enabled: false
+      text_area:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

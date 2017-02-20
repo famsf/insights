@@ -7,6 +7,7 @@ dependencies:
     - paragraphs.paragraphs_type.2up_section
     - paragraphs.paragraphs_type.image_with_revealable_caption
     - paragraphs.paragraphs_type.audio_component
+    - paragraphs.paragraphs_type.image_with_zoomable_markers
     - paragraphs.paragraphs_type.text_area
     - paragraphs.paragraphs_type.word_fader
   module:
@@ -28,6 +29,7 @@ settings:
       audio_component: audio_component
       image_with_revealable_caption: image_with_revealable_caption
       text_area: text_area
+      image_with_zoomable_markers: image_with_zoomable_markers
       word_fader: word_fader
     target_bundles_drag_drop:
       1up_section:
@@ -52,9 +54,15 @@ settings:
         enabled: true
         weight: 12
       photo_credits:
-        enabled: false
         weight: 12
+        enabled: false
+      image_with_zoomable_markers:
+        enabled: true
+        weight: 14
       word_fader:
         enabled: true
         weight: 16
+      zoomable_area:
+        weight: 18
+        enabled: false
 field_type: entity_reference_revisions
