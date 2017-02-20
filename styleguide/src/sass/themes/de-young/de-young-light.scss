@@ -81,6 +81,12 @@ $dropcap-color: $white;
 $dropcap-bg: $teal;
 $dropcap-text-shadow: $blue-black;
 
+$section-hero-text: $white;
+$section-hero-shadow: $green;
+$section-hero-shadow-b: $forest;
+$section-hero-border-a: $green;
+$section-hero-border-b: $forest;
+
 // Import theme specific components used in global
 @import 'deyoung-section-hero';
 

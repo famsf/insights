@@ -1,0 +1,26 @@
+{#
+  name: Section Hero with video
+  usage: The section hero is used at the beginning of as section or chapter. This version has a background video.
+#}
+
+{% block component %}
+<div class="section-hero__video-wrapper">
+  <video autoplay="autoplay" muted="muted" preload="metadata" title="Forest" loop="loop" playsinline="playsinline" class="video-background">
+    <source src="{{ site.url }}/assets/vid/Forest_GettyImages-614587492.mp4" />
+    <source src="{{ site.url }}/assets/vid/Forest_GettyImages-614587492.webmhd.webm" type="video/webm" />
+    Your browser does not support the video tag.
+  </video>
+  <div class="section-hero__wrapper has-video animatedParent">
+    <div class="section-hero__title--bold animated flipInX delay-1500 slower bottom-left">
+
+      <div class="animated-border--top"></div>
+     
+      <h1 class="js-section-hero--get_height">See the Forest for the Trees</h1>
+
+      <div class="animated-border--bottom"></div>
+
+    </div>
+  </div>
+</div>
+{% endblock %}
+

@@ -54,6 +54,12 @@ $text-shadow-color: transparentize($yellow, .2);
 $hero-content-text: $midnight;
 $hero-content-text-active: $sea;
 
+$section-hero-text: $white;
+$section-hero-shadow: $denim;
+$section-hero-shadow-b: $midnight;
+$section-hero-border-a: $midnight;
+$section-hero-border-b: $sea;
+
 // Import theme specific components used in global
 @import 'legion-section-hero';
 
