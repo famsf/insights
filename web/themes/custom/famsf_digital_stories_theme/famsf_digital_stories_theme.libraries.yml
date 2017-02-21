@@ -2,6 +2,7 @@ global-styling:
   version: 1.x
   js:
     js/audio.js: {}
+    js/audio-transcript.js: {}
     js/jquery.bxslider.js: {}
     js/jquery.lazyloadxt.extra.js: {}
     js/jquery.lazyloadxt.bg.js: {}
