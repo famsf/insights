@@ -20,8 +20,6 @@ global-styling:
     - core/drupalSettings
     - core/jquery
     - core/jquery.once
-  ckeditor_stylesheets:
-    - css/themes/admin/admin.css
 legion-dark:
   css:
       theme:

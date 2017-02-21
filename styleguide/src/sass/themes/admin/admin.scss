@@ -64,8 +64,10 @@ $hero-content-text-active: $sea;
 @import "../../support-for";
 
 /* HTML element (SMACSS base) rules */
-@import "../../normalize";
+@import "normalize";
 
+@import "../../components/typography";
 // Import theme specific components
 @import 'wysiwyg';
 
+@import 'admin-typography';
