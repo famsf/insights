@@ -9,6 +9,10 @@
   background: transparent;
   border: 0;
   margin: 1em auto;
+  > i ,
+  > div {
+    float: left; // Fixes alignment issue in Firefox of icon and and text inside button element.
+  }
 }
 
 .share-expander {
@@ -20,9 +24,12 @@
 
 .social-media {
   @extend %list--simple;
+  margin: 0 0 rhythm(1);
 }
 
 .social-media__item {
+  display: inline-block;
+  margin-bottom: rhythm(.5);
   float: left;
   margin-right: rhythm(1);
 

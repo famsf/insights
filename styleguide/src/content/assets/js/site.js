@@ -99,6 +99,8 @@
                 $(dashboardLinks[i]).removeClass('active');
               }
             }
+            // Make sure we scroll to the top of the active section.
+            sectionSelector.scrollTop(0);
           },
           afterLoad: function(anchorLink, index){
               setTimeout(function() {

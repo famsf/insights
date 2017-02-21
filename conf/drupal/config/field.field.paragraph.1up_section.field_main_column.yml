@@ -7,6 +7,7 @@ dependencies:
     - paragraphs.paragraphs_type.1up_section
     - paragraphs.paragraphs_type.audio_component
     - paragraphs.paragraphs_type.image_with_revealable_caption
+    - paragraphs.paragraphs_type.link_or_download_button
     - paragraphs.paragraphs_type.image_with_zoomable_markers
     - paragraphs.paragraphs_type.overlay_image
     - paragraphs.paragraphs_type.text_area
@@ -27,6 +28,7 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
+      link_or_download_button: link_or_download_button
       audio_component: audio_component
       image_with_revealable_caption: image_with_revealable_caption
       text_area: text_area
@@ -61,6 +63,9 @@ settings:
       image_with_zoomable_markers:
         enabled: true
         weight: 14
+      link_or_download_button:
+        enabled: true
+        weight: 15
       word_fader:
         enabled: true
         weight: 16

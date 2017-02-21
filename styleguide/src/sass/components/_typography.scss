@@ -16,3 +16,6 @@ blockquote {
   @include adjust-font-size-to($h3-font-size, 1.25);
 }
 
+.inline-link {
+  margin-left: rhythm(.5);
+}

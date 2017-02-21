@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.image_with_revealable_caption
     - paragraphs.paragraphs_type.image_with_zoomable_markers
     - paragraphs.paragraphs_type.overlay_image
+    - paragraphs.paragraphs_type.link_or_download_button
     - paragraphs.paragraphs_type.text_area
     - paragraphs.paragraphs_type.word_fader
   module:
@@ -30,6 +31,7 @@ settings:
       audio_component: audio_component
       image_with_revealable_caption: image_with_revealable_caption
       text_area: text_area
+      link_or_download_button: link_or_download_button
       image_with_zoomable_markers: image_with_zoomable_markers
       word_fader: word_fader
       overlay_image: overlay_image
@@ -58,6 +60,9 @@ settings:
       photo_credits:
         weight: 12
         enabled: false
+      link_or_download_button:
+        enabled: true
+        weight: 15
       image_with_zoomable_markers:
         enabled: true
         weight: 14
