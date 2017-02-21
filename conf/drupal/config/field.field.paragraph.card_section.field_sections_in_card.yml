@@ -9,6 +9,7 @@ dependencies:
     - paragraphs.paragraphs_type.card_section
     - paragraphs.paragraphs_type.image_comparison_section
     - paragraphs.paragraphs_type.image_with_revealable_caption
+    - paragraphs.paragraphs_type.overlay_image
     - paragraphs.paragraphs_type.revealable_read_more_section
   module:
     - entity_reference_revisions
@@ -31,6 +32,7 @@ settings:
       image_with_revealable_caption: image_with_revealable_caption
       revealable_read_more_section: revealable_read_more_section
       image_comparison_section: image_comparison_section
+      overlay_image: overlay_image
     target_bundles_drag_drop:
       text_area:
         weight: -13
@@ -47,12 +49,12 @@ settings:
       photo_credits:
         weight: 12
         enabled: false
-      card_section:
-        weight: 12
-        enabled: false
       revealable_read_more_section:
         enabled: true
         weight: 12
+      card_section:
+        weight: 12
+        enabled: false
       audio_component:
         weight: 13
         enabled: false
@@ -62,4 +64,16 @@ settings:
       image_comparison_section:
         enabled: true
         weight: 16
+      image_with_zoomable_markers:
+        weight: 22
+        enabled: false
+      overlay_image:
+        enabled: true
+        weight: 23
+      word_fader:
+        weight: 27
+        enabled: false
+      zoomable_area:
+        weight: 28
+        enabled: false
 field_type: entity_reference_revisions
