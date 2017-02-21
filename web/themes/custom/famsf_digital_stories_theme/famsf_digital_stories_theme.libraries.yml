@@ -21,21 +21,32 @@ global-styling:
     - core/jquery
     - core/jquery.once
 legion-dark:
+  header: true
   css:
       theme:
         css/themes/legion/legion-dark.css: {}
+  js:
+    //use.typekit.net/lzs0fpb.js: { every_page: true }
 
 legion-light:
+  header: true
   css:
       theme:
         css/themes/legion/legion-light.css: {}
+  js:
+    //use.typekit.net/lzs0fpb.js: { every_page: true }
 
 de-young-light:
+  header: true
   css:
       theme:
         css/themes/de-young/de-young-light.css: {}
-
+  js:
+    //use.typekit.net/exo1zov.js: { every_page: true }
 de-young-dark:
+  header: true
   css:
       theme:
         css/themes/de-young/de-young-dark.css: {}
+  js:
+    //use.typekit.net/exo1zov.js: { every_page: true }
