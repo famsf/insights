@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Custom theme implementation to display a paragraph.
+ * Custom theme implementation to display a card section paragraph.
  *
  * Available variables:
  * - paragraph: Full paragraph entity.
@@ -36,19 +36,28 @@
  * @ingroup themeable
  */
 #}
-<div class="js-audio__wrapper audio__wrapper">
-    <audio class="js-audio__source">
-        <source src="{{ file_url(paragraph.field_audio_file.entity.fileuri) }}" type="{{ paragraph.field_audio_file.entity.getMimeType() }}">
-        Your browser does not support the audio element.
-    </audio>
+{% set credits = [] %}
+{% if paragraph.field_artist.value is not empty %}
+    {% set credits = credits|merge([paragraph.field_artist.value ]) %}
+{% endif %}
+{% if paragraph.field_medium.value is not empty %}
+    {% set credits = credits|merge([paragraph.field_medium.value ]) %}
+{% endif %}
+{% if paragraph.field_location.value is not empty %}
+    {% set credits = credits|merge([paragraph.field_location.value ]) %}
+{% endif %}
+{% if paragraph.field_copyright.value is not empty %}
+    {% set credits = credits|merge([paragraph.field_copyright.value ]) %}
+{% endif %}
+{% if paragraph.field_general_credit.value is not empty %}
+    {% set credits = credits|merge([paragraph.field_general_credit.value ]) %}
+{% endif %}
 
-    <button class="js-audio__button button-with-icon">
-        <i class="js-icon--play icon--small">
-            {{ include(active_theme_path() ~ '/svg/famsf-audio-play-sm.svg')  }}
-        </i>
-        <i class="js-icon--pause icon--small" style="display:none;">
-            {{ include(active_theme_path() ~ '/svg/famsf-pause-sm.svg')  }}
-        </i>
-        {{ content.field_play_button_text }}
-    </button>
-</div>
+{% if credits is not empty or paragraph.field_image_title.value is not empty %}
+    <a class="figcaption-cta js-figcaption-cta">image credit</a>
+    <figcaption>{% if paragraph.field_image_title.value is not empty %}
+            <span class="title-of-art"> {{ paragraph.field_image_title.value }} </span>
+        {% endif %}
+        {% if  credits is not empty %} {{ credits|join(' | ') }} {% endif %}
+    </figcaption>
+{% endif %}
