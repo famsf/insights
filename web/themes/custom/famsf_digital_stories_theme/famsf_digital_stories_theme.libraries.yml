@@ -21,11 +21,6 @@ global-styling:
     - core/drupalSettings
     - core/jquery
     - core/jquery.once
-typekit:
-  version: 1.x
-  header: true
-  js:
-    js/typekit.js: { every_page: true }
 
 legion-dark:
   header: true
