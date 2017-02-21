@@ -52,9 +52,9 @@ paragraph.field_background_image.entity.fileuri?'':'pattern'
     {% if paragraph.field_display_hero_section.value == 1 %}
 
         {% if content.field_video_source_paragraph|render is not empty %}
-        <div class="section-hero__video-wrapper">
+        <div class="section-hero section-hero__video-wrapper">
             {{ content.field_video_source_paragraph }}
-            <div class="section-hero has-video">
+            <div class="section-hero__wrapper has-video">
                 <div class="section-hero__title js-section-hero--get_height {{ paragraph.field_section_title_style.value }} {{ paragraph.field_section_title_position.value }}">
                     <h1>{{ paragraph.field_card_section_title.value }}</h1>
                     {% if paragraph.field_section_title_style.value != 'has-dotted-border' %}
