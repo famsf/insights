@@ -149,13 +149,6 @@
         speed: 2000,
         pause: 3000
       });
-
-      // Load Adobe TypeKit
-      try {
-        Typekit.load();
-      }
-        catch(e) {
-      }
     }
   };
 })(jQuery, Drupal);

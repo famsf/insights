@@ -4,6 +4,7 @@ description: A custom drupal theme for FAMSF Digital Stories.
 core: 8.x
 libraries:
   - famsf_digital_stories_theme/global-styling
+  - famsf_digital_stories_theme/typekit
 ckeditor_stylesheets:
   - css/themes/admin/admin.css
 regions:
