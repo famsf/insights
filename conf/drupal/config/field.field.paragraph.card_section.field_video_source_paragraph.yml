@@ -1,0 +1,69 @@
+uuid: cab4aad5-ae8e-4ab0-a225-11fea0809517
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_video_source_paragraph
+    - paragraphs.paragraphs_type.card_section
+    - paragraphs.paragraphs_type.video_source
+  module:
+    - entity_reference_revisions
+id: paragraph.card_section.field_video_source_paragraph
+field_name: field_video_source_paragraph
+entity_type: paragraph
+bundle: card_section
+label: 'Background Video '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      video_source: video_source
+    target_bundles_drag_drop:
+      1up_section:
+        weight: 11
+        enabled: false
+      2up_section:
+        weight: 12
+        enabled: false
+      audio_component:
+        weight: 13
+        enabled: false
+      card_section:
+        weight: 14
+        enabled: false
+      image_with_revealable_caption:
+        weight: 15
+        enabled: false
+      photo_credits:
+        weight: 16
+        enabled: false
+      revealable_read_more_section:
+        weight: 17
+        enabled: false
+      text_area:
+        weight: 18
+        enabled: false
+      video_source:
+        enabled: true
+        weight: 19
+      comparison_image:
+        weight: 19
+        enabled: false
+      image_comparison_section:
+        weight: 20
+        enabled: false
+      word_fader:
+        weight: 20
+        enabled: false
+      image_with_zoomable_markers:
+        weight: 22
+        enabled: false
+      zoomable_area:
+        weight: 28
+        enabled: false
+field_type: entity_reference_revisions
