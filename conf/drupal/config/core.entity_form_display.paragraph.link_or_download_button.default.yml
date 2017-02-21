@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.link_or_download_button.field_button_style
+    - field.field.paragraph.link_or_download_button.field_button_text
     - field.field.paragraph.link_or_download_button.field_download_file
     - field.field.paragraph.link_or_download_button.field_link
     - paragraphs.paragraphs_type.link_or_download_button
@@ -36,6 +37,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+  field_button_text:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   field_download_file:
     weight: 0
     settings:
