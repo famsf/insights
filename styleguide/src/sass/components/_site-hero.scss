@@ -76,6 +76,11 @@
     padding: rhythm(1) 0;
   }
 
+  .site-hero__title-text {
+    @extend %fadeIn;
+    @extend %fadeInDown;
+  }
+
   h1 {
     @include leader(.5, $h1-font-size);
     color: $hero-color;
@@ -183,6 +188,29 @@
     h2 {
       background-color: transparent;
       padding: 0;
+    }
+  }
+  &.top-left {
+    .site-hero__title-text {
+      @extend %fadeInLeft;
+    }
+  }
+
+  &.top-right {
+    .site-hero__title-text {
+      @extend %fadeInRight;
+    }
+  }
+
+  &.bottom-left {
+    .site-hero__title-text {
+      @extend %fadeInLeft;
+    }
+  }
+
+  &.bottom-right {
+    .site-hero__title-text {
+      @extend %fadeInRight;
     }
   }
 }
