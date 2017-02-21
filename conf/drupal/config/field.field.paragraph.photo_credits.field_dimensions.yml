@@ -1,0 +1,19 @@
+uuid: e5feaaf4-7cef-4ad9-ae4a-03bcda4eaf2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_dimensions
+    - paragraphs.paragraphs_type.photo_credits
+id: paragraph.photo_credits.field_dimensions
+field_name: field_dimensions
+entity_type: paragraph
+bundle: photo_credits
+label: Dimensions
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
