@@ -12,7 +12,7 @@ id: paragraph.card_section.field_video_source_paragraph
 field_name: field_video_source_paragraph
 entity_type: paragraph
 bundle: card_section
-label: 'Video Source'
+label: 'Background Video '
 description: ''
 required: false
 translatable: false
@@ -51,7 +51,19 @@ settings:
       video_source:
         enabled: true
         weight: 19
+      comparison_image:
+        weight: 19
+        enabled: false
+      image_comparison_section:
+        weight: 20
+        enabled: false
       word_fader:
         weight: 20
+        enabled: false
+      image_with_zoomable_markers:
+        weight: 22
+        enabled: false
+      zoomable_area:
+        weight: 28
         enabled: false
 field_type: entity_reference_revisions

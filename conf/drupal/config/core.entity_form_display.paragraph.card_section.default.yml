@@ -12,6 +12,7 @@ dependencies:
     - field.field.paragraph.card_section.field_section_title_position
     - field.field.paragraph.card_section.field_section_title_style
     - field.field.paragraph.card_section.field_sections_in_card
+    - field.field.paragraph.card_section.field_video_source
     - field.field.paragraph.card_section.field_video_source_paragraph
     - image.style.thumbnail
     - paragraphs.paragraphs_type.card_section
@@ -28,6 +29,7 @@ third_party_settings:
         - field_photo_credits
         - field_section_title_style
         - field_section_title_position
+        - field_video_source_paragraph
         - field_video_source
       parent_name: ''
       weight: 1
@@ -117,5 +119,6 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
+  field_video_source: true
   status: true
   uid: true
