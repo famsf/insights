@@ -1,0 +1,71 @@
+/**
+ * @file
+ * Defines the admin ckeditor theme.
+ *
+ * When loaded, this file will override the base color scheme.
+ */
+
+// Override color scheme variables set in _init.scss
+$black: #000;
+$gray-dark: #3e3e3e;
+$gray-medium: #a8abad;
+$gray-light: #ececec;
+$white: #fff;
+$white-10: rgba($white, .1);
+$white-20: rgba($white, .2);
+$white-30: rgba($white, .3);
+$white-60: rgba($white, .6);
+
+$azure: #1c90cf;
+$azure-60: #77bce2;
+$indigo: #0f6088;
+$pink-10: #fbf6f8;
+$pink-30: #f2e5ea;
+$peach: #ebd0d2;
+$melon: #e0b9bb;
+$magenta: #922b55;
+$sea: #216780;
+$denim: #10465b;
+$midnight: #0a2f3d;
+$ink: #03161e;
+
+$background-a: $pink-30;
+$background-b: $peach;
+$background-c: $peach;
+$background-d: $melon;
+$pattern-a: $pink-30;
+$pattern-b: $melon;
+$border: $melon;
+$text-color: $ink;
+$text-color-invert: $pink-30;
+$text-color-invert-active: $peach;
+$primary: $denim;
+$primary-active: $midnight;
+$secondary: $azure;
+$tertiary: darken($magenta, 5%);
+$citation: $azure;
+
+$decorative-border: 8px solid transparent;
+$decorative-border-image: url('../../../imgs/dots-light.svg') 26% round;
+$rectangles-border: url('../../../imgs/legion-rectangles-light.svg');
+$zoom-background: $pink-10;
+$text-shadow-color: transparentize($azure-60, .2);
+$hero-content-text: $midnight;
+$hero-content-text-active: $sea;
+
+// Import the global theme styles.
+/* Set the vertical rhythm */
+@import "../../vertical-rhythm/vertical_rhythm";
+
+/* Import Sass mixins, variables, Compass modules, etc. */
+@import "../../init";
+
+/* Set browser support */
+@import "../../support-for";
+
+/* HTML element (SMACSS base) rules */
+@import "../../normalize";
+
+// Import theme specific components
+@import 'wysiwyg';
+

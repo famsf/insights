@@ -21,7 +21,7 @@ global-styling:
     - core/jquery
     - core/jquery.once
   ckeditor_stylesheets:
-    - css/styleguide.css
+    - css/themes/admin/admin.css
 legion-dark:
   css:
       theme:
