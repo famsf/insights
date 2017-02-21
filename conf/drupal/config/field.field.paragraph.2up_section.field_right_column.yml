@@ -57,6 +57,9 @@ settings:
       text_area:
         enabled: true
         weight: 12
+      word_fader:
+        enabled: true
+        weight: 16
       photo_credits:
         weight: 12
         enabled: false
@@ -66,9 +69,6 @@ settings:
       image_with_zoomable_markers:
         enabled: true
         weight: 14
-      word_fader:
-        enabled: true
-        weight: 16
       zoomable_area:
         weight: 18
         enabled: false

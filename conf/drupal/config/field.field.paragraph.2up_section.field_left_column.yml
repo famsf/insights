@@ -5,9 +5,9 @@ dependencies:
   config:
     - field.storage.paragraph.field_left_column
     - paragraphs.paragraphs_type.2up_section
+    - paragraphs.paragraphs_type.image_with_revealable_caption
     - paragraphs.paragraphs_type.link_or_download_button
     - paragraphs.paragraphs_type.audio_component
-    - paragraphs.paragraphs_type.image_with_revealable_caption
     - paragraphs.paragraphs_type.image_with_zoomable_markers
     - paragraphs.paragraphs_type.text_area
     - paragraphs.paragraphs_type.word_fader
