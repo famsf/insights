@@ -33,7 +33,6 @@ settings:
       link_or_download_button: link_or_download_button
       image_with_zoomable_markers: image_with_zoomable_markers
       word_fader: word_fader
-      overlay_image: overlay_image
     target_bundles_drag_drop:
       1up_section:
         weight: 6
@@ -71,13 +70,4 @@ settings:
       zoomable_area:
         weight: 18
         enabled: false
-      comparison_image:
-        weight: 19
-        enabled: false
-      image_comparison_section:
-        weight: 20
-        enabled: false
-      overlay_image:
-        enabled: true
-        weight: 23
 field_type: entity_reference_revisions
