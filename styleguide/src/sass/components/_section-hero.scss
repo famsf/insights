@@ -47,6 +47,8 @@
 // DeYoung Alternate
 .section-hero__title--bold {
   @extend %hero__content;
+  @extend %fadeIn;
+  @extend %fadeInDown;
   background-color: transparent;
   color: $section-hero-text;
   padding: rhythm(1.5) 0;
@@ -88,6 +90,23 @@
       padding: rhythm(1);
     }
   }
+
+  &.top-left {
+    @extend %fadeInLeft;
+  }
+
+  &.top-right {
+    @extend %fadeInRight;
+  }
+
+  &.bottom-left {
+    @extend %fadeInLeft;
+  }
+
+  &.bottom-right {
+    @extend %fadeInRight;
+  }
+
 }
 
 // border animation
@@ -110,8 +129,8 @@
   width: 0%;
   background: linear-gradient( to right, $section-hero-border-a, $section-hero-border-b );
   height: 2px;
-  animation: expand-width 1.5s forwards;
-  animation-delay: 3.5s;
+  animation: expand-width 1s forwards;
+  animation-delay: 2.5s;
 }
 
 .animated-border--bottom {
@@ -122,8 +141,8 @@
   width: 0%;
   background: linear-gradient( to right, $section-hero-border-b, $section-hero-border-a );
   height: 2px;
-  animation: expand-width 1.5s forwards;
-  animation-delay: 3.5s;
+  animation: expand-width 1s forwards;
+  animation-delay: 2.5s;
 }
 
 
