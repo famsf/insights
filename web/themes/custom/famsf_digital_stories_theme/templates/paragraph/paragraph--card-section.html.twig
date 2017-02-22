@@ -88,7 +88,7 @@ paragraph.field_background_image.entity.fileuri?'':'pattern'
                 <div>share</div>
             </button>
             <div class="share-expander js-share-expander js-share-expander--is-closed">
-                <div class="addthis_inline_share_toolbox"></div>
+                <div class="addthis_inline_share_toolbox" data-url="{{ url('<current>') }}#{{ containerId }}"></div>
             </div>
         </div>
     {% endif %}
