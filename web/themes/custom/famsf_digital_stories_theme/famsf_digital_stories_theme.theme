@@ -39,11 +39,6 @@ function famsf_digital_stories_theme_preprocess_page(&$variables) {
             }
             $variables['sectionTitles'] = $sectionTitles;
         }
-//        if ($entity->hasField('field_store_item_photo') && NULL !== $entity->get('field_store_item_photo')) {
-//            $image = $entity->get('field_store_item_photo');
-//            $variables['field_store_item_photo'] = $image;
-//            var_dump($image);exit;
-//        }
     }
 }
 /**
