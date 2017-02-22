@@ -47,6 +47,62 @@
     <div class="ball"></div>
   </div>
 </div>
+<a href="#" class="dashboard-toggle js-dashboard-toggle js-closed button-with-icon">
+  <i class="icon--med">{{ include(active_theme_path() ~ '/svg/famsf-caret-left-md.svg') }}</i>
+  <i class="icon--small">{{ include(active_theme_path() ~ '/svg/famsf-caret-left-sm.svg') }}</i>
+  <div>Explore</div>
+</a>
+<div class="dashboard js-dashboard js-closed">
+  <nav>
+    <div class="dashboard-header">
+      <div class="container">
+        <div class="l-1up">
+          <a href="#" class="dashboard-close js-dashboard-close button-with-icon">
+            <div>Close</div>
+            <i class="icon--med">{{ include(active_theme_path() ~ '/svg/famsf-caret-right-md.svg') }}</i>
+            <i class="icon--small">{{ include(active_theme_path() ~ '/svg/famsf-caret-right-sm.svg') }}</i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="l-1up">
+
+        <ul class="dashboard__nav-list" id="myMenu">
+          {% for section in sectionTitles %}
+          {% set sectionId = section|trim|clean_id %}
+          <li class="dashboard__nav-item" data-menuanchor="{{ sectionId }}"><a href="#{{ sectionId }}">{{ section }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <section class="dashboard-section">
+    <div class="container">
+      <div class="l-2up">
+        {% if node.field_store_item_link.uri is not empty %}
+        <a class="footer-link" href="{{ node.field_store_item_link.uri }}">
+          {% if node.field_store_item_photo.entity.fileuri is not empty %}
+          <img src="{{ file_url(node.field_store_item_photo.entity.fileuri) }}" alt="{{ node.field_store_item_photo.entity.alt }}">
+          {% endif %}
+          {{ node.field_store_item_title.value }}
+        </a>
+        {% endif %}
+      </div>
+      <div class="l-2up">
+        {% if node.field_non_member_ticket_link.uri|striptags|trim is not empty %}
+        <a class="color-block-button--full" href="{{ node.field_non_member_ticket_link.uri }}">Non-member Tickets</a>
+        {% endif %}
+        {% if node.field_member_ticket_link.uri|striptags|trim is not empty %}
+        <a class="color-block-button--full" href="{{ node.field_member_ticket_link.uri }}">Member Tickets</a>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+</div>
+<div class="dashboard-overlay-background js-dashboard-overlay-background" style="display: none;"></div>
 <main role="main" class="digital-story js-pagepiling">
 
   <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
