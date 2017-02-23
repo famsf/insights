@@ -33,9 +33,7 @@ function famsf_digital_stories_theme_preprocess_page(&$variables) {
             $field_section = $entity->get('field_section');
             $sectionTitles = array();
             foreach($field_section->referencedEntities() as $delta => $section) {
-                if ($section->field_display_hero_section->value == '1'){
-                    $sectionTitles[] = $section->field_card_section_title->value;
-                }
+                $sectionTitles[] = $section->field_card_section_title->value;
             }
             $variables['sectionTitles'] = $sectionTitles;
         }
