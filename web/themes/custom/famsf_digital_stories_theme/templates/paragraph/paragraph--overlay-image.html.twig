@@ -36,27 +36,14 @@
  * @ingroup themeable
  */
 #}
-<div class="js-audio__wrapper audio__wrapper">
-    <audio class="js-audio__source">
-        <source src="{{ file_url(paragraph.field_audio_file.entity.fileuri) }}" type="{{ paragraph.field_audio_file.entity.getMimeType() }}">
-        Your browser does not support the audio element.
-    </audio>
-
-    <button class="js-audio__button button-with-icon">
-        <i class="js-icon--play icon--small">
-            {{ include(active_theme_path() ~ '/svg/famsf-audio-play-sm.svg')  }}
-        </i>
-        <i class="js-icon--pause icon--small" style="display:none;">
-            {{ include(active_theme_path() ~ '/svg/famsf-pause-sm.svg')  }}
-        </i>
-        {{ content.field_play_button_text }}
-    </button>
-</div>
-{% if paragraph.field_audio_transcript.value is not empty %}
-<div class="audio-transcript">
-    <button class="audio-transcript--trigger js-audio-transcript--trigger">Audio Transcript</button>
-    <div class="audio-transcript__drawer js-audio-transcript--hidden" aria-hidden="true">
-        <p>{{ paragraph.field_audio_transcript.value }}</p>
+<figure class="js-overlay-container">
+    <div class="figure__wrapper">
+        <img data-src="{{ file_url(paragraph.field_image.entity.fileuri) }}" alt="{{ paragraph.field_image.alt }}" />
+        <img class="figure__overlay js-overlay-image js-overlay-image--hidden" data-src="{{ file_url(paragraph.field_overlay_image.entity.fileuri) }}" alt="{{ paragraph.field_overlay_image.alt }}" />
     </div>
-</div>
-{% endif %}
+   {{ content.field_photo_credits }}
+    <button class="button-with-icon js-overlay-button figure__overlay-cta" data-text-collapsed="{{ paragraph.field_overlay_button_text.value }}" data-text-expanded="{{ paragraph.field_overlay_button_expanded.value }}">
+        <i class="icon--small">{{ include(active_theme_path() ~ '/svg/famsf-eye-sm.svg') }}</i>
+        <div class="button-with-icon__text">{{ paragraph.field_overlay_button_text.value }}</div>
+    </button>
+</figure>

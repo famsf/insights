@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.audio_component.field_audio_file
+    - field.field.paragraph.audio_component.field_audio_transcript
     - field.field.paragraph.audio_component.field_play_button_text
     - paragraphs.paragraphs_type.audio_component
   module:
@@ -19,6 +20,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: file_default
+  field_audio_transcript:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
   field_play_button_text:
     weight: 1
     label: hidden

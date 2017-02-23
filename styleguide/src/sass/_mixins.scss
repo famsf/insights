@@ -121,7 +121,13 @@ http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacemen
 
 %decorative-border {
   border-bottom: $decorative-border;
+  // Test in Safari and Firefox before deleting or modifying these properties.
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
   border-image: $decorative-border-image;
+  border-image-slice: 26% 26% 26% 26%;
+  border-image-repeat: round;
 }
 
 /* ==============================================================
@@ -134,7 +140,8 @@ http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacemen
   @include breakpoint($bp3) {
     border: 40px solid transparent;
     border-image-source: $rectangles-border;
-    border-image-slice: 25%;
+    // Test in Safari and Firefox before deleting or modifying these properties.
+    border-image-slice: 25% 25% 25% 25%;
     border-image-repeat: repeat;
   }
 }

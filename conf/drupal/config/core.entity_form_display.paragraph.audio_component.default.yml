@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.audio_component.field_audio_file
+    - field.field.paragraph.audio_component.field_audio_transcript
     - field.field.paragraph.audio_component.field_play_button_text
     - paragraphs.paragraphs_type.audio_component
   module:
@@ -19,6 +20,13 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: file_generic
+  field_audio_transcript:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
   field_play_button_text:
     weight: 1
     settings:
