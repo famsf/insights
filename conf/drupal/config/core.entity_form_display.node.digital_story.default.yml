@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.node.digital_story.field_addthis_code
     - field.field.node.digital_story.field_exhibition_dates
-    - field.field.node.digital_story.field_main_navigation
     - field.field.node.digital_story.field_member_ticket_link
     - field.field.node.digital_story.field_non_member_ticket_link
     - field.field.node.digital_story.field_section
@@ -80,12 +79,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-  field_main_navigation:
-    weight: 11
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    type: boolean_checkbox
   field_member_ticket_link:
     weight: 30
     settings:
