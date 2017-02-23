@@ -7,8 +7,8 @@ dependencies:
     - paragraphs.paragraphs_type.1up_section
     - paragraphs.paragraphs_type.audio_component
     - paragraphs.paragraphs_type.image_with_revealable_caption
-    - paragraphs.paragraphs_type.image_with_zoomable_markers
     - paragraphs.paragraphs_type.link_or_download_button
+    - paragraphs.paragraphs_type.image_with_zoomable_markers
     - paragraphs.paragraphs_type.pull_quote
     - paragraphs.paragraphs_type.overlay_image
     - paragraphs.paragraphs_type.text_area
@@ -29,11 +29,11 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      audio_component: audio_component
       image_with_revealable_caption: image_with_revealable_caption
+      audio_component: audio_component
+      link_or_download_button: link_or_download_button
       text_area: text_area
       image_with_zoomable_markers: image_with_zoomable_markers
-      link_or_download_button: link_or_download_button
       pull_quote: pull_quote
       word_fader: word_fader
       overlay_image: overlay_image
@@ -47,18 +47,21 @@ settings:
       audio_component:
         enabled: true
         weight: 10
-      image_with_revealable_caption:
-        enabled: true
-        weight: 11
       card_section:
         weight: 11
         enabled: false
-      photo_credits:
-        weight: 12
-        enabled: false
+      image_with_revealable_caption:
+        enabled: true
+        weight: 11
       text_area:
         enabled: true
         weight: 12
+      photo_credits:
+        weight: 12
+        enabled: false
+      word_fader:
+        enabled: true
+        weight: 16
       revealable_read_more_section:
         weight: 13
         enabled: false
@@ -68,23 +71,17 @@ settings:
       link_or_download_button:
         enabled: true
         weight: 15
-      word_fader:
-        enabled: true
-        weight: 16
       zoomable_area:
         weight: 18
         enabled: false
       comparison_image:
         weight: 19
         enabled: false
-      image_comparison_section:
-        weight: 22
-        enabled: false
       pull_quote:
         enabled: true
         weight: 27
-      video_source:
-        weight: 30
+      image_comparison_section:
+        weight: 20
         enabled: false
       overlay_image:
         enabled: true

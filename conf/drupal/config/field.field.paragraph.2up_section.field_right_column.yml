@@ -47,30 +47,30 @@ settings:
       card_section:
         weight: 9
         enabled: false
-      audio_component:
-        enabled: true
-        weight: 10
       revealable_read_more_section:
         weight: 10
         enabled: false
+      audio_component:
+        enabled: true
+        weight: 10
       image_with_revealable_caption:
         enabled: true
         weight: 11
       text_area:
         enabled: true
         weight: 12
-      photo_credits:
-        weight: 12
-        enabled: false
-      image_with_zoomable_markers:
-        enabled: true
-        weight: 14
-      link_or_download_button:
-        enabled: true
-        weight: 15
       word_fader:
         enabled: true
         weight: 16
+      photo_credits:
+        weight: 12
+        enabled: false
+      link_or_download_button:
+        enabled: true
+        weight: 15
+      image_with_zoomable_markers:
+        enabled: true
+        weight: 14
       zoomable_area:
         weight: 18
         enabled: false
