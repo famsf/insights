@@ -14,7 +14,7 @@ entity_type: paragraph
 bundle: image_with_zoomable_markers
 label: 'Photo Credits'
 description: ''
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
@@ -50,5 +50,26 @@ settings:
         enabled: false
       zoomable_area:
         weight: 18
+        enabled: false
+      audio_component:
+        weight: 19
+        enabled: false
+      comparison_image:
+        weight: 21
+        enabled: false
+      image_comparison_section:
+        weight: 22
+        enabled: false
+      link_or_download_button:
+        weight: 25
+        enabled: false
+      overlay_image:
+        weight: 26
+        enabled: false
+      video_source:
+        weight: 30
+        enabled: false
+      word_fader:
+        weight: 31
         enabled: false
 field_type: entity_reference_revisions
