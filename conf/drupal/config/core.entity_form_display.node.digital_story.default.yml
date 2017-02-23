@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.digital_story.field_addthis_code
     - field.field.node.digital_story.field_exhibition_dates
+    - field.field.node.digital_story.field_google_analytics_id
     - field.field.node.digital_story.field_main_navigation
     - field.field.node.digital_story.field_section
     - field.field.node.digital_story.field_site_hero_background_image
@@ -53,6 +54,13 @@ content:
     type: string_textfield
   field_exhibition_dates:
     weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_google_analytics_id:
+    weight: 26
     settings:
       size: 60
       placeholder: ''
