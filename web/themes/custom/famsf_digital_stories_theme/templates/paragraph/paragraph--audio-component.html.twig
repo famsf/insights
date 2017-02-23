@@ -52,3 +52,11 @@
         {{ content.field_play_button_text }}
     </button>
 </div>
+{% if paragraph.field_audio_transcript.value is not empty %}
+<div class="audio-transcript">
+    <button class="audio-transcript--trigger js-audio-transcript--trigger">Audio Transcript</button>
+    <div class="audio-transcript__drawer js-audio-transcript--hidden" aria-hidden="true">
+        <p>{{ paragraph.field_audio_transcript.value }}</p>
+    </div>
+</div>
+{% endif %}
