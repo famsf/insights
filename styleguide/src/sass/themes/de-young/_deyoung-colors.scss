@@ -27,10 +27,10 @@
 // Next page
 .next-page {
   background: $blue-40; /* Old browsers */
-  background: -moz-linear-gradient(left,  $blue-30 0%, $blue-40 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left,  $blue-30 0%, $blue-40 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right,  $blue-30 0%, $blue-40 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  box-shadow: 0 0 15px darken($blue-40, 20%) inset;
+  background: -moz-linear-gradient(left,  $blue-40 0%, $blue-40 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  $blue-40 0%, $blue-40 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  $blue-40 0%, $blue-40 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  box-shadow: none;
 
   .icon--xsmall {
 
@@ -106,6 +106,25 @@ figcaption,
       svg {
         fill: $yellow;
       }
+    }
+  }
+
+  .audio-transcript--trigger {
+    color: $sunshine;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  .audio-transcript__drawer {
+    background-color: $white;
+    color: $text-color;
+
+    &:after {
+      border-bottom-color: $white;
     }
   }
 }
