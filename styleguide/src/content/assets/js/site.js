@@ -149,6 +149,15 @@
         speed: 2000,
         pause: 3000
       });
+
+      // Drop caps
+      $('.has-dropcaps').find('p:first').html(function (i, html)
+      {
+        return html.replace(/(<[^>]+>)?([a-zA-Z])/, '$1<span class="dropcap">$2</span>');
+      });
+      // Lede
+      $('.has-lede').find('p:first').addClass('lede');
+
     }
   };
 })(jQuery, Drupal);
