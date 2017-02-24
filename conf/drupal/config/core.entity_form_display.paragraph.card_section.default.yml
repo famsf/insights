@@ -20,6 +20,7 @@ dependencies:
     - field_group
     - image
     - paragraphs
+    - video
 third_party_settings:
   field_group:
     group_hero_section:
@@ -107,6 +108,15 @@ content:
       add_mode: dropdown
       form_display_mode: default
     third_party_settings: {  }
+  field_video_source:
+    weight: 10
+    settings:
+      file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
+      allowed_providers:
+        youtube: youtube
+      uri_scheme: public
+    third_party_settings: {  }
+    type: video_embed
   field_video_source_paragraph:
     type: entity_reference_paragraphs
     weight: 9
@@ -119,6 +129,5 @@ content:
     third_party_settings: {  }
 hidden:
   created: true
-  field_video_source: true
   status: true
   uid: true

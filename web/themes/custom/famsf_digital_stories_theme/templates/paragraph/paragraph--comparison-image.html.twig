@@ -45,8 +45,14 @@
     {% if photoCredits.field_artist.value is not empty %}
         {% set credits = credits|merge([photoCredits.field_artist.value ]) %}
     {% endif %}
+    {% if photoCredits.field_credits_date.value is not empty %}
+        {% set credits = credits|merge([photoCredits.field_credits_date.value ]) %}
+    {% endif %}
     {% if photoCredits.field_medium.value is not empty %}
         {% set credits = credits|merge([photoCredits.field_medium.value ]) %}
+    {% endif %}
+    {% if photoCredits.field_dimensions.value is not empty %}
+        {% set credits = credits|merge([photoCredits.field_dimensions.value ]) %}
     {% endif %}
     {% if photoCredits.field_location.value is not empty %}
         {% set credits = credits|merge([photoCredits.field_location.value ]) %}
