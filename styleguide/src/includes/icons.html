@@ -4,91 +4,346 @@
 #}
 
 <section class="styleguide-section">
-  <span class="styleguide-icon icon--med">{% include('svg/famsf-arrow-up-md.html') %}</span>
-  <span class="styleguide-icon icon--small">{% include('svg/famsf-arrow-up-sm.html') %}</span>
+  <span class="styleguide-icon icon--med">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-arrow-up-md.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-arrow-up-md.svg') %}
+  {% endif %}</span>
+  <span class="styleguide-icon icon--small">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-arrow-up-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-arrow-up-sm.svg') %}
+  {% endif %}</span>
 </section>
 
 <section class="styleguide-section">
-  <span class="styleguide-icon icon--med">{% include('svg/famsf-arrow-down-md.html') %}</span>
-  <span class="styleguide-icon icon--small">{% include('svg/famsf-arrow-down-sm.html') %}</span>
+  <span class="styleguide-icon icon--med">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-arrow-down-md.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-arrow-down-md.svg') %}
+  {% endif %}</span>
+  <span class="styleguide-icon icon--small">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-arrow-down-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-arrow-down-sm.svg') %}
+  {% endif %}</span>
 </section>
 
 <section class="styleguide-section">
-  <span class="styleguide-icon icon--med">{% include('svg/famsf-info-md.html') %}</span>
-  <span class="styleguide-icon icon--small">{% include('svg/famsf-info-sm.html') %}</span>
+  <span class="styleguide-icon icon--med">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-eye-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-eye-md.svg') %}
+  {% endif %}</span>
+  <span class="styleguide-icon icon--small">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-eye-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-eye-sm.svg') %}
+  {% endif %}</span>
 </section>
 
 <section class="styleguide-section">
-  <span class="styleguide-icon icon--med">{% include('svg/famsf-share-md.html') %}</span>
-  <span class="styleguide-icon icon--small">{% include('svg/famsf-share-sm.html') %}</span>
+  <span class="styleguide-icon icon--med">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-info-md.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-info-md.svg') %}
+  {% endif %}</span>
+  <span class="styleguide-icon icon--small">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-info-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-info-sm.svg') %}
+  {% endif %}</span>
 </section>
 
 <section class="styleguide-section">
-  <span class="styleguide-icon icon--med">{% include('svg/famsf-zoom-in-md.html') %}</span>
-  <span class="styleguide-icon icon--small">{% include('svg/famsf-zoom-in-sm.html') %}</span>
+  <span class="styleguide-icon icon--med">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-share-md.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-share-md.svg') %}
+  {% endif %}</span>
+  <span class="styleguide-icon icon--small">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-share-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-share-sm.svg') %}
+  {% endif %}</span>
 </section>
 
 <section class="styleguide-section">
-  <span class="styleguide-icon icon--med">{% include('svg/famsf-audio-play-md.html') %}</span>
-  <span class="styleguide-icon icon--small">{% include('svg/famsf-audio-play-sm.html') %}</span>
+  <span class="styleguide-icon icon--med">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-zoom-in-md.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-zoom-in-md.svg') %}
+  {% endif %}</span>
+  <span class="styleguide-icon icon--small">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-zoom-in-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-zoom-in-sm.svg') %}
+  {% endif %}</span>
 </section>
 
 <section class="styleguide-section">
-  <span class="styleguide-icon icon--med">{% include('svg/famsf-pause-md.html') %}</span>
-  <span class="styleguide-icon icon--small">{% include('svg/famsf-pause-sm.html') %}</span>
+  <span class="styleguide-icon icon--med">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-zoom-out-md.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-zoom-out-md.svg') %}
+  {% endif %}</span>
+  <span class="styleguide-icon icon--small">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-zoom-out-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-zoom-out-sm.svg') %}
+  {% endif %}</span>
 </section>
 
 <section class="styleguide-section">
-  <span class="styleguide-icon icon--med">{% include('svg/famsf-caret-down-md.html') %}</span>
-  <span class="styleguide-icon icon--small">{% include('svg/famsf-caret-down-sm.svg') %}</span>
+  <span class="styleguide-icon icon--med">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-audio-play-md.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-audio-play-md.svg') %}
+  {% endif %}</span>
+  <span class="styleguide-icon icon--small">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-audio-play-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-audio-play-sm.svg') %}
+  {% endif %}</span>
 </section>
 
 <section class="styleguide-section">
-  <span class="styleguide-icon icon--med">{% include('svg/famsf-caret-up-md.html') %}</span>
-  <span class="styleguide-icon icon--small">{% include('svg/famsf-caret-up-sm.html') %}</span>
+  <span class="styleguide-icon icon--med">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-pause-md.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-pause-md.svg') %}
+  {% endif %}</span>
+  <span class="styleguide-icon icon--small">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-pause-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-pause-sm.svg') %}
+  {% endif %}</span>
 </section>
 
 <section class="styleguide-section">
-  <span class="styleguide-icon icon--med">{% include('svg/famsf-caret-right-md.html') %}</span>
-  <span class="styleguide-icon icon--small">{% include('svg/famsf-caret-right-sm.html') %}</span>
+  <span class="styleguide-icon icon--med">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-caret-down-md.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-caret-down-md.svg') %}
+  {% endif %}</span>
+  <span class="styleguide-icon icon--small">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-caret-down-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-caret-down-sm.svg') %}
+  {% endif %}</span>
 </section>
 
 <section class="styleguide-section">
-  <span class="styleguide-icon icon--med">{% include('svg/famsf-caret-left-md.html') %}</span>
-  <span class="styleguide-icon icon--small">{% include('svg/famsf-caret-left-sm.html') %}</span>
+  <span class="styleguide-icon icon--med">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-caret-up-md.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-caret-up-md.svg') %}
+  {% endif %}</span>
+  <span class="styleguide-icon icon--small">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-caret-up-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-caret-up-sm.svg') %}
+  {% endif %}</span>
 </section>
 
 <section class="styleguide-section">
-  <span class="styleguide-icon icon--med">{% include('svg/famsf-plus-md.html') %}</span>
-  <span class="styleguide-icon icon--small">{% include('svg/famsf-plus-sm.html') %}</span>
+  <span class="styleguide-icon icon--med">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-caret-right-md.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-caret-right-md.svg') %}
+  {% endif %}</span>
+  <span class="styleguide-icon icon--small">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-caret-right-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-caret-right-sm.svg') %}
+  {% endif %}</span>
 </section>
 
 <section class="styleguide-section">
-  <span class="styleguide-icon icon--med">{% include('svg/famsf-minus-md.html') %}</span>
-  <span class="styleguide-icon icon--small">{% include('svg/famsf-minus-sm.html') %}</span>
+  <span class="styleguide-icon icon--med">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-caret-left-md.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-caret-left-md.svg') %}
+  {% endif %}</span>
+  <span class="styleguide-icon icon--small">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-caret-left-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-caret-left-sm.svg') %}
+  {% endif %}</span>
 </section>
 
 <section class="styleguide-section">
-  <span class="styleguide-icon icon--med">{% include('svg/famsf-facebook-md.html') %}</span>
-  <span class="styleguide-icon icon--small">{% include('svg/famsf-facebook-sm.html') %}</span>
+  <span class="styleguide-icon icon--med">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-plus-md.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-plus-md.svg') %}
+  {% endif %}</span>
+  <span class="styleguide-icon icon--small">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-plus-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-plus-sm.svg') %}
+  {% endif %}</span>
 </section>
 
 <section class="styleguide-section">
-  <span class="styleguide-icon icon--med">{% include('svg/famsf-twitter-md.html') %}</span>
-  <span class="styleguide-icon icon--small">{% include('svg/famsf-twitter-sm.html') %}</span>
+  <span class="styleguide-icon icon--med">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-minus-md.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-minus-md.svg') %}
+  {% endif %}</span>
+  <span class="styleguide-icon icon--small">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-minus-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-minus-sm.svg') %}
+  {% endif %}</span>
 </section>
 
 <section class="styleguide-section">
-  <span class="styleguide-icon icon--med">{% include('svg/famsf-instagram-md.html') %}</span>
-  <span class="styleguide-icon icon--small">{% include('svg/famsf-instagram-sm.html') %}</span>
+  <span class="styleguide-icon icon--med">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-facebook-md.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-facebook-md.svg') %}
+  {% endif %}</span>
+  <span class="styleguide-icon icon--small">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-facebook-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-facebook-sm.svg') %}
+  {% endif %}</span>
 </section>
 
 <section class="styleguide-section">
-  <span class="styleguide-icon icon--med">{% include('svg/famsf-tumblr-md.html') %}</span>
-  <span class="styleguide-icon icon--small">{% include('svg/famsf-tumblr-sm.html') %}</span>
+  <span class="styleguide-icon icon--med">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-twitter-md.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-twitter-md.svg') %}
+  {% endif %}</span>
+  <span class="styleguide-icon icon--small">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-twitter-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-twitter-sm.svg') %}
+  {% endif %}</span>
 </section>
 
 <section class="styleguide-section">
-  <span class="styleguide-icon icon--med">{% include('svg/famsf-youtube-md.html') %}</span>
-  <span class="styleguide-icon icon--small">{% include('svg/famsf-youtube-sm.html') %}</span>
+  <span class="styleguide-icon icon--med">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-instagram-md.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-instagram-md.svg') %}
+  {% endif %}</span>
+  <span class="styleguide-icon icon--small">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-instagram-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-instagram-sm.svg') %}
+  {% endif %}</span>
+</section>
+
+<section class="styleguide-section">
+  <span class="styleguide-icon icon--med">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-tumblr-md.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-tumblr-md.svg') %}
+  {% endif %}</span>
+  <span class="styleguide-icon icon--small">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-tumblr-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-tumblr-sm.svg') %}
+  {% endif %}</span>
+</section>
+
+<section class="styleguide-section">
+  <span class="styleguide-icon icon--med">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-youtube-md.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-youtube-md.svg') %}
+  {% endif %}</span>
+  <span class="styleguide-icon icon--small">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-youtube-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-youtube-sm.svg') %}
+  {% endif %}</span>
+</section>
+
+<section class="styleguide-section">
+  <span class="styleguide-icon icon--med">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-play-md.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-play-md.svg') %}
+  {% endif %}</span>
+  <span class="styleguide-icon icon--small">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-play-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-play-sm.svg') %}
+  {% endif %}</span>
+</section>
+
+<section class="styleguide-section">
+  <span class="styleguide-icon icon--med">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-copyright-md.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-copyright-md.svg') %}
+  {% endif %}</span>
+  <span class="styleguide-icon icon--small">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-copyright-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-copyright-sm.svg') %}
+  {% endif %}</span>
+</section>
+
+<section class="styleguide-section">
+  <span class="styleguide-icon icon--med">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-hamburger-md.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-hamburger-md.svg') %}
+  {% endif %}</span>
+  <span class="styleguide-icon icon--small">
+  {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-hamburger-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-hamburger-sm.svg') %}
+  {% endif %}</span>
 </section>
