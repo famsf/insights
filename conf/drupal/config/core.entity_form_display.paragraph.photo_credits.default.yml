@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.paragraph.photo_credits.field_artist
     - field.field.paragraph.photo_credits.field_copyright
+    - field.field.paragraph.photo_credits.field_credits_date
+    - field.field.paragraph.photo_credits.field_dimensions
     - field.field.paragraph.photo_credits.field_general_credit
     - field.field.paragraph.photo_credits.field_image_title
     - field.field.paragraph.photo_credits.field_location
@@ -18,7 +20,9 @@ third_party_settings:
       children:
         - field_image_title
         - field_artist
+        - field_credits_date
         - field_medium
+        - field_dimensions
         - field_location
         - field_copyright
         - field_general_credit
@@ -44,14 +48,28 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_copyright:
-    weight: 5
+    weight: 7
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+  field_credits_date:
+    type: string_textfield
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_dimensions:
+    type: string_textfield
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
   field_general_credit:
-    weight: 6
+    weight: 8
     settings:
       size: 60
       placeholder: ''
@@ -65,14 +83,14 @@ content:
     third_party_settings: {  }
     type: string_textfield
   field_location:
-    weight: 4
+    weight: 6
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
   field_medium:
-    weight: 3
+    weight: 4
     settings:
       size: 60
       placeholder: ''

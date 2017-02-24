@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Custom theme implementation to display a card section paragraph.
+ * Custom theme implementation to display a paragraph.
  *
  * Available variables:
  * - paragraph: Full paragraph entity.
@@ -36,34 +36,15 @@
  * @ingroup themeable
  */
 #}
-{% set credits = [] %}
-{% if paragraph.field_artist.value is not empty %}
-    {% set credits = credits|merge([paragraph.field_artist.value ]) %}
-{% endif %}
-{% if paragraph.field_credits_date.value is not empty %}
-    {% set credits = credits|merge([paragraph.field_credits_date.value ]) %}
-{% endif %}
-{% if paragraph.field_medium.value is not empty %}
-    {% set credits = credits|merge([paragraph.field_medium.value ]) %}
-{% endif %}
-{% if paragraph.field_dimensions.value is not empty %}
-    {% set credits = credits|merge([paragraph.field_dimensions.value ]) %}
-{% endif %}
-{% if paragraph.field_location.value is not empty %}
-    {% set credits = credits|merge([paragraph.field_location.value ]) %}
-{% endif %}
-{% if paragraph.field_copyright.value is not empty %}
-    {% set credits = credits|merge([paragraph.field_copyright.value ]) %}
-{% endif %}
-{% if paragraph.field_general_credit.value is not empty %}
-    {% set credits = credits|merge([paragraph.field_general_credit.value ]) %}
-{% endif %}
-
-{% if credits is not empty or paragraph.field_image_title.value is not empty %}
-    <a class="figcaption-cta js-figcaption-cta">image credit</a>
-    <figcaption>{% if paragraph.field_image_title.value is not empty %}
-            <span class="title-of-art"> {{ paragraph.field_image_title.value }} </span>
-        {% endif %}
-        {% if  credits is not empty %} {{ credits|join(' | ') }} {% endif %}
-    </figcaption>
-{% endif %}
+{%
+set classes = [
+'paragraph',
+'paragraph--type--' ~ paragraph.bundle|clean_class,
+view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+paragraph.field_has_lede.value == '1'? 'has-lede',
+paragraph.field_has_dropcaps.value == '1'? 'has-dropcaps',
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+    {{ content.field_text_area }}
+</div>
