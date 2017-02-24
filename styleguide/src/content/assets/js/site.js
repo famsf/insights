@@ -153,7 +153,7 @@
       // Drop caps
       $('.has-dropcaps').find('p:first').html(function (i, html)
       {
-        return html.replace(/^[^a-zA-Z]*([a-zA-Z])/g, '<span class="dropcap">$1</span>');
+        return html.replace(/(<[^>]+>)?([a-zA-Z])/, '$1<span class="dropcap">$2</span>');
       });
       // Lede
       $('.has-lede').find('p:first').addClass('lede');
