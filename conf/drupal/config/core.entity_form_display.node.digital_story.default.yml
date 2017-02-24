@@ -5,10 +5,15 @@ dependencies:
   config:
     - field.field.node.digital_story.field_addthis_code
     - field.field.node.digital_story.field_exhibition_dates
+    - field.field.node.digital_story.field_footer_feature
+    - field.field.node.digital_story.field_footer_title
+    - field.field.node.digital_story.field_google_analytics_id
+    - field.field.node.digital_story.field_main_footer_image
     - field.field.node.digital_story.field_member_ticket_link
     - field.field.node.digital_story.field_non_member_ticket_link
     - field.field.node.digital_story.field_section
     - field.field.node.digital_story.field_site_hero_background_image
+    - field.field.node.digital_story.field_sponsor
     - field.field.node.digital_story.field_store_item_link
     - field.field.node.digital_story.field_store_item_photo
     - field.field.node.digital_story.field_store_item_title
@@ -55,6 +60,21 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Dashboard Items'
+    group_footer:
+      children:
+        - field_footer_title
+        - field_main_footer_image
+        - field_footer_feature
+        - field_sponsor
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Footer
 id: node.digital_story.default
 targetEntityType: node
 bundle: digital_story
@@ -79,6 +99,23 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+  field_footer_feature:
+    type: entity_reference_paragraphs
+    weight: 33
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+  field_footer_title:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   field_google_analytics_id:
     weight: 26
     settings:
@@ -86,6 +123,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+  field_main_footer_image:
+    weight: 32
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
   field_member_ticket_link:
     weight: 30
     settings:
@@ -117,6 +161,16 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+  field_sponsor:
+    type: entity_reference_paragraphs
+    weight: 34
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
   field_store_item_link:
     weight: 28
     settings:

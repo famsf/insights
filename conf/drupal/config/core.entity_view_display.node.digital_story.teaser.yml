@@ -17,6 +17,7 @@ content:
 hidden:
   field_addthis_code: true
   field_exhibition_dates: true
+  field_google_analytics_id: true
   field_header_section: true
   field_main_navigation: true
   field_member_ticket_link: true

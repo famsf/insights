@@ -1,0 +1,50 @@
+uuid: 0ddd72a0-354b-447c-becd-d4fac7963a63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.footer_feature.field_footer_feature_image
+    - field.field.paragraph.footer_feature.field_footer_feature_main_link
+    - field.field.paragraph.footer_feature.field_related_events_link
+    - paragraphs.paragraphs_type.footer_feature
+  module:
+    - image
+    - link
+id: paragraph.footer_feature.default
+targetEntityType: paragraph
+bundle: footer_feature
+mode: default
+content:
+  field_footer_feature_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_footer_feature_main_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_plain: true
+      url_only: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+  field_related_events_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+hidden:
+  created: true
+  uid: true
