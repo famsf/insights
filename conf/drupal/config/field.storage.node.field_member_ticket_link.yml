@@ -1,15 +1,16 @@
-uuid: b01531f9-57b3-464b-b6e4-99581ebad8f3
+uuid: 22b208d5-d0e3-4219-b91d-93e66ee4d264
 langcode: en
 status: true
 dependencies:
   module:
+    - link
     - node
-id: node.field_main_navigation
-field_name: field_main_navigation
+id: node.field_member_ticket_link
+field_name: field_member_ticket_link
 entity_type: node
-type: boolean
+type: link
 settings: {  }
-module: core
+module: link
 locked: false
 cardinality: 1
 translatable: true

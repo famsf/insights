@@ -4,6 +4,7 @@ global-styling:
     js/audio.js: {}
     js/audio-transcript.js: {}
     js/css3-animate-it.js: {}
+    js/dashboard_toggle.js: {}
     js/expander_toggle.js: {}
     js/jquery.bxslider.js: {}
     js/jquery.lazyloadxt.extra.js: {}

@@ -1,0 +1,19 @@
+uuid: 7a4bab3a-1167-481f-bc57-f06bca0efdca
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_non_member_ticket_link
+field_name: field_non_member_ticket_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
