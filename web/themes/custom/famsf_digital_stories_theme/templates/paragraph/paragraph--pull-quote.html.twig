@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Custom theme implementation to display a paragraph.
+ * Custom theme implementation to display a card section paragraph.
  *
  * Available variables:
  * - paragraph: Full paragraph entity.
@@ -36,27 +36,11 @@
  * @ingroup themeable
  */
 #}
-<div class="js-audio__wrapper audio__wrapper">
-    <audio class="js-audio__source">
-        <source src="{{ file_url(paragraph.field_audio_file.entity.fileuri) }}" type="{{ paragraph.field_audio_file.entity.getMimeType() }}">
-        Your browser does not support the audio element.
-    </audio>
-
-    <button class="js-audio__button button-with-icon">
-        <i class="js-icon--play icon--small">
-            {{ include(active_theme_path() ~ '/svg/famsf-audio-play-sm.svg')  }}
-        </i>
-        <i class="js-icon--pause icon--small" style="display:none;">
-            {{ include(active_theme_path() ~ '/svg/famsf-pause-sm.svg')  }}
-        </i>
-        {{ content.field_play_button_text }}
-    </button>
-</div>
-{% if paragraph.field_audio_transcript.value is not empty %}
-<div class="audio-transcript">
-    <button class="audio-transcript--trigger js-audio-transcript--trigger">Audio Transcript</button>
-    <div class="audio-transcript__drawer js-audio-transcript--hidden" aria-hidden="true">
-        <p>{{ paragraph.field_audio_transcript.value }}</p>
-    </div>
-</div>
-{% endif %}
+<blockquote class="pull-quote">
+    <p>{{ paragraph.field_quote.value }}</p>
+    {% if paragraph.field_attribution.value|striptags|trim is not empty %}
+    <footer class="pull-quote__cite">
+        <p>{{ paragraph.field_attribution.value }}</p>
+    </footer>
+    {% endif %}
+</blockquote>

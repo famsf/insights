@@ -79,6 +79,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+  field_google_analytics_id:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   field_member_ticket_link:
     weight: 30
     settings:

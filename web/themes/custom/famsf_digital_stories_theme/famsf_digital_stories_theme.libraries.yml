@@ -2,6 +2,7 @@ global-styling:
   version: 1.x
   js:
     js/audio.js: {}
+    js/audio-transcript.js: {}
     js/css3-animate-it.js: {}
     js/dashboard_toggle.js: {}
     js/expander_toggle.js: {}
