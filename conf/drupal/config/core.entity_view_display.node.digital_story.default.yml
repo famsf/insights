@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.digital_story.field_addthis_code
     - field.field.node.digital_story.field_exhibition_dates
+    - field.field.node.digital_story.field_google_analytics_id
     - field.field.node.digital_story.field_main_navigation
     - field.field.node.digital_story.field_section
     - field.field.node.digital_story.field_site_hero_background_image
@@ -24,6 +25,13 @@ mode: default
 content:
   field_exhibition_dates:
     weight: 105
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+  field_google_analytics_id:
+    weight: 109
     label: hidden
     settings:
       link_to_entity: false
@@ -53,13 +61,13 @@ content:
     third_party_settings: {  }
   field_title_position:
     weight: 107
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
   field_title_style:
     weight: 108
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default

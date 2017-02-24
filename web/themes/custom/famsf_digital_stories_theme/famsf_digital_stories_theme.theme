@@ -41,13 +41,20 @@ function famsf_digital_stories_theme_preprocess_html(&$variables) {
     /** @var  Drupal\node\Entity\Node $entity */
     $entity = \Drupal::routeMatch()->getParameter($route[1]);
     if (NULL !== $entity
-        && method_exists($entity, 'hasField')
-        && $entity->hasField('field_addthis_code')
-        && NULL !== $entity->get('field_addthis_code')->first()
-    ) {
-        $addThis = $entity->get('field_addthis_code')->first();
-        $variables['addThis']  = $addThis->value;
+        && method_exists($entity, 'hasField')) {
+        if ($entity->hasField('field_addthis_code')
+            && NULL !== $entity->get('field_addthis_code')->first()
+        ) {
+            $addThis = $entity->get('field_addthis_code')->first();
+            $variables['addThis'] = $addThis->value;
+        }
+        if ($entity->hasField('field_google_analytics_id') && NULL !== $entity->get('field_google_analytics_id')) {
+            $google_analytics_id = $entity->get('field_google_analytics_id')->value;
+            if (!empty($google_analytics_id))
+                $variables['GA'] = $google_analytics_id;
+        }
     }
+
 }
 
 function famsf_digital_stories_theme_preprocess_field(&$variables) {
