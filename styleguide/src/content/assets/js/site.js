@@ -57,7 +57,7 @@
           loopTop: false,
           css3: true,
           navigation: false,
-          normalScrollElements: null,
+          normalScrollElements: '.horizontal-slider',
           normalScrollElementTouchThreshold: 5,
           touchSensitivity: 5,
           keyboardScrolling: true,
@@ -148,6 +148,16 @@
         auto: true,
         speed: 2000,
         pause: 3000
+      });
+
+      // Start the horizontal slider
+      $('.js-horizontal-slider', context).once().bxSlider({
+        mode: 'horizontal',
+        pager: true,
+        controls: true,
+        speed: 500,
+        pause: 3000,
+        touchEnabled: true
       });
 
       // Drop caps

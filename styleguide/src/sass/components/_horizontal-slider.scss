@@ -1,0 +1,14 @@
+/**
+ * @file
+ * styles for "horizontal slider" component
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+.horizontal-slider__section {
+  height: 100vh;
+  overflow-y: auto;
+  .container {
+    width: 75%;
+  }
+}

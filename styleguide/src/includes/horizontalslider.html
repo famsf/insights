@@ -1,0 +1,38 @@
+{#
+  name: horizontal slider
+  usage: content that scrolls sideways.
+#}
+
+{% block component %}
+
+<ul class="js-horizontal-slider horizontal-slider">
+  <li>
+    <section class="card-section horizontal-slider__section">
+      <div class="container">
+        <div class="l-2up">
+          test
+        </div>
+        <div class="l-2up">
+          test
+        </div>
+      </div>
+    </section>
+  </li>
+  <li>
+    <section class="card-section horizontal-slider__section">
+      <div class="container">
+        <div class="l-1up">
+          <figure>
+            <div class="figure__wrapper">
+              <img src="{{ site.url }}/assets/imgs/art/Forest_Fontainebleau.jpg" alt="painting of trees" />
+            </div>
+            <a class="figcaption-cta js-figcaption-cta">image credit</a>
+            <figcaption><span class="title-of-art">The Pavé de Chailly in the Forest Fontainebleau</span> Claude Monet | 1865 | oil on canvas | 38 1/4 x 51 3/8 in. (97 x 130.5 cm) | Ordrupgaard Museum, Copenhagen | Photo: Pernille Klemp</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </li>
+</ul>
+
+{% endblock %}

@@ -19,6 +19,8 @@
     margin: 0 auto 60px;
     padding: 0;
     *zoom: 1;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
 }
 
 .bx-wrapper img {
