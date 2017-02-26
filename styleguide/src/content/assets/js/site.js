@@ -26,10 +26,15 @@
           }
         };
         // Function to animate things in the viewport.
-        var animateInSectionView  = function(animatedItems, numberOfAnimatedItems, sectionSelector) {
+        var animateInSectionView  = function(animatedItems, numberOfAnimatedItems, sectionSelector, loadableImages, numberOfloadableImages) {
           for (var i = 0; i < numberOfAnimatedItems; i++) {
-            if ($(animatedItems[i]).position().top < $(sectionSelector).height()){
+            if ($(animatedItems[i]).offset().top < $(sectionSelector).height()){
               $(animatedItems[i]).addClass('go');
+            }
+          }
+          for (var j = 0; j < numberOfloadableImages; j++) {
+            if ($(loadableImages[j]).offset().top < $(sectionSelector).height()){
+              $(loadableImages[j]).lazyLoadXT();
             }
           }
         };
@@ -70,16 +75,18 @@
             // Select the next active index section element by it's index.
             var nextActiveSection = nextIndex - 1;
             var sectionSelector = $('section.js-section').eq(nextActiveSection);
-            lazyloadSection(sectionSelector);
+            var loadableImages = $(sectionSelector).find('img[data-src],div[data-bg]');
+            var numberOfloadableImages = loadableImages.length;
+            // lazyloadSection(sectionSelector);
             // Get all the animated items in the section.
             var animatedItems = sectionSelector.find('*.animated');
             var numberOfAnimatedItems = animatedItems.length;
             // Run animations when the new card is initially visible.
-            animateInSectionView(animatedItems, numberOfAnimatedItems, sectionSelector);
+            animateInSectionView(animatedItems, numberOfAnimatedItems, sectionSelector, loadableImages, numberOfloadableImages);
 
             // Trigger all animation in view on scroll.
             sectionSelector.scroll(function () {
-              animateInSectionView(animatedItems, numberOfAnimatedItems, sectionSelector);
+              animateInSectionView(animatedItems, numberOfAnimatedItems, sectionSelector, loadableImages, numberOfloadableImages);
             });
             var dashboardButton = $('.js-dashboard-toggle', context);
             // Close the dashboard after arriving at destination.
@@ -115,17 +122,19 @@
                 $('.js-loading', context).fadeOut(500);
               }, 2000);
             };
-            lazyloadSection(firstSection, hideLoader());
-
+            hideLoader();
+            // lazyloadSection(firstSection, hideLoader());
+            var loadableImages = $(firstSection).find('img[data-src],div[data-bg]');
+            var numberOfloadableImages = loadableImages.length;
             var animatedItems = firstSection.find('*.animated');
             var numberOfAnimatedItems = animatedItems.length;
             // Run animations when the new card is initially visible.
             setTimeout(function() {
-              animateInSectionView(animatedItems, numberOfAnimatedItems, firstSection);
+              animateInSectionView(animatedItems, numberOfAnimatedItems, firstSection, loadableImages, numberOfloadableImages);
             }, 1000);
             // Trigger all animation in view on scroll.
             firstSection.scroll(function () {
-              animateInSectionView(animatedItems, numberOfAnimatedItems, firstSection);
+              animateInSectionView(animatedItems, numberOfAnimatedItems, firstSection, loadableImages, numberOfloadableImages);
             });
           },
         });
@@ -153,7 +162,7 @@
       // Start the horizontal slider
       $('.js-horizontal-slider', context).once().bxSlider({
         mode: 'horizontal',
-        pager: true,
+        pager: false,
         controls: true,
         speed: 500,
         pause: 3000,
