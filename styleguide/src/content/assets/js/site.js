@@ -142,12 +142,14 @@
       }
 
       // Start the word fade slider
-      $('.js-wordslider', context).once().bxSlider({
-        mode: 'fade',
-        pager: false,
-        auto: true,
-        speed: 2000,
-        pause: 3000
+      $('.js-wordslider').each(function(){
+        $(this).bxSlider({
+          mode: 'fade',
+          pager: false,
+          auto: true,
+          speed: $(this).data('speed'),
+          pause: $(this).data('pause')
+        })
       });
 
       // Drop caps

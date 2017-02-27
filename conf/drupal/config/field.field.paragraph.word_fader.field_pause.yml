@@ -1,0 +1,25 @@
+uuid: c9b8520b-8d63-451a-b91c-54935ee082d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_pause
+    - paragraphs.paragraphs_type.word_fader
+id: paragraph.word_fader.field_pause
+field_name: field_pause
+entity_type: paragraph
+bundle: word_fader
+label: 'Word Slider Pause in milliseconds'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 3000
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer
