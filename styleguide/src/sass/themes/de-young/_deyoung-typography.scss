@@ -13,17 +13,9 @@
 
 .dropcap {
   font-family: $roboto-condensed;
-  background-color: $dropcap-bg;
-  color: $dropcap-color;
-  text-shadow: 3px 3px $dropcap-text-shadow;
-  padding: .5em .3em;
-  margin-right: .3em;
-  font-weight: 400;
-  outline: 2px solid $background-a;
-  box-shadow: 6px 6px $secondary;
-  font-size: 300%;
-  float: left;
-  display: block;
+  color: $tertiary;
+  font-weight: 700;
+  font-size: 150%;
 }
 
 h1,
