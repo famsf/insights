@@ -27,7 +27,11 @@
     <div class="l-2up--2">
       <button class="button-with-icon"> 
         <i class="icon--small">
-          {% include('svg/famsf-play-sm.html') %}
+          {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+          {% include('svg/famsf-play-sm.svg') %}
+          {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+          {% include('svg/deyoung/famsf-play-sm.svg') %}
+          {% endif %}
         </i>
         <div>Play Audio</div>
       </button>

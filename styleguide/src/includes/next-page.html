@@ -5,5 +5,11 @@
 
 {% block component %}
   <button class="next-page js-next-page animated fadeIn delay-100" >
-    <div class="icon--xsmall">{% include('svg/famsf-caret-down-sm.svg') %}</div>next page</button>
+    <div class="icon--xsmall">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+    {% include('svg/famsf-caret-down-sm.svg') %}
+    {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+    {% include('svg/deyoung/famsf-caret-down-sm.svg') %}
+    {% endif %}
+    </div>next page
+  </button>
 {% endblock %}
