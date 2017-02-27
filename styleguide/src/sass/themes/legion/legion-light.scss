@@ -60,6 +60,9 @@ $section-hero-shadow-b: $magenta;
 $section-hero-border-a: $magenta;
 $section-hero-border-b: $peach;
 
+$next-icon: $primary;
+$next-icon-active: $midnight;
+
 // Import theme specific components used in global
 @import 'legion-section-hero';
 
