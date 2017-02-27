@@ -35,6 +35,7 @@ $blue-60: #aad5da;
 $blue-40: #c7e3e6;
 $blue-30: #d5eaec;
 $blue-20: #e3f1f3;
+$blue-10: #edf6f7;
 
 // greens
 $green: #005244;
@@ -54,38 +55,38 @@ $teal: #36545b;
 $blue-gray: #213538;
 $blue-black: #0f1616;
 
-$background-a: $white;
-$background-b: $blue-20;
-$background-c: $blue-30;
-$background-d: $blue-40;
+$background-a: $blue-10;
+$background-b: $blue-30;
+$background-c: $orange;
+$background-d: $earth;
 $pattern-a: $white;
 $pattern-b: $blue;
-$border: $blue;
+$border: $yellow;
 $text-color: $gray-dark;
 $text-color-invert: $white;
 $primary: $blue-gray;
-$primary-active: $orange;
+$primary-active: $green;
 $secondary: $citrus;
 $tertiary: $green;
-$citation: $gray-dark;
+$citation: $rust;
 $hero-color: $white;
 
-$decorative-border: 2px solid $citrus;
+$decorative-border: 2px solid $blue-gray;
 $decorative-border-image: null;
 $rectangles-border: url('../../../imgs/deyoung-rectangles-light.svg');
 $zoom-background: $blue-20;
 $text-shadow-color: $yellow;
 $hero-content-text: $gray-dark;
 $hero-content-text-active: $black;
-$dropcap-color: $white;
-$dropcap-bg: $teal;
-$dropcap-text-shadow: $blue-black;
+$dropcap-color: $green;
+$dropcap-bg: $white;
+$dropcap-text-shadow: $white;
 
 $section-hero-text: $white;
-$section-hero-shadow: $green;
-$section-hero-shadow-b: $forest;
-$section-hero-border-a: $green;
-$section-hero-border-b: $forest;
+$section-hero-shadow: $citrus;
+$section-hero-shadow-b: $orange;
+$section-hero-border-a: $yellow;
+$section-hero-border-b: $rust;
 
 // Import theme specific components used in global
 @import 'deyoung-section-hero';
@@ -97,3 +98,4 @@ $section-hero-border-b: $forest;
 @import 'deyoung-typography';
 @import 'deyoung-wysiwyg';
 @import 'deyoung-figure';
+@import 'deyoung-light-adjustments';

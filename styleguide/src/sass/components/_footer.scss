@@ -26,19 +26,6 @@
     margin-bottom: rhythm(1);
   }
 
-  .icon {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-left: rhythm(.5);
-
-    svg {
-      width: .6em;
-      height: .6em;
-      fill: rgba($text-color, .4);
-    }
-  }
-
   a:link,
   a:visited {
     display: block;
@@ -52,10 +39,6 @@
   a:focus {
     color: $primary;
     text-decoration: underline;
-
-    .icon svg {
-      fill: $primary;
-    }
   }
 }
 
@@ -95,17 +78,6 @@
     margin: 0;
   }
 
-
-  a .icon {
-    margin-left: rhythm(.25);
-
-    svg {
-      width: .6em;
-      height: .6em;
-      fill: rgba($text-color, .4);
-    }
-  }
-
   a:link,
   a:visited {
     font-weight: 700;
@@ -118,10 +90,6 @@
   a:focus {
     color: $primary;
     text-decoration: none;
-
-    .icon svg {
-      fill: $primary;
-    }
   }
 }
 
@@ -161,17 +129,6 @@
 .footer-link {
   display: inline-block;
 
-  .icon {
-    margin-left: rhythm(.5);
-    margin-right: rhythm(1);
-
-    svg {
-      width: .6em;
-      height: .6em;
-      fill: rgba($text-color, .4);
-    }
-  }
-
   &:link,
   &:visited {
     font-weight: 700;
@@ -184,9 +141,5 @@
   &:focus {
     color: $primary;
     text-decoration: underline;
-
-    .icon svg {
-      fill: $primary;
-    }
   }
 }
