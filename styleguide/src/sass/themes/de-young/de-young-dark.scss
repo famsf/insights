@@ -91,6 +91,12 @@ $section-hero-shadow-b: $teal;
 $section-hero-border-a: $blue;
 $section-hero-border-b: $rust;
 
+// icons
+$icon: $white;
+$icon-active: $sunshine;
+$icon-stroke: $sunshine;
+$icon-stroke-active: $yellow;
+
 // Import theme specific components used in global
 @import 'deyoung-section-hero';
 
@@ -101,3 +107,4 @@ $section-hero-border-b: $rust;
 @import 'deyoung-typography';
 @import 'deyoung-wysiwyg';
 @import 'deyoung-figure';
+@import 'deyoung-icons';
