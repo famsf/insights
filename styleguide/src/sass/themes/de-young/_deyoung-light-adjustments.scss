@@ -242,4 +242,27 @@ figcaption,
 
 .footer {
   background: linear-gradient(90deg, $blue-40, $blue-40);
+
+  .social-media__item {
+    svg {
+      fill: $teal;
+
+      .cls-2,
+      .st0 {
+        stroke: $orange;
+      }
+    }
+
+    &:active,
+    &:hover {
+      svg {
+        fill: $blue;
+
+        .cls-2,
+        .st0 {
+          stroke: $orange;
+        }
+      }
+    }
+  }
 }
