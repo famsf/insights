@@ -116,7 +116,7 @@
     font-size: 1.25em;
     display: inline-block;
     background-color: rgba($section-hero-shadow-b, .6);
-    padding: rhythm(.15) rhythm(.5);
+    padding: rhythm(.1) rhythm(.25);
   }
 
   .site-hero__logo {
@@ -131,7 +131,7 @@
       font-weight: 700;
       text-decoration: none;
       color: $section-hero-text;
-      padding: rhythm(.15) rhythm(.5);
+      padding: rhythm(.1) rhythm(.25);
     }
 
     a:hover,
