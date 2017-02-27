@@ -8,7 +8,6 @@
 %icon {
   svg {
     fill: $icon;
-    height: 100%;
 
     .cls-2,
     .st0 {
@@ -27,14 +26,6 @@
       }
     }
   }
-}
-
-.icon--large,
-.icon--med,
-.icon--small,
-.icon--xsmall {
-  @extend %icon;
-  display: inline-block;
 }
 
 .icon--large {

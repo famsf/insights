@@ -31,20 +31,6 @@
   background: -webkit-linear-gradient(left,  $blue-40 0%, $blue-40 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to right,  $blue-40 0%, $blue-40 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   box-shadow: none;
-
-  .icon--xsmall {
-
-    svg {
-      fill: $primary;
-    }
-
-    &:active,
-    &:hover {
-      svg {
-        fill: $primary-active;
-      }
-    }
-  }
 }
 
 // Image Captions
@@ -74,17 +60,44 @@ figcaption,
   }
 
   .figcaption-cta {
-    color: $sunshine;
+    .icon--small {
+      svg {
+        fill: $white;
+
+        .cls-2,
+        .st0 {
+          stroke: $yellow;
+        }
+      }
+    }
 
     &:link,
     &:visited {
-      color: $sunshine;
+      .icon--small {
+        svg {
+          fill: $white;
+
+          .cls-2,
+          .st0 {
+            stroke: $yellow;
+          }
+        }
+      }
     }
 
     &:active,
     &:hover,
     &:focus {
-      color: $yellow;
+      .icon--small {
+        svg {
+          fill: $sunshine;
+
+          .cls-2,
+          .st0 {
+            stroke: $yellow;
+          }
+        }
+      }
     }
   }
 
@@ -103,7 +116,12 @@ figcaption,
     color: $sunshine;
 
     svg {
-      fill: $sunshine;
+      fill: $white;
+
+      .cls-2,
+      .st0 {
+        stroke: $yellow;
+      }
     }
 
     &:active,
@@ -113,7 +131,12 @@ figcaption,
       background-color: transparent;
 
       svg {
-        fill: $yellow;
+        fill: $sunshine;
+
+        .cls-2,
+        .st0 {
+          stroke: $yellow;
+        }
       }
     }
   }
@@ -147,7 +170,12 @@ figcaption,
     color: $sunshine;
 
     svg {
-      fill: $sunshine;
+      fill: $white;
+
+      .cls-2,
+      .st0 {
+        stroke: $yellow;
+      }
     }
 
     &:active,
@@ -158,6 +186,11 @@ figcaption,
 
       svg {
         fill: $white;
+
+        .cls-2,
+        .st0 {
+          stroke: $yellow;
+        }
       }
     }
   }
@@ -169,6 +202,11 @@ figcaption,
 
   svg {
     fill: $white;
+
+    .cls-2,
+    .st0 {
+      stroke: $yellow;
+    }
   }
 
   &:active,
@@ -176,20 +214,30 @@ figcaption,
     color: $white;
 
     svg {
-      fill: $white;
+      fill: $sunshine;
+
+      .cls-2,
+      .st0 {
+        stroke: $yellow;
+      }
     }
   }
 
   &:focus {
     svg {
-      fill: $white;
+      fill: $sunshine;
+
+      .cls-2,
+      .st0 {
+        stroke: $yellow;
+      }
     }
   }
 }
 
 .zoom-marker-inner,
 .zoom-close {
-  background-color: rgba($sunshine, .8);
+  background-color: rgba($white, .8);
 }
 
 .footer {

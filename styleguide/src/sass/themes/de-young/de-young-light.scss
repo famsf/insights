@@ -88,6 +88,9 @@ $section-hero-shadow-b: $orange;
 $section-hero-border-a: $yellow;
 $section-hero-border-b: $rust;
 
+$next-icon: $blue;
+$next-icon-active: $teal;
+
 // icons
 $icon: $blue;
 $icon-active: $teal;
@@ -104,5 +107,5 @@ $icon-stroke-active: $orange;
 @import 'deyoung-typography';
 @import 'deyoung-wysiwyg';
 @import 'deyoung-figure';
-@import 'deyoung-light-adjustments';
 @import 'deyoung-icons';
+@import 'deyoung-light-adjustments';
