@@ -152,12 +152,14 @@
                 {% include('audio.html') %}
               </div>
               <button class="comparison__button js-comparison__button">
-                <i class="icon-arrow--down js-icon-arrow--down">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                <i class="icon-arrow--down js-icon-arrow--down">
+                {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
                 {% include('svg/famsf-caret-down-sm.svg') %}
                 {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
                 {% include('svg/deyoung/famsf-caret-down-sm.svg') %}
                 {% endif %}</i>
-                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">
+                {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
                 {% include('svg/famsf-caret-up-sm.svg') %}
                 {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
                 {% include('svg/deyoung/famsf-caret-up-sm.svg') %}
@@ -178,12 +180,14 @@
                 <p>Monet submitted this seascape in 1868. The young artist had invested a significant sum of money in this large-scale canvas and had to beg his family for money to survive.</p>
               </div>
               <button class="comparison__button js-comparison__button">
-                <i class="icon-arrow--down js-icon-arrow--down">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                <i class="icon-arrow--down js-icon-arrow--down">
+                {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
                 {% include('svg/famsf-caret-down-sm.svg') %}
                 {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
                 {% include('svg/deyoung/famsf-caret-down-sm.svg') %}
                 {% endif %}</i>
-                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">
+                {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
                 {% include('svg/famsf-caret-up-sm.svg') %}
                 {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
                 {% include('svg/deyoung/famsf-caret-up-sm.svg') %}

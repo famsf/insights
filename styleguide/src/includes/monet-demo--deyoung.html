@@ -505,12 +505,26 @@
           <figure>
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/Etretat_Harvard_detail_1.jpg" alt="" />
-              {% include('comparison--cta-a.html') %}
               <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
               {% include('figcaption-cta.html') %}
               <figcaption><span class="title-of-art">The Porte d'Amont, Étretat</span> 1868 &mdash; 1869 | Oil on canvas | 31 1/8 x 38 3/4 in. (79.1 x 98.4 cm) | Harvard Art Museums/Fogg Museum, Cambridge, Gift of Mr. and Mrs. Joseph Pulitzer, Jr., 1957.163 | Image courtesy Harvard Art Museums</figcaption>
                 <p>The rock formation is rendered in similar hues, contrasting with the heavy black that depicts wet stone revealed by the ebbing tide. </p>
               </div>
+              <button class="comparison__button js-comparison__button">
+                <i class="icon-arrow--down js-icon-arrow--down">
+                {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-caret-down-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-caret-down-sm.svg') %}
+                {% endif %}</i>
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">
+                {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-caret-up-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-caret-up-sm.svg') %}
+                {% endif %}</i>
+                Color
+              </button>
             </div>
           </figure>
         </div>
@@ -519,13 +533,27 @@
           <figure>
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/Etretat_Harvard_detail_2.jpg" alt="" />
-              {% include('comparison--cta-b.html') %}
               <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
               {% include('figcaption-cta.html') %}
               <figcaption><span class="title-of-art">The Porte d'Amont, Étretat</span> 1868 &mdash; 1869 | Oil on canvas | 31 1/8 x 38 3/4 in. (79.1 x 98.4 cm) | Harvard Art Museums/Fogg Museum, Cambridge, Gift of Mr. and Mrs. Joseph Pulitzer, Jr., 1957.163 | Image courtesy Harvard Art Museums</figcaption>
 
                 <p>The firm and steady horizontal brushstrokes of the cliffs contrast with the fleeting horizontal bands of color that fill the sky.</p>
               </div>
+              <button class="comparison__button js-comparison__button">
+                <i class="icon-arrow--down js-icon-arrow--down">
+                {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-caret-down-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-caret-down-sm.svg') %}
+                {% endif %}</i>
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">
+                {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-caret-up-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-caret-up-sm.svg') %}
+                {% endif %}</i>
+                Brushstroke
+              </button>
             </div>
           </figure>
         </div>
@@ -778,19 +806,7 @@
                 <figcaption><span class="title-of-art">The Magpie</span> Claude Monet | 1869 | Oil on canvas | 35 1/8 x 51 1/8 in. (89 x 130 cm) | Musée d'Orsay, Paris, RF 1984 164 | © RMN-Grand Palais (Musée d'Orsay) / Hervé Lewandowski | CAT : © RMN-Grand Palais / Art Resource, NY</figcaption>
                 <p>While at first glance, The Magpie reads as a study in white, upon closer examination one discovers a careful orchestration of pink and blue undertones. This variation in tonal quality adds a sense of warmth to the composition while simultaneously creating depth through deep shadows.</p>
               </div>
-              <button class="comparison__button js-comparison__button">
-                <i class="icon-arrow--down js-icon-arrow--down">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
-                {% include('svg/famsf-caret-down-sm.svg') %}
-                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
-                {% include('svg/deyoung/famsf-caret-down-sm.svg') %}
-                {% endif %}</i>
-                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
-                {% include('svg/famsf-caret-up-sm.svg') %}
-                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
-                {% include('svg/deyoung/famsf-caret-up-sm.svg') %}
-                {% endif %}</i>
-                Read more
-              </button>
+              {% include('comparison--cta-a.html') %}
             </div>
           </figure>
         </div>
@@ -804,19 +820,7 @@
                 <figcaption><span class="title-of-art">On the Bank of the Seine Bennecourt</span> Claude Monet | 1868 | Oil on canvas | 32 1/8 x 39 5/8 in. (81.5 x 100.7 cm) | The Art Institute of Chicago, Potter Palmer Collection | &copy; The Art Institute of Chicago</figcaption>
                 <p><em>On the Bank of the Seine, Bennecourt</em> reveals Monet&rsquo;s working process and his willingness to let the viewer&rsquo;s eye do the work. Monet has divided the composition diagonally in half. The deep greens of the foreground add a sense of weight to the riverbank that contrasts with the pastels of the sun-drenched background. Yet within this composition, there are areas where the artist applies paint in startling ways. For example, the bright green patch in the foreground reads purely as a brushstroke and contrasts directly with the darker greens, which are applied in an even pattern that evokes blades of grass. The slight tonal variation between the flesh tone of the figure&rsquo;s face and the putty reflection of a roof of a building across the bank is another point where the viewer&rsquo;s eye works, filling in the distance needed to make this transition read as face and roof opposed to the juxtaposition of two squares of color.</p>
               </div>
-              <button class="comparison__button js-comparison__button">
-                <i class="icon-arrow--down js-icon-arrow--down">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
-                {% include('svg/famsf-caret-down-sm.svg') %}
-                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
-                {% include('svg/deyoung/famsf-caret-down-sm.svg') %}
-                {% endif %}</i>
-                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
-                {% include('svg/famsf-caret-up-sm.svg') %}
-                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
-                {% include('svg/deyoung/famsf-caret-up-sm.svg') %}
-                {% endif %}</i>
-                Read more
-              </button>
+              {% include('comparison--cta-b.html') %}
             </div>
           </figure>
         </div>
