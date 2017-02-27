@@ -5,9 +5,13 @@ dependencies:
   config:
     - field.field.node.digital_story.field_addthis_code
     - field.field.node.digital_story.field_exhibition_dates
-    - field.field.node.digital_story.field_main_navigation
+    - field.field.node.digital_story.field_member_ticket_link
+    - field.field.node.digital_story.field_non_member_ticket_link
     - field.field.node.digital_story.field_section
     - field.field.node.digital_story.field_site_hero_background_image
+    - field.field.node.digital_story.field_store_item_link
+    - field.field.node.digital_story.field_store_item_photo
+    - field.field.node.digital_story.field_store_item_title
     - field.field.node.digital_story.field_theme
     - field.field.node.digital_story.field_title_position
     - field.field.node.digital_story.field_title_style
@@ -16,6 +20,7 @@ dependencies:
   module:
     - field_group
     - image
+    - link
     - paragraphs
     - path
 third_party_settings:
@@ -34,6 +39,22 @@ third_party_settings:
         description: ''
         required_fields: true
       label: 'Site Hero Section'
+    group_dashboard_items:
+      children:
+        - field_store_item_title
+        - field_store_item_photo
+        - field_store_item_link
+        - field_non_member_ticket_link
+        - field_member_ticket_link
+      parent_name: ''
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Dashboard Items'
 id: node.digital_story.default
 targetEntityType: node
 bundle: digital_story
@@ -58,12 +79,27 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
-  field_main_navigation:
-    weight: 11
+  field_google_analytics_id:
+    weight: 26
     settings:
-      display_label: true
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
-    type: boolean_checkbox
+    type: string_textfield
+  field_member_ticket_link:
+    weight: 30
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+  field_non_member_ticket_link:
+    weight: 29
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
   field_section:
     type: entity_reference_paragraphs
     weight: 4
@@ -81,6 +117,27 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+  field_store_item_link:
+    weight: 28
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+  field_store_item_photo:
+    weight: 27
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_store_item_title:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
   field_theme:
     weight: 3
     settings: {  }

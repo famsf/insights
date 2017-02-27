@@ -1,4 +1,4 @@
-uuid: 7008706f-8e56-4b04-bd41-4a03e0212fd4
+uuid: baaa6b84-2d8b-481f-93a9-2b444d1aff7f
 langcode: en
 status: true
 dependencies:
@@ -14,7 +14,7 @@ bundle: card_section
 label: 'Video Source'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

@@ -40,8 +40,14 @@
 {% if paragraph.field_artist.value is not empty %}
     {% set credits = credits|merge([paragraph.field_artist.value ]) %}
 {% endif %}
+{% if paragraph.field_credits_date.value is not empty %}
+    {% set credits = credits|merge([paragraph.field_credits_date.value ]) %}
+{% endif %}
 {% if paragraph.field_medium.value is not empty %}
     {% set credits = credits|merge([paragraph.field_medium.value ]) %}
+{% endif %}
+{% if paragraph.field_dimensions.value is not empty %}
+    {% set credits = credits|merge([paragraph.field_dimensions.value ]) %}
 {% endif %}
 {% if paragraph.field_location.value is not empty %}
     {% set credits = credits|merge([paragraph.field_location.value ]) %}

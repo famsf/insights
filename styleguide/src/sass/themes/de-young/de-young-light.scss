@@ -35,6 +35,7 @@ $blue-60: #aad5da;
 $blue-40: #c7e3e6;
 $blue-30: #d5eaec;
 $blue-20: #e3f1f3;
+$blue-10: #edf6f7;
 
 // greens
 $green: #005244;
@@ -54,7 +55,7 @@ $teal: #36545b;
 $blue-gray: #213538;
 $blue-black: #0f1616;
 
-$background-a: $white;
+$background-a: $blue-10;
 $background-b: $blue-30;
 $background-c: $orange;
 $background-d: $earth;
@@ -66,7 +67,7 @@ $text-color-invert: $white;
 $primary: $blue-gray;
 $primary-active: $green;
 $secondary: $citrus;
-$tertiary: $orange;
+$tertiary: $green;
 $citation: $rust;
 $hero-color: $white;
 
@@ -77,7 +78,7 @@ $zoom-background: $blue-20;
 $text-shadow-color: $yellow;
 $hero-content-text: $gray-dark;
 $hero-content-text-active: $black;
-$dropcap-color: $rust;
+$dropcap-color: $green;
 $dropcap-bg: $white;
 $dropcap-text-shadow: $white;
 
@@ -97,4 +98,4 @@ $section-hero-border-b: $rust;
 @import 'deyoung-typography';
 @import 'deyoung-wysiwyg';
 @import 'deyoung-figure';
-@import 'deyoung-colors';
+@import 'deyoung-light-adjustments';
