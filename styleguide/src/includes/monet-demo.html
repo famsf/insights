@@ -72,11 +72,13 @@
       </div>
       <div class="section-hero__figcaption">
         <a class="figcaption-cta js-section-hero__figcaption-cta">
-          <i class="icon--small">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
-          {% include('svg/famsf-copyright-md.svg') %}
-          {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
-          {% include('svg/deyoung/famsf-copyright-md.svg') %}
-          {% endif %}</i>
+          <i class="icon--small">
+            {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+            {% include('svg/famsf-copyright-md.svg') %}
+            {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+            {% include('svg/deyoung/famsf-copyright-md.svg') %}
+            {% endif %}
+          </i>
           <span>image credit</span>
         </a>
         <span class="figcaption"><span class="title-of-art">L’exposition des Beaux-Arts</span> Gustave Doré | 1868 | Engraving | 32 x 55.3 cm | Bibliothèque nationale, Paris. | Photograph courtesy of Bibliothèque Nationale de France</span>
