@@ -159,21 +159,33 @@
         pause: 3000
       });
 
-      // Start the horizontal slider
-      $('.js-horizontal-slider', context).once().bxSlider({
-        mode: 'horizontal',
-        pager: false,
-        controls: true,
-        speed: 500,
-        pause: 3000,
-        touchEnabled: true,
-        onSlideAfter: function(){
-          // Do things after slide is loaded.
-          // Load images in slider.
-          $('.horizontal-slider').find('img[data-src],div[data-bg]').lazyLoadXT();
-        }
-      });
+      // Start each horizontal slider
+      $('.js-horizontal-slider', context).each(function(i){
+        var horizontalSlider = $(this).once().bxSlider({
+          mode: 'horizontal',
+          pager: false,
+          controls: false,
+          speed: 500,
+          pause: 3000,
+          touchEnabled: true,
+          onSlideAfter: function(){
+            // Do things after slide is loaded.
+            // Load images in slider.
+            $('.horizontal-slider').find('img[data-src],div[data-bg]').lazyLoadXT();
+          }
+        });
+        var horizontalPrev = $(this).parents('.js-horizontal-slider__wrapper').find('.horizontal-slider-prev', context);
+        var horizontalNext = $(this).parents('.js-horizontal-slider__wrapper').find('.horizontal-slider-next', context);
 
+        horizontalPrev.click( function(event) {
+          event.preventDefault();
+          horizontalSlider.goToPrevSlide()
+        });
+        horizontalNext.click( function(event) {
+          event.preventDefault();
+          horizontalSlider.goToNextSlide()
+        });
+      });
       // Drop caps
       $('.has-dropcaps').find('p:first').html(function (i, html)
       {
