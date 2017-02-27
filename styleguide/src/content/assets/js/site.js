@@ -166,7 +166,12 @@
         controls: true,
         speed: 500,
         pause: 3000,
-        touchEnabled: true
+        touchEnabled: true,
+        onSlideAfter: function(){
+          // Do things after slide is loaded.
+          // Load images in slider.
+          $('.horizontal-slider').find('img[data-src],div[data-bg]').lazyLoadXT();
+        }
       });
 
       // Drop caps
