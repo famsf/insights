@@ -13,13 +13,9 @@
 
 .dropcap {
   font-family: $roboto-condensed;
-  color: $dropcap-color;
-  padding-top: .25em;
-  margin-right: .1em;
-  font-weight: 400;
-  font-size: 300%;
-  float: left;
-  display: block;
+  color: $tertiary;
+  font-weight: 700;
+  font-size: 150%;
 }
 
 h1,
