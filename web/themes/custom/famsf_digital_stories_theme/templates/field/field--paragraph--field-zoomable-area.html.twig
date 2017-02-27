@@ -24,10 +24,10 @@
 {% for item in items %}
     <div class="zoom-group js-zoom-group">
         <div class="zoom-marker-outer js-zoom-marker-outer" style="position: absolute; left: {{ item.content['#paragraph'].field_left_position.value }}%; top: {{ item.content['#paragraph'].field_top_position.value }}%;">
-            <a class="zoom-marker-inner animated fadeInDownShort delay-1000 js-zoom-marker-inner" href="#" title="Click to zoom"><span class="icon--small">{{  include(active_theme_path() ~ '/svg/famsf-zoom-in-sm.svg') }}</span> <div class="zoom-marker__text">Click to zoom</div></a>
+            <a class="zoom-marker-inner animated fadeInDownShort delay-{{ item.content['#paragraph'].field_marker_delay.value }} js-zoom-marker-inner" href="#" title="Click to zoom"><span class="icon--small">{{  include(active_theme_path() ~ '/svg/famsf-zoom-in-sm.svg') }}</span> <div class="zoom-marker__text">Click to zoom</div></a>
         </div>
         <div class="zoom-detail-view js-zoom-detail-view" style="display:none;">
-            {{ item.content|without('field_left_position', 'field_top_position') }}
+            {{ item.content|without('field_left_position', 'field_top_position', 'field_marker_delay') }}
         </div>
     </div>
 {% endfor %}
