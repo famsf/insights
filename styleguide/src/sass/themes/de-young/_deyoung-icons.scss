@@ -1,0 +1,54 @@
+/**
+ * @file
+ * figure styles
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+%icon {
+  svg {
+    fill: $icon;
+    height: 100%;
+
+    .cls-2,
+    .st0 {
+      stroke: $icon-stroke;
+    }
+  }
+
+  &:active,
+  &:hover {
+    svg {
+      fill: $icon-active;
+
+      .cls-2,
+      .st0 {
+        stroke: $icon-stroke-active;
+      }
+    }
+  }
+}
+
+.icon--large,
+.icon--med,
+.icon--small,
+.icon--xsmall {
+  @extend %icon;
+  display: inline-block;
+}
+
+.icon--large {
+  height: 4.2rem;
+}
+
+.icon--med {
+  height: 1.9rem;
+}
+
+.icon--small {
+  height: 1.25rem;
+}
+
+.icon--xsmall {
+  height: .9rem;
+}
