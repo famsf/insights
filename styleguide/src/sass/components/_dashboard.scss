@@ -108,6 +108,18 @@ footer {
   align-items: center;
   padding: rhythm(.5);
 
+  .icon--med {
+    height: 1rem;
+    display: inline-block;
+    margin-top: -2px;
+  }
+
+  .icon--small {
+    height: .9rem;
+    display: inline-block;
+    margin-top: -8px;
+  }
+
   @include breakpoint($bp1) {
     top: 2em;
     width: 2.78em;
@@ -153,8 +165,21 @@ footer {
 
   @include breakpoint($bp1) {
     top: 2em;
+    margin-right: 1em;
     width: 2.78em;
     height: auto;
+  }
+
+  .icon--med {
+    height: 1rem;
+    display: inline-block;
+    margin-top: -2px;
+  }
+
+  .icon--small {
+    height: .9rem;
+    display: inline-block;
+    margin-top: -6px;
   }
 
   svg {

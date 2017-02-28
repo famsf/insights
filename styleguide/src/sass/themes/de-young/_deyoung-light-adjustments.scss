@@ -1,0 +1,268 @@
+/**
+ * @file
+ * deYoung Color Adjustments
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+// Site Hero Colors
+.site-hero__title--bold {
+  h2,
+  .site-hero__logo {
+    background-color: rgba($rust, .8);
+  }
+}
+
+// Dashboard colors
+.dashboard__nav-item {
+
+  &:active,
+  &:hover,
+  &:focus,
+  .active {
+    background-color: $blue-30;
+  }
+}
+
+// Next page
+.next-page {
+  background: $blue-40; /* Old browsers */
+  background: -moz-linear-gradient(left,  $blue-40 0%, $blue-40 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  $blue-40 0%, $blue-40 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  $blue-40 0%, $blue-40 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  box-shadow: none;
+}
+
+// Image Captions
+figcaption::after,
+.figcaption::after {
+  border-bottom-color: $rust;
+}
+
+figcaption,
+.figcaption {
+  background-color: $rust;
+  color: $text-color-invert;
+}
+
+// Deep Dives & Comparison
+.comparison__answer,
+.deep-dive {
+  color: $white;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $white;
+  }
+
+  .figcaption-cta {
+    .icon--small {
+      svg {
+        fill: $white;
+
+        .cls-2,
+        .st0 {
+          stroke: $yellow;
+        }
+      }
+    }
+
+    &:link,
+    &:visited {
+      .icon--small {
+        svg {
+          fill: $white;
+
+          .cls-2,
+          .st0 {
+            stroke: $yellow;
+          }
+        }
+      }
+    }
+
+    &:active,
+    &:hover,
+    &:focus {
+      .icon--small {
+        svg {
+          fill: $sunshine;
+
+          .cls-2,
+          .st0 {
+            stroke: $yellow;
+          }
+        }
+      }
+    }
+  }
+
+  figcaption::after,
+  .figcaption::after {
+    border-bottom-color: $white;
+  }
+
+  figcaption,
+  .figcaption {
+    background-color: $white;
+    color: $text-color;
+  }
+
+  .button-with-icon {
+    color: $sunshine;
+
+    svg {
+      fill: $white;
+
+      .cls-2,
+      .st0 {
+        stroke: $yellow;
+      }
+    }
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: $yellow;
+      background-color: transparent;
+
+      svg {
+        fill: $sunshine;
+
+        .cls-2,
+        .st0 {
+          stroke: $yellow;
+        }
+      }
+    }
+  }
+
+  .audio-transcript--trigger {
+    color: $sunshine;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $yellow;
+    }
+  }
+
+  .audio-transcript__drawer {
+    background-color: $white;
+    color: $text-color;
+
+    &:after {
+      border-bottom-color: $white;
+    }
+  }
+}
+
+// Audio Component
+.audio__wrapper {
+  border: 2px solid $blue-gray;
+  background-color: $blue-gray;
+
+  .button-with-icon {
+    color: $sunshine;
+
+    svg {
+      fill: $white;
+
+      .cls-2,
+      .st0 {
+        stroke: $yellow;
+      }
+    }
+
+    &:active,
+    &:hover,
+    &:focus {
+      color: $white;
+      background-color: transparent;
+
+      svg {
+        fill: $white;
+
+        .cls-2,
+        .st0 {
+          stroke: $yellow;
+        }
+      }
+    }
+  }
+}
+
+// comparison
+.comparison__button {
+  color: $white;
+
+  svg {
+    fill: $white;
+
+    .cls-2,
+    .st0 {
+      stroke: $yellow;
+    }
+  }
+
+  &:active,
+  &:hover {
+    color: $white;
+
+    svg {
+      fill: $sunshine;
+
+      .cls-2,
+      .st0 {
+        stroke: $yellow;
+      }
+    }
+  }
+
+  &:focus {
+    svg {
+      fill: $sunshine;
+
+      .cls-2,
+      .st0 {
+        stroke: $yellow;
+      }
+    }
+  }
+}
+
+.zoom-marker-inner,
+.zoom-close {
+  background-color: rgba($white, .8);
+}
+
+.footer {
+  background: linear-gradient(90deg, $blue-40, $blue-40);
+
+  .social-media__item {
+    svg {
+      fill: $teal;
+
+      .cls-2,
+      .st0 {
+        stroke: $orange;
+      }
+    }
+
+    &:active,
+    &:hover {
+      svg {
+        fill: $blue;
+
+        .cls-2,
+        .st0 {
+          stroke: $orange;
+        }
+      }
+    }
+  }
+}

@@ -29,13 +29,13 @@
     display: block;
 
     svg {
-      fill: $border;
+      fill: $next-icon;
     }
 
     &:active,
     &:hover {
       svg {
-        fill: $primary;
+        fill: $next-icon-active;
       }
     }
   }
