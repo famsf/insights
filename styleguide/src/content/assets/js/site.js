@@ -20,6 +20,8 @@
         // This is required to create hashtag sections and scroll-to links.
         var sectionElements = $('.js-section');
         var sectionIds = [];
+        // Set variable to be at zero when scrolling, one if a link has been clicked.
+        var jumpSection = 0;
         var getSectionIds = function () {
           for (var i = sectionElements.length - 1; i >= 0; i--) {
             sectionIds.unshift($(sectionElements[i]).attr('id'));
@@ -106,13 +108,19 @@
                 $(dashboardLinks[i]).removeClass('active');
               }
             }
-            // Make sure we scroll to the top of the active section.
-            sectionSelector.scrollTop(0);
+            // Make sure we scroll to the top of the active section if a link was clicked.
+            if (jumpSection == 1) {
+              sectionSelector.scrollTop(0);
+              jumpSection = 0;
+            }
           },
           afterLoad: function(anchorLink, index){
               setTimeout(function() {
                 $('.js-loading', context).fadeOut(500);
               }, 2000);
+              $('.dashboard__nav-item').click( function(){
+                jumpSection = 1;
+              })
           },
           afterRender: function(){
             // Complete lazy load on the first active section and hide the loader.
@@ -154,6 +162,7 @@
       $('.js-wordslider', context).once().bxSlider({
         mode: 'fade',
         pager: false,
+        controls: false,
         auto: true,
         speed: 2000,
         pause: 3000
@@ -172,10 +181,11 @@
           minSlides: 2,
           maxSlides: 3,
           slideMargin: 0,
+          preloadImages: 'visible',
           onSlideAfter: function(){
             // Do things after slide is loaded.
             // Load images in slider.
-            $('.horizontal-slider').find('img[data-src],div[data-bg]').lazyLoadXT();
+            $('.horizontal-slider').find('img[data-src],div[data-bg]').lazyLoadXT({show:true});
           }
         });
         var horizontalPrev = $(sliderInstance).parents('.js-horizontal-slider__wrapper').find('.horizontal-slider-prev', context);

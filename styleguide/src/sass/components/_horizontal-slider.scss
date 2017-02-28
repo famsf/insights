@@ -13,6 +13,7 @@
   max-width: 100%;
   margin: 0px auto;
   position: relative;
+  transition: all .7s ease;
 }
 
 .horizontal-slider {
@@ -28,9 +29,13 @@
     width: auto;
   }
   img,
-  .video-inline {
+  .video-inline,
+  .figure__wrapper {
     max-height:180px;
     width: auto;
+  }
+  img:not(.lazy-loaded) {
+    height: 180px; //Adds height while image is loading.
   }
 }
 
@@ -60,8 +65,12 @@
   border-radius: 50%;
   width: 3.4rem;
   height: 3.4em;
+  transition: background-color .7s ease;
   .icon--med {
     margin: auto;
 
+  }
+  :hover {
+    background-color: transparentize($background-d, .8);
   }
 }
