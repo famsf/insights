@@ -160,30 +160,34 @@
       });
 
       // Start each horizontal slider
-      $('.js-horizontal-slider', context).each(function(i){
-        var horizontalSlider = $(this).once().bxSlider({
+       $('.js-horizontal-slider', context).each( function() {
+        var sliderInstance =$(this).bxSlider({
           mode: 'horizontal',
           pager: false,
           controls: false,
           speed: 500,
           pause: 3000,
           touchEnabled: true,
+          slideWidth: 320,
+          minSlides: 2,
+          maxSlides: 3,
+          slideMargin: 0,
           onSlideAfter: function(){
             // Do things after slide is loaded.
             // Load images in slider.
             $('.horizontal-slider').find('img[data-src],div[data-bg]').lazyLoadXT();
           }
         });
-        var horizontalPrev = $(this).parents('.js-horizontal-slider__wrapper').find('.horizontal-slider-prev', context);
-        var horizontalNext = $(this).parents('.js-horizontal-slider__wrapper').find('.horizontal-slider-next', context);
+        var horizontalPrev = $(sliderInstance).parents('.js-horizontal-slider__wrapper').find('.horizontal-slider-prev', context);
+        var horizontalNext = $(sliderInstance).parents('.js-horizontal-slider__wrapper').find('.horizontal-slider-next', context);
 
         horizontalPrev.click( function(event) {
           event.preventDefault();
-          horizontalSlider.goToPrevSlide()
+          sliderInstance.goToPrevSlide()
         });
         horizontalNext.click( function(event) {
           event.preventDefault();
-          horizontalSlider.goToNextSlide()
+          sliderInstance.goToNextSlide()
         });
       });
       // Drop caps
