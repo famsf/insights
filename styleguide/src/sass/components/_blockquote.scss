@@ -13,10 +13,24 @@ blockquote {
 
 .standalone-quote {
   @include adjust-font-size-to($h2-font-size, 1.35);
-  padding-bottom: rhythm(.75);
+  position: relative;
+  border-top: $decorative-border;
+  padding: rhythm(1) 0;
+  text-align: center;
 
-  p {
-    margin-bottom: 0;
+  &:before {
+    content: '“';
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    display: inline-block;
+    font-size: 75px;
+    line-height: 1.15em;
+    background-color: $tertiary;
+    color: $white;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
   }
 
   .l-1up & {
@@ -25,6 +39,11 @@ blockquote {
     p {
       max-width: 100%;
     }
+  }
+
+  p {
+    margin-bottom: 0;
+    max-width: 100%;
   }
 }
 
