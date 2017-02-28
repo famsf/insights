@@ -1,0 +1,27 @@
+uuid: 35e0977b-dca8-4528-8df0-6cf2b2993e2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video_embed.field_video_source
+    - paragraphs.paragraphs_type.video_embed
+  module:
+    - video
+id: paragraph.video_embed.default
+targetEntityType: paragraph
+bundle: video_embed
+mode: default
+content:
+  field_video_source:
+    weight: 0
+    settings:
+      file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
+      allowed_providers:
+        youtube: youtube
+      uri_scheme: public
+    third_party_settings: {  }
+    type: video_embed
+hidden:
+  created: true
+  status: true
+  uid: true
