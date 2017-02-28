@@ -19,6 +19,18 @@ function famsf_digital_stories_theme_preprocess_node(&$variables) {
         $library = $entity->get('field_theme')->first();
         $variables['#attached']['library'][] = 'famsf_digital_stories_theme/' . $library->value;
     }
+    // custom theme path variable
+    $variables['custom_theme'] = '';
+    if (NULL !== $entity
+        && method_exists($entity, 'hasField')
+        && $entity->hasField('field_theme')
+        && NULL !== $entity->get('field_theme')->first()
+    ) {
+        $library = $entity->get('field_theme')->first();
+        if (substr( $library->value, 0, 8 ) === "de-young") {
+            $variables['custom_theme'] = 'deyoung';
+        }
+    }
 }
 
 function famsf_digital_stories_theme_preprocess_page(&$variables) {
@@ -36,6 +48,18 @@ function famsf_digital_stories_theme_preprocess_page(&$variables) {
                 $sectionTitles[] = $section->field_card_section_title->value;
             }
             $variables['sectionTitles'] = $sectionTitles;
+        }
+    }
+    // custom theme path variable
+    $variables['custom_theme'] = '';
+    if (NULL !== $entity
+        && method_exists($entity, 'hasField')
+        && $entity->hasField('field_theme')
+        && NULL !== $entity->get('field_theme')->first()
+    ) {
+        $library = $entity->get('field_theme')->first();
+        if (substr( $library->value, 0, 8 ) === "de-young") {
+            $variables['custom_theme'] = 'deyoung';
         }
     }
 }
@@ -90,6 +114,44 @@ function famsf_digital_stories_theme_preprocess_field(&$variables) {
             && NULL !== $paragraph->get('field_button_style')->first()
         ) {
             $variables['items'][0]['content']['#options']['attributes']['class'][] = $paragraph->get('field_button_style')->first()->value;
+        }
+    }
+
+    // Find out what type of entity we have.
+    $route = explode('.', Drupal::routeMatch()->getRouteName());
+    // Get the hero from the entity if it exists.
+    /** @var  Drupal\node\Entity\Node $entity */
+    $entity = \Drupal::routeMatch()->getParameter($route[1]);
+    // custom theme path variable
+    $variables['custom_theme'] = '';
+    if (NULL !== $entity
+        && method_exists($entity, 'hasField')
+        && $entity->hasField('field_theme')
+        && NULL !== $entity->get('field_theme')->first()
+    ) {
+        $library = $entity->get('field_theme')->first();
+        if (substr( $library->value, 0, 8 ) === "de-young") {
+            $variables['custom_theme'] = 'deyoung';
+        }
+    }
+}
+
+function famsf_digital_stories_theme_preprocess_paragraph(&$variables) {
+    // Find out what type of entity we have.
+    $route = explode('.', Drupal::routeMatch()->getRouteName());
+    // Get the hero from the entity if it exists.
+    /** @var  Drupal\node\Entity\Node $entity */
+    $entity = \Drupal::routeMatch()->getParameter($route[1]);
+    // custom theme path variable
+    $variables['custom_theme'] = '';
+    if (NULL !== $entity
+        && method_exists($entity, 'hasField')
+        && $entity->hasField('field_theme')
+        && NULL !== $entity->get('field_theme')->first()
+    ) {
+        $library = $entity->get('field_theme')->first();
+        if (substr( $library->value, 0, 8 ) === "de-young") {
+            $variables['custom_theme'] = 'deyoung';
         }
     }
 }
