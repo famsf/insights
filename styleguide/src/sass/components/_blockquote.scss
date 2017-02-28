@@ -15,7 +15,7 @@ blockquote {
   @include adjust-font-size-to($h2-font-size, 1.35);
   position: relative;
   border-top: $decorative-border;
-  padding: rhythm(1) 0;
+  padding: rhythm(1.25) 0 rhythm(1);
   text-align: center;
 
   &:before {
