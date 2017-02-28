@@ -11,14 +11,25 @@ blockquote {
   @include adjust-font-size-to($h3-font-size, 1.25);
 }
 
-.pull-quote {
+.standalone-quote {
+  @include adjust-font-size-to($h2-font-size, 1.35);
+  padding-bottom: rhythm(.75);
 
   p {
     margin-bottom: 0;
   }
+
+  .l-1up & {
+    max-width: 75%;
+
+    p {
+      max-width: 100%;
+    }
+  }
 }
 
-.pull-quote__cite {
+.standalone-quote__cite {
+  @include adjust-font-size-to($crumb, .6);
   margin: rhythm(.25) 0 0 0;
   font-family: $roboto;
   font-style: italic;
