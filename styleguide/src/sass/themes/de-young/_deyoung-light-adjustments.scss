@@ -37,6 +37,7 @@ figcaption,
 }
 
 // Deep Dives & Comparison
+.horizontal-slider__wrapper,
 .comparison__answer,
 .deep-dive {
   color: $white;
@@ -106,6 +107,8 @@ figcaption,
     color: $text-color;
   }
 
+  .horizontal-slider-next,
+  .horizontal-slider-prev,
   .button-with-icon {
     color: $sunshine;
 
