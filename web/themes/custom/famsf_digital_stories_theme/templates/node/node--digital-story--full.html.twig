@@ -67,6 +67,8 @@
  *
  */
 #}
+{% set boldTitle = (node.field_title_style.value == 'has-backdrop' or node.field_title_style.value == 'has-bold-outlined') %}
+
 {% set classes = [
 logged_in? 'admin__article'
 ] %}
@@ -74,6 +76,18 @@ logged_in? 'admin__article'
 'site-hero',
 node.field_background_image.entity.fileuri?'':'pattern'
 ] %}
+{% set sectionTitleWrapperClasses = [
+boldTitle?'site-hero__title--bold animated':'site-hero__title',
+node.field_title_position.value,
+node.field_title_style.value
+] %}
+{% set sectionTitleClasses = [
+'animated',
+boldTitle?'':'fadeIn',
+boldTitle?'delay-1250':'delay-1500',
+'js-section-hero--get_height'
+] %}
+
 <article{{ attributes.addClass(classes) }}>
 
     {{ title_prefix }}
@@ -95,8 +109,12 @@ node.field_background_image.entity.fileuri?'':'pattern'
     {% endif %}
     <section class="js-section pp-scrollable" id="start">
         <div class="{{ wrapperClasses|join(' ') }}" {% if node.field_site_hero_background_image.value is not empty %}data-bg="{{ file_url(node.field_site_hero_background_image.entity.fileuri) }}" {% endif %}>
-            <div class="site-hero__title {{ node.field_title_style.value }} {{ node.field_title_position.value }}">
+            <div class="{{ sectionTitleWrapperClasses|join(' ') }}">
+                {% if boldTitle %}
+                    <div class="animated-border--top"></div>
+                {% endif %}
                 <div class="js-section-hero--get_height">
+
                     {% if node.field_theme.value starts with 'legion' %}
                     <span class="site-hero__logo animated fadeIn delay-1500"><a href="https://legionofhonor.famsf.org/" >Legion of Honor Museum</a></span>
                     {% else %}
@@ -105,9 +123,15 @@ node.field_background_image.entity.fileuri?'':'pattern'
                     <h1 class="animated fadeIn delay-1500"> {{ label }}</h1>
                     <h2 class="animated fadeIn delay-1500">{{ node.field_exhibition_dates.value }}</h2>
                 </div>
+                {% if not boldTitle %}
                 <div class="site-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
                 <div class="site-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
+                {% endif %}
+                {% if boldTitle %}
+                    <div class="animated-border--bottom"></div>
+                {% endif %}
             </div>
+
         </div>
         <button class="js-next-page next-page animated fadeIn delay-100">
             <div class="icon--xsmall">
