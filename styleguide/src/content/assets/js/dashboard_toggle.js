@@ -32,6 +32,8 @@
         }
         // Slide the dashboard to position.
         dashboard.toggleClass('js-closed js-open');
+        // Load images in dashboard.
+        $(dashboard).find('img[data-src],div[data-bg]').lazyLoadXT({show:true});
       });
       // Click the background to close the dashboard.
       dashboardOverlay.click(function() {

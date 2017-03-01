@@ -24,15 +24,6 @@
   }
 }
 
-// Next page
-.next-page {
-  background: $blue-40; /* Old browsers */
-  background: -moz-linear-gradient(left,  $blue-40 0%, $blue-40 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left,  $blue-40 0%, $blue-40 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right,  $blue-40 0%, $blue-40 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  box-shadow: none;
-}
-
 // Image Captions
 figcaption::after,
 .figcaption::after {
@@ -46,6 +37,7 @@ figcaption,
 }
 
 // Deep Dives & Comparison
+.horizontal-slider__wrapper,
 .comparison__answer,
 .deep-dive {
   color: $white;
@@ -55,7 +47,10 @@ figcaption,
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  .dropcap,
+  .wysiwyg-enlarged,
+  .lede {
     color: $white;
   }
 
@@ -112,6 +107,8 @@ figcaption,
     color: $text-color;
   }
 
+  .horizontal-slider-next,
+  .horizontal-slider-prev,
   .button-with-icon {
     color: $sunshine;
 

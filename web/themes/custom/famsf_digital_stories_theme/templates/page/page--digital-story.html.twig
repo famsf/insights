@@ -84,7 +84,7 @@
         {% if node.field_store_item_link.uri is not empty %}
         <a class="footer-link" href="{{ node.field_store_item_link.uri }}">
           {% if node.field_store_item_photo.entity.fileuri is not empty %}
-          <img src="{{ file_url(node.field_store_item_photo.entity.fileuri) }}" alt="{{ node.field_store_item_photo.entity.alt }}">
+          <img data-src="{{ file_url(node.field_store_item_photo.entity.fileuri) }}" alt="{{ node.field_store_item_photo.entity.alt }}">
           {% endif %}
           {{ node.field_store_item_title.value }}
         </a>
