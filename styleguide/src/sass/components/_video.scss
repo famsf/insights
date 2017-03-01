@@ -9,3 +9,7 @@
   width: 100%;
   display: block;
 }
+
+.video-embed-wrapper {
+  @include intrinsic-ratio();
+}
