@@ -31,13 +31,16 @@
         var animateInSectionView  = function(animatedItems, numberOfAnimatedItems, sectionSelector, loadableImages, numberOfloadableImages) {
           for (var i = 0; i < numberOfAnimatedItems; i++) {
             if ($(animatedItems[i]).offset().top < $(sectionSelector).height()){
+              // Get the animation delay value.
                 var delayNumber = $(animatedItems[i]).attr('class').match(/\d+/g); // ... matching "delay-?"
                 var delayNumInt = parseInt(delayNumber[0]);
                 if (delayNumInt.length) {
+                  // If the animation has delay use setTimeout.
                   setTimeout(function() {
                     $(animatedItems[i]).addClass('go');
                   }, delayNumInt);
                 } else {
+                  // Animation starts without a delay.
                   $(animatedItems[i]).addClass('go');
                 }
             }
