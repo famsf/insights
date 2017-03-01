@@ -31,7 +31,15 @@
         var animateInSectionView  = function(animatedItems, numberOfAnimatedItems, sectionSelector, loadableImages, numberOfloadableImages) {
           for (var i = 0; i < numberOfAnimatedItems; i++) {
             if ($(animatedItems[i]).offset().top < $(sectionSelector).height()){
-              $(animatedItems[i]).addClass('go');
+                var delayNumber = $(animatedItems[i]).attr('class').match(/\d+/g); // ... matching "delay-?"
+                var delayNumInt = parseInt(delayNumber[0]);
+                if (delayNumInt.length) {
+                  setTimeout(function() {
+                    $(animatedItems[i]).addClass('go');
+                  }, delayNumInt);
+                } else {
+                  $(animatedItems[i]).addClass('go');
+                }
             }
           }
           for (var j = 0; j < numberOfloadableImages; j++) {
@@ -151,6 +159,7 @@
         });
       } else {
         // The user is on a page that is  not using pagepiling so we should lazy load with auto init.
+        $('.styleguide-component').addClass('animatedParent');
         $.extend($.lazyLoadXT, {
           autoInit: true,
           visibleOnly: false,
