@@ -21,15 +21,15 @@
   }
 
   &.js-closed {
-    left: -110vw;
+    right: -110vw;
 
     @include breakpoint($bp2) {
-      left: -50vw;
+      right: -50vw;
     }
   }
 
   &.js-open {
-    left: 0;
+    right: 0;
   }
 }
 
@@ -96,7 +96,7 @@ footer {
   @extend %general-background;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 200;
   cursor: pointer;
   transition: all .25s ease;
