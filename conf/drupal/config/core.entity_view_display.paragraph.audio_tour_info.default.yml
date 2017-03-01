@@ -1,0 +1,58 @@
+uuid: b29e8b8d-5a81-46d6-85f6-04ec990eeab9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.audio_tour_info.field_audio_tour_app_store_link
+    - field.field.paragraph.audio_tour_info.field_audio_tour_link
+    - field.field.paragraph.audio_tour_info.field_audio_tour_teaser
+    - field.field.paragraph.audio_tour_info.field_image
+    - paragraphs.paragraphs_type.audio_tour_info
+  module:
+    - image
+    - link
+    - text
+id: paragraph.audio_tour_info.default
+targetEntityType: paragraph
+bundle: audio_tour_info
+mode: default
+content:
+  field_audio_tour_app_store_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_audio_tour_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+  field_audio_tour_teaser:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+hidden:
+  created: true
+  uid: true

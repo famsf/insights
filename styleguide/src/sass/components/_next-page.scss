@@ -6,13 +6,9 @@
  */
 .next-page {
   @extend %text-hidden;
-  background: $background-d; /* Old browsers */
-  background: -moz-linear-gradient(left,  $background-c 0%, $background-d 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left,  $background-c 0%,$background-d 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right,  $background-c 0%,$background-d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  border: 0;
-  box-shadow: 0 0 15px darken($background-d, 20%) inset;
+  background: transparent;
   display: block;
+  border: 0;
   margin: 1em auto 0;
   position: relative;
   text-align: center;
