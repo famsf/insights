@@ -28,6 +28,8 @@
           buttonClicked.find('.js-icon-arrow--up').show(0);
           buttonClicked.find('.js-icon-arrow--down').hide(0);
           changeThisPanel.removeClass("js-comparison__answer--is-closed").addClass("js-comparison__answer--is-open").slideDown(300);
+          // Load images in expandable area
+          $(changeThisPanel).find('img[data-src],div[data-bg]').lazyLoadXT();
         }
         else if (changeThisPanel.hasClass("js-comparison__answer--is-open")) {
           buttonClicked.find('.js-icon-arrow--down').show(0);

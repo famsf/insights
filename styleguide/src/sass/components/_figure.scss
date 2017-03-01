@@ -54,11 +54,34 @@ figure {
   cursor: pointer;
   padding: .5rem 0;
   display: block;
-  color: rgba($text-color, .8);
+
+  .icon--small {
+    svg {
+      fill: rgba($text-color, .8);
+    }
+  }
 
   &:link,
   &:visited {
-    color: rgba($text-color, .8);
+    .icon--small {
+      svg {
+        fill: rgba($text-color, .8);
+      }
+    }
+  }
+
+  &:active,
+  &:hover,
+  &:focus {
+    .icon--small {
+      svg {
+        fill: rgba($text-color, .8);
+      }
+    }
+  }
+
+  span {
+    @extend %element-invisible;
   }
 }
 
@@ -72,7 +95,7 @@ figcaption,
 figcaption::after,
 .figcaption::after {
   bottom: 100%;
-  left: 1.5rem;
+  left: .65rem;
   border: solid transparent;
   content: " ";
   height: 0;
@@ -128,4 +151,9 @@ figcaption,
   transition: all 1s ease;
   margin: 0;
   padding: 0;
+}
+
+//Optional slide down container.
+.figure__caption-reveal {
+  display: none;
 }

@@ -21,15 +21,15 @@
   }
 
   &.js-closed {
-    left: -110vw;
+    right: -110vw;
 
     @include breakpoint($bp2) {
-      left: -50vw;
+      right: -50vw;
     }
   }
 
   &.js-open {
-    left: 0;
+    right: 0;
   }
 }
 
@@ -96,7 +96,7 @@ footer {
   @extend %general-background;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: 200;
   cursor: pointer;
   transition: all .25s ease;
@@ -107,6 +107,18 @@ footer {
   display: -webkit-flex;
   align-items: center;
   padding: rhythm(.5);
+
+  .icon--med {
+    height: 1rem;
+    display: inline-block;
+    margin-top: -2px;
+  }
+
+  .icon--small {
+    height: .9rem;
+    display: inline-block;
+    margin-top: -8px;
+  }
 
   @include breakpoint($bp1) {
     top: 2em;
@@ -153,8 +165,21 @@ footer {
 
   @include breakpoint($bp1) {
     top: 2em;
+    margin-right: 1em;
     width: 2.78em;
     height: auto;
+  }
+
+  .icon--med {
+    height: 1rem;
+    display: inline-block;
+    margin-top: -2px;
+  }
+
+  .icon--small {
+    height: .9rem;
+    display: inline-block;
+    margin-top: -6px;
   }
 
   svg {
