@@ -19,11 +19,22 @@
     margin: 0 auto 60px;
     padding: 0;
     *zoom: 1;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
 }
 
 .bx-wrapper img {
     max-width: 100%;
     display: block;
+}
+
+.bxslider {
+  margin: 0;
+  padding: 0;
+}
+
+ul.bxslider {
+  list-style: none;
 }
 
 /** THEME
@@ -39,11 +50,11 @@
     // background: #fff;
 
     /*fix other elements on the page moving (on Chrome)*/
-    -webkit-transform: translatez(0);
-    -moz-transform: translatez(0);
-        -ms-transform: translatez(0);
-        -o-transform: translatez(0);
-        transform: translatez(0);
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        transform: translateZ(0);
 }
 
 .bx-wrapper .bx-pager,
@@ -57,7 +68,7 @@
 
 .bx-wrapper .bx-loading {
     min-height: 50px;
-    background: url(/assets/imgs/bx_loader.gif) center center no-repeat #fff;
+    background: url(/assets/imgs/bx_loader.gif) center center no-repeat;
     height: 100%;
     width: 100%;
     position: absolute;

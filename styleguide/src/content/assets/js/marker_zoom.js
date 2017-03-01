@@ -70,6 +70,8 @@
                   detailView.toggleClass('js-show-detail').fadeOut(500);
                 } else {
                   detailView.toggleClass('js-show-detail').fadeIn(500);
+                  // Load images in modal
+                  $(modalContent).find('img[data-src],div[data-bg]').lazyLoadXT();
                 }
                 setTimeout(function() {
                   // Show the close button.

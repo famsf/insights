@@ -298,3 +298,19 @@ http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacemen
   background: -webkit-linear-gradient(left,  $background-a 0%,$background-b 100%); /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to right,  $background-a 0%,$background-b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
+
+// Apply this to your video container to have it scale responsively
+// Use 75% for 4:3 videos
+@mixin intrinsic-ratio($selector: 'iframe', $ratio: 56.25%) {
+    position: relative;
+    padding-bottom: $ratio;
+    height: 0px;
+    margin-bottom: 10px;
+    #{$selector} {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+    }
+}

@@ -5,10 +5,15 @@ dependencies:
   config:
     - field.field.node.digital_story.field_addthis_code
     - field.field.node.digital_story.field_exhibition_dates
+    - field.field.node.digital_story.field_footer_feature
+    - field.field.node.digital_story.field_footer_title
+    - field.field.node.digital_story.field_google_analytics_id
+    - field.field.node.digital_story.field_main_footer_image
     - field.field.node.digital_story.field_member_ticket_link
     - field.field.node.digital_story.field_non_member_ticket_link
     - field.field.node.digital_story.field_section
     - field.field.node.digital_story.field_site_hero_background_image
+    - field.field.node.digital_story.field_sponsor
     - field.field.node.digital_story.field_store_item_link
     - field.field.node.digital_story.field_store_item_photo
     - field.field.node.digital_story.field_store_item_title
@@ -34,6 +39,21 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_footer_feature:
+    type: entity_reference_revisions_entity_view
+    weight: 116
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_footer_title:
+    weight: 114
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
   field_google_analytics_id:
     weight: 109
     label: hidden
@@ -41,9 +61,17 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+  field_main_footer_image:
+    weight: 115
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
   field_member_ticket_link:
     weight: 113
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -54,7 +82,7 @@ content:
     type: link
   field_non_member_ticket_link:
     weight: 112
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -79,9 +107,17 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+  field_sponsor:
+    type: entity_reference_revisions_entity_view
+    weight: 117
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
   field_store_item_link:
     weight: 110
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -92,7 +128,7 @@ content:
     type: link
   field_store_item_photo:
     weight: 111
-    label: above
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -100,7 +136,7 @@ content:
     type: image
   field_store_item_title:
     weight: 109
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
