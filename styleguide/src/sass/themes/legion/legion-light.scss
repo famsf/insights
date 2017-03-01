@@ -43,7 +43,7 @@ $primary: $denim;
 $primary-active: $midnight;
 $secondary: $azure;
 $tertiary: darken($magenta, 5%);
-$citation: $azure;
+$citation: $magenta;
 $hero-color: $midnight;
 
 $decorative-border: 8px solid transparent;
@@ -59,6 +59,9 @@ $section-hero-shadow: darken($magenta, 5%);
 $section-hero-shadow-b: $magenta;
 $section-hero-border-a: $magenta;
 $section-hero-border-b: $peach;
+
+$next-icon: $primary;
+$next-icon-active: $midnight;
 
 // Import theme specific components used in global
 @import 'legion-section-hero';

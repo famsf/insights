@@ -65,7 +65,7 @@ $text-color-invert: $white;
 $primary: $blue-gray;
 $primary-active: $teal;
 $secondary: $forest;
-$tertiary: $gray-dark;
+$tertiary: $green;
 $citation: $gray-dark;
 $hero-color: $white;
 
@@ -77,15 +77,21 @@ $zoom-background: $white;
 $text-shadow-color: $sage;
 $hero-content-text: $gray-dark;
 $hero-content-text-active: $black;
-$dropcap-color: $gray-dark;
-$dropcap-bg: $mint;
-$dropcap-text-shadow: $mint;
 
 $section-hero-text: $white;
 $section-hero-shadow: $green;
 $section-hero-shadow-b: $forest;
 $section-hero-border-a: $sage;
 $section-hero-border-b: $forest;
+
+$next-icon: $blue-gray;
+$next-icon-active: $teal;
+
+// icons
+$icon: $blue-gray;
+$icon-active: $teal;
+$icon-stroke: $blue;
+$icon-stroke-active: $blue;
 
 // Import theme specific components used in global
 @import 'deyoung-section-hero';
@@ -97,3 +103,4 @@ $section-hero-border-b: $forest;
 @import 'deyoung-typography';
 @import 'deyoung-wysiwyg';
 @import 'deyoung-figure';
+@import 'deyoung-icons';

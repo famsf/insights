@@ -24,29 +24,6 @@
   }
 }
 
-// Next page
-.next-page {
-  background: $blue-40; /* Old browsers */
-  background: -moz-linear-gradient(left,  $blue-40 0%, $blue-40 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(left,  $blue-40 0%, $blue-40 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to right,  $blue-40 0%, $blue-40 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  box-shadow: none;
-
-  .icon--xsmall {
-
-    svg {
-      fill: $primary;
-    }
-
-    &:active,
-    &:hover {
-      svg {
-        fill: $primary-active;
-      }
-    }
-  }
-}
-
 // Image Captions
 figcaption::after,
 .figcaption::after {
@@ -60,6 +37,7 @@ figcaption,
 }
 
 // Deep Dives & Comparison
+.horizontal-slider__wrapper,
 .comparison__answer,
 .deep-dive {
   color: $white;
@@ -69,22 +47,52 @@ figcaption,
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  .dropcap,
+  .wysiwyg-enlarged,
+  .lede {
     color: $white;
   }
 
   .figcaption-cta {
-    color: $sunshine;
+    .icon--small {
+      svg {
+        fill: $white;
+
+        .cls-2,
+        .st0 {
+          stroke: $yellow;
+        }
+      }
+    }
 
     &:link,
     &:visited {
-      color: $sunshine;
+      .icon--small {
+        svg {
+          fill: $white;
+
+          .cls-2,
+          .st0 {
+            stroke: $yellow;
+          }
+        }
+      }
     }
 
     &:active,
     &:hover,
     &:focus {
-      color: $yellow;
+      .icon--small {
+        svg {
+          fill: $sunshine;
+
+          .cls-2,
+          .st0 {
+            stroke: $yellow;
+          }
+        }
+      }
     }
   }
 
@@ -99,11 +107,18 @@ figcaption,
     color: $text-color;
   }
 
+  .horizontal-slider-next,
+  .horizontal-slider-prev,
   .button-with-icon {
     color: $sunshine;
 
     svg {
-      fill: $sunshine;
+      fill: $white;
+
+      .cls-2,
+      .st0 {
+        stroke: $yellow;
+      }
     }
 
     &:active,
@@ -113,7 +128,12 @@ figcaption,
       background-color: transparent;
 
       svg {
-        fill: $yellow;
+        fill: $sunshine;
+
+        .cls-2,
+        .st0 {
+          stroke: $yellow;
+        }
       }
     }
   }
@@ -147,7 +167,12 @@ figcaption,
     color: $sunshine;
 
     svg {
-      fill: $sunshine;
+      fill: $white;
+
+      .cls-2,
+      .st0 {
+        stroke: $yellow;
+      }
     }
 
     &:active,
@@ -158,6 +183,11 @@ figcaption,
 
       svg {
         fill: $white;
+
+        .cls-2,
+        .st0 {
+          stroke: $yellow;
+        }
       }
     }
   }
@@ -169,6 +199,11 @@ figcaption,
 
   svg {
     fill: $white;
+
+    .cls-2,
+    .st0 {
+      stroke: $yellow;
+    }
   }
 
   &:active,
@@ -176,22 +211,55 @@ figcaption,
     color: $white;
 
     svg {
-      fill: $white;
+      fill: $sunshine;
+
+      .cls-2,
+      .st0 {
+        stroke: $yellow;
+      }
     }
   }
 
   &:focus {
     svg {
-      fill: $white;
+      fill: $sunshine;
+
+      .cls-2,
+      .st0 {
+        stroke: $yellow;
+      }
     }
   }
 }
 
 .zoom-marker-inner,
 .zoom-close {
-  background-color: rgba($sunshine, .8);
+  background-color: rgba($white, .8);
 }
 
 .footer {
   background: linear-gradient(90deg, $blue-40, $blue-40);
+
+  .social-media__item {
+    svg {
+      fill: $teal;
+
+      .cls-2,
+      .st0 {
+        stroke: $orange;
+      }
+    }
+
+    &:active,
+    &:hover {
+      svg {
+        fill: $blue;
+
+        .cls-2,
+        .st0 {
+          stroke: $orange;
+        }
+      }
+    }
+  }
 }

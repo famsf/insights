@@ -18,7 +18,7 @@
 
         <div class="l-3up">
           <article class="footer-section">
-            <a href="http://www.famsf.org/join"><img src="{{site.url}}/assets/imgs/footer/membership.png" alt="Join or Renew your Membership" /></a>
+            <a href="http://www.famsf.org/join"><img data-src="{{site.url}}/assets/imgs/footer/membership.png" alt="Join or Renew your Membership" /></a>
             <h3 class="footer-section__title"><a href="http://www.famsf.org/join">Become a Member</a></h3>
           </article>
         </div>
@@ -84,19 +84,43 @@
         <h4>Follow Us</h4>
         <ul class="social-media">
           <li class="social-media__item">
-            <a href="https://www.facebook.com/LegionofHonor/"><span>Facebook</span><i class="icon--small">{% include('svg/famsf-facebook-md.html') %}</i></a>
+            <a href="https://www.facebook.com/LegionofHonor/"><span>Facebook</span><i class="icon--small">
+            {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+            {% include('svg/famsf-facebook-md.svg') %}
+            {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+            {% include('svg/deyoung/famsf-facebook-md.svg') %}
+            {% endif %}</i></a>
           </li>
           <li class="social-media__item">
-            <a href="https://twitter.com/legionofhonor"><span>Twitter</span><i class="icon--small">{% include('svg/famsf-twitter-md.html') %}</i></a>
+            <a href="https://twitter.com/legionofhonor"><span>Twitter</span><i class="icon--small">
+            {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+            {% include('svg/famsf-twitter-md.svg') %}
+            {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+            {% include('svg/deyoung/famsf-twitter-md.svg') %}
+            {% endif %}</i></a>
           </li>
           <li class="social-media__item">
-            <a href="https://www.instagram.com/legionofhonor/"><span>Instagram</span><i class="icon--small">{% include('svg/famsf-instagram-md.html') %}</i></a>
+            <a href="https://www.instagram.com/legionofhonor/"><span>Instagram</span><i class="icon--small">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+            {% include('svg/famsf-instagram-md.svg') %}
+            {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+            {% include('svg/deyoung/famsf-instagram-md.svg') %}
+            {% endif %}</i></a>
           </li>
           <li class="social-media__item">
-            <a href="http://legionofhonormuseum.tumblr.com/"><span>Tumblr</span><i class="icon--small">{% include('svg/famsf-tumblr-md.html') %}</i></a>
+            <a href="http://legionofhonormuseum.tumblr.com/"><span>Tumblr</span><i class="icon--small">
+            {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+            {% include('svg/famsf-tumblr-md.svg') %}
+            {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+            {% include('svg/deyoung/famsf-tumblr-md.svg') %}
+            {% endif %}</i></a>
           </li>
           <li class="social-media__item">
-            <a href="http://www.youtube.com/famsf"><span>Youtube</span><i class="icon--small">{% include('svg/famsf-youtube-md.html') %}</i></a>
+            <a href="http://www.youtube.com/famsf"><span>Youtube</span><i class="icon--small">
+            {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+            {% include('svg/famsf-youtube-md.svg') %}
+            {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+            {% include('svg/deyoung/famsf-youtube-md.svg') %}
+            {% endif %}</i></a>
           </li>
         </ul>
       </div>

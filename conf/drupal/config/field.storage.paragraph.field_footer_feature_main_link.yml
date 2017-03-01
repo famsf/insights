@@ -1,0 +1,19 @@
+uuid: b7345d41-45a3-4503-bae1-f103d6d415bb
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+id: paragraph.field_footer_feature_main_link
+field_name: field_footer_feature_main_link
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

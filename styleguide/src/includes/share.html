@@ -5,8 +5,12 @@
 
 {% block component %}
 <div class="js-share">
-  <button class="share-button js-share-button button-with-icon">
-    <i class="icon--small">{% include('svg/famsf-share-sm.html') %}</i>
+  <button class="share-button js-share-button button-with-icon animated fadeIn delay-500">
+    <i class="icon--small">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+    {% include('svg/famsf-share-sm.svg') %}
+    {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+    {% include('svg/deyoung/famsf-share-sm.svg') %}
+    {% endif %}</i>
     <div>share</div>
   </button>
   <div class="share-expander js-share-expander js-share-expander--is-closed">

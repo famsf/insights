@@ -23,7 +23,11 @@
       </div>
     </div>
     <button class="next-page js-next-page animated fadeIn delay-100" >
-        <div class="icon--xsmall">{% include('svg/famsf-caret-down-sm.svg') %}</div>next page</button>
+        <div class="icon--xsmall">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+        {% include('svg/famsf-caret-down-sm.svg') %}
+        {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+        {% include('svg/deyoung/famsf-caret-down-sm.svg') %}
+        {% endif %}</div>next page</button>
   </section>
   <!-- Intro -->
 
@@ -45,7 +49,7 @@
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/Monet.jpg" alt="Photo of young Monet" />
             </div>
-            <a class="figcaption-cta js-figcaption-cta">image credit</a>
+            {% include('figcaption-cta.html') %}
             <figcaption><span class="title-of-art">Photograph of the young Monet </span> Étienne Carjat | ca.1865</figcaption>
           </figure>
         </div>
@@ -66,8 +70,17 @@
           <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
         </div>
       </div>
-      <div class="section-hero__figcaption">
-        <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
+      <div class="section-hero__figcaption animated fadeIn delay-600">
+        <a class="figcaption-cta js-section-hero__figcaption-cta">
+          <i class="icon--small">
+            {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+            {% include('svg/famsf-copyright-md.svg') %}
+            {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+            {% include('svg/deyoung/famsf-copyright-md.svg') %}
+            {% endif %}
+          </i>
+          <span>image credit</span>
+        </a>
         <span class="figcaption"><span class="title-of-art">L’exposition des Beaux-Arts</span> Gustave Doré | 1868 | Engraving | 32 x 55.3 cm | Bibliothèque nationale, Paris. | Photograph courtesy of Bibliothèque Nationale de France</span>
       </div>
     </div>
@@ -85,9 +98,9 @@
             <div class="l-2up">
               <figure>
                 <div class="figure__wrapper">
-                  <img src="{{ site.url }}/assets/imgs/art/Salon-of-1852-Gustave-Le-Gray.jpg" alt="" />
+                  <img data-src="{{ site.url }}/assets/imgs/art/Salon-of-1852-Gustave-Le-Gray.jpg" alt="" />
                 </div>
-                <a class="figcaption-cta js-figcaption-cta">image credit</a>
+                {% include('figcaption-cta.html') %}
                 <figcaption><span class="title-of-art">Photograph of the  Archives of the Salon of 1852</span> Gustave Le Gray | 1852 | Salt paper print | 19.4 x 23.6 cm. | Musee d'Orsay, Paris, France | &copy; RMN-Grand Palais / Art Resource, NY</figcaption>
               </figure>
             </div>
@@ -106,7 +119,7 @@
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/30_Bouguereau_Broken-Pitcher.jpg" alt="painting of trees" />
             </div>
-            <a class="figcaption-cta js-figcaption-cta">image credit</a>
+            {% include('figcaption-cta.html') %}
             <figcaption><span class="title-of-art">The Broken Pitcher</span>  William-Adolphe Bouguereau | 1891 | Oil on canvas | 53 x 33 in. (134.6 x 83.8 cm) | Fine Arts Museums of San Francisco, Bequest of M.H. de Young, 53162</figcaption>
           </figure>
         </div>
@@ -132,15 +145,25 @@
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/Low_tide.jpg" alt="The Pointe de La Hève at Low Tide" />
               <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
-                <a class="figcaption-cta js-figcaption-cta">image credit</a>
+                {% include('figcaption-cta.html') %}
                 <figcaption><span class="title-of-art">The Pointe de La Hève at Low Tide</span> | Claude Monet | 1865 | Oil on canvas | 35 1/2 x 59 1/4 in. (90.2 x 150.5 cm). | Kimbell Art Museum, Fort Worth, AP 1968.07 | Photograph by Robert LaPrelle | &copy; Kimbell Art Museum</figcaption>
                 <h3>Accepted!</h3>
                 <p>The 24-year-old Monet was successful in having his first submission approved for exhibition at the Salon. This work was also praised in the press: “Monet, unknown yesterday, has immediately made a name for himself with this single painting.” </p>
                 {% include('audio.html') %}
               </div>
               <button class="comparison__button js-comparison__button">
-                <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.svg') %}</i>
-                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
+                <i class="icon-arrow--down js-icon-arrow--down">
+                {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-caret-down-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-caret-down-sm.svg') %}
+                {% endif %}</i>
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">
+                {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-caret-up-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-caret-up-sm.svg') %}
+                {% endif %}</i>
               </button>
             </div>
           </figure>
@@ -151,14 +174,24 @@
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/Havre_dOrsay.jpg" alt="The Jetty at Le Havre" />
               <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
-                <a class="figcaption-cta js-figcaption-cta">image credit</a>
+                {% include('figcaption-cta.html') %}
                 <figcaption><span class="title-of-art">The Jetty at Le Havre</span> | Claude Monet | 1868 | Oil on canvas | Private collection | Photograph courtesy of Service de Documentation, Musée d'Orsay</figcaption>
                 <h3>Rejected!</h3>
                 <p>Monet submitted this seascape in 1868. The young artist had invested a significant sum of money in this large-scale canvas and had to beg his family for money to survive.</p>
               </div>
               <button class="comparison__button js-comparison__button">
-                <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.svg') %}</i>
-                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
+                <i class="icon-arrow--down js-icon-arrow--down">
+                {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-caret-down-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-caret-down-sm.svg') %}
+                {% endif %}</i>
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">
+                {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-caret-up-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-caret-up-sm.svg') %}
+                {% endif %}</i>
               </button>
             </div>
           </figure>
@@ -173,14 +206,22 @@
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/Camille_green_dress_image-comparison.jpg" alt="" />
               <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
-                <a class="figcaption-cta js-figcaption-cta">image credit</a>
+                {% include('figcaption-cta.html') %}
                 <figcaption><span class="title-of-art">Camille (The Woman with a Green Dress)</span> Claude Monet | 1866 | Oil on canvas | 91 x 59 1/2 in. (231 x 151 cm) | Kunsthalle Bremen, acquired with the assistance of  Galerievereins, 1906, Inv. Nr. 298-1906/1 | &copy; Kunsthalle Bremen. Foto: Karen Blindow</figcaption>
                 <h3>Accepted!</h3>
                 <p>This painting was not only accepted to the Salon of 1866, it was well received. This success reassured Monet&rsquo;s family, and his aunt agreed to lend him financial support.</p>
               </div>
               <button class="comparison__button js-comparison__button">
-                <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.svg') %}</i>
-                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
+                <i class="icon-arrow--down js-icon-arrow--down">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-caret-down-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-caret-down-sm.svg') %}
+                {% endif %}</i>
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-caret-up-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-caret-up-sm.svg') %}
+                {% endif %}</i>
               </button>
             </div>
           </figure>
@@ -191,14 +232,22 @@
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/16_luncheon_Bridgeman.jpg" alt="" />
               <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
-                <a class="figcaption-cta js-figcaption-cta">image credit</a>
+                {% include('figcaption-cta.html') %}
                 <figcaption><span class="title-of-art">The Luncheon</span>  Claude Monet | 1868 | Oil on canvas |  91 1/8 x 59 1/2 in. (231.5 x 151 cm) | Städel Museum, Frankfurt, Inv. No. SG 170 | &copy; Städel Museum - U. Edelmann - ARTOTHEK</figcaption>
                 <h3>Rejected!</h3>
                 <p>This scene of Monet&rsquo;s young family was rejected by the Salon of 1870. Monet could afford to rent the cozy house depicted here because he had recently been commissioned to paint portraits of a businessman&rsquo;s family.</p>
               </div>
               <button class="comparison__button js-comparison__button">
-                <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.svg') %}</i>
-                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
+                <i class="icon-arrow--down js-icon-arrow--down">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-caret-down-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-caret-down-sm.svg') %}
+                {% endif %}</i>
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-caret-up-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-caret-up-sm.svg') %}
+                {% endif %}</i>
               </button>
             </div>
           </figure>
@@ -236,9 +285,9 @@
         <div class="l-66-33--1">
           <figure>
             <div class="figure__wrapper">
-              <img src="{{ site.url }}/assets/imgs/art/6_Le-Gray_Chailly_BNF.jpg" alt="" />
+              <img data-src="{{ site.url }}/assets/imgs/art/6_Le-Gray_Chailly_BNF.jpg" alt="" />
             </div>
-            <a class="figcaption-cta js-figcaption-cta">image credit</a>
+            {% include('figcaption-cta.html') %}
             <figcaption><span class="title-of-art">The Pavé de Chailly</span> Gustave Le Gray | 1852 | Photograph | 10 7/8 x 15 1/8 in. (27.5 x 38.3 cm) | Bibliothèque nationale de France, Paris, Prints and Photographs Department | RESERVE FOL-EO-13 (2). &copy; Bibliothèque nationale de France</figcaption>
           </figure>
         </div>
@@ -272,8 +321,15 @@
           <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
         </div>
       </div>
-      <div class="section-hero__figcaption">
-        <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
+      <div class="section-hero__figcaption animated fadeIn delay-600">
+        <a class="figcaption-cta js-section-hero__figcaption-cta">
+          <i class="icon--small">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+          {% include('svg/famsf-copyright-md.svg') %}
+          {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+          {% include('svg/deyoung/famsf-copyright-md.svg') %}
+          {% endif %}</i>
+          <span>image credit</span>
+        </a>
         <span class="figcaption"><span class="title-of-art">Luncheon on the Grass</span> Claude Monet | 1865–1866 | Oil on canvas | 97 5/8 x 85 3/8 in. (248 x 217 cm) | Musée d'Orsay, Paris, RF 1987 12. | CAT: &copy; RMN-Grand Palais / Art Resource, NY</span>
       </div>
     </div>
@@ -289,18 +345,18 @@
         <div class="l-33-66--1">
           <figure>
             <div class="figure__wrapper">
-              <img src="{{ site.url }}/assets/imgs/art/14.1_Monet_luncheon_Art-Resource2.jpg" alt="" />
+              <img data-src="{{ site.url }}/assets/imgs/art/14.1_Monet_luncheon_Art-Resource2.jpg" alt="" />
             </div>
-            <a class="figcaption-cta js-figcaption-cta">image credit</a>
+            {% include('figcaption-cta.html') %}
             <figcaption><span class="title-of-art">Luncheon on the Grass</span> Claude Monet | 1865–1866 | Oil on canvas | 97 5/8 x 85 3/8 in. (248 x 217 cm) | Musée d'Orsay, Paris, RF 1987 12. | CAT: &copy; RMN-Grand Palais / Art Resource, NY</figcaption>
           </figure>
         </div>
         <div class="l-33-66--2">
           <figure>
             <div class="figure__wrapper">
-              <img src="{{ site.url }}/assets/imgs/art/14_Monet_luncheon_Art-Resource.jpg" alt="" />
+              <img data-src="{{ site.url }}/assets/imgs/art/14_Monet_luncheon_Art-Resource.jpg" alt="" />
             </div>
-            <a class="figcaption-cta js-figcaption-cta">image credit</a>
+            {% include('figcaption-cta.html') %}
             <figcaption><span class="title-of-art">Luncheon on the Grass</span> Claude Monet | 1865–1866 | Oil on canvas | 97 5/8 x 85 3/8 in. (248 x 217 cm) | Musée d'Orsay, Paris, RF 1987 12. | CAT: &copy; RMN-Grand Palais / Art Resource, NY</figcaption>
           </figure>
 
@@ -314,7 +370,7 @@
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/4_Watteau_Hunt_Bridgeman.jpg" alt="" />
             </div>
-            <a class="figcaption-cta js-figcaption-cta">image credit</a>
+            {% include('figcaption-cta.html') %}
             <figcaption><span class="title-of-art">The Halt during the Chase</span>  Antoine Watteau | 1718 &mdash; 1720 | 49 x 74 3/8 in. (124.5 x 189 cm) | The Wallace Collection, London, P416 | &copy; The Wallace Collection</figcaption>
           </figure>
         </div>
@@ -333,7 +389,7 @@
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/3_Manet_luncheon_Art-Resource.jpg" alt="" />
             </div>
-            <a class="figcaption-cta js-figcaption-cta">image credit</a>
+            {% include('figcaption-cta.html') %}
             <figcaption><span class="title-of-art">Luncheon on the Grass (Le Déjeuner sur l&rsquo;herbe)</span> Édouard Manet | 1863 | Oil on canvas | 81 7/8 x 104 1/8 in. (208 x 264.5 cm) | Musée d'Orsay, Paris, RF 1668. | CAT: &copy; RMN-Grand Palais / Art Resource, NY</figcaption>
           </figure>
         </div>
@@ -350,8 +406,15 @@
       <div class="section-hero__wrapper" data-bg="{{ site.url }}/assets/imgs/art/Plaut_pont-neuf_BNF.jpg">
         {% include('section-hero-title--optiona.html') %}
       </div>
-      <div class="section-hero__figcaption">
-        <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
+      <div class="section-hero__figcaption animated fadeIn delay-600">
+        <a class="figcaption-cta js-section-hero__figcaption-cta">
+          <i class="icon--small">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+          {% include('svg/famsf-copyright-md.svg') %}
+          {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+          {% include('svg/deyoung/famsf-copyright-md.svg') %}
+          {% endif %}</i>
+          <span>image credit</span>
+        </a>
         <span class="figcaption"><span class="title-of-art">Le Pont-Neuf et Île de la Cité</span> Charles-Henri Plaut | ca. 1865–1870 | Photograph | 13 3/8 x 12 5/8 in. (34 x 32 cm) | Bibliothèque nationale de France, Paris, PETFOL-VE-1431 | &copy; Bibliothèque nationale de France</span>
       </div>
     </div>
@@ -363,7 +426,7 @@
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/19_Quai_Art-Resource.jpg" alt="" />
             </div>
-            <a class="figcaption-cta js-figcaption-cta">image credit</a>
+            {% include('figcaption-cta.html') %}
             <figcaption><span class="title-of-art">Quai de Louvre</span> Claude Monet | 1867 | Oil on canvas |  25 5/8 x 36 1/4 in. (65 x 92 cm) | Gemeentemuseum Den Haag | &copy; Cameraphoto Arte, Venice | Art Resource, NY</figcaption>
           </figure>
         </div>
@@ -389,33 +452,45 @@
 
               <div class="zoom-group js-zoom-group">
                 <div class="zoom-marker-outer js-zoom-marker-outer" style="position: absolute; left:31%; top: 37%;">
-                    <a class="zoom-marker-inner animated fadeInDownShort delay-1000 js-zoom-marker-inner" href="#" title="Click to zoom"><span class="icon--small">{% include('svg/famsf-zoom-in-sm.html') %}</span> <div class="zoom-marker__text">Click to zoom</div></a>
+                    <a class="zoom-marker-inner animated fadeInDownShort delay-1000 js-zoom-marker-inner" href="#" title="Click to zoom"><span class="icon--small">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                    {% include('svg/famsf-zoom-in-sm.svg') %}
+                    {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                    {% include('svg/deyoung/famsf-zoom-in-sm.svg') %}
+                    {% endif %}</span> <div class="zoom-marker__text">Click to zoom</div></a>
                 </div>
                 <div class="zoom-detail-view js-zoom-detail-view" style="display:none;">
                   <h2>Partaking in a swim</h2>
-                  <img src="{{ site.url }}/assets/imgs/art/Grenouillere--zoom1.jpg" alt="image detail">
+                  <img data-src="{{ site.url }}/assets/imgs/art/Grenouillere--zoom1.jpg" alt="image detail">
                 </div>
               </div>
               <div class="zoom-group js-zoom-group">
                 <div class="zoom-marker-outer js-zoom-marker-outer" style="position: absolute; left:53%; top: 37%;">
-                    <a class="zoom-marker-inner animated fadeInDownShort delay-1000 js-zoom-marker-inner" href="#" title="Click to zoom"><span class="icon--small">{% include('svg/famsf-zoom-in-sm.html') %}</span> <div class="zoom-marker__text">Click to zoom</div></a>
+                    <a class="zoom-marker-inner animated fadeInDownShort delay-1000 js-zoom-marker-inner" href="#" title="Click to zoom"><span class="icon--small">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                    {% include('svg/famsf-zoom-in-sm.svg') %}
+                    {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                    {% include('svg/deyoung/famsf-zoom-in-sm.svg') %}
+                    {% endif %}</span> <div class="zoom-marker__text">Click to zoom</div></a>
                 </div>
                 <div class="zoom-detail-view js-zoom-detail-view" style="display:none;">
                   <h2>Conversing under the central tree</h2>
-                  <img src="{{ site.url }}/assets/imgs/art/Grenouillere--zoom2.jpg" alt="image detail">
+                  <img data-src="{{ site.url }}/assets/imgs/art/Grenouillere--zoom2.jpg" alt="image detail">
                 </div>
               </div>
               <div class="zoom-group js-zoom-group">
                 <div class="zoom-marker-outer js-zoom-marker-outer" style="position: absolute; left:82%; top: 25%;">
-                    <a class="zoom-marker-inner animated fadeInDownShort delay-1000 js-zoom-marker-inner" href="#" title="Click to zoom"><span class="icon--small">{% include('svg/famsf-zoom-in-sm.html') %}</span> <div class="zoom-marker__text">Click to zoom</div></a>
+                    <a class="zoom-marker-inner animated fadeInDownShort delay-1000 js-zoom-marker-inner" href="#" title="Click to zoom"><span class="icon--small">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                    {% include('svg/famsf-zoom-in-sm.svg') %}
+                    {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                    {% include('svg/deyoung/famsf-zoom-in-sm.svg') %}
+                    {% endif %}</span> <div class="zoom-marker__text">Click to zoom</div></a>
                 </div>
                 <div class="zoom-detail-view js-zoom-detail-view" style="display:none;">
                   <h2>Sitting leisurely at the café</h2>
-                  <img src="{{ site.url }}/assets/imgs/art/Grenouillere--zoom3.jpg" alt="image detail">
+                  <img data-src="{{ site.url }}/assets/imgs/art/Grenouillere--zoom3.jpg" alt="image detail">
                 </div>
               </div>
             </div>
-            <a class="figcaption-cta js-figcaption-cta">image credit</a>
+            {% include('figcaption-cta.html') %}
             <figcaption><span class="title-of-art">La Grenouillère</span>  Claude Monet | 1869 | Oil on canvas | 29 3/8 x 39 1/4 in. (74.6 x 99.7 cm) | The Metropolitan Museum of Art, New York, H.O. Havemeyer Collection, Bequest of Mrs. H.O. Havemeyer, 1929 | Metropolitan Museum of Art online</figcaption>
           </figure>
         </div>
@@ -433,7 +508,7 @@
         <div class="l-2up">
           <figure>
             <img data-src="{{ site.url }}/assets/imgs/art/Grenouillere--water.jpg" alt="">
-            <a class="figcaption-cta js-figcaption-cta">image credit</a>
+            {% include('figcaption-cta.html') %}
             <figcaption><span class="title-of-art">La Grenouillère</span>  Claude Monet | 1869 | Oil on canvas | 29 3/8 x 39 1/4 in. (74.6 x 99.7 cm) | The Metropolitan Museum of Art, New York, H.O. Havemeyer Collection, Bequest of Mrs. H.O. Havemeyer, 1929 | Metropolitan Museum of Art online</figcaption>
           </figure>
         </div>
@@ -453,10 +528,18 @@
 
             <button class="js-audio__button button-with-icon">
               <i class="js-icon--play icon--small">
-                {% include('svg/famsf-audio-play-sm.html') %}
+                {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-audio-play-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-audio-play-sm.svg') %}
+                {% endif %}
               </i>
               <i class="js-icon--pause icon--small" style="display:none;">
-                {% include('svg/famsf-pause-sm.html') %}
+                {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-pause-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-pause-sm.svg') %}
+                {% endif %}
               </i>
               <div>Listen to George Shakelford, Curator</div>
             </button>
@@ -497,7 +580,7 @@
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/21_Etretat_Harvard.jpg" alt="" />
             </div>
-            <a class="figcaption-cta js-figcaption-cta">image credit</a>
+            {% include('figcaption-cta.html') %}
             <figcaption><span class="title-of-art">The Porte d'Amont, Étretat</span> 1868 &mdash; 1869 | Oil on canvas | 31 1/8 x 38 3/4 in. (79.1 x 98.4 cm) | Harvard Art Museums/Fogg Museum, Cambridge, Gift of Mr. and Mrs. Joseph Pulitzer, Jr., 1957.163 | Image courtesy Harvard Art Museums</figcaption>
           </figure>
         </div>
@@ -518,13 +601,21 @@
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/Etretat_Harvard_detail_1.jpg" alt="" />
               <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
-              <a class="figcaption-cta js-figcaption-cta">image credit</a>
+              {% include('figcaption-cta.html') %}
               <figcaption><span class="title-of-art">The Porte d'Amont, Étretat</span> 1868 &mdash; 1869 | Oil on canvas | 31 1/8 x 38 3/4 in. (79.1 x 98.4 cm) | Harvard Art Museums/Fogg Museum, Cambridge, Gift of Mr. and Mrs. Joseph Pulitzer, Jr., 1957.163 | Image courtesy Harvard Art Museums</figcaption>
               <p>The rock formation is rendered in similar hues, contrasting with the heavy black that depicts wet stone revealed by the ebbing tide. </p>
               </div>
               <button class="comparison__button js-comparison__button">
-                <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.svg') %}</i>
-                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
+                <i class="icon-arrow--down js-icon-arrow--down">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-caret-down-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-caret-down-sm.svg') %}
+                {% endif %}</i>
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-caret-up-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-caret-up-sm.svg') %}
+                {% endif %}</i>
                 Color
               </button>
             </div>
@@ -536,13 +627,21 @@
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/Etretat_Harvard_detail_2.jpg" alt="" />
               <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
-              <a class="figcaption-cta js-figcaption-cta">image credit</a>
+              {% include('figcaption-cta.html') %}
               <figcaption><span class="title-of-art">The Porte d'Amont, Étretat</span> 1868 &mdash; 1869 | Oil on canvas | 31 1/8 x 38 3/4 in. (79.1 x 98.4 cm) | Harvard Art Museums/Fogg Museum, Cambridge, Gift of Mr. and Mrs. Joseph Pulitzer, Jr., 1957.163 | Image courtesy Harvard Art Museums</figcaption>
               <p>The firm and steady horizontal brushstrokes of the cliffs contrast with the fleeting horizontal bands of color that fill the sky.</p>
               </div>
               <button class="comparison__button js-comparison__button">
-                <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.svg') %}</i>
-                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
+                <i class="icon-arrow--down js-icon-arrow--down">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-caret-down-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-caret-down-sm.svg') %}
+                {% endif %}</i>
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-caret-up-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-caret-up-sm.svg') %}
+                {% endif %}</i>
                 Brushstroke
               </button>
             </div>
@@ -557,7 +656,7 @@
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/25_Trouville_Art-Resource.jpg" alt="" />
             </div>
-            <a class="figcaption-cta js-figcaption-cta">image credit</a>
+            {% include('figcaption-cta.html') %}
             <figcaption><span class="title-of-art">The Beach at Trouville</span> Claude Monet | 1870 | Oil on canvas | 21 1/4 x 25 1/2 in. (54 x 64.8 cm) | Wadsworth Atheneum Museum of Art, Hartford, The Ella Gallup Sumner and Mary Catlin Sumner Collection Fund, 1948.116 | Allen Phillips/ Wadsworth Atheneum</figcaption>
           </figure>
         </div>
@@ -575,10 +674,18 @@
 
             <button class="js-audio__button button-with-icon">
               <i class="js-icon--play icon--small">
-                {% include('svg/famsf-audio-play-sm.html') %}
+                {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-audio-play-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-audio-play-sm.svg') %}
+                {% endif %}
               </i>
               <i class="js-icon--pause icon--small" style="display:none;">
-                {% include('svg/famsf-pause-sm.html') %}
+                {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-pause-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-pause-sm.svg') %}
+                {% endif %}
               </i>
               <div>Listen to Esther Bell, Curator</div>
             </button>
@@ -603,8 +710,15 @@
       <div class="section-hero__wrapper" data-bg="{{ site.url }}/assets/imgs/art/Camille_green_dress.jpg">
         {% include('section-hero-title--optionc.html') %}
       </div>
-      <div class="section-hero__figcaption">
-        <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
+      <div class="section-hero__figcaption animated fadeIn delay-600">
+        <a class="figcaption-cta js-section-hero__figcaption-cta">
+          <i class="icon--small">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+          {% include('svg/famsf-copyright-md.svg') %}
+          {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+          {% include('svg/deyoung/famsf-copyright-md.svg') %}
+          {% endif %}</i>
+          <span>image credit</span>
+        </a>
         <span class="figcaption"><span class="title-of-art">Camille (The Woman with a Green Dress)</span> Claude Monet | 1866 | Oil on canvas | 91 x 59 1/2 in. (231 x 151 cm) | Kunsthalle Bremen, acquired with the assistance of  Galerievereins, 1906, Inv. Nr. 298-1906/1 | &copy; Kunsthalle Bremen. Foto: Karen Blindow</span>
       </div>
     </div>
@@ -614,7 +728,7 @@
           <figure>
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/15_Camile-Monet_Wikimedia-Commons.jpg" alt="" />
-              <a class="figcaption-cta js-figcaption-cta">image credit</a>
+              {% include('figcaption-cta.html') %}
               <figcaption><span class="title-of-art">Camille Doncieux Monet</span> Greiner | 1871 | Photograph</figcaption>
             </div>
           </figure>
@@ -624,7 +738,7 @@
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/Monet_Luncheon_Camille_cropped.jpg" alt="" />
             </div>
-            <a class="figcaption-cta js-figcaption-cta">image credit</a>
+            {% include('figcaption-cta.html') %}
             <figcaption><span class="title-of-art">Luncheon on the Grass</span> Claude Monet | 1865–1866 | Oil on canvas | 97 5/8 x 85 3/8 in. (248 x 217 cm) | Musée d'Orsay, Paris, RF 1987 12. | CAT: &copy; RMN-Grand Palais / Art Resource, NY</figcaption>
           </figure>
         </div>
@@ -663,7 +777,7 @@
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/26_Hyde-Park_NO-CREDIT-IN-BOOK.jpg" alt="" />
             </div>
-            <a class="figcaption-cta js-figcaption-cta">image credit</a>
+            {% include('figcaption-cta.html') %}
             <figcaption><span class="title-of-art">Hyde Park</span> Claude Monet | 1871 | Oil on canvas | 15 7/8 x 29 1/8 in. (40.5 x 74 cm) | Museum of Art, Rhode Island School of Design, Providence, Gift of Mrs. Murray S. Danforth, 42.218 | Photography by Erik Gould, courtesy of the Museum of Art, Rhode Island School of Design, Providence </figcaption>
           </figure>
           <!-- audio component -->
@@ -675,10 +789,18 @@
 
             <button class="js-audio__button button-with-icon">
               <i class="js-icon--play icon--small">
-                {% include('svg/famsf-audio-play-sm.html') %}
+                {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-audio-play-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-audio-play-sm.svg') %}
+                {% endif %}
               </i>
               <i class="js-icon--pause icon--small" style="display:none;">
-                {% include('svg/famsf-pause-sm.html') %}
+                {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-pause-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-pause-sm.svg') %}
+                {% endif %}
               </i>
               <div>Listen to Esther Bell, Curator</div>
             </button>
@@ -698,7 +820,7 @@
           <figure>
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/The-Port-of-Zaandam-Monet-1871.jpg" alt="" />
-            <a class="figcaption-cta js-figcaption-cta">image credit</a>
+            {% include('figcaption-cta.html') %}
             <figcaption><span class="title-of-art">The Port of Zaandam</span> Claude Monet | 1871 | Oil on canvas | 18 1/2  x 19 1/8 in. (47.5 x 73.5 cm) | Private collection</figcaption>
             </div>
           </figure>
@@ -717,10 +839,18 @@
             </audio>
             <button class="js-audio__button button-with-icon">
               <i class="js-icon--play icon--small">
-                {% include('svg/famsf-audio-play-sm.html') %}
+                {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-audio-play-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-audio-play-sm.svg') %}
+                {% endif %}
               </i>
               <i class="js-icon--pause icon--small" style="display:none;">
-                {% include('svg/famsf-pause-sm.html') %}
+                {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-pause-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-pause-sm.svg') %}
+                {% endif %}
               </i>
               <div>Listen to George Shakelford, Curator</div>
             </button>
@@ -750,7 +880,7 @@
         </div>
       </div>
       <div class="section-hero__figcaption">
-        <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
+        {% include('figcaption-cta.html') %}
         <span class="figcaption"><span class="title-of-art">The Magpie</span> Claude Monet | 1869 | Oil on canvas | 35 1/8 x 51 1/8 in. (89 x 130 cm) | Musée d'Orsay, Paris, RF 1984 164 | © RMN-Grand Palais (Musée d'Orsay) / Hervé Lewandowski | CAT : © RMN-Grand Palais / Art Resource, NY</span>
       </div>
     </div>
@@ -769,13 +899,21 @@
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/20_Magpie_Art-Resource.jpg" alt="" />
               <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
-                <a class="figcaption-cta js-figcaption-cta">image credit</a>
+                {% include('figcaption-cta.html') %}
                 <figcaption><span class="title-of-art">The Magpie</span> Claude Monet | 1869 | Oil on canvas | 35 1/8 x 51 1/8 in. (89 x 130 cm) | Musée d'Orsay, Paris, RF 1984 164 | © RMN-Grand Palais (Musée d'Orsay) / Hervé Lewandowski | CAT : © RMN-Grand Palais / Art Resource, NY</figcaption>
                 <p>While at first glance, <em>The Magpie</em> reads as a study in white, upon closer examination one discovers a careful orchestration of pink and blue undertones. This variation in tonal quality adds a sense of warmth to the composition while simultaneously creating depth through deep shadows.</p>
               </div>
               <button class="comparison__button js-comparison__button">
-                <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.svg') %}</i>
-                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
+                <i class="icon-arrow--down js-icon-arrow--down">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-caret-down-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-caret-down-sm.svg') %}
+                {% endif %}</i>
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-caret-up-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-caret-up-sm.svg') %}
+                {% endif %}</i>
               </button>
             </div>
           </figure>
@@ -786,13 +924,21 @@
             <div class="figure__wrapper">
               <img data-src="{{ site.url }}/assets/imgs/art/22_Bennecourt_Art-Resource.jpg" alt="" />
               <div class="comparison__answer js-comparison__answer js-comparison__answer--is-closed">
-                <a class="figcaption-cta js-figcaption-cta">image credit</a>
+                {% include('figcaption-cta.html') %}
                 <figcaption><span class="title-of-art">On the Bank of the Seine Bennecourt</span> Claude Monet | 1868 | Oil on canvas | 32 1/8 x 39 5/8 in. (81.5 x 100.7 cm) | The Art Institute of Chicago, Potter Palmer Collection, 1922.427 | &copy; The Art Institute of Chicago</figcaption>
                 <p><em>On the Bank of the Seine, Bennecourt</em> reveals Monet&rsquo;s working process and his willingness to let the viewer&rsquo;s eye do the work. Monet has divided the composition diagonally in half. The deep greens of the foreground add a sense of weight to the riverbank that contrasts with the pastels of the sun-drenched background. Yet within this composition, there are areas where the artist applies paint in startling ways. For example, the bright green patch in the foreground reads purely as a brushstroke and contrasts directly with the darker greens, which are applied in an even pattern that evokes blades of grass. The slight tonal variation between the flesh tone of the figure&rsquo;s face and the putty reflection of a roof of a building across the bank is another point where the viewer&rsquo;s eye works, filling in the distance needed to make this transition read as face and roof opposed to the juxtaposition of two squares of color.</p>
               </div>
               <button class="comparison__button js-comparison__button">
-                <i class="icon-arrow--down js-icon-arrow--down">{% include('svg/famsf-caret-down-sm.svg') %}</i>
-                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% include('svg/famsf-caret-up-sm.html') %}</i>
+                <i class="icon-arrow--down js-icon-arrow--down">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-caret-down-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-caret-down-sm.svg') %}
+                {% endif %}</i>
+                <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                {% include('svg/famsf-caret-up-sm.svg') %}
+                {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+                {% include('svg/deyoung/famsf-caret-up-sm.svg') %}
+                {% endif %}</i>
               </button>
             </div>
           </figure>
@@ -814,8 +960,15 @@
           <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
         </div>
       </div>
-      <div class="section-hero__figcaption">
-        <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
+      <div class="section-hero__figcaption animated fadeIn delay-600">
+        <a class="figcaption-cta js-section-hero__figcaption-cta">
+          <i class="icon--small">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+          {% include('svg/famsf-copyright-md.svg') %}
+          {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+          {% include('svg/deyoung/famsf-copyright-md.svg') %}
+          {% endif %}</i>
+          <span>image credit</span>
+        </a>
         <span class="figcaption"><span class="title-of-art">The Green Wave</span> Claude Monet | Oil on canvas | 19 1/8 x 25 1/2 in. (48.6 x 64.8 cm) | The Metropolitan Museum of Art, New York, H.O. Havemeyer Collection, Bequest of Mrs. H.O. Havemeyer, 1929, 29.100.111 | Metropolitan Museum of Art online</span>
       </div>
     </div>
