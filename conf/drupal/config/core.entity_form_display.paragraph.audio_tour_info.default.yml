@@ -12,6 +12,7 @@ dependencies:
   module:
     - image
     - link
+    - text
 id: paragraph.audio_tour_info.default
 targetEntityType: paragraph
 bundle: audio_tour_info
@@ -32,12 +33,12 @@ content:
     third_party_settings: {  }
     type: link_default
   field_audio_tour_teaser:
-    weight: 2
+    weight: 4
     settings:
-      rows: 5
+      size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
+    type: text_textfield
   field_image:
     weight: 0
     settings:

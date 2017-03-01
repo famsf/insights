@@ -1,16 +1,17 @@
-uuid: b3080ee7-6811-45b8-b81e-98e4f12f29fa
+uuid: 918e1166-95b0-4377-99a6-e11a75750723
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
+    - text
 id: paragraph.field_audio_tour_teaser
 field_name: field_audio_tour_teaser
 entity_type: paragraph
-type: string_long
+type: text
 settings:
-  case_sensitive: false
-module: core
+  max_length: 255
+module: text
 locked: false
 cardinality: 1
 translatable: true

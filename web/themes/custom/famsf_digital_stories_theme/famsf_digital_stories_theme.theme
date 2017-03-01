@@ -36,9 +36,11 @@ function famsf_digital_stories_theme_preprocess_page(&$variables) {
                 $sectionTitles[] = $section->field_card_section_title->value;
             }
         }
-        // Add footer link at the end
-        $sectionTitles[] = $entity->get('field_footer_title')->value;
+        if ($entity->hasField('field_footer_title') && NULL !== $entity->get('field_footer_title')->first()) {
+            // Add footer link at the end
+            $sectionTitles[] = $entity->get('field_footer_title')->value;
 
+        }
         $variables['sectionTitles'] = $sectionTitles;
     }
 }

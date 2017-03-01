@@ -11,6 +11,7 @@ dependencies:
   module:
     - image
     - link
+    - text
 id: paragraph.audio_tour_info.default
 targetEntityType: paragraph
 bundle: audio_tour_info
@@ -39,11 +40,11 @@ content:
     third_party_settings: {  }
     type: link
   field_audio_tour_teaser:
-    weight: 1
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
+    type: text_default
   field_image:
     weight: 0
     label: hidden
