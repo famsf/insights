@@ -85,12 +85,10 @@ node.field_title_style.value
 'animated',
 boldTitle?'':'fadeIn',
 boldTitle?'delay-1250':'delay-1500',
-'js-section-hero--get_height'
-] %}
-{% set heroTitleClasses = [
+'js-section-hero--get_height',
 boldTitle?'site-hero__title-text',
-'js-section-hero--get_height'
 ] %}
+
 {% set animatedClasses = [
 boldTitle?'animated fadeIn delay-1500',
 ] %}
@@ -119,7 +117,7 @@ boldTitle?'animated fadeIn delay-1500',
                 {% if boldTitle %}
                     <div class="animated-border--top"></div>
                 {% endif %}
-                <div class="{{ heroTitleClasses|join(' ') }}">
+                <div class="js-section-hero--get_height">
 
                     {% if node.field_theme.value starts with 'legion' %}
                     <span class="site-hero__logo {{ animatedClasses }}"><a href="https://legionofhonor.famsf.org/" >Legion of Honor Museum</a></span>
