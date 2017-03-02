@@ -74,7 +74,7 @@
     {{ content.field_content }}
 </div>
 <button class="comparison__button js-comparison__button">
-    <i class="icon-arrow--down js-icon-arrow--down">{{  include(active_theme_path() ~  '/svg/famsf-caret-down-sm.svg') }}</i>
-    <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{{ include(active_theme_path() ~  '/svg/famsf-caret-up-sm.svg') }}</i>
+    <i class="icon-arrow--down js-icon-arrow--down">{{  include(custom_theme_path ~  '/svg/famsf-caret-down-sm.svg') }}</i>
+    <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{{ include(custom_theme_path ~  '/svg/famsf-caret-up-sm.svg') }}</i>
     {{ paragraph.field_reveal_button_text.value }}
 </button>
