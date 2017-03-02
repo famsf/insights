@@ -11,7 +11,7 @@
 }
 
 .section-hero__wrapper {
-  @extend %hero; 
+  @extend %hero;
   height: 90vh;
 
   &.has-video {
@@ -25,6 +25,9 @@
 }
 
 .section-hero__figcaption {
+  &.animated {
+    @extend %fadeIn;
+  }
   padding: 0 rhythm(.5);
 }
 

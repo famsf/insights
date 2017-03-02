@@ -27,27 +27,36 @@
             sectionIds.unshift($(sectionElements[i]).attr('id'));
           }
         };
+        // Timer function for animation delay.
+        var delayTimer = function(element, delay) {
+          setTimeout(function() {
+            $(element).addClass('go');
+          }, delay);
+        }
         // Function to animate things in the viewport.
         var animateInSectionView  = function(animatedItems, numberOfAnimatedItems, sectionSelector, loadableImages, numberOfloadableImages) {
-          for (var i = 0; i < numberOfAnimatedItems; i++) {
+          for (var i = animatedItems.length - 1; i >= 0; i--) {
             if ($(animatedItems[i]).offset().top < $(sectionSelector).height()){
               // Get the animation delay value.
+              if (!$(animatedItems[i]).hasClass('go')) {
+                var thisItem = animatedItems[i];
                 var delayNumber = $(animatedItems[i]).attr('class').match(/\d+/g); // ... matching "delay-?"
                 var delayNumInt = parseInt(delayNumber[0]);
-                if (delayNumInt.length) {
+                if (delayNumber) {
                   // If the animation has delay use setTimeout.
-                  setTimeout(function() {
-                    $(animatedItems[i]).addClass('go');
-                  }, delayNumInt);
+                  delayTimer(thisItem, delayNumInt)
                 } else {
                   // Animation starts without a delay.
                   $(animatedItems[i]).addClass('go');
                 }
+              }
             }
-          }
+          };
           for (var j = 0; j < numberOfloadableImages; j++) {
-            if ($(loadableImages[j]).offset().top < $(sectionSelector).height()){
-              $(loadableImages[j]).lazyLoadXT();
+            if (!$(loadableImages[j]).hasClass('lazy-loaded')) {
+              if ($(loadableImages[j]).offset().top < $(sectionSelector).height()){
+                $(loadableImages[j]).lazyLoadXT();
+              }
             }
           }
         };
@@ -171,15 +180,13 @@
       }
 
       // Start the word fade slider
-      $('.js-wordslider').each(function(){
-        $(this).bxSlider({
-          mode: 'fade',
-          pager: false,
-          controls: false,
-          auto: true,
-          speed: $(this).data('speed'),
-          pause: $(this).data('pause')
-        })
+      $('.js-wordslider', context).once().bxSlider({
+        mode: 'fade',
+        pager: false,
+        controls: false,
+        auto: true,
+        speed: 2000,
+        pause: 3000
       });
 
       // Start each horizontal slider
