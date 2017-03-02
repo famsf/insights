@@ -1,0 +1,50 @@
+uuid: f839815c-2039-4474-ace5-eaffeec340af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_comparison_3up.field_center_image
+    - field.field.paragraph.image_comparison_3up.field_left_image_3up
+    - field.field.paragraph.image_comparison_3up.field_right_image_3up
+    - paragraphs.paragraphs_type.image_comparison_3up
+  module:
+    - paragraphs
+id: paragraph.image_comparison_3up.default
+targetEntityType: paragraph
+bundle: image_comparison_3up
+mode: default
+content:
+  field_center_image:
+    type: entity_reference_paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+  field_left_image_3up:
+    type: entity_reference_paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+  field_right_image_3up:
+    type: entity_reference_paragraphs
+    weight: 2
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

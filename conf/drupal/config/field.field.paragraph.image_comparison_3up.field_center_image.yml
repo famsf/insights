@@ -1,0 +1,90 @@
+uuid: 10e9a91c-521f-4302-8b6a-82b5d4ad6272
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_center_image
+    - paragraphs.paragraphs_type.comparison_image
+    - paragraphs.paragraphs_type.image_comparison_3up
+  module:
+    - entity_reference_revisions
+id: paragraph.image_comparison_3up.field_center_image
+field_name: field_center_image
+entity_type: paragraph
+bundle: image_comparison_3up
+label: 'Center Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      comparison_image: comparison_image
+    target_bundles_drag_drop:
+      1up_section:
+        weight: 22
+        enabled: false
+      2up_section:
+        weight: 23
+        enabled: false
+      audio_component:
+        weight: 24
+        enabled: false
+      audio_tour_info:
+        weight: 25
+        enabled: false
+      card_section:
+        weight: 26
+        enabled: false
+      comparison_image:
+        enabled: true
+        weight: 27
+      footer_feature:
+        weight: 28
+        enabled: false
+      image_comparison_3up:
+        weight: 29
+        enabled: false
+      image_comparison_section:
+        weight: 30
+        enabled: false
+      image_with_revealable_caption:
+        weight: 31
+        enabled: false
+      image_with_zoomable_markers:
+        weight: 32
+        enabled: false
+      link_or_download_button:
+        weight: 33
+        enabled: false
+      overlay_image:
+        weight: 34
+        enabled: false
+      photo_credits:
+        weight: 35
+        enabled: false
+      pull_quote:
+        weight: 36
+        enabled: false
+      revealable_read_more_section:
+        weight: 37
+        enabled: false
+      sponsor:
+        weight: 38
+        enabled: false
+      text_area:
+        weight: 39
+        enabled: false
+      video_source:
+        weight: 40
+        enabled: false
+      word_fader:
+        weight: 41
+        enabled: false
+      zoomable_area:
+        weight: 42
+        enabled: false
+field_type: entity_reference_revisions
