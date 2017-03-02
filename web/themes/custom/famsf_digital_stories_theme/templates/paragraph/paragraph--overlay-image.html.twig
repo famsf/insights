@@ -43,7 +43,7 @@
     </div>
    {{ content.field_photo_credits }}
     <button class="button-with-icon js-overlay-button figure__overlay-cta" data-text-collapsed="{{ paragraph.field_overlay_button_text.value }}" data-text-expanded="{{ paragraph.field_overlay_button_expanded.value }}">
-        <i class="icon--small">{{ include(active_theme_path() ~ '/svg/famsf-eye-sm.svg') }}</i>
+        <i class="icon--small">{{ include(active_theme_path() ~ '/svg/'~ custom_theme ~ '/famsf-eye-sm.svg') }}</i>
         <div class="button-with-icon__text">{{ paragraph.field_overlay_button_text.value }}</div>
     </button>
 </figure>

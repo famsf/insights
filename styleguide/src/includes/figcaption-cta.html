@@ -1,8 +1,10 @@
-<a class="figcaption-cta js-figcaption-cta">
-  <i class="icon--small">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
-  {% include('svg/famsf-copyright-md.svg') %}
-  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
-  {% include('svg/deyoung/famsf-copyright-md.svg') %}
-  {% endif %}</i>
-  <span>image credit</span>
-</a>
+<div class="figcaption__wrapper animated delay-1000">
+  <a class="figcaption-cta js-figcaption-cta ">
+    <i class="icon--small ">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+    {% include('svg/famsf-copyright-md.svg') %}
+    {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+    {% include('svg/deyoung/famsf-copyright-md.svg') %}
+    {% endif %}</i>
+    <span>image credit</span>
+  </a>
+</div>

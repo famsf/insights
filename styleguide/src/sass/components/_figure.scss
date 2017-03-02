@@ -133,6 +133,10 @@ figcaption,
   }
 }
 
+.figcaption__wrapper {
+  @extend %fadeIn;
+}
+
 .figure__zoomable-boundary {
   overflow: hidden;
   position: relative;
@@ -151,4 +155,9 @@ figcaption,
   transition: all 1s ease;
   margin: 0;
   padding: 0;
+}
+
+//Optional slide down container.
+.figure__caption-reveal {
+  display: none;
 }

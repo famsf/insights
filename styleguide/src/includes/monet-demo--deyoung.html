@@ -49,14 +49,14 @@
 
   <section class="js-section pp-scrollable" id="contending-with-convention">
     <div class="section-hero">
-      <div class="section-hero__wrapper animatedParent" data-bg="{{ site.url }}/assets/imgs/art/section-header-Exposition_universelle_des_beaux-arts.jpg">
+      <div class="section-hero__wrapper " data-bg="{{ site.url }}/assets/imgs/art/section-header-Exposition_universelle_des_beaux-arts.jpg">
         <div class="section-hero__title--bold animated delay-1250 top-left has-backdrop">
           <div class="animated-border--top"></div>
           <h1 class="js-section-hero--get_height">Contending with Convention</h1>
           <div class="animated-border--bottom"></div>
         </div>
       </div>
-      <div class="section-hero__figcaption">
+      <div class="section-hero__figcaption animated delay-600">
         <a class="figcaption-cta js-section-hero__figcaption-cta">
           <i class="icon--small">
             {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
@@ -84,7 +84,7 @@
             <div class="l-2up">
               <figure>
                 <div class="figure__wrapper">
-                  <img src="{{ site.url }}/assets/imgs/art/Salon-of-1852-Gustave-Le-Gray.jpg" alt="" />
+                  <img data-src="{{ site.url }}/assets/imgs/art/Salon-of-1852-Gustave-Le-Gray.jpg" alt="" />
                 </div>
                 {% include('figcaption-cta.html') %}
                 <figcaption><span class="title-of-art">Salon of 1852</span> Gustave Le Gray | 1852 | Salt paper print | 19.4 x 23.6 cm. | Musee d'Orsay, Paris, France | &copy; RMN-Grand Palais / Art Resource, NY</figcaption>
@@ -111,6 +111,9 @@
         </div>
         <div class="l-33-66--2">
           <p><span class="wysiwyg-enlarged">This work exemplifies the style of painting championed by the Salon.</span> Careful to hide all traces of brushwork, Bouguereau painted a convincing illusion of space. Behind the girl&rsquo;s shoulder, farmland stretches as far as the eye can see. Bouguereau created a realistic sense of depth within this theatrical and moralizing scene; Salon audiences would have understood that the broken pitcher represents the girl&rsquo;s lost virtue. </p>
+        </div>
+        <div class="l-1up">
+          {% include('standalone-quote.html') %}
         </div>
       </div>
     </section>
@@ -183,7 +186,7 @@
         <div class="l-66-33--1">
           <figure>
             <div class="figure__wrapper">
-              <img src="{{ site.url }}/assets/imgs/art/6_Le-Gray_Chailly_BNF.jpg" alt="" />
+              <img data-src="{{ site.url }}/assets/imgs/art/6_Le-Gray_Chailly_BNF.jpg" alt="" />
             </div>
             {% include('figcaption-cta.html') %}
             <figcaption><span class="title-of-art">The Pavé de Chailly</span> Gustave Le Gray | 1852 | Photograph | 10 7/8 x 15 1/8 in. (27.5 x 38.3 cm) | Bibliothèque nationale de France, Paris, Prints and Photographs Department | &copy; Bibliothèque nationale de France</figcaption>
@@ -204,6 +207,7 @@
         </div>
       </div>
     </section>
+    {% include('horizontalslider.html') %}
     {% include('share.html') %}
     {% include('next-page.html') %}
   </section>
@@ -212,14 +216,14 @@
 
   <section class="js-section pp-scrollable" id="ambition-and-risk">
     <div class="section-hero">
-      <div class="section-hero__wrapper animatedParent" data-bg="{{ site.url }}/assets/imgs/art/section-header-14_Monet_luncheon_Art-Resource.jpg">
+      <div class="section-hero__wrapper" data-bg="{{ site.url }}/assets/imgs/art/section-header-14_Monet_luncheon_Art-Resource.jpg">
         <div class="section-hero__title--bold animated delay-1250 top-right">
           <div class="animated-border--top"></div>
           <h1 class="js-section-hero--get_height">Ambition and Risk</h1>
           <div class="animated-border--bottom"></div>
         </div>
       </div>
-      <div class="section-hero__figcaption">
+      <div class="section-hero__figcaption animated delay-600">
         <a class="figcaption-cta js-section-hero__figcaption-cta">
           <i class="icon--small">
             {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
@@ -245,7 +249,7 @@
         <div class="l-33-66--1">
           <figure>
             <div class="figure__wrapper">
-              <img src="{{ site.url }}/assets/imgs/art/14.1_Monet_luncheon_Art-Resource2.jpg" alt="" />
+              <img data-src="{{ site.url }}/assets/imgs/art/14.1_Monet_luncheon_Art-Resource2.jpg" alt="" />
             </div>
             {% include('figcaption-cta.html') %}
             <figcaption><span class="title-of-art">Luncheon on the Grass</span> Claude Monet | 1865–1866 | Oil on canvas | 97 5/8 x 85 3/8 in. (248 x 217 cm) | Musee d'Orsay, Paris, France | &copy; Musée d'Orsay, dist. RMN-Grand Palais | Patrice Schmidt</figcaption>
@@ -254,7 +258,7 @@
         <div class="l-33-66--2">
           <figure>
             <div class="figure__wrapper">
-              <img src="{{ site.url }}/assets/imgs/art/14_Monet_luncheon_Art-Resource.jpg" alt="" />
+              <img data-src="{{ site.url }}/assets/imgs/art/14_Monet_luncheon_Art-Resource.jpg" alt="" />
             </div>
             {% include('figcaption-cta.html') %}
             <figcaption><span class="title-of-art">Luncheon on the Grass</span> Claude Monet | 1865–1866 | Oil on canvas | 97 5/8 x 85 3/8 in. (248 x 217 cm) | Musée d'Orsay, Paris, RF 1987 12 | &copy; Musée d'Orsay, dist. RMN-Grand Palais / Patrice Schmidt</figcaption>
@@ -304,10 +308,10 @@
 
   <section class="js-section pp-scrollable" id="paris-modernity-and-leisure">
     <div class="section-hero">
-      <div class="section-hero__wrapper animatedParent" data-bg="{{ site.url }}/assets/imgs/art/Plaut_pont-neuf_BNF.jpg">
+      <div class="section-hero__wrapper " data-bg="{{ site.url }}/assets/imgs/art/Plaut_pont-neuf_BNF.jpg">
         {% include('section-hero-title--deyoung.html') %}
       </div>
-      <div class="section-hero__figcaption">
+      <div class="section-hero__figcaption animated delay-600">
         <a class="figcaption-cta js-section-hero__figcaption-cta">
           <i class="icon--small">
             {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
@@ -357,7 +361,7 @@
 
               <div class="zoom-group js-zoom-group">
                 <div class="zoom-marker-outer js-zoom-marker-outer" style="position: absolute; left:31%; top: 37%;">
-                    <a class="zoom-marker-inner animated fadeInDownShort delay-1000 js-zoom-marker-inner" href="#" title="Click to zoom"><span class="icon--small">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                    <a class="zoom-marker-inner animated fadeInDownShort delay-3000 js-zoom-marker-inner" href="#" title="Click to zoom"><span class="icon--small">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
                     {% include('svg/famsf-zoom-in-sm.svg') %}
                     {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
                     {% include('svg/deyoung/famsf-zoom-in-sm.svg') %}
@@ -365,12 +369,12 @@
                 </div>
                 <div class="zoom-detail-view js-zoom-detail-view" style="display:none;">
                   <h2>Partaking in a swim</h2>
-                  <img src="{{ site.url }}/assets/imgs/art/Grenouillere--zoom1.jpg" alt="image detail">
+                  <img data-src="{{ site.url }}/assets/imgs/art/Grenouillere--zoom1.jpg" alt="image detail">
                 </div>
               </div>
               <div class="zoom-group js-zoom-group">
                 <div class="zoom-marker-outer js-zoom-marker-outer" style="position: absolute; left:53%; top: 37%;">
-                    <a class="zoom-marker-inner animated fadeInDownShort delay-1000 js-zoom-marker-inner" href="#" title="Click to zoom"><span class="icon--small">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                    <a class="zoom-marker-inner animated fadeInDownShort delay-3000 js-zoom-marker-inner" href="#" title="Click to zoom"><span class="icon--small">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
                     {% include('svg/famsf-zoom-in-sm.svg') %}
                     {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
                     {% include('svg/deyoung/famsf-zoom-in-sm.svg') %}
@@ -378,12 +382,12 @@
                 </div>
                 <div class="zoom-detail-view js-zoom-detail-view" style="display:none;">
                   <h2>Conversing under the central tree</h2>
-                  <img src="{{ site.url }}/assets/imgs/art/Grenouillere--zoom2.jpg" alt="image detail">
+                  <img data-src="{{ site.url }}/assets/imgs/art/Grenouillere--zoom2.jpg" alt="image detail">
                 </div>
               </div>
               <div class="zoom-group js-zoom-group">
                 <div class="zoom-marker-outer js-zoom-marker-outer" style="position: absolute; left:82%; top: 25%;">
-                    <a class="zoom-marker-inner animated fadeInDownShort delay-1000 js-zoom-marker-inner" href="#" title="Click to zoom"><span class="icon--small">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+                    <a class="zoom-marker-inner animated fadeInDownShort delay-3000 js-zoom-marker-inner" href="#" title="Click to zoom"><span class="icon--small">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
                     {% include('svg/famsf-zoom-in-sm.svg') %}
                     {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
                     {% include('svg/deyoung/famsf-zoom-in-sm.svg') %}
@@ -391,7 +395,7 @@
                 </div>
                 <div class="zoom-detail-view js-zoom-detail-view" style="display:none;">
                   <h2>Sitting leisurely at the café</h2>
-                  <img src="{{ site.url }}/assets/imgs/art/Grenouillere--zoom3.jpg" alt="image detail">
+                  <img data-src="{{ site.url }}/assets/imgs/art/Grenouillere--zoom3.jpg" alt="image detail">
                 </div>
               </div>
             </div>
@@ -617,7 +621,7 @@
 
   <section class="js-section pp-scrollable" id="camille-monet-the-known-and-the-unknown">
     <div class="section-hero">
-      <div class="section-hero__wrapper animatedParent" data-bg="{{ site.url }}/assets/imgs/art/Camille_green_dress.jpg">
+      <div class="section-hero__wrapper" data-bg="{{ site.url }}/assets/imgs/art/Camille_green_dress.jpg">
         {% include('section-hero-title--deyoung-b.html') %}
       </div>
       <div class="section-hero__figcaption">
@@ -660,7 +664,7 @@
 
   <section class="js-section pp-scrollable" id="political-unrest">
     <div class="section-hero">
-      <div class="section-hero__wrapper animatedParent" data-bg="{{ site.url }}/assets/imgs/art/section-header-33_Franco-Prussian-War_-Paris.jpg">
+      <div class="section-hero__wrapper" data-bg="{{ site.url }}/assets/imgs/art/section-header-33_Franco-Prussian-War_-Paris.jpg">
         <div class="section-hero__title--bold animated delay-1250 has-backdrop top-right">
           <div class="animated-border--top"></div>
           <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">Political Unrest</h1>
@@ -775,7 +779,7 @@
 
   <section class="js-section pp-scrollable" id="training-your-eye-color">
     <div class="section-hero">
-      <div class="section-hero__wrapper animatedParent" data-bg="{{ site.url }}/assets/imgs/art/section-header-20_Magpie_Art-Resource.jpg">
+      <div class="section-hero__wrapper " data-bg="{{ site.url }}/assets/imgs/art/section-header-20_Magpie_Art-Resource.jpg">
         <div class="section-hero__title--bold animated has-backdrop delay-1250 top-left">
           <div class="animated-border--top"></div>
           <h1 class="js-section-hero--get_height">Training Your Eye: Color</h1>
@@ -834,14 +838,14 @@
 
   <section class="js-section pp-scrollable" id="training-your-eye-composition">
     <div class="section-hero">
-      <div class="section-hero__wrapper animatedParent" data-bg="{{ site.url }}/assets/imgs/art/17_GreenWave_MET.jpg">
+      <div class="section-hero__wrapper" data-bg="{{ site.url }}/assets/imgs/art/17_GreenWave_MET.jpg">
         <div class="section-hero__title--bold animated delay-1250 bottom-left">
           <div class="animated-border--top"></div>
           <h1 class="js-section-hero--get_height">Training your Eye: Composition</h1>
           <div class="animated-border--bottom"></div>
         </div>
       </div>
-      <div class="section-hero__figcaption">
+      <div class="section-hero__figcaption animated delay-600">
         <a class="figcaption-cta js-section-hero__figcaption-cta">
           <i class="icon--small">
           {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
@@ -865,7 +869,7 @@
 
   <section class="js-section pp-scrollable" id="observing-nature">
     <div class="section-hero">
-      <div class="section-hero__wrapper animatedParent" data-bg="{{ site.url }}/assets/imgs/art/IMG_4838_observing-nature-header.jpg">
+      <div class="section-hero__wrapper" data-bg="{{ site.url }}/assets/imgs/art/IMG_4838_observing-nature-header.jpg">
         <div class="section-hero__title--bold animated delay-1250 top-right">
           <div class="animated-border--top"></div>
           <h1 class="js-section-hero--get_height">Observing Nature</h1>

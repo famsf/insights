@@ -35,6 +35,8 @@
           buttonClicked.find('.js-icon-arrow--plus').hide(0);
           changeThisPanel.removeClass("js-expander--is-closed").addClass("js-expander--is-open").slideDown(300);
           buttonClicked.find('.button-with-icon__text').html(expandedText).attr('title', expandedText);
+          // Load images in expandable area.
+          $(changeThisPanel).find('img[data-src],div[data-bg]').lazyLoadXT();
           /* @Todo:  scroll section up to top of page after expanding. */
           $('html, body').animate({
             scrollTop: changeThisPanel.offset().top

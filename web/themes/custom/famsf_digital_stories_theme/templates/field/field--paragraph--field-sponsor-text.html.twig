@@ -24,17 +24,13 @@
 
 {% if label_hidden %}
     {% if multiple %}
-        <ul class="js-wordslider wordslider">
         {% for item in items %}
-            <li><h1>{{ item.content }}</h1></li>
+            {{ item.content }}
         {% endfor %}
-        </ul>
     {% else %}
-        <ul class="js-wordslider wordslider">
         {% for item in items %}
-            <li><h1>{{ item.content }}</h1></li>
+            {{ item.content }}
         {% endfor %}
-        </ul>
     {% endif %}
 {% else %}
     <div{{ attributes }}>
@@ -42,11 +38,9 @@
         {% if multiple %}
         <div>
             {% endif %}
-            <ul class="js-wordslider wordslider">
             {% for item in items %}
-                <li><h1>{{ item.content }}</h1></li>
+                {{ item.content }}
             {% endfor %}
-            </ul>
             {% if multiple %}
         </div>
         {% endif %}

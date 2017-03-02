@@ -4,14 +4,14 @@ section: component
 type: full-width
 theme: deyoung-dark
 
-title: Dark Section Hero 
+title: Dark Section Hero
 description: This hero signifies the beginning of a new chapter. This version has no image or video.
 ---
 
 {% block content_wrapper %}
   {% block content %}
-
-  {% include('section-hero--deyoung.html') %}
-
+  <div class="animatedParent">
+    {% include('section-hero--deyoung.html') %}
+  </div>
   {% endblock %}
 {% endblock %}

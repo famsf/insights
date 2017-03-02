@@ -20,16 +20,43 @@
         // This is required to create hashtag sections and scroll-to links.
         var sectionElements = $('.js-section');
         var sectionIds = [];
+        // Set variable to be at zero when scrolling, one if a link has been clicked.
+        var jumpSection = 0;
         var getSectionIds = function () {
           for (var i = sectionElements.length - 1; i >= 0; i--) {
             sectionIds.unshift($(sectionElements[i]).attr('id'));
           }
         };
+        // Timer function for animation delay.
+        var delayTimer = function(element, delay) {
+          setTimeout(function() {
+            $(element).addClass('go');
+          }, delay);
+        }
         // Function to animate things in the viewport.
-        var animateInSectionView  = function(animatedItems, numberOfAnimatedItems, sectionSelector) {
-          for (var i = 0; i < numberOfAnimatedItems; i++) {
-            if ($(animatedItems[i]).position().top < $(sectionSelector).height()){
-              $(animatedItems[i]).addClass('go');
+        var animateInSectionView  = function(animatedItems, numberOfAnimatedItems, sectionSelector, loadableImages, numberOfloadableImages) {
+          for (var i = animatedItems.length - 1; i >= 0; i--) {
+            if ($(animatedItems[i]).offset().top < $(sectionSelector).height()){
+              // Get the animation delay value.
+              if (!$(animatedItems[i]).hasClass('go')) {
+                var thisItem = animatedItems[i];
+                var delayNumber = $(animatedItems[i]).attr('class').match(/\d+/g); // ... matching "delay-?"
+                var delayNumInt = parseInt(delayNumber[0]);
+                if (delayNumber) {
+                  // If the animation has delay use setTimeout.
+                  delayTimer(thisItem, delayNumInt)
+                } else {
+                  // Animation starts without a delay.
+                  $(animatedItems[i]).addClass('go');
+                }
+              }
+            }
+          };
+          for (var j = 0; j < numberOfloadableImages; j++) {
+            if (!$(loadableImages[j]).hasClass('lazy-loaded')) {
+              if ($(loadableImages[j]).offset().top < $(sectionSelector).height()){
+                $(loadableImages[j]).lazyLoadXT();
+              }
             }
           }
         };
@@ -57,7 +84,7 @@
           loopTop: false,
           css3: true,
           navigation: false,
-          normalScrollElements: null,
+          normalScrollElements: '.horizontal-slider',
           normalScrollElementTouchThreshold: 5,
           touchSensitivity: 5,
           keyboardScrolling: true,
@@ -70,16 +97,18 @@
             // Select the next active index section element by it's index.
             var nextActiveSection = nextIndex - 1;
             var sectionSelector = $('section.js-section').eq(nextActiveSection);
-            lazyloadSection(sectionSelector);
+            var loadableImages = $(sectionSelector).find('img[data-src],div[data-bg]');
+            var numberOfloadableImages = loadableImages.length;
+            // lazyloadSection(sectionSelector);
             // Get all the animated items in the section.
             var animatedItems = sectionSelector.find('*.animated');
             var numberOfAnimatedItems = animatedItems.length;
             // Run animations when the new card is initially visible.
-            animateInSectionView(animatedItems, numberOfAnimatedItems, sectionSelector);
+            animateInSectionView(animatedItems, numberOfAnimatedItems, sectionSelector, loadableImages, numberOfloadableImages);
 
             // Trigger all animation in view on scroll.
             sectionSelector.scroll(function () {
-              animateInSectionView(animatedItems, numberOfAnimatedItems, sectionSelector);
+              animateInSectionView(animatedItems, numberOfAnimatedItems, sectionSelector, loadableImages, numberOfloadableImages);
             });
             var dashboardButton = $('.js-dashboard-toggle', context);
             // Close the dashboard after arriving at destination.
@@ -99,13 +128,19 @@
                 $(dashboardLinks[i]).removeClass('active');
               }
             }
-            // Make sure we scroll to the top of the active section.
-            sectionSelector.scrollTop(0);
+            // Make sure we scroll to the top of the active section if a link was clicked.
+            if (jumpSection == 1) {
+              sectionSelector.scrollTop(0);
+              jumpSection = 0;
+            }
           },
           afterLoad: function(anchorLink, index){
               setTimeout(function() {
                 $('.js-loading', context).fadeOut(500);
               }, 2000);
+              $('.dashboard__nav-item').click( function(){
+                jumpSection = 1;
+              })
           },
           afterRender: function(){
             // Complete lazy load on the first active section and hide the loader.
@@ -115,17 +150,19 @@
                 $('.js-loading', context).fadeOut(500);
               }, 2000);
             };
-            lazyloadSection(firstSection, hideLoader());
-
+            hideLoader();
+            // lazyloadSection(firstSection, hideLoader());
+            var loadableImages = $(firstSection).find('img[data-src],div[data-bg]');
+            var numberOfloadableImages = loadableImages.length;
             var animatedItems = firstSection.find('*.animated');
             var numberOfAnimatedItems = animatedItems.length;
             // Run animations when the new card is initially visible.
             setTimeout(function() {
-              animateInSectionView(animatedItems, numberOfAnimatedItems, firstSection);
+              animateInSectionView(animatedItems, numberOfAnimatedItems, firstSection, loadableImages, numberOfloadableImages);
             }, 1000);
             // Trigger all animation in view on scroll.
             firstSection.scroll(function () {
-              animateInSectionView(animatedItems, numberOfAnimatedItems, firstSection);
+              animateInSectionView(animatedItems, numberOfAnimatedItems, firstSection, loadableImages, numberOfloadableImages);
             });
           },
         });
@@ -134,6 +171,7 @@
         });
       } else {
         // The user is on a page that is  not using pagepiling so we should lazy load with auto init.
+        $('.styleguide-component').addClass('animatedParent');
         $.extend($.lazyLoadXT, {
           autoInit: true,
           visibleOnly: false,
@@ -145,11 +183,44 @@
       $('.js-wordslider', context).once().bxSlider({
         mode: 'fade',
         pager: false,
+        controls: false,
         auto: true,
         speed: 2000,
         pause: 3000
       });
 
+      // Start each horizontal slider
+       $('.js-horizontal-slider', context).each( function() {
+        var sliderInstance =$(this).bxSlider({
+          mode: 'horizontal',
+          pager: false,
+          controls: false,
+          speed: 500,
+          pause: 3000,
+          touchEnabled: true,
+          slideWidth: 320,
+          minSlides: 2,
+          maxSlides: 3,
+          slideMargin: 0,
+          preloadImages: 'visible',
+          onSlideAfter: function(){
+            // Do things after slide is loaded.
+            // Load images in slider.
+            $('.horizontal-slider').find('img[data-src],div[data-bg]').lazyLoadXT({show:true});
+          }
+        });
+        var horizontalPrev = $(sliderInstance).parents('.js-horizontal-slider__wrapper').find('.horizontal-slider-prev', context);
+        var horizontalNext = $(sliderInstance).parents('.js-horizontal-slider__wrapper').find('.horizontal-slider-next', context);
+
+        horizontalPrev.click( function(event) {
+          event.preventDefault();
+          sliderInstance.goToPrevSlide()
+        });
+        horizontalNext.click( function(event) {
+          event.preventDefault();
+          sliderInstance.goToNextSlide()
+        });
+      });
       // Drop caps
       $('.has-dropcaps').find('p:first').html(function (i, html)
       {

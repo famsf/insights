@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.zoomable_area.field_image_close_up
     - field.field.paragraph.zoomable_area.field_left_position
+    - field.field.paragraph.zoomable_area.field_marker_delay
     - field.field.paragraph.zoomable_area.field_text_area
     - field.field.paragraph.zoomable_area.field_top_position
     - image.style.thumbnail
@@ -26,6 +27,12 @@ content:
     type: image_image
   field_left_position:
     weight: 0
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+  field_marker_delay:
+    weight: 4
     settings:
       placeholder: ''
     third_party_settings: {  }
