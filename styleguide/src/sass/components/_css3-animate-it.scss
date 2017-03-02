@@ -31,7 +31,7 @@
 }
 
 /* Added by Andy Meetan */
-.delay-250 {
+/*.delay-250 {
     -webkit-animation-delay:0.25s;
     -moz-animation-delay:0.25s;
     -o-animation-delay:0.25s;
@@ -108,7 +108,7 @@
     -moz-animation-delay:3.5s;
     -o-animation-delay:3.5s;
     animation-delay:3.5s;
-}
+}*/
 
 .bounceInRight, .bounceInLeft, .bounceInUp, .bounceInDown{
     opacity:0;
@@ -116,7 +116,7 @@
     transform: translateX(400px);
 }
 
-%fadeIn, .fadeInRight, .fadeInLeft, .fadeInUp, .fadeInDown{
+.fadeInRight, .fadeInLeft, .fadeInUp, .fadeInDown{
     opacity:0;
     -webkit-transform: translateX(400px);
     transform: translateX(400px);
@@ -384,20 +384,24 @@
 **********/
 @-webkit-keyframes fadeIn {
     0% {opacity: 0;}
+    50% {opacity: 0.3;}
     100% {opacity: 1;
         display:block;}
 }
 @keyframes fadeIn {
     0% {opacity: 0;}
+    50% {opacity: 0.3;}
     100% {opacity: 1;
         display:block;}
 }
+%fadeIn,
 .fadeIn{
     opacity:0;
-}
-.fadeIn.go {
+
+    &.go {
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
+    }
 }
 
 /**********

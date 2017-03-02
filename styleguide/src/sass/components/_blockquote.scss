@@ -12,6 +12,7 @@ blockquote {
 }
 
 .standalone-quote {
+  @extend %fadeInLeft;
   @include adjust-font-size-to($h2-font-size, 1.35);
   position: relative;
   border-top: $decorative-border;

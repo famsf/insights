@@ -133,6 +133,10 @@ figcaption,
   }
 }
 
+.figcaption__wrapper {
+  @extend %fadeIn;
+}
+
 .figure__zoomable-boundary {
   overflow: hidden;
   position: relative;

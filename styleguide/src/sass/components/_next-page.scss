@@ -5,6 +5,7 @@
  * @copyright Copyright (c) 2017 Palantir.net
  */
 .next-page {
+  @extend %fadeIn;
   @extend %text-hidden;
   background: transparent;
   display: block;
