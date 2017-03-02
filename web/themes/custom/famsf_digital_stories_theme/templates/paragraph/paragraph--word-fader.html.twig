@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Custom theme implementation to display a card section paragraph.
+ * Custom theme implementation to display a paragraph.
  *
  * Available variables:
  * - paragraph: Full paragraph entity.
@@ -36,12 +36,15 @@
  * @ingroup themeable
  */
 #}
-<figure class="figure__zoomable js-figure__zoomable" >
-    <div class="figure__zoomable-boundary">
-        <div class="figure--wrapper figure__zoomable-child js-figure__zoomable-child" data-bg="{{ file_url(paragraph.field_zoomable_image.entity.fileuri) }}">
-        </div>
-        <img style="visibility: hidden;" data-src="{{ file_url(paragraph.field_zoomable_image.entity.fileuri) }}" alt="{{ paragraph.field_zoomable_image.alt }}" />
-        {{ content.field_zoomable_area }}
-    </div>
-    {{ content.field_photo_credits }}
-</figure>
+{%
+set classes = [
+'paragraph',
+'js-wordslider',
+'wordslider',
+'paragraph--type--' ~ paragraph.bundle|clean_class,
+view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class
+]
+%}
+<ul{{ attributes.addClass(classes) }} data-speed="{{ paragraph.field_transition_speed.value }}" data-pause="{{ paragraph.field_pause.value }}">
+    {{ content.field_fading_text }}
+</ul>

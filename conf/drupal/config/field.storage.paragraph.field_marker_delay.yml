@@ -1,0 +1,20 @@
+uuid: 53c76158-55a7-40a0-8773-ef93c4b8e9ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_marker_delay
+field_name: field_marker_delay
+entity_type: paragraph
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

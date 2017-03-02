@@ -82,7 +82,7 @@ paragraph.field_background_image.entity.fileuri?'':'pattern'
 
     {% if paragraph.field_display_share_widget.value == 1 %}
         <div class="js-share">
-            <button class="share-button js-share-button button-with-icon">
+            <button class="share-button js-share-button button-with-icon animated delay-500">
                 <i class="icon--small">{{ include(active_theme_path() ~ '/svg/'~ custom_theme ~ '/famsf-share-sm.svg') }}
                 </i>
                 <div>share</div>
@@ -92,7 +92,7 @@ paragraph.field_background_image.entity.fileuri?'':'pattern'
             </div>
         </div>
     {% endif %}
-    <button class="js-next-page next-page animated fadeIn delay-100">
+    <button class="js-next-page next-page animated delay-100">
         <div class="icon--xsmall">{{ include(active_theme_path() ~ '/svg/'~ custom_theme ~ '/famsf-caret-down-sm.svg') }}</div>
         next page
     </button>
