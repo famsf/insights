@@ -4,6 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.word_fader.field_fading_text
+    - field.field.paragraph.word_fader.field_pause
+    - field.field.paragraph.word_fader.field_transition_speed
     - paragraphs.paragraphs_type.word_fader
 id: paragraph.word_fader.default
 targetEntityType: paragraph
@@ -17,6 +19,18 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+  field_pause:
+    weight: 2
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+  field_transition_speed:
+    weight: 1
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
 hidden:
   created: true
   status: true

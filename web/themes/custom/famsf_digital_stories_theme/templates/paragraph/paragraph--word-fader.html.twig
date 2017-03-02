@@ -36,27 +36,15 @@
  * @ingroup themeable
  */
 #}
-<div class="js-audio__wrapper audio__wrapper">
-    <audio class="js-audio__source">
-        <source src="{{ file_url(paragraph.field_audio_file.entity.fileuri) }}" type="{{ paragraph.field_audio_file.entity.getMimeType() }}">
-        Your browser does not support the audio element.
-    </audio>
-
-    <button class="js-audio__button button-with-icon">
-        <i class="js-icon--play icon--small">
-            {{ include(active_theme_path() ~ '/svg/'~ custom_theme ~ '/famsf-audio-play-sm.svg')  }}
-        </i>
-        <i class="js-icon--pause icon--small" style="display:none;">
-            {{ include(active_theme_path() ~ '/svg/'~ custom_theme ~ '/famsf-pause-sm.svg')  }}
-        </i>
-        {{ content.field_play_button_text }}
-    </button>
-</div>
-{% if paragraph.field_audio_transcript.value is not empty %}
-<div class="audio-transcript">
-    <button class="audio-transcript--trigger js-audio-transcript--trigger">Audio Transcript</button>
-    <div class="audio-transcript__drawer js-audio-transcript--hidden" aria-hidden="true">
-        <p>{{ paragraph.field_audio_transcript.value }}</p>
-    </div>
-</div>
-{% endif %}
+{%
+set classes = [
+'paragraph',
+'js-wordslider',
+'wordslider',
+'paragraph--type--' ~ paragraph.bundle|clean_class,
+view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class
+]
+%}
+<ul{{ attributes.addClass(classes) }} data-speed="{{ paragraph.field_transition_speed.value }}" data-pause="{{ paragraph.field_pause.value }}">
+    {{ content.field_fading_text }}
+</ul>

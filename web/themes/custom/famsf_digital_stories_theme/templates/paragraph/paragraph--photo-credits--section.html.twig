@@ -60,8 +60,11 @@
 {% endif %}
 
 {% if credits is not empty or paragraph.field_image_title.value is not empty %}
-    <div class="section-hero__figcaption">
-        <a class="figcaption-cta js-section-hero__figcaption-cta">image credit</a>
+    <div class="section-hero__figcaption animated delay-600">
+        <a class="figcaption-cta js-section-hero__figcaption-cta">
+            <i class="icon--small ">{{ include(active_theme_path() ~ '/svg/'~ custom_theme ~ '/famsf-copyright-md.svg')  }}</i>
+            <span>image credit</span>
+        </a>
     <span class="figcaption js-figcaption--hidden">
         {% if paragraph.field_image_title.value is not empty %}
             <span class="title-of-art"> {{ paragraph.field_image_title.value }} </span>
