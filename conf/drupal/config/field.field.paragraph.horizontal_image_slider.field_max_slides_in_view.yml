@@ -1,0 +1,25 @@
+uuid: dd583ad4-14eb-41d9-a432-5f92b43b0e43
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_max_slides_in_view
+    - paragraphs.paragraphs_type.horizontal_image_slider
+id: paragraph.horizontal_image_slider.field_max_slides_in_view
+field_name: field_max_slides_in_view
+entity_type: paragraph
+bundle: horizontal_image_slider
+label: 'Max slides in view'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 3
+default_value_callback: ''
+settings:
+  min: 1
+  max: 6
+  prefix: ''
+  suffix: ''
+field_type: integer

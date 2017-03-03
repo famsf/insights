@@ -7,6 +7,7 @@ dependencies:
     - paragraphs.paragraphs_type.1up_section
     - paragraphs.paragraphs_type.2up_section
     - paragraphs.paragraphs_type.card_section
+    - paragraphs.paragraphs_type.horizontal_image_slider
     - paragraphs.paragraphs_type.image_comparison_section
     - paragraphs.paragraphs_type.image_with_revealable_caption
     - paragraphs.paragraphs_type.overlay_image
@@ -33,6 +34,7 @@ settings:
       revealable_read_more_section: revealable_read_more_section
       image_comparison_section: image_comparison_section
       overlay_image: overlay_image
+      horizontal_image_slider: horizontal_image_slider
     target_bundles_drag_drop:
       text_area:
         weight: -13
@@ -46,13 +48,13 @@ settings:
       image_with_revealable_caption:
         enabled: true
         weight: 11
-      photo_credits:
+      card_section:
         weight: 12
         enabled: false
       revealable_read_more_section:
         enabled: true
         weight: 12
-      card_section:
+      photo_credits:
         weight: 12
         enabled: false
       audio_component:
@@ -70,10 +72,34 @@ settings:
       overlay_image:
         enabled: true
         weight: 23
+      audio_tour_info:
+        weight: 25
+        enabled: false
       word_fader:
         weight: 27
         enabled: false
+      footer_feature:
+        weight: 28
+        enabled: false
       zoomable_area:
         weight: 28
+        enabled: false
+      horizontal_image_slider:
+        enabled: true
+        weight: 29
+      image_slide:
+        weight: 32
+        enabled: false
+      link_or_download_button:
+        weight: 33
+        enabled: false
+      pull_quote:
+        weight: 36
+        enabled: false
+      sponsor:
+        weight: 38
+        enabled: false
+      video_source:
+        weight: 40
         enabled: false
 field_type: entity_reference_revisions
