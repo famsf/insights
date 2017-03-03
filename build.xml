@@ -15,9 +15,12 @@
     <!-- Default target: build -->
     <target name="build" description="Build the application.">
         <phingcall target="drupal-build" />
+
         <property name="styleguide.dir" value="styleguide" />
         <resolvepath propertyName="styleguide.dir.absolute_path" file="${styleguide.dir}" />
         <resolvepath propertyname="styleguide_code" file="${styleguide.dir}/build/assets" />
+
+        <exec command="npm run butler -- sass" dir="${styleguide.dir.absolute_path}" logoutput="true" checkreturn="true" />
 
         <resolvepath propertyname="custom_theme" file="${drupal.root}/themes/custom/famsf_digital_stories_theme" />
         <phingcall target="styleguide-link">
