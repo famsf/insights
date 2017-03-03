@@ -1,21 +1,21 @@
-uuid: ad28cd6a-8529-47b1-bae6-4cc6f8a97c74
+uuid: 629e9e04-f1db-47f2-9cec-b041e1a0bc92
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_right_image_3up
+    - field.storage.paragraph.field_left_image
     - paragraphs.paragraphs_type.comparison_image
     - paragraphs.paragraphs_type.image_comparison_3up
   module:
     - entity_reference_revisions
-id: paragraph.image_comparison_3up.field_right_image_3up
-field_name: field_right_image_3up
+id: paragraph.image_comparison_3up.field_left_image
+field_name: field_left_image
 entity_type: paragraph
 bundle: image_comparison_3up
-label: 'Right Image'
+label: 'Left Image'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

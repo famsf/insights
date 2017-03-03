@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.image_comparison_3up.field_center_image
-    - field.field.paragraph.image_comparison_3up.field_left_image_3up
-    - field.field.paragraph.image_comparison_3up.field_right_image_3up
+    - field.field.paragraph.image_comparison_3up.field_left_image
+    - field.field.paragraph.image_comparison_3up.field_right_image
     - paragraphs.paragraphs_type.image_comparison_3up
   module:
     - paragraphs
@@ -24,8 +24,7 @@ content:
       add_mode: dropdown
       form_display_mode: default
     third_party_settings: {  }
-  field_left_image_3up:
-    type: entity_reference_paragraphs
+  field_left_image:
     weight: 0
     settings:
       title: Paragraph
@@ -34,8 +33,8 @@ content:
       add_mode: dropdown
       form_display_mode: default
     third_party_settings: {  }
-  field_right_image_3up:
     type: entity_reference_paragraphs
+  field_right_image:
     weight: 2
     settings:
       title: Paragraph
@@ -44,6 +43,7 @@ content:
       add_mode: dropdown
       form_display_mode: default
     third_party_settings: {  }
+    type: entity_reference_paragraphs
 hidden:
   created: true
   status: true
