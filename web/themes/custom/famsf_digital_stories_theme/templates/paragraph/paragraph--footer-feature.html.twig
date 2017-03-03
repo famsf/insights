@@ -38,7 +38,8 @@
 #}
 <article class="footer-section">
     <a href="{{ paragraph.field_footer_feature_main_link.uri }}">
-        {{ content.field_footer_feature_image }}</a>
+        <img data-src="{{ file_url(paragraph.field_footer_feature_image.entity.fileuri) }}" alt="{{ paragraph.field_footer_feature_image.alt }}" />
+    </a>
     <h3 class="footer-section__title">{{ content.field_footer_feature_main_link }}</h3>
 </article>
 {% if paragraph.field_related_events_link.uri is not empty %}

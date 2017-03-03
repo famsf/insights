@@ -37,7 +37,7 @@
  */
 #}
 <article class="footer-section">
-    {{ content.field_image }}
+    <img data-src="{{ file_url(paragraph.field_image.entity.fileuri) }}" alt="{{ paragraph.field_image.alt }}" />
     <h3 class="footer-section__title">{{ content.field_audio_tour_link }}</h3>
     <div class="footer-block">
         {{ content.field_audio_tour_teaser }}
