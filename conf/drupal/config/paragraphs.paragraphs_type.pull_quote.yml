@@ -3,4 +3,4 @@ langcode: en
 status: true
 dependencies: {  }
 id: pull_quote
-label: 'Pull Quote'
+label: 'Standalone Quote'

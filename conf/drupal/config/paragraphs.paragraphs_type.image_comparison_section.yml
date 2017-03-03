@@ -3,4 +3,4 @@ langcode: en
 status: true
 dependencies: {  }
 id: image_comparison_section
-label: 'Image Comparison Section'
+label: 'Image Comparison Section - 2 column, 2 images'
