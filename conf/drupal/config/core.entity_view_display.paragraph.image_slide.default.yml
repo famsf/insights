@@ -1,0 +1,37 @@
+uuid: 14e27b43-237d-485d-a543-cf589153d561
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_slide.field_image
+    - field.field.paragraph.image_slide.field_image_for_slide
+    - field.field.paragraph.image_slide.field_photo_credits
+    - paragraphs.paragraphs_type.image_slide
+  module:
+    - entity_reference_revisions
+    - image
+id: paragraph.image_slide.default
+targetEntityType: paragraph
+bundle: image_slide
+mode: default
+content:
+  field_image:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_photo_credits:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+hidden:
+  created: true
+  field_image_for_slide: true
+  uid: true
