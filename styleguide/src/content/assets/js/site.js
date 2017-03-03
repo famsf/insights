@@ -41,8 +41,8 @@
               if (!$(animatedItems[i]).hasClass('go')) {
                 var thisItem = animatedItems[i];
                 var delayNumber = $(animatedItems[i]).attr('class').match(/\d+/g); // ... matching "delay-?"
-                var delayNumInt = parseInt(delayNumber[0]);
                 if (delayNumber) {
+                  var delayNumInt = parseInt(delayNumber[0]);
                   // If the animation has delay use setTimeout.
                   delayTimer(thisItem, delayNumInt)
                 } else {

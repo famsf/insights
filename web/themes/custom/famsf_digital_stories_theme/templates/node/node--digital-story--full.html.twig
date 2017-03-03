@@ -85,7 +85,6 @@ node.field_title_style.value
 'animated',
 boldTitle?'':'fadeIn',
 boldTitle?'delay-1250':'delay-1500',
-'js-section-hero--get_height',
 boldTitle?'site-hero__title-text',
 ] %}
 
@@ -117,7 +116,7 @@ boldTitle?'animated fadeIn delay-1500',
                 {% if boldTitle %}
                     <div class="animated-border--top"></div>
                 {% endif %}
-                <div class="js-section-hero--get_height">
+                <div class="js-section-hero--get_height {{ sectionTitleClasses|join(' ')}}">
 
                     {% if node.field_theme.value starts with 'legion' %}
                     <span class="site-hero__logo {{ animatedClasses }}"><a href="https://legionofhonor.famsf.org/" >Legion of Honor Museum</a></span>
@@ -135,7 +134,6 @@ boldTitle?'animated fadeIn delay-1500',
                     <div class="animated-border--bottom"></div>
                 {% endif %}
             </div>
-
         </div>
         <button class="js-next-page next-page animated delay-100">
             <div class="icon--xsmall">
