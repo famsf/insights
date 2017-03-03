@@ -20,6 +20,12 @@ settings:
     -
       value: has-dotted-border
       label: 'Dotted Border'
+    -
+      value: has-backdrop
+      label: 'Bold with Backdrop'
+    -
+      value: has-bold-outlined
+      label: 'Bold with Outlines'
   allowed_values_function: ''
 module: options
 locked: false
