@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.paragraph.zoomable_area.field_image_close_up
     - field.field.paragraph.zoomable_area.field_left_position
+    - field.field.paragraph.zoomable_area.field_marker_delay
     - field.field.paragraph.zoomable_area.field_text_area
     - field.field.paragraph.zoomable_area.field_top_position
     - paragraphs.paragraphs_type.zoomable_area
@@ -33,5 +34,6 @@ content:
 hidden:
   created: true
   field_left_position: true
+  field_marker_delay: true
   field_top_position: true
   uid: true

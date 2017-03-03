@@ -1,0 +1,25 @@
+uuid: 518680a6-7006-4139-9746-da22ee72f126
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_marker_delay
+    - paragraphs.paragraphs_type.zoomable_area
+id: paragraph.zoomable_area.field_marker_delay
+field_name: field_marker_delay
+entity_type: paragraph
+bundle: zoomable_area
+label: 'Marker delay in milliseconds'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 10000
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

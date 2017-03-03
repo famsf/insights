@@ -1,0 +1,52 @@
+uuid: 3af3147d-bc2d-468a-9e23-509551be5490
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.horizontal_image_slider.field_max_slides_in_view
+    - field.field.paragraph.horizontal_image_slider.field_min_slides_in_view
+    - field.field.paragraph.horizontal_image_slider.field_number_of_slides_to_move
+    - field.field.paragraph.horizontal_image_slider.field_slide
+    - paragraphs.paragraphs_type.horizontal_image_slider
+  module:
+    - entity_reference_revisions
+id: paragraph.horizontal_image_slider.default
+targetEntityType: paragraph
+bundle: horizontal_image_slider
+mode: default
+content:
+  field_max_slides_in_view:
+    weight: 1
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  field_min_slides_in_view:
+    weight: 2
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  field_number_of_slides_to_move:
+    weight: 3
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+  field_slide:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

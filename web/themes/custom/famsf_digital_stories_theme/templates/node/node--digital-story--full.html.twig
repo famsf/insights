@@ -67,12 +67,29 @@
  *
  */
 #}
+{% set boldTitle = (node.field_title_style.value == 'has-backdrop' or node.field_title_style.value == 'has-bold-outlined') %}
+
 {% set classes = [
 logged_in? 'admin__article'
 ] %}
 {% set wrapperClasses = [
 'site-hero',
 node.field_background_image.entity.fileuri?'':'pattern'
+] %}
+{% set sectionTitleWrapperClasses = [
+boldTitle?'site-hero__title--bold animated':'site-hero__title',
+node.field_title_position.value,
+node.field_title_style.value
+] %}
+{% set sectionTitleClasses = [
+'animated',
+boldTitle?'':'fadeIn',
+boldTitle?'delay-1250':'delay-1500',
+boldTitle?'site-hero__title-text',
+] %}
+
+{% set animatedClasses = [
+boldTitle?'animated fadeIn delay-1500',
 ] %}
 <article{{ attributes.addClass(classes) }}>
 
@@ -95,23 +112,32 @@ node.field_background_image.entity.fileuri?'':'pattern'
     {% endif %}
     <section class="js-section pp-scrollable" id="start">
         <div class="{{ wrapperClasses|join(' ') }}" {% if node.field_site_hero_background_image.value is not empty %}data-bg="{{ file_url(node.field_site_hero_background_image.entity.fileuri) }}" {% endif %}>
-            <div class="site-hero__title {{ node.field_title_style.value }} {{ node.field_title_position.value }}">
-                <div class="js-section-hero--get_height">
+            <div class="{{ sectionTitleWrapperClasses|join(' ') }}">
+                {% if boldTitle %}
+                    <div class="animated-border--top"></div>
+                {% endif %}
+                <div class="js-section-hero--get_height {{ sectionTitleClasses|join(' ')}}">
+
                     {% if node.field_theme.value starts with 'legion' %}
-                    <span class="site-hero__logo animated fadeIn delay-1500"><a href="https://legionofhonor.famsf.org/" >Legion of Honor Museum</a></span>
+                    <span class="site-hero__logo {{ animatedClasses }}"><a href="https://legionofhonor.famsf.org/" >Legion of Honor Museum</a></span>
                     {% else %}
-                    <span class="site-hero__logo animated fadeIn delay-1500"><a href="https://deyoung.famsf.org/" >de Young Museum</a></span>
+                    <span class="site-hero__logo {{ animatedClasses }}"><a href="https://deyoung.famsf.org/" >de Young Museum</a></span>
                     {% endif %}
-                    <h1 class="animated fadeIn delay-1500"> {{ label }}</h1>
-                    <h2 class="animated fadeIn delay-1500">{{ node.field_exhibition_dates.value }}</h2>
+                    <h1 class="{{ animatedClasses }}"> {{ label }}</h1>
+                    <h2 class="{{ animatedClasses }}">{{ node.field_exhibition_dates.value }}</h2>
                 </div>
+                {% if not boldTitle %}
                 <div class="site-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
                 <div class="site-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
+                {% endif %}
+                {% if boldTitle %}
+                    <div class="animated-border--bottom"></div>
+                {% endif %}
             </div>
         </div>
-        <button class="js-next-page next-page animated fadeIn delay-100">
+        <button class="js-next-page next-page animated delay-100">
             <div class="icon--xsmall">
-                {{ include(active_theme_path() ~ '/svg/famsf-caret-down-sm.svg') }}
+                {{ include(active_theme_path() ~ '/svg/'~ custom_theme ~ '/famsf-caret-down-sm.svg') }}
             </div>
         next page
         </button>
@@ -243,10 +269,10 @@ node.field_background_image.entity.fileuri?'':'pattern'
 </article>
 <div class="zoom-overlay-background js-zoom-overlay-background" style="display: none;">
 </div>
-<div class="zoom-window animatedParent js-zoom-window" style="display: none;">
+<div class="zoom-window js-zoom-window" style="display: none;">
     <button class="zoom-close js-zoom-close" href="#" style="display: none;">
         <i class="icon--small">
-            {{  include(active_theme_path() ~ '/svg/famsf-zoom-out-sm.svg') }}
+            {{  include(active_theme_path() ~ '/svg/'~ custom_theme ~ '/famsf-zoom-out-sm.svg') }}
         </i>
         <div class="zoom-marker__text">close</div>
     </button>
