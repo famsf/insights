@@ -15,9 +15,14 @@ content:
   field_video_source:
     weight: 0
     settings:
-      file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
       allowed_providers:
         youtube: youtube
+        vimeo: vimeo
+        facebook: 0
+        vine: 0
+        instagram: 0
+        dailymotion: 0
+      file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
       uri_scheme: public
     third_party_settings: {  }
     type: video_embed

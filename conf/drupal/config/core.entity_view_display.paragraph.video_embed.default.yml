@@ -16,9 +16,9 @@ content:
     weight: 0
     label: hidden
     settings:
-      autoplay: true
-      width: '854'
-      height: '480'
+      width: '0'
+      height: '0'
+      autoplay: false
     third_party_settings: {  }
     type: video_embed_player
 hidden:

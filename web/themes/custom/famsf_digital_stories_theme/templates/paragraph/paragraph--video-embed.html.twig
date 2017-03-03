@@ -36,12 +36,14 @@
  * @ingroup themeable
  */
 #}
-
-{% if paragraph.field_link[0] is not empty %}
-    <a href="{{ paragraph.field_link[0].uri }}" class="{{ paragraph.field_button_style.value }}">{{ paragraph.field_link[0].title }}</a>
-
-{% elseif content.field_download_file|render|trim is not empty %}
-
-    <a href="{{ file_url(paragraph.field_download_file.entity.fileuri) }}" class="{{ paragraph.field_button_style.value }}">{{ paragraph.field_button_text.value }}</a>
-
-{% endif %}
+{%
+set classes = [
+'paragraph',
+'paragraph--type--' ~ paragraph.bundle|clean_class,
+view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+'video-embed-wrapper'
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+    {{ content }}
+</div>

@@ -128,6 +128,12 @@ function famsf_digital_stories_theme_preprocess_field(&$variables) {
 
         }
     }
+    if ($elementName == 'field_video_source' && $element['#bundle'] == 'video_embed') {
+        if (isset($variables['items'][0])) {
+            unset($variables['items'][0]['content']['#attributes']['width']);
+            unset($variables['items'][0]['content']['#attributes']['height']);
+        }
+    }
     // Find out what type of entity we have.
     $route = explode('.', Drupal::routeMatch()->getRouteName());
     // Get the hero from the entity if it exists.
