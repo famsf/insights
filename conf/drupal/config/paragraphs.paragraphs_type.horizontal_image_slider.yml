@@ -1,0 +1,6 @@
+uuid: 46fb5e1d-18b1-419b-83fc-f6519538d598
+langcode: en
+status: true
+dependencies: {  }
+id: horizontal_image_slider
+label: 'Horizontal Image Slider'

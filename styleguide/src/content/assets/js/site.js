@@ -180,15 +180,16 @@
       }
 
       // Start the word fade slider
-      $('.js-wordslider', context).once().bxSlider({
-        mode: 'fade',
-        pager: false,
-        controls: false,
-        auto: true,
-        speed: 2000,
-        pause: 3000
+      $('.js-wordslider', context).each(function(){
+        $(this).bxSlider({
+          mode: 'fade',
+          pager: false,
+          controls: false,
+          auto: true,
+          speed: $(this).data('speed'),
+          pause: $(this).data('pause')
+        })
       });
-
       // Start each horizontal slider
        $('.js-horizontal-slider', context).each( function() {
         var sliderInstance =$(this).bxSlider({
@@ -199,14 +200,16 @@
           pause: 3000,
           touchEnabled: true,
           slideWidth: 320,
-          minSlides: 2,
-          maxSlides: 3,
+          moveSlides: $(this).data('moveslides'),
+          minSlides: $(this).data('minslides'),
+          maxSlides: $(this).data('maxslides'),
           slideMargin: 0,
+          ariaHidden: false,
           preloadImages: 'visible',
-          onSlideAfter: function(){
+          onSlideAfter: function($slideElement){
             // Do things after slide is loaded.
             // Load images in slider.
-            $('.horizontal-slider').find('img[data-src],div[data-bg]').lazyLoadXT({show:true});
+            // $('.js-horizontal-slider').find('img[data-src],div[data-bg]').lazyLoadXT();
           }
         });
         var horizontalPrev = $(sliderInstance).parents('.js-horizontal-slider__wrapper').find('.horizontal-slider-prev', context);

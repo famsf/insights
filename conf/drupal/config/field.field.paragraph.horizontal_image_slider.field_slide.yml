@@ -1,0 +1,93 @@
+uuid: 1b17698d-6770-44e2-b407-8dc2a3e398ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slide
+    - paragraphs.paragraphs_type.horizontal_image_slider
+    - paragraphs.paragraphs_type.image_slide
+  module:
+    - entity_reference_revisions
+id: paragraph.horizontal_image_slider.field_slide
+field_name: field_slide
+entity_type: paragraph
+bundle: horizontal_image_slider
+label: Slide
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      image_slide: image_slide
+    target_bundles_drag_drop:
+      1up_section:
+        weight: 22
+        enabled: false
+      2up_section:
+        weight: 23
+        enabled: false
+      audio_component:
+        weight: 24
+        enabled: false
+      audio_tour_info:
+        weight: 25
+        enabled: false
+      card_section:
+        weight: 26
+        enabled: false
+      comparison_image:
+        weight: 27
+        enabled: false
+      footer_feature:
+        weight: 28
+        enabled: false
+      horizontal_image_slider:
+        weight: 29
+        enabled: false
+      image_comparison_section:
+        weight: 30
+        enabled: false
+      image_with_revealable_caption:
+        weight: 31
+        enabled: false
+      image_with_zoomable_markers:
+        weight: 32
+        enabled: false
+      image_slide:
+        enabled: true
+        weight: 32
+      link_or_download_button:
+        weight: 33
+        enabled: false
+      overlay_image:
+        weight: 34
+        enabled: false
+      photo_credits:
+        weight: 35
+        enabled: false
+      pull_quote:
+        weight: 36
+        enabled: false
+      revealable_read_more_section:
+        weight: 37
+        enabled: false
+      sponsor:
+        weight: 38
+        enabled: false
+      text_area:
+        weight: 39
+        enabled: false
+      video_source:
+        weight: 40
+        enabled: false
+      word_fader:
+        weight: 41
+        enabled: false
+      zoomable_area:
+        weight: 42
+        enabled: false
+field_type: entity_reference_revisions
