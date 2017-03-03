@@ -87,6 +87,7 @@
             <property name="build.dir" value="${build.dir}" />
             <property name="drupal.root" value="${drupal.root}" />
             <property name="drupal.sites_subdir" value="${drupal.sites_subdir}" />
+            <property name="drupal.root_name" value="web/" />
         </phing>
 
         <phingcall target="build" />
