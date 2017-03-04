@@ -19,10 +19,10 @@ settings:
       label: 'Legion of Honor Light'
     -
       value: de-young-light
-      label: 'De Young Light'
+      label: 'de Young Light'
     -
       value: de-young-dark
-      label: 'De Young Dark'
+      label: 'de Young Dark'
   allowed_values_function: ''
 module: options
 locked: false
