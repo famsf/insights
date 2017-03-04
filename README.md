@@ -90,6 +90,10 @@ Sometimes it is appropriate to configure specific Drupal variables in Drupal's `
 
 Run `vendor/bin/phing test` or `vendor/bin/behat features/installation.feature`.
 
+## Deployment
+
+See [docs/deployment.md](docs/deployment.md) for details.
+
 ## Troubleshooting
 
 If, on browsing to `http://famsf-digital-stories.local`, you get the following error:

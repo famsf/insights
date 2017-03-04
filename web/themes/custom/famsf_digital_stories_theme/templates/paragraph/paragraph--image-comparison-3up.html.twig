@@ -36,11 +36,26 @@
  * @ingroup themeable
  */
 #}
-<blockquote class="standalone-quote animated delay-500">
-    <p>{{ paragraph.field_quote.value }}</p>
-    {% if paragraph.field_attribution.value|striptags|trim is not empty %}
-    <footer class="standalone-quote__cite">
-        <p>{{ paragraph.field_attribution.value }}</p>
-    </footer>
-    {% endif %}
-</blockquote>
+<div class="container comparison">
+    <div class="comparison__3up js-comparison__group">
+        <figure>
+            <div class="figure__wrapper">
+                {{ content.field_left_image }}
+            </div>
+        </figure>
+    </div>
+    <div class="comparison__3up js-comparison__group">
+        <figure>
+            <div class="figure__wrapper">
+                {{ content.field_center_image }}
+            </div>
+        </figure>
+    </div>
+    <div class="comparison__3up js-comparison__group">
+        <figure>
+            <div class="figure__wrapper">
+                {{ content.field_right_image }}
+            </div>
+        </figure>
+    </div>
+</div>
