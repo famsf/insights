@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Custom theme implementation to display a card section paragraph.
+ * Custom theme implementation to display a paragraph.
  *
  * Available variables:
  * - paragraph: Full paragraph entity.
@@ -36,14 +36,15 @@
  * @ingroup themeable
  */
 #}
-<article class="footer-section">
-    <a href="{{ paragraph.field_footer_feature_main_link.uri }}">
-        <img data-src="{{ file_url(paragraph.field_footer_feature_image.entity.fileuri) }}" alt="{{ paragraph.field_footer_feature_image.alt }}" />
-    </a>
-    <h3 class="footer-section__title">{{ content.field_footer_feature_main_link }}</h3>
-</article>
-{% if paragraph.field_related_events_link.uri is not empty %}
-<article class="footer-section">
-    <h3 class="footer-section__title">{{ content.field_related_events_link }}</h3>
-</article>
-{% endif %}
+{%
+set classes = [
+'paragraph',
+'paragraph--type--' ~ paragraph.bundle|clean_class,
+view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class
+]
+%}
+<div{{ attributes.addClass(classes) }}>
+    {{ content.field_text_area }}
+    <img data-src="{{ file_url(paragraph.field_image_close_up.entity.fileuri) }}" alt="{{ paragraph.field_image_close_up.alt }}" />
+
+</div>

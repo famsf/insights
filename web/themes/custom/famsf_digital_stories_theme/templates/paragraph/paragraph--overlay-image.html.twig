@@ -39,7 +39,7 @@
 <figure class="js-overlay-container">
     <div class="figure__wrapper">
         <img data-src="{{ file_url(paragraph.field_image.entity.fileuri) }}" alt="{{ paragraph.field_image.alt }}" />
-        <img class="figure__overlay js-overlay-image js-overlay-image--hidden" data-src="{{ file_url(paragraph.field_overlay_image.entity.fileuri) }}" alt="{{ paragraph.field_overlay_image.alt }}" />
+        <img class="figure__overlay js-overlay-image js-overlay-image--hidden" src="{{ file_url(paragraph.field_overlay_image.entity.fileuri) }}" alt="{{ paragraph.field_overlay_image.alt }}" />
     </div>
    {{ content.field_photo_credits }}
     <button class="button-with-icon js-overlay-button figure__overlay-cta" data-text-collapsed="{{ paragraph.field_overlay_button_text.value }}" data-text-expanded="{{ paragraph.field_overlay_button_expanded.value }}">
