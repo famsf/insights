@@ -11,8 +11,8 @@ id: paragraph.video_embed.field_video_source
 field_name: field_video_source
 entity_type: paragraph
 bundle: video_embed
-label: 'Video Source'
-description: ''
+label: 'Video Embed Source'
+description: 'Paste embed code from services such as YouTube and Vimeo here. '
 required: false
 translatable: true
 default_value: {  }
