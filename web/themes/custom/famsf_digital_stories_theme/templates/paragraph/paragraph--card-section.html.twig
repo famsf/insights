@@ -36,6 +36,7 @@
  * @ingroup themeable
  */
 #}
+{% set boldTitle = (paragraph.field_section_title_style.value == 'has-backdrop' or paragraph.field_section_title_style.value == 'has-bold-outlined') %}
 {% set classes = [
 'js-section',
 content.field_scrollable|render|striptags==1 ? 'pp-scrollable',
@@ -46,8 +47,21 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
 {% set containerId = paragraph.field_card_section_title.value|trim|clean_id %}
 {% set wrapperClasses = [
 'section-hero__wrapper',
-paragraph.field_background_image.entity.fileuri?'':'pattern'
+paragraph.field_background_image.entity.fileuri?'':'pattern',
+boldTitle?'animatedParent'
 ] %}
+{% set sectionTitleWrapperClasses = [
+boldTitle?'section-hero__title--bold animated':'section-hero__title',
+paragraph.field_section_title_position.value,
+paragraph.field_section_title_style.value
+] %}
+{% set sectionTitleClasses = [
+'animated',
+boldTitle?'':'fadeIn',
+boldTitle?'delay-1250':'delay-1500',
+'js-section-hero--get_height'
+] %}
+
 <section{{ attributes.addClass(classes).setAttribute('id', containerId) }}>
     {% if paragraph.field_display_hero_section.value == 1 %}
 
@@ -67,10 +81,18 @@ paragraph.field_background_image.entity.fileuri?'':'pattern'
         {% else %}
         <div class="section-hero">
             <div class="{{ wrapperClasses|join(' ') }}" {% if paragraph.field_background_image.entity.fileuri is not empty %}data-bg="{{ file_url(paragraph.field_background_image.entity.fileuri) }}"{% endif %}>
-                <div class="section-hero__title {{ paragraph.field_section_title_style.value }} {{ paragraph.field_section_title_position.value }}">
-                    <h1 class="animated fadeIn delay-1500 js-section-hero--get_height">{{ paragraph.field_card_section_title.value }}</h1>
+                <div class="{{ sectionTitleWrapperClasses|join(' ') }}">
+                    {% if boldTitle %}
+                    <div class="animated-border--top"></div>
+                    {% endif %}
+                    <h1 class="{{ sectionTitleClasses|join(' ') }}">{{ paragraph.field_card_section_title.value }}</h1>
+                    {% if not boldTitle %}
                     <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
                     <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
+                    {% endif %}
+                    {% if boldTitle %}
+                        <div class="animated-border--bottom"></div>
+                    {% endif %}
                 </div>
             </div>
             {{ content.field_photo_credits }}

@@ -37,7 +37,7 @@
  */
 #}
 
-{% if content.field_link|render|trim is not empty %}
+{% if paragraph.field_link[0] is not empty %}
     <a href="{{ paragraph.field_link[0].uri }}" class="{{ paragraph.field_button_style.value }}">{{ paragraph.field_link[0].title }}</a>
 
 {% elseif content.field_download_file|render|trim is not empty %}

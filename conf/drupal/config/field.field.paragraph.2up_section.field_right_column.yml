@@ -12,6 +12,8 @@ dependencies:
     - paragraphs.paragraphs_type.link_or_download_button
     - paragraphs.paragraphs_type.pull_quote
     - paragraphs.paragraphs_type.text_area
+    - paragraphs.paragraphs_type.video_embed
+    - paragraphs.paragraphs_type.video_source
     - paragraphs.paragraphs_type.word_fader
   module:
     - entity_reference_revisions
@@ -37,6 +39,8 @@ settings:
       word_fader: word_fader
       overlay_image: overlay_image
       pull_quote: pull_quote
+      video_embed: video_embed
+      video_source: video_source
     target_bundles_drag_drop:
       1up_section:
         weight: 6
@@ -86,4 +90,10 @@ settings:
       pull_quote:
         enabled: true
         weight: 27
+      video_embed:
+        enabled: true
+        weight: 33
+      video_source:
+        enabled: true
+        weight: 34
 field_type: entity_reference_revisions

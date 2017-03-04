@@ -1,0 +1,6 @@
+uuid: 1a02033f-1151-4d8e-8f93-e7e9e02e9782
+langcode: en
+status: true
+dependencies: {  }
+id: image_comparison_3up
+label: 'Image Comparison Section - 3 column, 3 images'

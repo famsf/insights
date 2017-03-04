@@ -25,14 +25,6 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
-  field_marker_delay:
-    weight: 2
-    label: hidden
-    settings:
-      thousand_separator: ''
-      prefix_suffix: true
-    third_party_settings: {  }
-    type: number_integer
   field_text_area:
     weight: 0
     label: hidden
@@ -42,5 +34,6 @@ content:
 hidden:
   created: true
   field_left_position: true
+  field_marker_delay: true
   field_top_position: true
   uid: true

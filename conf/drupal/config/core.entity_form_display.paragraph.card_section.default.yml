@@ -12,7 +12,6 @@ dependencies:
     - field.field.paragraph.card_section.field_section_title_position
     - field.field.paragraph.card_section.field_section_title_style
     - field.field.paragraph.card_section.field_sections_in_card
-    - field.field.paragraph.card_section.field_video_source
     - field.field.paragraph.card_section.field_video_source_paragraph
     - image.style.thumbnail
     - paragraphs.paragraphs_type.card_section
@@ -20,7 +19,6 @@ dependencies:
     - field_group
     - image
     - paragraphs
-    - video
 third_party_settings:
   field_group:
     group_hero_section:
@@ -108,15 +106,6 @@ content:
       add_mode: dropdown
       form_display_mode: default
     third_party_settings: {  }
-  field_video_source:
-    weight: 10
-    settings:
-      file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
-      allowed_providers:
-        youtube: youtube
-      uri_scheme: public
-    third_party_settings: {  }
-    type: video_embed
   field_video_source_paragraph:
     type: entity_reference_paragraphs
     weight: 9

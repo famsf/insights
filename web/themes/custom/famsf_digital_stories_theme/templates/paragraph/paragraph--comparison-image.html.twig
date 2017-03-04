@@ -64,7 +64,12 @@
         {% set credits = credits|merge([photoCredits.field_general_credit.value ]) %}
     {% endif %}
     {% if credits is not empty or photoCredits.field_image_title.value is not empty %}
-        <a class="figcaption-cta js-figcaption-cta">image credit</a>
+        <div class="figcaption__wrapper animated delay-1000">
+            <a class="figcaption-cta js-figcaption-cta">
+                <i class="icon--small ">{{ include(active_theme_path() ~ '/svg/'~ custom_theme ~ '/famsf-copyright-md.svg')  }}</i>
+                <span>image credit</span>
+            </a>
+        </div>
         <figcaption>
             {% if photoCredits.field_image_title.value is not empty %}
                 <span class="title-of-art"> {{ photoCredits.field_image_title.value }} </span>
@@ -74,7 +79,7 @@
     {{ content.field_content }}
 </div>
 <button class="comparison__button js-comparison__button">
-    <i class="icon-arrow--down js-icon-arrow--down">{{  include(custom_theme_path ~  '/svg/famsf-caret-down-sm.svg') }}</i>
-    <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{{ include(custom_theme_path ~  '/svg/famsf-caret-up-sm.svg') }}</i>
+    <i class="icon-arrow--down js-icon-arrow--down">{{  include(active_theme_path() ~ '/svg/'~ custom_theme ~ '/famsf-caret-down-sm.svg') }}</i>
+    <i class="icon-arrow--up js-icon-arrow--up" style="display:none;">{{ include(active_theme_path() ~ '/svg/'~ custom_theme ~ '/famsf-caret-up-sm.svg') }}</i>
     {{ paragraph.field_reveal_button_text.value }}
 </button>

@@ -16,8 +16,8 @@ content:
     weight: 0
     label: hidden
     settings:
-      width: '854'
-      height: '480'
+      width: '0'
+      height: '0'
       autoplay: true
       loop: true
       preload: auto

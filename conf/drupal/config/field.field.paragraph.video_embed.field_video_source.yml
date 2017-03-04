@@ -1,18 +1,18 @@
-uuid: baaa6b84-2d8b-481f-93a9-2b444d1aff7f
+uuid: ef4852cd-f711-407a-8cc8-58027c9924eb
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.paragraph.field_video_source
-    - paragraphs.paragraphs_type.card_section
+    - paragraphs.paragraphs_type.video_embed
   module:
     - video
-id: paragraph.card_section.field_video_source
+id: paragraph.video_embed.field_video_source
 field_name: field_video_source
 entity_type: paragraph
-bundle: card_section
-label: 'Video Source'
-description: ''
+bundle: video_embed
+label: 'Video Embed Source'
+description: 'Paste embed code from services such as YouTube and Vimeo here. '
 required: false
 translatable: true
 default_value: {  }

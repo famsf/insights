@@ -13,7 +13,7 @@
  * @ingroup themeable
  */
 #}
-<video preload="{{ player_attributes.preload }}" {{ player_attributes.controls ? 'controls' : '' }} style="width:{{ player_attributes.width }}px;height:{{ player_attributes.height }}px;" {{ player_attributes.autoplay ? 'autoplay' : '' }} {{ player_attributes.loop ? 'loop' : '' }} {{ player_attributes.muted ? 'muted' : '' }} class="video-background">
+<video preload="{{ player_attributes.preload }}" {{ player_attributes.controls ? 'controls' : '' }} style="{% if  player_attributes.width > 0 %}width:{{ player_attributes.width }}px;{% endif %}{% if  player_attributes.height > 0 %}height:{{ player_attributes.height }}px;{% endif %}" {{ player_attributes.autoplay ? 'autoplay' : '' }} {{ player_attributes.loop ? 'loop' : '' }} {{ player_attributes.muted ? 'muted' : '' }}>
     {% for user in items %}
         <source src="{{ user }}"/>
     {% endfor %}

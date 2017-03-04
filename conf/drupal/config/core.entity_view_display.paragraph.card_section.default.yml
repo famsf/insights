@@ -12,14 +12,12 @@ dependencies:
     - field.field.paragraph.card_section.field_section_title_position
     - field.field.paragraph.card_section.field_section_title_style
     - field.field.paragraph.card_section.field_sections_in_card
-    - field.field.paragraph.card_section.field_video_source
     - field.field.paragraph.card_section.field_video_source_paragraph
     - paragraphs.paragraphs_type.card_section
   module:
     - entity_reference_revisions
     - image
     - options
-    - video
 id: paragraph.card_section.default
 targetEntityType: paragraph
 bundle: card_section
@@ -95,15 +93,6 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-  field_video_source:
-    weight: 18
-    label: above
-    settings:
-      width: '854'
-      height: '480'
-      autoplay: true
-    third_party_settings: {  }
-    type: video_embed_player
   field_video_source_paragraph:
     type: entity_reference_revisions_entity_view
     weight: 17

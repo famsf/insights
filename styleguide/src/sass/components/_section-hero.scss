@@ -174,5 +174,7 @@
     z-index: -100;
     transform: translateX(-50%) translateY(-50%);
     background-size: cover;
+    background-position: center center;
+    object-fit: cover;
   }
 }

@@ -4,8 +4,18 @@
  *
  * @copyright Copyright (c) 2017 Palantir.net
  */
-
+%video-inline,
 .video-inline {
   width: 100%;
   display: block;
+}
+
+.video-embed-wrapper {
+  @include intrinsic-ratio();
+}
+
+.paragraph--type--video-source {
+  video {
+    @extend %video-inline;
+  }
 }
