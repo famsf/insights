@@ -10,8 +10,8 @@ description: This is an image overlay.
 
 {% block content_wrapper %}
   {% block content %}
-
-    {% include('image-overlay.html') %}
-
+    <div class="animatedParent">
+      {% include('image-overlay.html') %}
+    </div>
   {% endblock %}
 {% endblock %}

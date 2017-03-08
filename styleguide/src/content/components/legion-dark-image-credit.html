@@ -10,8 +10,8 @@ description: This is an image with a credit. It will adjust to the size of its c
 
 {% block content_wrapper %}
   {% block content %}
-
-    {% include('image-with-credit.html') %}
-
+    <div class="animatedParent">
+      {% include('image-with-credit.html') %}
+    </div>
   {% endblock %}
 {% endblock %}
