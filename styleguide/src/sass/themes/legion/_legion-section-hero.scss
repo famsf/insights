@@ -15,3 +15,7 @@
   -webkit-background-size: 0.5em 0.5em;
   background-size: 0.5em 0.5em;
 }
+
+.site-hero__logo {
+  @extend %fadeIn;
+}

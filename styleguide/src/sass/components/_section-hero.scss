@@ -132,8 +132,10 @@
   width: 0%;
   background: linear-gradient( to right, $section-hero-border-a, $section-hero-border-b );
   height: 2px;
+}
+
+.animated-border--top.go {
   animation: expand-width 1s forwards;
-  animation-delay: 2.5s;
 }
 
 .animated-border--bottom {
@@ -144,10 +146,11 @@
   width: 0%;
   background: linear-gradient( to right, $section-hero-border-b, $section-hero-border-a );
   height: 2px;
-  animation: expand-width 1s forwards;
-  animation-delay: 2.5s;
 }
 
+.animated-border--bottom.go {
+  animation: expand-width 1s forwards;
+}
 
 .section-hero__rectangle {
   @extend %hero__rectangle;
@@ -176,5 +179,25 @@
     background-size: cover;
     background-position: center center;
     object-fit: cover;
+  }
+}
+
+// Fade In animation styles for Legion rectangle styles.
+// Note these impact site heroes and section heroes.
+.has-solid-rectangles {
+  h1, h2 {
+    @extend %fadeIn;
+  }
+}
+
+.has-outlined-rectangles {
+  h1, h2 {
+    @extend %fadeIn;
+  }
+}
+
+.has-dotted-border {
+  h1, h2 {
+    @extend %fadeIn;
   }
 }

@@ -159,8 +159,9 @@
     width: 0%;
     background: linear-gradient( to right, $section-hero-border-a, $section-hero-border-b );
     height: 2px;
-    animation: expand-width 1.5s forwards;
-    animation-delay: 3.5s;
+    &.go {
+      animation: expand-width 1.5s forwards;
+    }
   }
 
   .animated-border--bottom {
@@ -171,8 +172,9 @@
     width: 0%;
     background: linear-gradient( to right, $section-hero-border-b, $section-hero-border-a );
     height: 2px;
-    animation: expand-width 1.5s forwards;
-    animation-delay: 3.5s;
+    &.go {
+      animation: expand-width 1.5s forwards;
+    }
   }
 
   &.has-backdrop {

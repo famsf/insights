@@ -4,14 +4,14 @@ section: component
 type: full-width
 theme: legion-light
 
-title: Light Section Hero 
+title: Light Section Hero
 description: This hero signifies the beginning of a new chapter. This version has no image or video.
 ---
 
 {% block content_wrapper %}
   {% block content %}
-
-  {% include('section-hero.html') %}
-
+  <div class="animatedParent">
+    {% include('section-hero.html') %}
+  </div>
   {% endblock %}
 {% endblock %}
