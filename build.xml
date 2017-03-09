@@ -18,7 +18,7 @@
 
         <property name="styleguide.dir" value="styleguide" />
         <resolvepath propertyName="styleguide.dir.absolute_path" file="${styleguide.dir}" />
-        <resolvepath propertyname="styleguide_code" file="${styleguide.dir}/build/assets" />
+        <resolvepath propertyname="styleguide_code" file="${styleguide.dir}/src/content/assets" />
 
         <exec command="npm run butler -- sass" dir="${styleguide.dir.absolute_path}" logoutput="true" checkreturn="true" />
 
