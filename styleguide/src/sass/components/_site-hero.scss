@@ -178,12 +178,28 @@
   }
 
   &.has-backdrop {
+    @extend %fadeInDown;
     background-color: rgba(darken($section-hero-shadow-b, 5%), .8);
     padding: rhythm(1.5);
 
     @include breakpoint($bp1) {
       width: 27rem;
       padding: rhythm(1);
+    }
+    &.top-left {
+    @extend %fadeInLeft;
+    }
+
+    &.top-right {
+      @extend %fadeInRight;
+    }
+
+    &.bottom-left {
+      @extend %fadeInLeft;
+    }
+
+    &.bottom-right {
+      @extend %fadeInRight;
     }
 
     .site-hero__logo,
