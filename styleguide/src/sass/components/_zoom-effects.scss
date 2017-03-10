@@ -65,7 +65,7 @@
   right: 0;
   left: 0;
   background: #333;
-  z-index: 50;
+  z-index: 250;
   opacity: .75;
 }
 
@@ -79,7 +79,7 @@
   padding: rhythm(2);
   max-height: 90vh;
   overflow-y: auto;
-  z-index: 100;
+  z-index: 300;
   @include breakpoint($bp1) {
     top: 5vh;
     right: 5vw;
