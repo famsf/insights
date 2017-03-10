@@ -39,11 +39,11 @@
         if (changeThisPanel.hasClass("js-expander--is-closed")) {
           buttonClicked.find('.js-icon-arrow--minus').show(0);
           buttonClicked.find('.js-icon-arrow--plus').hide(0);
-          changeThisPanel.removeClass("js-expander--is-closed").addClass("js-expander--is-open").slideDown(300);
+          changeThisPanel.removeClass("js-expander--is-closed").addClass("js-expander--is-open").slideDown(300, function() {
+            // Load images in expandable area.
+            $(changeThisPanel).find('img[data-src],div[data-bg]').lazyLoadXT();
+          });
           buttonClicked.find('.button-with-icon__text').html(expandedText).attr('title', expandedText);
-          // Load images in expandable area.
-          $(changeThisPanel).find('img[data-src],div[data-bg]').lazyLoadXT();
-
         }
         else if (changeThisPanel.hasClass("js-expander--is-open")) {
           buttonClicked.find('.js-icon-arrow--plus').show(0);
