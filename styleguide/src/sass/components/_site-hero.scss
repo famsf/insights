@@ -160,7 +160,8 @@
     background: linear-gradient( to right, $section-hero-border-a, $section-hero-border-b );
     height: 2px;
     &.go {
-      animation: expand-width 1.5s forwards;
+      animation-name: expand-width;
+      animation-duration: 1.5s;
     }
   }
 
@@ -173,7 +174,8 @@
     background: linear-gradient( to right, $section-hero-border-b, $section-hero-border-a );
     height: 2px;
     &.go {
-      animation: expand-width 1.5s forwards;
+      animation-name: expand-width;
+      animation-duration: 1.5s;
     }
   }
 
