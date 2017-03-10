@@ -32,7 +32,7 @@
         var sectionTop = $(thisSection).scrollTop();
         var scrollDistance = topDistance + sectionTop;
         // Scroll area to the top of the section.
-        $(thisSection).animate({
+        $(thisSection, context).animate({
           scrollTop: scrollDistance
         }, 1000);
         // Toggle the button and panel states.
