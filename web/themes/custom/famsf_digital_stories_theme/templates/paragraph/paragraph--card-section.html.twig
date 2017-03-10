@@ -48,16 +48,15 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
 {% set wrapperClasses = [
 'section-hero__wrapper',
 paragraph.field_background_image.entity.fileuri?'':'pattern',
-boldTitle?'animatedParent'
 ] %}
 {% set sectionTitleWrapperClasses = [
 boldTitle?'section-hero__title--bold animated':'section-hero__title',
 paragraph.field_section_title_position.value,
-paragraph.field_section_title_style.value
+paragraph.field_section_title_style.value,
+paragraph.field_section_title_style.value == 'has-backdrop'?'delay-1250':'',
 ] %}
 {% set sectionTitleClasses = [
 'animated',
-boldTitle?'':'fadeIn',
 boldTitle?'delay-1250':'delay-1500',
 'js-section-hero--get_height'
 ] %}
@@ -69,11 +68,17 @@ boldTitle?'delay-1250':'delay-1500',
         <div class="section-hero section-hero__video-wrapper">
             {{ content.field_video_source_paragraph }}
             <div class="section-hero__wrapper has-video">
-                <div class="section-hero__title js-section-hero--get_height {{ paragraph.field_section_title_style.value }} {{ paragraph.field_section_title_position.value }}">
-                    <h1>{{ paragraph.field_card_section_title.value }}</h1>
+                <div class="{{ sectionTitleWrapperClasses|join(' ') }}">
+                    {% if boldTitle %}
+                    <div class="delay-2500 animated animated-border--top"></div>
+                    {% endif %}
+                    <h1 class="{{ sectionTitleClasses|join(' ') }}">{{ paragraph.field_card_section_title.value }}</h1>
                     {% if paragraph.field_section_title_style.value != 'has-dotted-border' %}
                     <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
                     <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
+                    {% endif %}
+                    {% if boldTitle %}
+                        <div class="delay-2500 animated animated-border--bottom"></div>
                     {% endif %}
                 </div>
             </div>
@@ -83,7 +88,7 @@ boldTitle?'delay-1250':'delay-1500',
             <div class="{{ wrapperClasses|join(' ') }}" {% if paragraph.field_background_image.entity.fileuri is not empty %}data-bg="{{ file_url(paragraph.field_background_image.entity.fileuri) }}"{% endif %}>
                 <div class="{{ sectionTitleWrapperClasses|join(' ') }}">
                     {% if boldTitle %}
-                    <div class="animated-border--top"></div>
+                    <div class="delay-2500 animated animated-border--top"></div>
                     {% endif %}
                     <h1 class="{{ sectionTitleClasses|join(' ') }}">{{ paragraph.field_card_section_title.value }}</h1>
                     {% if not boldTitle %}
@@ -91,7 +96,7 @@ boldTitle?'delay-1250':'delay-1500',
                     <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
                     {% endif %}
                     {% if boldTitle %}
-                        <div class="animated-border--bottom"></div>
+                        <div class="delay-2500 animated animated-border--bottom"></div>
                     {% endif %}
                 </div>
             </div>

@@ -159,8 +159,10 @@
     width: 0%;
     background: linear-gradient( to right, $section-hero-border-a, $section-hero-border-b );
     height: 2px;
-    animation: expand-width 1.5s forwards;
-    animation-delay: 3.5s;
+    &.go {
+      animation-name: expand-width;
+      animation-duration: 1.5s;
+    }
   }
 
   .animated-border--bottom {
@@ -171,17 +173,35 @@
     width: 0%;
     background: linear-gradient( to right, $section-hero-border-b, $section-hero-border-a );
     height: 2px;
-    animation: expand-width 1.5s forwards;
-    animation-delay: 3.5s;
+    &.go {
+      animation-name: expand-width;
+      animation-duration: 1.5s;
+    }
   }
 
   &.has-backdrop {
+    @extend %fadeInDown;
     background-color: rgba(darken($section-hero-shadow-b, 5%), .8);
     padding: rhythm(1.5);
 
     @include breakpoint($bp1) {
       width: 27rem;
       padding: rhythm(1);
+    }
+    &.top-left {
+    @extend %fadeInLeft;
+    }
+
+    &.top-right {
+      @extend %fadeInRight;
+    }
+
+    &.bottom-left {
+      @extend %fadeInLeft;
+    }
+
+    &.bottom-right {
+      @extend %fadeInRight;
     }
 
     .site-hero__logo,

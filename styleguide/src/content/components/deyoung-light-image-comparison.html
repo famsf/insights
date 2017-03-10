@@ -10,8 +10,8 @@ description: These images are arranged in a row so they can be easily compared b
 
 {% block content_wrapper %}
   {% block content %}
-
-    {% include('image-comparison.html') %}
-
+    <div class="animatedParent">
+      {% include('image-comparison.html') %}
+    </div>
   {% endblock %}
 {% endblock %}

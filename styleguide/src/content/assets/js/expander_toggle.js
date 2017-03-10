@@ -20,29 +20,30 @@
         var buttonClicked = $(this);
         // Define the target expandable div.
         var changeThisPanel = $(this).parents('.js-deep-dive').find('.js-deep-dive__wrapper');
-
+        var changePanelParent = $(this).parents('.js-deep-dive');
         // Load button text from data attribute when div is expanded.
         var expandedText = $(this).data('text-expanded');
 
         // Load button text from data attribute when div is collapsed.
         var collapsedText = $(this).data('text-collapsed');
 
-        var ThisSection = $(this).parents('.section');
-
+        var thisSection = $('.js-section.active');
+        var topDistance = $(changePanelParent).offset().top;
+        var sectionTop = $(thisSection).scrollTop();
+        var scrollDistance = topDistance + sectionTop;
+        // Scroll area to the top of the section.
+        $(thisSection, context).animate({
+          scrollTop: scrollDistance
+        }, 1000);
         // Toggle the button and panel states.
         if (changeThisPanel.hasClass("js-expander--is-closed")) {
           buttonClicked.find('.js-icon-arrow--minus').show(0);
           buttonClicked.find('.js-icon-arrow--plus').hide(0);
-          changeThisPanel.removeClass("js-expander--is-closed").addClass("js-expander--is-open").slideDown(300);
+          changeThisPanel.removeClass("js-expander--is-closed").addClass("js-expander--is-open").slideDown(300, function() {
+            // Load images in expandable area.
+            $(changeThisPanel).find('img[data-src],div[data-bg]').lazyLoadXT();
+          });
           buttonClicked.find('.button-with-icon__text').html(expandedText).attr('title', expandedText);
-          // Load images in expandable area.
-          $(changeThisPanel).find('img[data-src],div[data-bg]').lazyLoadXT();
-          /* @Todo:  scroll section up to top of page after expanding. */
-          $('html, body').animate({
-            scrollTop: changeThisPanel.offset().top
-            // changeThisPanel.offset().top - sectionHeight
-          }, 1000);
-
         }
         else if (changeThisPanel.hasClass("js-expander--is-open")) {
           buttonClicked.find('.js-icon-arrow--plus').show(0);

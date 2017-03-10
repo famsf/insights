@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ page.title }}{% endblock %} | {{ site.title }}</title>
+    {% block stylesheet %}
+      {% if page.theme == 'legion-dark' %}
+        <link href="{{ site.url }}/assets/css/themes/legion/legion-dark.css" rel="stylesheet" type="text/css" />
+      {% elseif page.theme == 'legion-light' %}
+        <link href="{{ site.url }}/assets/css/themes/legion/legion-light.css" rel="stylesheet" type="text/css" />
+      {% elseif page.theme == 'deyoung-dark' %}
+        <link href="{{ site.url }}/assets/css/themes/de-young/de-young-dark.css" rel="stylesheet" type="text/css" />
+      {% elseif page.theme == 'deyoung-light' %}
+        <link href="{{ site.url }}/assets/css/themes/de-young/de-young-light.css" rel="stylesheet" type="text/css" />
+      {% else %}
+        <link href="{{ site.url }}/assets/css/styleguide.css" rel="stylesheet" type="text/css" />
+      {% endif %}
+    {% endblock %}
+    <script src="https://use.typekit.net/vbv6sfx.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <style>
+      /* Fixes for animation delay that is handled programmatically in final page. */
+      .delay-250 {
+        -webkit-animation-delay:0.25s;
+        -moz-animation-delay:0.25s;
+        -o-animation-delay:0.25s;
+        animation-delay:0.25s;
+      }
+      .delay-500 {
+          -webkit-animation-delay:0.5s;
+          -moz-animation-delay:0.5s;
+          -o-animation-delay:0.5s;
+          animation-delay:0.5s;
+      }
+      .delay-750 {
+          -webkit-animation-delay:0.75s;
+          -moz-animation-delay:0.75s;
+          -o-animation-delay:0.75s;
+          animation-delay:0.75s;
+      }
+      .delay-1000 {
+          -webkit-animation-delay:1.0s;
+          -moz-animation-delay:1.0s;
+          -o-animation-delay:1.0s;
+          animation-delay:1.0s;
+      }
+      .delay-1250 {
+          -webkit-animation-delay:1.25s;
+          -moz-animation-delay:1.25s;
+          -o-animation-delay:1.25s;
+          animation-delay:1.25s;
+      }
+      .delay-1500 {
+          -webkit-animation-delay:1.5s;
+          -moz-animation-delay:1.5s;
+          -o-animation-delay:1.5s;
+          animation-delay:1.5s;
+      }
+      .delay-1750 {
+          -webkit-animation-delay:1.75s;
+          -moz-animation-delay:1.75s;
+          -o-animation-delay:1.75s;
+          animation-delay:1.75s;
+      }
+      .delay-2000 {
+          -webkit-animation-delay:2.0s;
+          -moz-animation-delay:2.0s;
+          -o-animation-delay:2.0s;
+          animation-delay:2.0s;
+      }
+      .delay-2500 {
+          -webkit-animation-delay:2.5s;
+          -moz-animation-delay:2.5s;
+          -o-animation-delay:2.5s;
+          animation-delay:2.5s;
+      }
+      .delay-2000 {
+          -webkit-animation-delay:2.0s;
+          -moz-animation-delay:2.0s;
+          -o-animation-delay:2.0s;
+          animation-delay:2.0s;
+      }
+      .delay-2500 {
+          -webkit-animation-delay:2.5s;
+          -moz-animation-delay:2.5s;
+          -o-animation-delay:2.5s;
+          animation-delay:2.5s;
+      }
+      .delay-3000 {
+          -webkit-animation-delay:3.0s;
+          -moz-animation-delay:3.0s;
+          -o-animation-delay:3.0s;
+          animation-delay:3.0s;
+      }
+      .delay-3500 {
+          -webkit-animation-delay:3.5s;
+          -moz-animation-delay:3.5s;
+          -o-animation-delay:3.5s;
+          animation-delay:3.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header class="styleguide-header">
+        <h5 class="styleguide-label">Living Styleguide</h5>
+        <h1>{{ site.title }}</h1>
+      </header>
+    </div>
+
+    {% block content_wrapper %}
+      {% block content %}
+        {{ page.content }}
+      {% endblock %}
+    {% endblock %}
+
+    <div class="container">
+      <div class="l-column">
+        <p class="styleguide-copyright">Copyright (c) 2017 Palantir.net</p>
+      </div>
+    </div>
+
+    {{ include("scripts.html") }}
+  </body>
+</html>
