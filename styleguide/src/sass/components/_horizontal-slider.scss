@@ -29,9 +29,9 @@
   .figure__wrapper {
     max-height:180px;
     width: auto;
-  }
-  img:not(.lazy-loaded) {
-    height: 180px; //Adds height while image is loading.
+    @include breakpoint ($bp2) {
+      max-height:360px;
+    }
   }
 }
 
