@@ -36,7 +36,14 @@
  * @ingroup themeable
  */
 #}
+{% set classes = [
+'paragraph',
+'paragraph--type--' ~ paragraph.bundle|clean_class,
+view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+] %}
 <figure>
-  <img data-src="{{ file_url(paragraph.field_image.entity.fileuri) }}" alt="{{ paragraph.field_image.alt }}" />
+  <div {{ attributes.addClass(classes) }} >
+    {{ content.field_video_source }}
+  </div>
   {{ content.field_photo_credits }}
 </figure>
