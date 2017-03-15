@@ -70,7 +70,10 @@ $citation: $gray-dark;
 $hero-color: $white;
 
 // $border: $sherbet;
-$decorative-border: 2px solid $forest;
+$decorative-border: null; // Needed for Safari.
+$decorative-border-width: 2px;
+$decorative-border-style: solid;
+$decorative-border-color: $forest;
 $decorative-border-image: null;
 $rectangles-border: url('../../../imgs/deyoung-rectangles-dark.svg');
 $zoom-background: $white;

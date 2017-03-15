@@ -121,13 +121,16 @@ http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacemen
 
 %decorative-border {
   border-bottom: $decorative-border;
+  border-bottom-width: $decorative-border-width;
   // Test in Safari and Firefox before deleting or modifying these properties.
   border-top: 0;
   border-left: 0;
   border-right: 0;
+  border-style: $decorative-border-style;
+  border-color: $decorative-border-color;
   border-image: $decorative-border-image;
   border-image-slice: 26% 26% 26% 26%;
-  border-image-repeat: round;
+  border-image-repeat: repeat;
 }
 
 /* ==============================================================
@@ -138,7 +141,10 @@ http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacemen
 %rectangles-bg {
 
   @include breakpoint($bp3) {
-    border: 40px solid transparent;
+    // Note: if you combine border styles below they will break on Safari.
+    // border: 40px;
+    border-width: 40px;
+    border-style: solid;
     border-image-source: $rectangles-border;
     // Test in Safari and Firefox before deleting or modifying these properties.
     border-image-slice: 25% 25% 25% 25%;
@@ -174,7 +180,10 @@ http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacemen
    ============================================================== */
 
 %dotted-border {
-  border-bottom: 8px solid transparent;
+  border-bottom: $decorative-border;
+  border-bottom-width: $decorative-border-width;
+  border-style: $decorative-border-style;
+  border-color: $decorative-border-color;
   border-image-source: $decorative-border-image;
   border-image-slice: 26% 26% 26% 26%;
   border-image-repeat: round;

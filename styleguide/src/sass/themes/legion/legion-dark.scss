@@ -46,7 +46,10 @@ $citation: $pink-70;
 $hero-color: $midnight;
 
 $border: $yellow;
-$decorative-border: 8px solid transparent;
+$decorative-border: null; // Needed for Firefox.
+$decorative-border-width: 8px;
+$decorative-border-style: solid;
+$decorative-border-color: null;
 $decorative-border-image: url('../../../imgs/dots-dark.svg') 26% round;
 $rectangles-border: url('../../../imgs/legion-rectangles-dark.svg');
 $zoom-background: $midnight;

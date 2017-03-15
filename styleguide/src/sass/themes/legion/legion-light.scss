@@ -46,8 +46,11 @@ $tertiary: darken($magenta, 5%);
 $citation: $magenta;
 $hero-color: $midnight;
 
-$decorative-border: 8px solid transparent;
-$decorative-border-image: url('../../../imgs/dots-light.svg') 26% round;
+$decorative-border: null;
+$decorative-border-width: 8px;
+$decorative-border-style: solid;
+$decorative-border-color: null;
+$decorative-border-image: url('../../../imgs/dots-light.svg');
 $rectangles-border: url('../../../imgs/legion-rectangles-light.svg');
 $zoom-background: $pink-10;
 $text-shadow-color: transparentize($azure-60, .2);

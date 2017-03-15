@@ -15,7 +15,13 @@ blockquote {
   @extend %fadeInLeft;
   @include adjust-font-size-to($h2-font-size, 1.35);
   position: relative;
+  border-style: $decorative-border-style;
+  border-color: $decorative-border-color;
+  border-top-width: $decorative-border-width;
   border-top: $decorative-border;
+  border-image: $decorative-border-image;
+  border-image-slice: 26% 26% 26% 26%;
+  border-image-repeat: repeat;
   padding: rhythm(1.25) 0 rhythm(1);
   text-align: center;
 
