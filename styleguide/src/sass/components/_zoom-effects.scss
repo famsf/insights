@@ -30,7 +30,7 @@
 .zoom-marker-inner {
   display: flex;
   display: -webkit-flex;
-  background-color: transparentize($background-d, .4);
+  background-color: transparentize($background-d, .15);
   border-radius: 50%;
   width: 2.7rem;
   height: 2.7em;
