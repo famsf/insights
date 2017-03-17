@@ -32,12 +32,27 @@
   display: -webkit-flex;
   background-color: transparentize($background-d, .15);
   border-radius: 50%;
-  width: 2.7rem;
-  height: 2.7em;
+  width: 2.9rem;
+  height: 2.9rem;
+  @include breakpoint($bp1) {
+    width: 3.0rem;
+    height: 3.0rem;
+    .l-1up & {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+    @include breakpoint($bp2) {
+      width: 3.3rem;
+      height: 3.3rem;
+      @include breakpoint($bp3) {
+        width: 3.6rem;
+        height: 3.6rem;
+      }
+    }
+  }
   box-shadow: 2px 2px 5px 0px rgba($black, 0.41);
   .icon--small {
     margin: auto;
-
   }
 }
 

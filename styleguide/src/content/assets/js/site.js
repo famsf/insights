@@ -200,7 +200,7 @@
           speed: 500,
           pause: 3000,
           touchEnabled: true,
-          slideWidth: 320,
+          slideWidth: 640,
           moveSlides: $(this).data('moveslides'),
           minSlides: $(this).data('minslides'),
           maxSlides: $(this).data('maxslides'),
