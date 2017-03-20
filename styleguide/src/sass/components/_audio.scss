@@ -21,8 +21,13 @@
 }
 
 .audio-transcript {
-  font-size: .65rem;
-  line-height: .9rem;
+  font-size: .74rem;
+  line-height: 1.02rem;
+  @include breakpoint($bp1) {
+    font-size: .65rem;
+    line-height: .9rem;
+  }
+  margin: 0 0 rhythm(1) 0;
 }
 
 .audio-transcript--trigger {

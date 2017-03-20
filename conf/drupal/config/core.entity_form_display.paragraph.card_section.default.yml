@@ -29,7 +29,6 @@ third_party_settings:
         - field_section_title_style
         - field_section_title_position
         - field_video_source_paragraph
-        - field_video_source
       parent_name: ''
       weight: 1
       format_type: fieldset
@@ -102,7 +101,7 @@ content:
     settings:
       title: Paragraph
       title_plural: Paragraphs
-      edit_mode: open
+      edit_mode: closed
       add_mode: dropdown
       form_display_mode: default
     third_party_settings: {  }

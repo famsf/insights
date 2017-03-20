@@ -24,29 +24,21 @@
 
 {% if label_hidden %}
     {% if multiple %}
-    <div{{ attributes.addClass('video-embed-wrapper') }}>
         {% for item in items %}
             {{ item.content }}
         {% endfor %}
-    </div>
     {% else %}
-<div{{ attributes.addClass('video-embed-wrapper') }}>
         {% for item in items %}
             {{ item.content }}
         {% endfor %}
-    </div>
     {% endif %}
 {% else %}
-    <div{{ attributes.addClass('video-embed-wrapper') }}>
         <div{{ title_attributes }}>{{ label }}</div>
         {% if multiple %}
-        <div>
             {% endif %}
             {% for item in items %}
                 {{ item.content }}
             {% endfor %}
             {% if multiple %}
-        </div>
         {% endif %}
-    </div>
 {% endif %}

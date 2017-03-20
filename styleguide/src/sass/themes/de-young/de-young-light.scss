@@ -71,9 +71,14 @@ $tertiary: $green;
 $citation: $blue-gray;
 $hero-color: $white;
 
-$decorative-border: 2px solid $green;
+
+
+$decorative-border: null; // Needed for Safari.
+$decorative-border-width: 2px;
+$decorative-border-style: solid;
+$decorative-border-color: $green;
 $decorative-border-image: null;
-$rectangles-border: url('../../../imgs/deyoung-rectangles-light.svg');
+$rectangles-border: url('../../../imgs/deyoung-rectangles-light.png');
 $zoom-background: $blue-20;
 $text-shadow-color: $yellow;
 $hero-content-text: $gray-dark;

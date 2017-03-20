@@ -31,6 +31,9 @@
     width: 100%;
     height: auto;
   }
+  .figure__wrapper {
+    background-color: $background-c;
+  }
 }
 
 .comparison__3up {
@@ -77,6 +80,5 @@
 }
 
 .comparison__answer {
-  background-color: $background-c;
   padding: 0 rhythm(1) rhythm(2);
 }

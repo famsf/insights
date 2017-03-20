@@ -9,7 +9,7 @@
   @extend %fadeIn;
   background: transparent;
   border: 0;
-  margin: 1em auto;
+  margin: rhythm(2) auto;
   > i ,
   > div {
     float: left; // Fixes alignment issue in Firefox of icon and and text inside button element.

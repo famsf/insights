@@ -15,8 +15,8 @@
   height: 90vh;
 
   &.has-video {
-    position: absolute;
-    top: 0;
+    // position: absolute;
+    // top: 0;
   }
 
   &.pattern {
@@ -166,7 +166,6 @@
   position: relative;
   height: 90vh;
   overflow: hidden;
-  margin-bottom: rhythm(1);
 
   video {
     position: absolute;

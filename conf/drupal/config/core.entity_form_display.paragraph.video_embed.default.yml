@@ -3,15 +3,27 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.video_embed.field_photo_credits
     - field.field.paragraph.video_embed.field_video_source
     - paragraphs.paragraphs_type.video_embed
   module:
+    - paragraphs
     - video
 id: paragraph.video_embed.default
 targetEntityType: paragraph
 bundle: video_embed
 mode: default
 content:
+  field_photo_credits:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
   field_video_source:
     weight: 0
     settings:
