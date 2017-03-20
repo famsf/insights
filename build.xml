@@ -25,7 +25,7 @@
         <includeresource mode="${build.artifact_mode}" source="${styleguide_code}/css" dest="${custom_theme}/css" />
         <includeresource mode="${build.artifact_mode}" source="${styleguide_code}/js" dest="${custom_theme}/js" />
         <includeresource mode="${build.artifact_mode}" source="${styleguide_code}/imgs" dest="${custom_theme}/imgs" />
-        <includeresource mode="${build.artifact_mode}" source="${styleguide_code}/svg" dest="${custom_theme}/svg" />
+        <includeresource mode="${build.artifact_mode}" source="${styleguide.dir}/src/includes/svg" dest="${custom_theme}/svg" />
     </target>
 
 
