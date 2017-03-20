@@ -96,6 +96,7 @@
             // Actions when the user transitions to a new card.
             // Select the next active index section element by it's index.
             var nextActiveSection = nextIndex - 1;
+            var allSections = $('section.js-section');
             var sectionSelector = $('section.js-section').eq(nextActiveSection);
             var loadableImages = $(sectionSelector).find('img[data-src],div[data-bg]');
             var numberOfloadableImages = loadableImages.length;
@@ -130,7 +131,7 @@
             }
             // Make sure we scroll to the top of the active section if a link was clicked.
             if (jumpSection == 1) {
-              sectionSelector.scrollTop(0);
+              allSections.scrollTop(0);
               jumpSection = 0;
             }
           },
@@ -199,7 +200,7 @@
           speed: 500,
           pause: 3000,
           touchEnabled: true,
-          slideWidth: 320,
+          slideWidth: 640,
           moveSlides: $(this).data('moveslides'),
           minSlides: $(this).data('minslides'),
           maxSlides: $(this).data('maxslides'),

@@ -3,15 +3,25 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.video_embed.field_photo_credits
     - field.field.paragraph.video_embed.field_video_source
     - paragraphs.paragraphs_type.video_embed
   module:
+    - entity_reference_revisions
     - video
 id: paragraph.video_embed.default
 targetEntityType: paragraph
 bundle: video_embed
 mode: default
 content:
+  field_photo_credits:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
   field_video_source:
     weight: 0
     label: hidden

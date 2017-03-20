@@ -45,7 +45,10 @@ $secondary: $azure;
 $tertiary: darken($magenta, 5%);
 $citation: $azure;
 
-$decorative-border: 8px solid transparent;
+$decorative-border: 8px;
+$decorative-border-width: 8px;
+$decorative-border-style: solid;
+$decorative-border-color: transparent;
 $decorative-border-image: url('../../../imgs/dots-light.svg') 26% round;
 $rectangles-border: url('../../../imgs/legion-rectangles-light.svg');
 $zoom-background: $pink-10;

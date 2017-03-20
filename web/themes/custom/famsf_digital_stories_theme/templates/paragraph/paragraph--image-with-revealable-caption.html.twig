@@ -36,6 +36,7 @@
  * @ingroup themeable
  */
 #}
-    <img data-src="{{ file_url(paragraph.field_image.entity.fileuri) }}" alt="{{ paragraph.field_image.alt }}" />
-    {{ content.field_photo_credits }}
-
+<figure>
+  <img data-src="{{ file_url(paragraph.field_image.entity.fileuri) }}" alt="{{ paragraph.field_image.alt }}" />
+  {{ content.field_photo_credits }}
+</figure>

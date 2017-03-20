@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Custom theme implementation to display a card section paragraph.
+ * Custom theme implementation to display a paragraph.
  *
  * Available variables:
  * - paragraph: Full paragraph entity.
@@ -36,22 +36,14 @@
  * @ingroup themeable
  */
 #}
-<section class="card-section">
-    <div class="container comparison">
-        <div class="comparison__2up js-comparison__group">
-            <figure>
-                <div class="figure__wrapper">
-                    {{ content.field_left_image }}
-                </div>
-            </figure>
-        </div>
-
-        <div class="comparison__2up js-comparison__group">
-            <figure>
-                <div class="figure__wrapper">
-                    {{ content.field_right_image }}
-                </div>
-            </figure>
-        </div>
-    </div>
-</section>
+{% set classes = [
+'paragraph',
+'paragraph--type--' ~ paragraph.bundle|clean_class,
+view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+] %}
+<figure>
+  <div {{ attributes.addClass(classes) }} >
+    {{ content.field_video_source }}
+  </div>
+  {{ content.field_photo_credits }}
+</figure>

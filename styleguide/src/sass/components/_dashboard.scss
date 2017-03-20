@@ -56,7 +56,10 @@ footer {
 
 .dashboard__nav-item {
   display: block;
-  font-size: 80%;
+  font-size: 95%;
+  @include breakpoint($bp2) {
+      font-size: 80%;
+  }
   line-height: 1.3em;
 
   a:link,
