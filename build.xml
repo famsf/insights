@@ -15,11 +15,7 @@
     <!-- Default target: build -->
     <target name="build" description="Build the application.">
         <phingcall target="drupal-build" />
-        <phingcall target="build-theme" />
-    </target>
 
-
-    <target name="build-theme">
         <property name="styleguide.dir" value="styleguide" />
         <resolvepath propertyName="styleguide.dir.absolute_path" file="${styleguide.dir}" />
         <resolvepath propertyname="styleguide_code" file="${styleguide.dir}/src/content/assets" />
@@ -96,7 +92,7 @@
             <property name="install_conf_dir" value="${install_dir}/private" />
         </phing>
 
-        <phingcall target="build-theme" />
+        <phingcall target="build" />
 
         <!-- Drupal's autoload.php needs to reference a different location for the vendor directory -->
         <copy file="${build.dir}/conf/drupal/autoload.pantheon.php" tofile="${pantheon.repo.dir}/autoload.php" overwrite="true" />
