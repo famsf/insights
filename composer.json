@@ -1,6 +1,6 @@
 {
-    "name": "palantirnet/drupal-skeleton",
-    "description": "A Drupal 8 project template.",
+    "name": "palantirnet/famsf-digital-stories",
+    "description": "A Drupal 8 platform for FAMSF digital stories microsites.",
     "type": "project",
     "license": "proprietary",
     "authors": [
