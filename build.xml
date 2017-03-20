@@ -68,8 +68,8 @@
     </target>
 
 
-    <!-- Target: deploy-pantheon -->
-    <target name="deploy-pantheon" description="Build the deployment artifact for Pantheon.">
+    <!-- Target: deploy -->
+    <target name="deploy" description="Build the deployment artifact.">
         <phingcall target="check-deploy-env" />
 
         <if>
