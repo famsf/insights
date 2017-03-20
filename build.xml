@@ -15,7 +15,11 @@
     <!-- Default target: build -->
     <target name="build" description="Build the application.">
         <phingcall target="drupal-build" />
+        <phingcall target="build-theme" />
+    </target>
 
+
+    <target name="build-theme">
         <property name="styleguide.dir" value="styleguide" />
         <resolvepath propertyName="styleguide.dir.absolute_path" file="${styleguide.dir}" />
         <resolvepath propertyname="styleguide_code" file="${styleguide.dir}/src/content/assets" />
@@ -68,8 +72,48 @@
     </target>
 
 
-    <!-- Target: deploy -->
-    <target name="deploy" description="Build the deployment artifact.">
+    <!-- Target: deploy-pantheon -->
+    <target name="deploy-pantheon" description="Build the deployment artifact for Pantheon.">
+        <phingcall target="check-deploy-env" />
+
+        <phing target="init-repository" phingfile="vendor/palantirnet/the-build/tasks/lib/repositories.xml" inheritAll="false" dir=".">
+            <property name="repo.dir" value="${pantheon.repo.dir}" />
+            <property name="repo.source" value="${pantheon.repo.source}" />
+        </phing>
+
+        <phing target="init-branch" phingfile="vendor/palantirnet/the-build/tasks/lib/repositories.xml" inheritAll="false" dir=".">
+            <property name="repo.dir" value="${pantheon.repo.dir}" />
+            <property name="repo.branch" value="${pantheon.repo.branch}" />
+        </phing>
+
+        <phing target="run-composer-elsewhere" phingfile="vendor/palantirnet/the-build/tasks/lib/artifacts.xml" inheritAll="false" dir=".">
+            <property name="install_dir" value="${pantheon.repo.dir}" />
+            <property name="build.dir" value="${build.dir}" />
+            <property name="drupal.root" value="${pantheon.repo.dir}" />
+            <property name="drupal.sites_subdir" value="${drupal.sites_subdir}" />
+
+            <property name="drupal.root_name" value="" />
+            <property name="install_conf_dir" value="${install_dir}/private" />
+        </phing>
+
+        <phingcall target="build-theme" />
+
+        <phing target="commit" phingfile="vendor/palantirnet/the-build/tasks/lib/repositories.xml" inheritAll="false" dir=".">
+            <property name="build.dir" value="${build.dir}" />
+            <property name="repo.dir" value="${pantheon.repo.dir}" />
+            <property name="tag_prefix" value="${pantheon.repo.tag_prefix}" />
+            <property name="message" value="Drupal artifact." />
+        </phing>
+
+        <phing target="push" phingfile="vendor/palantirnet/the-build/tasks/lib/repositories.xml" inheritAll="false" dir=".">
+            <property name="repo.dir" value="${pantheon.repo.dir}" />
+            <property name="repo.branch" value="${pantheon.repo.branch}" />
+        </phing>
+    </target>
+
+
+    <!-- Target: deploy-artifact -->
+    <target name="deploy-artifact" description="Build the deployment artifact.">
         <phingcall target="check-deploy-env" />
 
         <phing target="init-repository" phingfile="vendor/palantirnet/the-build/tasks/lib/repositories.xml" inheritAll="false" dir=".">
