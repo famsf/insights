@@ -9,7 +9,7 @@ The general instructions for setting up this site for development are included i
 The artifact build is fully scripted. To generate the artifact from the current code on your machine, run:
 
 ```
-vendor/bin/phing deploy -Dbuild.env=artifact
+vendor/bin/phing deploy -Dbuild.env=pantheon
 ```
 
 Please review the [How to do a dry run](#How-to-do-a-dry-run) and [How to build and deploy the artifact](#How-to-build-and-deploy-the artifact) sections below before running this command.
@@ -20,17 +20,17 @@ Please review the [How to do a dry run](#How-to-do-a-dry-run) and [How to build 
 
 **The long version:**
 
-* Check out the `artifact` branch of this repository to `artifacts/artifact`
+* Check out the `artifact` branch of this repository to `artifacts/pantheon`
 * Remove all existing code from that directory
 * Copy the `composer.json` file and all files known to git from `web/`, `conf/`, and `drush/` into the artifact directory
 * Run `composer install` in the artifact directory
-* Run `vendor/bin/phing build` in the artifact directory, using the build properties from `conf/build.artifact.properties`
+* Run `vendor/bin/phing build` in the artifact directory, using the build properties from `conf/build.pantheon.properties`
 * Check all of the files in to git
-* Commit the changes to the `artifact` branch
+* Commit the changes to the branch
   * If your HEAD is tagged, then the artifact is tagged to match
   * If your HEAD has un-committed changes, then the artifact commit will include a list of affected files
 * Prompt you to push the new artifact commit; at this point you may wish to review the changed files:
-  * `(cd artifacts/artifact && git log --stat -1)`
+  * `(cd artifacts/pantheon && git log --stat -1)`
 
 ### How to do a dry run
 
@@ -38,24 +38,24 @@ Please review the [How to do a dry run](#How-to-do-a-dry-run) and [How to build 
 2. Run the deploy command with `-Dpush=n`:
 
   ```
-  vendor/bin/phing deploy -Dbuild.env=artifact -Dpush=n
+  vendor/bin/phing deploy -Dbuild.env=pantheon -Dpush=n
   ```
 3. Review the changes to the artifact:
 
   ```
-  (cd artifacts/artifact && git log --stat -1)
+  (cd artifacts/pantheon && git log --stat -1)
   ```
 4. Check for things like:
   * Is the `index.php` present in the Drupal root?
   * Are theme files like images, js, and CSS in place?
-  * Are library files in `web/libraries/` in place?
+  * Are library files in `libraries/` in place?
   * Are there development dependencies in `vendor/`?
-  * Are the changes to `web/modules/contrib` directly related to module updates that you ran recently?
-  * Are the changes to `conf/drupal/config` directly related to recent development?
+  * Are the changes to `modules/contrib` directly related to module updates that you ran recently?
+  * Are the changes to `private/conf/drupal/config` directly related to recent development?
 5. Whether or not things look good, reset the artifact:
 
   ```
-  (cd artifacts/artifact && git reset --hard origin/artifact)
+  (cd artifacts/pantheon && git reset --hard origin/master)
   ```
 6. If things were not right, make some changes to your repository and do another dry run.
 7. If things were A-OK, proceed to tagging!
@@ -77,7 +77,7 @@ Please review the [How to do a dry run](#How-to-do-a-dry-run) and [How to build 
 4. Run the deploy command with `-Dpush=y`:
 
   ```
-  vendor/bin/phing deploy -Dbuild.env=artifact -Dpush=y
+  vendor/bin/phing deploy -Dbuild.env=pantheon -Dpush=y
   ```
 5. On the test server:
   * Check out the same tag as prod is currently using
@@ -99,4 +99,4 @@ Please review the [How to do a dry run](#How-to-do-a-dry-run) and [How to build 
 
 ### Running the artifact on dev/test/prod
 
-For this project, the web root is the `web/` directory within the artifact. You may alias this to the path that your web server already uses, or you may update your web server configuration to point to this directory within the artifact.
+For this project, the web root is the `web/` directory within the development repository, but the Pantheon artifact uses the repository root as the web root.

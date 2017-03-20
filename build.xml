@@ -72,6 +72,23 @@
     <target name="deploy-pantheon" description="Build the deployment artifact for Pantheon.">
         <phingcall target="check-deploy-env" />
 
+        <if>
+            <equals arg1="${build.env}" arg2="pantheon" />
+            <then>
+                <phingcall target="deploy-pantheon" />
+            </then>
+            <elseif>
+                <equals arg1="${build.env}" arg2="artifact" />
+                <then>
+                    <phingcall target="deploy-artifact" />
+                </then>
+            </elseif>
+        </if>
+    </target>
+
+
+    <!-- Target: deploy-pantheon -->
+    <target name="deploy-pantheon" description="Build the deployment artifact for Pantheon.">
         <phing target="init-repository" phingfile="vendor/palantirnet/the-build/tasks/lib/repositories.xml" inheritAll="false" dir=".">
             <property name="repo.dir" value="${pantheon.repo.dir}" />
             <property name="repo.source" value="${pantheon.repo.source}" />
@@ -112,9 +129,7 @@
 
 
     <!-- Target: deploy-artifact -->
-    <target name="deploy-artifact" description="Build the deployment artifact.">
-        <phingcall target="check-deploy-env" />
-
+    <target name="deploy-artifact" description="Build the deployment artifact for a generic host.">
         <phing target="init-repository" phingfile="vendor/palantirnet/the-build/tasks/lib/repositories.xml" inheritAll="false" dir=".">
             <property name="repo.dir" value="${artifact.dir}" />
             <property name="repo.source" value="${artifact.repo}" />
