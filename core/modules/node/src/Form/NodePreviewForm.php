@@ -72,12 +72,7 @@ class NodePreviewForm extends FormBase {
   public function buildForm(array $form, FormStateInterface $form_state, EntityInterface $node = NULL) {
     $view_mode = $node->preview_view_mode;
 
-    $query_options = array('query' => array('uuid' => $node->uuid()));
-    $query = $this->getRequest()->query;
-    if ($query->has('destination')) {
-      $query_options['query']['destination'] = $query->get('destination');
-    }
-
+    $query_options = $node->isNew() ? array('query' => array('uuid' => $node->uuid())) : array();
     $form['backlink'] = array(
       '#type' => 'link',
       '#title' => $this->t('Back to content editing'),
@@ -85,11 +80,9 @@ class NodePreviewForm extends FormBase {
       '#options' => array('attributes' => array('class' => array('node-preview-backlink'))) + $query_options,
     );
 
-    // Always show full as an option, even if the display is not enabled.
-    $view_mode_options = ['full' => $this->t('Full')] + $this->entityManager->getViewModeOptionsByBundle('node', $node->bundle());
+    $view_mode_options = $this->entityManager->getViewModeOptionsByBundle('node', $node->bundle());
 
     // Unset view modes that are not used in the front end.
-    unset($view_mode_options['default']);
     unset($view_mode_options['rss']);
     unset($view_mode_options['search_index']);
 
@@ -123,18 +116,10 @@ class NodePreviewForm extends FormBase {
    * {@inheritdoc}
    */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $route_parameters = [
+    $form_state->setRedirect('entity.node.preview', array(
       'node_preview' => $form_state->getValue('uuid'),
       'view_mode_id' => $form_state->getValue('view_mode'),
-    ];
-
-    $options = [];
-    $query = $this->getRequest()->query;
-    if ($query->has('destination')) {
-      $options['query']['destination'] = $query->get('destination');
-      $query->remove('destination');
-    }
-    $form_state->setRedirect('entity.node.preview', $route_parameters, $options);
+    ));
   }
 
 }

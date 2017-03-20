@@ -100,12 +100,11 @@
         $(window)
           .on('resize.dialogResize scroll.dialogResize', eventData, autoResize)
           .trigger('resize.dialogResize');
-        $(document).on('drupalViewportOffsetChange.dialogResize', eventData, autoResize);
+        $(document).on('drupalViewportOffsetChange', eventData, autoResize);
       }
     },
     'dialog:beforeclose': function (event, dialog, $element) {
       $(window).off('.dialogResize');
-      $(document).off('.dialogResize');
     }
   });
 

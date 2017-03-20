@@ -13,10 +13,7 @@ use Drupal\Core\Render\HtmlResponse;
  *
  * @see \Drupal\big_pipe\Render\BigPipeInterface
  *
- * @internal
- *   This is a temporary solution until a generic response emitter interface is
- *   created in https://www.drupal.org/node/2577631. Only code internal to
- *   BigPipe should instantiate or type hint to this class.
+ * @todo Will become obsolete with https://www.drupal.org/node/2577631
  */
 class BigPipeResponse extends HtmlResponse {
 

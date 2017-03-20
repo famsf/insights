@@ -27,4 +27,3 @@ process:
 destination:
   plugin: config
   config_name: user.settings
-  translations: true

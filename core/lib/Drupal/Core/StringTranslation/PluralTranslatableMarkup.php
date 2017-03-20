@@ -157,11 +157,4 @@ class PluralTranslatableMarkup extends TranslatableMarkup {
     return -1;
   }
 
-  /**
-   * {@inheritdoc}
-   */
-  public function __sleep() {
-    return array_merge(parent::__sleep(), array('count'));
-  }
-
 }

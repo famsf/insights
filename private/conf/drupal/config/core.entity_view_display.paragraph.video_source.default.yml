@@ -1,0 +1,30 @@
+uuid: 2fb77469-0f34-4c1f-9895-4c4a66c2636e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video_source.field_video_source
+    - paragraphs.paragraphs_type.video_source
+  module:
+    - video
+id: paragraph.video_source.default
+targetEntityType: paragraph
+bundle: video_source
+mode: default
+content:
+  field_video_source:
+    weight: 0
+    label: hidden
+    settings:
+      width: '0'
+      height: '0'
+      autoplay: true
+      loop: true
+      preload: auto
+      controls: false
+      muted: false
+    third_party_settings: {  }
+    type: video_player_list
+hidden:
+  created: true
+  uid: true

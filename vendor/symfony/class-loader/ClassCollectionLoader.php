@@ -275,13 +275,7 @@ REGEX;
      */
     private static function writeCacheFile($file, $content)
     {
-        $dir = dirname($file);
-        if (!is_writable($dir)) {
-            throw new \RuntimeException(sprintf('Cache directory "%s" is not writable.', $dir));
-        }
-
-        $tmpFile = tempnam($dir, basename($file));
-
+        $tmpFile = tempnam(dirname($file), basename($file));
         if (false !== @file_put_contents($tmpFile, $content) && @rename($tmpFile, $file)) {
             @chmod($file, 0666 & ~umask());
 

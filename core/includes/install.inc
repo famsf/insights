@@ -1044,11 +1044,10 @@ function drupal_check_module($module) {
  *
  * Example of .info.yml file:
  * @code
- *    name: Minimal
- *    description: Start fresh, with only a few modules enabled.
- *    dependencies:
- *      - block
- *      - dblog
+ *    name = Minimal
+ *    description = Start fresh, with only a few modules enabled.
+ *    dependencies[] = block
+ *    dependencies[] = dblog
  * @endcode
  *
  * @param $profile

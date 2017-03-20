@@ -100,7 +100,7 @@ class Table
      *
      * @param string $name The style name
      *
-     * @return TableStyle
+     * @return TableStyle A TableStyle instance
      */
     public static function getStyleDefinition($name)
     {
@@ -120,7 +120,7 @@ class Table
      *
      * @param TableStyle|string $name The style name or a TableStyle instance
      *
-     * @return $this
+     * @return Table
      */
     public function setStyle($name)
     {
@@ -145,7 +145,7 @@ class Table
      * @param int               $columnIndex Column index
      * @param TableStyle|string $name        The style name or a TableStyle instance
      *
-     * @return $this
+     * @return Table
      */
     public function setColumnStyle($columnIndex, $name)
     {

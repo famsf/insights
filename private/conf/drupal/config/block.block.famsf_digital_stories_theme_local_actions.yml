@@ -1,0 +1,20 @@
+uuid: 4f7b76ce-228e-48fa-990f-0fd0d596bef5
+langcode: en
+status: true
+dependencies:
+  theme:
+    - famsf_digital_stories_theme
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: famsf_digital_stories_theme_local_actions
+theme: famsf_digital_stories_theme
+region: content
+weight: -7
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

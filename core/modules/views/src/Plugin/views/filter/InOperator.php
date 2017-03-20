@@ -206,7 +206,7 @@ class InOperator extends FilterPluginBase {
       }
 
       if (empty($this->options['expose']['multiple'])) {
-        if (empty($this->options['expose']['required']) && (empty($default_value) || !empty($this->options['expose']['reduce'])) || isset($this->options['value']['all'])) {
+        if (empty($this->options['expose']['required']) && (empty($default_value) || !empty($this->options['expose']['reduce']))) {
           $default_value = 'All';
         }
         elseif (empty($default_value)) {

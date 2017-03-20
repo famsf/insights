@@ -1,0 +1,19 @@
+uuid: 547b8285-dcc0-4abd-9709-4cb689d1c1f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_location
+    - paragraphs.paragraphs_type.photo_credits
+id: paragraph.photo_credits.field_location
+field_name: field_location
+entity_type: paragraph
+bundle: photo_credits
+label: Location
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -113,12 +113,4 @@ class BrowserTestBaseTest extends BrowserTestBase {
     $this->assertText($sanitized);
   }
 
-  /**
-   * Tests the Drupal install done in \Drupal\Tests\BrowserTestBase::setUp().
-   */
-  public function testInstall() {
-    $htaccess_filename = $this->tempFilesDirectory . '/.htaccess';
-    $this->assertTrue(file_exists($htaccess_filename), "$htaccess_filename exists");
-  }
-
 }

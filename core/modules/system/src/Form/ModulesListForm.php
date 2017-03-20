@@ -411,7 +411,6 @@ class ModulesListForm extends FormBase {
     foreach (array_keys($modules['install']) as $module) {
       if (!drupal_check_module($module)) {
         unset($modules['install'][$module]);
-        unset($modules['experimental'][$module]);
         foreach (array_keys($data[$module]->required_by) as $dependent) {
           unset($modules['install'][$dependent]);
           unset($modules['dependencies'][$dependent]);

@@ -1,0 +1,23 @@
+uuid: b84c449e-be16-4318-ab7b-f8761c732fcb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_audio_tour_app_store_link
+    - paragraphs.paragraphs_type.audio_tour_info
+  module:
+    - link
+id: paragraph.audio_tour_info.field_audio_tour_app_store_link
+field_name: field_audio_tour_app_store_link
+entity_type: paragraph
+bundle: audio_tour_info
+label: 'Audio Tour App Store link'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

@@ -11,10 +11,6 @@
 
   'use strict';
 
-  // The minimum width to use body displace needs to match the width at which
-  // the tray will be %100 width. @see outside_in.module.css
-  var minDisplaceWidth = 768;
-
   /**
    * The edge of the screen that the dialog should appear on.
    *
@@ -22,7 +18,7 @@
    */
   var edge = document.documentElement.dir === 'rtl' ? 'left' : 'right';
 
-  var $mainCanvasWrapper = $('[data-offcanvas-main-canvas]');
+  var $mainCanvasWrapper = $('#main-canvas-wrapper');
 
   /**
    * Resets the size of the dialog.
@@ -51,7 +47,7 @@
 
     $element
       .dialog('option', adjustedOptions)
-      .trigger('dialogContentResize.offcanvas');
+      .trigger('dialogContentResize.outsidein');
   }
 
   /**
@@ -85,9 +81,6 @@
    *   The event triggered.
    */
   function bodyPadding(event) {
-    if ($('body').outerWidth() < minDisplaceWidth) {
-      return;
-    }
     var $element = event.data.$element;
     var $widget = $element.dialog('widget');
 
@@ -107,28 +100,26 @@
         $('.ui-dialog-offcanvas, .ui-dialog-offcanvas .ui-dialog-titlebar').toggleClass('ui-dialog-empty-title', !settings.title);
 
         $element
-          .on('dialogresize.offcanvas', eventData, debounce(bodyPadding, 100))
-          .on('dialogContentResize.offcanvas', eventData, handleDialogResize)
-          .on('dialogContentResize.offcanvas', eventData, debounce(bodyPadding, 100))
-          .trigger('dialogresize.offcanvas');
+          .on('dialogresize.outsidein', eventData, debounce(bodyPadding, 100))
+          .on('dialogContentResize.outsidein', eventData, handleDialogResize)
+          .trigger('dialogresize.outsidein');
 
         $element.dialog('widget').attr('data-offset-' + edge, '');
 
         $(window)
-          .on('resize.offcanvas scroll.offcanvas', eventData, debounce(resetSize, 100))
-          .trigger('resize.offcanvas');
+          .on('resize.outsidein scroll.outsidein', eventData, debounce(resetSize, 100))
+          .trigger('resize.outsidein');
       }
     },
     'dialog:beforecreate': function (event, dialog, $element, settings) {
       if ($element.is('#drupal-offcanvas')) {
-        $('body').addClass('js-tray-open');
         // @see http://api.jqueryui.com/position/
         settings.position = {
           my: 'left top',
           at: edge + ' top',
           of: window
         };
-        settings.dialogClass += ' ui-dialog-offcanvas';
+        settings.dialogClass = 'ui-dialog-offcanvas';
         // Applies initial height to dialog based on window height.
         // See http://api.jqueryui.com/dialog for all dialog options.
         settings.height = $(window).height();
@@ -136,9 +127,8 @@
     },
     'dialog:beforeclose': function (event, dialog, $element) {
       if ($element.is('#drupal-offcanvas')) {
-        $('body').removeClass('js-tray-open');
-        $(document).off('.offcanvas');
-        $(window).off('.offcanvas');
+        $(document).off('.outsidein');
+        $(window).off('.outsidein');
         $mainCanvasWrapper.css('padding-' + edge, 0);
       }
     }

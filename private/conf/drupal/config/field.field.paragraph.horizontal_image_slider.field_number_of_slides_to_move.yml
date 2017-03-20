@@ -1,0 +1,25 @@
+uuid: ffe8b8eb-c8a3-453d-9e73-3ddf1c23033e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_number_of_slides_to_move
+    - paragraphs.paragraphs_type.horizontal_image_slider
+id: paragraph.horizontal_image_slider.field_number_of_slides_to_move
+field_name: field_number_of_slides_to_move
+entity_type: paragraph
+bundle: horizontal_image_slider
+label: 'Number of slides to move'
+description: 'Set to a number other than zero to move, far example, 2 slides at a time.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

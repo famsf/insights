@@ -1,0 +1,37 @@
+uuid: 63091f27-58fe-49f4-b985-eef534ef250a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.digital_story
+  module:
+    - user
+id: node.digital_story.teaser
+targetEntityType: node
+bundle: digital_story
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  field_addthis_code: true
+  field_exhibition_dates: true
+  field_footer_feature: true
+  field_footer_title: true
+  field_google_analytics_id: true
+  field_header_section: true
+  field_main_footer_image: true
+  field_main_navigation: true
+  field_member_ticket_link: true
+  field_non_member_ticket_link: true
+  field_section: true
+  field_site_hero_background_image: true
+  field_skin: true
+  field_sponsor: true
+  field_store_item_link: true
+  field_store_item_photo: true
+  field_store_item_title: true
+  field_theme: true
+  field_title_position: true
+  field_title_style: true

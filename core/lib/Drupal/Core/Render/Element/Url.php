@@ -11,7 +11,6 @@ use Drupal\Core\Render\Element;
  *
  * Properties:
  * - #default_value: A valid URL string.
- * - #size: The size of the input element in characters.
  *
  * Usage example:
  * @code

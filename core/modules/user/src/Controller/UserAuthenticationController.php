@@ -233,7 +233,7 @@ class UserAuthenticationController extends ControllerBase implements ContainerIn
   /**
    * Logs out a user.
    *
-   * @return \Symfony\Component\HttpFoundation\Response
+   * @return \Drupal\rest\ResourceResponse
    *   The response object.
    */
   public function logout() {

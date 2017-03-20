@@ -1,0 +1,23 @@
+uuid: 964e186f-d455-44a3-94e4-58af126f265b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_has_lede
+    - paragraphs.paragraphs_type.text_area
+id: paragraph.text_area.field_has_lede
+field_name: field_has_lede
+entity_type: paragraph
+bundle: text_area
+label: 'Add Lede style to first paragraph of the section'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

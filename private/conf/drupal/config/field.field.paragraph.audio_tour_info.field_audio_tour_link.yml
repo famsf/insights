@@ -1,0 +1,23 @@
+uuid: 23587e27-97dd-4937-931c-196719a8db5d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_audio_tour_link
+    - paragraphs.paragraphs_type.audio_tour_info
+  module:
+    - link
+id: paragraph.audio_tour_info.field_audio_tour_link
+field_name: field_audio_tour_link
+entity_type: paragraph
+bundle: audio_tour_info
+label: 'Audio Tour Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

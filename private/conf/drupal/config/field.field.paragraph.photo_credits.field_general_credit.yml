@@ -1,0 +1,19 @@
+uuid: 6c967a97-b86b-490e-947e-9301f10be647
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_general_credit
+    - paragraphs.paragraphs_type.photo_credits
+id: paragraph.photo_credits.field_general_credit
+field_name: field_general_credit
+entity_type: paragraph
+bundle: photo_credits
+label: 'General Credit'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

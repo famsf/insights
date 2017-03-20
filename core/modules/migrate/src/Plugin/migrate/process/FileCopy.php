@@ -112,17 +112,20 @@ class FileCopy extends ProcessPluginBase implements ContainerFactoryPluginInterf
       return $destination;
     }
 
-    // Check if a writable directory exists, and if not try to create it.
-    $dir = $this->getDirectory($destination);
-    // If the directory exists and is writable, avoid file_prepare_directory()
-    // call and write the file to destination.
-    if (!is_dir($dir) || !is_writable($dir)) {
-      if (!file_prepare_directory($dir, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS)) {
-        throw new MigrateException("Could not create or write to directory '$dir'");
-      }
+    $replace = $this->getOverwriteMode();
+    // We attempt the copy/move first to avoid calling file_prepare_directory()
+    // any more than absolutely necessary.
+    $final_destination = $this->writeFile($source, $destination, $replace);
+    if ($final_destination) {
+      return $final_destination;
     }
-
-    $final_destination = $this->writeFile($source, $destination, $this->getOverwriteMode());
+    // If writeFile didn't work, make sure there's a writable directory in
+    // place.
+    $dir = $this->getDirectory($destination);
+    if (!file_prepare_directory($dir, FILE_CREATE_DIRECTORY | FILE_MODIFY_PERMISSIONS)) {
+      throw new MigrateException("Could not create or write to directory '$dir'");
+    }
+    $final_destination = $this->writeFile($source, $destination, $replace);
     if ($final_destination) {
       return $final_destination;
     }

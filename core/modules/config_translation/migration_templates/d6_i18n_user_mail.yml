@@ -66,4 +66,3 @@ process:
 destination:
   plugin: config
   config_name: user.mail
-  translations: true

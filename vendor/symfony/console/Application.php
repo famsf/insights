@@ -105,6 +105,8 @@ class Application
      * @param OutputInterface $output An Output instance
      *
      * @return int 0 if everything went fine, or an error code
+     *
+     * @throws \Exception When doRun returns Exception
      */
     public function run(InputInterface $input = null, OutputInterface $output = null)
     {
@@ -388,7 +390,7 @@ class Application
      *
      * @return Command A Command object
      *
-     * @throws CommandNotFoundException When given command name does not exist
+     * @throws CommandNotFoundException When command name given does not exist
      */
     public function get($name)
     {
@@ -775,7 +777,7 @@ class Application
      * @param int $width  The width
      * @param int $height The height
      *
-     * @return $this
+     * @return Application The current application
      */
     public function setTerminalDimensions($width, $height)
     {
@@ -832,6 +834,8 @@ class Application
      * @param OutputInterface $output  An Output instance
      *
      * @return int 0 if everything went fine, or an error code
+     *
+     * @throws \Exception when the command being run threw an exception
      */
     protected function doRunCommand(Command $command, InputInterface $input, OutputInterface $output)
     {

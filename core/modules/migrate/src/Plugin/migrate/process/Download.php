@@ -108,13 +108,8 @@ class Download extends ProcessPluginBase implements ContainerFactoryPluginInterf
     // Stream the request body directly to the final destination stream.
     $this->configuration['guzzle_options']['sink'] = $destination_stream;
 
-    try {
-      // Make the request. Guzzle throws an exception for anything but 200.
-      $this->httpClient->get($source, $this->configuration['guzzle_options']);
-    }
-    catch (\Exception $e) {
-      throw new MigrateException("{$e->getMessage()} ($source)");
-    }
+    // Make the request. Guzzle throws an exception for anything other than 200.
+    $this->httpClient->get($source, $this->configuration['guzzle_options']);
 
     return $final_destination;
   }

@@ -1,0 +1,19 @@
+uuid: 19b3b7e9-5a6d-4bd1-a6c1-e00b2ac4de9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_card_section_title
+    - paragraphs.paragraphs_type.card_section
+id: paragraph.card_section.field_card_section_title
+field_name: field_card_section_title
+entity_type: paragraph
+bundle: card_section
+label: 'Section Title'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

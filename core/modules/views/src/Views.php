@@ -61,7 +61,7 @@ class Views {
   /**
    * Returns the views data helper service.
    *
-   * @return \Drupal\views\ViewsDataHelper
+   * @return \Drupal\views\ViewsData
    *   Returns a views data helper object.
    */
   public static function viewsDataHelper() {
