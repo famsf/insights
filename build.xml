@@ -98,6 +98,9 @@
 
         <phingcall target="build-theme" />
 
+        <!-- Drupal's autoload.php needs to reference a different location for the vendor directory -->
+        <copy file="${build.dir}/conf/drupal/autoload.pantheon.php" tofile="${pantheon.repo.dir}/autoload.php" overwrite="true" />
+
         <phing target="commit" phingfile="vendor/palantirnet/the-build/tasks/lib/repositories.xml" inheritAll="false" dir=".">
             <property name="build.dir" value="${build.dir}" />
             <property name="repo.dir" value="${pantheon.repo.dir}" />
