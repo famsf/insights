@@ -4,8 +4,8 @@ status: true
 dependencies:
   config:
     - field.storage.paragraph.field_video_source_paragraph
+    - paragraphs.paragraphs_type.background_video
     - paragraphs.paragraphs_type.card_section
-    - paragraphs.paragraphs_type.video_source
   module:
     - entity_reference_revisions
 id: paragraph.card_section.field_video_source_paragraph
@@ -22,7 +22,7 @@ settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      video_source: video_source
+      background_video: background_video
     target_bundles_drag_drop:
       1up_section:
         weight: 11
@@ -49,15 +49,15 @@ settings:
         weight: 18
         enabled: false
       video_source:
-        enabled: true
         weight: 19
+        enabled: false
       comparison_image:
         weight: 19
         enabled: false
-      image_comparison_section:
+      word_fader:
         weight: 20
         enabled: false
-      word_fader:
+      image_comparison_section:
         weight: 20
         enabled: false
       image_with_zoomable_markers:
@@ -65,5 +65,38 @@ settings:
         enabled: false
       zoomable_area:
         weight: 28
+        enabled: false
+      audio_tour_info:
+        weight: 29
+        enabled: false
+      background_video:
+        enabled: true
+        weight: 30
+      footer_feature:
+        weight: 33
+        enabled: false
+      horizontal_image_slider:
+        weight: 34
+        enabled: false
+      image_comparison_3up:
+        weight: 35
+        enabled: false
+      image_slide:
+        weight: 37
+        enabled: false
+      link_or_download_button:
+        weight: 40
+        enabled: false
+      overlay_image:
+        weight: 41
+        enabled: false
+      pull_quote:
+        weight: 43
+        enabled: false
+      sponsor:
+        weight: 45
+        enabled: false
+      video_embed:
+        weight: 47
         enabled: false
 field_type: entity_reference_revisions

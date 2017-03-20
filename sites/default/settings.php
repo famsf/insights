@@ -181,4 +181,4 @@ $settings['hash_salt'] = '2a3c7df42e352429e35986a487c9ae9b21ca415f8363171bcb2899
 $settings['container_yamls'][] = __DIR__ . '/services.yml';
 
 $settings['file_public_path'] = 'sites/default/files';
-$settings['file_private_path'] = 'private/files';
+$settings['file_private_path'] = 'sites/default/files/private';

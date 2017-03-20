@@ -65,24 +65,30 @@ boldTitle?'delay-1250':'delay-1500',
     {% if paragraph.field_display_hero_section.value == 1 %}
 
         {% if content.field_video_source_paragraph|render is not empty %}
-        <div class="section-hero section-hero__video-wrapper">
-            {{ content.field_video_source_paragraph }}
-            <div class="section-hero__wrapper has-video">
-                <div class="{{ sectionTitleWrapperClasses|join(' ') }}">
-                    {% if boldTitle %}
-                    <div class="delay-2500 animated animated-border--top"></div>
-                    {% endif %}
-                    <h1 class="{{ sectionTitleClasses|join(' ') }}">{{ paragraph.field_card_section_title.value }}</h1>
-                    {% if paragraph.field_section_title_style.value != 'has-dotted-border' %}
-                    <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
-                    <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
-                    {% endif %}
-                    {% if boldTitle %}
-                        <div class="delay-2500 animated animated-border--bottom"></div>
-                    {% endif %}
+        <div class="section-hero">
+            <div class="section-hero__video-wrapper {% if content.field_photo_credits|render is empty %}
+                no-caption
+                {% endif %}">
+                {{ content.field_video_source_paragraph }}
+                <div class="section-hero__wrapper has-video">
+                    <div class="{{ sectionTitleWrapperClasses|join(' ') }}">
+                        {% if boldTitle %}
+                        <div class="delay-2500 animated animated-border--top"></div>
+                        {% endif %}
+                        <h1 class="{{ sectionTitleClasses|join(' ') }}">{{ paragraph.field_card_section_title.value }}</h1>
+                        {% if paragraph.field_section_title_style.value != 'has-dotted-border' %}
+                        <div class="section-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
+                        <div class="section-hero__rectangle bottom animated fadeInRight delay-250 js-section-hero--set_height"></div>
+                        {% endif %}
+                        {% if boldTitle %}
+                            <div class="delay-2500 animated animated-border--bottom"></div>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
+            {{ content.field_photo_credits }}
         </div>
+
         {% else %}
         <div class="section-hero">
             <div class="{{ wrapperClasses|join(' ') }}" {% if paragraph.field_background_image.entity.fileuri is not empty %}data-bg="{{ file_url(paragraph.field_background_image.entity.fileuri) }}"{% endif %}>

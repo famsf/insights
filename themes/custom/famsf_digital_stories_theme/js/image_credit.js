@@ -17,14 +17,28 @@
         var thisCaption = $(this);
         // Define the target expandable div.
         var targetImage = thisCaption.parents('figure').find('figcaption');
-        var imagewidth = thisCaption.parents('figure').find('img').width();
+        var containerWidth =  thisCaption.parents('.horizontal-slider__section').width();
+        var imageWidth = thisCaption.parents('figure').find('img').width();
+        var imageCaption = thisCaption.parents('figure').find('figcaption');
         // Check for optional slide-down container.
         if (thisCaption.parents('figure').find('.js-figure__caption-reveal ').length) {
             var captionSlider = thisCaption.parents('figure').find('.js-figure__caption-reveal ');
+            // Show if it is hidden.
             if ( $(captionSlider).is( ":hidden" ) ) {
               targetImage.toggleClass('js-figcaption--revealed');
-              $(captionSlider).slideDown(200).width(imagewidth);
+              // If the image is not full width, calculate the caption size to fit.
+              if (imageWidth < containerWidth) {
+                var captionWidthDifference = (containerWidth - imageWidth) / 2;
+                // Calculation includes subtracting 30 to compensate for .75 rem padding.
+                var newCaptionWidth = imageWidth + captionWidthDifference -30;
+                $(captionSlider).slideDown(200).width(imageWidth);
+                imageCaption.width(newCaptionWidth);
+              } else {
+                // This image is full width. Slide open with no wdith change.
+                $(captionSlider).slideDown(200).width(imageWidth);;
+              }
             } else {
+              // Hide the image that is already showing.
               $(captionSlider).slideUp(200, function() {
                 targetImage.toggleClass('js-figcaption--revealed');
               });

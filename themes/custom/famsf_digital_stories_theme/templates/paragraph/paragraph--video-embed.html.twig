@@ -37,13 +37,15 @@
  */
 #}
 {%
-set classes = [
+set videoWrapperClasses = [
 'paragraph',
 'paragraph--type--' ~ paragraph.bundle|clean_class,
-view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
-'video-embed-wrapper'
+view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class
 ]
 %}
-<div{{ attributes.addClass(classes) }}>
-    {{ content }}
-</div>
+<figure>
+  <div class="video-embed-wrapper {{ videoWrapperClasses }}">
+    {{ content.field_video_source }}
+  </div>
+  {{ content.field_photo_credits }}
+</figure>

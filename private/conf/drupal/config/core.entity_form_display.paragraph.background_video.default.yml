@@ -1,0 +1,28 @@
+uuid: dc8f48f0-9f0c-4420-bd28-51b2b1b4ef24
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.background_video.field_video_source
+    - paragraphs.paragraphs_type.background_video
+  module:
+    - video
+id: paragraph.background_video.default
+targetEntityType: paragraph
+bundle: background_video
+mode: default
+content:
+  field_video_source:
+    weight: 0
+    settings:
+      file_extensions: 'mp4 ogv webm'
+      file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
+      max_filesize: ''
+      uri_scheme: public
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: video_upload
+hidden:
+  created: true
+  status: true
+  uid: true
