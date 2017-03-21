@@ -33,6 +33,12 @@ npm-debug.log
 styleguide/*.sass-cache/
 styleguide/source/code/css/*.css
 
+# Ignore files symlinked from styleguide
+web/themes/custom/*/css
+web/themes/custom/*/js
+web/themes/custom/*/imgs
+web/themes/custom/*/svg
+
 # Ignore sculpin output
 styleguide/output_dev/
 styleguide/output_prod/

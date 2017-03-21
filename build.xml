@@ -9,7 +9,6 @@
     <!-- Make these commands available by default. -->
     <import file="vendor/palantirnet/the-build/tasks/drupal.xml" />
     <import file="vendor/palantirnet/the-build/tasks/acquia.xml" />
-    <import file="build/styleguide.xml" />
 
 
     <!-- Default target: build -->
@@ -23,19 +22,10 @@
         <exec command="npm run butler -- sass" dir="${styleguide.dir.absolute_path}" logoutput="true" checkreturn="true" />
 
         <resolvepath propertyname="custom_theme" file="${drupal.root}/themes/custom/famsf_digital_stories_theme" />
-        <phingcall target="styleguide-link">
-            <property name="css_source" value="${styleguide_code}/css" />
-            <property name="css_dest" value="${custom_theme}/css" />
-
-            <property name="js_source" value="${styleguide_code}/js" />
-            <property name="js_dest" value="${custom_theme}/js" />
-
-            <property name="imgs_source" value="${styleguide_code}/imgs" />
-            <property name="imgs_dest" value="${custom_theme}/imgs" />
-
-            <property name="svgs_source" value="${styleguide.dir}/src/includes/svg" />
-            <property name="svgs_dest" value="${custom_theme}/svg" />
-        </phingcall>
+        <includeresource mode="${build.artifact_mode}" source="${styleguide_code}/css" dest="${custom_theme}/css" />
+        <includeresource mode="${build.artifact_mode}" source="${styleguide_code}/js" dest="${custom_theme}/js" />
+        <includeresource mode="${build.artifact_mode}" source="${styleguide_code}/imgs" dest="${custom_theme}/imgs" />
+        <includeresource mode="${build.artifact_mode}" source="${styleguide.dir}/src/includes/svg" dest="${custom_theme}/svg" />
     </target>
 
 
@@ -72,6 +62,64 @@
     <target name="deploy" description="Build the deployment artifact.">
         <phingcall target="check-deploy-env" />
 
+        <if>
+            <equals arg1="${build.env}" arg2="pantheon" />
+            <then>
+                <phingcall target="deploy-pantheon" />
+            </then>
+            <elseif>
+                <equals arg1="${build.env}" arg2="artifact" />
+                <then>
+                    <phingcall target="deploy-artifact" />
+                </then>
+            </elseif>
+        </if>
+    </target>
+
+
+    <!-- Target: deploy-pantheon -->
+    <target name="deploy-pantheon" description="Build the deployment artifact for Pantheon.">
+        <phing target="init-repository" phingfile="vendor/palantirnet/the-build/tasks/lib/repositories.xml" inheritAll="false" dir=".">
+            <property name="repo.dir" value="${pantheon.repo.dir}" />
+            <property name="repo.source" value="${pantheon.repo.source}" />
+        </phing>
+
+        <phing target="init-branch" phingfile="vendor/palantirnet/the-build/tasks/lib/repositories.xml" inheritAll="false" dir=".">
+            <property name="repo.dir" value="${pantheon.repo.dir}" />
+            <property name="repo.branch" value="${pantheon.repo.branch}" />
+        </phing>
+
+        <phing target="run-composer-elsewhere" phingfile="vendor/palantirnet/the-build/tasks/lib/artifacts.xml" inheritAll="false" dir=".">
+            <property name="install_dir" value="${pantheon.repo.dir}" />
+            <property name="build.dir" value="${build.dir}" />
+            <property name="drupal.root" value="${pantheon.repo.dir}" />
+            <property name="drupal.sites_subdir" value="${drupal.sites_subdir}" />
+
+            <property name="drupal.root_name" value="" />
+            <property name="install_conf_dir" value="${install_dir}/private" />
+        </phing>
+
+        <phingcall target="build" />
+
+        <!-- Drupal's autoload.php needs to reference a different location for the vendor directory -->
+        <copy file="${build.dir}/conf/drupal/autoload.pantheon.php" tofile="${pantheon.repo.dir}/autoload.php" overwrite="true" />
+
+        <phing target="commit" phingfile="vendor/palantirnet/the-build/tasks/lib/repositories.xml" inheritAll="false" dir=".">
+            <property name="build.dir" value="${build.dir}" />
+            <property name="repo.dir" value="${pantheon.repo.dir}" />
+            <property name="tag_prefix" value="${pantheon.repo.tag_prefix}" />
+            <property name="message" value="Drupal artifact." />
+        </phing>
+
+        <phing target="push" phingfile="vendor/palantirnet/the-build/tasks/lib/repositories.xml" inheritAll="false" dir=".">
+            <property name="repo.dir" value="${pantheon.repo.dir}" />
+            <property name="repo.branch" value="${pantheon.repo.branch}" />
+        </phing>
+    </target>
+
+
+    <!-- Target: deploy-artifact -->
+    <target name="deploy-artifact" description="Build the deployment artifact for a generic host.">
         <phing target="init-repository" phingfile="vendor/palantirnet/the-build/tasks/lib/repositories.xml" inheritAll="false" dir=".">
             <property name="repo.dir" value="${artifact.dir}" />
             <property name="repo.source" value="${artifact.repo}" />
