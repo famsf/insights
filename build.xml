@@ -104,6 +104,9 @@
         <!-- Drupal's autoload.php needs to reference a different location for the vendor directory -->
         <copy file="${build.dir}/conf/drupal/autoload.pantheon.php" tofile="${pantheon.repo.dir}/autoload.php" overwrite="true" />
 
+        <!-- Include the Pantheon config. -->
+        <includeresource mode="${build.artifact_mode}" source="${build.dir}/conf/pantheon.yml" dest="${pantheon.repo.dir}/pantheon.yml" />
+
         <phing target="commit" phingfile="vendor/palantirnet/the-build/tasks/lib/repositories.xml" inheritAll="false" dir=".">
             <property name="build.dir" value="${build.dir}" />
             <property name="repo.dir" value="${pantheon.repo.dir}" />
