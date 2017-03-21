@@ -12,6 +12,7 @@
 namespace Symfony\Component\Serializer\Tests\Normalizer;
 
 use Doctrine\Common\Annotations\AnnotationReader;
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Serializer\NameConverter\CamelCaseToSnakeCaseNameConverter;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Symfony\Component\Serializer\Serializer;
@@ -26,7 +27,7 @@ use Symfony\Component\Serializer\Tests\Fixtures\GroupDummy;
 /**
  * @author Kévin Dunglas <dunglas@gmail.com>
  */
-class ObjectNormalizerTest extends \PHPUnit_Framework_TestCase
+class ObjectNormalizerTest extends TestCase
 {
     /**
      * @var ObjectNormalizer
@@ -39,7 +40,7 @@ class ObjectNormalizerTest extends \PHPUnit_Framework_TestCase
 
     protected function setUp()
     {
-        $this->serializer = $this->getMock(__NAMESPACE__.'\ObjectSerializerNormalizer');
+        $this->serializer = $this->getMockBuilder(__NAMESPACE__.'\ObjectSerializerNormalizer')->getMock();
         $this->normalizer = new ObjectNormalizer();
         $this->normalizer->setSerializer($this->serializer);
     }
@@ -416,7 +417,7 @@ class ObjectNormalizerTest extends \PHPUnit_Framework_TestCase
      */
     public function testUnableToNormalizeObjectAttribute()
     {
-        $serializer = $this->getMock('Symfony\Component\Serializer\SerializerInterface');
+        $serializer = $this->getMockBuilder('Symfony\Component\Serializer\SerializerInterface')->getMock();
         $this->normalizer->setSerializer($serializer);
 
         $obj = new ObjectDummy();
