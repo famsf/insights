@@ -134,6 +134,7 @@ figcaption,
   // WYSIWYG caption elements.
   h2, h3, h4, h5, h6, p, blockquote, .wysiwyg-enlarged {
     color: $text-color-invert;
+    // Get rid of extra space at end to match non-WYSIWYG credit.
     &:last-child {
       margin-bottom:0;
       padding-bottom: 0;
