@@ -105,6 +105,16 @@ figcaption,
   .figcaption {
     background-color: $white;
     color: $text-color;
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    .wysiwyg-enlarged {
+      color: $text-color;
+    }
   }
 
   .horizontal-slider-next,

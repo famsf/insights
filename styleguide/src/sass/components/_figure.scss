@@ -134,6 +134,10 @@ figcaption,
   // WYSIWYG caption elements.
   h2, h3, h4, h5, h6, p, blockquote, .wysiwyg-enlarged {
     color: $text-color-invert;
+    &:last-child {
+      margin-bottom:0;
+      padding-bottom: 0;
+    }
   }
 
   &.js-figcaption--revealed {
