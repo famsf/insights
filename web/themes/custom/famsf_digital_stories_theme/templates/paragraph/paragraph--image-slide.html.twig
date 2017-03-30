@@ -40,9 +40,6 @@
 {% set image = imageSlideParagraph.field_image.entity %}
 {% set photoCredits = imageSlideParagraph.field_photo_credits.entity %}
 <figure>
-    <div class="figure__wrapper">
-        <img src="{{ file_url(image.fileuri)  }}" alt="{{ image.alt }}" />
-    </div>
     {% set credits = [] %}
     {% if photoCredits.field_artist.value is not empty %}
         {% set credits = credits|merge([photoCredits.field_artist.value ]) %}
@@ -65,7 +62,9 @@
     {% if photoCredits.field_general_credit.value is not empty %}
         {% set credits = credits|merge([photoCredits.field_general_credit.value ]) %}
     {% endif %}
-
+    <div class="figure__wrapper {% if credits is empty and photoCredits.field_image_title.value is empty and photoCredits.field_flexible_wysiwyg_caption.value|striptags|trim is empty %} no-caption {% endif %}">
+        <img src="{{ file_url(image.fileuri)  }}" alt="{{ image.alt }}" />
+    </div>
     {% if credits is not empty or photoCredits.field_image_title.value is not empty or photoCredits.field_flexible_wysiwyg_caption.value|striptags|trim is not empty %}
         <div class="figcaption__wrapper animated delay-1000">
             <a class="figcaption-cta js-figcaption-cta">
