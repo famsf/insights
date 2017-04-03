@@ -47,6 +47,7 @@ This is your project directory; run `composer` and `drush` commands from here, a
 git config --global user.email 'me@palantir.net'
 git config --global user.name 'My Name'
 ```
+
 ## How do I work on the front-end?
 
 When you first set up the project, you will need to run `composer install` and `npm install` from /styleguide on the VM (`vagrant ssh` and `cd /var/www/famsf-digital-stories.local/styleguide`)
@@ -64,10 +65,6 @@ Butler uses the following:
 [Gulp] (http://gulpjs.com/)
 [Spress] (http://spress.yosymfony.com/)
 [Sass] (http://sass-lang.com/)
-
-
-
-
 
 ## How do I Drupal?
 
