@@ -1,12 +1,12 @@
 # FAMSF Digital Stories
 ### Drupal 8 platform for FAMSF digital Stories Exhibition Websites
 
-## General guide to Development using GIT
-[Working with GIT and Github](/docs/git/git-intro.md)
+## General Documentation
+[Development workflow with GIT and Github](/docs/git/git-intro.md)
+[Detailed Mac Setup guide](/docs/mac-setup.md)
+[Deployment](docs/deployment.md)
 
 ## Requirements
-
-[Detailed Mac Setup guide](/docs/mac-setup.md)
 
 * VMWare, or [virtualBox](https://www.virtualbox.org/wiki/Downloads) >= 5.0
 * [vagrant](https://www.vagrantup.com/) >= 1.8
@@ -40,7 +40,7 @@ If you have been running a previous version of Vagrant you may need to do: `vagr
 
 1. Visit [famsf-digital-stories.local](http://famsf-digital-stories.local) in your browser of choice.
 
-## How do I work on this?
+## Using the Development Environment
 
 1. From inside the project root, type `vagrant ssh`
 1. Navigate to `/var/www/famsf-digital-stories.local`
