@@ -2,11 +2,11 @@
 ## Drupal 8 platform for FAMSF digital Stories Exnibition Websites
 
 ## General guide to Development using GIT
-[Working with GIT and Github] (/docs/git/git-intro.md)
+[Working with GIT and Github](/docs/git/git-intro.md)
 
 ## Requirements
 
-[Detailed Mac Setup guide] (/docs/mac-setup.md)
+[Detailed Mac Setup guide](/docs/mac-setup.md)
 
 * VMWare, or [virtualBox](https://www.virtualbox.org/wiki/Downloads) >= 5.0
 * [vagrant](https://www.vagrantup.com/) >= 1.8
