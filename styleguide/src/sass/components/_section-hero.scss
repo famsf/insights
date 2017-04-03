@@ -29,6 +29,11 @@
     @extend %fadeIn;
   }
   padding: 0 rhythm(.5);
+  .figcaption {
+    @include breakpoint($bp3) {
+      max-width: 75%;
+    }
+  }
 }
 
 .section-hero__title {
