@@ -1,7 +1,12 @@
 # FAMSF Digital Stories
 ## Drupal 8 platform for FAMSF digital Stories Exnibition Websites
 
+## General guide to Development using GIT
+[Working with GIT and Github] (/docs/git/git-intro.md)
+
 ## Requirements
+
+[Detailed Mac Setup guide] (/docs/mac-setup.md)
 
 * VMWare, or [virtualBox](https://www.virtualbox.org/wiki/Downloads) >= 5.0
 * [vagrant](https://www.vagrantup.com/) >= 1.8
@@ -110,7 +115,7 @@ Run `vendor/bin/phing test` or `vendor/bin/behat features/installation.feature`.
 
 ## Deployment
 
-See [docs/deployment.md](docs/deployment.md) for details.
+See [docs/deployment.md](docs/deployment.md) for details on deploying to Pantheon.
 
 ## Troubleshooting
 
