@@ -1,5 +1,5 @@
 # FAMSF Digital Stories
-## Drupal 8 platform for FAMSF digital Stories Exnibition Websites
+### Drupal 8 platform for FAMSF digital Stories Exhibition Websites
 
 ## General guide to Development using GIT
 [Working with GIT and Github](/docs/git/git-intro.md)
@@ -123,3 +123,5 @@ If, on browsing to `http://famsf-digital-stories.local`, you get the following e
 > famsf-digital-stories.local’s server DNS address could not be found.
 
 Then `vagrant up` may have failed half way through. When this happens, the `vagrant-hostmanager` plugin does not add the hostname to `/etc/hosts`. Try halting and re-upping the machine: `vagrant halt && vagrant up`. Reload is not sufficient to trigger updating the hosts file.
+
+
