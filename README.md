@@ -2,9 +2,9 @@
 ### Drupal 8 platform for FAMSF digital Stories Exhibition Websites
 
 ## General Documentation
-[Development workflow with GIT and Github](/docs/git/git-intro.md)
-[Detailed Mac Setup guide](/docs/mac-setup.md)
-[Deployment](docs/deployment.md)
+* [Development workflow with GIT and Github](/docs/git/git-intro.md)
+* [Detailed Mac Setup guide](/docs/mac-setup.md)
+* [Deployment](docs/deployment.md)
 
 ## Requirements
 
@@ -67,9 +67,9 @@ The Front-end toolchain is set up the Butler:
 [Butler documentation] (https://github.com/palantirnet/butler) 
 
 Butler uses the following:
-[Gulp] (http://gulpjs.com/)
-[Spress] (http://spress.yosymfony.com/)
-[Sass] (http://sass-lang.com/)
+* [Gulp] (http://gulpjs.com/)
+* [Spress] (http://spress.yosymfony.com/)
+* [Sass] (http://sass-lang.com/)
 
 ## How do I Drupal?
 
