@@ -1,5 +1,10 @@
 # FAMSF Digital Stories
-## Drupal 8 platform for FAMSF digital Stories Exnibition Websites
+### Drupal 8 platform for FAMSF digital Stories Exhibition Websites
+
+## General Documentation
+[Development workflow with GIT and Github](/docs/git/git-intro.md)
+[Detailed Mac Setup guide](/docs/mac-setup.md)
+[Deployment](docs/deployment.md)
 
 ## Requirements
 
@@ -35,7 +40,7 @@ If you have been running a previous version of Vagrant you may need to do: `vagr
 
 1. Visit [famsf-digital-stories.local](http://famsf-digital-stories.local) in your browser of choice.
 
-## How do I work on this?
+## Using the Development Environment
 
 1. From inside the project root, type `vagrant ssh`
 1. Navigate to `/var/www/famsf-digital-stories.local`
@@ -47,6 +52,24 @@ This is your project directory; run `composer` and `drush` commands from here, a
 git config --global user.email 'me@palantir.net'
 git config --global user.name 'My Name'
 ```
+
+## How do I work on the front-end?
+
+When you first set up the project, you will need to run `composer install` and `npm install` from /styleguide on the VM (`vagrant ssh` and `cd /var/www/famsf-digital-stories.local/styleguide`)
+
+1. `npm run butler` and allow the script to keep running and watching for changes. 
+1. Change some styles in the `sass` directory
+1. Observe you see the changes reflected in the Drupal theme
+
+Note that this also updates the 'living styleguide' which also resides in this repo. You can view the styleguide after running the above steps at: famsf-digital-stories.local
+
+The Front-end toolchain is set up the Butler:
+[Butler documentation] (https://github.com/palantirnet/butler) 
+
+Butler uses the following:
+[Gulp] (http://gulpjs.com/)
+[Spress] (http://spress.yosymfony.com/)
+[Sass] (http://sass-lang.com/)
 
 ## How do I Drupal?
 
@@ -84,6 +107,14 @@ Sometimes it is appropriate to configure specific Drupal variables in Drupal's `
 * If the variable requires different values in different environments, add those to the appropriate properties files (`conf/build.vagrant.properties`, `conf/build.circle.properties`, `conf/build.acquia.properties`). Note that you may reference environment variables with `drupal.my_setting=${env.DRUPAL_MY_SETTING}`.
 * Finally, commit your changes.
 
+### configuring the VM for multiple domains
+
+Should you require setting up vhost configuration for multiple domains in the dev environment, such as for use with Domain Access, you can update the extra_hostnames variable in the vagranfile as follows: 
+
+```
+extra_hostnames = ['my-extra-domain-one.local','my-extra-domain-two.local']
+```
+
 ## How do I run tests?
 
 ### Behat
@@ -92,7 +123,7 @@ Run `vendor/bin/phing test` or `vendor/bin/behat features/installation.feature`.
 
 ## Deployment
 
-See [docs/deployment.md](docs/deployment.md) for details.
+See [docs/deployment.md](docs/deployment.md) for details on deploying to Pantheon.
 
 ## Troubleshooting
 
@@ -100,3 +131,5 @@ If, on browsing to `http://famsf-digital-stories.local`, you get the following e
 > famsf-digital-stories.local’s server DNS address could not be found.
 
 Then `vagrant up` may have failed half way through. When this happens, the `vagrant-hostmanager` plugin does not add the hostname to `/etc/hosts`. Try halting and re-upping the machine: `vagrant halt && vagrant up`. Reload is not sufficient to trigger updating the hosts file.
+
+
