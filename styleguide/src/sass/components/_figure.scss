@@ -88,11 +88,12 @@ figure {
 .figcaption-cta,
 figcaption,
 .figcaption {
-  font-size: .74rem;
-  line-height: 1.02rem;
-  @include breakpoint($bp1) {
-    font-size: .65rem;
-    line-height: .9rem;
+  font-size: .84rem;
+  line-height: 1.12rem;
+
+  @include breakpoint($bp2) {
+    font-size: .74rem;
+    line-height: 1.02rem;
   }
 }
 
@@ -130,6 +131,19 @@ figcaption,
   .title-of-art {
     font-style: italic;
     font-weight: 700;
+  }
+  // WYSIWYG caption elements.
+  h2, h3, h4, h5, h6, p, blockquote, .wysiwyg-enlarged {
+    color: $text-color-invert;
+    // Get rid of extra space at end to match non-WYSIWYG credit.
+    &:last-child {
+      margin-bottom:0;
+      padding-bottom: 0;
+    }
+    &:first-child {
+      margin-top:0;
+      padding-top: 0;
+    }
   }
 
   &.js-figcaption--revealed {

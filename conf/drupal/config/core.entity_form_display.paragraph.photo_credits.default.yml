@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.photo_credits.field_copyright
     - field.field.paragraph.photo_credits.field_credits_date
     - field.field.paragraph.photo_credits.field_dimensions
+    - field.field.paragraph.photo_credits.field_flexible_wysiwyg_caption
     - field.field.paragraph.photo_credits.field_general_credit
     - field.field.paragraph.photo_credits.field_image_title
     - field.field.paragraph.photo_credits.field_location
@@ -14,6 +15,7 @@ dependencies:
     - paragraphs.paragraphs_type.photo_credits
   module:
     - field_group
+    - text
 third_party_settings:
   field_group:
     group_photo_cre:
@@ -68,6 +70,13 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  field_flexible_wysiwyg_caption:
+    weight: 9
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
   field_general_credit:
     weight: 8
     settings:
