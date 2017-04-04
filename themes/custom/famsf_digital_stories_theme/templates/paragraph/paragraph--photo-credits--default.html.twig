@@ -59,7 +59,7 @@
     {% set credits = credits|merge([paragraph.field_general_credit.value ]) %}
 {% endif %}
 
-{% if credits is not empty or paragraph.field_image_title.value is not empty %}
+{% if credits is not empty or paragraph.field_image_title.value is not empty or paragraph.field_flexible_wysiwyg_caption.value|striptags|trim is not empty%}
     <div class="figcaption__wrapper animated delay-1000">
         <a class="figcaption-cta js-figcaption-cta">
         <i class="icon--small ">{{ include(active_theme_path() ~ '/svg/'~ custom_theme ~ '/famsf-copyright-md.svg')  }}</i>
@@ -70,6 +70,9 @@
             <span class="title-of-art"> {{ paragraph.field_image_title.value }} </span>
         {% endif %}
         {% if  credits is not empty %} {{ credits|join(' | ') }} {% endif %}
+        {% if paragraph.field_flexible_wysiwyg_caption.value|striptags|trim is not empty %}
+            {{ paragraph.field_flexible_wysiwyg_caption.value|raw }}
+        {% endif %}
     </figcaption>
 
 {% endif %}

@@ -7,6 +7,7 @@ dependencies:
     - field.field.paragraph.photo_credits.field_copyright
     - field.field.paragraph.photo_credits.field_credits_date
     - field.field.paragraph.photo_credits.field_dimensions
+    - field.field.paragraph.photo_credits.field_flexible_wysiwyg_caption
     - field.field.paragraph.photo_credits.field_general_credit
     - field.field.paragraph.photo_credits.field_image_title
     - field.field.paragraph.photo_credits.field_location
@@ -23,6 +24,7 @@ hidden:
   field_copyright: true
   field_credits_date: true
   field_dimensions: true
+  field_flexible_wysiwyg_caption: true
   field_general_credit: true
   field_image_title: true
   field_location: true
