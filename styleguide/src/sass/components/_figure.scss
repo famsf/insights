@@ -88,8 +88,13 @@ figure {
 .figcaption-cta,
 figcaption,
 .figcaption {
-  font-size: .74rem;
-  line-height: 1.02rem;
+  font-size: .84rem;
+  line-height: 1.12rem;
+
+  @include breakpoint($bp2) {
+    font-size: .74rem;
+    line-height: 1.02rem;
+  }
 }
 
 figcaption::after,
