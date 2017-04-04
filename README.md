@@ -107,6 +107,14 @@ Sometimes it is appropriate to configure specific Drupal variables in Drupal's `
 * If the variable requires different values in different environments, add those to the appropriate properties files (`conf/build.vagrant.properties`, `conf/build.circle.properties`, `conf/build.acquia.properties`). Note that you may reference environment variables with `drupal.my_setting=${env.DRUPAL_MY_SETTING}`.
 * Finally, commit your changes.
 
+### configuring the VM for multiple domains
+
+Should you require setting up vhost configuration for multiple domains in the dev environment, such as for use with Domain Access, you can update the extra_hostnames variable in the vagranfile as follows: 
+
+```
+extra_hostnames = ['my-extra-domain-one.local','my-extra-domain-two.local']
+```
+
 ## How do I run tests?
 
 ### Behat
