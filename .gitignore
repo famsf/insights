@@ -4,10 +4,8 @@
 # https://github.com/palantirnet/development_documentation/blob/master/guidelines/git/gitignore.md
 
 # Ignore Drupal settings and files
-settings.php
-services.yml
-!conf/drupal/settings.php
-!conf/drupal/services.yml
+settings.build.php
+settings.local.php
 web/sites/*/files
 
 # Ignore virtual environment and artifacts
