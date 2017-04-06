@@ -26,7 +26,6 @@ web/profiles/contrib/
 node_modules/
 npm-debug.log
 
-# Ignore generated CSS
+# Sass caches but check in generated CSS
 *.sass-cache/
 styleguide/*.sass-cache/
-styleguide/source/code/css/*.css
