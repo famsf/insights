@@ -1,6 +1,0 @@
-uuid: 58c14b44-0d4f-48c1-ae47-2c8b8f8d1d91
-langcode: en
-status: true
-dependencies: {  }
-id: overlay_image
-label: 'Overlay image'

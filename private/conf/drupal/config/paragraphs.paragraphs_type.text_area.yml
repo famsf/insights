@@ -1,6 +1,0 @@
-uuid: 55cb4324-82d8-4f17-9afe-bdd303de5006
-langcode: en
-status: true
-dependencies: {  }
-id: text_area
-label: 'text area'
