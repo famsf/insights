@@ -182,3 +182,4 @@ $settings['container_yamls'][] = __DIR__ . '/services.yml';
 
 $settings['file_public_path'] = 'sites/default/files';
 $settings['file_private_path'] = 'sites/default/files/private';
+$settings['install_profile'] = 'standard';
