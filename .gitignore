@@ -16,6 +16,14 @@ sites/*/services.local.yml
 /sites/default/**/files
 /sites/default/**/private
 
+# make an exception for configs
+
+!/sites/default/files/
+/sites/default/files/*
+!/sites/default/files/private/
+/sites/default/files/private/*
+!/sites/default/files/private/conf
+
 # Ignore SimpleTest multi-site environment.
 sites/simpletest
 
