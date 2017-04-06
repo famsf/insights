@@ -96,7 +96,7 @@
             <property name="drupal.sites_subdir" value="${drupal.sites_subdir}" />
 
             <property name="drupal.root_name" value="" />
-            <property name="install_conf_dir" value="${install_dir}/private" />
+            <property name="install_conf_dir" value="${install_dir}/sites/default/files/private/conf" />
         </phing>
 
         <phingcall target="build" />
