@@ -175,7 +175,7 @@ if (empty($settings['file_scan_ignore_directories'])) {
  * Variables from the Palantir build process.
  */
 $config_directories = array();
-$config_directories[CONFIG_SYNC_DIRECTORY] = 'sites/default/config/conf/drupal/config';
+$config_directories[CONFIG_SYNC_DIRECTORY] = 'private/conf/drupal/config';
 
 $settings['hash_salt'] = '2a3c7df42e352429e35986a487c9ae9b21ca415f8363171bcb28993d407e624b';
 $settings['container_yamls'][] = __DIR__ . '/services.yml';
