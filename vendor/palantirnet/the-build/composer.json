@@ -1,0 +1,30 @@
+{
+    "name": "palantirnet/the-build",
+    "description": "Phing build tasks for Drupal projects.",
+    "license": "GPL-2.0+",
+    "authors": [
+        {
+            "name": "Palantir.net",
+            "email": "info@palantir.net"
+        }
+    ],
+    "bin": [
+        "bin/the-build-installer"
+    ],
+    "require": {
+        "continuousphp/phing-drush-task": "dev-master",
+        "drupal/coder": "*",
+        "pear/versioncontrol_git": "@dev",
+        "phing/phing": "^2.14",
+        "phpmd/phpmd" : "^2.4",
+        "nilportugues/php_todo": "^1.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "TheBuild\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": "true"
+    }
+}
