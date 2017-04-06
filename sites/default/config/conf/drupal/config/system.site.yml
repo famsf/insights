@@ -1,0 +1,14 @@
+uuid: 6eabe44a-3eea-4b21-a8d4-7b0eaa788298
+name: famsf-digital-stories
+mail: admin@example.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo

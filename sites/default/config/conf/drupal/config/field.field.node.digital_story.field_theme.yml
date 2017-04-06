@@ -1,0 +1,21 @@
+uuid: d7a14d17-412c-4530-92d3-15b08996506b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_theme
+    - node.type.digital_story
+  module:
+    - options
+id: node.digital_story.field_theme
+field_name: field_theme
+entity_type: node
+bundle: digital_story
+label: Theme
+description: 'Change the look & feel of the digital story'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

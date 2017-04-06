@@ -1,0 +1,23 @@
+uuid: 0a7e1a97-aa5c-44e2-afcc-5f5741075753
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_title_position
+    - node.type.digital_story
+  module:
+    - options
+id: node.digital_story.field_title_position
+field_name: field_title_position
+entity_type: node
+bundle: digital_story
+label: 'Title Position'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: none
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,106 @@
+uuid: e418dfc0-d5f0-4620-9b60-ecb3f1ab8b10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sections_in_card
+    - paragraphs.paragraphs_type.1up_section
+    - paragraphs.paragraphs_type.2up_section
+    - paragraphs.paragraphs_type.card_section
+    - paragraphs.paragraphs_type.horizontal_image_slider
+    - paragraphs.paragraphs_type.image_comparison_3up
+    - paragraphs.paragraphs_type.image_comparison_section
+    - paragraphs.paragraphs_type.revealable_read_more_section
+  module:
+    - entity_reference_revisions
+id: paragraph.card_section.field_sections_in_card
+field_name: field_sections_in_card
+entity_type: paragraph
+bundle: card_section
+label: 'Sections in Card'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      1up_section: 1up_section
+      2up_section: 2up_section
+      revealable_read_more_section: revealable_read_more_section
+      image_comparison_section: image_comparison_section
+      image_comparison_3up: image_comparison_3up
+      horizontal_image_slider: horizontal_image_slider
+    target_bundles_drag_drop:
+      text_area:
+        weight: -47
+        enabled: false
+      1up_section:
+        enabled: true
+        weight: -46
+      2up_section:
+        enabled: true
+        weight: -45
+      revealable_read_more_section:
+        enabled: true
+        weight: -44
+      image_with_revealable_caption:
+        weight: -43
+        enabled: false
+      image_comparison_section:
+        enabled: true
+        weight: -42
+      image_comparison_3up:
+        enabled: true
+        weight: -41
+      horizontal_image_slider:
+        enabled: true
+        weight: -40
+      card_section:
+        weight: -39
+        enabled: false
+      photo_credits:
+        weight: -38
+        enabled: false
+      audio_component:
+        weight: -37
+        enabled: false
+      comparison_image:
+        weight: -36
+        enabled: false
+      image_with_zoomable_markers:
+        weight: -35
+        enabled: false
+      overlay_image:
+        weight: -34
+        enabled: false
+      audio_tour_info:
+        weight: -33
+        enabled: false
+      word_fader:
+        weight: -32
+        enabled: false
+      footer_feature:
+        weight: -31
+        enabled: false
+      zoomable_area:
+        weight: -30
+        enabled: false
+      image_slide:
+        weight: -29
+        enabled: false
+      link_or_download_button:
+        weight: -28
+        enabled: false
+      pull_quote:
+        weight: -27
+        enabled: false
+      sponsor:
+        weight: -26
+        enabled: false
+      video_source:
+        weight: -25
+        enabled: false
+field_type: entity_reference_revisions

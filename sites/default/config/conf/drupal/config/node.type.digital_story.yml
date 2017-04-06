@@ -1,0 +1,17 @@
+uuid: 1aee65f7-9525-41b3-8b67-823a3dae210b
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Digital Story'
+type: digital_story
+description: 'A single page website for a specific exhibition'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

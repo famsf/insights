@@ -1,0 +1,25 @@
+uuid: a9ce3bf9-a1de-4dca-947e-375738121e8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.1up_section.field_main_column
+    - paragraphs.paragraphs_type.1up_section
+  module:
+    - entity_reference_revisions
+id: paragraph.1up_section.default
+targetEntityType: paragraph
+bundle: 1up_section
+mode: default
+content:
+  field_main_column:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  uid: true

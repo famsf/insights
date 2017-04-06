@@ -1,0 +1,30 @@
+uuid: 434a9326-94f6-4df7-85ee-c628255f111e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.background_video.field_video_source
+    - paragraphs.paragraphs_type.background_video
+  module:
+    - video
+id: paragraph.background_video.default
+targetEntityType: paragraph
+bundle: background_video
+mode: default
+content:
+  field_video_source:
+    weight: 0
+    label: hidden
+    settings:
+      width: '0'
+      height: '0'
+      autoplay: true
+      loop: true
+      muted: true
+      preload: auto
+      controls: false
+    third_party_settings: {  }
+    type: video_player_list
+hidden:
+  created: true
+  uid: true

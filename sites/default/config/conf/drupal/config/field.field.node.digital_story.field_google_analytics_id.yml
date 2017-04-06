@@ -1,0 +1,19 @@
+uuid: e0a63d4c-be24-45eb-921c-184c85d98f6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_google_analytics_id
+    - node.type.digital_story
+id: node.digital_story.field_google_analytics_id
+field_name: field_google_analytics_id
+entity_type: node
+bundle: digital_story
+label: 'Google Analytics ID'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
