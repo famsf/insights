@@ -14,6 +14,16 @@ function composer_needs_install() {
   composer install --dry-run | grep --extended-regexp --quiet '^Nothing to install or update$'
 }
 
+
+function sass_has_changes() {
+  git diff-index --cached $against -- | grep --extended-regexp --quiet 'styleguide/src/sass/.+\.scss$'
+}
+
+function css_has_changes() {
+  git diff-index --cached $against -- | grep --extended-regexp --quiet 'styleguide/src/content/assets/css/.+\.css$'
+}
+
+
 failure=0
 
 if git rev-parse --verify HEAD >/dev/null 2>&1
@@ -29,14 +39,20 @@ then
   if ! (composer_validate >/dev/null 2>&1)
   then
     failure=1
-    echo ' * Your composer files have errors. Run `composer validate` to diagnose.'
+    echo 'COMMIT PROBLEM:  Your composer files have errors. Run `composer validate` to diagnose.'
   fi
 
   if ! (composer_needs_install >/dev/null 2>&1)
   then
     failure=1
-    echo ' * Your composer dependencies are not up-to-date. Run `composer install` and check in the dependency code.'
+    echo 'COMMIT PROBLEM:  Your composer dependencies are not up-to-date. Run `composer install` and check in the dependency code.'
   fi
+fi
+
+if sass_has_changes && ! css_has_changes
+then
+  failure=1
+  echo 'COMMIT PROBLEM: Your sass has changes but no CSS has been regenerated. Run `npm run butler -- sass` in the styleguide and check in the CSS changes.'
 fi
 
 exit $failure
