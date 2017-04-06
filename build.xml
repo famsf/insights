@@ -20,12 +20,6 @@
         <resolvepath propertyname="styleguide_code" file="${styleguide.dir}/src/content/assets" />
 
         <exec command="npm run butler -- sass" dir="${styleguide.dir.absolute_path}" logoutput="true" checkreturn="true" />
-
-        <resolvepath propertyname="custom_theme" file="${drupal.root}/themes/custom/famsf_digital_stories_theme" />
-        <includeresource mode="${build.artifact_mode}" source="${styleguide_code}/css" dest="${custom_theme}/css" />
-        <includeresource mode="${build.artifact_mode}" source="${styleguide_code}/js" dest="${custom_theme}/js" />
-        <includeresource mode="${build.artifact_mode}" source="${styleguide_code}/imgs" dest="${custom_theme}/imgs" />
-        <includeresource mode="${build.artifact_mode}" source="${styleguide.dir}/src/includes/svg" dest="${custom_theme}/svg" />
     </target>
 
 
