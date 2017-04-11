@@ -5,7 +5,9 @@
 
 # Ignore Drupal settings and files
 settings.build.php
+services.build.yml
 settings.local.php
+services.local.yml
 web/sites/*/files
 
 # Ignore virtual environment and artifacts
