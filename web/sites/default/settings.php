@@ -20,13 +20,13 @@ include __DIR__ . "/settings.pantheon.php";
 $config_directories[CONFIG_SYNC_DIRECTORY] = '../conf/drupal/config';
 
 // Dev environment settings file provided by the-build.
-$settings = __DIR__ . '/settings.build.php';
-if (file_exists($settings)) {
-  include $settings;
+$settings_file = __DIR__ . '/settings.build.php';
+if (file_exists($settings_file)) {
+  include $settings_file;
 }
 
 // Local, per-developer config.
-$settings = __DIR__ . '/settings.local.php';
-if (file_exists($settings)) {
-  include $settings;
+$settings_file = __DIR__ . '/settings.local.php';
+if (file_exists($settings_file)) {
+  include $settings_file;
 }
