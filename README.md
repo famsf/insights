@@ -4,7 +4,7 @@
 ## General Documentation
 * [Development workflow with GIT and Github](/docs/git/git-intro.md)
 * [Detailed Mac Setup guide](/docs/mac-setup.md)
-* [Deployment](docs/deployment.md)
+* [Release Management & Deployment](docs/deployment.md)
 
 ## Requirements
 
@@ -17,6 +17,13 @@
 If you have been running a previous version of Vagrant you may need to do: `vagrant plugin update` to ensure that you can install the plugins.
 
 ## Getting Started
+
+### Configure Git to include Pantheon remote 
+Note: if you were doing development on this repo before release 1.10, you should start with a fresh clone of the repo and follow the following steps:
+
+1. Add Pantheon as a remote
+ * `git remote add pantheon ssh://codeserver.dev.ee6cdbc4-f439-4270-bbab-8adf8d3ba96c@codeserver.dev.ee6cdbc4-f439-4270-bbab-8adf8d3ba96c.drush.in:2222/~/repository.git`
+
 
 1. From inside the project root, run:
  * `composer install`
@@ -84,6 +91,10 @@ You can run `drush` commands from anywhere within the repository, as long as you
 ### Installing and reinstalling Drupal
 
 Run `composer install && vendor/bin/phing build install migrate`
+
+### Updating Drupal Core
+
+* You should update Drupal using composer: `composer update drupal/core --with-dependencies`
 
 ### Adding modules
 
