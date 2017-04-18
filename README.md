@@ -4,7 +4,7 @@
 ## General Documentation
 * [Development workflow with GIT and Github](/docs/git/git-intro.md)
 * [Detailed Mac Setup guide](/docs/mac-setup.md)
-* [Release Management & Deployment](docs/deployment.md)
+* [Release Syncing & Deployment](docs/deployment.md)
 
 ## Requirements
 
