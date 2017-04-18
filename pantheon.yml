@@ -1,0 +1,11 @@
+---
+api_version: 1
+
+# Set site's PHP version to 5.6
+php_version: 5.6
+
+# Use the 'web' directory as the docroot
+web_docroot: true
+
+# Use Drush 8
+drush_version: 8

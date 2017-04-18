@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5970019696ed4ed84be75fb729838e3e",
+    "content-hash": "2c35cc490ada839d114642870d9c8238",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2034,6 +2034,53 @@
                 "psr-3"
             ],
             "time": "2016-10-10T12:19:37+00:00"
+        },
+        {
+            "name": "slowprog/composer-copy-file",
+            "version": "0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/slowprog/CopyFile.git",
+                "reference": "c76bcc6f54abb6fca379d2bfbe1963f215f93450"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/slowprog/CopyFile/zipball/c76bcc6f54abb6fca379d2bfbe1963f215f93450",
+                "reference": "c76bcc6f54abb6fca379d2bfbe1963f215f93450",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*@dev",
+                "mikey179/vfsstream": "~1",
+                "phpunit/phpunit": "~5.0",
+                "symfony/filesystem": "~2.7",
+                "symfony/finder": "~2.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SlowProg\\CopyFile\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrey Tyshev",
+                    "email": "slowprog@gmail.com"
+                }
+            ],
+            "description": "Composer script copying your files after install",
+            "homepage": "https://github.com/SlowProg/composer-copy-file",
+            "keywords": [
+                "copy file"
+            ],
+            "time": "2017-03-26T15:42:45+00:00"
         },
         {
             "name": "stack/builder",
@@ -6153,21 +6200,21 @@
         },
         {
             "name": "palantirnet/the-build",
-            "version": "1.3.3",
+            "version": "1.4.2",
             "source": {
                 "type": "git",
-                "url": "git@github.com:palantirnet/the-build.git",
-                "reference": "0cb93c18f66537b5a64ca6bbf2743fb77be4dc65"
+                "url": "https://github.com/palantirnet/the-build.git",
+                "reference": "0f0a874912be9d9582f4d192dd52b081859b027f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/palantirnet/the-build/zipball/0cb93c18f66537b5a64ca6bbf2743fb77be4dc65",
-                "reference": "0cb93c18f66537b5a64ca6bbf2743fb77be4dc65",
+                "url": "https://api.github.com/repos/palantirnet/the-build/zipball/0f0a874912be9d9582f4d192dd52b081859b027f",
+                "reference": "0f0a874912be9d9582f4d192dd52b081859b027f",
                 "shasum": ""
             },
             "require": {
                 "continuousphp/phing-drush-task": "dev-master",
-                "drupal/coder": "^8.2",
+                "drupal/coder": "*",
                 "nilportugues/php_todo": "^1.0",
                 "pear/versioncontrol_git": "@dev",
                 "phing/phing": "^2.14",
@@ -6193,17 +6240,17 @@
             ],
             "description": "Phing build tasks for Drupal projects.",
             "support": {
-                "source": "https://github.com/palantirnet/the-build/tree/1.3.3",
+                "source": "https://github.com/palantirnet/the-build/tree/1.4.2",
                 "issues": "https://github.com/palantirnet/the-build/issues"
             },
-            "time": "2017-02-09T20:03:21+00:00"
+            "time": "2017-04-06T18:46:41+00:00"
         },
         {
             "name": "palantirnet/the-vagrant",
             "version": "0.5.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:palantirnet/the-vagrant.git",
+                "url": "https://github.com/palantirnet/the-vagrant.git",
                 "reference": "9a8f954a26355f13f8d69d6bcb8b7929528859fd"
             },
             "dist": {
