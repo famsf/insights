@@ -22,19 +22,9 @@ dependencies:
     - echo "sendmail_path=/bin/true" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
     - echo "memory_limit=256M" > ~/.phpenv/versions/$(phpenv global)/etc/conf.d/memory.ini
     - sudo service apache2 restart
-    # Generate a GitHub token per project and add it to the CircleCI environment variables using the web UI.
-    - composer config --global github-oauth.github.com $GITHUB_TOKEN
-
-  override:
-    - composer install
 
   cache_directories:
     - node_modules
-    - vendor
-    - web/core
-    - web/modules/contrib
-    - web/profiles/contrib
-    - ~/.composer
     - ~/.npm
 
 test:

@@ -19,14 +19,6 @@
     },
     "repositories": [
         {
-            "type": "vcs",
-            "url": "git@github.com:palantirnet/the-build.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@github.com:palantirnet/the-vagrant.git"
-        },
-        {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         }
@@ -40,7 +32,8 @@
         "drupal/entity_reference_revisions": "^1.0",
         "drupal/field_group": "^1.0@RC",
         "drupal/paragraphs": "^1.0",
-        "drupal/video": "1.2"
+        "drupal/video": "1.2",
+        "slowprog/composer-copy-file": "^0.2.0"
     },
     "require-dev": {
         "behat/behat": "^3.1",
@@ -61,7 +54,9 @@
     },
     "scripts": {
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "post-create-project-cmd": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
+        "post-create-project-cmd": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "post-install-cmd": "SlowProg\\CopyFile\\ScriptHandler::copy",
+        "post-update-cmd": "SlowProg\\CopyFile\\ScriptHandler::copy"
     },
     "extra": {
         "installer-paths": {
@@ -75,6 +70,9 @@
             "drupal/paragraphs": {
                 "Fix field group integration": "https://www.drupal.org/files/issues/field_group_not_working-2675136-53.patch"
             }
+        },
+        "copy-file": {
+            "conf/git/hooks/": ".git/hooks/"
         }
     }
 }
