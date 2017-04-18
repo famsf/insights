@@ -1,0 +1,18 @@
+uuid: ad599ceb-34e1-4c61-9fa1-8dd15d9ff2aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_has_dropcaps
+field_name: field_has_dropcaps
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

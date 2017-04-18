@@ -1,0 +1,15 @@
+{#
+  name: Image with credit
+  usage: Images with credits may appear in several contexts throughout the site.
+#}
+
+{% block component %}
+  <figure>
+    <div class="figure__wrapper">
+      <img data-src="{{ site.url }}/assets/imgs/art/Corot_French_Banks.jpg" alt="painting of river" />
+    </div>
+    {% include('figcaption-cta.html') %}
+    <figcaption><span class="title-of-art">Banks of the Somme at Picquigny</span> Jean-Baptiste-Camille Corot | 1865-1870 | Oil on canvas | 15 1/8 x 23 3/4 in. (38.4 x 60.3 cm) | Fine Arts Museums of San Francisco, Mildred Anna Williams Collection, 1940.27</figcaption>
+  </figure>
+
+{% endblock %}

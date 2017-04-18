@@ -1,0 +1,21 @@
+/**
+ * @file
+ * lede paragraph styles
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+.lede {
+  font-size: 1.1em;
+  line-height: 1.4em;
+}
+
+blockquote {
+  @extend %decorative-border;
+  padding-bottom: rhythm(1);
+  @include adjust-font-size-to($h3-font-size, 1.25);
+}
+
+.inline-link {
+  margin-left: rhythm(.5);
+}

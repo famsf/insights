@@ -1,0 +1,17 @@
+---
+layout: component
+section: component
+type: full-width
+theme: deyoung-light
+
+title: Light Image Comparison - 3 column
+description: These images are arranged in a row so they can be easily compared by the viewer.
+---
+
+{% block content_wrapper %}
+  {% block content %}
+    <div class="animatedParent">
+      {% include('image-comparison--3up.html') %}
+    </div>
+  {% endblock %}
+{% endblock %}

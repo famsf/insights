@@ -1,0 +1,20 @@
+uuid: f9bb6ecd-1a76-451a-9559-95122b18a335
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_transition_speed
+field_name: field_transition_speed
+entity_type: paragraph
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

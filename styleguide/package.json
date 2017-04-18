@@ -1,0 +1,25 @@
+{
+  "name": "styleguide",
+  "version": "1.0.0",
+  "description": "FAMSF Digital Stories Styleguide",
+  "main": "index.js",
+  "scripts": {
+    "butler": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js",
+    "develop": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js develop",
+    "tests": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js test",
+    "deploy": "node_modules/butler/node_modules/.bin/gulp --gulpfile node_modules/butler/Gulpfile.js spress-deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/palantirnet/famsf-digital-stories.git"
+  },
+  "author": "Palantir.net",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/palantirnet/famsf-digital-stories/issues"
+  },
+  "homepage": "https://github.com/palantirnet/famsf-digital-stories#readme",
+  "dependencies": {
+    "butler": "github:palantirnet/butler"
+  }
+}

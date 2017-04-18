@@ -1,0 +1,87 @@
+uuid: 23477459-65a0-44d3-bd5a-4bde26557fb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sponsor
+    - node.type.digital_story
+    - paragraphs.paragraphs_type.sponsor
+  module:
+    - entity_reference_revisions
+id: node.digital_story.field_sponsor
+field_name: field_sponsor
+entity_type: node
+bundle: digital_story
+label: Sponsor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      sponsor: sponsor
+    target_bundles_drag_drop:
+      1up_section:
+        weight: 21
+        enabled: false
+      2up_section:
+        weight: 22
+        enabled: false
+      audio_component:
+        weight: 23
+        enabled: false
+      audio_tour_info:
+        weight: 24
+        enabled: false
+      card_section:
+        weight: 25
+        enabled: false
+      comparison_image:
+        weight: 26
+        enabled: false
+      footer_feature:
+        weight: 27
+        enabled: false
+      image_comparison_section:
+        weight: 28
+        enabled: false
+      image_with_revealable_caption:
+        weight: 29
+        enabled: false
+      image_with_zoomable_markers:
+        weight: 30
+        enabled: false
+      link_or_download_button:
+        weight: 31
+        enabled: false
+      overlay_image:
+        weight: 32
+        enabled: false
+      photo_credits:
+        weight: 33
+        enabled: false
+      pull_quote:
+        weight: 34
+        enabled: false
+      revealable_read_more_section:
+        weight: 35
+        enabled: false
+      sponsor:
+        enabled: true
+        weight: 36
+      text_area:
+        weight: 37
+        enabled: false
+      video_source:
+        weight: 38
+        enabled: false
+      word_fader:
+        weight: 39
+        enabled: false
+      zoomable_area:
+        weight: 40
+        enabled: false
+field_type: entity_reference_revisions

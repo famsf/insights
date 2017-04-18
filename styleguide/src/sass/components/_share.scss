@@ -1,0 +1,40 @@
+/**
+ * @file
+ * share styles
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+.share-button {
+  @extend %fadeIn;
+  background: transparent;
+  border: 0;
+  margin: rhythm(2) auto;
+  > i ,
+  > div {
+    float: left; // Fixes alignment issue in Firefox of icon and and text inside button element.
+  }
+}
+
+.share-expander {
+  margin: 1em 0;
+  text-align: center;
+}
+
+// Social Media
+
+.social-media {
+  @extend %list--simple;
+  margin: 0 0 rhythm(1);
+}
+
+.social-media__item {
+  display: inline-block;
+  margin-bottom: rhythm(.5);
+  float: left;
+  margin-right: rhythm(1);
+
+  span {
+    @extend %element-invisible;
+  }
+}

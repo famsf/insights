@@ -1,0 +1,96 @@
+{#
+  name: horizontal slider
+  usage: content that scrolls sideways.
+#}
+
+{% block component %}
+<div class="horizontal-slider__wrapper js-horizontal-slider__wrapper ">
+  <ul class="js-horizontal-slider horizontal-slider" data-maxslides="3" data-minslides="2" data-moveslides="0">
+    <li class="horizontal-slider__section">
+      <figure>
+        <div class="figure__wrapper">
+          <img src="{{ site.url }}/assets/imgs/art/19_Quai_Art-Resource.jpg" alt="" />
+        </div>
+        {% include('figcaption-cta.html') %}
+        <div class="figure__caption-reveal js-figure__caption-reveal">
+          <figcaption><span class="title-of-art">Quai de Louvre</span> Claude Monet | 1867 | Oil on canvas |  25 5/8 x 36 1/4 in. (65 x 92 cm) | Gemeentemuseum Den Haag | &copy; Cameraphoto Arte, Venice | Art Resource, NY</figcaption>
+        </div>
+      </figure>
+    </li>
+    <li class="horizontal-slider__section">
+      <figure>
+        <div class="figure__wrapper">
+          <img src="{{ site.url }}/assets/imgs/art/Forest_Fontainebleau.jpg" alt="painting of trees" />
+        </div>
+        {% include('figcaption-cta.html') %}
+        <div class="figure__caption-reveal js-figure__caption-reveal">
+          <figcaption><span class="title-of-art">The Pavé de Chailly in the Forest Fontainebleau</span> Claude Monet | 1865 | oil on canvas | 38 1/4 x 51 3/8 in. (97 x 130.5 cm) | Ordrupgaard Museum, Copenhagen | Photo: Pernille Klemp</figcaption>
+        </div>
+      </figure>
+    </li>
+    <li class="horizontal-slider__section">
+      <figure>
+        <div class="figure__wrapper">
+          <img src="{{ site.url }}/assets/imgs/art/19_Quai_Art-Resource.jpg" alt="" />
+        </div>
+        {% include('figcaption-cta.html') %}
+        <div class="figure__caption-reveal js-figure__caption-reveal ">
+          <figcaption><span class="title-of-art">Quai de Louvre</span> Claude Monet | 1867 | Oil on canvas |  25 5/8 x 36 1/4 in. (65 x 92 cm) | Gemeentemuseum Den Haag | &copy; Cameraphoto Arte, Venice | Art Resource, NY</figcaption>
+        </div>
+      </figure>
+    </li>
+    <li class="horizontal-slider__section">
+      <figure>
+        <div class="figure__wrapper">
+          <img src="{{ site.url }}/assets/imgs/art/19_Quai_Art-Resource.jpg" alt="" />
+        </div>
+        {% include('figcaption-cta.html') %}
+        <div class="figure__caption-reveal js-figure__caption-reveal ">
+          <figcaption><span class="title-of-art">Quai de Louvre</span> Claude Monet | 1867 | Oil on canvas |  25 5/8 x 36 1/4 in. (65 x 92 cm) | Gemeentemuseum Den Haag | &copy; Cameraphoto Arte, Venice | Art Resource, NY</figcaption>
+        </div>
+      </figure>
+    </li>
+    <li class="horizontal-slider__section">
+      <figure>
+        <div class="figure__wrapper">
+          <img src="{{ site.url }}/assets/imgs/art/Forest_Fontainebleau.jpg" alt="painting of trees" />
+        </div>
+        {% include('figcaption-cta.html') %}
+        <div class="figure__caption-reveal js-figure__caption-reveal">
+          <figcaption><span class="title-of-art">The Pavé de Chailly in the Forest Fontainebleau</span> Claude Monet | 1865 | oil on canvas | 38 1/4 x 51 3/8 in. (97 x 130.5 cm) | Ordrupgaard Museum, Copenhagen | Photo: Pernille Klemp</figcaption>
+        </div>
+      </figure>
+    </li>
+    <li class="horizontal-slider__section">
+      <figure>
+        <div class="figure__wrapper">
+          <img src="{{ site.url }}/assets/imgs/art/Monet.jpg" alt="Photo of young Monet" />
+        </div>
+        {% include('figcaption-cta.html') %}
+        <div class="figure__caption-reveal js-figure__caption-reveal">
+          <figcaption><span class="title-of-art">Photograph of the young Monet </span> Étienne Carjat | ca.1865</figcaption>
+        </div>
+      </figure>
+    </li>
+  </ul>
+  <div class="horizontal-slider-controls">
+    <div class="horizontal-slider-controls-direction">
+      <a class="horizontal-slider-prev" href="#">
+        <span class="icon--med">
+        {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+        {% include('svg/famsf-caret-left-md.svg') %}
+        {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+        {% include('svg/deyoung/famsf-caret-left-md.svg') %}
+        {% endif %}</span>
+      </a>
+      <a class="horizontal-slider-next" href="#">
+        <span class="icon--med">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+        {% include('svg/famsf-caret-right-md.svg') %}
+        {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+        {% include('svg/deyoung/famsf-caret-right-md.svg') %}
+        {% endif %}</span>
+      </a>
+    </div>
+  </div>
+</div>
+{% endblock %}

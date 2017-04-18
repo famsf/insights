@@ -1,0 +1,26 @@
+# This file should contain only rules that are specific to this project. For
+# ignoring OS and IDE metadata files, please configure a global gitignore on
+# in your development environment:
+# https://github.com/palantirnet/development_documentation/blob/master/guidelines/git/gitignore.md
+
+# Ignore Drupal settings and files
+settings.build.php
+services.build.yml
+settings.local.php
+services.local.yml
+web/sites/*/files
+
+# Ignore virtual environment and artifacts
+.vagrant/
+/artifacts/
+
+# Ignore .git directories from Composer
+.git
+
+# Ignore npm dependencies
+node_modules/
+npm-debug.log
+
+# Sass caches but check in generated CSS
+*.sass-cache/
+styleguide/*.sass-cache/

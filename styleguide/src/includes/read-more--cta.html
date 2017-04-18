@@ -1,0 +1,28 @@
+{#
+  name: Read More CTA
+  usage: Read More CTA is used to trigger the reveal of deep dive information.
+#}
+
+{% block component %}
+
+<div class="container">
+  <button class="button-with-icon js-icon--read-more" data-text-collapsed="Click to Read More About Monet&rsquo;s Influences" data-text-expanded="Hide this section">
+    <i class="js-icon-arrow--plus icon--med">
+      {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+      {% include('svg/famsf-plus-md.svg') %}
+      {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+      {% include('svg/deyoung/famsf-plus-md.svg') %}
+      {% endif %}
+    </i>
+    <i class="js-icon-arrow--minus icon--med" style="display:none;">
+      {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+      {% include('svg/famsf-minus-md.svg') %}
+      {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+      {% include('svg/deyoung/famsf-minus-md.svg') %}
+      {% endif %}
+    </i>
+    <div class="button-with-icon__text">Click to Read More About Monet&rsquo;s Influences</div>
+  </button>
+</div>
+
+{% endblock %}

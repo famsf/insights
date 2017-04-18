@@ -1,0 +1,55 @@
+/**
+ * @file
+ * blockquote styles
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+blockquote {
+  @extend %decorative-border;
+  padding-bottom: rhythm(1);
+  @include adjust-font-size-to($h3-font-size, 1.25);
+}
+
+.standalone-quote {
+  @extend %fadeInLeft;
+  @include adjust-font-size-to($h2-font-size, 1.35);
+  position: relative;
+  border-style: $decorative-border-style;
+  border-color: $decorative-border-color;
+  border-top-width: $decorative-border-width;
+  border-top: $decorative-border;
+  border-image: $decorative-border-image;
+  border-image-slice: 26% 26% 26% 26%;
+  border-image-repeat: repeat;
+  padding: rhythm(1.25) 0 rhythm(1);
+  text-align: center;
+
+  &:before {
+    content: '“';
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    display: inline-block;
+    font-size: 75px;
+    line-height: 1.15em;
+    background-color: $tertiary;
+    color: $white;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+  }
+
+  p {
+    margin-bottom: 0;
+    max-width: 100%;
+  }
+}
+
+.standalone-quote__cite {
+  @include adjust-font-size-to($crumb, .6);
+  margin: rhythm(.25) 0 0 0;
+  font-family: $roboto;
+  font-style: italic;
+  color: $citation;
+}

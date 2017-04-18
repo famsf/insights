@@ -1,0 +1,6 @@
+uuid: 630a81fd-5ffc-47e9-a261-3e4ac0051c62
+langcode: en
+status: true
+dependencies: {  }
+id: video_source
+label: 'Ambient Video Upload'

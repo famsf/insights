@@ -1,0 +1,21 @@
+/**
+ * @file
+ * styles for "section hero pattern" component
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+// Must be included before Global
+%section-pattern {
+  // fallback in case gradients are not supported:
+  background: $pattern-b;
+  background: -webkit-radial-gradient(circle, $pattern-a 25%, $pattern-b 25%), -webkit-radial-gradient(circle, $pattern-a 25%, $pattern-b 25%), $pattern-b;
+  background: -moz-radial-gradient(circle, $pattern-a 25%, $pattern-b 25%), -moz-radial-gradient(circle, $pattern-a 25%, $pattern-b 25%), $pattern-b;
+  background: radial-gradient(circle, $pattern-a 25%, $pattern-b 25%), radial-gradient(circle, $pattern-a 25%, $pattern-b 25%), $pattern-b;
+  -webkit-background-size: 0.5em 0.5em;
+  background-size: 0.5em 0.5em;
+}
+
+.site-hero__logo {
+  @extend %fadeIn;
+}

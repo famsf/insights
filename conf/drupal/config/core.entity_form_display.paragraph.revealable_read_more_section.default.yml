@@ -1,0 +1,44 @@
+uuid: 3f8c20f8-3581-4f10-adae-66284f9f84ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.revealable_read_more_section.field_collapsed_button_text
+    - field.field.paragraph.revealable_read_more_section.field_expanded_button_text
+    - field.field.paragraph.revealable_read_more_section.field_sections_in_card
+    - paragraphs.paragraphs_type.revealable_read_more_section
+  module:
+    - paragraphs
+id: paragraph.revealable_read_more_section.default
+targetEntityType: paragraph
+bundle: revealable_read_more_section
+mode: default
+content:
+  field_collapsed_button_text:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_expanded_button_text:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+  field_sections_in_card:
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      add_mode: dropdown
+      form_display_mode: default
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+hidden:
+  created: true
+  status: true
+  uid: true

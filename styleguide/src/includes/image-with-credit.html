@@ -1,0 +1,16 @@
+{#
+  name: Image with credit
+  usage: Images with credits may appear in several contexts throughout the site.
+#}
+
+{% block component %}
+  <figure>
+    <div class="figure__wrapper">
+      <img data-src="{{ site.url }}/assets/imgs/art/Forest_Fontainebleau.jpg" alt="painting of trees" />
+    </div>
+    {% include('figcaption-cta.html') %}
+    <figcaption><span class="title-of-art">The Pavé de Chailly in the Forest Fontainebleau</span> Claude Monet | 1865 | oil on canvas | 38 1/4 x 51 3/8 in. (97 x 130.5 cm) | Ordrupgaard Museum, Copenhagen | Photo: Pernille Klemp</figcaption>
+  </figure>
+
+{% endblock %}
+

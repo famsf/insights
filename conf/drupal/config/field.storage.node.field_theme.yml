@@ -1,0 +1,33 @@
+uuid: e54be64c-f2cc-4be6-a9ad-e2ba20d1641f
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_theme
+field_name: field_theme
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: legion-dark
+      label: 'Legion of Honor Dark'
+    -
+      value: legion-light
+      label: 'Legion of Honor Light'
+    -
+      value: de-young-light
+      label: 'de Young Light'
+    -
+      value: de-young-dark
+      label: 'de Young Dark'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

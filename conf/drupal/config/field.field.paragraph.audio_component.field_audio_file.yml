@@ -1,0 +1,27 @@
+uuid: e03c40cb-da0d-43ff-a061-d23629000f9c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_audio_file
+    - paragraphs.paragraphs_type.audio_component
+  module:
+    - file
+id: paragraph.audio_component.field_audio_file
+field_name: field_audio_file
+entity_type: paragraph
+bundle: audio_component
+label: 'Audio file'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'mp3 ogg'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

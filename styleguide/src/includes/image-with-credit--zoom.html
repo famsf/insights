@@ -1,0 +1,65 @@
+{#
+  name: Image with credit zoomable
+  usage: Images with credits may appear in several contexts throughout the site. Zoom must be used with zoom modal include.
+#}
+
+<!-- note: modal content does not currently lazy load. -->
+
+{% block component %}
+  <figure class="figure__zoomable js-figure__zoomable" >
+    <div class="figure__zoomable-boundary">
+      <div class="figure--wrapper figure__zoomable-child js-figure__zoomable-child" data-bg="{{ site.url }}/assets/imgs/art/bodmer_fullsize.jpg">
+      </div>
+      <img style="visibility: hidden;" data-src="{{ site.url }}/assets/imgs/art/bodmer_fullsize.jpg" alt="bodmer" />
+
+      <div class="zoom-group js-zoom-group">
+        <div class="zoom-marker-outer js-zoom-marker-outer" style="position: absolute; left:65%; top: 60%;">
+            <a class="zoom-marker-inner animated fadeInDownShort delay-3000 js-zoom-marker-inner" href="#" title="Click to zoom"><span class="icon--small">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+            {% include('svg/famsf-zoom-in-sm.svg') %}
+            {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+            {% include('svg/deyoung/famsf-zoom-in-sm.svg') %}
+            {% endif %}</span> <div class="zoom-marker__text">Click to zoom</div></a>
+        </div>
+        <div class="zoom-detail-view js-zoom-detail-view" style="display:none;">
+          <h2>Light</h2>
+          <p>In contrast to this restrained study of light and color, Monet captures direct sunlight through the use of intense white as seen on the trunk of the oak. </p>
+          <img data-src="{{ site.url }}/assets/imgs/art/bodmer_color.jpg" alt="image detail">
+        </div>
+      </div>
+      <div class="zoom-group js-zoom-group">
+        <div class="zoom-marker-outer js-zoom-marker-outer" style="position: absolute; left:20%; top: 65%;">
+            <a class="zoom-marker-inner animated fadeInDownShort delay-3000 js-zoom-marker-inner" href="#" title="Click to zoom"><span class="icon--small">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+            {% include('svg/famsf-zoom-in-sm.svg') %}
+            {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+            {% include('svg/deyoung/famsf-zoom-in-sm.svg') %}
+            {% endif %}</span> <div class="zoom-marker__text">Click to zoom</div></a>
+        </div>
+        <div class="zoom-detail-view js-zoom-detail-view" style="display:none;">
+          <h2>Color</h2>
+          <p>The background of the composition is only defined by varied light green tones, flattening any sense of depth beyond the oak.</p>
+          <img data-src="{{ site.url }}/assets/imgs/art/bodmer_light.jpg" alt="image detail">
+        </div>
+      </div>
+      <div class="zoom-group js-zoom-group">
+        <div class="zoom-marker-outer js-zoom-marker-outer" style="position: absolute; left:40%; top: 80%;">
+            <a class="zoom-marker-inner animated fadeInDownShort delay-3000 js-zoom-marker-inner" href="#" title="Click to zoom"><span class="icon--small">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+            {% include('svg/famsf-zoom-in-sm.svg') %}
+            {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+            {% include('svg/deyoung/famsf-zoom-in-sm.svg') %}
+            {% endif %}</span> <div class="zoom-marker__text">Click to zoom</div></a>
+        </div>
+        <div class="zoom-detail-view js-zoom-detail-view" style="display:none;">
+          <h2>Shadow</h2>
+          <p>Perhaps most striking is the artist’s ability to capture the dancing quality of shadows through his varied use of color. In the foreground, the forest floor is covered in muddied grays, yellows, and greens creating a sense of a soft light breaking through the forest canopy.</p>
+          <img data-src="{{ site.url }}/assets/imgs/art/bodmer_shadow.jpg" alt="image detail">
+        </div>
+      </div>
+    </div>
+    {% include('figcaption-cta.html') %}
+    <figcaption>
+      <span class="title-of-art">An Oak at Bas-Bréau (The Bodmer)</span> Claude Monet | 1865 | Oil on canvas | 21 3/8 x 16 1/8 in. (54.4 x 41 cm) | Private collection | Courtesy of Sotheby’s
+    </figcaption>
+  </figure>
+
+{% endblock %}
+

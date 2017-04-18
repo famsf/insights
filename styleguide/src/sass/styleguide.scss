@@ -1,0 +1,24 @@
+/**
+ * @file
+ * Defines the custom Optimism Dark Teal theme.
+ *
+ * When loaded, this file will override the base color scheme.
+ */
+
+// import colors //
+@import "colors-default";
+
+$dotted-border: null;
+$rectangles-border: null;
+
+// must include this extend here as it is used in global
+// It is overwritten in individual partials
+%section-pattern {
+  background: $pattern-b;
+}
+
+// Import the global theme styles.
+@import 'global';
+
+// Import theme specific components
+@import 'themes/legion/legion-typography';

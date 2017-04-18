@@ -1,0 +1,209 @@
+/**
+ * @file
+ * styles for "section hero" component
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+
+.section-hero {
+  margin-bottom: rhythm(1);
+}
+
+.section-hero__wrapper {
+  @extend %hero;
+  height: 90vh;
+
+  &.has-video {
+    // position: absolute;
+    // top: 0;
+  }
+
+  &.pattern {
+    @extend %section-pattern;
+  }
+}
+
+.section-hero__figcaption {
+  &.animated {
+    @extend %fadeIn;
+  }
+  padding: 0 rhythm(.5);
+  .figcaption {
+    @include breakpoint($bp3) {
+      max-width: 75%;
+    }
+  }
+}
+
+.section-hero__title {
+  @extend %hero__content;
+
+  @include breakpoint($bp1) {
+    width: 27rem;
+  }
+
+  h1 {
+    color: $hero-color;
+    font-weight: 300;
+    margin: 0;
+    text-transform: uppercase;
+  }
+}
+
+
+// DeYoung Alternate
+.section-hero__title--bold {
+  @extend %hero__content;
+  @extend %fadeIn;
+  @extend %fadeInDown;
+  background-color: transparent;
+  color: $section-hero-text;
+  padding: rhythm(1.5) 0;
+
+  @include breakpoint($bp1) {
+    width: 27rem;
+    padding: rhythm(1) 0;
+  }
+
+  h1 {
+    @include adjust-font-size-to($xxl-heading, 2.5);
+    color: $hero-color;
+    margin: 0;
+    text-shadow:
+      0 1px 0px $section-hero-shadow,
+      1px 0 0px $section-hero-shadow-b,
+      1px 2px 1px $section-hero-shadow,
+      2px 1px 1px $section-hero-shadow-b,
+      2px 3px 2px $section-hero-shadow,
+      3px 2px 2px $section-hero-shadow-b,
+      3px 4px 2px $section-hero-shadow,
+      4px 3px 3px $section-hero-shadow-b,
+      4px 5px 3px $section-hero-shadow,
+      5px 4px 2px $section-hero-shadow-b,
+      5px 6px 2px $section-hero-shadow,
+      6px 5px 2px $section-hero-shadow-b,
+      6px 7px 1px $section-hero-shadow,
+      7px 6px 1px $section-hero-shadow-b,
+      7px 8px 0px $section-hero-shadow,
+      8px 7px 0px $section-hero-shadow-b;
+  }
+
+  &.has-backdrop {
+    background-color: rgba(darken($section-hero-shadow-b, 5%), .8);
+    padding: rhythm(1.5);
+
+    @include breakpoint($bp1) {
+      width: 27rem;
+      padding: rhythm(1);
+    }
+  }
+
+  &.top-left {
+    @extend %fadeInLeft;
+  }
+
+  &.top-right {
+    @extend %fadeInRight;
+  }
+
+  &.bottom-left {
+    @extend %fadeInLeft;
+  }
+
+  &.bottom-right {
+    @extend %fadeInRight;
+  }
+
+  // border animation
+
+  @-webkit-keyframes expand-width {
+      0% {
+          width: 0%;
+      }
+
+      100% {
+          width: 100%;
+      }
+  }
+
+  .animated-border--top {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    display: block;
+    width: 0%;
+    background: linear-gradient( to right, $section-hero-border-a, $section-hero-border-b );
+    height: 2px;
+  }
+
+  .animated-border--top.go {
+    animation-name: expand-width;
+    animation-duration: 1.5s;
+  }
+
+  .animated-border--bottom {
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    display: block;
+    width: 0%;
+    background: linear-gradient( to right, $section-hero-border-b, $section-hero-border-a );
+    height: 2px;
+  }
+
+  .animated-border--bottom.go {
+    animation-name: expand-width;
+    animation-duration: 1.5s;
+  }
+}
+
+
+.section-hero__rectangle {
+  @extend %hero__rectangle;
+  width: 27.7rem;
+
+  // the width and height of the rectangles should be 3.7rem more than the width and height of %hero__title to create overlap effect
+  // This is calculated and set with js.
+}
+
+.section-hero__video-wrapper {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+    background-position: center center;
+    object-fit: cover;
+  }
+}
+
+// Fade In animation styles for Legion rectangle styles.
+// Note these impact site heroes and section heroes.
+.has-solid-rectangles {
+  h1, h2 {
+    @extend %fadeIn;
+  }
+}
+
+.has-outlined-rectangles {
+  h1, h2 {
+    @extend %fadeIn;
+  }
+}
+
+.has-dotted-border {
+  h1, h2 {
+    @extend %fadeIn;
+  }
+}

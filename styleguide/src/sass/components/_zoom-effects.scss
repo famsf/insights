@@ -1,0 +1,127 @@
+
+
+// This is a window that contains a zoomable image.
+
+%zoomed,
+.zoomed {
+  -ms-transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  transform: scale(1.5);
+}
+.js-zoomed {
+  @extend %zoomed;
+}
+
+%zoomin,
+.zoomin {
+  -ms-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.zoom-marker-outer {
+  z-index: 1;
+}
+
+.zoom-marker-inner {
+  display: flex;
+  display: -webkit-flex;
+  background-color: transparentize($background-d, .15);
+  border-radius: 50%;
+  width: 2.9rem;
+  height: 2.9rem;
+  @include breakpoint($bp1) {
+    width: 3.0rem;
+    height: 3.0rem;
+    .l-1up & {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+    @include breakpoint($bp2) {
+      width: 3.3rem;
+      height: 3.3rem;
+      @include breakpoint($bp3) {
+        width: 3.6rem;
+        height: 3.6rem;
+      }
+    }
+  }
+  box-shadow: 2px 2px 5px 0px rgba($black, 0.41);
+  .icon--small {
+    margin: auto;
+  }
+}
+
+.zoom-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2.2rem;
+  height: 2.2em;
+  display: flex;
+  display: -webkit-flex;
+  background-color: transparentize($background-d, .2);
+  padding: .2rem;
+  border: 0;
+  box-shadow: 0 0 5px darken($background-d, 20%) inset;
+
+  .icon--small {
+    margin: auto;
+  }
+}
+
+.zoom-overlay-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #333;
+  z-index: 250;
+  opacity: .75;
+}
+
+.zoom-window {
+  position: absolute;
+  background: transparentize($zoom-background, .2);
+  position: fixed;
+  top: 1em;
+  right: 1em;
+  left: 1em;
+  padding: rhythm(2);
+  max-height: 90vh;
+  overflow-y: auto;
+  z-index: 300;
+  @include breakpoint($bp1) {
+    top: 5vh;
+    right: 5vw;
+    left: 5vw;
+  }
+  @include breakpoint($bp2) {
+    top: 10vh;
+    right: 10vw;
+    left: 10vw;
+  }
+  @include breakpoint($bp3) {
+    top: 10vh;
+    right: 15vw;
+    left: 15vw;
+  }
+}
+
+// Hide text except for screen readers.
+.zoom-marker__text {
+  @extend %text-hidden;
+  height: 1px;
+  width: 1px;
+}
+
+.zoom-detail-view {
+  img {
+    width: 100%;
+  }
+}

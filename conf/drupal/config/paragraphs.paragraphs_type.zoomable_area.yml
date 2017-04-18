@@ -1,0 +1,6 @@
+uuid: e402f482-8c30-4fb8-bb9a-b5fdb957b42b
+langcode: en
+status: true
+dependencies: {  }
+id: zoomable_area
+label: 'Zoomable Area'

@@ -1,0 +1,44 @@
+/**
+ * @file
+ * icon styles
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+%icon {
+  svg {
+    fill: $primary;
+    height: 100%;
+  }
+
+  &:active,
+  &:hover {
+    svg {
+      fill: $primary-active;
+    }
+  }
+}
+
+.icon--large,
+.icon--med,
+.icon--small,
+.icon--xsmall {
+  @extend %icon;
+  display: inline-block;
+}
+
+.icon--large {
+  height: 4.2rem;
+}
+
+.icon--med {
+  height: 1.7rem;
+}
+
+.icon--small {
+  height: 1.1rem;
+}
+
+.icon--xsmall {
+  height: .75rem;
+}

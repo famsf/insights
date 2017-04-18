@@ -1,0 +1,17 @@
+---
+layout: component
+section: component
+type: main
+theme: deyoung-dark
+
+title: Dark Image overlay
+description: This is an image overlay.
+---
+
+{% block content_wrapper %}
+  {% block content %}
+    <div class="animatedParent">
+      {% include('image-overlay.html') %}
+    </div>
+  {% endblock %}
+{% endblock %}

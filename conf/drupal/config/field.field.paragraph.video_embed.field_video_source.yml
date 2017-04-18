@@ -1,0 +1,26 @@
+uuid: ef4852cd-f711-407a-8cc8-58027c9924eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_video_source
+    - paragraphs.paragraphs_type.video_embed
+  module:
+    - video
+id: paragraph.video_embed.field_video_source
+field_name: field_video_source
+entity_type: paragraph
+bundle: video_embed
+label: 'Video Embed Source'
+description: 'Paste embed code from services such as YouTube and Vimeo here. '
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_extensions: ''
+  file_directory: 'videos/[date:custom:Y]-[date:custom:m]'
+  max_filesize: ''
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: video

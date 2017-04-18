@@ -1,0 +1,20 @@
+uuid: 2f7563eb-50e7-4426-b5ba-0c3a543cdd79
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_pause
+field_name: field_pause
+entity_type: paragraph
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

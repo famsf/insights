@@ -1,0 +1,35 @@
+uuid: 1bb9e4f7-e6a8-4e53-a3c1-d06402511f7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image_with_revealable_caption.field_image
+    - field.field.paragraph.image_with_revealable_caption.field_photo_credits
+    - paragraphs.paragraphs_type.image_with_revealable_caption
+  module:
+    - entity_reference_revisions
+    - image
+id: paragraph.image_with_revealable_caption.default
+targetEntityType: paragraph
+bundle: image_with_revealable_caption
+mode: default
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_photo_credits:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+hidden:
+  created: true
+  uid: true

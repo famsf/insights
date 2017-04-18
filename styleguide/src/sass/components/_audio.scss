@@ -1,0 +1,90 @@
+/**
+ * @file
+ * audio player styles
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+.audio__wrapper {
+  @include leader(1, $text);
+  @include trailer(1, $text);
+  display: inline-block;
+  border: 2px solid $border;
+  padding: .5em 1em;
+}
+
+.js-audio__button {
+  > i ,
+  > div {
+    float: left; // Fixes alignment issue in Firefox of icon and and text inside button element.
+  }
+}
+
+.audio-transcript {
+  font-size: .74rem;
+  line-height: 1.02rem;
+  @include breakpoint($bp1) {
+    font-size: .65rem;
+    line-height: .9rem;
+  }
+  margin: 0 0 rhythm(1) 0;
+}
+
+.audio-transcript--trigger {
+  cursor: pointer;
+  padding: 0 0 .5rem;
+  display: block;
+  text-decoration: underline;
+  background-color: transparent;
+  color: rgba($text-color, .8);
+  text-decoration: underline;
+  border: 0;
+
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: transparent;
+    color: $primary-active;
+    border: 0;
+    outline: 0;
+  }
+}
+
+.audio-transcript__drawer {
+  display: inline-block;
+  padding: .75rem;
+  margin-top: .8rem;
+  margin-bottom: .8rem;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  transition: all .5s ease;
+  background-color: $primary;
+  position: relative;
+  color: $text-color-invert;
+  font-weight: 400;
+
+  &.js-audio-transcript--hidden {
+    display: none;
+  }
+
+  &:after {
+    bottom: 100%;
+    left: 1.5rem;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: transparent;
+    border-bottom-color: $primary;
+    border-width: 12px;
+    margin-left: -12px;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+

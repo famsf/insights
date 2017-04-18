@@ -1,0 +1,38 @@
+/**
+ * @file
+ * figure styles
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+.title-of-art {
+  font-family: $roboto-condensed;
+}
+
+.figcaption-cta {
+
+  .icon--small {
+    svg {
+      fill: rgba($icon, .8);
+    }
+  }
+
+  &:link,
+  &:visited {
+    .icon--small {
+      svg {
+        fill: rgba($icon, .8);
+      }
+    }
+  }
+
+  &:active,
+  &:hover,
+  &:focus {
+    .icon--small {
+      svg {
+        fill: rgba($icon-active, .8);
+      }
+    }
+  }
+}

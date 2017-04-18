@@ -1,0 +1,13 @@
+name: FAMSF Digital Stories Theme
+type: theme
+description: A custom drupal theme for FAMSF Digital Stories.
+core: 8.x
+libraries:
+  - famsf_digital_stories_theme/global-styling
+ckeditor_stylesheets:
+  - css/themes/admin/admin.css
+regions:
+  main_nav: 'Main navigation'
+  content: Content
+  header: Header
+  footer: Footer

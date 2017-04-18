@@ -1,0 +1,24 @@
+{#
+  name: Deep Dive
+  usage: Deep Dive is used whenever you want to provide additional details.
+#}
+
+{% block component %}
+
+<div class="deep-dive js-deep-dive">
+  <div class="deep-dive__wrapper js-deep-dive__wrapper js-expander--is-closed">
+    <div class="container rectangles-bg">
+      <div class="l-2up--1">
+        <p class="lede"><span class="dropcap">M</span>onet was influenced by a slightly older generation of landscape painters.</p>
+        <p>The painters of the so-called Barbizon School (named after a village in Fontainebleau) were interested in capturing direct, unadorned observations of nature, which challenged popular ideas among the academic art institutions of landscapes as idealized settings. Rather than presenting nature as pristine, balanced, and imbued with noble values, Barbizon School painters such as Jean-Baptiste-Camille Corot desired to capture nature&rsquo;s rough textures with spontaneity and vitality.</p>
+      </div>
+      <div class="l-2up--2">
+        {% include('image-with-credit--read-more.html') %}
+      </div>
+    </div>
+  </div>
+  {% include('read-more--cta.html') %}
+</div>
+
+{% endblock %}
+

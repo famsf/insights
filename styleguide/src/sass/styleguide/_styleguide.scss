@@ -1,0 +1,121 @@
+/**
+ * @file
+ * Define the styles for the styleguide. This is not css for the site.
+ *
+ * @copyright Copyright (c) 2014 Palantir.net
+ */
+
+.l-styleguide-column {
+  @include isolation-span(12, 1, 'both');
+}
+
+.l-styleguide-rail {
+  @include isolation-span(12, 1, 'both');
+
+  @include breakpoint($bp1) {
+    @include isolation-span(4, 1, 'none');
+  }
+
+  @include breakpoint($bp2) {
+    @include isolation-span(3, 2, 'none');
+  }
+}
+
+// Update this class as needed to differentiate styleguide header from the header component
+.styleguide-header {
+  position: relative;
+  background-color: transparent;
+  height: auto;
+}
+
+.styleguide-copyright {
+  @include adjust-font-size-to($label, 1.5);
+  color: $gray-medium;
+  padding: rhythm(2) 0;
+  margin-top: rhythm(2);
+  border-top: 1px solid $gray-light;
+}
+
+.styleguide-label {
+  color: $text-color;
+}
+
+.styleguide-section {
+  margin-top: rhythm(3);
+  border-top: 1px solid $gray-light;
+  padding-top: rhythm(2);
+}
+
+.styleguide-list {
+  list-style-type: none;
+  padding: 0;
+
+  li {
+    margin-bottom: rhythm(.5);
+  }
+}
+
+.styleguide-component {
+  padding: rhythm(2) 0;
+}
+
+.styleguide-description {
+  background-color: transparentize($background-b, .5);
+  margin: rhythm(1) 0;
+  padding: rhythm(1) 0;
+}
+
+.styleguide-swatch {
+  padding: 25px;
+  color: $black;
+  margin-bottom: 1em;
+
+  code {
+    background-color: $white-60;
+  }
+}
+
+.styleguide-body {
+  margin-bottom: rhythm(2);
+}
+
+// Grid demo styles
+.demo {
+  border: 1px solid $text-color;
+  padding: rhythm(1);
+}
+
+// Set example nest wrap styles
+.nest-wrap {
+  @extend %clearfix;
+  border: 1px solid $text-color;
+  padding: 0;
+}
+
+// Set the column count for nested example
+@include layout(8) {
+  .nest-item {
+    @include isolation-span(8, 1, 'both');
+    background-color: darken($background-b, 4%);
+    padding: rhythm(1);
+
+    @include breakpoint($bp1) {
+      @include float-span(2);
+      margin-bottom: 0;
+
+      &:last-child {
+        @include float-span(4, "last");
+      }
+    }
+  }
+}
+
+.styleguide-icon {
+  margin-right: 2em;
+  display: inline-block;
+}
+
+.icon--carrot {
+  @extend %icon;
+  height: .7em;
+}

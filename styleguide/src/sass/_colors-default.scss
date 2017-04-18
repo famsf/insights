@@ -1,0 +1,66 @@
+/**
+ * @file
+ * Sass color variables for dark color palette.
+ *
+ * @copyright Copyright (c) 2017 Palantir.net
+ */
+
+$black: #000;
+$gray-dark: #3e3e3e;
+$gray-medium: #a8abad;
+$gray-light: #ececec;
+$white: #fff;
+$white-10: rgba($white, .1);
+$white-20: rgba($white, .2);
+$white-30: rgba($white, .3);
+$white-60: rgba($white, .6);
+
+$background-a: $white;
+$background-b: $white;
+$background-c: $gray-light;
+$background-d: $gray-light;
+$pattern-a: $gray-light;
+$pattern-b: $gray-dark;
+$border: $gray-light;
+$text-color: $black;
+$text-color-invert: $white;
+$text-color-invert-active: $gray-light;
+$primary: darken($gray-medium, 20%);
+$primary-active: $black;
+$secondary: $gray-light;
+$tertiary: $black;
+$citation: $gray-light;
+$hero-color: $black;
+
+$azure: #1c90cf;
+$azure-60: #77bce2;
+$indigo: #0f6088;
+$pink-30: #f2e5ea;
+$pink-60: #ebd0d2;
+$peach: #e5cbcc;
+$melon: #e0b9bb;
+$magenta: #922b55;
+$sea: #216780;
+$denim: #10465b;
+$midnight: #0a2f3d;
+$ink: #03161e;
+
+$rectangles-border: null;
+$decorative-border: 2px;
+$decorative-border-width: 2px;
+$decorative-border-style: solid;
+$decorative-border-color: $gray-light;
+$decorative-border-image: null;
+$zoom-background: $white;
+$text-shadow-color: $gray-light;
+$hero-content-text: $gray-dark;
+$hero-content-text-active: $black;
+
+$section-hero-text: $white;
+$section-hero-shadow: $denim;
+$section-hero-shadow-b: $midnight;
+$section-hero-border-a: $denim;
+$section-hero-border-b: $gray-light;
+
+$next-icon: $azure;
+$next-icon-active: $indigo;

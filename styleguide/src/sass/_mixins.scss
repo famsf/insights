@@ -1,0 +1,336 @@
+/**
+ * @file
+ * Define your custom Sass mixins and extends here.
+ * @see http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html#defining_a_mixin
+ */
+
+/* ==========================================================================
+   Typography grooming extends
+   ========================================================================== */
+
+/* Tight tracking */
+%track-in {
+  letter-spacing: -.0125em;
+}
+
+/* Open tracking */
+%track-out {
+  letter-spacing: .1em;
+}
+
+/* Style larger text with a tighter tracking, change weight, etc.  */
+%display-type {
+  @extend %track-in;
+}
+
+/* Style all caps with a slightly open tracking. */
+%allcaps {
+  @extend %track-out;
+  text-transform: uppercase;
+}
+
+/* Unstyle a list */
+%list--simple {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
+/* ==========================================================================
+   Clearfix extend
+   ========================================================================== */
+
+/**
+ * Applies a clearfix ruleset using a placeholder selector. Placeholder selectors
+ * do not get compiled uless they are called - removing the nesting issues that
+ * can otherwise occur with extends.
+ */
+
+.clearfix,
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+/* ==============================================================
+   Visually hidden extend
+   ============================================================== */
+
+/**
+ * Element-invisible as defined by snook.ca
+ * @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.element-invisible,
+%element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  @if support-legacy-browser(ie, '7') {
+    clip: rect(1px 1px 1px 1px); // IE6 and IE7 use the wrong syntax.
+  }
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Turns off the element-invisible effect. */
+%element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+/*  Hides text only on an element while maintaining accessibility,
+typically for image replacement:
+http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/ */
+%text-hidden,
+.text-hidden {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.element-focusable,
+%element-focusable {
+  @extend %element-invisible;
+
+  &:active,
+  &:focus {
+    @extend %element-invisible-off;
+  }
+}
+
+/* ==============================================================
+   CSS3 transition mixin
+   ============================================================== */
+
+@mixin trans($property: all, $timing: .3s, $easing: ease) {
+  transition: $property $timing $easing;
+}
+
+/* ==============================================================
+   Decorative Border extend
+   ============================================================== */
+
+%decorative-border {
+  border-bottom: $decorative-border;
+  border-bottom-width: $decorative-border-width;
+  // Test in Safari and Firefox before deleting or modifying these properties.
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-style: $decorative-border-style;
+  border-color: $decorative-border-color;
+  border-image: $decorative-border-image;
+  border-image-slice: 26% 26% 26% 26%;
+  border-image-repeat: repeat;
+}
+
+/* ==============================================================
+   Rectangles background extend
+   ============================================================== */
+
+.rectangles-bg,
+%rectangles-bg {
+
+  @include breakpoint($bp3) {
+    // Note: if you combine border styles below they will break on Safari.
+    // border: 40px;
+    border-width: 40px;
+    border-style: solid;
+    border-image-source: $rectangles-border;
+    // Test in Safari and Firefox before deleting or modifying these properties.
+    border-image-slice: 25% 25% 25% 25%;
+    border-image-repeat: repeat;
+  }
+}
+
+/* ==============================================================
+   Custom focus state extend
+   ============================================================== */
+
+%custom-focus {
+  &:focus {
+    outline: none;
+    background-color: darken($background-b, 7%);
+  }
+}
+
+// Scroll lock for preventing background scrolling on the body when a modal opens
+
+%scroll-lock,
+.scroll-lock {
+  overflow: hidden;
+}
+
+.js-scroll-lock {
+  @extend %scroll-lock;
+}
+
+/* ==============================================================
+
+   Dotted border extend
+   ============================================================== */
+
+%dotted-border {
+  border-bottom: $decorative-border;
+  border-bottom-width: $decorative-border-width;
+  border-style: $decorative-border-style;
+  border-color: $decorative-border-color;
+  border-image-source: $decorative-border-image;
+  border-image-slice: 26% 26% 26% 26%;
+  border-image-repeat: round;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+/* ===============================================================
+   Hero extends
+   ============================================================== */
+
+%hero {
+  width: 100%;
+  display: flex;
+  display: -webkit-flex; // fixes header height in Safari.
+  background-size: cover;
+  background-position: center;
+}
+
+%hero__content {
+  margin: auto;
+  position: relative;
+  width: 90vw;
+  color: $hero-content-text;
+  padding: rhythm(1.5);
+  background-color: transparentize($white, .2);
+
+  @include breakpoint($bp1) {
+    padding: rhythm(1);
+  }
+
+  * {
+    position: relative;
+    z-index: 2;
+  }
+
+  &.top-left {
+    @include breakpoint($bp1) {
+      margin-top: rhythm(3);
+      margin-left: rhythm(3);
+    }
+  }
+
+  &.top-right {
+    @include breakpoint($bp1) {
+      margin-top: rhythm(3);
+      margin-right: rhythm(3);
+    }
+  }
+
+  &.bottom-left {
+    @include breakpoint($bp1) {
+      margin-bottom: rhythm(3);
+      margin-left: rhythm(3);
+    }
+  }
+
+  &.bottom-right {
+    @include breakpoint($bp1) {
+      margin-bottom: rhythm(3);
+      margin-right: rhythm(3);
+    }
+  }
+
+  &.has-outlined-rectangles {
+    @include breakpoint($bp1) {
+      background-color: $white-30;
+    }
+  }
+
+  &.has-solid-rectangles {
+    @include breakpoint($bp1) {
+      background-color: transparent;
+    }
+  }
+
+  &.has-dotted-border {
+    h1 {
+      @extend %decorative-border;
+      padding-bottom: .5em;
+    }
+  }
+}
+
+%hero__rectangle {
+  display: none;
+
+  @include breakpoint($bp1) {
+    display: block;
+    position: absolute;
+    z-index: 0;
+
+    &.top {
+      top: -.7rem;
+      left: -.7rem;
+    }
+
+    &.bottom {
+      bottom: -.7rem;
+      right: -.7rem;
+    }
+
+    .has-outlined-rectangles & {
+      border: 2px solid transparentize($tertiary, .7);
+    }
+
+    .has-solid-rectangles & {
+      background-color: $white-60;
+    }
+  }
+}
+
+/* ==============================================================
+   Main background gradient for body and slide sections
+   ============================================================== */
+
+%general-background {
+  background: $background-b; /* Old browsers */
+  background: -moz-linear-gradient(left,  $background-a 0%, $background-b 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  $background-a 0%,$background-b 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  $background-a 0%,$background-b 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+// Apply this to your video container to have it scale responsively
+// Use 75% for 4:3 videos
+@mixin intrinsic-ratio($selector: 'iframe', $ratio: 56.25%) {
+    position: relative;
+    padding-bottom: $ratio;
+    height: 0px;
+    margin-bottom: 0;
+    #{$selector} {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// Default margin at bottom of photo or video that does not have a caption.
+%no-caption,
+.no-caption {
+  margin-bottom: rhythm(1);
+}
+
+%top-space,
+.top-space {
+  margin-top: rhythm(1);
+}

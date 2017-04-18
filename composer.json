@@ -1,0 +1,78 @@
+{
+    "name": "palantirnet/famsf-digital-stories",
+    "description": "A Drupal 8 platform for FAMSF digital stories microsites.",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Palantir.net",
+            "email": "info@palantir.net"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "preferred-install": {
+            "*": "dist"
+        },
+        "sort-packages": "true"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.0",
+        "cweagans/composer-patches": "^1.6",
+        "drupal-composer/drupal-scaffold": "^1.0",
+        "drupal/config_installer": "^1.0",
+        "drupal/core": "^8.0",
+        "drupal/entity_reference_revisions": "^1.0",
+        "drupal/field_group": "^1.0@RC",
+        "drupal/paragraphs": "^1.0",
+        "drupal/video": "1.2",
+        "slowprog/composer-copy-file": "^0.2.0"
+    },
+    "require-dev": {
+        "behat/behat": "^3.1",
+        "behat/mink": "^1.7",
+        "behat/mink-extension": "^2.2",
+        "behat/mink-goutte-driver": "^1.2",
+        "drupal/console": "^0.11.3",
+        "drupal/drupal-extension": "^3.1",
+        "drush/drush": "^8.0",
+        "palantirnet/the-build": "^1.0",
+        "palantirnet/the-vagrant": "^0.5"
+    },
+    "suggest": {
+        "cweagans/composer-patches": "Try ^1.0. Apply patches to packages, especially Drupal.org contrib."
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "scripts": {
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "post-create-project-cmd": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "post-install-cmd": "SlowProg\\CopyFile\\ScriptHandler::copy",
+        "post-update-cmd": "SlowProg\\CopyFile\\ScriptHandler::copy"
+    },
+    "extra": {
+        "installer-paths": {
+            "web/core": ["type:drupal-core"],
+            "web/modules/contrib/{$name}": ["type:drupal-module"],
+            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
+            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "drush/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "patches": {
+            "drupal/paragraphs": {
+                "Fix field group integration": "https://www.drupal.org/files/issues/field_group_not_working-2675136-53.patch"
+            }
+        },
+        "copy-file": {
+            "conf/git/hooks/": ".git/hooks/"
+        }
+    }
+}

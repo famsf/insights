@@ -1,0 +1,35 @@
+{#
+  name: Audio with button
+  usage: Audio file with play/stop toggle button
+#}
+<div class="js-audio__wrapper audio__wrapper">
+  <audio class="js-audio__source">
+    <source src="{{ site.url }}/assets/audio/Point-de-la-Heve-critic.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <button class="js-audio__button button-with-icon">
+      <i class="js-icon--play icon--small">
+        {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+        {% include('svg/famsf-audio-play-sm.svg') %}
+        {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+        {% include('svg/deyoung/famsf-audio-play-sm.svg') %}
+        {% endif %}
+      </i>
+      <i class="js-icon--pause icon--small" style="display:none;">
+        {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+        {% include('svg/famsf-pause-sm.svg') %}
+        {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+        {% include('svg/deyoung/famsf-pause-sm.svg') %}
+        {% endif %}
+      </i>
+    <div>Listen to a quote from a 19th century art critic</div>
+  </button>
+</div>
+
+<div class="audio-transcript">
+  <button class="audio-transcript--trigger js-audio-transcript--trigger">Audio Transcript</button>
+  <div class="audio-transcript__drawer js-audio-transcript--hidden" aria-hidden="true">
+    <p>The most original … and harmoniously painted seascape exhibited in a long time … M. Monet, unknown yesterday, has immediately made a name for himself with this single painting.</p>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+{#
+  name: Modal for zooming in on an image
+  usage: Placed at bootom of the page and used with Image zoom.
+#}
+
+<div class="zoom-overlay-background js-zoom-overlay-background" style="display: none;">
+</div>
+<div class="zoom-window js-zoom-window" style="display: none;">
+  <button class="zoom-close js-zoom-close" href="#" style="display: none;">
+    <i class="icon--small">
+      {% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+      {% include('svg/famsf-zoom-out-sm.svg') %}
+      {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+      {% include('svg/deyoung/famsf-zoom-out-sm.svg') %}
+      {% endif %}
+    </i>
+    <div class="zoom-marker__text">close</div>
+  </button>
+  <div class="zoom-window__content js-zoom-window__content" style="display: none;">
+  </div>
+</div>

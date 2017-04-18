@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{{ page.title }}{% endblock %} | {{ site.title }}</title>
+    {% block stylesheet %}
+      {% if page.theme == 'legion-dark' %}
+        <link href="{{ site.url }}/assets/css/themes/legion/legion-dark.css" rel="stylesheet" type="text/css" />
+      {% elseif page.theme == 'legion-light' %}
+        <link href="{{ site.url }}/assets/css/themes/legion/legion-light.css" rel="stylesheet" type="text/css" />
+      {% elseif page.theme == 'deyoung-dark' %}
+        <link href="{{ site.url }}/assets/css/themes/de-young/de-young-dark.css" rel="stylesheet" type="text/css" />
+      {% elseif page.theme == 'deyoung-light' %}
+        <link href="{{ site.url }}/assets/css/themes/de-young/de-young-light.css" rel="stylesheet" type="text/css" />
+      {% else %}
+        <link href="{{ site.url }}/assets/css/styleguide.css" rel="stylesheet" type="text/css" />
+      {% endif %}
+    {% endblock %}
+    <script src="https://use.typekit.net/vbv6sfx.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="styleguide-header">
+        <h5 class="styleguide-label">Living Styleguide</h5>
+        <h1>{{ site.title }}</h1>
+      </header>
+    </div>
+
+    {% block content_wrapper %}
+      {% block content %}
+        {{ page.content }}
+      {% endblock %}
+    {% endblock %}
+
+    <div class="container">
+      <div class="l-column">
+        <p class="styleguide-copyright">Copyright (c) 2017 Palantir.net</p>
+      </div>
+    </div>
+
+    {{ include("scripts.html") }}
+  </body>
+</html>

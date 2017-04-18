@@ -1,0 +1,13 @@
+{#
+  name: Figure Info button
+  usage: This button hides/reveals extra info about a work of art.
+#}
+
+<button class="button-with-icon js-overlay-button figure__overlay-cta" data-text-collapsed="Look Closer" data-text-expanded="Restore">
+  <i class="icon--small">{% if page.theme == 'legion-dark' or page.theme == 'legion-light' %}
+  {% include('svg/famsf-eye-sm.svg') %}
+  {% elseif page.theme == 'deyoung-dark' or page.theme == 'deyoung-light' %}
+  {% include('svg/deyoung/famsf-eye-sm.svg') %}
+  {% endif %}</i>
+  <div class="button-with-icon__text">Look Closer</div>
+</button>

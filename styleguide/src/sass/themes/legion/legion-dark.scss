@@ -1,0 +1,78 @@
+/**
+ * @file
+ * Defines the custom Legion Dark theme.
+ *
+ * When loaded, this file will override the base color scheme.
+ */
+
+// Override color scheme variables set in _init.scss
+$black: #000;
+$gray-dark: #3e3e3e;
+$gray-medium: #a8abad;
+$gray-light: #ececec;
+$white: #fff;
+$white-10: rgba($white, .1);
+$white-20: rgba($white, .2);
+$white-30: rgba($white, .3);
+$white-60: rgba($white, .6);
+
+$azure: #1c90cf;
+$azure-60: #77bce2;
+$indigo: #0f6088;
+$pink: #d3a9ba;
+$pink-70: #e0c3cf;
+$magenta: #922b55;
+$yellow: #ffd878;
+$gold: #edb23e;
+$sea: #216780;
+$denim: #10465b;
+$midnight: #0a2f3d;
+$ink: #03161e;
+
+$background-a: $sea;
+$background-b: $denim;
+$background-c: $midnight;
+$background-d: $ink;
+$pattern-a: $denim;
+$pattern-b: $midnight;
+$border: $sea;
+$text-color: $white;
+$text-color-invert: $midnight;
+$primary: $yellow;
+$primary-active: $gold;
+$secondary: $azure-60;
+$tertiary: $pink-70;
+$citation: $pink-70;
+$hero-color: $midnight;
+
+$border: $yellow;
+$decorative-border: null; // Needed for Firefox.
+$decorative-border-width: 8px;
+$decorative-border-style: solid;
+$decorative-border-color: null;
+$decorative-border-image: url('../../../imgs/dots-dark.png') 26% round;
+$rectangles-border: url('../../../imgs/legion-rectangles-dark.png');
+$zoom-background: $midnight;
+$text-shadow-color: transparentize($yellow, .2);
+$hero-content-text: $midnight;
+$hero-content-text-active: $sea;
+
+$section-hero-text: $white;
+$section-hero-shadow: $denim;
+$section-hero-shadow-b: $midnight;
+$section-hero-border-a: $midnight;
+$section-hero-border-b: $sea;
+
+$next-icon: $yellow;
+$next-icon-active: $gold;
+
+// Import theme specific components used in global
+@import 'legion-section-hero';
+
+// Import the global theme styles.
+@import '../../global';
+
+// Import theme specific components
+@import 'legion-typography';
+@import 'legion-wysiwyg';
+@import 'legion-figure';
