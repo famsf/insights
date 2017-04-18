@@ -1,6 +1,0 @@
-uuid: e377f289-b2f0-45db-b823-34c13421f004
-langcode: en
-status: true
-dependencies: {  }
-id: audio_component
-label: 'Audio component'
