@@ -25,13 +25,16 @@ Now checkout the master branch on the repo and merge it with the latest from the
 `git push origin master`
 
 Now you should merge in and tag your new release from develop into master.
+`git merge develop`
+if you are adding a tag use `git tag v2.0.0`
+
 Be sure to push to the repo master and then merge to the Pantheon master
 `git push origin master`
-
-Last you should update the Pantheon Remote to complete deployment. 
 `git checkout pantheon-master`
 `git merge origin-master`
-`git push pantheon master`
+
+Last you should update the Pantheon Remote to complete deployment. 
+`git push pantheon master` to push master or `git push pantheon v2.0.0` for pushing the tagged release
 
 Now you should have the latest code on both the Pantheon and FAMSF Digital Stories master branches. 
 
