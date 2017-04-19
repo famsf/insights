@@ -19,12 +19,10 @@ If you have been running a previous version of Vagrant you may need to do: `vagr
 ## Getting Started
 
 ### Configure Git to include Pantheon remote 
-Note: if you were doing development on this repo before release 1.10, you should start with a fresh clone of the repo and follow the following steps:
+Note: if you were doing development on this repo before release 1.10, you should start with a fresh clone of the repo and run the following to add Pantheon as a remote:
+`git remote add pantheon ssh://codeserver.dev.ee6cdbc4-f439-4270-bbab-8adf8d3ba96c@codeserver.dev.ee6cdbc4-f439-4270-bbab-8adf8d3ba96c.drush.in:2222/~/repository.git`
 
-1. Add Pantheon as a remote
- * `git remote add pantheon ssh://codeserver.dev.ee6cdbc4-f439-4270-bbab-8adf8d3ba96c@codeserver.dev.ee6cdbc4-f439-4270-bbab-8adf8d3ba96c.drush.in:2222/~/repository.git`
-
-
+### Start the VM
 1. From inside the project root, run:
  * `composer install`
  * `vagrant up`
