@@ -1,4 +1,4 @@
-# Release Syncing & Deployment to Pantheon
+# Deployment to Pantheon
 
 This repository contains the custom code, contributed/external dependency code, and configuration files required to run the Drupal site. When developing the site, all dependencies and external code should be managed with composer. However, for deployment, all dependencies and external code need to be checked into the repository so that all code is included in the deployment.
 
@@ -10,34 +10,24 @@ This repository can be pushed directly to Pantheon. See the [`pantheon.yml`](../
 
 Please make sure locally that you have added the Pantheon remote to your git clone of this repo. You can verify the available remotes by running `git remote`. If you have not added the Pantheon remote, follow the instructions in the main [README.md](../README.md).
 
-## Syncing the Master Branch
+## Deploying the Master Branch
 
 The Master branch in this repository needs to be synced with the master branch on Pantheon.
 
-Before merging a new release to master, you need checkout the master brnach from Pantheon and make sure you have the latest code. Note that we need to take steps to track branches in different remotes with the same name of 'master'.
-`git fetch --all`
-`git checkout -b pantheon-master --track pantheon/master`
-`git pull pantheon master`
+`git checkout master` (note: If you have not checked out the master branch previously, you will need to run `git checkout -b master --track origin/master`)
+`git pull origin master`
+`git push pantheon master`
 
-Now checkout the master branch on the repo and merge it with the latest from the Pantheon remote. 
-`git checkout- b origin-master --track origin/master`
-`git merge pantheon-master`
-`git push origin master`
+## Deploying a tag
 
-Now you should merge in and tag your new release from develop into master.
-`git merge develop`
-if you are adding a tag use `git tag v2.0.0`
+Be sure your tag resides on the master branch
+`git checkout v2.0.0`
+`git pull origin v2.0.0`
+`git push pantheon v2.0.0`
 
-Be sure to push to the repo master and then merge to the Pantheon master
-`git push origin master`
-`git checkout pantheon-master`
-`git merge origin-master`
 
-Last you should update the Pantheon Remote to complete deployment. 
-`git push pantheon master` to push master or `git push pantheon v2.0.0` for pushing the tagged release
 
-Now you should have the latest code on both the Pantheon and FAMSF Digital Stories master branches. 
-
+For more information, see Pantheon's documentation on Collaborative Development using Github and Pantheon https://pantheon.io/docs/guides/collaborative-development/#deploy-to-pantheon
 
 
 
