@@ -18,6 +18,11 @@ The Master branch in this repository needs to be synced with the master branch o
 `git pull origin master`
 `git push pantheon master`
 
+Once the master is updated on Pantheon you will typically need to import new configurations and clear the cache. To do this through Terminus, do the following:
+
+`terminus drush famsf-digital-stories.dev cex`
+`terminus drush famsf-digital-stories.dev cr`
+
 For more information, see Pantheon's documentation on Collaborative Development using Github and Pantheon https://pantheon.io/docs/guides/collaborative-development/#deploy-to-pantheon
 
 
