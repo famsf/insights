@@ -22,7 +22,6 @@ The Master branch in this repository needs to be synced with the master branch o
 
 Be sure your tag resides on the master branch
 `git checkout v2.0.0`
-`git pull origin v2.0.0`
 `git push pantheon v2.0.0`
 
 
