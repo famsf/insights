@@ -14,7 +14,7 @@ Please make sure locally that you have added the Pantheon remote to your git clo
 
 The Master branch in this repository needs to be synced with the master branch on Pantheon.
 
-Before merging a new release to master, you need checkout the master brnach from Pantheon and make sure you have the latest code.
+Before merging a new release to master, you need checkout the master brnach from Pantheon and make sure you have the latest code. Note that we need to take steps to track branches in different remotes with the same name of 'master'.
 `git fetch --all`
 `git checkout -b pantheon-master --track pantheon/master`
 `git pull pantheon master`
