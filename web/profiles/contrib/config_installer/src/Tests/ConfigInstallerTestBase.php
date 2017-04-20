@@ -109,7 +109,26 @@ abstract class ConfigInstallerTestBase extends InstallerTestBase {
    */
   protected function getTarball() {
     // Exported configuration after a minimal profile install.
-    return __DIR__ . '/Fixtures/minimal.tar.gz';
+    return $this->versionTarball('minimal.tar.gz');
+  }
+
+  /**
+   * Gets a tarball for the right version of Drupal.
+   *
+   * @param $tarball
+   *   The tarball filename.
+   *
+   * @return string
+   *   The fullpath to the tarball.
+   */
+  protected function versionTarball($tarball) {
+    include_once \Drupal::root() . '/core/includes/install.core.inc';
+    $version = _install_get_version_info(\Drupal::VERSION);
+    $versioned_file = __DIR__ . '/Fixtures/' . $version['major'] . '.' . $version['minor'] . '/' . $tarball;
+    if (file_exists($versioned_file)) {
+      return $versioned_file;
+    }
+    return __DIR__ . '/Fixtures/' . $tarball;
   }
 
 }

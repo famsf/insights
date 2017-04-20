@@ -127,6 +127,7 @@ class ComposerStaticInit83030e2f478fac2fdda2ea3a33e32379
             'Drupal\\Component\\' => 17,
             'DrupalComposer\\DrupalScaffold\\' => 30,
             'Doctrine\\Common\\Cache\\' => 22,
+            'Doctrine\\Common\\' => 16,
         ),
         'C' => 
         array (
@@ -145,6 +146,7 @@ class ComposerStaticInit83030e2f478fac2fdda2ea3a33e32379
         ),
         'A' => 
         array (
+            'Asm89\\Stack\\' => 12,
             'Alchemy\\Zippy\\' => 14,
         ),
     );
@@ -398,6 +400,10 @@ class ComposerStaticInit83030e2f478fac2fdda2ea3a33e32379
         array (
             0 => __DIR__ . '/..' . '/doctrine/cache/lib/Doctrine/Common/Cache',
         ),
+        'Doctrine\\Common\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
+        ),
         'Consolidation\\OutputFormatters\\' => 
         array (
             0 => __DIR__ . '/..' . '/consolidation/output-formatters/src',
@@ -435,6 +441,10 @@ class ComposerStaticInit83030e2f478fac2fdda2ea3a33e32379
         'Behat\\Mink\\' => 
         array (
             0 => __DIR__ . '/..' . '/behat/mink/src',
+        ),
+        'Asm89\\Stack\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/asm89/stack-cors/src/Asm89/Stack',
         ),
         'Alchemy\\Zippy\\' => 
         array (
@@ -642,10 +652,6 @@ class ComposerStaticInit83030e2f478fac2fdda2ea3a33e32379
             array (
                 0 => __DIR__ . '/..' . '/doctrine/annotations/lib',
             ),
-            'Doctrine\\Common\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/doctrine/common/lib',
-            ),
             'Dflydev\\Symfony\\FinderFactory' => 
             array (
                 0 => __DIR__ . '/..' . '/dflydev/symfony-finder-factory/src',
@@ -711,10 +717,6 @@ class ComposerStaticInit83030e2f478fac2fdda2ea3a33e32379
         ),
         'A' => 
         array (
-            'Asm89\\Stack' => 
-            array (
-                0 => __DIR__ . '/..' . '/asm89/stack-cors/src',
-            ),
             'Archive_Tar' => 
             array (
                 0 => __DIR__ . '/..' . '/pear/archive_tar',
