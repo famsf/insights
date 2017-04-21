@@ -20,3 +20,4 @@ $settings['container_yamls'][] = __DIR__ . '/services.build.yml';
 
 $settings['file_public_path'] = '${drupal.settings.file_public_path}';
 $settings['file_private_path'] = '${drupal.settings.file_private_path}';
+$settings['install_profile'] = '${drupal.profile}';

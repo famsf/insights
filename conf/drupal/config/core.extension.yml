@@ -46,7 +46,7 @@ module:
   views_ui: 0
   menu_link_content: 1
   views: 10
-  standard: 1000
+  config_installer: 1000
 theme:
   stable: 0
   classy: 0
@@ -55,3 +55,4 @@ theme:
   famsf_digital_stories_theme: 0
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
+profile: config_installer
