@@ -10,7 +10,7 @@ $settings['file_scan_ignore_directories'] = [
   'bower_components',
 ];
 
-$settings['install_profile'] = 'standard';
+$settings['install_profile'] = 'config_installer';
 
 // Standard Pantheon settings file
 // @see https://github.com/pantheon-systems/drops-8/blob/master/sites/default/settings.pantheon.php

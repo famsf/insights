@@ -68,7 +68,7 @@ ENDPO;
    */
   protected function getTarball() {
     // Exported configuration after a minimal profile install in French.
-    return __DIR__ . '/Fixtures/minimal-fr.tar.gz';
+    return $this->versionTarball('minimal-fr.tar.gz');
   }
 
 }

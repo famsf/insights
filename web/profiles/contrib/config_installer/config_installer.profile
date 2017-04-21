@@ -22,6 +22,7 @@ include_once __DIR__ . '/src/Storage/SourceStorage.php';
  * Implements hook_install_tasks_alter().
  */
 function config_installer_install_tasks_alter(&$tasks, $install_state) {
+  unset($tasks['install_download_translation']);
   $key = array_search('install_profile_modules', array_keys($tasks));
   unset($tasks['install_profile_modules']);
   unset($tasks['install_profile_themes']);
@@ -36,6 +37,7 @@ function config_installer_install_tasks_alter(&$tasks, $install_state) {
       'display_name' => t('Install configuration'),
       'type' => 'batch',
     ],
+    'config_download_translations' => [],
     'config_installer_fix_profile' => [],
   ];
   $tasks = array_slice($tasks, 0, $key, true) +
@@ -190,7 +192,8 @@ function config_installer_install_uninstalled_profile_dependencies(array &$conte
     $profile = _config_installer_get_original_install_profile();
     $profile_file = drupal_get_path('profile', $profile) . "/$profile.info.yml";
     $info = \Drupal::service('info_parser')->parse($profile_file);
-    $context['missing_profile_dependencies'] = array_diff($info['dependencies'], array_keys(\Drupal::moduleHandler()->getModuleList()));
+    $dependencies = isset($info['dependencies']) ? $info['dependencies'] : [];
+    $context['missing_profile_dependencies'] = array_diff($dependencies, array_keys(\Drupal::moduleHandler()->getModuleList()));
     if (count($context['missing_profile_dependencies']) === 0) {
       $context['finished'] = 1;
       return;
@@ -313,4 +316,23 @@ function _config_installer_get_original_install_profile() {
     $original_profile = key($profiles);
   }
   return $original_profile;
+}
+
+/**
+ * Replaces install_download_translation() during config_installer installs.
+ *
+ * @param array $install_state
+ *   An array of information about the current installation state.
+ *
+ * @return string
+ *   A themed status report, or an exception if there are requirement errors.
+ *   Upon successful download the page is reloaded and no output is returned.
+ *
+ * @see install_download_translation()
+ */
+function config_download_translations(&$install_state) {
+  $needs_download = isset($install_state['parameters']['langcode']) && !isset($install_state['translations'][$install_state['parameters']['langcode']]) && $install_state['parameters']['langcode'] != 'en';
+  if ($needs_download) {
+    return install_download_translation($install_state);
+  }
 }

@@ -44,7 +44,6 @@ return array(
     'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib'),
     'Doctrine\\Common\\Collections\\' => array($vendorDir . '/doctrine/collections/lib'),
     'Doctrine\\Common\\Annotations\\' => array($vendorDir . '/doctrine/annotations/lib'),
-    'Doctrine\\Common\\' => array($vendorDir . '/doctrine/common/lib'),
     'Dflydev\\Symfony\\FinderFactory' => array($vendorDir . '/dflydev/symfony-finder-factory/src'),
     'Dflydev\\PlaceholderResolver' => array($vendorDir . '/dflydev/placeholder-resolver/src'),
     'Dflydev\\EmbeddedComposer' => array($vendorDir . '/dflydev/embedded-composer/src'),
@@ -59,7 +58,6 @@ return array(
     'Behat\\MinkExtension' => array($vendorDir . '/behat/mink-extension/src'),
     'Behat\\Gherkin' => array($vendorDir . '/behat/gherkin/src'),
     'Behat\\Behat' => array($vendorDir . '/behat/behat/src'),
-    'Asm89\\Stack' => array($vendorDir . '/asm89/stack-cors/src'),
     'Archive_Tar' => array($vendorDir . '/pear/archive_tar'),
     '' => array($vendorDir . '/pear/pear-core-minimal/src', $vendorDir . '/webignition/string-parser/src', $vendorDir . '/webignition/quoted-string/src', $vendorDir . '/webignition/internet-media-type/src'),
 );

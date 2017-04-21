@@ -62,6 +62,14 @@ class ConfigInstallerSyncTest extends ConfigInstallerTestBase {
     $user_settings['register'] = USER_REGISTER_ADMINISTRATORS_ONLY;
     $sync->write('user.settings', $user_settings);
 
+    // Create config for a module that will not be enabled.
+    $sync->write('foo.bar', []);
+    $this->drupalPostForm(NULL, ['sync_directory' => drupal_realpath($this->syncDir)], 'Save and continue');
+    $this->assertText('The configuration cannot be imported because it failed validation for the following reasons:');
+    $this->assertText('Configuration foo.bar depends on the foo extension that will not be installed after import.');
+
+    // Remove incorrect config and continue on.
+    $sync->delete('foo.bar');
     $this->drupalPostForm(NULL, ['sync_directory' => drupal_realpath($this->syncDir)], 'Save and continue');
   }
 
