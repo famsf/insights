@@ -91,6 +91,16 @@
         {% endif %}
       </div>
       <div class="l-2up">
+        {% if node.field_digital_story_link.uri is not empty %}
+        <a class="footer-link" href="{{ node.field_digital_story_link.uri }}">
+          {% if node.field_digital_story_image.entity.fileuri is not empty %}
+          <img data-src="{{ file_url(node.field_digital_story_image.entity.fileuri) }}" alt="{{ node.field_store_item_photo.entity.alt }}">
+          {% endif %}
+          {{ node.field_digital_story_title.value }}
+        </a>
+        {% endif %}
+      </div>
+      <div class="l-1up">
         {% if node.field_non_member_ticket_link.uri|striptags|trim is not empty %}
         <a class="color-block-button--full" href="{{ node.field_non_member_ticket_link.uri }}">Non-member Tickets</a>
         {% endif %}
