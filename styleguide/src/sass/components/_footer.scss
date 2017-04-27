@@ -46,6 +46,10 @@
   margin-top: 0;
 }
 
+.footer-section__text {
+  margin-top: -1.3em;
+}
+
 .footer-section {
   margin-bottom: rhythm(2);
 
@@ -96,7 +100,7 @@
 .footer-small__copyright {
   color: rgba($text-color, .6);
   margin-top: rhythm(.5);
-  
+
   @include breakpoint($bp1) {
     float: right;
     margin-top: 0;
