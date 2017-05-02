@@ -1,0 +1,19 @@
+uuid: f39ede93-b645-4674-8c29-cff758d7dd9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_footer_feature_blurb
+    - paragraphs.paragraphs_type.footer_feature
+id: paragraph.footer_feature.field_footer_feature_blurb
+field_name: field_footer_feature_blurb
+entity_type: paragraph
+bundle: footer_feature
+label: 'Footer feature blurb'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

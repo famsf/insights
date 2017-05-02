@@ -4,6 +4,23 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.digital_story.field_addthis_code
+    - field.field.node.digital_story.field_exhibition_dates
+    - field.field.node.digital_story.field_footer_feature
+    - field.field.node.digital_story.field_footer_title
+    - field.field.node.digital_story.field_google_analytics_id
+    - field.field.node.digital_story.field_main_footer_image
+    - field.field.node.digital_story.field_member_ticket_link
+    - field.field.node.digital_story.field_non_member_ticket_link
+    - field.field.node.digital_story.field_section
+    - field.field.node.digital_story.field_site_hero_background_image
+    - field.field.node.digital_story.field_sponsor
+    - field.field.node.digital_story.field_store_item_link
+    - field.field.node.digital_story.field_store_item_photo
+    - field.field.node.digital_story.field_store_item_title
+    - field.field.node.digital_story.field_theme
+    - field.field.node.digital_story.field_title_position
+    - field.field.node.digital_story.field_title_style
     - node.type.digital_story
   module:
     - user
