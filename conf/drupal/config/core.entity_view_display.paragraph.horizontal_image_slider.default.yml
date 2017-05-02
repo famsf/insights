@@ -23,6 +23,7 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
   field_min_slides_in_view:
     weight: 2
     label: above
@@ -31,6 +32,7 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
   field_number_of_slides_to_move:
     weight: 3
     label: above
@@ -39,6 +41,7 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
   field_slide:
     type: entity_reference_revisions_entity_view
     weight: 0
@@ -47,6 +50,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
 hidden:
   created: true
   uid: true

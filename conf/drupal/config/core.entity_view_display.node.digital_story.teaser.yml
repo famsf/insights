@@ -14,6 +14,7 @@ mode: teaser
 content:
   links:
     weight: 100
+    region: content
 hidden:
   field_addthis_code: true
   field_exhibition_dates: true

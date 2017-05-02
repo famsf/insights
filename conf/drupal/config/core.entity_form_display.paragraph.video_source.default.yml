@@ -24,6 +24,7 @@ content:
       form_display_mode: default
     third_party_settings: {  }
     type: entity_reference_paragraphs
+    region: content
   field_video_source:
     weight: 0
     settings:
@@ -34,6 +35,7 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: video_upload
+    region: content
 hidden:
   created: true
   status: true

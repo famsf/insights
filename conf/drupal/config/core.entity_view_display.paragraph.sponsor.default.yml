@@ -26,6 +26,7 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
   field_sponsor_logo:
     weight: 1
     label: hidden
@@ -34,6 +35,7 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
   field_sponsor_text:
     weight: 0
     label: hidden
@@ -41,6 +43,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
 hidden:
   created: true
   uid: true

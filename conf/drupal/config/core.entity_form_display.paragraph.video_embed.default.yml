@@ -24,6 +24,7 @@ content:
       form_display_mode: default
     third_party_settings: {  }
     type: entity_reference_paragraphs
+    region: content
   field_video_source:
     weight: 0
     settings:
@@ -38,6 +39,7 @@ content:
       uri_scheme: public
     third_party_settings: {  }
     type: video_embed
+    region: content
 hidden:
   created: true
   status: true
