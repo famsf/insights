@@ -26,6 +26,7 @@ content:
       form_display_mode: default
     third_party_settings: {  }
     type: entity_reference_paragraphs
+    region: content
   field_zoomable_area:
     type: entity_reference_paragraphs
     weight: 2
@@ -36,6 +37,7 @@ content:
       add_mode: dropdown
       form_display_mode: default
     third_party_settings: {  }
+    region: content
   field_zoomable_image:
     weight: 0
     settings:
@@ -43,6 +45,7 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
 hidden:
   created: true
   status: true

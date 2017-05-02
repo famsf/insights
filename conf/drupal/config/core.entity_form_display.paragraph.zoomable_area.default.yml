@@ -25,18 +25,21 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
   field_left_position:
     weight: 0
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
   field_marker_delay:
     weight: 4
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
   field_text_area:
     weight: 3
     settings:
@@ -44,12 +47,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: text_textarea
+    region: content
   field_top_position:
     weight: 1
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
 hidden:
   created: true
   status: true

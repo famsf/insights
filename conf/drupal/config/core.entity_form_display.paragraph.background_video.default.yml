@@ -22,6 +22,7 @@ content:
       progress_indicator: throbber
     third_party_settings: {  }
     type: video_upload
+    region: content
 hidden:
   created: true
   status: true

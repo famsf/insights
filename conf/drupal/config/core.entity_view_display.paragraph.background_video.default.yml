@@ -25,6 +25,7 @@ content:
       controls: false
     third_party_settings: {  }
     type: video_player_list
+    region: content
 hidden:
   created: true
   uid: true

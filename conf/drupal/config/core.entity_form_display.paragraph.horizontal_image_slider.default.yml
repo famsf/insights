@@ -21,18 +21,21 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
   field_min_slides_in_view:
     weight: 2
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
   field_number_of_slides_to_move:
     weight: 3
     settings:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
   field_slide:
     type: entity_reference_paragraphs
     weight: 0
@@ -43,6 +46,7 @@ content:
       add_mode: dropdown
       form_display_mode: default
     third_party_settings: {  }
+    region: content
 hidden:
   created: true
   status: true

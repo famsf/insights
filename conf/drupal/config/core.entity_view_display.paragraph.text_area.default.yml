@@ -23,6 +23,7 @@ content:
       format_custom_false: ''
     third_party_settings: {  }
     type: boolean
+    region: content
   field_has_lede:
     weight: 1
     label: hidden
@@ -32,12 +33,14 @@ content:
       format_custom_false: ''
     third_party_settings: {  }
     type: boolean
+    region: content
   field_text_area:
     weight: 0
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
+    region: content
 hidden:
   created: true
   uid: true

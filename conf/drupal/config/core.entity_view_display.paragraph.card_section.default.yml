@@ -31,6 +31,7 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
   field_card_section_title:
     weight: 1
     label: hidden
@@ -38,6 +39,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_display_hero_section:
     weight: 4
     label: hidden
@@ -47,6 +49,7 @@ content:
       format_custom_false: ''
     third_party_settings: {  }
     type: boolean
+    region: content
   field_display_share_widget:
     weight: 3
     label: hidden
@@ -56,6 +59,7 @@ content:
       format_custom_false: ''
     third_party_settings: {  }
     type: boolean
+    region: content
   field_photo_credits:
     type: entity_reference_revisions_entity_view
     weight: 16
@@ -64,6 +68,7 @@ content:
       view_mode: section
       link: ''
     third_party_settings: {  }
+    region: content
   field_scrollable:
     weight: 2
     label: hidden
@@ -73,18 +78,21 @@ content:
       format_custom_false: ''
     third_party_settings: {  }
     type: boolean
+    region: content
   field_section_title_position:
     weight: 8
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_section_title_style:
     weight: 7
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
+    region: content
   field_sections_in_card:
     type: entity_reference_revisions_entity_view
     weight: 0
@@ -93,6 +101,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
   field_video_source_paragraph:
     type: entity_reference_revisions_entity_view
     weight: 17
@@ -101,6 +110,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
+    region: content
 hidden:
   created: true
   uid: true
