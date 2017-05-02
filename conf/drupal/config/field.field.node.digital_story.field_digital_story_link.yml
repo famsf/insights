@@ -1,0 +1,23 @@
+uuid: 142c68dc-517b-484e-8f3a-c7b7f69d01a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_digital_story_link
+    - node.type.digital_story
+  module:
+    - link
+id: node.digital_story.field_digital_story_link
+field_name: field_digital_story_link
+entity_type: node
+bundle: digital_story
+label: 'Digital Story link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link
