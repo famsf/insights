@@ -25,6 +25,7 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
   field_overlay_button_expanded:
     weight: 4
     label: hidden
@@ -32,6 +33,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_overlay_button_text:
     weight: 1
     label: hidden
@@ -39,6 +41,7 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     type: string
+    region: content
   field_overlay_image:
     weight: 2
     label: hidden
@@ -47,6 +50,7 @@ content:
       image_link: ''
     third_party_settings: {  }
     type: image
+    region: content
   field_photo_credits:
     weight: 3
     label: hidden
@@ -55,6 +59,7 @@ content:
       link: ''
     third_party_settings: {  }
     type: entity_reference_revisions_entity_view
+    region: content
 hidden:
   created: true
   uid: true

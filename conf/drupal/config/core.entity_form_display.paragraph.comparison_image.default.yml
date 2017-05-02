@@ -24,6 +24,7 @@ content:
       add_mode: dropdown
       form_display_mode: default
     third_party_settings: {  }
+    region: content
   field_image_to_compare:
     type: entity_reference_paragraphs
     weight: 0
@@ -34,6 +35,7 @@ content:
       add_mode: dropdown
       form_display_mode: default
     third_party_settings: {  }
+    region: content
   field_reveal_button_text:
     weight: 2
     settings:
@@ -41,6 +43,7 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
 hidden:
   created: true
   field_image: true
