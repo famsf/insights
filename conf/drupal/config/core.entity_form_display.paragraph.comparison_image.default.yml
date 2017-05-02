@@ -4,7 +4,9 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.comparison_image.field_content
+    - field.field.paragraph.comparison_image.field_image
     - field.field.paragraph.comparison_image.field_image_to_compare
+    - field.field.paragraph.comparison_image.field_photo_credits
     - field.field.paragraph.comparison_image.field_reveal_button_text
     - paragraphs.paragraphs_type.comparison_image
   module:
