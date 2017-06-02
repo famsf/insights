@@ -91,7 +91,7 @@ boldTitle?'delay-1250':'delay-1500',
 
         {% else %}
         <div class="section-hero">
-            <div class="{{ wrapperClasses|join(' ') }}" {% if paragraph.field_background_image.entity.fileuri is not empty %}data-bg="{{ file_url(paragraph.field_background_image.entity.fileuri) }}"{% endif %}>
+            <div class="{{ wrapperClasses|join(' ') }}" {% if paragraph.field_background_image.entity.fileuri is not empty %}data-bg="{{ file_url(paragraph.field_background_image.entity.fileuri) }}" style="background-position-y: {{ paragraph.field_background_image_position.value }};"{% endif %}>
                 <div class="{{ sectionTitleWrapperClasses|join(' ') }}">
                     {% if boldTitle %}
                     <div class="delay-2500 animated animated-border--top"></div>
