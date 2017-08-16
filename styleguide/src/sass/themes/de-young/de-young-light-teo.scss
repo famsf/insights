@@ -6,7 +6,7 @@
  */
 
 // Override color scheme variables set in _init.scss
-$black: #000;
+$black: #000000s;
 $gray-dark: #3e3e3e;
 $gray-medium: #a8abad;
 $gray-light: #ececec;
@@ -32,8 +32,10 @@ $red: #a83223;
 $blue: #72b9c1;
 $blue-70: #9cced4;
 $blue-60: #aad5da;
-$blue-40: #c7e3e6;
-$blue-30: #d5eaec;
+// Override this blue with Teo teal!
+$blue-40: #2a9a9a;
+// Override another blue
+$blue-30: rgba(#2a9a9a, 0.4);
 $blue-20: #e3f1f3;
 $blue-10: #edf6f7;
 
@@ -55,20 +57,29 @@ $teal: #36545b;
 $blue-gray: #213538;
 $blue-black: #0f1616;
 
-$background-a: $blue-10;
-$background-b: $blue-30;
-$background-c: $orange;
-$background-d: $earth;
+// Teo-specific palette
+
+$teo-tan: #f6efe2;
+$teo-orange: #e27d3b;
+$teo-blue: #56a8c8;
+$teo-teal: #2a9a9a;
+$teo-red: #b93445;
+$teo-gray: #58595b;
+
+$background-a: $teo-tan;
+$background-b: $teo-tan;
+$background-c: $teo-teal;
+$background-d: $teo-teal;
 $pattern-a: $white;
-$pattern-b: $blue;
-$border: $yellow;
+$pattern-b: $teo-gray;
+$border: $teo-orange;
 $text-color: $gray-dark;
 $text-color-invert: $white;
-$primary: $blue-gray;
-$primary-active: $green;
-$secondary: $citrus;
-$tertiary: $green;
-$citation: $blue-gray;
+$primary: $teo-red;
+$primary-active: $teo-orange;
+$secondary: $teo-red;
+$tertiary: $teo-teal;
+$citation: $teo-teal;
 $hero-color: $white;
 
 
@@ -76,11 +87,11 @@ $hero-color: $white;
 $decorative-border: null; // Needed for Safari.
 $decorative-border-width: 2px;
 $decorative-border-style: solid;
-$decorative-border-color: $green;
+$decorative-border-color: rgba($teo-gray, 0.5);
 $decorative-border-image: null;
 $rectangles-border: url('../../../imgs/deyoung-rectangles-light.png');
-$zoom-background: $blue-20;
-$text-shadow-color: $yellow;
+$zoom-background: $teo-teal;
+$text-shadow-color: null;
 $hero-content-text: $gray-dark;
 $hero-content-text-active: $black;
 
@@ -90,17 +101,74 @@ $section-hero-shadow-b: $orange;
 $section-hero-border-a: $yellow;
 $section-hero-border-b: $rust;
 
-$next-icon: $blue;
-$next-icon-active: $teal;
+$next-icon: $teo-red;
+$next-icon-active: $teo-orange;
 
 // icons
-$icon: $blue;
-$icon-active: $teal;
-$icon-stroke: $orange;
-$icon-stroke-active: $orange;
+$icon: $teo-red;
+$icon-active: $teo-orange;
+$icon-stroke: null;
+$icon-stroke-active: null;
+
+// Let's override the footer some more, shall we?
+
+.footer {
+  color: $white;
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $teo-tan !important;
+  }
+}
+
+.section-hero__title--bold,
+.site-hero__title--bold {
+
+  h1 {
+    text-shadow: 0 1px 7px #2a2a2a !important;
+    font-family: "Roboto" !important;
+  }
+
+  .animated-border--top,
+  .animated-border--bottom {
+    display: none !important;
+  }
+
+}
+
+.site-hero__title--bold {
+
+  .site-hero__logo,
+  h2 {
+    background-color: transparent !important;
+    text-shadow: 0 1px 7px #2a2a2a !important;
+    font-family: "Roboto" !important;
+    font-weight: 700 !important;
+    padding: 0 !important;
+  }
+
+  h2.ds-identity {
+    font-weight: 300 !important;
+  }
+
+  a:link {
+    padding: 0 !important;
+  }
+
+  h1 {
+    text-transform: uppercase !important;
+    letter-spacing: .6px !important;
+    line-height: 1em !important;
+    font-size: 3.65em !important;
+  }
+
+}
 
 // Import theme specific components used in global
-@import 'deyoung-section-hero';
+// @import 'deyoung-section-hero';
 
 // Import the global theme styles.
 @import '../../global';

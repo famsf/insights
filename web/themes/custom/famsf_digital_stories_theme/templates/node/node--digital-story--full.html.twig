@@ -119,13 +119,13 @@ boldTitle?'':'animated delay-1500',
                     <div class="delay-3500 animated animated-border--top"></div>
                 {% endif %}
                 <div class="js-section-hero--get_height {{ sectionHeroClasses|join(' ')}}">
-
-                    {% if node.field_theme.value starts with 'legion' %}
-                    <span class="site-hero__logo {{ animatedClasses|join(' ') }}"><a href="https://legionofhonor.famsf.org/" >Legion of Honor Museum</a></span>
-                    {% else %}
-                    <span class="site-hero__logo {{ animatedClasses|join(' ') }}"><a href="https://deyoung.famsf.org/" >de Young Museum</a></span>
-                    {% endif %}
+                    <h2 class="ds-identity">Digital Stories</h2>
                     <h1 class="{{ sectionTitleClasses|join(' ') }}"> {{ label }}</h1>
+                    {% if node.field_theme.value starts with 'legion' %}
+                    <span class="site-hero__logo {{ animatedClasses|join(' ') }}"><a href="https://legionofhonor.famsf.org/" >Legion of Honor Museum</a></span><br />
+                    {% else %}
+                    <span class="site-hero__logo {{ animatedClasses|join(' ') }}"><a href="https://deyoung.famsf.org/" >de Young Museum</a></span><br />
+                    {% endif %}
                     <h2 class="{{ sectionTitleClasses|join(' ') }}">{{ node.field_exhibition_dates.value }}</h2>
                 </div>
                 {% if not boldTitle %}
