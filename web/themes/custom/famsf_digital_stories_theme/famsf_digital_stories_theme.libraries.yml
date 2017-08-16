@@ -47,10 +47,19 @@ de-young-light:
         css/themes/de-young/de-young-light.css: {}
   js:
     //use.typekit.net/exo1zov.js: { every_page: true }
+
 de-young-dark:
   header: true
   css:
       theme:
         css/themes/de-young/de-young-dark.css: {}
+  js:
+    //use.typekit.net/exo1zov.js: { every_page: true }
+
+de-young-light-teo:
+  header: true
+  css:
+      theme:
+        css/themes/de-young/de-young-light-teo.css: {}
   js:
     //use.typekit.net/exo1zov.js: { every_page: true }

@@ -20,7 +20,7 @@
   }
 
   &.pattern {
-    @extend %section-pattern;
+    @extend %section-pattern !optional;
   }
 }
 
