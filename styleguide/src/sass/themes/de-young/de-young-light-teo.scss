@@ -148,10 +148,12 @@ $icon-stroke-active: null;
     font-family: "Roboto" !important;
     font-weight: 700 !important;
     padding: 0 !important;
+    margin-top: 0 !important;
   }
 
   h2.ds-identity {
     font-weight: 300 !important;
+    font-size: 1.52em !important;
   }
 
   a:link {
@@ -163,6 +165,31 @@ $icon-stroke-active: null;
     letter-spacing: .6px !important;
     line-height: 1em !important;
     font-size: 3.65em !important;
+  }
+
+}
+
+.bottom-right.section-hero__title--bold,
+.bottom-left.section-hero__title--bold {
+  padding: 0 !important;
+
+}
+
+.horizontal-slider__wrapper,
+.deep-dive {
+  box-shadow: none !important;
+}
+
+.cls-2 {
+  stroke-width: 0 !important;
+}
+
+.button-with-icon {
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: $white !important;
   }
 
 }
