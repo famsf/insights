@@ -169,6 +169,31 @@ $icon-stroke-active: null;
 
 }
 
+.bottom-right.section-hero__title--bold,
+.bottom-left.section-hero__title--bold {
+  padding: 0 !important;
+
+}
+
+.horizontal-slider__wrapper,
+.deep-dive {
+  box-shadow: none !important;
+}
+
+.cls-2 {
+  stroke-width: 0 !important;
+}
+
+.button-with-icon {
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: $white !important;
+  }
+
+}
+
 // Import theme specific components used in global
 // @import 'deyoung-section-hero';
 
