@@ -119,13 +119,13 @@ boldTitle?'':'animated delay-1500',
                     <div class="delay-3500 animated animated-border--top"></div>
                 {% endif %}
                 <div class="js-section-hero--get_height {{ sectionHeroClasses|join(' ')}}">
-
-                    {% if node.field_theme.value starts with 'legion' %}
-                    <span class="site-hero__logo {{ animatedClasses|join(' ') }}"><a href="https://legionofhonor.famsf.org/" >Legion of Honor Museum</a></span>
-                    {% else %}
-                    <span class="site-hero__logo {{ animatedClasses|join(' ') }}"><a href="https://deyoung.famsf.org/" >de Young Museum</a></span>
-                    {% endif %}
+                    <h2 class="ds-identity">Digital Stories</h2>
                     <h1 class="{{ sectionTitleClasses|join(' ') }}"> {{ label }}</h1>
+                    {% if node.field_theme.value starts with 'legion' %}
+                    <span class="site-hero__logo {{ animatedClasses|join(' ') }}"><a href="https://legionofhonor.famsf.org/" >Legion of Honor Museum</a></span><br />
+                    {% else %}
+                    <span class="site-hero__logo {{ animatedClasses|join(' ') }}"><a href="https://deyoung.famsf.org/" >de Young Museum</a></span><br />
+                    {% endif %}
                     <h2 class="{{ sectionTitleClasses|join(' ') }}">{{ node.field_exhibition_dates.value }}</h2>
                 </div>
                 {% if not boldTitle %}
@@ -153,22 +153,7 @@ boldTitle?'':'animated delay-1500',
                 </div>
             </div>
             <div class="container">
-
-                <div class="l-33-66--1">
-                    <article class="footer-section">
-                        {% if node.field_main_footer_image.entity.fileuri is not empty %}
-                            <img data-src="{{ file_url(node.field_main_footer_image.entity.fileuri) }}" alt="{{ node.field_main_footer_image.entity.alt }}">
-                        {% endif %}
-                        {% if node.field_non_member_ticket_link.uri|striptags|trim is not empty %}
-                            <a class="color-block-button--full" href="{{ node.field_non_member_ticket_link.uri }}">Non-member Tickets</a>
-                        {% endif %}
-                        {% if node.field_member_ticket_link.uri|striptags|trim is not empty %}
-                            <a class="color-block-button--full" href="{{ node.field_member_ticket_link.uri }}">Member Tickets</a>
-                        {% endif %}
-                    </article>
-                </div>
-
-                <div class="l-33-66--2">
+                <div class="l-33-66--3">
                     {{ content.field_footer_feature }}
                 </div>
             </div>
@@ -245,10 +230,12 @@ boldTitle?'':'animated delay-1500',
                     </ul>
                 {% endif %}
                 </div>
+                {% if content.field_sponsor.value is not empty %}
                 <div class="l-2up--2">
                     <h3 class="footer-section__title">Special Thanks</h3>
                     {{ content.field_sponsor }}
                 </div>
+                {% endif %}
             </div>
             <div class="container footer-small">
                 <div class="l-2up--1">
