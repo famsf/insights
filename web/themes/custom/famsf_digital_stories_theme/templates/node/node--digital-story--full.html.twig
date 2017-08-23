@@ -230,7 +230,7 @@ boldTitle?'':'animated delay-1500',
                     </ul>
                 {% endif %}
                 </div>
-                {% if content.field_sponsor.value is not empty %}
+                {% if content.field_sponsor['#items'] is not empty %}
                 <div class="l-2up--2">
                     <h3 class="footer-section__title">Special Thanks</h3>
                     {{ content.field_sponsor }}
