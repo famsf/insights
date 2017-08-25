@@ -33,6 +33,7 @@
         "drupal/field_group": "^1.0@RC",
         "drupal/metatag": "^1.0",
         "drupal/paragraphs": "^1.0",
+        "drupal/redirect": "^1.0@beta",
         "drupal/video": "1.2",
         "slowprog/composer-copy-file": "^0.2.0"
     },
