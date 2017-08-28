@@ -21,3 +21,12 @@ $settings['container_yamls'][] = __DIR__ . '/services.build.yml';
 $settings['file_public_path'] = '${drupal.settings.file_public_path}';
 $settings['file_private_path'] = '${drupal.settings.file_private_path}';
 $settings['install_profile'] = '${drupal.profile}';
+
+// 302 Redirect from /old to /new.
+if (($_SERVER['REQUEST_URI'] == '/teo') &&
+  // Check if Drupal or WordPress is running via command line
+  (php_sapi_name() != "cli")) {
+  header('HTTP/1.0 301 Moved Permanently');
+  header('Location: https://deyoung.famsf.org/digital-stories');
+  exit();
+}
