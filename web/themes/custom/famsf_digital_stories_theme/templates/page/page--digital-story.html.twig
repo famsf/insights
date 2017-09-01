@@ -80,6 +80,14 @@
   </nav>
   <section class="dashboard-section">
     <div class="container">
+      <div class="l-1up">
+        {% if node.field_non_member_ticket_link.uri|striptags|trim is not empty %}
+        <a class="color-block-button--full" href="{{ node.field_non_member_ticket_link.uri }}">Non-member Tickets</a>
+        {% endif %}
+        {% if node.field_member_ticket_link.uri|striptags|trim is not empty %}
+        <a class="color-block-button--full" href="{{ node.field_member_ticket_link.uri }}">Member Tickets</a>
+        {% endif %}
+      </div>
       <div class="l-2up">
         {% if node.field_store_item_link.uri is not empty %}
         <a class="footer-link" href="{{ node.field_store_item_link.uri }}">
@@ -98,14 +106,6 @@
           {% endif %}
           {{ node.field_digital_story_title.value }}
         </a>
-        {% endif %}
-      </div>
-      <div class="l-1up">
-        {% if node.field_non_member_ticket_link.uri|striptags|trim is not empty %}
-        <a class="color-block-button--full" href="{{ node.field_non_member_ticket_link.uri }}">Non-member Tickets</a>
-        {% endif %}
-        {% if node.field_member_ticket_link.uri|striptags|trim is not empty %}
-        <a class="color-block-button--full" href="{{ node.field_member_ticket_link.uri }}">Member Tickets</a>
         {% endif %}
       </div>
     </div>

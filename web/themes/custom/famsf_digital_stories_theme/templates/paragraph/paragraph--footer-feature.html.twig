@@ -44,6 +44,9 @@
     {% if content.field_footer_feature_blurb is not empty %}
     <div class="footer-section__text">{{ content.field_footer_feature_blurb }}</div>
     {% endif %}
+    {% if content.field_extended_blurb is not empty %}
+    {{ content.field_extended_blurb }}
+    {% endif %}
 </article>
 {% if paragraph.field_related_events_link.uri is not empty %}
 <article class="footer-section">
