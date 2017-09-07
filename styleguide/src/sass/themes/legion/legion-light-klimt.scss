@@ -15,6 +15,7 @@ $white-10: rgba($white, .1);
 $white-20: rgba($white, .2);
 $white-30: rgba($white, .3);
 $white-60: rgba($white, .6);
+$white-80: rgba($white, .8);
 
 // oranges
 $sunshine: #ffedbd;
@@ -57,29 +58,28 @@ $teal: #36545b;
 $blue-gray: #213538;
 $blue-black: #0f1616;
 
-// Teo-specific palette
+// Klimt-specific palette
 
-$teo-tan: #f6efe2;
-$teo-orange: #e27d3b;
-$teo-blue: #56a8c8;
-$teo-teal: #2a9a9a;
-$teo-red: #b93445;
-$teo-gray: #58595b;
+$klimt-gold: #cc9933;
+$klimt-purple: #72597e;
+$klimt-purple-pale: #eddef4;
+$klimt-gray: #e6e7e8;
+$klimt-greenish: #a28f33;
 
-$background-a: $teo-tan;
-$background-b: $teo-tan;
-$background-c: $teo-teal;
-$background-d: $teo-teal;
+$background-a: $white;
+$background-b: $white;
+$background-c: $klimt-gray;
+$background-d: $klimt-gray;
 $pattern-a: $white;
-$pattern-b: $teo-gray;
-$border: $teo-orange;
+$pattern-b: $white;
+$border: $klimt-gold;
 $text-color: $gray-dark;
-$text-color-invert: $white;
-$primary: $teo-red;
-$primary-active: $teo-orange;
-$secondary: $teo-red;
-$tertiary: $teo-teal;
-$citation: $teo-teal;
+$text-color-invert: $gray-dark;
+$primary: $klimt-gold;
+$primary-active: $klimt-greenish;
+$secondary: $klimt-purple;
+$tertiary: $klimt-purple;
+$citation: $klimt-purple;
 $hero-color: $white;
 
 
@@ -87,10 +87,10 @@ $hero-color: $white;
 $decorative-border: null; // Needed for Safari.
 $decorative-border-width: 2px;
 $decorative-border-style: solid;
-$decorative-border-color: rgba($teo-gray, 0.5);
+$decorative-border-color: $klimt-gray;
 $decorative-border-image: null;
 $rectangles-border: url('../../../imgs/deyoung-rectangles-light.png');
-$zoom-background: $teo-tan;
+$zoom-background: $white;
 $text-shadow-color: null;
 $hero-content-text: $gray-dark;
 $hero-content-text-active: $black;
@@ -101,27 +101,36 @@ $section-hero-shadow-b: $orange;
 $section-hero-border-a: $yellow;
 $section-hero-border-b: $rust;
 
-$next-icon: $teo-red;
-$next-icon-active: $teo-orange;
+$next-icon: $klimt-gold;
+$next-icon-active: $klimt-greenish;
 
 // icons
-$icon: $teo-red;
-$icon-active: $teo-orange;
+$icon: $klimt-gold;
+$icon-active: $klimt-greenish;
 $icon-stroke: null;
 $icon-stroke-active: null;
 
 // Let's override the footer some more, shall we?
 
 .footer {
-  color: $white;
+  color: $gray-dark;
 
   h2,
   h3,
   h4,
   h5,
   h6 {
-    color: $teo-tan !important;
+    color: $klimt-purple !important;
   }
+}
+
+.comparison__button {
+  background-color: $klimt-gray !important;
+}
+
+.dashboard__nav-item a:link,
+.dashboard__nav-item a:visited {
+  color: $klimt-purple;
 }
 
 .section-hero__title--bold,
@@ -129,7 +138,8 @@ $icon-stroke-active: null;
 
   h1 {
     text-shadow: 0 1px 7px #2a2a2a !important;
-    font-family: "Roboto" !important;
+    font-family: "Roboto-Slab" !important;
+    font-weight: 500 !important;
   }
 
   .animated-border--top,
@@ -145,8 +155,8 @@ $icon-stroke-active: null;
   h2 {
     background-color: transparent !important;
     text-shadow: 0 1px 7px #2a2a2a !important;
-    font-family: "Roboto" !important;
-    font-weight: 700 !important;
+    font-family: "Roboto-Slab" !important;
+    font-weight: 500 !important;
     padding: 0 !important;
     margin-top: 0 !important;
   }
@@ -198,21 +208,16 @@ $icon-stroke-active: null;
 
 .next-page.hero {
   margin-top: -50px !important;
-
-  .icon--xsmall svg {
-    fill: $white;
-  }
 }
 
 // Import theme specific components used in global
 // @import 'deyoung-section-hero';
+@import 'legion-section-hero';
 
 // Import the global theme styles.
 @import '../../global';
 
 // Import theme specific components
-@import 'deyoung-typography';
-@import 'deyoung-wysiwyg';
-@import 'deyoung-figure';
-@import 'deyoung-icons';
-@import 'deyoung-light-adjustments';
+@import 'legion-typography';
+@import 'legion-wysiwyg';
+@import 'legion-figure';
