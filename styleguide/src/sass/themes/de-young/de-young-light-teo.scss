@@ -198,6 +198,10 @@ $icon-stroke-active: null;
 
 .next-page.hero {
   margin-top: -50px !important;
+
+  .icon--xsmall svg {
+    fill: $white;
+  }
 }
 
 // Import theme specific components used in global
