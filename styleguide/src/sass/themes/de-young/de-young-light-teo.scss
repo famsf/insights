@@ -164,9 +164,29 @@ $icon-stroke-active: null;
     text-transform: uppercase !important;
     letter-spacing: .6px !important;
     line-height: 1em !important;
-    font-size: 3.65em !important;
+    font-size: 3.65em;
   }
 
+}
+
+@media (min-width: 600px) {
+
+  .site-hero__title--bold {
+
+    h1 {
+      font-size: 3.65em !important;
+    }
+  }
+}
+
+@media (max-width: 599px) {
+
+  .site-hero__title--bold {
+
+    h1 {
+      font-size: 3em;
+    }
+  }
 }
 
 .bottom-right.section-hero__title--bold,
