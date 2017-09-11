@@ -30,12 +30,3 @@ $settings_file = __DIR__ . '/settings.local.php';
 if (file_exists($settings_file)) {
   include $settings_file;
 }
-
-// 302 Redirect from /old to /new.
-if (($_SERVER['REQUEST_URI'] == '/teo') &&
-  // Check if Drupal or WordPress is running via command line
-  (php_sapi_name() != "cli")) {
-  header('HTTP/1.0 301 Moved Permanently');
-  header('Location: https://deyoung.famsf.org/digital-stories');
-  exit();
-}
