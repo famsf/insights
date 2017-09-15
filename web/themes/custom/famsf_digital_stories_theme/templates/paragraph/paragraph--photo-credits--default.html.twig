@@ -60,6 +60,9 @@
 {% endif %}
 
 {% if credits is not empty or paragraph.field_image_title.value is not empty or paragraph.field_flexible_wysiwyg_caption.value|striptags|trim is not empty%}
+    {% if paragraph.field_photo_pre_credit.value is not empty %}
+      <div class="preCredit">{{ paragraph.field_photo_pre_credit.value }}</div>
+    {% endif %}
     <div class="figcaption__wrapper animated delay-1000">
         <a class="figcaption-cta js-figcaption-cta">
         <i class="icon--small ">{{ include(active_theme_path() ~ '/svg/'~ custom_theme ~ '/famsf-copyright-md.svg')  }}</i>
