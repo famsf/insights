@@ -210,6 +210,23 @@ $icon-stroke-active: null;
   margin-top: -50px !important;
 }
 
+// Get rid of the border rectangles
+
+.rectangles-bg {
+  border-width: 20px !important;
+  border-style: solid !important;
+  border-color: $klimt-gray;
+  border-image-source: none !important;
+  border-image-slice: none;
+  border-image-repeat: none;
+}
+
+.preCredit {
+  padding: 0 1em;
+  font-weight: 400;
+  font-size: .75em;
+}
+
 // Import theme specific components used in global
 // @import 'deyoung-section-hero';
 @import 'legion-section-hero';
