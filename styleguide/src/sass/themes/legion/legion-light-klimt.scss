@@ -222,9 +222,10 @@ $icon-stroke-active: null;
 }
 
 .preCredit {
-  padding: 0 1em;
+  padding: .75em 1em 0;
   font-weight: 400;
   font-size: .75em;
+  line-height: .75em;
 }
 
 // Import theme specific components used in global
