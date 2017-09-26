@@ -68,6 +68,9 @@
     <div class="container">
       <div class="l-1up">
 
+        {% if node.field_alternate_menu is not empty %}
+        {{ node.field_alternate_menu }}
+        {% else %}
         <ul class="dashboard__nav-list" id="myMenu">
           <li class="dashboard__nav-item active" data-menuanchor="start"><a href="#start">Start</a></li>
           {% for section in sectionTitles %}
@@ -75,6 +78,7 @@
           <li class="dashboard__nav-item" data-menuanchor="{{ sectionId }}"><a href="#{{ sectionId }}">{{ section }}</a></li>
           {% endfor %}
         </ul>
+        {% endif %}
       </div>
     </div>
   </nav>
