@@ -114,6 +114,9 @@ boldTitle?'':'animated delay-1500',
     {% endif %}
     <section class="js-section pp-scrollable" id="start">
         <div class="{{ wrapperClasses|join(' ') }}" {% if node.field_site_hero_background_image.value is not empty %}data-bg="{{ file_url(node.field_site_hero_background_image.entity.fileuri) }}" style="background-position-y: {{ node.field_hero_image_position.value }};"{% endif %}>
+            {% if node.field_language_link.value is not empty %}
+            <div class="language-button"><a href="{{ node.field_language_link.uri }}">{{ node.field_language_link.title }}</a></div>
+            {% endif %}
             <div class="{{ sectionTitleWrapperClasses|join(' ') }}">
                 {% if boldTitle %}
                     <div class="delay-3500 animated animated-border--top"></div>
