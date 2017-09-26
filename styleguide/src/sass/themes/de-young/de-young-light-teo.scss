@@ -230,7 +230,7 @@ $icon-stroke-active: null;
 
   a {
     position: absolute;
-    right: 2px;
+    right: 0;
     top: 5.2em;
     width: 2.78em;
     height: auto;
@@ -251,16 +251,8 @@ $icon-stroke-active: null;
   .language-button {
 
     a {
-      position: absolute;
-      right: 2px;
       top: 3em;
       width: 2.5em;
-      height: auto;
-      padding: .5em 0;
-      text-align: center;
-      background: $teo-red;
-      color: $white;
-      text-decoration: none;
     }
   }
 }
