@@ -69,7 +69,7 @@
       <div class="l-1up">
 
         {% if node.field_alternate_menu is not empty %}
-        {{ node.field_alternate_menu }}
+        {{ node.field_alternate_menu.value }}
         {% else %}
         <ul class="dashboard__nav-list" id="myMenu">
           <li class="dashboard__nav-item active" data-menuanchor="start"><a href="#start">Start</a></li>
