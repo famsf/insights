@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.footer_feature.field_extended_blurb
     - field.field.paragraph.footer_feature.field_footer_feature_blurb
     - field.field.paragraph.footer_feature.field_footer_feature_image
     - field.field.paragraph.footer_feature.field_footer_feature_main_link
@@ -12,11 +13,20 @@ dependencies:
   module:
     - image
     - link
+    - text
 id: paragraph.footer_feature.default
 targetEntityType: paragraph
 bundle: footer_feature
 mode: default
 content:
+  field_extended_blurb:
+    weight: 11
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
   field_footer_feature_blurb:
     weight: 3
     settings:
@@ -48,6 +58,9 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  translation:
+    weight: 10
     region: content
 hidden:
   created: true

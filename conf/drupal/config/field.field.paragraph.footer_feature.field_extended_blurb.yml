@@ -1,0 +1,21 @@
+uuid: 51a1c267-0257-4675-81c7-ba5ccc25d5b2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_extended_blurb
+    - paragraphs.paragraphs_type.footer_feature
+  module:
+    - text
+id: paragraph.footer_feature.field_extended_blurb
+field_name: field_extended_blurb
+entity_type: paragraph
+bundle: footer_feature
+label: 'Extended blurb'
+description: 'Use this field for content where markup is needed. To add a ticket button, use the standard <a> link tag with class "color-block-button--full"; e.g. <a class="color-block-button--full" href="https://ticketlink.tld">Non-member Tickets</a>. Make sure you use "Full HTML" input type.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

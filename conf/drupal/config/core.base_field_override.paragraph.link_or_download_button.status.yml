@@ -1,0 +1,22 @@
+uuid: 24ce32f8-2050-4334-835e-e8d70352e068
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.link_or_download_button
+id: paragraph.link_or_download_button.status
+field_name: status
+entity_type: paragraph
+bundle: link_or_download_button
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

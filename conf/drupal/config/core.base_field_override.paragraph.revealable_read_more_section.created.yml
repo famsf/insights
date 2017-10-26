@@ -1,0 +1,18 @@
+uuid: 977864a3-b183-4be3-8b4d-0e30a2648397
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.revealable_read_more_section
+id: paragraph.revealable_read_more_section.created
+field_name: created
+entity_type: paragraph
+bundle: revealable_read_more_section
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

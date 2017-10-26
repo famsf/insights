@@ -1,0 +1,16 @@
+uuid: 854bbea6-646a-484e-8f90-bae4942baf1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.comparison_image
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.comparison_image
+target_entity_type_id: paragraph
+target_bundle: comparison_image
+default_langcode: site_default
+language_alterable: true

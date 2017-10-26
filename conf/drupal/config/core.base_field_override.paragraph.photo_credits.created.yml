@@ -1,0 +1,18 @@
+uuid: 194ac86a-cbf4-45ef-abe9-0771cab43d00
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.photo_credits
+id: paragraph.photo_credits.created
+field_name: created
+entity_type: paragraph
+bundle: photo_credits
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

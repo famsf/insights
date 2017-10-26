@@ -1,0 +1,20 @@
+uuid: cae0a549-3259-4edf-9f7c-04633c0b135d
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.link_or_download_button
+id: paragraph.link_or_download_button.uid
+field_name: uid
+entity_type: paragraph
+bundle: link_or_download_button
+label: 'Authored by'
+description: 'The user ID of the paragraphs author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\paragraphs\Entity\Paragraph::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

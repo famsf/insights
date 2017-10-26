@@ -1,0 +1,16 @@
+uuid: f3685949-7932-4471-af2d-476f1be50f7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.image_with_revealable_caption
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.image_with_revealable_caption
+target_entity_type_id: paragraph
+target_bundle: image_with_revealable_caption
+default_langcode: site_default
+language_alterable: true

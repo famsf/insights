@@ -1,0 +1,20 @@
+uuid: 2e4c2555-f198-4fff-849b-531f99e88de0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.digital_story
+  module:
+    - path
+id: node.digital_story.path
+field_name: path
+entity_type: node
+bundle: digital_story
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

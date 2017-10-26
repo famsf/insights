@@ -6,7 +6,14 @@ dependencies:
     - field.storage.paragraph.field_overlay_image
     - paragraphs.paragraphs_type.overlay_image
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: paragraph.overlay_image.field_overlay_image
 field_name: field_overlay_image
 entity_type: paragraph
@@ -14,7 +21,7 @@ bundle: overlay_image
 label: 'Overlay Image'
 description: 'The image to be revealed on top of the main image. For best results it should be the same size as that image.'
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

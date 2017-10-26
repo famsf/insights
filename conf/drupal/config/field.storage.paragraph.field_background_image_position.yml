@@ -1,0 +1,30 @@
+uuid: 5208303b-d7cb-49cb-9188-9499b6f5d17c
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_background_image_position
+field_name: field_background_image_position
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: middle
+      label: Middle
+    -
+      value: top
+      label: Top
+    -
+      value: bottom
+      label: Bottom
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

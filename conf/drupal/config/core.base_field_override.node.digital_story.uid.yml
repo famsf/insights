@@ -1,0 +1,20 @@
+uuid: ed674b9b-4bb3-4907-958a-509dfc071701
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.digital_story
+id: node.digital_story.uid
+field_name: uid
+entity_type: node
+bundle: digital_story
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

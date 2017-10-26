@@ -6,7 +6,14 @@ dependencies:
     - field.storage.paragraph.field_footer_feature_image
     - paragraphs.paragraphs_type.footer_feature
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: paragraph.footer_feature.field_footer_feature_image
 field_name: field_footer_feature_image
 entity_type: paragraph
@@ -14,7 +21,7 @@ bundle: footer_feature
 label: 'Footer Feature Image'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

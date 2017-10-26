@@ -15,7 +15,7 @@ bundle: horizontal_image_slider
 label: Slide
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

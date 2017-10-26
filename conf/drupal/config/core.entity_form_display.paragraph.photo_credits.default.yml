@@ -12,6 +12,7 @@ dependencies:
     - field.field.paragraph.photo_credits.field_image_title
     - field.field.paragraph.photo_credits.field_location
     - field.field.paragraph.photo_credits.field_medium
+    - field.field.paragraph.photo_credits.field_photo_pre_credit
     - paragraphs.paragraphs_type.photo_credits
   module:
     - field_group
@@ -20,6 +21,7 @@ third_party_settings:
   field_group:
     group_photo_cre:
       children:
+        - field_photo_pre_credit
         - field_image_title
         - field_artist
         - field_credits_date
@@ -29,7 +31,7 @@ third_party_settings:
         - field_copyright
         - field_general_credit
       parent_name: ''
-      weight: 0
+      weight: 1
       format_type: fieldset
       format_settings:
         id: ''
@@ -51,7 +53,7 @@ content:
     type: string_textfield
     region: content
   field_copyright:
-    weight: 7
+    weight: 8
     settings:
       size: 60
       placeholder: ''
@@ -60,7 +62,7 @@ content:
     region: content
   field_credits_date:
     type: string_textfield
-    weight: 3
+    weight: 4
     settings:
       size: 60
       placeholder: ''
@@ -68,14 +70,14 @@ content:
     region: content
   field_dimensions:
     type: string_textfield
-    weight: 5
+    weight: 6
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     region: content
   field_flexible_wysiwyg_caption:
-    weight: 9
+    weight: 2
     settings:
       rows: 5
       placeholder: ''
@@ -83,7 +85,7 @@ content:
     type: text_textarea
     region: content
   field_general_credit:
-    weight: 8
+    weight: 9
     settings:
       size: 60
       placeholder: ''
@@ -99,7 +101,7 @@ content:
     type: string_textfield
     region: content
   field_location:
-    weight: 6
+    weight: 7
     settings:
       size: 60
       placeholder: ''
@@ -107,13 +109,26 @@ content:
     type: string_textfield
     region: content
   field_medium:
-    weight: 4
+    weight: 5
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_photo_pre_credit:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   created: true
   status: true

@@ -1,0 +1,21 @@
+uuid: d8eeb6d2-80e6-4407-be94-148f4e44ea09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_alternate_menu
+    - node.type.digital_story
+  module:
+    - text
+id: node.digital_story.field_alternate_menu
+field_name: field_alternate_menu
+entity_type: node
+bundle: digital_story
+label: 'Alternate menu'
+description: 'Use this field to manually create a jump menu that overrides the default one. Necessary for translated content.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,29 @@
+uuid: 2cdc25e9-fbf1-4f3e-98df-932bb3f890ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.zoom_hover_image.field_zoomable_image
+    - paragraphs.paragraphs_type.zoom_hover_image
+  module:
+    - imagefield_zoom
+id: paragraph.zoom_hover_image.default
+targetEntityType: paragraph
+bundle: zoom_hover_image
+mode: default
+content:
+  field_zoomable_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_zoom_style: mouseover
+      image_touchscreen_compatible: '1'
+      image_magnify: '1'
+      image_fade_duration: '120'
+    third_party_settings: {  }
+    type: imagezoom_field_formatter
+    region: content
+hidden:
+  created: true
+  uid: true

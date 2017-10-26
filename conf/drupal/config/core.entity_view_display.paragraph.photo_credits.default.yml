@@ -12,12 +12,21 @@ dependencies:
     - field.field.paragraph.photo_credits.field_image_title
     - field.field.paragraph.photo_credits.field_location
     - field.field.paragraph.photo_credits.field_medium
+    - field.field.paragraph.photo_credits.field_photo_pre_credit
     - paragraphs.paragraphs_type.photo_credits
 id: paragraph.photo_credits.default
 targetEntityType: paragraph
 bundle: photo_credits
 mode: default
-content: {  }
+content:
+  field_photo_pre_credit:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
 hidden:
   created: true
   field_artist: true

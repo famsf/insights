@@ -6,8 +6,6 @@ dependencies:
     - field.storage.paragraph.field_photo_credits
     - paragraphs.paragraphs_type.image_slide
     - paragraphs.paragraphs_type.photo_credits
-  content:
-    - 'paragraph:photo_credits:85f0af64-eeb9-4800-b230-cc3cdd0409a8'
   module:
     - entity_reference_revisions
 id: paragraph.image_slide.field_photo_credits

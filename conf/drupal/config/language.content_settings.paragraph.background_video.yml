@@ -1,0 +1,16 @@
+uuid: fcca8eb0-c3c5-4166-a87e-507c275b7ebd
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.background_video
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.background_video
+target_entity_type_id: paragraph
+target_bundle: background_video
+default_langcode: site_default
+language_alterable: true

@@ -1,0 +1,6 @@
+uuid: 0ec89101-0102-45cd-9301-f0741452772d
+langcode: en
+status: true
+dependencies: {  }
+id: zoom_hover_image
+label: 'Zoom Hover Image'

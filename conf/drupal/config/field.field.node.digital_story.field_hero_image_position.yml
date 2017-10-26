@@ -1,0 +1,21 @@
+uuid: 4505ffa3-0f64-4780-8420-35f69856b20c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_image_position
+    - node.type.digital_story
+  module:
+    - options
+id: node.digital_story.field_hero_image_position
+field_name: field_hero_image_position
+entity_type: node
+bundle: digital_story
+label: 'Hero Image Position'
+description: 'Set the vertical (y-axis) position of the site hero background image, if needed.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

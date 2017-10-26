@@ -1,0 +1,22 @@
+uuid: 502ff69a-da40-4134-97be-d00472a96dcf
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.digital_story
+id: node.digital_story.status
+field_name: status
+entity_type: node
+bundle: digital_story
+label: 'Publishing status'
+description: 'A boolean indicating the published state.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

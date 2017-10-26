@@ -1,0 +1,21 @@
+uuid: 5124a9d5-4ea3-4247-8391-fc071e29827b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_image_position
+    - paragraphs.paragraphs_type.card_section
+  module:
+    - options
+id: paragraph.card_section.field_background_image_position
+field_name: field_background_image_position
+entity_type: paragraph
+bundle: card_section
+label: 'Background Image Position'
+description: 'Set the vertical position of a background image to middle, top, or bottom.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

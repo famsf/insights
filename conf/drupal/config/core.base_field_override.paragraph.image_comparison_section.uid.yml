@@ -1,0 +1,20 @@
+uuid: faa003a2-70f5-479a-89c1-18d8a40fd905
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.image_comparison_section
+id: paragraph.image_comparison_section.uid
+field_name: uid
+entity_type: paragraph
+bundle: image_comparison_section
+label: 'Authored by'
+description: 'The user ID of the paragraphs author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\paragraphs\Entity\Paragraph::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

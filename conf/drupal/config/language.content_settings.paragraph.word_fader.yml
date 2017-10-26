@@ -1,0 +1,16 @@
+uuid: 1592631c-0df0-49e8-9dd8-e858f8f6fb58
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.word_fader
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.word_fader
+target_entity_type_id: paragraph
+target_bundle: word_fader
+default_langcode: site_default
+language_alterable: true

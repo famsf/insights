@@ -5,12 +5,17 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.digital_story.field_addthis_code
+    - field.field.node.digital_story.field_digital_story_image
+    - field.field.node.digital_story.field_digital_story_link
+    - field.field.node.digital_story.field_digital_story_title
     - field.field.node.digital_story.field_exhibition_dates
     - field.field.node.digital_story.field_footer_feature
     - field.field.node.digital_story.field_footer_title
     - field.field.node.digital_story.field_google_analytics_id
+    - field.field.node.digital_story.field_hero_image_position
     - field.field.node.digital_story.field_main_footer_image
     - field.field.node.digital_story.field_member_ticket_link
+    - field.field.node.digital_story.field_meta_tags
     - field.field.node.digital_story.field_non_member_ticket_link
     - field.field.node.digital_story.field_section
     - field.field.node.digital_story.field_site_hero_background_image
@@ -34,14 +39,19 @@ content:
     region: content
 hidden:
   field_addthis_code: true
+  field_digital_story_image: true
+  field_digital_story_link: true
+  field_digital_story_title: true
   field_exhibition_dates: true
   field_footer_feature: true
   field_footer_title: true
   field_google_analytics_id: true
   field_header_section: true
+  field_hero_image_position: true
   field_main_footer_image: true
   field_main_navigation: true
   field_member_ticket_link: true
+  field_meta_tags: true
   field_non_member_ticket_link: true
   field_section: true
   field_site_hero_background_image: true
@@ -53,3 +63,4 @@ hidden:
   field_theme: true
   field_title_position: true
   field_title_style: true
+  langcode: true

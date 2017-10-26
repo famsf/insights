@@ -12,7 +12,7 @@ bundle: digital_story
 label: 'Footer title'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: 'Exhibition Information'

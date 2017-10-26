@@ -1,0 +1,16 @@
+uuid: 49241b23-401c-4cf4-a52c-a80540007399
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.horizontal_image_slider
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.horizontal_image_slider
+target_entity_type_id: paragraph
+target_bundle: horizontal_image_slider
+default_langcode: site_default
+language_alterable: true

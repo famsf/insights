@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.node.digital_story.field_addthis_code
+    - field.field.node.digital_story.field_alternate_menu
     - field.field.node.digital_story.field_digital_story_image
     - field.field.node.digital_story.field_digital_story_link
     - field.field.node.digital_story.field_digital_story_title
@@ -11,6 +12,8 @@ dependencies:
     - field.field.node.digital_story.field_footer_feature
     - field.field.node.digital_story.field_footer_title
     - field.field.node.digital_story.field_google_analytics_id
+    - field.field.node.digital_story.field_hero_image_position
+    - field.field.node.digital_story.field_language_link
     - field.field.node.digital_story.field_main_footer_image
     - field.field.node.digital_story.field_member_ticket_link
     - field.field.node.digital_story.field_meta_tags
@@ -31,14 +34,22 @@ dependencies:
     - link
     - metatag
     - options
+    - text
     - user
 id: node.digital_story.default
 targetEntityType: node
 bundle: digital_story
 mode: default
 content:
+  field_alternate_menu:
+    weight: 22
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
   field_digital_story_image:
-    weight: 119
+    weight: 19
     label: hidden
     settings:
       image_style: ''
@@ -47,7 +58,7 @@ content:
     type: image
     region: content
   field_digital_story_link:
-    weight: 122
+    weight: 21
     label: hidden
     settings:
       trim_length: 80
@@ -59,7 +70,7 @@ content:
     type: link
     region: content
   field_digital_story_title:
-    weight: 121
+    weight: 20
     label: hidden
     settings:
       link_to_entity: false
@@ -67,7 +78,7 @@ content:
     type: string
     region: content
   field_exhibition_dates:
-    weight: 105
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
@@ -76,7 +87,7 @@ content:
     region: content
   field_footer_feature:
     type: entity_reference_revisions_entity_view
-    weight: 116
+    weight: 16
     label: hidden
     settings:
       view_mode: default
@@ -84,7 +95,7 @@ content:
     third_party_settings: {  }
     region: content
   field_footer_title:
-    weight: 114
+    weight: 14
     label: hidden
     settings:
       link_to_entity: false
@@ -92,15 +103,34 @@ content:
     type: string
     region: content
   field_google_analytics_id:
-    weight: 109
+    weight: 8
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
+  field_hero_image_position:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_language_link:
+    weight: 7
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
   field_main_footer_image:
-    weight: 115
+    weight: 15
     label: hidden
     settings:
       image_style: ''
@@ -109,7 +139,7 @@ content:
     type: image
     region: content
   field_member_ticket_link:
-    weight: 113
+    weight: 13
     label: hidden
     settings:
       trim_length: 80
@@ -121,14 +151,14 @@ content:
     type: link
     region: content
   field_meta_tags:
-    weight: 118
+    weight: 18
     label: above
     settings: {  }
     third_party_settings: {  }
     type: metatag_empty_formatter
     region: content
   field_non_member_ticket_link:
-    weight: 112
+    weight: 12
     label: hidden
     settings:
       trim_length: 80
@@ -141,7 +171,7 @@ content:
     region: content
   field_section:
     type: entity_reference_revisions_entity_view
-    weight: 101
+    weight: 0
     label: hidden
     settings:
       view_mode: default
@@ -149,7 +179,7 @@ content:
     third_party_settings: {  }
     region: content
   field_site_hero_background_image:
-    weight: 106
+    weight: 3
     label: hidden
     settings:
       image_style: ''
@@ -159,7 +189,7 @@ content:
     region: content
   field_sponsor:
     type: entity_reference_revisions_entity_view
-    weight: 117
+    weight: 17
     label: hidden
     settings:
       view_mode: default
@@ -167,7 +197,7 @@ content:
     third_party_settings: {  }
     region: content
   field_store_item_link:
-    weight: 110
+    weight: 10
     label: hidden
     settings:
       trim_length: 80
@@ -179,7 +209,7 @@ content:
     type: link
     region: content
   field_store_item_photo:
-    weight: 111
+    weight: 11
     label: hidden
     settings:
       image_style: ''
@@ -188,7 +218,7 @@ content:
     type: image
     region: content
   field_store_item_title:
-    weight: 109
+    weight: 9
     label: hidden
     settings:
       link_to_entity: false
@@ -197,20 +227,20 @@ content:
     region: content
   field_theme:
     type: list_key
-    weight: 103
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     region: content
   field_title_position:
-    weight: 107
+    weight: 5
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_title_style:
-    weight: 108
+    weight: 6
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -218,4 +248,5 @@ content:
     region: content
 hidden:
   field_addthis_code: true
+  langcode: true
   links: true

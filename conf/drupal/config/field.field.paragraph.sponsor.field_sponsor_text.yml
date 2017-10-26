@@ -12,7 +12,7 @@ bundle: sponsor
 label: 'Sponsor text'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: 'Digital Stories are supported by:'

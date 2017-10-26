@@ -1,0 +1,16 @@
+uuid: 17785883-e634-4976-bf11-3ed32053ff2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.link_or_download_button
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.link_or_download_button
+target_entity_type_id: paragraph
+target_bundle: link_or_download_button
+default_langcode: site_default
+language_alterable: true

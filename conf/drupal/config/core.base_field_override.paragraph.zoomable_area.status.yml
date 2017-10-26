@@ -1,0 +1,22 @@
+uuid: 37c6ae3c-7ac9-4000-bda4-535098a32b63
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.zoomable_area
+id: paragraph.zoomable_area.status
+field_name: status
+entity_type: paragraph
+bundle: zoomable_area
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

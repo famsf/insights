@@ -1,0 +1,18 @@
+uuid: 0fe6582c-4220-415d-818b-698f38fda62c
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.word_fader
+id: paragraph.word_fader.created
+field_name: created
+entity_type: paragraph
+bundle: word_fader
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

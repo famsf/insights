@@ -12,7 +12,7 @@ bundle: overlay_image
 label: 'Overlay Button Collapsed Text'
 description: 'The text in the button to reveal the overlay image'
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: 'Look Closer'

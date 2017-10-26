@@ -12,7 +12,7 @@ bundle: comparison_image
 label: 'Reveal button Text'
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value:
   -
     value: 'Read more'

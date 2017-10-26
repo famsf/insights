@@ -1,0 +1,20 @@
+uuid: 9225727e-dba2-44bf-8491-ffb113a2a0ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_extended_blurb
+field_name: field_extended_blurb
+entity_type: paragraph
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

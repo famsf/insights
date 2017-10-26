@@ -1,0 +1,23 @@
+uuid: 4b204604-ceb1-4f4a-aba9-fc6356a3e825
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_language_link
+    - node.type.digital_story
+  module:
+    - link
+id: node.digital_story.field_language_link
+field_name: field_language_link
+entity_type: node
+bundle: digital_story
+label: 'Language link'
+description: 'If there''s a translated version you can link to it here. Link to the English version on the translated version.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

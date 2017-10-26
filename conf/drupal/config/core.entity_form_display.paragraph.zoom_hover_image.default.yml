@@ -1,0 +1,27 @@
+uuid: 87bddf46-ed77-47bb-b7e8-69963ceee11a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.zoom_hover_image.field_zoomable_image
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.zoom_hover_image
+  module:
+    - image
+id: paragraph.zoom_hover_image.default
+targetEntityType: paragraph
+bundle: zoom_hover_image
+mode: default
+content:
+  field_zoomable_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,18 @@
+uuid: ebf1139f-fd6b-4bff-97c7-3d921cd84fc4
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.image_with_revealable_caption
+id: paragraph.image_with_revealable_caption.created
+field_name: created
+entity_type: paragraph
+bundle: image_with_revealable_caption
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

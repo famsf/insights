@@ -27,4 +27,5 @@ content:
     third_party_settings: {  }
     label: hidden
     region: content
-hidden: {  }
+hidden:
+  langcode: true

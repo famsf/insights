@@ -1,0 +1,16 @@
+uuid: 098c1142-3c10-41be-9a68-ba4b501980bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.audio_tour_info
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.audio_tour_info
+target_entity_type_id: paragraph
+target_bundle: audio_tour_info
+default_langcode: site_default
+language_alterable: true

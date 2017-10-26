@@ -1,0 +1,18 @@
+uuid: ae892a3e-750e-44fc-bde9-f94799d762b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.1up_section
+id: paragraph.1up_section.created
+field_name: created
+entity_type: paragraph
+bundle: 1up_section
+label: 'Authored on'
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

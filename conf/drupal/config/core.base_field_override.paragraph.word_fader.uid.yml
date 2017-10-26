@@ -1,0 +1,20 @@
+uuid: f6f752ad-f4e8-401a-a8a6-98e83d96e808
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.word_fader
+id: paragraph.word_fader.uid
+field_name: uid
+entity_type: paragraph
+bundle: word_fader
+label: 'Authored by'
+description: 'The user ID of the paragraphs author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\paragraphs\Entity\Paragraph::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

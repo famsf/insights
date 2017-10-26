@@ -1,0 +1,16 @@
+uuid: 2387b3b2-3f26-482b-a3cb-bb6603738ea1
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.photo_credits
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.photo_credits
+target_entity_type_id: paragraph
+target_bundle: photo_credits
+default_langcode: site_default
+language_alterable: true

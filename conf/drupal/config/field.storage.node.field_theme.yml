@@ -18,11 +18,17 @@ settings:
       value: legion-light
       label: 'Legion of Honor Light'
     -
+      value: legion-light-klimt
+      label: 'Legion Klimt'
+    -
       value: de-young-light
       label: 'de Young Light'
     -
       value: de-young-dark
       label: 'de Young Dark'
+    -
+      value: de-young-light-teo
+      label: 'de Young Teo'
   allowed_values_function: ''
 module: options
 locked: false

@@ -1,0 +1,22 @@
+uuid: 2c92e048-d58a-4f09-b9f6-856e99468fc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.image_comparison_3up
+id: paragraph.image_comparison_3up.status
+field_name: status
+entity_type: paragraph
+bundle: image_comparison_3up
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

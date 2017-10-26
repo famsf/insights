@@ -1,0 +1,16 @@
+uuid: 478fc240-5730-4491-9fda-61b92b36926c
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.image_with_zoomable_markers
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.image_with_zoomable_markers
+target_entity_type_id: paragraph
+target_bundle: image_with_zoomable_markers
+default_langcode: site_default
+language_alterable: true

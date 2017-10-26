@@ -1,0 +1,16 @@
+uuid: fa442bed-af32-4212-b37d-621b7c4f8e2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.zoomable_area
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.zoomable_area
+target_entity_type_id: paragraph
+target_bundle: zoomable_area
+default_langcode: site_default
+language_alterable: true

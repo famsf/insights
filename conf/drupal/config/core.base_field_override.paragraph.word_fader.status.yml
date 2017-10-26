@@ -1,0 +1,22 @@
+uuid: 9b64583d-3a12-4085-a22d-ca89ef255b18
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.word_fader
+id: paragraph.word_fader.status
+field_name: status
+entity_type: paragraph
+bundle: word_fader
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,20 @@
+uuid: a6dc8dc2-1a0e-4002-9ed7-2a79273b5dc3
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.audio_tour_info
+id: paragraph.audio_tour_info.uid
+field_name: uid
+entity_type: paragraph
+bundle: audio_tour_info
+label: 'Authored by'
+description: 'The user ID of the paragraphs author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\paragraphs\Entity\Paragraph::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,19 @@
+uuid: 0a602c15-5f48-446b-ae98-e3e283f3c8d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_photo_pre_credit
+    - paragraphs.paragraphs_type.photo_credits
+id: paragraph.photo_credits.field_photo_pre_credit
+field_name: field_photo_pre_credit
+entity_type: paragraph
+bundle: photo_credits
+label: 'Photo pre-credit'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

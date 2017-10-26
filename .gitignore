@@ -24,3 +24,4 @@ npm-debug.log
 # Sass caches but check in generated CSS
 *.sass-cache/
 styleguide/*.sass-cache/
+/nbproject/private/

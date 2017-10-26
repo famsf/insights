@@ -1,0 +1,16 @@
+uuid: 9a873238-b12d-4fbe-ae8e-766f90e0ce3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.revealable_read_more_section
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.revealable_read_more_section
+target_entity_type_id: paragraph
+target_bundle: revealable_read_more_section
+default_langcode: site_default
+language_alterable: true

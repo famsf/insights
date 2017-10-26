@@ -14,7 +14,7 @@ bundle: video_embed
 label: 'Video Embed Source'
 description: 'Paste embed code from services such as YouTube and Vimeo here. '
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

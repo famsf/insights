@@ -6,7 +6,14 @@ dependencies:
     - field.storage.paragraph.field_image
     - paragraphs.paragraphs_type.image_with_revealable_caption
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 id: paragraph.image_with_revealable_caption.field_image
 field_name: field_image
 entity_type: paragraph
@@ -14,7 +21,7 @@ bundle: image_with_revealable_caption
 label: Image
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

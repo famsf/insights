@@ -1,0 +1,22 @@
+uuid: 7aec5820-99e4-4db6-9061-238e2e5efc55
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.audio_component
+id: paragraph.audio_component.status
+field_name: status
+entity_type: paragraph
+bundle: audio_component
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

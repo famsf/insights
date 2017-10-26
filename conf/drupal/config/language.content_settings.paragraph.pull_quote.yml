@@ -1,0 +1,16 @@
+uuid: 1435da1e-4ba6-4f5f-9085-85dce6e666b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.pull_quote
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.pull_quote
+target_entity_type_id: paragraph
+target_bundle: pull_quote
+default_langcode: site_default
+language_alterable: true

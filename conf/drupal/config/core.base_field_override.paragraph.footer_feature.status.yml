@@ -1,0 +1,22 @@
+uuid: 4adc77fe-5403-46dd-a492-d0fd0e408209
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.footer_feature
+id: paragraph.footer_feature.status
+field_name: status
+entity_type: paragraph
+bundle: footer_feature
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

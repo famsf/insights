@@ -1,0 +1,18 @@
+uuid: 498a5fc4-daa3-4316-8e4a-2ded46074a92
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.digital_story
+id: node.digital_story.created
+field_name: created
+entity_type: node
+bundle: digital_story
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

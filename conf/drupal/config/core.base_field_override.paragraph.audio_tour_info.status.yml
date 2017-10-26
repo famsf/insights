@@ -1,0 +1,22 @@
+uuid: 69859835-5d94-4345-af86-34c6d46a1f81
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.audio_tour_info
+id: paragraph.audio_tour_info.status
+field_name: status
+entity_type: paragraph
+bundle: audio_tour_info
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

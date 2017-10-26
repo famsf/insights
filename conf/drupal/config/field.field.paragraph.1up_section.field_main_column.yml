@@ -7,14 +7,15 @@ dependencies:
     - paragraphs.paragraphs_type.1up_section
     - paragraphs.paragraphs_type.audio_component
     - paragraphs.paragraphs_type.image_with_revealable_caption
-    - paragraphs.paragraphs_type.link_or_download_button
     - paragraphs.paragraphs_type.image_with_zoomable_markers
-    - paragraphs.paragraphs_type.pull_quote
+    - paragraphs.paragraphs_type.link_or_download_button
     - paragraphs.paragraphs_type.overlay_image
+    - paragraphs.paragraphs_type.pull_quote
     - paragraphs.paragraphs_type.text_area
     - paragraphs.paragraphs_type.video_embed
     - paragraphs.paragraphs_type.video_source
     - paragraphs.paragraphs_type.word_fader
+    - paragraphs.paragraphs_type.zoom_hover_image
   module:
     - entity_reference_revisions
 id: paragraph.1up_section.field_main_column
@@ -24,23 +25,24 @@ bundle: 1up_section
 label: 'Main Column'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
     target_bundles:
-      image_with_revealable_caption: image_with_revealable_caption
       audio_component: audio_component
-      link_or_download_button: link_or_download_button
+      image_with_revealable_caption: image_with_revealable_caption
       text_area: text_area
       image_with_zoomable_markers: image_with_zoomable_markers
-      pull_quote: pull_quote
+      link_or_download_button: link_or_download_button
       word_fader: word_fader
       overlay_image: overlay_image
+      pull_quote: pull_quote
       video_embed: video_embed
       video_source: video_source
+      zoom_hover_image: zoom_hover_image
     target_bundles_drag_drop:
       1up_section:
         weight: 7
@@ -57,15 +59,12 @@ settings:
       image_with_revealable_caption:
         enabled: true
         weight: 11
-      text_area:
-        enabled: true
-        weight: 12
       photo_credits:
         weight: 12
         enabled: false
-      word_fader:
+      text_area:
         enabled: true
-        weight: 16
+        weight: 12
       revealable_read_more_section:
         weight: 13
         enabled: false
@@ -75,25 +74,52 @@ settings:
       link_or_download_button:
         enabled: true
         weight: 15
+      word_fader:
+        enabled: true
+        weight: 16
       zoomable_area:
         weight: 18
         enabled: false
       comparison_image:
         weight: 19
         enabled: false
-      pull_quote:
-        enabled: true
-        weight: 27
       image_comparison_section:
         weight: 20
         enabled: false
       overlay_image:
         enabled: true
         weight: 23
+      pull_quote:
+        enabled: true
+        weight: 27
+      audio_tour_info:
+        weight: 30
+        enabled: false
+      background_video:
+        weight: 31
+        enabled: false
       video_embed:
         enabled: true
         weight: 33
+      footer_feature:
+        weight: 34
+        enabled: false
       video_source:
         enabled: true
         weight: 34
+      horizontal_image_slider:
+        weight: 35
+        enabled: false
+      image_comparison_3up:
+        weight: 36
+        enabled: false
+      image_slide:
+        weight: 38
+        enabled: false
+      sponsor:
+        weight: 46
+        enabled: false
+      zoom_hover_image:
+        enabled: true
+        weight: 51
 field_type: entity_reference_revisions

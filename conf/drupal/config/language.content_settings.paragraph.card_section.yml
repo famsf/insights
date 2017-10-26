@@ -1,0 +1,16 @@
+uuid: cec2007b-0303-4c62-ad4f-adac9ca7c89c
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.card_section
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: paragraph.card_section
+target_entity_type_id: paragraph
+target_bundle: card_section
+default_langcode: site_default
+language_alterable: true
