@@ -108,7 +108,7 @@ class Validator implements ValidatorInterface, Mapping\Factory\MetadataFactoryIn
     /**
      * {@inheritdoc}
      *
-     * @throws ValidatorException If the metadata for the value does not support properties.
+     * @throws ValidatorException if the metadata for the value does not support properties
      */
     public function validateProperty($containingValue, $property, $groups = null)
     {
@@ -139,7 +139,7 @@ class Validator implements ValidatorInterface, Mapping\Factory\MetadataFactoryIn
     /**
      * {@inheritdoc}
      *
-     * @throws ValidatorException If the metadata for the value does not support properties.
+     * @throws ValidatorException if the metadata for the value does not support properties
      */
     public function validatePropertyValue($containingValue, $property, $value, $groups = null)
     {
@@ -151,7 +151,7 @@ class Validator implements ValidatorInterface, Mapping\Factory\MetadataFactoryIn
                 ? '"'.$containingValue.'"'
                 : 'the value of type '.gettype($containingValue);
 
-            throw new ValidatorException(sprintf('The metadata for '.$valueAsString.' does not support properties.'));
+            throw new ValidatorException(sprintf('The metadata for %s does not support properties.', $valueAsString));
         }
 
         // If $containingValue is passed as class name, take $value as root

@@ -274,6 +274,37 @@ class QuestionHelperTest extends TestCase
     }
 
     /**
+     * @dataProvider specialCharacterInMultipleChoice
+     */
+    public function testSpecialCharacterChoiceFromMultipleChoiceList($providedAnswer, $expectedValue)
+    {
+        $possibleChoices = array(
+            '.',
+            'src',
+        );
+
+        $dialog = new QuestionHelper();
+        $dialog->setInputStream($this->getInputStream($providedAnswer."\n"));
+        $helperSet = new HelperSet(array(new FormatterHelper()));
+        $dialog->setHelperSet($helperSet);
+
+        $question = new ChoiceQuestion('Please select the directory', $possibleChoices);
+        $question->setMaxAttempts(1);
+        $question->setMultiselect(true);
+        $answer = $dialog->ask($this->createInputInterfaceMock(), $this->createOutputInterface(), $question);
+
+        $this->assertSame($expectedValue, $answer);
+    }
+
+    public function specialCharacterInMultipleChoice()
+    {
+        return array(
+            array('.', array('.')),
+            array('., src', array('.', 'src')),
+        );
+    }
+
+    /**
      * @dataProvider mixedKeysChoiceListAnswerProvider
      */
     public function testChoiceFromChoicelistWithMixedKeys($providedAnswer, $expectedValue)
@@ -434,6 +465,15 @@ class QuestionHelperTest extends TestCase
         $dialog->ask($this->createInputInterfaceMock(), $this->createOutputInterface(), $question);
     }
 
+    /**
+     * @expectedException \LogicException
+     * @expectedExceptionMessage Choice question must have at least 1 choice available.
+     */
+    public function testEmptyChoices()
+    {
+        new ChoiceQuestion('Question', array(), 'irrelevant');
+    }
+
     protected function getInputStream($input)
     {
         $stream = fopen('php://memory', 'r+', false);
@@ -462,6 +502,6 @@ class QuestionHelperTest extends TestCase
     {
         exec('stty 2>&1', $output, $exitcode);
 
-        return $exitcode === 0;
+        return 0 === $exitcode;
     }
 }

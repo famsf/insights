@@ -26,6 +26,7 @@ class DebugClassLoader
 {
     private $classLoader;
     private $isFinder;
+    private $loaded = array();
     private $wasFinder;
     private static $caseCheck;
     private static $deprecated = array();
@@ -33,8 +34,6 @@ class DebugClassLoader
     private static $darwinCache = array('/' => array('/', array()));
 
     /**
-     * Constructor.
-     *
      * @param callable|object $classLoader Passing an object is @deprecated since version 2.5 and support for it will be removed in 3.0
      */
     public function __construct($classLoader)
@@ -164,9 +163,10 @@ class DebugClassLoader
         ErrorHandler::stackErrors();
 
         try {
-            if ($this->isFinder) {
+            if ($this->isFinder && !isset($this->loaded[$class])) {
+                $this->loaded[$class] = true;
                 if ($file = $this->classLoader[0]->findFile($class)) {
-                    require_once $file;
+                    require $file;
                 }
             } else {
                 call_user_func($this->classLoader, $class);
@@ -186,7 +186,7 @@ class DebugClassLoader
 
         $exists = class_exists($class, false) || interface_exists($class, false) || (function_exists('trait_exists') && trait_exists($class, false));
 
-        if ('\\' === $class[0]) {
+        if ($class && '\\' === $class[0]) {
             $class = substr($class, 1);
         }
 

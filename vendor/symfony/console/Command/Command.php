@@ -48,8 +48,6 @@ class Command
     private $helperSet;
 
     /**
-     * Constructor.
-     *
      * @param string|null $name The name of the command; passing null means it must be set in configure()
      *
      * @throws LogicException When the command name is empty
@@ -204,6 +202,8 @@ class Command
      * @param OutputInterface $output An OutputInterface instance
      *
      * @return int The command exit code
+     *
+     * @throws \Exception When binding input fails. Bypass this by calling {@link ignoreValidationErrors()}.
      *
      * @see setCode()
      * @see execute()
