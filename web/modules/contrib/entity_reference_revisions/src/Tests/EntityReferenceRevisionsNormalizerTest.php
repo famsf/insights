@@ -28,6 +28,7 @@ class EntityReferenceRevisionsNormalizerTest extends WebTestBase {
     'block',
     'hal',
     'serialization',
+    'rest',
   );
 
   /**
@@ -66,7 +67,6 @@ class EntityReferenceRevisionsNormalizerTest extends WebTestBase {
     $edit = array(
       'title[0][value]' => $title,
       'body[0][value]' => 'Revision 1',
-      'revision' => TRUE,
     );
     $this->drupalPostForm('node/add/article', $edit, t('Save and publish'));
     $this->assertText($title);
