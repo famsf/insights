@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ab6edf09074354e762b8b1e060099ef",
+    "content-hash": "fb14bfc670e84d0fb0972d5b6fbc96a3",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1111,6 +1111,92 @@
             "homepage": "https://www.drupal.org/project/field_group",
             "support": {
                 "source": "http://cgit.drupalcode.org/field_group"
+            }
+        },
+        {
+            "name": "drupal/field_image_tooltips",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/field_image_tooltips",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/field_image_tooltips-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "532d18a8f5df4419ee627573086d6a1a3cd1992d"
+            },
+            "require": {
+                "drupal/core": "*",
+                "drupal/field_tooltips_data": "*",
+                "drupal/paragraphs": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1509436985",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "shkiper",
+                    "homepage": "https://www.drupal.org/user/2261152"
+                }
+            ],
+            "description": "Provide configuration for field that displays images with tooltips",
+            "homepage": "https://www.drupal.org/project/field_image_tooltips",
+            "support": {
+                "source": "http://cgit.drupalcode.org/field_image_tooltips"
+            }
+        },
+        {
+            "name": "drupal/field_tooltips_data",
+            "version": "1.0.0",
+            "require": {
+                "drupal/core": "*",
+                "drupal/field_image_tooltips": "self.version"
+            },
+            "type": "metapackage",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1509436985",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "shkiper",
+                    "homepage": "https://www.drupal.org/user/2261152"
+                }
+            ],
+            "description": "Defines tooltips data field type.",
+            "homepage": "https://www.drupal.org/project/field_image_tooltips",
+            "support": {
+                "source": "http://cgit.drupalcode.org/field_image_tooltips"
             }
         },
         {

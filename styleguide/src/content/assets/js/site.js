@@ -78,7 +78,7 @@
           verticalCentered: false,
           sectionsColor: [],
           anchors: sectionIds,
-          scrollingSpeed: 700,
+          scrollingSpeed: 500,
           easing: 'swing',
           loopBottom: false,
           loopTop: false,

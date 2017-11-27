@@ -47,6 +47,14 @@ legion-light-klimt:
         css/themes/legion/legion-light-klimt.css: {}
   js:
     //use.typekit.net/lzs0fpb.js: { every_page: true }
+    
+legion-light-casanova:
+  header: true
+  css:
+      theme:
+        css/themes/legion/legion-light-casanova.css: {}
+  js:
+    //use.typekit.net/lzs0fpb.js: { every_page: true }
 
 de-young-light:
   header: true

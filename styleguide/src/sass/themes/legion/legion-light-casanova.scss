@@ -1,0 +1,290 @@
+/**
+ * @file
+ * Defines the custom De Young Light theme.
+ *
+ * When loaded, this file will override the base color scheme.
+ */
+
+// Override color scheme variables set in _init.scss
+$black: #000000s;
+$gray-dark: #3e3e3e;
+$gray-medium: #a8abad;
+$gray-light: #ececec;
+$white: #fff;
+$white-10: rgba($white, .1);
+$white-20: rgba($white, .2);
+$white-30: rgba($white, .3);
+$white-60: rgba($white, .6);
+$white-80: rgba($white, .8);
+
+// oranges
+$sunshine: #ffedbd;
+$sherbet: #fcb275;
+$citrus: #e58638;
+$orange: #c14c2d;
+$clay: #bc432f;
+$rust: #bc3c2f;
+$earth: #b7342a;
+
+// red
+$red: #a83223;
+
+// blues
+$blue: #72b9c1;
+$blue-70: #9cced4;
+$blue-60: #aad5da;
+// Override this blue with Teo teal!
+$blue-40: #2a9a9a;
+// Override another blue
+$blue-30: rgba(#2a9a9a, 0.4);
+$blue-20: #e3f1f3;
+$blue-10: #edf6f7;
+
+// greens
+$green: #005244;
+$forest: #4c867c;
+$sage: #b2cbc7;
+$mint: #e5eeec;
+
+// yellows
+$yellow: #efe36e;
+$yellow-70: #f4eb99;
+$yellow-50: #f7f1b6;
+$yellow-30: #faf7d3;
+
+// teals
+$seafoam: #bacdce;
+$teal: #36545b;
+$blue-gray: #213538;
+$blue-black: #0f1616;
+
+// Casanova-specific palette
+
+$casanova-pink: #d26675;
+$casanova-blue: #3f758f;
+$casanova-beige: #f1dbca;
+
+$background-a: $white;
+$background-b: $white;
+$background-c: $casanova-beige;
+$background-d: $casanova-beige;
+$pattern-a: $white;
+$pattern-b: $white;
+$border: $casanova-beige;
+$text-color: $gray-dark;
+$text-color-invert: $white;
+$primary: $casanova-blue;
+$primary-active: rgba($casanova-blue, .7);
+$secondary: $casanova-pink;
+$tertiary: $casanova-pink;
+$citation: $casanova-pink;
+$hero-color: $white;
+
+
+
+$decorative-border: null; // Needed for Safari.
+$decorative-border-width: 2px;
+$decorative-border-style: solid;
+$decorative-border-color: $gray-light;
+$decorative-border-image: null;
+$rectangles-border: url('../../../imgs/deyoung-rectangles-light.png');
+$zoom-background: $white;
+$text-shadow-color: null;
+$hero-content-text: $gray-dark;
+$hero-content-text-active: $black;
+
+$section-hero-text: $white;
+$section-hero-shadow: $citrus;
+$section-hero-shadow-b: $orange;
+$section-hero-border-a: $yellow;
+$section-hero-border-b: $rust;
+
+$next-icon: $casanova-blue;
+$next-icon-active: $casanova-blue;
+
+// icons
+$icon: $casanova-blue;
+$icon-active: $casanova-blue;
+$icon-stroke: null;
+$icon-stroke-active: null;
+
+// Let's override the footer some more, shall we?
+
+.footer {
+  color: $gray-dark;
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $casanova-pink !important;
+  }
+}
+
+.comparison__button {
+  background-color: $casanova-beige !important;
+}
+
+.dashboard__nav-item a:link,
+.dashboard__nav-item a:visited {
+  color: $casanova-blue;
+}
+
+.section-hero__title--bold {
+  width: 34rem !important;
+
+  h1 {
+    text-shadow: 0 1px 7px #2a2a2a !important;
+    font-family: "american-scribe", "Roboto-Slab" !important;
+    font-weight: 500 !important;
+    font-size: 5.25rem !important;
+  }
+
+  .animated-border--top,
+  .animated-border--bottom {
+    display: none !important;
+  }
+
+}
+
+blockquote {
+  
+  p.quote-text {
+    font-family: "american-scribe", "Roboto-Slab", sans-serif;
+    font-size: 1.63em;
+    margin-bottom: .3em;
+  }
+  
+}
+
+.site-hero__title--bold {
+    
+  .animated-border--top,
+  .animated-border--bottom {
+    display: none !important;
+  }
+
+  .site-hero__logo,
+  h2 {
+    background-color: transparent !important;
+    text-shadow: 0 1px 7px #2a2a2a !important;
+    font-family: "Roboto-Slab" !important;
+    font-weight: 500 !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  h2.ds-identity {
+    font-weight: 300 !important;
+    font-size: 1.52em !important;
+  }
+
+  a:link {
+    padding: 0 !important;
+  }
+
+  h1 {
+    text-transform: uppercase !important;
+    letter-spacing: .6px !important;
+    line-height: 1em !important;
+    font-size: 3.65em !important;
+    text-shadow: 0 1px 7px #2a2a2a !important;
+    font-family: "Roboto-Slab" !important;
+    font-weight: 500 !important;
+  }
+
+}
+
+.bottom-right.section-hero__title--bold,
+.bottom-left.section-hero__title--bold {
+  padding: 0 !important;
+
+}
+
+.horizontal-slider__wrapper,
+.deep-dive {
+  box-shadow: none !important;
+}
+
+.cls-2 {
+  stroke-width: 0 !important;
+}
+
+.button-with-icon {
+  //background: $casanova-beige !important;
+
+  &:active,
+  &:hover,
+  &:focus {
+    color: $casanova-blue !important;
+  }
+
+}
+
+// Move the next page button
+
+.next-page.hero {
+  margin-top: -50px !important;
+}
+
+// Get rid of the border rectangles
+
+.rectangles-bg {
+  border-width: 15px !important;
+  border-style: solid !important;
+  border-color: $casanova-beige;
+  border-image-source: none !important;
+  border-image-slice: none;
+  border-image-repeat: none;
+}
+
+.preCredit {
+  padding: .75em 1em 0;
+  font-weight: 400;
+  font-size: .75em;
+  line-height: .75em;
+}
+
+// Image zoom fun
+
+.image-zoom-container::before {
+  position: absolute;
+  z-index: 999;
+  right: 0px;
+  top: 0px;
+  content: "";
+  width: 100px;
+  height: 100px;
+  border-color: transparent #fff transparent transparent;
+  background: url(/themes/custom/famsf_digital_stories_theme/imgs/zoomit.png) no-repeat 0 0;
+  transition: .2s opacity;
+}
+
+.image-zoom-container:hover::before {
+   opacity: 0;
+   z-index: -999;
+}
+
+@media (max-width: 767px) {
+  .image-zoom-container::before {
+    width: 70px;
+    height: 70px;
+    background-size: 70px 70px;
+  }
+}
+
+
+
+
+// Import theme specific components used in global
+// @import 'deyoung-section-hero';
+@import 'legion-section-hero';
+
+// Import the global theme styles.
+@import '../../global';
+
+// Import theme specific components
+@import 'legion-typography';
+@import 'legion-wysiwyg';
+@import 'legion-figure';

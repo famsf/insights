@@ -1,0 +1,17 @@
+name: 'Field image tooltips'
+description: 'Provide configuration for field that displays images with tooltips'
+type: module
+# core: 8.x
+dependencies:
+  - field
+  - field_tooltips_data
+  - file
+  - image
+  - node
+  - paragraphs
+
+# Information added by Drupal.org packaging script on 2017-10-31
+version: '8.x-1.0'
+core: '8.x'
+project: 'field_image_tooltips'
+datestamp: 1509436987
