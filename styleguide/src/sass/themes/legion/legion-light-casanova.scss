@@ -282,6 +282,10 @@ blockquote {
   }
 }
 
+.lede {
+  border: none !important;
+}
+
 @media (max-width: 767px) {
     
   .image-zoom-container::before {
