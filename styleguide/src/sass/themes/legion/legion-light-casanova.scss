@@ -61,8 +61,8 @@ $blue-black: #0f1616;
 // Casanova-specific palette
 
 $casanova-pink: #d26675;
-$casanova-blue: #3f758f;
-$casanova-beige: #f1dbca;
+$casanova-blue: #7d4214;
+$casanova-beige: #d5e9f3;
 
 $background-a: $white;
 $background-b: $white;
@@ -218,6 +218,7 @@ blockquote {
   &:hover,
   &:focus {
     color: $casanova-blue !important;
+    background: $casanova-beige !important;
   }
 
 }
@@ -266,12 +267,36 @@ blockquote {
    z-index: -999;
 }
 
+//.paragraph--type--zoom-hover-image {
+//  margin-bottom: 3.5em;
+//}
+
+.paragraph--type--_up-section {
+  
+  .card-section {
+    padding: 0 0 2.25em;
+    
+    .l-1up p {
+      max-width: 100%;
+    }
+  }
+}
+
 @media (max-width: 767px) {
+    
   .image-zoom-container::before {
     width: 70px;
     height: 70px;
     background-size: 70px 70px;
   }
+  
+}
+
+.pullquote {
+  margin: 1.5em 0 1em 2.5em;
+  font-family: "Roboto-Slab", serif;
+  font-weight: 600;
+  color: $casanova-pink;
 }
 
 

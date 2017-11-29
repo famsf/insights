@@ -48,13 +48,13 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
         </div>
         <div class="container">
             <button class="button-with-icon js-icon--read-more" data-text-collapsed="{{ paragraph.field_collapsed_button_text.value }}" data-text-expanded="{{ paragraph.field_expanded_button_text.value }}">
-                <i class="js-icon-arrow--plus icon--med">
-                    {{ include(active_theme_path() ~ '/svg/'~ custom_theme ~ '/famsf-plus-md.svg')  }}
+                <div class="button-with-icon__text" >{{ paragraph.field_collapsed_button_text.value }}</div>  
+                <i class="js-icon-arrow--plus icon--xsmall">
+                    {{ include(active_theme_path() ~ '/svg/'~ custom_theme ~ '/famsf-caret-down-sm.svg')  }}
                 </i>
-                <i class="js-icon-arrow--minus icon--med" style="display:none;">
-                    {{ include(active_theme_path() ~ '/svg/'~ custom_theme ~ '/famsf-minus-md.svg')  }}
+                <i class="js-icon-arrow--minus icon--xsmall" style="display:none;">
+                    {{ include(active_theme_path() ~ '/svg/'~ custom_theme ~ '/famsf-caret-up-sm.svg')  }}
                 </i>
-                <div class="button-with-icon__text" >{{ paragraph.field_collapsed_button_text.value }}</div>
             </button>
         </div>
     </div>
