@@ -122,6 +122,26 @@ $icon-stroke-active: null;
   }
 }
 
+// Zoom Window
+
+@media (min-width: 768px) {
+    .zoom-window {
+      top: 7vw !important;
+      left: 27vw !important;
+      right: 27vw !important;
+    }
+}
+
+.zoom-window {
+    background: #fff !important;
+    max-height: inherit !important;
+    
+    .zoom-close {
+        background: inherit !important;
+        box-shadow: none !important;
+    }
+}
+
 .comparison__button {
   background-color: $casanova-beige !important;
 }

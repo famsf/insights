@@ -29,6 +29,7 @@
         "drupal-composer/drupal-scaffold": "^1.0",
         "drupal/config_installer": "^1.0",
         "drupal/core": "^8.0",
+        "drupal/entity_embed": "^1.0@beta",
         "drupal/entity_reference_revisions": "^1.0",
         "drupal/field_group": "^1.0@RC",
         "drupal/field_image_tooltips": "^1.0",
