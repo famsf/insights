@@ -3,16 +3,30 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.zoom_hover_image.field_photo_credits
     - field.field.paragraph.zoom_hover_image.field_zoomable_image
     - image.style.thumbnail
     - paragraphs.paragraphs_type.zoom_hover_image
   module:
     - image
+    - paragraphs
 id: paragraph.zoom_hover_image.default
 targetEntityType: paragraph
 bundle: zoom_hover_image
 mode: default
 content:
+  field_photo_credits:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: photo_credits
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
   field_zoomable_image:
     weight: 0
     settings:

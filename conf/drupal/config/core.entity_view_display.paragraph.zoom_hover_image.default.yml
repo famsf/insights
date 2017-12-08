@@ -3,15 +3,26 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.zoom_hover_image.field_photo_credits
     - field.field.paragraph.zoom_hover_image.field_zoomable_image
     - paragraphs.paragraphs_type.zoom_hover_image
   module:
+    - entity_reference_revisions
     - imagefield_zoom
 id: paragraph.zoom_hover_image.default
 targetEntityType: paragraph
 bundle: zoom_hover_image
 mode: default
 content:
+  field_photo_credits:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_entity_view
+    region: content
   field_zoomable_image:
     weight: 0
     label: hidden

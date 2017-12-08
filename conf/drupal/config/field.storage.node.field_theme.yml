@@ -29,6 +29,9 @@ settings:
     -
       value: de-young-light-teo
       label: 'de Young Teo'
+    -
+      value: legion-light-casanova
+      label: 'Legion Casanova'
   allowed_values_function: ''
 module: options
 locked: false
