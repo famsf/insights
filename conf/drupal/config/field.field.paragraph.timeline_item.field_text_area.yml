@@ -1,0 +1,21 @@
+uuid: 883df79d-0ab0-49c9-945f-1db239c5874e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_area
+    - paragraphs.paragraphs_type.timeline_item
+  module:
+    - text
+id: paragraph.timeline_item.field_text_area
+field_name: field_text_area
+entity_type: paragraph
+bundle: timeline_item
+label: 'Timeline Item Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

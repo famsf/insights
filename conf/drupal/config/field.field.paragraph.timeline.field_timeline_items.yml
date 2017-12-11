@@ -1,0 +1,112 @@
+uuid: aa88b7e5-f5ee-45eb-8f7a-358479a5638f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_timeline_items
+    - paragraphs.paragraphs_type.timeline
+    - paragraphs.paragraphs_type.timeline_item
+  module:
+    - entity_reference_revisions
+id: paragraph.timeline.field_timeline_items
+field_name: field_timeline_items
+entity_type: paragraph
+bundle: timeline
+label: 'Timeline Items'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      timeline_item: timeline_item
+    target_bundles_drag_drop:
+      1up_section:
+        weight: 29
+        enabled: false
+      2up_section:
+        weight: 30
+        enabled: false
+      audio_component:
+        weight: 31
+        enabled: false
+      audio_tour_info:
+        weight: 32
+        enabled: false
+      background_video:
+        weight: 33
+        enabled: false
+      card_section:
+        weight: 34
+        enabled: false
+      comparison_image:
+        weight: 35
+        enabled: false
+      footer_feature:
+        weight: 36
+        enabled: false
+      horizontal_image_slider:
+        weight: 37
+        enabled: false
+      image_comparison_3up:
+        weight: 38
+        enabled: false
+      image_comparison_section:
+        weight: 39
+        enabled: false
+      image_slide:
+        weight: 40
+        enabled: false
+      image_with_revealable_caption:
+        weight: 41
+        enabled: false
+      image_with_zoomable_markers:
+        weight: 42
+        enabled: false
+      link_or_download_button:
+        weight: 43
+        enabled: false
+      overlay_image:
+        weight: 44
+        enabled: false
+      photo_credits:
+        weight: 45
+        enabled: false
+      pull_quote:
+        weight: 46
+        enabled: false
+      revealable_read_more_section:
+        weight: 47
+        enabled: false
+      sponsor:
+        weight: 48
+        enabled: false
+      text_area:
+        weight: 49
+        enabled: false
+      timeline:
+        weight: 50
+        enabled: false
+      timeline_item:
+        enabled: true
+        weight: 51
+      video_embed:
+        weight: 52
+        enabled: false
+      video_source:
+        weight: 53
+        enabled: false
+      word_fader:
+        weight: 54
+        enabled: false
+      zoom_hover_image:
+        weight: 55
+        enabled: false
+      zoomable_area:
+        weight: 56
+        enabled: false
+field_type: entity_reference_revisions

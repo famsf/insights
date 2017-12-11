@@ -1,0 +1,19 @@
+uuid: 8d99e5b8-2236-443f-b860-9ebc21f5f837
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.timeline.field_timeline_items
+    - paragraphs.paragraphs_type.timeline
+id: paragraph.timeline.default
+targetEntityType: paragraph
+bundle: timeline
+mode: default
+content:
+  timeline_entity_view_1:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_timeline_items: true

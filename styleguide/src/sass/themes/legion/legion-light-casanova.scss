@@ -162,6 +162,75 @@ $icon-stroke-active: null;
   height: 100%; 
 }
 
+// Style the timeline so it doesn't look like a mess
+
+.timeline-item {
+  
+    img {
+        width: auto;
+        float: left;
+        margin: .25em 1em 1em 0;
+    }
+    
+    p {
+        max-width: 100% !important;
+        font-size: 76%; 
+        line-height: 1.25em;
+    }
+}
+
+.timeline-item.odd {
+    
+    img {
+        float: right;
+        margin: .25em 0 1em 1em;
+    }
+}
+
+ul.timeline-list {
+  padding: 0 3.5em;
+}
+
+@media (max-width: 768px) {
+    
+    .timeline-item,
+    .timeline-item.odd {
+        
+        img {
+            float: none;
+            margin: 0 0 .5em 0;
+        }
+    }
+    
+    ul.timeline-list {
+        padding: 0;
+    }
+    
+    .timeline-item {
+  
+        img {
+            width: 100%;
+        }
+    
+    }
+}
+
+ul.timeline-list.alternate li.timeline-item.even .timeline-item-wrapper .timeline-marker {
+    left: -5px;
+}
+
+ul.timeline-list.alternate li.timeline-item.odd .timeline-item-wrapper .timeline-marker {
+    right: -5px;
+}
+
+ul.timeline-list li.timeline-item .timeline-item-wrapper span.timeline-marker {
+    border-color: $casanova-blue;
+}
+
+ul.timeline-list:after {
+    background-color: $casanova-blue;
+}
+
 .comparison__button {
   background-color: $casanova-beige !important;
 }
