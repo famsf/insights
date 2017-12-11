@@ -31,7 +31,7 @@ settings:
       label: 'de Young Teo'
     -
       value: legion-light-casanova
-      label: 'Legion Casanova'
+      label: 'Legion Light Casanova'
   allowed_values_function: ''
 module: options
 locked: false

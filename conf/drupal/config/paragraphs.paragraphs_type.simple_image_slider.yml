@@ -1,0 +1,9 @@
+uuid: 1f97bea1-7db9-47f5-adfe-89233e30a986
+langcode: en
+status: true
+dependencies: {  }
+id: simple_image_slider
+label: 'Simple Image Fader'
+icon_uuid: null
+description: 'Image slider for single images with fadethrough'
+behavior_plugins: {  }

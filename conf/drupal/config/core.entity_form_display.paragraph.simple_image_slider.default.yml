@@ -1,0 +1,38 @@
+uuid: 2225d968-27ed-40e8-baf8-ee69b21d7bab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.simple_image_slider.field_image
+    - field.field.paragraph.simple_image_slider.field_photo_credits
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.simple_image_slider
+  module:
+    - entity_reference_revisions
+    - image
+id: paragraph.simple_image_slider.default
+targetEntityType: paragraph
+bundle: simple_image_slider
+mode: default
+content:
+  field_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_photo_credits:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_revisions_autocomplete
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

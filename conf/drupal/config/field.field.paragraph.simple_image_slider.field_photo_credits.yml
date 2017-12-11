@@ -1,0 +1,115 @@
+uuid: b67b00a4-d31d-4ddd-a9fd-50bc9f3294df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_photo_credits
+    - paragraphs.paragraphs_type.photo_credits
+    - paragraphs.paragraphs_type.simple_image_slider
+  module:
+    - entity_reference_revisions
+id: paragraph.simple_image_slider.field_photo_credits
+field_name: field_photo_credits
+entity_type: paragraph
+bundle: simple_image_slider
+label: 'Photo Credits'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      photo_credits: photo_credits
+    target_bundles_drag_drop:
+      1up_section:
+        weight: 30
+        enabled: false
+      2up_section:
+        weight: 31
+        enabled: false
+      audio_component:
+        weight: 32
+        enabled: false
+      audio_tour_info:
+        weight: 33
+        enabled: false
+      background_video:
+        weight: 34
+        enabled: false
+      card_section:
+        weight: 35
+        enabled: false
+      comparison_image:
+        weight: 36
+        enabled: false
+      footer_feature:
+        weight: 37
+        enabled: false
+      horizontal_image_slider:
+        weight: 38
+        enabled: false
+      image_comparison_3up:
+        weight: 39
+        enabled: false
+      image_comparison_section:
+        weight: 40
+        enabled: false
+      image_slide:
+        weight: 41
+        enabled: false
+      image_with_revealable_caption:
+        weight: 42
+        enabled: false
+      image_with_zoomable_markers:
+        weight: 43
+        enabled: false
+      link_or_download_button:
+        weight: 44
+        enabled: false
+      overlay_image:
+        weight: 45
+        enabled: false
+      photo_credits:
+        enabled: true
+        weight: 46
+      pull_quote:
+        weight: 47
+        enabled: false
+      revealable_read_more_section:
+        weight: 48
+        enabled: false
+      simple_image_slider:
+        weight: 49
+        enabled: false
+      sponsor:
+        weight: 50
+        enabled: false
+      text_area:
+        weight: 51
+        enabled: false
+      timeline:
+        weight: 52
+        enabled: false
+      timeline_item:
+        weight: 53
+        enabled: false
+      video_embed:
+        weight: 54
+        enabled: false
+      video_source:
+        weight: 55
+        enabled: false
+      word_fader:
+        weight: 56
+        enabled: false
+      zoom_hover_image:
+        weight: 57
+        enabled: false
+      zoomable_area:
+        weight: 58
+        enabled: false
+field_type: entity_reference_revisions
