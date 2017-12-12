@@ -5,7 +5,7 @@ dependencies:
   config:
     - field.storage.paragraph.field_image
     - field.storage.paragraph.field_text_area
-    - image.style.medium
+    - image.style.timeline_600_
     - paragraphs.paragraphs_type.timeline_item
   module:
     - eva
@@ -124,7 +124,7 @@ display:
           click_sort_column: target_id
           type: image
           settings:
-            image_style: medium
+            image_style: timeline_600_
             image_link: ''
           group_column: ''
           group_columns: {  }

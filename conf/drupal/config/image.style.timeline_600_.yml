@@ -1,0 +1,15 @@
+uuid: 651fc7b5-55fb-444e-89c8-3eb11b56e6c2
+langcode: en
+status: true
+dependencies: {  }
+name: timeline_600_
+label: 'Timeline (600)'
+effects:
+  683509e4-d4ab-4116-8639-bb6a5e0991c1:
+    uuid: 683509e4-d4ab-4116-8639-bb6a5e0991c1
+    id: image_scale
+    weight: 1
+    data:
+      width: 600
+      height: null
+      upscale: false
