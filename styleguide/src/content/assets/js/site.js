@@ -189,7 +189,6 @@
           pager: false,
           controls: false,
           auto: true,
-          slideWidth: 600,
           speed: 1000,
           pause: 5000,
           easing: 'ease-in'
