@@ -179,6 +179,22 @@
           selector: 'img[data-src],div[data-bg]'
         });
       }
+      
+      // Start image fader
+      $('.js-imagefader', context).each(function() {
+       $(this).bxSlider({
+          mode: 'fade',
+          adaptiveHeight: true,
+          adaptiveHeightSpeed: 500,
+          pager: false,
+          controls: false,
+          auto: true,
+          slideWidth: 600,
+          speed: 1000,
+          pause: 5000,
+          easing: 'ease-in'
+        })
+      });
 
       // Start the word fade slider
       $('.js-wordslider', context).each(function(){
@@ -191,6 +207,7 @@
           pause: $(this).data('pause')
         })
       });
+      
       // Start each horizontal slider
        $('.js-horizontal-slider', context).each( function() {
         var sliderInstance =$(this).bxSlider({
@@ -206,7 +223,8 @@
           maxSlides: $(this).data('maxslides'),
           slideMargin: 0,
           ariaHidden: false,
-          preloadImages: 'visible',
+          adaptiveHeight: true,
+          preloadImages: 'all',
           onSlideAfter: function($slideElement){
             // Do things after slide is loaded.
             // Load images in slider.

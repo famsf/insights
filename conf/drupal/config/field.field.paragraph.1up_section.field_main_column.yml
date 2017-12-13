@@ -12,6 +12,7 @@ dependencies:
     - paragraphs.paragraphs_type.overlay_image
     - paragraphs.paragraphs_type.pull_quote
     - paragraphs.paragraphs_type.revealable_read_more_section
+    - paragraphs.paragraphs_type.simple_image_slider
     - paragraphs.paragraphs_type.text_area
     - paragraphs.paragraphs_type.timeline
     - paragraphs.paragraphs_type.video_embed
@@ -46,6 +47,7 @@ settings:
       pull_quote: pull_quote
       video_embed: video_embed
       video_source: video_source
+      simple_image_slider: simple_image_slider
       timeline: timeline
       zoom_hover_image: zoom_hover_image
     target_bundles_drag_drop:
@@ -58,12 +60,12 @@ settings:
       audio_component:
         enabled: true
         weight: 10
-      image_with_revealable_caption:
-        enabled: true
-        weight: 11
       card_section:
         weight: 11
         enabled: false
+      image_with_revealable_caption:
+        enabled: true
+        weight: 11
       photo_credits:
         weight: 12
         enabled: false
@@ -124,13 +126,16 @@ settings:
       sponsor:
         weight: 46
         enabled: false
+      simple_image_slider:
+        enabled: true
+        weight: 49
       timeline:
         enabled: true
         weight: 50
-      timeline_item:
-        weight: 51
-        enabled: false
       zoom_hover_image:
         enabled: true
         weight: 51
+      timeline_item:
+        weight: 51
+        enabled: false
 field_type: entity_reference_revisions

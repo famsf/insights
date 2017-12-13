@@ -212,6 +212,14 @@ ul.timeline-list:after {
     background-color: $casanova-blue;
 }
 
+// Image fader with BXSlider jQuery
+
+.imagefader {
+  margin: 0 0 1em;
+  padding: 0;
+  min-height: 330px;
+}
+
 .comparison__button {
   background-color: $casanova-beige !important;
 }

@@ -1,27 +1,20 @@
-uuid: f77b8d53-4198-4053-b861-9871f8bac163
+uuid: a7ef4ced-080e-460a-b93b-5c566e14b192
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_image
+    - field.storage.paragraph.field_slider_images
     - paragraphs.paragraphs_type.simple_image_slider
   module:
-    - content_translation
     - image
-third_party_settings:
-  content_translation:
-    translation_sync:
-      alt: alt
-      title: title
-      file: '0'
-id: paragraph.simple_image_slider.field_image
-field_name: field_image
+id: paragraph.simple_image_slider.field_slider_images
+field_name: field_slider_images
 entity_type: paragraph
 bundle: simple_image_slider
-label: Image
+label: 'Slider Images'
 description: ''
 required: true
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

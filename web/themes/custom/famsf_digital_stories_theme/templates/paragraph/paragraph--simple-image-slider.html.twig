@@ -46,5 +46,8 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class
 ]
 %}
 <ul{{ attributes.addClass(classes) }} data-speed="{{ paragraph.field_transition_speed.value }}" data-pause="{{ paragraph.field_pause.value }}">
-    {{ content.field_fading_text }}
+  {{ content.field_slider_images }}
 </ul>
+<figure>
+  {{ content.field_photo_credits }}
+</figure>
