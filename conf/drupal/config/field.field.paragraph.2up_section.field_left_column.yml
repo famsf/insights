@@ -11,6 +11,7 @@ dependencies:
     - paragraphs.paragraphs_type.link_or_download_button
     - paragraphs.paragraphs_type.overlay_image
     - paragraphs.paragraphs_type.pull_quote
+    - paragraphs.paragraphs_type.responsive_image
     - paragraphs.paragraphs_type.revealable_read_more_section
     - paragraphs.paragraphs_type.simple_image_slider
     - paragraphs.paragraphs_type.text_area
@@ -47,6 +48,7 @@ settings:
       video_embed: video_embed
       video_source: video_source
       simple_image_slider: simple_image_slider
+      responsive_image: responsive_image
       zoom_hover_image: zoom_hover_image
     target_bundles_drag_drop:
       1up_section:
@@ -106,12 +108,12 @@ settings:
       video_embed:
         enabled: true
         weight: 33
-      footer_feature:
-        weight: 34
-        enabled: false
       video_source:
         enabled: true
         weight: 34
+      footer_feature:
+        weight: 34
+        enabled: false
       horizontal_image_slider:
         weight: 35
         enabled: false
@@ -125,6 +127,9 @@ settings:
         weight: 46
         enabled: false
       simple_image_slider:
+        enabled: true
+        weight: 49
+      responsive_image:
         enabled: true
         weight: 49
       zoom_hover_image:

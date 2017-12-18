@@ -1,0 +1,34 @@
+uuid: 2fbdf9a0-daab-4a33-a09b-35890557c3da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.responsive_image.field_desktop_tablet_image
+    - field.field.paragraph.responsive_image.field_mobile_image
+    - paragraphs.paragraphs_type.responsive_image
+  module:
+    - image
+id: paragraph.responsive_image.default
+targetEntityType: paragraph
+bundle: responsive_image
+mode: default
+content:
+  field_desktop_tablet_image:
+    weight: 0
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_mobile_image:
+    weight: 1
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }

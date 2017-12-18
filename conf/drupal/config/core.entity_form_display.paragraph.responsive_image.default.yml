@@ -1,0 +1,36 @@
+uuid: ef293bc8-9f54-42d2-972e-abae383bf74e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.responsive_image.field_desktop_tablet_image
+    - field.field.paragraph.responsive_image.field_mobile_image
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.responsive_image
+  module:
+    - image
+id: paragraph.responsive_image.default
+targetEntityType: paragraph
+bundle: responsive_image
+mode: default
+content:
+  field_desktop_tablet_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_mobile_image:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

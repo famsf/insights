@@ -1,0 +1,9 @@
+uuid: 0930a3d1-ae82-4f8b-96bb-3ba081ba572a
+langcode: en
+status: true
+dependencies: {  }
+id: responsive_image
+label: 'Responsive Image'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

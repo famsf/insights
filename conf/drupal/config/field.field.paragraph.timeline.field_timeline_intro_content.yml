@@ -1,0 +1,21 @@
+uuid: fc10ae9c-ea4b-4ee7-ab65-01f032756423
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_timeline_intro_content
+    - paragraphs.paragraphs_type.timeline
+  module:
+    - text
+id: paragraph.timeline.field_timeline_intro_content
+field_name: field_timeline_intro_content
+entity_type: paragraph
+bundle: timeline
+label: 'Timeline Intro Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
