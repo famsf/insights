@@ -1,0 +1,17 @@
+uuid: 785635fc-0ca8-4d65-8f3a-345c8a12f32c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.poll.teaser
+  module:
+    - poll
+id: poll.poll.teaser
+targetEntityType: poll
+bundle: poll
+mode: teaser
+content:
+  poll_votes:
+    weight: 0
+    region: content
+hidden: {  }

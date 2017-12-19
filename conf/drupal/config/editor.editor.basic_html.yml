@@ -43,11 +43,12 @@ settings:
           name: Tools
           items:
             - Source
+            - embed_poll
   plugins:
-    stylescombo:
-      styles: 'span.wysiwyg-enlarged|FAMSF Enlarged'
     language:
       language_list: un
+    stylescombo:
+      styles: 'span.wysiwyg-enlarged|FAMSF Enlarged'
 image_upload:
   status: true
   scheme: public
