@@ -79,3 +79,11 @@ de-young-light-teo:
         css/themes/de-young/de-young-light-teo.css: {}
   js:
     //use.typekit.net/exo1zov.js: { every_page: true }
+    
+de-young-cult:
+  header: true
+  css:
+      theme:
+        css/themes/de-young/de-young-cult.css: {}
+  js:
+    //use.typekit.net/exo1zov.js: { every_page: true }

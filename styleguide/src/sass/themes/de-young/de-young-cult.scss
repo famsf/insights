@@ -60,24 +60,24 @@ $blue-black: #0f1616;
 
 // Casanova-specific palette
 
-$casanova-pink: #d26675;
-$casanova-blue: #3f758f;
-$casanova-beige: #d5e9f3;
+$cult-yellow: #ffc603;
+$cult-gray: #4d4d56;
+$cult-beige: #e5e5e5;
 
 $background-a: $white;
 $background-b: $white;
-$background-c: $casanova-beige;
-$background-d: $casanova-beige;
+$background-c: $cult-beige;
+$background-d: $cult-beige;
 $pattern-a: $white;
 $pattern-b: $white;
-$border: $casanova-beige;
+$border: $cult-beige;
 $text-color: $gray-dark;
 $text-color-invert: $white;
-$primary: $casanova-blue;
-$primary-active: rgba($casanova-blue, .7);
-$secondary: $casanova-pink;
-$tertiary: $casanova-pink;
-$citation: $casanova-pink;
+$primary: $cult-yellow;
+$primary-active: rgba($cult-yellow, .7);
+$secondary: $cult-yellow;
+$tertiary: $cult-yellow;
+$citation: $cult-yellow;
 $hero-color: $white;
 
 
@@ -99,12 +99,12 @@ $section-hero-shadow-b: $orange;
 $section-hero-border-a: $yellow;
 $section-hero-border-b: $rust;
 
-$next-icon: $casanova-blue;
-$next-icon-active: $casanova-blue;
+$next-icon: $cult-yellow;
+$next-icon-active: $cult-yellow;
 
 // icons
-$icon: $casanova-blue;
-$icon-active: $casanova-blue;
+$icon: $cult-yellow;
+$icon-active: $cult-yellow;
 $icon-stroke: null;
 $icon-stroke-active: null;
 
@@ -118,7 +118,7 @@ $icon-stroke-active: null;
   h4,
   h5,
   h6 {
-    color: $casanova-blue !important;
+    color: $cult-yellow !important;
   }
 }
 
@@ -205,11 +205,11 @@ ul.timeline-list.alternate li.timeline-item.odd .timeline-item-wrapper .timeline
 }
 
 ul.timeline-list li.timeline-item .timeline-item-wrapper span.timeline-marker {
-    border-color: $casanova-blue;
+    border-color: $cult-yellow;
 }
 
 ul.timeline-list:after {
-    background-color: $casanova-blue;
+    background-color: $cult-yellow;
 }
 
 // Image fader with BXSlider jQuery
@@ -220,12 +220,12 @@ ul.timeline-list:after {
 }
 
 .comparison__button {
-  background-color: $casanova-beige !important;
+  background-color: $cult-beige !important;
 }
 
 .dashboard__nav-item a:link,
 .dashboard__nav-item a:visited {
-  color: $casanova-blue;
+  color: $cult-yellow;
 }
 
 .section-hero__title--bold {
@@ -233,7 +233,6 @@ ul.timeline-list:after {
 
   h1 {
     text-shadow: 0 1px 7px #2a2a2a !important;
-    font-family: "Roboto-Slab" !important;
     font-weight: 500 !important;
     font-size: 3.25rem !important;
   }
@@ -243,16 +242,6 @@ ul.timeline-list:after {
     display: none !important;
   }
 
-}
-
-blockquote {
-  
-  p.quote-text {
-    font-family: "american-scribe", "Roboto-Slab", sans-serif;
-    font-size: 1.63em;
-    margin-bottom: .3em;
-  }
-  
 }
 
 .site-hero__title--bold {
@@ -266,7 +255,6 @@ blockquote {
   h2 {
     background-color: transparent !important;
     text-shadow: 0 1px 7px #2a2a2a !important;
-    font-family: "Roboto-Slab" !important;
     font-weight: 500 !important;
     padding: 0 !important;
     margin-top: 0 !important;
@@ -287,7 +275,6 @@ blockquote {
     line-height: 1em !important;
     font-size: 3.65em !important;
     text-shadow: 0 1px 7px #2a2a2a !important;
-    font-family: "Roboto-Slab" !important;
     font-weight: 500 !important;
   }
 
@@ -309,13 +296,13 @@ blockquote {
 }
 
 .button-with-icon {
-  //background: $casanova-beige !important;
+  //background: $cult-beige !important;
 
   &:active,
   &:hover,
   &:focus {
-    color: $casanova-blue !important;
-    background: $casanova-beige !important;
+    color: $cult-yellow !important;
+    background: $cult-beige !important;
   }
 
 }
@@ -331,7 +318,7 @@ blockquote {
 .rectangles-bg {
   border-width: 15px !important;
   border-style: solid !important;
-  border-color: $casanova-beige;
+  border-color: $cult-beige;
   border-image-source: none !important;
   border-image-slice: none;
   border-image-repeat: none;
@@ -395,9 +382,8 @@ blockquote {
 
 .pullquote {
   margin: 1.5em 0 1em 2.5em;
-  font-family: "Roboto-Slab", serif;
   font-weight: 600;
-  color: $casanova-pink;
+  color: $cult-gray;
 }
 
 
@@ -405,12 +391,12 @@ blockquote {
 
 // Import theme specific components used in global
 // @import 'deyoung-section-hero';
-@import 'legion-section-hero';
+@import 'deyoung-section-hero';
 
 // Import the global theme styles.
 @import '../../global';
 
 // Import theme specific components
-@import 'legion-typography';
-@import 'legion-wysiwyg';
-@import 'legion-figure';
+@import 'deyoung-typography';
+@import 'deyoung-wysiwyg';
+@import 'deyoung-figure';
