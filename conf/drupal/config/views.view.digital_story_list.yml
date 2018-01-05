@@ -56,7 +56,16 @@ display:
           items_per_page: 12
           offset: 0
       style:
-        type: default
+        type: grid
+        options:
+          grouping: {  }
+          columns: 2
+          automatic_width: true
+          alignment: horizontal
+          col_class_default: true
+          col_class_custom: ''
+          row_class_default: true
+          row_class_custom: ''
       row:
         type: fields
       fields:
@@ -68,7 +77,7 @@ display:
           group_type: group
           admin_label: ''
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -134,8 +143,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: false
-            text: ''
+            alter_text: true
+            text: "<div style=\"display: block; width: 45%; float: left; margin-right: 2.3em;\">\n <div>{{ field_site_hero_background_image }}</div>\n <h2>{{ title }}</h2>\n</div>"
             make_link: false
             path: ''
             absolute: false
@@ -160,14 +169,14 @@ display:
             trim: false
             preserve_tags: ''
             html: false
-          element_type: h2
+          element_type: ''
           element_class: ''
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
-          element_default_classes: true
+          element_default_classes: false
           empty: ''
           hide_empty: false
           empty_zero: false

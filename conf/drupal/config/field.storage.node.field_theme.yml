@@ -30,6 +30,9 @@ settings:
       value: de-young-light-teo
       label: 'de Young Teo'
     -
+      value: de-young-cult
+      label: 'de Young Cult'
+    -
       value: legion-light-casanova
       label: 'Legion Light Casanova'
   allowed_values_function: ''
