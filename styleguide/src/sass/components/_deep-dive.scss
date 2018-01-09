@@ -5,8 +5,9 @@
  * @copyright Copyright (c) 2017 Palantir.net
  */
 
-.deep-dive {
-  box-shadow: 0 0 15px darken($background-d, 20%) inset;
+.deep-dive,
+.comparison-section {
+  //box-shadow: 0 0 15px darken($background-d, 20%) inset;
   background: $background-d; /* Old browsers */
   background: -moz-linear-gradient(left,  $background-c 0%, $background-d 100%); /* FF3.6-15 */
   background: -webkit-linear-gradient(left,  $background-c 0%,$background-d 100%); /* Chrome10-25,Safari5.1-6 */
@@ -20,6 +21,7 @@
   }
 }
 
-.deep-dive__wrapper {
+.deep-dive__wrapper,
+.comparison-section-wrapper {
   padding: 1em 0 1.5em;
 }

@@ -6,6 +6,7 @@ dependencies:
     - field.storage.paragraph.field_main_column
     - paragraphs.paragraphs_type.1up_section
     - paragraphs.paragraphs_type.audio_component
+    - paragraphs.paragraphs_type.comparison_section
     - paragraphs.paragraphs_type.image_with_revealable_caption
     - paragraphs.paragraphs_type.image_with_zoomable_markers
     - paragraphs.paragraphs_type.link_or_download_button
@@ -48,8 +49,9 @@ settings:
       pull_quote: pull_quote
       video_embed: video_embed
       video_source: video_source
-      simple_image_slider: simple_image_slider
+      comparison_section: comparison_section
       responsive_image: responsive_image
+      simple_image_slider: simple_image_slider
       timeline: timeline
       zoom_hover_image: zoom_hover_image
     target_bundles_drag_drop:
@@ -125,13 +127,16 @@ settings:
       image_slide:
         weight: 38
         enabled: false
+      comparison_section:
+        enabled: true
+        weight: 39
       sponsor:
         weight: 46
         enabled: false
-      simple_image_slider:
+      responsive_image:
         enabled: true
         weight: 49
-      responsive_image:
+      simple_image_slider:
         enabled: true
         weight: 49
       timeline:

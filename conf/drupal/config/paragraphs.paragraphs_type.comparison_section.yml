@@ -1,0 +1,9 @@
+uuid: 25619acc-1f90-413b-bf6f-b85dffc13dee
+langcode: en
+status: true
+dependencies: {  }
+id: comparison_section
+label: 'Comparison section'
+icon_uuid: null
+description: 'This doesn''t actually compare content but serves as a call-out for content that does. If that makes any sense.'
+behavior_plugins: {  }
