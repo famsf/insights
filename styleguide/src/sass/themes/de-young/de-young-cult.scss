@@ -175,6 +175,17 @@ $icon-stroke-active: null;
         font-size: 85%; 
         line-height: 1.45em;
     }
+    
+    
+}
+
+.timeline-item.odd {
+    
+  .figcaption::after,
+  figcaption::after {
+      right: 0;
+      left: inherit;
+  }
 }
 
 ul.timeline-list {
@@ -369,6 +380,8 @@ ul.timeline-list:after {
 .lede {
   border: none !important;
 }
+
+// 
 
 @media (max-width: 767px) {
     
