@@ -21,7 +21,14 @@
   }
 }
 
-.deep-dive__wrapper,
-.comparison-section-wrapper {
+.deep-dive__wrapper {
   padding: 1em 0 1.5em;
+}
+
+.comparison-section-wrapper {
+  padding: 2em 0 0;
+  
+  .card-section {
+      padding: 0;
+  }
 }
