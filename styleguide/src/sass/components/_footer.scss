@@ -47,7 +47,11 @@
 }
 
 .footer-section__text {
-  margin-top: -1.3em;
+  margin-top: 0;
+  
+  @include breakpoint($bp1) {
+    margin-top: -1.3em;
+  }
 }
 
 .footer-section {
