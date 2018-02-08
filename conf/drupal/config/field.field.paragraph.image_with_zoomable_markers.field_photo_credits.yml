@@ -21,6 +21,7 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
+    negate: 0
     target_bundles:
       photo_credits: photo_credits
     target_bundles_drag_drop:
@@ -71,5 +72,50 @@ settings:
         enabled: false
       word_fader:
         weight: 31
+        enabled: false
+      audio_tour_info:
+        weight: 35
+        enabled: false
+      background_video:
+        weight: 36
+        enabled: false
+      comparison_section:
+        weight: 39
+        enabled: false
+      footer_feature:
+        weight: 40
+        enabled: false
+      horizontal_image_slider:
+        weight: 41
+        enabled: false
+      image_comparison_3up:
+        weight: 42
+        enabled: false
+      image_slide:
+        weight: 44
+        enabled: false
+      pull_quote:
+        weight: 50
+        enabled: false
+      responsive_image:
+        weight: 51
+        enabled: false
+      simple_image_slider:
+        weight: 53
+        enabled: false
+      sponsor:
+        weight: 54
+        enabled: false
+      timeline:
+        weight: 56
+        enabled: false
+      timeline_item:
+        weight: 57
+        enabled: false
+      video_embed:
+        weight: 58
+        enabled: false
+      zoom_hover_image:
+        weight: 62
         enabled: false
 field_type: entity_reference_revisions
