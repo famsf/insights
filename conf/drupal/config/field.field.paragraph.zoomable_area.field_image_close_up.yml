@@ -20,7 +20,7 @@ entity_type: paragraph
 bundle: zoomable_area
 label: 'Image Close-up'
 description: 'Upload a cropped and scaled image to show a close-up portion of the main image.'
-required: true
+required: false
 translatable: true
 default_value: {  }
 default_value_callback: ''
