@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: comparison_section
-label: 'Comparison section'
+label: 'Connection section'
 icon_uuid: null
-description: 'This doesn''t actually compare content but serves as a call-out for content that does. If that makes any sense.'
+description: ''
 behavior_plugins: {  }
