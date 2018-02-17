@@ -17,6 +17,7 @@ settings:
         -
           name: Formatting
           items:
+            - Styles
             - Bold
             - Italic
             - Strike
@@ -49,7 +50,7 @@ settings:
           name: Tools
           items:
             - ShowBlocks
-            - node
+            - SpecialChar
             - Source
   plugins:
     language:

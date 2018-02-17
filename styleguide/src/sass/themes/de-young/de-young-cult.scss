@@ -63,6 +63,7 @@ $blue-black: #0f1616;
 $cult-yellow: #ffc603;
 $cult-gray: #4d4d56;
 $cult-beige: #e5e5e5;
+$cult-blue: #225478;
 
 $background-a: $white;
 $background-b: $white;
@@ -73,11 +74,11 @@ $pattern-b: $white;
 $border: $cult-beige;
 $text-color: $gray-dark;
 $text-color-invert: $white;
-$primary: $cult-yellow;
-$primary-active: rgba($cult-yellow, .7);
-$secondary: $cult-yellow;
-$tertiary: $cult-yellow;
-$citation: $cult-yellow;
+$primary: $cult-blue;
+$primary-active: rgba($cult-blue, .7);
+$secondary: $cult-blue;
+$tertiary: $cult-blue;
+$citation: $cult-blue;
 $hero-color: $white;
 
 
@@ -103,8 +104,8 @@ $next-icon: $cult-yellow;
 $next-icon-active: $cult-yellow;
 
 // icons
-$icon: $cult-yellow;
-$icon-active: $cult-yellow;
+$icon: $cult-blue;
+$icon-active: $cult-blue;
 $icon-stroke: null;
 $icon-stroke-active: null;
 
@@ -216,11 +217,11 @@ ul.timeline-list.alternate li.timeline-item.odd .timeline-item-wrapper .timeline
 }
 
 ul.timeline-list li.timeline-item .timeline-item-wrapper span.timeline-marker {
-    border-color: $cult-yellow;
+    border-color: $cult-blue;
 }
 
 ul.timeline-list:after {
-    background-color: $cult-yellow;
+    background-color: $cult-blue;
 }
 
 // Image fader with BXSlider jQuery
@@ -236,7 +237,7 @@ ul.timeline-list:after {
 
 .dashboard__nav-item a:link,
 .dashboard__nav-item a:visited {
-  color: $cult-yellow;
+  color: $cult-blue;
 }
 
 .section-hero__title--bold {
@@ -312,7 +313,7 @@ ul.timeline-list:after {
   &:active,
   &:hover,
   &:focus {
-    color: $cult-yellow !important;
+    color: $cult-blue !important;
     background: $cult-beige !important;
   }
 
@@ -397,6 +398,42 @@ ul.timeline-list:after {
   margin: 1.5em 0 1em 2.5em;
   font-weight: 600;
   color: $cult-gray;
+}
+
+.comparison-section {
+  padding: 1em 0;
+  background: #5e5e5e;
+  color: #fff;
+  border-bottom: 20px solid;
+  border-top: 20px solid;
+  border-color: $cult-yellow;
+  
+  .figcaption-cta .icon--small svg,
+  .figcaption-cta:active .icon--small svg,
+  .figcaption-cta:focus .icon--small svg,
+  .figcaption-cta:hover .icon--small svg,
+  .figcaption-cta:link .icon--small svg,
+  .figcaption-cta:visited .icon--small svg {
+    fill: $cult-yellow;
+  }
+  
+  .figcaption,
+  figcaption {
+    background-color: $cult-yellow;
+  }
+  
+  figcaption::after {
+    border-bottom-color: $cult-yellow;
+  }
+
+
+  .comparison-section-wrapper {
+    padding: 2em 0 0;
+  
+    .card-section {
+      padding: 0;
+    }
+  }
 }
 
 
