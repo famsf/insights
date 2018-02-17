@@ -408,6 +408,15 @@ ul.timeline-list:after {
   border-top: 20px solid;
   border-color: $cult-yellow;
   
+  .wysiwyg-enlarged,
+  h2 {
+    color: $cult-yellow;
+  }
+  
+  a {
+    color: $cult-yellow;
+  }
+  
   .figcaption-cta .icon--small svg,
   .figcaption-cta:active .icon--small svg,
   .figcaption-cta:focus .icon--small svg,
