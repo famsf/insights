@@ -112,15 +112,20 @@ $icon-stroke-active: null;
 // Let's override the footer some more, shall we?
 
 .footer {
-  color: $gray-dark;
+  color: $white;
 
   h2,
   h3,
   h4,
   h5,
   h6 {
-    color: $cult-gray !important;
+    color: $white-80 !important;
   }
+}
+
+.footer-link:link,
+.footer-link:visited {
+  color: $cult-yellow !important;
 }
 
 // Zoom Window
@@ -161,6 +166,10 @@ $icon-stroke-active: null;
   left: 0; 
   width: 100%; 
   height: 100%; 
+}
+
+.standalone-quote__cite {
+  color: #8e8e8e !important;
 }
 
 // Style the timeline so it doesn't look like a mess
@@ -233,6 +242,10 @@ ul.timeline-list:after {
 
 .comparison__button {
   background-color: $cult-beige !important;
+}
+
+.comparison__answer {
+  color: $white;
 }
 
 .dashboard__nav-item a:link,
@@ -408,6 +421,29 @@ ul.timeline-list:after {
   color: $cult-gray;
 }
 
+.deep-dive {
+  color: #fff;
+}
+
+.figcaption,
+figcaption {
+  background-color: $cult-yellow;
+  color: $gray-dark !important;
+    
+  p:first-child {
+    color: $gray-dark !important;
+  }
+}
+
+.figcaption-cta .icon--small svg,
+.figcaption-cta:active .icon--small svg,
+.figcaption-cta:focus .icon--small svg,
+.figcaption-cta:hover .icon--small svg,
+.figcaption-cta:link .icon--small svg,
+.figcaption-cta:visited .icon--small svg {
+  fill: $black !important;
+}
+
 .comparison-section {
   padding: 1em 0;
   background: #5e5e5e;
@@ -437,6 +473,11 @@ ul.timeline-list:after {
   .figcaption,
   figcaption {
     background-color: $cult-yellow;
+    color: $gray-dark !important;
+    
+    p:first-child {
+      color: $gray-dark !important;
+    }
   }
   
   figcaption::after {
