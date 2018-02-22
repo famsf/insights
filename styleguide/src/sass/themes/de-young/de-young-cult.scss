@@ -121,11 +121,11 @@ $icon-stroke-active: null;
   h6 {
     color: $white-80 !important;
   }
-}
-
-.footer-link:link,
-.footer-link:visited {
-  color: $cult-yellow !important;
+  
+  .footer-link:link,
+  .footer-link:visited {
+    color: $cult-yellow !important;
+  }
 }
 
 .footer-section__title {
