@@ -78,7 +78,7 @@ $primary: $cult-yellow;
 $primary-active: rgba($cult-yellow, .7);
 $secondary: $cult-yellow;
 $tertiary: $cult-yellow;
-$citation: $cult-yellow;
+$citation: $gray-medium;
 $hero-color: $white;
 
 
@@ -175,9 +175,9 @@ $icon-stroke-active: null;
   height: 100%; 
 }
 
-.standalone-quote__cite {
-  color: #8e8e8e !important;
-}
+//.standalone-quote__cite {
+//color: #8e8e8e !important;
+// }
 
 // Style the timeline so it doesn't look like a mess
 
@@ -369,6 +369,27 @@ ul.timeline-list:after {
   font-weight: 400;
   font-size: .75em;
   line-height: .75em;
+}
+
+// Change the dashboard color scheme
+
+.dashboard__nav-item {
+    
+    a:link,
+    a:visited {
+      color: #5e5e5e;
+    }
+    
+    .active {
+      background-color: $cult-yellow !important;
+    }
+  
+}
+
+.dashboard__nav-item:active,
+.dashboard__nav-item:focus,
+.dashboard__nav-item:hover {
+  background-color: $cult-yellow !important;
 }
 
 // Image zoom fun
