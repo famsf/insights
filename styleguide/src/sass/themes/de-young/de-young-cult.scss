@@ -61,8 +61,8 @@ $blue-black: #0f1616;
 // Casanova-specific palette
 
 $cult-yellow: #ffc603;
-$cult-gray: #4d4d56;
-$cult-beige: #e5e5e5;
+$cult-gray: #5e5e5e;
+$cult-beige: #5e5e5e;
 $cult-blue: #225478;
 
 $background-a: $white;
@@ -74,11 +74,11 @@ $pattern-b: $white;
 $border: $cult-beige;
 $text-color: $gray-dark;
 $text-color-invert: $white;
-$primary: $cult-blue;
-$primary-active: rgba($cult-blue, .7);
-$secondary: $cult-blue;
-$tertiary: $cult-blue;
-$citation: $cult-blue;
+$primary: $cult-yellow;
+$primary-active: rgba($cult-yellow, .7);
+$secondary: $cult-yellow;
+$tertiary: $cult-yellow;
+$citation: $cult-yellow;
 $hero-color: $white;
 
 
@@ -104,8 +104,8 @@ $next-icon: $cult-yellow;
 $next-icon-active: $cult-yellow;
 
 // icons
-$icon: $cult-blue;
-$icon-active: $cult-blue;
+$icon: $cult-yellow;
+$icon-active: $cult-yellow;
 $icon-stroke: null;
 $icon-stroke-active: null;
 
@@ -217,11 +217,11 @@ ul.timeline-list.alternate li.timeline-item.odd .timeline-item-wrapper .timeline
 }
 
 ul.timeline-list li.timeline-item .timeline-item-wrapper span.timeline-marker {
-    border-color: $cult-blue;
+    border-color: $cult-yellow;
 }
 
 ul.timeline-list:after {
-    background-color: $cult-blue;
+    background-color: $cult-yellow;
 }
 
 // Image fader with BXSlider jQuery
@@ -237,7 +237,7 @@ ul.timeline-list:after {
 
 .dashboard__nav-item a:link,
 .dashboard__nav-item a:visited {
-  color: $cult-blue;
+  color: $cult-yellow;
 }
 
 .section-hero__title--bold {
@@ -321,7 +321,7 @@ ul.timeline-list:after {
   &:active,
   &:hover,
   &:focus {
-    color: $cult-blue !important;
+    color: $cult-yellow !important;
     background: $cult-beige !important;
   }
 
