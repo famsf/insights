@@ -1,0 +1,20 @@
+uuid: 717b262f-4606-454f-9073-c01556b01aaa
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - weight
+id: paragraph.field_order_of_appearance
+field_name: field_order_of_appearance
+entity_type: paragraph
+type: weight
+settings:
+  unsigned: false
+module: weight
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

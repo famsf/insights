@@ -274,7 +274,19 @@ display:
           entity_type: paragraph
           entity_field: type
           plugin_id: bundle
-      sorts: {  }
+      sorts:
+        field_order_of_appearance_value:
+          id: field_order_of_appearance_value
+          table: paragraph__field_order_of_appearance
+          field: field_order_of_appearance_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
       header: {  }
       footer: {  }
       empty: {  }

@@ -55,6 +55,7 @@ module:
   user: 0
   video: 0
   views_ui: 0
+  weight: 0
   menu_link_content: 1
   content_translation: 10
   views: 10

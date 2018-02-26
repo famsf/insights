@@ -40,6 +40,7 @@
         "drupal/paragraphs": "^1.0",
         "drupal/poll": "^1.1",
         "drupal/video": "1.2",
+        "drupal/weight": "^3.0",
         "slowprog/composer-copy-file": "^0.2.0"
     },
     "require-dev": {
