@@ -213,6 +213,8 @@
           mode: 'horizontal',
           pager: false,
           controls: false,
+          //auto: true,
+          //autoHover: true,
           speed: 500,
           pause: 3000,
           touchEnabled: true,
