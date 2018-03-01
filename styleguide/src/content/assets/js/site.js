@@ -215,7 +215,7 @@
           controls: false,
           auto: true,
           autoHover: true,
-          speed: 500,
+          speed: 800,
           pause: 3000,
           touchEnabled: true,
           slideWidth: 640,
