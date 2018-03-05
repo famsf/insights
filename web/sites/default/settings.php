@@ -62,10 +62,10 @@ if (isset($_SERVER['PANTHEON_ENVIRONMENT']) && php_sapi_name() != 'cli') {
 }
 
 // 301 Redirect from /old to /new.
-if (($_SERVER['REQUEST_URI'] == '/cult-machine') &&
+if (($_SERVER['REQUEST_URI'] == '/machine') &&
     // Check if Drupal or WordPress is running via command line
     (php_sapi_name() != "cli")) {
     header('HTTP/1.0 301 Moved Permanently');
-    header('Location: /machine');
+    header('Location: /cult-machine');
     exit();
 }
