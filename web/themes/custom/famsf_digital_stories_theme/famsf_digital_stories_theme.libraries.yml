@@ -47,7 +47,7 @@ legion-light-klimt:
         css/themes/legion/legion-light-klimt.css: {}
   js:
     //use.typekit.net/lzs0fpb.js: { every_page: true }
-    
+
 legion-light-casanova:
   header: true
   css:
@@ -79,11 +79,19 @@ de-young-light-teo:
         css/themes/de-young/de-young-light-teo.css: {}
   js:
     //use.typekit.net/exo1zov.js: { every_page: true }
-    
+
 de-young-cult:
   header: true
   css:
       theme:
         css/themes/de-young/de-young-cult.css: {}
+  js:
+    //use.typekit.net/exo1zov.js: { every_page: true }
+
+de-young-anderson:
+  header: true
+  css:
+      theme:
+        css/themes/de-young/de-young-anderson.css: {}
   js:
     //use.typekit.net/exo1zov.js: { every_page: true }
