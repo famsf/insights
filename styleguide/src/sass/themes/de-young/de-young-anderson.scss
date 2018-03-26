@@ -5,9 +5,19 @@
  * When loaded, this file will override the base color scheme.
  */
 
-// Override color scheme variables set in _init.scss
+// FAMSF color palette
+// FAMSF Blues
+$famsf-blue-light: #1c90cf;
+$famsf-blue-dark: #0f6088;
+// FAMSF Yellows
+$famsf-yellow: #efe36e;
+// FAMSF Grays
+$famsf-gray-light: #ececec;
+$famsf-gray-medium: #a8abad;
+$famsf-gray-dark: #3e3e3e;
+
 $black: #000000s;
-$gray-dark: #3e3e3d;
+$gray-dark: #3e3e3e;
 $gray-medium: #a8abad;
 $gray-light: #ececec;
 $white: #fff;
@@ -67,17 +77,17 @@ $cult-blue: #225478;
 
 $background-a: $white;
 $background-b: $white;
-$background-c: $cult-beige;
-$background-d: $cult-beige;
+$background-c: $famsf-gray-medium;
+$background-d: $famsf-gray-medium;
 $pattern-a: $white;
 $pattern-b: $white;
 $border: $cult-beige;
-$text-color: $gray-dark;
+$text-color: $famsf-gray-dark;
 $text-color-invert: $white;
-$primary: $cult-yellow;
-$primary-active: rgba($cult-yellow, .7);
-$secondary: $cult-yellow;
-$tertiary: $cult-yellow;
+$primary: $famsf-blue-light;
+$primary-active: rgba($famsf-blue-light, .7);
+$secondary: $famsf-blue-light;
+$tertiary: $famsf-blue-light;
 $citation: $gray-medium;
 $hero-color: $white;
 
@@ -91,51 +101,41 @@ $decorative-border-image: null;
 $rectangles-border: url('../../../imgs/deyoung-rectangles-light.png');
 $zoom-background: $white;
 $text-shadow-color: null;
-$hero-content-text: $gray-dark;
-$hero-content-text-active: $black;
+$hero-content-text: $famsf-gray-dark;
+$hero-content-text-active: $famsf-gray-dark;
 
 $section-hero-text: $white;
 $section-hero-shadow: $citrus;
 $section-hero-shadow-b: $orange;
-$section-hero-border-a: $yellow;
+$section-hero-border-a: $famsf-yellow;
 $section-hero-border-b: $rust;
 
-$next-icon: $cult-yellow;
-$next-icon-active: $cult-yellow;
+$next-icon: $famsf-blue-light;
+$next-icon-active: $famsf-blue-light;
 
 // icons
-$icon: $cult-yellow;
-$icon-active: $cult-yellow;
+$icon: $famsf-blue-light;
+$icon-active: $famsf-blue-light;
 $icon-stroke: null;
 $icon-stroke-active: null;
-
-// FAMSF color palette
-  // FAMSF Blues
-$famsf-blue-light: #1c90cf;
-$famsf-blue-dark: #0f6088;
-  // FAMSF Yellows
-$famsf-yellow: #efe36e;
-  // FAMSF Grays
-$famsf-gray-light: #ececec;
-$famsf-gray-medium: #a8abad;
-$famsf-gray-dark: #3e3e3e;
 
 // Let's override the footer some more, shall we?
 
 .footer {
-  color: $famsf-gray-dark ;
+  color: $famsf-gray-dark;
   background: $famsf-gray-light !important;
+
   h2,
   h3,
   h4,
   h5,
   h6 {
-    color: $famsf-gray-dark;
+    color: $famsf-gray-dark !important;
   }
 
   .footer-link:link,
   .footer-link:visited {
-    color: $famsf-blue-light;
+    color: $famsf-blue-light !important;
   }
 }
 
@@ -157,13 +157,17 @@ $famsf-gray-dark: #3e3e3e;
 }
 
 .zoom-window {
-    background: #fff !important;
+    background: $famsf-gray-light !important;
     max-height: inherit !important;
 
     .zoom-close {
         background: inherit !important;
         box-shadow: none !important;
     }
+}
+
+.zoom-marker-inner.animated.fadeInDownShort.delay-500.js-zoom-marker-inner.go {
+  background-color: $famsf-gray-light !important;
 }
 
 // Responsive wrapper for Street View iframe
@@ -207,14 +211,12 @@ $famsf-gray-dark: #3e3e3e;
 
 }
 
-// Timeline Caption
 .timeline-item.odd {
 
   .figcaption::after,
   figcaption::after {
       right: 0;
       left: inherit;
-
   }
 }
 
@@ -246,11 +248,11 @@ ul.timeline-list.alternate li.timeline-item.odd .timeline-item-wrapper .timeline
 }
 
 ul.timeline-list li.timeline-item .timeline-item-wrapper span.timeline-marker {
-    border-color: $famsf-blue-light;
+    border-color: $famsf-yellow;
 }
 
 ul.timeline-list:after {
-    background-color: $famsf-blue-light;
+    background-color: $famsf-yellow;
 }
 
 // Image fader with BXSlider jQuery
@@ -261,11 +263,11 @@ ul.timeline-list:after {
 }
 
 .color-block-button--full {
-  color: $famsf-blue-light;
+  color: $gray-dark !important;
 }
 
 .comparison__button {
-  background-color: $famsf-blue-light;
+  background-color: $cult-beige !important;
 }
 
 .comparison__answer {
@@ -274,7 +276,7 @@ ul.timeline-list:after {
 
 .dashboard__nav-item a:link,
 .dashboard__nav-item a:visited {
-  color: $famsf-blue-light;
+  color: $cult-yellow;
 }
 
 .section-hero__title--bold {
@@ -358,10 +360,17 @@ ul.timeline-list:after {
   &:active,
   &:hover,
   &:focus {
-    color: $white;
-    background: $famsf-blue-light;
+    color: $famsf-blue-light !important;
+    background: $white !important;
   }
 
+}
+
+//close section
+.button-with-icon.js-icon--read-more:hover,
+.button-with-icon.js-icon--read-more:active,
+.button-with-icon.js-icon--read-more:focus {
+  background: $famsf-gray-light !important;
 }
 
 // Move the next page button
@@ -375,7 +384,7 @@ ul.timeline-list:after {
 .rectangles-bg {
   border-width: 15px !important;
   border-style: solid !important;
-  border-color: $famsf-blue-light;
+  border-color: $famsf-gray-light;
   border-image-source: none !important;
   border-image-slice: none;
   border-image-repeat: none;
@@ -395,16 +404,16 @@ ul.timeline-list:after {
     a:link,
     a:visited {
       color: $famsf-gray-dark;
-      border-bottom: 2px solid;
-      border-color: $famsf-blue-dark;
     }
 
-    a:hover {
-      color: $white;
+    a:hover,
+    a:focus,
+    a:active {
+      color: $white !important;
     }
     .active {
-      background-color: $famsf-blue-dark;
-      color: $white;
+      background-color: $famsf-blue-light !important;
+      color: $white !important;
     }
 
 }
@@ -412,8 +421,8 @@ ul.timeline-list:after {
 .dashboard__nav-item:active,
 .dashboard__nav-item:focus,
 .dashboard__nav-item:hover {
-  background-color: $famsf-blue-dark;
-  color: $white;
+  background-color: $famsf-blue-light !important;
+  color: $white !important;
 }
 
 // Image zoom fun
@@ -474,17 +483,17 @@ ul.timeline-list:after {
 }
 
 .deep-dive {
-  color: #fff;
+  color: $famsf-gray-dark;
+  background: $famsf-gray-light !important;
 }
 
 .figcaption,
 figcaption {
-
-  background-color: $famsf-yellow !important;
-  color: $gray-dark;
+  background-color: $famsf-blue-light;
+  color: $white !important;
 
   p:first-child {
-    color: $gray-dark;
+    color: $white !important;
   }
 }
 
@@ -494,17 +503,16 @@ figcaption {
 .figcaption-cta:hover .icon--small svg,
 .figcaption-cta:link .icon--small svg,
 .figcaption-cta:visited .icon--small svg {
-  fill: $famsf-blue-dark !important;
-
+  fill: $black !important;
 }
 
 .comparison-section {
   padding: 1em 0;
-  background: #5e5e5e;
-  color: #fff;
+  background: $famsf-gray-light;
+  color: $famsf-gray-dark;
   border-bottom: 20px solid;
   border-top: 20px solid;
-  border-color: $cult-yellow;
+  border-color: $famsf-blue-light;
 
   .wysiwyg-enlarged,
   h2 {
@@ -521,20 +529,21 @@ figcaption {
   .figcaption-cta:hover .icon--small svg,
   .figcaption-cta:link .icon--small svg,
   .figcaption-cta:visited .icon--small svg {
-    fill: $famsf-blue-dark;
+    fill: $famsf-blue-light;
   }
 
   .figcaption,
   figcaption {
     background-color: $famsf-blue-light;
-    color: $white;
+    color: $white !important;
 
     p:first-child {
-      color: $white;
+      color: $white !important;
     }
   }
 
   figcaption::after {
+    border-bottom-color: $famsf-blue-light;
   }
 
 
@@ -547,7 +556,9 @@ figcaption {
   }
 }
 
-
+.qp_btna input {
+  background-color: $famsf-blue-light !important;
+}
 
 
 // Import theme specific components used in global
