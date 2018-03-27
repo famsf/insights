@@ -39,15 +39,13 @@
 {%
 set classes = [
 'paragraph',
-'js-imagefader',
+'js-horizontal-slider__wrapper',
+'js-imageslider',
 'imagefader',
 'paragraph--type--' ~ paragraph.bundle|clean_class,
 view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class
 ]
 %}
 <ul{{ attributes.addClass(classes) }} data-speed="{{ paragraph.field_transition_speed.value }}" data-pause="{{ paragraph.field_pause.value }}">
-  {{ content.field_slider_images }}
+  {{ content.field_slide_image }}
 </ul>
-<figure>
-  {{ content.field_photo_credits }}
-</figure>

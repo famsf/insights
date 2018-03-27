@@ -1,0 +1,9 @@
+uuid: abab9c8a-6b0a-4039-ba33-c0b81d575883
+langcode: en
+status: true
+dependencies: {  }
+id: image_slider
+label: 'Image slider with controls'
+icon_uuid: null
+description: 'Single image slider with prev/next controls'
+behavior_plugins: {  }

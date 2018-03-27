@@ -6,6 +6,7 @@ dependencies:
     - field.storage.paragraph.field_left_column
     - paragraphs.paragraphs_type.2up_section
     - paragraphs.paragraphs_type.audio_component
+    - paragraphs.paragraphs_type.image_slider
     - paragraphs.paragraphs_type.image_with_revealable_caption
     - paragraphs.paragraphs_type.image_with_zoomable_markers
     - paragraphs.paragraphs_type.link_or_download_button
@@ -47,8 +48,9 @@ settings:
       pull_quote: pull_quote
       video_embed: video_embed
       video_source: video_source
-      simple_image_slider: simple_image_slider
+      image_slider: image_slider
       responsive_image: responsive_image
+      simple_image_slider: simple_image_slider
       zoom_hover_image: zoom_hover_image
     target_bundles_drag_drop:
       1up_section:
@@ -69,12 +71,12 @@ settings:
       image_with_revealable_caption:
         enabled: true
         weight: 11
-      photo_credits:
-        weight: 12
-        enabled: false
       text_area:
         enabled: true
         weight: 12
+      photo_credits:
+        weight: 12
+        enabled: false
       image_with_zoomable_markers:
         enabled: true
         weight: 14
@@ -108,12 +110,12 @@ settings:
       video_embed:
         enabled: true
         weight: 33
-      video_source:
-        enabled: true
-        weight: 34
       footer_feature:
         weight: 34
         enabled: false
+      video_source:
+        enabled: true
+        weight: 34
       horizontal_image_slider:
         weight: 35
         enabled: false
@@ -123,13 +125,19 @@ settings:
       image_slide:
         weight: 38
         enabled: false
+      comparison_section:
+        weight: 40
+        enabled: false
+      image_slider:
+        enabled: true
+        weight: 46
       sponsor:
         weight: 46
         enabled: false
-      simple_image_slider:
+      responsive_image:
         enabled: true
         weight: 49
-      responsive_image:
+      simple_image_slider:
         enabled: true
         weight: 49
       zoom_hover_image:

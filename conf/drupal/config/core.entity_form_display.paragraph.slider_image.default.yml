@@ -1,0 +1,41 @@
+uuid: 6b01e781-28d1-401c-bf6f-70b22297a94b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slider_image.field_image
+    - field.field.paragraph.slider_image.field_photo_credits
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.slider_image
+  module:
+    - image
+    - paragraphs
+id: paragraph.slider_image.default
+targetEntityType: paragraph
+bundle: slider_image
+mode: default
+content:
+  field_image:
+    weight: 0
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_photo_credits:
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: photo_credits
+    third_party_settings: {  }
+    type: entity_reference_paragraphs
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

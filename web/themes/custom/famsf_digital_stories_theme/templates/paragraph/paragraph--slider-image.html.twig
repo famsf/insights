@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Custom theme implementation to display a paragraph.
+ * Custom theme implementation to display a card section paragraph.
  *
  * Available variables:
  * - paragraph: Full paragraph entity.
@@ -36,18 +36,9 @@
  * @ingroup themeable
  */
 #}
-{%
-set classes = [
-'paragraph',
-'js-imagefader',
-'imagefader',
-'paragraph--type--' ~ paragraph.bundle|clean_class,
-view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class
-]
-%}
-<ul{{ attributes.addClass(classes) }} data-speed="{{ paragraph.field_transition_speed.value }}" data-pause="{{ paragraph.field_pause.value }}">
-  {{ content.field_slider_images }}
-</ul>
 <figure>
+  <div class="figure__wrapper">
+    {{ content.field_image }}
+  </div>
   {{ content.field_photo_credits }}
 </figure>

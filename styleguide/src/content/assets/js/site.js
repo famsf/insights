@@ -194,6 +194,22 @@
           easing: 'ease-in'
         })
       });
+     
+      // Yet another fader/slider with controls
+      $('.js-imageslider', context).each(function() {
+       $(this).bxSlider({
+          mode: 'horizontal',
+          adaptiveHeight: true,
+          responsive: true,
+          adaptiveHeightSpeed: 500,
+          pager: false,
+          controls: true,
+          auto: false,
+          speed: 500,
+          pause: 5000,
+          easing: 'ease-in'
+        })
+      });
 
       // Start the word fade slider
       $('.js-wordslider', context).each(function(){

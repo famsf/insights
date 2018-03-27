@@ -74,3 +74,24 @@
     background-color: transparentize($background-d, .8);
   }
 }
+
+.bx-wrapper {
+    
+    .bx-viewport {
+        height: auto !important;
+    }
+    
+    .bx-next {
+        background-color: $next-icon;
+        -webkit-mask-image: url(/themes/custom/famsf_digital_stories_theme/svg/famsf-caret-right-md.svg);
+        mask-image: url(/themes/custom/famsf_digital_stories_theme/svg/famsf-caret-right-md.svg);
+        width: 17px !important;
+    }
+    
+      .bx-prev {
+        background-color: $next-icon;
+        -webkit-mask-image: url(/themes/custom/famsf_digital_stories_theme/svg/famsf-caret-left-md.svg);
+        width: 17px !important;
+    }
+    
+}
