@@ -192,7 +192,7 @@ $icon-stroke-active: null;
 }
 
 .standalone-quote::before {
-  background-color: $famsf-coral !important;
+  background-color: $famsf-blue-light !important;
  }
 
 // Style the timeline so it doesn't look like a mess
@@ -268,7 +268,7 @@ ul.timeline-list:after {
 }
 
 .comparison__button {
-  background-color: $cult-beige !important;
+  background-color: $famsf-coral !important;
 }
 
 .comparison__answer {
@@ -361,10 +361,14 @@ ul.timeline-list:after {
   &:active,
   &:hover,
   &:focus {
-    color: $famsf-coral !important;
+    color: $famsf-coral!important;
     background: $white !important;
   }
 
+}
+
+button.button-with-icon.js-icon--read-more svg {
+  fill: $famsf-coral !important;
 }
 
 //close section
@@ -463,7 +467,7 @@ ul.timeline-list:after {
 
 .lede {
   border: none !important;
-  color: $famsf-coral !important;
+  color: $famsf-blue-light !important;
 }
 
 //
@@ -518,11 +522,11 @@ figcaption {
   color: $famsf-gray-dark;
   border-bottom: 20px solid;
   border-top: 20px solid;
-  border-color: $famsf-coral;
+  border-color: $famsf-blue-light;
 
   .wysiwyg-enlarged,
   h2 {
-    color: $famsf-coral;
+    color: $famsf-blue-light;
   }
 
   a {
