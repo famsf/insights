@@ -10,11 +10,12 @@
 $famsf-blue-light: #1c90cf;
 $famsf-blue-dark: #0f6088;
 // FAMSF Yellows
-$famsf-yellow: #efe36e;
+$famsf-coral: #d15127;
 // FAMSF Grays
 $famsf-gray-light: #ececec;
 $famsf-gray-medium: #a8abad;
 $famsf-gray-dark: #3e3e3e;
+
 
 $black: #000000s;
 $gray-dark: #3e3e3e;
@@ -84,9 +85,9 @@ $pattern-b: $white;
 $border: $cult-beige;
 $text-color: $famsf-gray-dark;
 $text-color-invert: $white;
-$primary: $famsf-blue-light;
-$primary-active: rgba($famsf-blue-light, .7);
-$secondary: $famsf-blue-light;
+$primary: $famsf-gray-dark;
+$primary-active: rgba($famsf-gray-dark, .7);
+$secondary: red;
 $tertiary: $famsf-blue-light;
 $citation: $gray-medium;
 $hero-color: $white;
@@ -107,7 +108,7 @@ $hero-content-text-active: $famsf-gray-dark;
 $section-hero-text: $white;
 $section-hero-shadow: $citrus;
 $section-hero-shadow-b: $orange;
-$section-hero-border-a: $famsf-yellow;
+$section-hero-border-a: $famsf-coral;
 $section-hero-border-b: $rust;
 
 $next-icon: $famsf-blue-light;
@@ -135,7 +136,7 @@ $icon-stroke-active: null;
 
   .footer-link:link,
   .footer-link:visited {
-    color: $famsf-blue-light !important;
+    color: $famsf-gray-dark !important;
   }
 }
 
@@ -190,9 +191,9 @@ $icon-stroke-active: null;
   height: 100%;
 }
 
-//.standalone-quote__cite {
-//color: #8e8e8e !important;
-// }
+.standalone-quote::before {
+  background-color: $famsf-coral !important;
+ }
 
 // Style the timeline so it doesn't look like a mess
 
@@ -248,11 +249,11 @@ ul.timeline-list.alternate li.timeline-item.odd .timeline-item-wrapper .timeline
 }
 
 ul.timeline-list li.timeline-item .timeline-item-wrapper span.timeline-marker {
-    border-color: $famsf-yellow;
+    border-color: $famsf-blue-light;
 }
 
 ul.timeline-list:after {
-    background-color: $famsf-yellow;
+    background-color: $famsf-blue-light;
 }
 
 // Image fader with BXSlider jQuery
@@ -356,11 +357,11 @@ ul.timeline-list:after {
 
 .button-with-icon {
   //background: $cult-beige !important;
-
+  color: $famsf-coral !important;
   &:active,
   &:hover,
   &:focus {
-    color: $famsf-blue-light !important;
+    color: $famsf-coral !important;
     background: $white !important;
   }
 
@@ -412,7 +413,7 @@ ul.timeline-list:after {
       color: $white !important;
     }
     .active {
-      background-color: $famsf-blue-light !important;
+      background-color: $famsf-coral !important;
       color: $white !important;
     }
 
@@ -421,7 +422,7 @@ ul.timeline-list:after {
 .dashboard__nav-item:active,
 .dashboard__nav-item:focus,
 .dashboard__nav-item:hover {
-  background-color: $famsf-blue-light !important;
+  background-color: $famsf-coral !important;
   color: $white !important;
 }
 
@@ -462,6 +463,7 @@ ul.timeline-list:after {
 
 .lede {
   border: none !important;
+  color: $famsf-coral !important;
 }
 
 //
@@ -479,7 +481,7 @@ ul.timeline-list:after {
 .pullquote {
   margin: 1.5em 0 1em 2.5em;
   font-weight: 600;
-  color: $cult-gray;
+  color: $famsf-blue-light;
 }
 
 .deep-dive {
@@ -489,12 +491,16 @@ ul.timeline-list:after {
 
 .figcaption,
 figcaption {
-  background-color: $famsf-blue-light;
+  background-color: $famsf-coral !important;
   color: $white !important;
 
   p:first-child {
     color: $white !important;
   }
+}
+
+.js-figcaption--revealed::after {
+  border-bottom-color: $famsf-coral;
 }
 
 .figcaption-cta .icon--small svg,
@@ -512,15 +518,15 @@ figcaption {
   color: $famsf-gray-dark;
   border-bottom: 20px solid;
   border-top: 20px solid;
-  border-color: $famsf-blue-light;
+  border-color: $famsf-coral;
 
   .wysiwyg-enlarged,
   h2 {
-    color: $famsf-blue-light;
+    color: $famsf-coral;
   }
 
   a {
-    color: $famsf-blue-light;
+    color: $famsf-coral;
   }
 
   .figcaption-cta .icon--small svg,
@@ -529,12 +535,12 @@ figcaption {
   .figcaption-cta:hover .icon--small svg,
   .figcaption-cta:link .icon--small svg,
   .figcaption-cta:visited .icon--small svg {
-    fill: $famsf-blue-light;
+    fill: $famsf-coral;
   }
 
   .figcaption,
   figcaption {
-    background-color: $famsf-blue-light;
+    background-color: $famsf-coral !important;
     color: $white !important;
 
     p:first-child {
@@ -543,7 +549,7 @@ figcaption {
   }
 
   figcaption::after {
-    border-bottom-color: $famsf-blue-light;
+    border-bottom-color: $famsf-coral !important;
   }
 
 
@@ -557,7 +563,13 @@ figcaption {
 }
 
 .qp_btna input {
-  background-color: $famsf-blue-light !important;
+  background-color: $famsf-coral !important;
+  outline-color: $famsf-coral !important;
+}
+
+svg {
+    fill: $famsf-coral !important;
+    color: $famsf-coral !important;
 }
 
 
