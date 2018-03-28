@@ -48,6 +48,11 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 	/**
 	 * @var boolean
 	 */
+	protected static $convertArraysToJSON = FALSE;
+
+	/**
+	 * @var boolean
+	 */
 	protected static $errorHandlingFUSE = FALSE;
 
 	/**
@@ -64,6 +69,16 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 	 * @var boolean
 	 */
 	protected static $autoResolve = FALSE;
+
+	/**
+	 * If this is set to TRUE, the __toString function will
+	 * encode all properties as UTF-8 to repair invalid UTF-8
+	 * encodings and prevent exceptions (which are uncatchable from within
+	 * a __toString-function).
+	 *
+	 * @var boolean
+	 */
+	protected static $enforceUTF8encoding = FALSE;
 
 	/**
 	 * This is where the real properties of the bean live. They are stored and retrieved
@@ -125,6 +140,21 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 	protected $all = FALSE;
 
 	/**
+	 * If this is set to TRUE, the __toString function will
+	 * encode all properties as UTF-8 to repair invalid UTF-8
+	 * encodings and prevent exceptions (which are uncatchable from within
+	 * a __toString-function).
+	 *
+	 * @param boolean $toggle TRUE to enforce UTF-8 encoding (slower)
+	 *
+	 * @return void
+	 */
+	 public static function setEnforceUTF8encoding( $toggle )
+	 {
+		 self::$enforceUTF8encoding = (boolean) $toggle;
+	 }
+
+	/**
 	 * Sets the error mode for FUSE.
 	 * What to do if a FUSE model method does not exist?
 	 * You can set the following options:
@@ -174,6 +204,24 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 		} else {
 			self::$errorHandler = NULL;
 		}
+		return $old;
+	}
+
+	/**
+	 * Toggles array to JSON conversion. If set to TRUE any array
+	 * set to a bean property that's not a list will be turned into
+	 * a JSON string. Used together with AQueryWriter::useJSONColumns this
+	 * extends the data type support for JSON columns. Returns the previous
+	 * value of the flag.
+	 *
+	 * @param boolean $flag flag
+	 *
+	 * @return boolean
+	 */
+	public static function convertArraysToJSON( $flag )
+	{
+		$old = self::$convertArraysToJSON;
+		self::$convertArraysToJSON = $flag;
 		return $old;
 	}
 
@@ -410,6 +458,7 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 		$this->__info['sys.orig'] = array( 'id' => 0 );
 		$this->__info['tainted']  = TRUE;
 		$this->__info['changed']  = TRUE;
+		$this->__info['changelist'] = array();
 		$this->properties['id']   = 0;
 	}
 
@@ -548,7 +597,7 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 	{
 		$myID = $this->properties['id'];
 
-		$this->import( $otherBean->export() );
+		$this->import( $otherBean->export( FALSE, FALSE, TRUE ) );
 
 		$this->id = $myID;
 
@@ -624,6 +673,29 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 			$property = substr($property, 1);
 		}
 		return isset( $this->properties[$property] );
+	}
+
+	/**
+	 * Checks whether a related bean exists.
+	 * For instance if a post bean has a related author, this method
+	 * can be used to check if the author is set without loading the author.
+	 * This method works by checking the related ID-field.
+	 *
+	 * @param string $property name of the property you wish to check
+	 *
+	 * @return boolean
+	 */
+	public function exists( $property )
+	{
+		$property = $this->beau( $property );
+		/* fixes issue #549, see Base/Bean test */
+		$hiddenRelationField = "{$property}_id";
+		if ( array_key_exists( $hiddenRelationField, $this->properties ) ) {
+			if ( !is_null( $this->properties[$hiddenRelationField] ) ) {
+				return TRUE;
+			}
+		}
+		return FALSE;
 	}
 
 	/**
@@ -1060,6 +1132,8 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 			} elseif ( strpos( $property, 'shared' ) === 0 && ctype_upper( substr( $property, 6, 1 ) ) ) {
 				$isShared = TRUE;
 			}
+		} elseif ( self::$convertArraysToJSON && is_array( $value ) ) {
+			$value = json_encode( $value );
 		}
 
 		$hasAlias       = (!is_null($this->aliasName));
@@ -1068,6 +1142,8 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 		$hasSQL         = ($this->withSql !== '' || $this->via !== NULL);
 		$exists         = isset( $this->properties[$property] );
 		$fieldLink      = $property . '_id';
+		$isFieldLink	= (($pos = strrpos($property, '_id')) !== FALSE) && array_key_exists( ($fieldName = substr($property, 0, $pos)), $this->properties );
+
 
 		if ( ($isOwn || $isShared) &&  (!$exists || $hasSQL || $differentAlias) ) {
 
@@ -1092,6 +1168,7 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 
 		$this->__info['tainted'] = TRUE;
 		$this->__info['changed'] = TRUE;
+		array_push( $this->__info['changelist'], $property );
 
 		if ( array_key_exists( $fieldLink, $this->properties ) && !( $value instanceof OODBBean ) ) {
 			if ( is_null( $value ) || $value === FALSE ) {
@@ -1104,6 +1181,12 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 				throw new RedException( 'Cannot cast to bean.' );
 			}
 		}
+		
+		if ( $isFieldLink ){
+			unset( $this->properties[ $fieldName ]);
+			$this->properties[ $property ] = NULL;
+		}
+
 
 		if ( $value === FALSE ) {
 			$value = '0';
@@ -1317,10 +1400,15 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 			$list = array();
 			foreach($this->properties as $property => $value) {
 				if (is_scalar($value)) {
-					$list[$property] = $value;
+					if ( self::$enforceUTF8encoding ) {
+						$list[$property] = mb_convert_encoding($value, 'UTF-8', 'UTF-8');
+					} else {
+						$list[$property] = $value;
+					}
 				}
 			}
-			return json_encode( $list );
+			$data = json_encode( $list );
+			return $data;
 		} else {
 			return $string;
 		}
@@ -1631,6 +1719,7 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 				$this->__info['sys.shadow.'.$key] = $value;
 			}
 		}
+		$this->__info[ 'changelist' ] = array();
 		return $this;
 	}
 
@@ -1658,7 +1747,7 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 	 * example #1. After preparing the linking bean, the bean is returned thus
 	 * allowing the chained setter: ->song = $song.
 	 *
-	 * @param string|OODBBean $type          type of bean to dispense or the full bean
+	 * @param string|OODBBean $typeOrBean    type of bean to dispense or the full bean
 	 * @param string|array    $qualification JSON string or array (optional)
 	 *
 	 * @return OODBBean
@@ -1697,6 +1786,8 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 	 * This is as far as support for 1-1 goes in RedBeanPHP. This
 	 * method will only return a reference to the bean, changing it
 	 * and storing the bean will not update the related one-bean.
+	 *
+	 * @param  $type type of bean to load
 	 *
 	 * @return OODBBean
 	 */

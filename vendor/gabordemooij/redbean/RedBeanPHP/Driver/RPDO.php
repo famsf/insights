@@ -86,7 +86,22 @@ class RPDO implements Driver
 	/**
 	 * @var string
 	 */
-	protected $mysqlEncoding = '';
+	protected $mysqlCharset = '';
+	
+	/**
+	 * @var string
+	 */
+	protected $mysqlCollate = '';
+
+	/**
+	 * @var boolean
+	 */
+	protected $stringifyFetches = TRUE;
+
+	/**
+	 * @var string
+	 */
+	protected $initSQL = NULL;
 
 	/**
 	 * Binds parameters. This method binds parameters to a PDOStatement for
@@ -173,16 +188,17 @@ class RPDO implements Driver
 			//So we need a property to convey the SQL State code.
 			$err = $e->getMessage();
 			if ( $this->loggingEnabled && $this->logger ) $this->logger->log( 'An error occurred: ' . $err );
-			$exception = new SQL( $err, 0 );
+			$exception = new SQL( $err, 0, $e );
 			$exception->setSQLState( $e->getCode() );
+			$exception->setDriverDetails( $e->errorInfo );
 			throw $exception;
 		}
 	}
 
 	/**
 	 * Try to fix MySQL character encoding problems.
-	 * MySQL < 5.5 does not support proper 4 byte unicode but they
-	 * seem to have added it with version 5.5 under a different label: utf8mb4.
+	 * MySQL < 5.5.3 does not support proper 4 byte unicode but they
+	 * seem to have added it with version 5.5.3 under a different label: utf8mb4.
 	 * We try to select the best possible charset based on your version data.
 	 *
 	 * @return void
@@ -190,13 +206,50 @@ class RPDO implements Driver
 	protected function setEncoding()
 	{
 		$driver = $this->pdo->getAttribute( \PDO::ATTR_DRIVER_NAME );
-		$version = floatval( $this->pdo->getAttribute( \PDO::ATTR_SERVER_VERSION ) );
 		if ($driver === 'mysql') {
-			$encoding = ($version >= 5.5) ? 'utf8mb4' : 'utf8';
-			$this->pdo->setAttribute(\PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES '.$encoding ); //on every re-connect
-			$this->pdo->exec(' SET NAMES '. $encoding); //also for current connection
-			$this->mysqlEncoding = $encoding;
+			$charset = $this->hasCap( 'utf8mb4' ) ? 'utf8mb4' : 'utf8';
+			$collate = $this->hasCap( 'utf8mb4_520' ) ? '_unicode_520_ci' : '_unicode_ci';
+			$this->pdo->setAttribute(\PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES '. $charset ); //on every re-connect
+			$this->pdo->exec(' SET NAMES '. $charset); //also for current connection
+			$this->mysqlCharset = $charset;
+			$this->mysqlCollate = $charset . $collate;
 		}
+	}
+
+	/**
+	 * Determine if a database supports a particular feature.
+	 *
+	 * @param $db_cap identifier of database capability
+	 *
+	 * @return int|false Whether the database feature is supported, false otherwise.
+	 **/
+	protected function hasCap( $db_cap )
+	{
+		$version = $this->pdo->getAttribute( \PDO::ATTR_SERVER_VERSION );
+		switch ( strtolower( $db_cap ) ) {
+			case 'utf8mb4':
+				if ( version_compare( $version, '5.5.3', '<' ) ) {
+					return false;
+				}
+
+				$client_version = $this->pdo->getAttribute(\PDO::ATTR_CLIENT_VERSION );
+				/*
+				 * libmysql has supported utf8mb4 since 5.5.3, same as the MySQL server.
+				 * mysqlnd has supported utf8mb4 since 5.0.9.
+				 */
+				if ( false !== strpos( $client_version, 'mysqlnd' ) ) {
+					$client_version = preg_replace( '/^\D+([\d.]+).*/', '$1', $client_version );
+					return version_compare( $client_version, '5.0.9', '>=' );
+				} else {
+					return version_compare( $client_version, '5.5.3', '>=' );
+				}
+			break;
+			case 'utf8mb4_520':
+				return version_compare( $version, '5.6', '>=' );
+			break;
+		}
+
+		return false;
 	}
 
 	/**
@@ -239,13 +292,26 @@ class RPDO implements Driver
 	}
 
 	/**
+	 * Sets PDO in stringify fetch mode.
+	 *
+	 * @param boolean $bool
+	 */
+	public function stringifyFetches( $bool ) {
+		$this->stringifyFetches = $bool;
+	}
+
+	/**
 	 * Returns the best possible encoding for MySQL based on version data.
 	 *
-	 * @return string
+	 * @param boolean $retCol pass TRUE to return both charset/collate
+	 *
+	 * @return string|array
 	 */
-	public function getMysqlEncoding()
+	public function getMysqlEncoding( $retCol = FALSE )
 	{
-		return $this->mysqlEncoding;
+		if( $retCol )
+			return array( 'charset' => $this->mysqlCharset, 'collate' => $this->mysqlCollate );
+		return $this->mysqlCharset;
 	}
 
 	/**
@@ -303,11 +369,16 @@ class RPDO implements Driver
 				$pass
 			);
 			$this->setEncoding();
-			$this->pdo->setAttribute( \PDO::ATTR_STRINGIFY_FETCHES, TRUE );
+			$this->pdo->setAttribute( \PDO::ATTR_STRINGIFY_FETCHES, $this->stringifyFetches );
 			//cant pass these as argument to constructor, CUBRID driver does not understand...
 			$this->pdo->setAttribute( \PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION );
 			$this->pdo->setAttribute( \PDO::ATTR_DEFAULT_FETCH_MODE, \PDO::FETCH_ASSOC );
 			$this->isConnected = TRUE;
+			/* run initialisation query if any */
+			if ( $this->initSQL !== NULL ) {
+				$this->Execute( $this->initSQL );
+				$this->initSQL = NULL;
+			}
 		} catch ( \PDOException $exception ) {
 			$matches = array();
 			$dbname  = ( preg_match( '/dbname=(\w+)/', $this->dsn, $matches ) ) ? $matches[1] : '?';
@@ -470,11 +541,12 @@ class RPDO implements Driver
 	 *
 	 * @param Logger $logger the logger instance to be used for logging
 	 *
-	 * @return void
+	 * @return self
 	 */
 	public function setLogger( Logger $logger )
 	{
 		$this->logger = $logger;
+		return $this;
 	}
 
 	/**
@@ -525,7 +597,6 @@ class RPDO implements Driver
 	public function getDatabaseType()
 	{
 		$this->connect();
-
 		return $this->pdo->getAttribute(\PDO::ATTR_DRIVER_NAME );
 	}
 
@@ -582,6 +653,7 @@ class RPDO implements Driver
 	public function setEnableLogging( $enable )
 	{
 		$this->loggingEnabled = (boolean) $enable;
+		return $this;
 	}
 
 	/**
@@ -617,5 +689,23 @@ class RPDO implements Driver
 	public function getIntegerBindingMax()
 	{
 		return $this->max;
+	}
+
+	/**
+	 * Sets a query to be executed upon connecting to the database.
+	 * This method provides an opportunity to configure the connection
+	 * to a database through an SQL-based interface. Objects can provide
+	 * an SQL string to be executed upon establishing a connection to
+	 * the database. This has been used to solve issues with default
+	 * foreign key settings in SQLite3 for instance, see Github issues:
+	 * #545 and #548.
+	 *
+	 * @param string $sql SQL query to run upon connecting to database
+	 *
+	 * @return self
+	 */
+	public function setInitQuery( $sql ) {
+		$this->initSQL = $sql;
+		return $this;
 	}
 }

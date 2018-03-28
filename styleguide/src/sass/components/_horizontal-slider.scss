@@ -77,10 +77,6 @@
 
 .bx-wrapper {
     
-    .bx-viewport {
-        height: auto !important;
-    }
-    
     .bx-next {
         background-color: $next-icon;
         -webkit-mask-image: url(/themes/custom/famsf_digital_stories_theme/svg/famsf-caret-right-md.svg);
@@ -88,10 +84,15 @@
         width: 17px !important;
     }
     
-      .bx-prev {
+    .bx-prev {
         background-color: $next-icon;
         -webkit-mask-image: url(/themes/custom/famsf_digital_stories_theme/svg/famsf-caret-left-md.svg);
         width: 17px !important;
+    }
+    
+    .bx-next,
+    .bx-prev {
+        transform: translate(0,-50%);
     }
     
 }

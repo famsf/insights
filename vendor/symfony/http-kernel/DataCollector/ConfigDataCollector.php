@@ -27,7 +27,6 @@ class ConfigDataCollector extends DataCollector
     private $kernel;
     private $name;
     private $version;
-    private $cacheVersionInfo = true;
 
     /**
      * @param string $name    The name of the application using the web profiler
@@ -41,8 +40,6 @@ class ConfigDataCollector extends DataCollector
 
     /**
      * Sets the Kernel associated with this Request.
-     *
-     * @param KernelInterface $kernel A KernelInterface instance
      */
     public function setKernel(KernelInterface $kernel = null)
     {
@@ -125,7 +122,7 @@ class ConfigDataCollector extends DataCollector
 
     public function setCacheVersionInfo($cacheVersionInfo)
     {
-        $this->cacheVersionInfo = $cacheVersionInfo;
+        // no-op for BC
     }
 
     /**

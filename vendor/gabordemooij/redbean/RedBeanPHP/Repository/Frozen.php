@@ -64,7 +64,15 @@ class Frozen extends Repository
 			$updateValues = array();
 			$k1 = 'property';
 			$k2 = 'value';
+
+			$partial = ( $this->partialBeans === TRUE || ( is_array( $this->partialBeans ) && in_array( $table, $this->partialBeans ) ) );
+			if ( $partial ) {
+				$mask = $bean->getMeta( 'changelist' );
+				$bean->setMeta( 'changelist', array() );
+			}
+
 			foreach( $properties as $key => $value ) {
+				if ( $partial && !in_array( $key, $mask ) ) continue;
 				$updateValues[] = array( $k1 => $key, $k2 => $value );
 			}
 			$bean->id = $this->writer->updateRecord( $table, $updateValues, $id );
@@ -168,23 +176,13 @@ class Frozen extends Repository
 	 */
 	public function load( $type, $id )
 	{
+		$rows = array();
 		$bean = $this->dispense( $type );
 		if ( isset( $this->stash[$this->nesting][$id] ) ) {
 			$row = $this->stash[$this->nesting][$id];
 		} else {
-			try {
-				$rows = $this->writer->queryRecord( $type, array( 'id' => array( $id ) ) );
-			} catch ( SQLException $exception ) {
-				if ( $this->writer->sqlStateIn( $exception->getSQLState(),
-					array(
-						QueryWriter::C_SQLSTATE_NO_SUCH_COLUMN,
-						QueryWriter::C_SQLSTATE_NO_SUCH_TABLE )
-				)
-				) {
-					throw $exception; //only throw if frozen
-				}
-			}
-			if ( empty( $rows ) ) {
+			$rows = $this->writer->queryRecord( $type, array( 'id' => array( $id ) ) );
+			if ( !count( $rows ) ) {
 				return $bean;
 			}
 			$row = array_pop( $rows );

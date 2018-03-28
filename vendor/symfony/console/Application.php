@@ -96,9 +96,6 @@ class Application
     /**
      * Runs the current application.
      *
-     * @param InputInterface  $input  An Input instance
-     * @param OutputInterface $output An Output instance
-     *
      * @return int 0 if everything went fine, or an error code
      *
      * @throws \Exception When running fails. Bypass this when {@link setCatchExceptions()}.
@@ -118,15 +115,12 @@ class Application
         try {
             $e = null;
             $exitCode = $this->doRun($input, $output);
-        } catch (\Exception $x) {
-            $e = $x;
-        } catch (\Throwable $x) {
-            $e = new FatalThrowableError($x);
+        } catch (\Exception $e) {
         }
 
         if (null !== $e) {
-            if (!$this->catchExceptions || !$x instanceof \Exception) {
-                throw $x;
+            if (!$this->catchExceptions) {
+                throw $e;
             }
 
             if ($output instanceof ConsoleOutputInterface) {
@@ -159,9 +153,6 @@ class Application
 
     /**
      * Runs the current application.
-     *
-     * @param InputInterface  $input  An Input instance
-     * @param OutputInterface $output An Output instance
      *
      * @return int 0 if everything went fine, or an error code
      */
@@ -205,11 +196,6 @@ class Application
         return $exitCode;
     }
 
-    /**
-     * Set a helper set to be used with the command.
-     *
-     * @param HelperSet $helperSet The helper set
-     */
     public function setHelperSet(HelperSet $helperSet)
     {
         $this->helperSet = $helperSet;
@@ -229,11 +215,6 @@ class Application
         return $this->helperSet;
     }
 
-    /**
-     * Set an input definition to be used with this application.
-     *
-     * @param InputDefinition $definition The input definition
-     */
     public function setDefinition(InputDefinition $definition)
     {
         $this->definition = $definition;
@@ -372,8 +353,6 @@ class Application
      *
      * If a command with the same name already exists, it will be overridden.
      * If the command is not enabled it will not be added.
-     *
-     * @param Command $command A Command object
      *
      * @return Command|null The registered command if enabled or null
      */
@@ -522,7 +501,7 @@ class Application
     public function find($name)
     {
         $this->init();
-
+        $aliases = array();
         $allCommands = array_keys($this->commands);
         $expr = preg_replace_callback('{([^:]+|)}', function ($matches) { return preg_quote($matches[1]).'[^:]*'; }, $name);
         $commands = preg_grep('{^'.$expr.'}', $allCommands);
@@ -550,15 +529,16 @@ class Application
         // filter out aliases for commands which are already on the list
         if (count($commands) > 1) {
             $commandList = $this->commands;
-            $commands = array_filter($commands, function ($nameOrAlias) use ($commandList, $commands) {
+            $commands = array_filter($commands, function ($nameOrAlias) use ($commandList, $commands, &$aliases) {
                 $commandName = $commandList[$nameOrAlias]->getName();
+                $aliases[$nameOrAlias] = $commandName;
 
                 return $commandName === $nameOrAlias || !in_array($commandName, $commands);
             });
         }
 
-        $exact = in_array($name, $commands, true);
-        if (count($commands) > 1 && !$exact) {
+        $exact = in_array($name, $commands, true) || isset($aliases[$name]);
+        if (!$exact && count($commands) > 1) {
             $suggestions = $this->getAbbreviationSuggestions(array_values($commands));
 
             throw new CommandNotFoundException(sprintf('Command "%s" is ambiguous (%s).', $name, $suggestions), array_values($commands));
@@ -626,7 +606,7 @@ class Application
      */
     public function asText($namespace = null, $raw = false)
     {
-        @trigger_error('The '.__METHOD__.' method is deprecated since version 2.3 and will be removed in 3.0.', E_USER_DEPRECATED);
+        @trigger_error('The '.__METHOD__.' method is deprecated since Symfony 2.3 and will be removed in 3.0.', E_USER_DEPRECATED);
 
         $descriptor = new TextDescriptor();
         $output = new BufferedOutput(BufferedOutput::VERBOSITY_NORMAL, !$raw);
@@ -647,7 +627,7 @@ class Application
      */
     public function asXml($namespace = null, $asDom = false)
     {
-        @trigger_error('The '.__METHOD__.' method is deprecated since version 2.3 and will be removed in 3.0.', E_USER_DEPRECATED);
+        @trigger_error('The '.__METHOD__.' method is deprecated since Symfony 2.3 and will be removed in 3.0.', E_USER_DEPRECATED);
 
         $descriptor = new XmlDescriptor();
 
@@ -663,9 +643,6 @@ class Application
 
     /**
      * Renders a caught exception.
-     *
-     * @param \Exception      $e      An exception instance
-     * @param OutputInterface $output An OutputInterface instance
      */
     public function renderException($e, $output)
     {
@@ -814,9 +791,6 @@ class Application
 
     /**
      * Configures the input and output instances based on the user arguments and options.
-     *
-     * @param InputInterface  $input  An InputInterface instance
-     * @param OutputInterface $output An OutputInterface instance
      */
     protected function configureIO(InputInterface $input, OutputInterface $output)
     {
@@ -854,10 +828,6 @@ class Application
      *
      * If an event dispatcher has been attached to the application,
      * events are also dispatched during the life-cycle of the command.
-     *
-     * @param Command         $command A Command instance
-     * @param InputInterface  $input   An Input instance
-     * @param OutputInterface $output  An Output instance
      *
      * @return int 0 if everything went fine, or an error code
      */
@@ -918,8 +888,6 @@ class Application
 
     /**
      * Gets the name of the command based on input.
-     *
-     * @param InputInterface $input The input interface
      *
      * @return string The command name
      */
@@ -1058,8 +1026,8 @@ class Application
      * Finds alternative of $name among $collection,
      * if nothing is found in $collection, try in $abbrevs.
      *
-     * @param string             $name       The string
-     * @param array|\Traversable $collection The collection
+     * @param string   $name       The string
+     * @param iterable $collection The collection
      *
      * @return string[] A sorted array of similar string
      */

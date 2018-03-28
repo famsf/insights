@@ -4,7 +4,7 @@
  *
  * PHP Version 5
  *
- * Copyright (c) 2008-2015, Manuel Pichler <mapi@pdepend.org>.
+ * Copyright (c) 2008-2017 Manuel Pichler <mapi@pdepend.org>.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -36,7 +36,7 @@
  * ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  *
- * @copyright 2008-2015 Manuel Pichler. All rights reserved.
+ * @copyright 2008-2017 Manuel Pichler. All rights reserved.
  * @license http://www.opensource.org/licenses/bsd-license.php BSD License
  */
 
@@ -170,7 +170,7 @@ if (!defined('T_POW')) {
  * This tokenizer uses the internal {@link token_get_all()} function as token stream
  * generator.
  *
- * @copyright 2008-2015 Manuel Pichler. All rights reserved.
+ * @copyright 2008-2017 Manuel Pichler. All rights reserved.
  * @license http://www.opensource.org/licenses/bsd-license.php BSD License
  */
 class PHPTokenizerInternal implements Tokenizer
@@ -363,6 +363,7 @@ class PHPTokenizerInternal implements Tokenizer
         'false'          =>  Tokens::T_FALSE,
         'trait'          =>  Tokens::T_TRAIT,
         'yield'          =>  Tokens::T_YIELD,
+        'yield from'     =>  Tokens::T_YIELD,
         'parent'         =>  Tokens::T_PARENT,
         'finally'        =>  Tokens::T_FINALLY,
         'callable'       =>  Tokens::T_CALLABLE,

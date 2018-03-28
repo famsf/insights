@@ -12,7 +12,6 @@
 namespace Symfony\Component\Finder\Tests;
 
 use Symfony\Component\Finder\Adapter\AdapterInterface;
-use Symfony\Component\Finder\Adapter\GnuFindAdapter;
 use Symfony\Component\Finder\Adapter\PhpAdapter;
 use Symfony\Component\Finder\Finder;
 
@@ -318,7 +317,7 @@ class FinderTest extends Iterator\RealIteratorTestCase
 
         $finder = $this->buildFinder();
         $a = iterator_to_array($finder->directories()->in(self::$tmpDir));
-        $a = array_values(array_map(function ($a) { return (string) $a; }, $a));
+        $a = array_values(array_map('strval', $a));
         sort($a);
         $this->assertEquals($expected, $a, 'implements the \IteratorAggregate interface');
     }
@@ -620,15 +619,15 @@ class FinderTest extends Iterator\RealIteratorTestCase
     {
         // test that by default, PhpAdapter is selected
         $adapters = Finder::create()->getAdapters();
-        $this->assertTrue($adapters[0] instanceof PhpAdapter);
+        $this->assertInstanceOf('Symfony\Component\Finder\Adapter\PhpAdapter', $adapters[0]);
 
         // test another adapter selection
         $adapters = Finder::create()->setAdapter('gnu_find')->getAdapters();
-        $this->assertTrue($adapters[0] instanceof GnuFindAdapter);
+        $this->assertInstanceOf('Symfony\Component\Finder\Adapter\GnuFindAdapter', $adapters[0]);
 
         // test that useBestAdapter method removes selection
         $adapters = Finder::create()->useBestAdapter()->getAdapters();
-        $this->assertFalse($adapters[0] instanceof PhpAdapter);
+        $this->assertNotInstanceOf('Symfony\Component\Finder\Adapter\PhpAdapter', $adapters[0]);
     }
 
     public function getTestPathData()
@@ -697,6 +696,10 @@ class FinderTest extends Iterator\RealIteratorTestCase
                 $expectedExceptionClass = 'Symfony\\Component\\Finder\\Exception\\AccessDeniedException';
                 if ($e instanceof \PHPUnit_Framework_ExpectationFailedException) {
                     $this->fail(sprintf("Expected exception:\n%s\nGot:\n%s\nWith comparison failure:\n%s", $expectedExceptionClass, 'PHPUnit_Framework_ExpectationFailedException', $e->getComparisonFailure()->getExpectedAsString()));
+                }
+
+                if ($e instanceof \PHPUnit\Framework\ExpectationFailedException) {
+                    $this->fail(sprintf("Expected exception:\n%s\nGot:\n%s\nWith comparison failure:\n%s", $expectedExceptionClass, '\PHPUnit\Framework\ExpectationFailedException', $e->getComparisonFailure()->getExpectedAsString()));
                 }
 
                 $this->assertInstanceOf($expectedExceptionClass, $e);

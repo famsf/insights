@@ -20,6 +20,7 @@ class ComposerStaticInit83030e2f478fac2fdda2ea3a33e32379
         '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
         'e7223560d890eab89cda23685e711e2c' => __DIR__ . '/..' . '/psy/psysh/src/Psy/functions.php',
         'd9d39f82a605ebe5918f683dd402334c' => __DIR__ . '/..' . '/padraic/humbug_get_contents/src/function.php',
+        '3a50d90d85c7fe889a94ae1114b921ce' => __DIR__ . '/..' . '/padraic/humbug_get_contents/src/functions.php',
         'decc78cc4436b1292c6c0d151b19445c' => __DIR__ . '/..' . '/phpseclib/phpseclib/phpseclib/bootstrap.php',
     );
 
@@ -83,9 +84,6 @@ class ComposerStaticInit83030e2f478fac2fdda2ea3a33e32379
             'Symfony\\Bridge\\PsrHttpMessage\\' => 30,
             'Stecman\\Component\\Symfony\\Console\\BashCompletion\\' => 49,
             'SlowProg\\CopyFile\\' => 18,
-            'Seld\\PharUtils\\' => 15,
-            'Seld\\JsonLint\\' => 14,
-            'Seld\\CliPrompt\\' => 15,
         ),
         'R' => 
         array (
@@ -97,20 +95,17 @@ class ComposerStaticInit83030e2f478fac2fdda2ea3a33e32379
             'Psy\\' => 4,
             'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
+            'Psr\\Container\\' => 14,
             'PhpParser\\' => 10,
             'PDepend\\' => 8,
-        ),
-        'N' => 
-        array (
-            'NilPortugues\\TodoFinder\\' => 24,
         ),
         'M' => 
         array (
             'Masterminds\\' => 12,
         ),
-        'J' => 
+        'I' => 
         array (
-            'JsonSchema\\' => 11,
+            'Interop\\Container\\' => 18,
         ),
         'H' => 
         array (
@@ -138,11 +133,9 @@ class ComposerStaticInit83030e2f478fac2fdda2ea3a33e32379
         array (
             'Consolidation\\OutputFormatters\\' => 31,
             'Consolidation\\AnnotatedCommand\\' => 31,
-            'Composer\\Spdx\\' => 14,
             'Composer\\Semver\\' => 16,
             'Composer\\Installers\\' => 20,
             'Composer\\CaBundle\\' => 18,
-            'Composer\\' => 9,
         ),
         'B' => 
         array (
@@ -313,18 +306,6 @@ class ComposerStaticInit83030e2f478fac2fdda2ea3a33e32379
         array (
             0 => __DIR__ . '/..' . '/slowprog/composer-copy-file',
         ),
-        'Seld\\PharUtils\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/seld/phar-utils/src',
-        ),
-        'Seld\\JsonLint\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/seld/jsonlint/src/Seld/JsonLint',
-        ),
-        'Seld\\CliPrompt\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/seld/cli-prompt/src',
-        ),
         'Robo\\' => 
         array (
             0 => __DIR__ . '/..' . '/codegyre/robo/src',
@@ -345,6 +326,10 @@ class ComposerStaticInit83030e2f478fac2fdda2ea3a33e32379
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
+        'Psr\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
@@ -353,17 +338,13 @@ class ComposerStaticInit83030e2f478fac2fdda2ea3a33e32379
         array (
             0 => __DIR__ . '/..' . '/pdepend/pdepend/src/main/php/PDepend',
         ),
-        'NilPortugues\\TodoFinder\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/nilportugues/php_todo/src/TodoFinder',
-        ),
         'Masterminds\\' => 
         array (
             0 => __DIR__ . '/..' . '/masterminds/html5/src',
         ),
-        'JsonSchema\\' => 
+        'Interop\\Container\\' => 
         array (
-            0 => __DIR__ . '/..' . '/justinrainbow/json-schema/src/JsonSchema',
+            0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
         ),
         'Humbug\\SelfUpdate\\' => 
         array (
@@ -371,7 +352,7 @@ class ComposerStaticInit83030e2f478fac2fdda2ea3a33e32379
         ),
         'Humbug\\' => 
         array (
-            0 => __DIR__ . '/..' . '/padraic/humbug_get_contents/src/Humbug',
+            0 => __DIR__ . '/..' . '/padraic/humbug_get_contents/src',
         ),
         'GuzzleHttp\\Psr7\\' => 
         array (
@@ -425,10 +406,6 @@ class ComposerStaticInit83030e2f478fac2fdda2ea3a33e32379
         array (
             0 => __DIR__ . '/..' . '/consolidation/annotated-command/src',
         ),
-        'Composer\\Spdx\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/spdx-licenses/src',
-        ),
         'Composer\\Semver\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/semver/src',
@@ -440,10 +417,6 @@ class ComposerStaticInit83030e2f478fac2fdda2ea3a33e32379
         'Composer\\CaBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/ca-bundle/src',
-        ),
-        'Composer\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/composer/composer/src/Composer',
         ),
         'Behat\\Mink\\Driver\\' => 
         array (
@@ -466,27 +439,6 @@ class ComposerStaticInit83030e2f478fac2fdda2ea3a33e32379
     );
 
     public static $prefixesPsr0 = array (
-        'w' => 
-        array (
-            'webignition\\Tests' => 
-            array (
-                0 => __DIR__ . '/..' . '/webignition/internet-media-type/tests',
-            ),
-        ),
-        'p' => 
-        array (
-            'phpDocumentor' => 
-            array (
-                0 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
-            ),
-        ),
-        'd' => 
-        array (
-            'dflydev\\util\\antPathMatcher' => 
-            array (
-                0 => __DIR__ . '/..' . '/dflydev/ant-path-matcher/src',
-            ),
-        ),
         'W' => 
         array (
             'WebDriver' => 
@@ -503,10 +455,6 @@ class ComposerStaticInit83030e2f478fac2fdda2ea3a33e32379
         ),
         'T' => 
         array (
-            'Twig_Extensions_' => 
-            array (
-                0 => __DIR__ . '/..' . '/twig/extensions/lib',
-            ),
             'Twig_' => 
             array (
                 0 => __DIR__ . '/..' . '/twig/twig/lib',
@@ -523,52 +471,15 @@ class ComposerStaticInit83030e2f478fac2fdda2ea3a33e32379
                 0 => __DIR__ . '/..' . '/stack/builder/src',
             ),
         ),
-        'R' => 
-        array (
-            'React\\Stream' => 
-            array (
-                0 => __DIR__ . '/..' . '/react/stream',
-            ),
-            'React\\Socket' => 
-            array (
-                0 => __DIR__ . '/..' . '/react/socket',
-            ),
-            'React\\Http' => 
-            array (
-                0 => __DIR__ . '/..' . '/react/http',
-            ),
-            'React\\EventLoop' => 
-            array (
-                0 => __DIR__ . '/..' . '/react/event-loop',
-            ),
-        ),
         'P' => 
         array (
             'PHPMD\\' => 
             array (
                 0 => __DIR__ . '/..' . '/phpmd/phpmd/src/main/php',
             ),
-            'PHPDocsMD' => 
-            array (
-                0 => __DIR__ . '/..' . '/victorjonsson/markdowndocs/src',
-            ),
             'PEAR' => 
             array (
                 0 => __DIR__ . '/..' . '/pear/pear_exception',
-            ),
-        ),
-        'N' => 
-        array (
-            'Netcarver\\Textile' => 
-            array (
-                0 => __DIR__ . '/..' . '/netcarver/textile/src',
-            ),
-        ),
-        'M' => 
-        array (
-            'Michelf' => 
-            array (
-                0 => __DIR__ . '/..' . '/michelf/php-markdown',
             ),
         ),
         'L' => 
@@ -589,23 +500,8 @@ class ComposerStaticInit83030e2f478fac2fdda2ea3a33e32379
                 0 => __DIR__ . '/..' . '/jakub-onderka/php-console-color/src',
             ),
         ),
-        'G' => 
-        array (
-            'Guzzle\\Tests' => 
-            array (
-                0 => __DIR__ . '/..' . '/guzzle/guzzle/tests',
-            ),
-            'Guzzle' => 
-            array (
-                0 => __DIR__ . '/..' . '/guzzle/guzzle/src',
-            ),
-        ),
         'E' => 
         array (
-            'Evenement' => 
-            array (
-                0 => __DIR__ . '/..' . '/evenement/evenement/src',
-            ),
             'Egulias\\' => 
             array (
                 0 => __DIR__ . '/..' . '/egulias/email-validator/src',
@@ -665,34 +561,6 @@ class ComposerStaticInit83030e2f478fac2fdda2ea3a33e32379
             array (
                 0 => __DIR__ . '/..' . '/doctrine/annotations/lib',
             ),
-            'Dflydev\\Symfony\\FinderFactory' => 
-            array (
-                0 => __DIR__ . '/..' . '/dflydev/symfony-finder-factory/src',
-            ),
-            'Dflydev\\PlaceholderResolver' => 
-            array (
-                0 => __DIR__ . '/..' . '/dflydev/placeholder-resolver/src',
-            ),
-            'Dflydev\\EmbeddedComposer' => 
-            array (
-                0 => __DIR__ . '/..' . '/dflydev/embedded-composer/src',
-            ),
-            'Dflydev\\DotAccessData' => 
-            array (
-                0 => __DIR__ . '/..' . '/dflydev/dot-access-data/src',
-            ),
-            'Dflydev\\DotAccessConfiguration' => 
-            array (
-                0 => __DIR__ . '/..' . '/dflydev/dot-access-configuration/src',
-            ),
-            'Dflydev\\Canal' => 
-            array (
-                0 => __DIR__ . '/..' . '/dflydev/canal/src',
-            ),
-            'Dflydev\\ApacheMimeTypes' => 
-            array (
-                0 => __DIR__ . '/..' . '/dflydev/apache-mime-types/src',
-            ),
         ),
         'C' => 
         array (
@@ -739,9 +607,6 @@ class ComposerStaticInit83030e2f478fac2fdda2ea3a33e32379
 
     public static $fallbackDirsPsr0 = array (
         0 => __DIR__ . '/..' . '/pear/pear-core-minimal/src',
-        1 => __DIR__ . '/..' . '/webignition/string-parser/src',
-        2 => __DIR__ . '/..' . '/webignition/quoted-string/src',
-        3 => __DIR__ . '/..' . '/webignition/internet-media-type/src',
     );
 
     public static $classMap = array (
@@ -927,6 +792,7 @@ class ComposerStaticInit83030e2f478fac2fdda2ea3a33e32379
         'Generic_Sniffs_ControlStructures_InlineControlStructureSniff' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/CodeSniffer/Standards/Generic/Sniffs/ControlStructures/InlineControlStructureSniff.php',
         'Generic_Sniffs_Debug_CSSLintSniff' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/CodeSniffer/Standards/Generic/Sniffs/Debug/CSSLintSniff.php',
         'Generic_Sniffs_Debug_ClosureLinterSniff' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/CodeSniffer/Standards/Generic/Sniffs/Debug/ClosureLinterSniff.php',
+        'Generic_Sniffs_Debug_ESLintSniff' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/CodeSniffer/Standards/Generic/Sniffs/Debug/ESLintSniff.php',
         'Generic_Sniffs_Debug_JSHintSniff' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/CodeSniffer/Standards/Generic/Sniffs/Debug/JSHintSniff.php',
         'Generic_Sniffs_Files_ByteOrderMarkSniff' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/CodeSniffer/Standards/Generic/Sniffs/Files/ByteOrderMarkSniff.php',
         'Generic_Sniffs_Files_EndFileNewlineSniff' => __DIR__ . '/..' . '/squizlabs/php_codesniffer/CodeSniffer/Standards/Generic/Sniffs/Files/EndFileNewlineSniff.php',

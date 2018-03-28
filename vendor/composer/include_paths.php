@@ -8,8 +8,8 @@ $baseDir = dirname($vendorDir);
 return array(
     $vendorDir . '/pear/pear_exception',
     $vendorDir . '/pear/console_getopt',
-    $vendorDir . '/pear/pear-core-minimal/src',
-    $vendorDir . '/pear/archive_tar',
     $vendorDir . '/phing/phing/classes',
+    $vendorDir . '/pear/pear-core-minimal/src',
     $vendorDir . '/pear/versioncontrol_git',
+    $vendorDir . '/pear/archive_tar',
 );
