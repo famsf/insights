@@ -11,7 +11,8 @@
 namespace Behat\Behat\Transformation\Context\Annotation;
 
 use Behat\Behat\Context\Annotation\AnnotationReader;
-use Behat\Behat\Transformation\Call\RuntimeTransformation;
+use Behat\Behat\Transformation\Transformation\PatternTransformation;
+use Behat\Behat\Transformation\Transformation;
 use ReflectionMethod;
 
 /**
@@ -26,7 +27,7 @@ class TransformationAnnotationReader implements AnnotationReader
     /**
      * @var string
      */
-    private static $regex = '/^\@transform\s+(.+)$/i';
+    private static $regex = '/^\@transform\s*+(.*+)$/i';
 
     /**
      * Loads step callees (if exist) associated with specific method.
@@ -36,7 +37,7 @@ class TransformationAnnotationReader implements AnnotationReader
      * @param string           $docLine
      * @param string           $description
      *
-     * @return null|RuntimeTransformation
+     * @return null|Transformation
      */
     public function readCallee($contextClass, ReflectionMethod $method, $docLine, $description)
     {
@@ -47,6 +48,34 @@ class TransformationAnnotationReader implements AnnotationReader
         $pattern = $match[1];
         $callable = array($contextClass, $method->getName());
 
-        return new RuntimeTransformation($pattern, $callable, $description);
+        foreach ($this->simpleTransformations() as $transformation) {
+            if ($transformation::supportsPatternAndMethod($pattern, $method)) {
+                return new $transformation($pattern, $callable, $description);
+            }
+        }
+
+        return new PatternTransformation($pattern, $callable, $description);
+    }
+
+    /**
+     * Returns list of default transformations.
+     *
+     * @return array
+     */
+    private function simpleTransformations()
+    {
+        $transformations = array();
+        $transformations[] = 'Behat\Behat\Transformation\Transformation\RowBasedTableTransformation';
+        $transformations[] = 'Behat\Behat\Transformation\Transformation\ColumnBasedTableTransformation';
+        $transformations[] = 'Behat\Behat\Transformation\Transformation\TableRowTransformation';
+
+        if (PHP_VERSION_ID >= 70000) {
+            $transformations[] = 'Behat\Behat\Transformation\Transformation\TokenNameAndReturnTypeTransformation';
+            $transformations[] = 'Behat\Behat\Transformation\Transformation\ReturnTypeTransformation';
+        }
+
+        $transformations[] = 'Behat\Behat\Transformation\Transformation\TokenNameTransformation';
+
+        return $transformations;
     }
 }

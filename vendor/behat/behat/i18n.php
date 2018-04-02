@@ -1,7 +1,8 @@
 <?php return array(
     'en'    => array(
+        'snippet_context_choice'  => '<snippet_undefined><snippet_keyword>%1%</snippet_keyword> suite has undefined steps. Please choose the context to generate snippets:</snippet_undefined>',
         'snippet_proposal_title'  => '<snippet_undefined><snippet_keyword>%1%</snippet_keyword> has missing steps. Define them with these snippets:</snippet_undefined>',
-        'snippet_missing_title'   => '<snippet_undefined>Snippets for the following steps in the <snippet_keyword>%1%</snippet_keyword> suite were not generated (does your context implement SnippetAcceptingContext interface?):</snippet_undefined>',
+        'snippet_missing_title'   => '<snippet_undefined>Use <snippet_keyword>--snippets-for</snippet_keyword> CLI option to generate snippets for following <snippet_keyword>%1%</snippet_keyword> suite steps:</snippet_undefined>',
         'skipped_scenarios_title' => 'Skipped scenarios:',
         'failed_scenarios_title'  => 'Failed scenarios:',
         'failed_hooks_title'      => 'Failed hooks:',
@@ -180,6 +181,22 @@
         'pending_count'          => '[1,Inf] %1% pendente',
         'undefined_count'        => '[1,Inf] %1% indefinido',
         'skipped_count'          => '[1,Inf] %1% pulado',
+    ),
+    'ro'    => array(
+        'snippet_proposal_title'  => '<snippet_undefined><snippet_keyword>%1%</snippet_keyword> are pași lipsa. Puteți implementa pașii cu ajutorul acestor fragmente de cod:</snippet_undefined>',
+        'snippet_missing_title'   => '<snippet_undefined>Fragmentele de cod pentru urmatorii pași din suita <snippet_keyword>%1%</snippet_keyword> nu au fost generate (contextul tau implementeaza interfata SnippetAcceptingContext?):</snippet_undefined>',
+        'skipped_scenarios_title' => 'Scenarii omise:',
+        'failed_scenarios_title'  => 'Scenarii eșuate:',
+        'failed_hooks_title'      => 'Hook-uri eșuate:',
+        'failed_steps_title'      => 'Pași esuați:',
+        'pending_steps_title'     => 'Pași in așteptare:',
+        'scenarios_count'         => '{0} Niciun scenariu|{1} 1 scenariu|]1,Inf] %1% scenarii',
+        'steps_count'             => '{0} Niciun pas|{1} 1 pas|]1,Inf] %1% pasi',
+        'passed_count'            => '[1,Inf] %1% cu succes',
+        'failed_count'            => '[1,Inf] %1% fara success',
+        'pending_count'           => '[1,Inf] %1% in așteptare',
+        'undefined_count'         => '[1,Inf] %1% fara implementare',
+        'skipped_count'           => '{1} %1% omis|]1,Inf] %1% omiși',
     ),
     'ru'    => array(
         'snippet_proposal_title'  => '<snippet_keyword>%1%</snippet_keyword> <snippet_undefined>не содержит необходимых определений. Вы можете добавить их используя шаблоны:</snippet_undefined>',

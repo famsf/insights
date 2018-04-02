@@ -7,6 +7,7 @@ dependencies:
     - paragraphs.paragraphs_type.1up_section
     - paragraphs.paragraphs_type.audio_component
     - paragraphs.paragraphs_type.comparison_section
+    - paragraphs.paragraphs_type.image_slider
     - paragraphs.paragraphs_type.image_with_revealable_caption
     - paragraphs.paragraphs_type.image_with_zoomable_markers
     - paragraphs.paragraphs_type.link_or_download_button
@@ -50,6 +51,7 @@ settings:
       video_embed: video_embed
       video_source: video_source
       comparison_section: comparison_section
+      image_slider: image_slider
       responsive_image: responsive_image
       simple_image_slider: simple_image_slider
       timeline: timeline
@@ -64,12 +66,12 @@ settings:
       audio_component:
         enabled: true
         weight: 10
-      card_section:
-        weight: 11
-        enabled: false
       image_with_revealable_caption:
         enabled: true
         weight: 11
+      card_section:
+        weight: 11
+        enabled: false
       photo_credits:
         weight: 12
         enabled: false
@@ -112,12 +114,12 @@ settings:
       video_embed:
         enabled: true
         weight: 33
-      video_source:
-        enabled: true
-        weight: 34
       footer_feature:
         weight: 34
         enabled: false
+      video_source:
+        enabled: true
+        weight: 34
       horizontal_image_slider:
         weight: 35
         enabled: false
@@ -130,6 +132,9 @@ settings:
       comparison_section:
         enabled: true
         weight: 39
+      image_slider:
+        enabled: true
+        weight: 46
       sponsor:
         weight: 46
         enabled: false

@@ -19,6 +19,7 @@ use Drupal\Core\File\MimeType\MimeTypeGuesser;
 use Drupal\Core\Http\TrustedHostsRequestFactory;
 use Drupal\Core\Installer\InstallerRedirectTrait;
 use Drupal\Core\Language\Language;
+use Drupal\Core\Security\RequestSanitizer;
 use Drupal\Core\Site\Settings;
 use Drupal\Core\Test\TestDatabase;
 use Symfony\Cmf\Component\Routing\RouteObjectInterface;
@@ -541,6 +542,12 @@ class DrupalKernel implements DrupalKernelInterface, TerminableInterface {
    * {@inheritdoc}
    */
   public function preHandle(Request $request) {
+    // Sanitize the request.
+    $request = RequestSanitizer::sanitize(
+      $request,
+      (array) Settings::get(RequestSanitizer::SANITIZE_WHITELIST, []),
+      (bool) Settings::get(RequestSanitizer::SANITIZE_LOG, FALSE)
+    );
 
     $this->loadLegacyIncludes();
 
@@ -870,6 +877,16 @@ class DrupalKernel implements DrupalKernelInterface, TerminableInterface {
     // If there is no container and no cached container definition, build a new
     // one from scratch.
     if (!isset($container) && !isset($container_definition)) {
+      // Building the container creates 1000s of objects. Garbage collection of
+      // these objects is expensive. This appears to be causing random
+      // segmentation faults in PHP 5.6 due to
+      // https://bugs.php.net/bug.php?id=72286. Once the container is rebuilt,
+      // garbage collection is re-enabled.
+      $disable_gc = version_compare(PHP_VERSION, '7', '<') && gc_enabled();
+      if ($disable_gc) {
+        gc_collect_cycles();
+        gc_disable();
+      }
       $container = $this->compileContainer();
 
       // Only dump the container if dumping is allowed. This is useful for
@@ -878,6 +895,11 @@ class DrupalKernel implements DrupalKernelInterface, TerminableInterface {
       if ($this->allowDumping) {
         $dumper = new $this->phpArrayDumperClass($container);
         $container_definition = $dumper->getArray();
+      }
+      // If garbage collection was disabled prior to rebuilding container,
+      // re-enable it.
+      if ($disable_gc) {
+        gc_enable();
       }
     }
 

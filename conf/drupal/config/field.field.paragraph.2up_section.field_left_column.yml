@@ -6,6 +6,8 @@ dependencies:
     - field.storage.paragraph.field_left_column
     - paragraphs.paragraphs_type.2up_section
     - paragraphs.paragraphs_type.audio_component
+    - paragraphs.paragraphs_type.horizontal_image_slider
+    - paragraphs.paragraphs_type.image_slider
     - paragraphs.paragraphs_type.image_with_revealable_caption
     - paragraphs.paragraphs_type.image_with_zoomable_markers
     - paragraphs.paragraphs_type.link_or_download_button
@@ -47,8 +49,10 @@ settings:
       pull_quote: pull_quote
       video_embed: video_embed
       video_source: video_source
-      simple_image_slider: simple_image_slider
+      horizontal_image_slider: horizontal_image_slider
+      image_slider: image_slider
       responsive_image: responsive_image
+      simple_image_slider: simple_image_slider
       zoom_hover_image: zoom_hover_image
     target_bundles_drag_drop:
       1up_section:
@@ -115,21 +119,27 @@ settings:
         weight: 34
         enabled: false
       horizontal_image_slider:
+        enabled: true
         weight: 35
-        enabled: false
       image_comparison_3up:
         weight: 36
         enabled: false
       image_slide:
         weight: 38
         enabled: false
+      comparison_section:
+        weight: 40
+        enabled: false
+      image_slider:
+        enabled: true
+        weight: 46
       sponsor:
         weight: 46
         enabled: false
-      simple_image_slider:
+      responsive_image:
         enabled: true
         weight: 49
-      responsive_image:
+      simple_image_slider:
         enabled: true
         weight: 49
       zoom_hover_image:
@@ -140,5 +150,8 @@ settings:
         enabled: false
       timeline_item:
         weight: 53
+        enabled: false
+      slider_image:
+        weight: 57
         enabled: false
 field_type: entity_reference_revisions

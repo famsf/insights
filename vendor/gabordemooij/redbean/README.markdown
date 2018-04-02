@@ -1,4 +1,4 @@
-RedBeanPHP 4
+RedBeanPHP 5
 ============
 
 ![Build Status](https://travis-ci.org/gabordemooij/redbean.svg?branch=master)
@@ -22,7 +22,14 @@ Just open your composer.json file and add the package name ```(e.g. "gabordemooi
 }
 ```
 
-If you not using composer then [try it.](http://redbeanphp.com/install)
+**NOTE**: 
+You will find many examples on the RedBean website make use of RedBean's `R` class. Because of namespaced autoloading in Composer, this class will be available as `\RedbeanPHP\R` instead of `R`. If you desire to use the much shorter `R` alias, you can add a `use` statement at the beginning of your code:
+
+```php
+use \RedBeanPHP\R as R;
+```
+
+If you are not using [Composer](https://getcomposer.org/) then [try it.](http://redbeanphp.com/install)
 
 
 Quick Example

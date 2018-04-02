@@ -11,12 +11,13 @@
 
 namespace Symfony\Component\Config\Tests\Definition\Builder;
 
+use PHPUnit\Framework\TestCase;
 use Symfony\Component\Config\Definition\Builder\ArrayNodeDefinition;
 use Symfony\Component\Config\Definition\Processor;
 use Symfony\Component\Config\Definition\Builder\ScalarNodeDefinition;
 use Symfony\Component\Config\Definition\Exception\InvalidDefinitionException;
 
-class ArrayNodeDefinitionTest extends \PHPUnit_Framework_TestCase
+class ArrayNodeDefinitionTest extends TestCase
 {
     public function testAppendingSomeNode()
     {
@@ -31,7 +32,7 @@ class ArrayNodeDefinitionTest extends \PHPUnit_Framework_TestCase
             ->append($child);
 
         $this->assertCount(3, $this->getField($parent, 'children'));
-        $this->assertTrue(in_array($child, $this->getField($parent, 'children')));
+        $this->assertContains($child, $this->getField($parent, 'children'));
     }
 
     /**
@@ -144,13 +145,16 @@ class ArrayNodeDefinitionTest extends \PHPUnit_Framework_TestCase
 
     public function testNestedPrototypedArrayNodes()
     {
-        $node = new ArrayNodeDefinition('root');
-        $node
+        $nodeDefinition = new ArrayNodeDefinition('root');
+        $nodeDefinition
             ->addDefaultChildrenIfNoneSet()
             ->prototype('array')
                   ->prototype('array')
         ;
-        $node->getNode();
+        $node = $nodeDefinition->getNode();
+
+        $this->assertInstanceOf('Symfony\Component\Config\Definition\PrototypedArrayNode', $node);
+        $this->assertInstanceOf('Symfony\Component\Config\Definition\PrototypedArrayNode', $node->getPrototype());
     }
 
     public function testEnabledNodeDefaults()

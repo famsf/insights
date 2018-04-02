@@ -22,12 +22,29 @@ use RedBeanPHP\RedException as RedException;
 class DispenseHelper
 {
 	/**
+	 * Checks whether the bean type conforms to the RedbeanPHP
+	 * naming policy. This method will throw an exception if the
+	 * type does not conform to the RedBeanPHP database column naming
+	 * policy.
+	 *
+	 * @param string $type type of bean
+	 *
+	 * @return void
+	 */
+	public static function checkType( $type )
+	{
+		if ( !preg_match( '/^[a-z0-9]+$/', $type ) ) {
+			throw new RedException( 'Invalid type: ' . $type );
+		}
+	}
+
+	/**
 	 * Dispenses a new RedBean OODB Bean for use with
 	 * the rest of the methods.
 	 *
 	 * @param OODB         $oodb              OODB
 	 * @param string|array $typeOrBeanArray   type or bean array to import
-	 * @param integer      $number            number of beans to dispense
+	 * @param integer      $num               number of beans to dispense
 	 * @param boolean	   $alwaysReturnArray if TRUE always returns the result as an array
 	 *
 	 * @return array|OODBBean
@@ -56,9 +73,7 @@ class DispenseHelper
 			$type = $typeOrBeanArray;
 		}
 
-		if ( !preg_match( '/^[a-z0-9]+$/', $type ) ) {
-			throw new RedException( 'Invalid type: ' . $type );
-		}
+		self::checkType( $type );
 
 		$beanOrBeans = $oodb->dispense( $type, $num, $alwaysReturnArray );
 

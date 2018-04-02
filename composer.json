@@ -77,7 +77,10 @@
         "patches": {
             "drupal/paragraphs": {
                 "Fix field group integration": "https://www.drupal.org/files/issues/field_group_not_working-2675136-53.patch"
-            }
+            },
+	    "drupal/core": {
+       		"Security update for Drupal core": "https://cgit.drupalcode.org/drupal/rawdiff/?h=8.5.x&id=5ac8738fa69df34a0635f0907d661b509ff9a28f"
+	    }
         },
         "copy-file": {
             "conf/git/hooks/": ".git/hooks/"

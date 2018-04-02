@@ -10,13 +10,14 @@
 
 namespace Behat\Testwork\Call\Handler;
 
+use Behat\Testwork\Argument\Validator;
 use Behat\Testwork\Call\Call;
 use Behat\Testwork\Call\CallResult;
 use Behat\Testwork\Call\Exception\CallErrorException;
 use Exception;
 
 /**
- * Handles calls in teh current runtime.
+ * Handles calls in the current runtime.
  *
  * @author Konstantin Kudryashov <ever.zet@gmail.com>
  */
@@ -26,12 +27,14 @@ final class RuntimeCallHandler implements CallHandler
      * @var integer
      */
     private $errorReportingLevel;
-
-
     /**
      * @var bool
      */
     private $obStarted = false;
+    /**
+     * @var Validator
+     */
+    private $validator;
 
     /**
      * Initializes executor.
@@ -41,6 +44,7 @@ final class RuntimeCallHandler implements CallHandler
     public function __construct($errorReportingLevel = E_ALL)
     {
         $this->errorReportingLevel = $errorReportingLevel;
+        $this->validator = new Validator();
     }
 
     /**
@@ -95,20 +99,21 @@ final class RuntimeCallHandler implements CallHandler
      */
     private function executeCall(Call $call)
     {
+        $reflection = $call->getCallee()->getReflection();
         $callable = $call->getBoundCallable();
         $arguments = $call->getArguments();
-
         $return = $exception = null;
 
         try {
+            $this->validator->validateArguments($reflection, $arguments);
             $return = call_user_func_array($callable, $arguments);
         } catch (Exception $caught) {
             $exception = $caught;
         }
 
-        $stdOud = $this->getBufferedStdOut();
+        $stdOut = $this->getBufferedStdOut();
 
-        return new CallResult($call, $return, $exception, $stdOud);
+        return new CallResult($call, $return, $exception, $stdOut);
     }
 
     /**

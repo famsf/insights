@@ -74,3 +74,32 @@
     background-color: transparentize($background-d, .8);
   }
 }
+
+.l-2up {
+
+    .horizontal-slider__wrapper {
+        background: none;
+        
+        ul {
+            margin: 0;
+        }
+        
+    }
+    
+    .horizontal-slider-controls-direction {
+            
+        a {
+          background-color: inherit;
+          top: 38%;
+        }
+            
+        .horizontal-slider-next {
+          right: 0;
+        }
+            
+        .horizontal-slider-prev {
+          left: 0;
+        }
+    }
+
+}

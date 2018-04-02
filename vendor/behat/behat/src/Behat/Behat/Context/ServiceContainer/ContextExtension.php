@@ -14,6 +14,7 @@ use Behat\Behat\Definition\ServiceContainer\DefinitionExtension;
 use Behat\Behat\Snippet\ServiceContainer\SnippetExtension;
 use Behat\Testwork\Argument\ServiceContainer\ArgumentExtension;
 use Behat\Testwork\Autoloader\ServiceContainer\AutoloaderExtension;
+use Behat\Testwork\Cli\ServiceContainer\CliExtension;
 use Behat\Testwork\Environment\ServiceContainer\EnvironmentExtension;
 use Behat\Testwork\Filesystem\ServiceContainer\FilesystemExtension;
 use Behat\Testwork\ServiceContainer\Extension;
@@ -39,6 +40,8 @@ final class ContextExtension implements Extension
      * Available services
      */
     const FACTORY_ID = 'context.factory';
+    const CONTEXT_SNIPPET_GENERATOR_ID = 'snippet.generator.context';
+    const AGGREGATE_RESOLVER_FACTORY_ID = 'context.argument.aggregate_resolver_factory';
 
     /*
      * Available extension points
@@ -49,6 +52,7 @@ final class ContextExtension implements Extension
     const READER_TAG = 'context.reader';
     const ANNOTATION_READER_TAG = 'context.annotation_reader';
     const CLASS_GENERATOR_TAG = 'context.class_generator';
+    const SUITE_SCOPED_RESOLVER_FACTORY_TAG = 'context.argument.suite_resolver_factory';
 
     /**
      * @var ServiceProcessor
@@ -93,11 +97,13 @@ final class ContextExtension implements Extension
     public function load(ContainerBuilder $container, array $config)
     {
         $this->loadFactory($container);
+        $this->loadArgumentResolverFactory($container);
         $this->loadEnvironmentHandler($container);
         $this->loadEnvironmentReader($container);
         $this->loadSuiteSetup($container);
         $this->loadSnippetAppender($container);
         $this->loadSnippetGenerators($container);
+        $this->loadSnippetsController($container);
         $this->loadDefaultClassGenerators($container);
         $this->loadDefaultContextReaders($container);
     }
@@ -108,6 +114,7 @@ final class ContextExtension implements Extension
     public function process(ContainerBuilder $container)
     {
         $this->processClassResolvers($container);
+        $this->processArgumentResolverFactories($container);
         $this->processArgumentResolvers($container);
         $this->processContextInitializers($container);
         $this->processContextReaders($container);
@@ -129,6 +136,17 @@ final class ContextExtension implements Extension
     }
 
     /**
+     * Loads argument resolver factory used in the environment handler.
+     *
+     * @param ContainerBuilder $container
+     */
+    private function loadArgumentResolverFactory(ContainerBuilder $container)
+    {
+        $definition = new Definition('Behat\Behat\Context\Argument\CompositeArgumentResolverFactory');
+        $container->setDefinition(self::AGGREGATE_RESOLVER_FACTORY_ID, $definition);
+    }
+
+    /**
      * Loads context environment handlers.
      *
      * @param ContainerBuilder $container
@@ -136,7 +154,8 @@ final class ContextExtension implements Extension
     private function loadEnvironmentHandler(ContainerBuilder $container)
     {
         $definition = new Definition('Behat\Behat\Context\Environment\Handler\ContextEnvironmentHandler', array(
-            new Reference(self::FACTORY_ID)
+            new Reference(self::FACTORY_ID),
+            new Reference(self::AGGREGATE_RESOLVER_FACTORY_ID)
         ));
         $definition->addTag(EnvironmentExtension::HANDLER_TAG, array('priority' => 50));
         $container->setDefinition(self::getEnvironmentHandlerId(), $definition);
@@ -194,7 +213,20 @@ final class ContextExtension implements Extension
             new Reference(DefinitionExtension::PATTERN_TRANSFORMER_ID)
         ));
         $definition->addTag(SnippetExtension::GENERATOR_TAG, array('priority' => 50));
-        $container->setDefinition(SnippetExtension::GENERATOR_TAG . '.context', $definition);
+        $container->setDefinition(self::CONTEXT_SNIPPET_GENERATOR_ID, $definition);
+    }
+
+    /**
+     * @param ContainerBuilder $container
+     */
+    protected function loadSnippetsController(ContainerBuilder $container)
+    {
+        $definition = new Definition('Behat\Behat\Context\Cli\ContextSnippetsController', array(
+            new Reference(self::CONTEXT_SNIPPET_GENERATOR_ID),
+            new Reference(TranslatorExtension::TRANSLATOR_ID)
+        ));
+        $definition->addTag(CliExtension::CONTROLLER_TAG, array('priority' => 410));
+        $container->setDefinition(CliExtension::CONTROLLER_TAG . '.context_snippets', $definition);
     }
 
     /**
@@ -238,7 +270,7 @@ final class ContextExtension implements Extension
     }
 
     /**
-     * Processes all context initializers.
+     * Processes all class resolvers.
      *
      * @param ContainerBuilder $container
      */
@@ -253,7 +285,22 @@ final class ContextExtension implements Extension
     }
 
     /**
-     * Processes all context initializers.
+     * Processes all argument resolver factories.
+     *
+     * @param ContainerBuilder $container
+     */
+    private function processArgumentResolverFactories($container)
+    {
+        $references = $this->processor->findAndSortTaggedServices($container, self::SUITE_SCOPED_RESOLVER_FACTORY_TAG);
+        $definition = $container->getDefinition(self::AGGREGATE_RESOLVER_FACTORY_ID);
+
+        foreach ($references as $reference) {
+            $definition->addMethodCall('registerFactory', array($reference));
+        }
+    }
+
+    /**
+     * Processes all argument resolvers.
      *
      * @param ContainerBuilder $container
      */
