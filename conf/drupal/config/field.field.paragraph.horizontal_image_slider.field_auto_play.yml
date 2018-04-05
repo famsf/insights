@@ -1,0 +1,21 @@
+uuid: f0493389-6e2d-40a9-94ab-ea5b122f03c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_auto_play
+    - paragraphs.paragraphs_type.horizontal_image_slider
+  module:
+    - options
+id: paragraph.horizontal_image_slider.field_auto_play
+field_name: field_auto_play
+entity_type: paragraph
+bundle: horizontal_image_slider
+label: Auto-play
+description: 'Should the slider move on its own? Defaults to "No" if nothing is chosen.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

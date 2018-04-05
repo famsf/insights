@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.horizontal_image_slider.field_auto_play
     - field.field.paragraph.horizontal_image_slider.field_max_slides_in_view
     - field.field.paragraph.horizontal_image_slider.field_min_slides_in_view
     - field.field.paragraph.horizontal_image_slider.field_number_of_slides_to_move
@@ -10,11 +11,19 @@ dependencies:
     - paragraphs.paragraphs_type.horizontal_image_slider
   module:
     - entity_reference_revisions
+    - options
 id: paragraph.horizontal_image_slider.default
 targetEntityType: paragraph
 bundle: horizontal_image_slider
 mode: default
 content:
+  field_auto_play:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_max_slides_in_view:
     weight: 1
     label: above

@@ -46,7 +46,7 @@ view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class
 ]
 %}
 <div {{ attributes.addClass(classes) }} >
-  <ul class="js-horizontal-slider horizontal-slider" data-maxslides="{{ paragraph.field_max_slides_in_view.value }}" data-minslides="{{ paragraph.field_min_slides_in_view.value }}" data-moveslides="{{ paragraph.field_number_of_slides_to_move.value }}">
+  <ul class="js-horizontal-slider horizontal-slider" data-auto="{{ paragraph.field_auto_play.value }}" data-maxslides="{{ paragraph.field_max_slides_in_view.value }}" data-minslides="{{ paragraph.field_min_slides_in_view.value }}" data-moveslides="{{ paragraph.field_number_of_slides_to_move.value }}">
     {{ content.field_slide }}
   </ul>
   <div class="horizontal-slider-controls">

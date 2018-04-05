@@ -1,0 +1,27 @@
+uuid: 35373821-6ed8-45d8-a443-b7be1dd2e15c
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_auto_play
+field_name: field_auto_play
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'false'
+      label: 'No'
+    -
+      value: 'true'
+      label: 'Yes'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.paragraph.horizontal_image_slider.field_auto_play
     - field.field.paragraph.horizontal_image_slider.field_max_slides_in_view
     - field.field.paragraph.horizontal_image_slider.field_min_slides_in_view
     - field.field.paragraph.horizontal_image_slider.field_number_of_slides_to_move
@@ -15,6 +16,12 @@ targetEntityType: paragraph
 bundle: horizontal_image_slider
 mode: default
 content:
+  field_auto_play:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_max_slides_in_view:
     weight: 1
     settings:
@@ -46,6 +53,9 @@ content:
       add_mode: dropdown
       form_display_mode: default
     third_party_settings: {  }
+    region: content
+  translation:
+    weight: 10
     region: content
 hidden:
   created: true
