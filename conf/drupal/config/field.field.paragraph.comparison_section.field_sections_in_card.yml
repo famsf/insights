@@ -7,6 +7,7 @@ dependencies:
     - paragraphs.paragraphs_type.1up_section
     - paragraphs.paragraphs_type.2up_section
     - paragraphs.paragraphs_type.comparison_section
+    - paragraphs.paragraphs_type.horizontal_image_slider
   module:
     - entity_reference_revisions
 id: paragraph.comparison_section.field_sections_in_card
@@ -26,6 +27,7 @@ settings:
     target_bundles:
       1up_section: 1up_section
       2up_section: 2up_section
+      horizontal_image_slider: horizontal_image_slider
     target_bundles_drag_drop:
       1up_section:
         enabled: true
@@ -55,8 +57,8 @@ settings:
         weight: 40
         enabled: false
       horizontal_image_slider:
+        enabled: true
         weight: 41
-        enabled: false
       image_comparison_3up:
         weight: 42
         enabled: false
@@ -73,6 +75,9 @@ settings:
         weight: 46
         enabled: false
       link_or_download_button:
+        weight: 47
+        enabled: false
+      image_slider:
         weight: 47
         enabled: false
       overlay_image:
@@ -103,6 +108,9 @@ settings:
         weight: 56
         enabled: false
       timeline_item:
+        weight: 57
+        enabled: false
+      slider_image:
         weight: 57
         enabled: false
       video_embed:

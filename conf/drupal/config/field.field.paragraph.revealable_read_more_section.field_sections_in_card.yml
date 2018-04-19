@@ -6,6 +6,7 @@ dependencies:
     - field.storage.paragraph.field_sections_in_card
     - paragraphs.paragraphs_type.1up_section
     - paragraphs.paragraphs_type.2up_section
+    - paragraphs.paragraphs_type.horizontal_image_slider
     - paragraphs.paragraphs_type.revealable_read_more_section
   module:
     - entity_reference_revisions
@@ -22,9 +23,11 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
+    negate: 0
     target_bundles:
       1up_section: 1up_section
       2up_section: 2up_section
+      horizontal_image_slider: horizontal_image_slider
     target_bundles_drag_drop:
       1up_section:
         enabled: true
@@ -32,19 +35,97 @@ settings:
       2up_section:
         enabled: true
         weight: 9
-      3up_section:
-        weight: 10
-        enabled: false
       card_section:
         weight: 11
         enabled: false
       revealable_read_more_section:
         weight: 12
         enabled: false
-      section_divider:
-        weight: 13
-        enabled: false
       text_area:
         weight: 14
+        enabled: false
+      audio_component:
+        weight: 36
+        enabled: false
+      audio_tour_info:
+        weight: 37
+        enabled: false
+      background_video:
+        weight: 38
+        enabled: false
+      comparison_image:
+        weight: 40
+        enabled: false
+      comparison_section:
+        weight: 41
+        enabled: false
+      footer_feature:
+        weight: 42
+        enabled: false
+      horizontal_image_slider:
+        enabled: true
+        weight: 43
+      image_comparison_3up:
+        weight: 44
+        enabled: false
+      image_comparison_section:
+        weight: 45
+        enabled: false
+      image_slide:
+        weight: 46
+        enabled: false
+      image_slider:
+        weight: 47
+        enabled: false
+      image_with_revealable_caption:
+        weight: 48
+        enabled: false
+      image_with_zoomable_markers:
+        weight: 49
+        enabled: false
+      link_or_download_button:
+        weight: 50
+        enabled: false
+      overlay_image:
+        weight: 51
+        enabled: false
+      photo_credits:
+        weight: 52
+        enabled: false
+      pull_quote:
+        weight: 53
+        enabled: false
+      responsive_image:
+        weight: 54
+        enabled: false
+      simple_image_slider:
+        weight: 56
+        enabled: false
+      slider_image:
+        weight: 57
+        enabled: false
+      sponsor:
+        weight: 58
+        enabled: false
+      timeline:
+        weight: 60
+        enabled: false
+      timeline_item:
+        weight: 61
+        enabled: false
+      video_embed:
+        weight: 62
+        enabled: false
+      video_source:
+        weight: 63
+        enabled: false
+      word_fader:
+        weight: 64
+        enabled: false
+      zoomable_area:
+        weight: 65
+        enabled: false
+      zoom_hover_image:
+        weight: 66
         enabled: false
 field_type: entity_reference_revisions
