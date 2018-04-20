@@ -503,7 +503,8 @@ figcaption {
   }
 }
 
-.js-figcaption--revealed::after {
+.js-figcaption--revealed::after,
+.figcaption::after {
   border-bottom-color: $famsf-coral;
 }
 
