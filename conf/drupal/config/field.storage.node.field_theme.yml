@@ -35,6 +35,9 @@ settings:
     -
       value: legion-light-casanova
       label: 'Legion Light Casanova'
+    -
+      value: de-young-anderson
+      label: 'de Young Anderson'
   allowed_values_function: ''
 module: options
 locked: false
