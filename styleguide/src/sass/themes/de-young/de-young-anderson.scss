@@ -505,7 +505,7 @@ figcaption {
 
 .js-figcaption--revealed::after,
 .figcaption::after {
-  border-bottom-color: $famsf-coral;
+  border-bottom-color: $famsf-coral !important;
 }
 
 .figcaption-cta .icon--small svg,
