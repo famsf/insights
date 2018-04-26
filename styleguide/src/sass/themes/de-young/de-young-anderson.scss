@@ -69,12 +69,12 @@ $teal: #36545b;
 $blue-gray: #213538;
 $blue-black: #0f1616;
 
-// Casanova-specific palette
+// Theme-specific palette
 
 $cult-yellow: #ffc603;
 $cult-gray: #5e5e5e;
 $cult-beige: #5e5e5e;
-$cult-blue: #225478;
+$anderson-blue: #294783;
 
 $background-a: $white;
 $background-b: $white;
@@ -87,8 +87,8 @@ $text-color: $famsf-gray-dark;
 $text-color-invert: $white;
 $primary: $famsf-gray-dark;
 $primary-active: rgba($famsf-gray-dark, .7);
-$secondary: red;
-$tertiary: $famsf-blue-light;
+$secondary: $anderson-blue;
+$tertiary: $anderson-blue;
 $citation: $gray-medium;
 $hero-color: $white;
 
@@ -192,7 +192,7 @@ $icon-stroke-active: null;
 }
 
 .standalone-quote::before {
-  background-color: $famsf-blue-light !important;
+  background-color: $anderson-blue !important;
  }
 
 // Style the timeline so it doesn't look like a mess
@@ -249,11 +249,11 @@ ul.timeline-list.alternate li.timeline-item.odd .timeline-item-wrapper .timeline
 }
 
 ul.timeline-list li.timeline-item .timeline-item-wrapper span.timeline-marker {
-    border-color: $famsf-blue-light;
+    border-color: rgba($anderson-blue, .8);
 }
 
 ul.timeline-list:after {
-    background-color: $famsf-blue-light;
+    background-color: rgba($anderson-blue, .8);
 }
 
 // Image fader with BXSlider jQuery
@@ -264,11 +264,11 @@ ul.timeline-list:after {
 }
 
 .color-block-button--full {
-  color: $gray-dark !important;
+  color: #fff !important;
 }
 
 .comparison__button {
-  background-color: $famsf-coral !important;
+  background-color: rgba($anderson-blue, .8) !important;
 }
 
 .comparison__answer {
@@ -357,18 +357,18 @@ ul.timeline-list:after {
 
 .button-with-icon {
   //background: $cult-beige !important;
-  color: $famsf-coral !important;
+  color: $anderson-blue !important;
   &:active,
   &:hover,
   &:focus {
-    color: $famsf-coral!important;
+    color: rgba($anderson-blue, .4) !important;
     background: $white !important;
   }
 
 }
 
 button.button-with-icon.js-icon--read-more svg {
-  fill: $famsf-coral !important;
+  fill: $anderson-blue !important;
 }
 
 //close section
@@ -417,7 +417,7 @@ button.button-with-icon.js-icon--read-more svg {
       color: $white !important;
     }
     .active {
-      background-color: $famsf-coral !important;
+      background-color: rgba($anderson-blue, .8) !important;
       color: $white !important;
     }
 
@@ -426,7 +426,7 @@ button.button-with-icon.js-icon--read-more svg {
 .dashboard__nav-item:active,
 .dashboard__nav-item:focus,
 .dashboard__nav-item:hover {
-  background-color: $famsf-coral !important;
+  background-color: rgba($anderson-blue, .8) !important;
   color: $white !important;
 }
 
@@ -467,7 +467,7 @@ button.button-with-icon.js-icon--read-more svg {
 
 .lede {
   border: none !important;
-  color: $famsf-blue-light !important;
+  color: $anderson-blue !important;
 }
 
 //
@@ -485,7 +485,7 @@ button.button-with-icon.js-icon--read-more svg {
 .pullquote {
   margin: 1.5em 0 1em 2.5em;
   font-weight: 600;
-  color: $famsf-blue-light;
+  color: rgba($anderson-blue, .6);
 }
 
 .deep-dive {
@@ -495,7 +495,7 @@ button.button-with-icon.js-icon--read-more svg {
 
 .figcaption,
 figcaption {
-  background-color: $famsf-coral !important;
+  background-color: $anderson-blue !important;
   color: $white !important;
 
   p:first-child {
@@ -523,15 +523,15 @@ figcaption {
   color: $famsf-gray-dark;
   border-bottom: 20px solid;
   border-top: 20px solid;
-  border-color: $famsf-blue-light;
+  border-color: $anderson-blue;
 
   .wysiwyg-enlarged,
   h2 {
-    color: $famsf-blue-light;
+    color: rgba($anderson-blue, .6);
   }
 
   a {
-    color: $famsf-coral;
+    color: rgba($anderson-blue, .6);
   }
 
   .figcaption-cta .icon--small svg,
@@ -540,12 +540,12 @@ figcaption {
   .figcaption-cta:hover .icon--small svg,
   .figcaption-cta:link .icon--small svg,
   .figcaption-cta:visited .icon--small svg {
-    fill: $famsf-coral;
+    fill: rgba($anderson-blue, .8);;
   }
 
   .figcaption,
   figcaption {
-    background-color: $famsf-coral !important;
+    background-color: $anderson-blue !important;
     color: $white !important;
 
     p:first-child {
@@ -554,7 +554,7 @@ figcaption {
   }
 
   figcaption::after {
-    border-bottom-color: $famsf-coral !important;
+    border-bottom-color: $anderson-blue !important;
   }
 
 
@@ -573,8 +573,8 @@ figcaption {
 }
 
 svg {
-    fill: $famsf-coral !important;
-    color: $famsf-coral !important;
+    fill: $anderson-blue !important;
+    color: $anderson-blue !important;
 }
 
 
