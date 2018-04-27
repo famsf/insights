@@ -505,7 +505,7 @@ figcaption {
 
 .js-figcaption--revealed::after,
 .figcaption::after {
-  border-bottom-color: $famsf-coral !important;
+  border-bottom-color: $anderson-blue !important;
 }
 
 .figcaption-cta .icon--small svg,
@@ -515,6 +515,10 @@ figcaption {
 .figcaption-cta:link .icon--small svg,
 .figcaption-cta:visited .icon--small svg {
   fill: $black !important;
+}
+
+.wysiwyg-enlarged {
+    color: rgba($anderson-blue, .6) !important;
 }
 
 .comparison-section {
