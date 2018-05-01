@@ -12,7 +12,7 @@ $famsf-blue-dark: #0f6088;
 // FAMSF Yellows
 $famsf-coral: #d15127;
 // FAMSF Grays
-$famsf-gray-light: #eaecf0recta;
+$famsf-gray-light: #eaecf0;
 $famsf-gray-medium: #c0c6d2;
 $famsf-gray-dark: #3e3e3e;
 
@@ -124,7 +124,7 @@ $icon-stroke-active: null;
 
 .footer {
   color: $famsf-gray-dark;
-  background: $famsf-gray-light !important;
+  background: rgba($anderson-blue, .1) !important;
 
   h2,
   h3,
@@ -249,11 +249,11 @@ ul.timeline-list.alternate li.timeline-item.odd .timeline-item-wrapper .timeline
 }
 
 ul.timeline-list li.timeline-item .timeline-item-wrapper span.timeline-marker {
-    border-color: $anderson-blue;
+    border-color: rgba($anderson-blue, .3);
 }
 
 ul.timeline-list:after {
-    background-color: $anderson-blue;
+    background-color: rgba($anderson-blue, .3);
 }
 
 // Image fader with BXSlider jQuery
@@ -491,7 +491,7 @@ button.button-with-icon.js-icon--read-more svg {
 
 .deep-dive {
   color: $famsf-gray-dark;
-  background: $famsf-gray-light !important;
+  background: rgba($anderson-blue, .1) !important;
 }
 
 .figcaption,
@@ -524,7 +524,7 @@ figcaption {
 
 .comparison-section {
   padding: 1em 0;
-  background: $famsf-gray-light;
+  background: rgba($anderson-blue, .1);
   color: $famsf-gray-dark;
   border-bottom: 20px solid;
   border-top: 20px solid;
