@@ -12,8 +12,8 @@ $famsf-blue-dark: #0f6088;
 // FAMSF Yellows
 $famsf-coral: #d15127;
 // FAMSF Grays
-$famsf-gray-light: #ececec;
-$famsf-gray-medium: #a8abad;
+$famsf-gray-light: #eaecf0recta;
+$famsf-gray-medium: #c0c6d2;
 $famsf-gray-dark: #3e3e3e;
 
 
@@ -74,7 +74,7 @@ $blue-black: #0f1616;
 $cult-yellow: #ffc603;
 $cult-gray: #5e5e5e;
 $cult-beige: #5e5e5e;
-$anderson-blue: #294783;
+$anderson-blue: #30426a;
 
 $background-a: $white;
 $background-b: $white;
@@ -143,7 +143,7 @@ $icon-stroke-active: null;
 .footer-section__title {
 
     a:link {
-        color: rgba($anderson-blue, .7) !important;
+        color: $anderson-blue !important;
     }
 }
 
@@ -249,11 +249,11 @@ ul.timeline-list.alternate li.timeline-item.odd .timeline-item-wrapper .timeline
 }
 
 ul.timeline-list li.timeline-item .timeline-item-wrapper span.timeline-marker {
-    border-color: rgba($anderson-blue, .8);
+    border-color: $anderson-blue;
 }
 
 ul.timeline-list:after {
-    background-color: rgba($anderson-blue, .8);
+    background-color: $anderson-blue;
 }
 
 // Image fader with BXSlider jQuery
@@ -265,10 +265,11 @@ ul.timeline-list:after {
 
 .color-block-button--full {
   color: #fff !important;
+  background: $anderson-blue !important;
 }
 
 .comparison__button {
-  background-color: rgba($anderson-blue, .8) !important;
+  background-color: $anderson-blue !important;
 }
 
 .comparison__answer {
@@ -361,7 +362,7 @@ ul.timeline-list:after {
   &:active,
   &:hover,
   &:focus {
-    color: rgba($anderson-blue, .4) !important;
+    color: $anderson-blue !important;
     background: $white !important;
   }
 
@@ -389,7 +390,7 @@ button.button-with-icon.js-icon--read-more svg {
 .rectangles-bg {
   border-width: 15px !important;
   border-style: solid !important;
-  border-color: $famsf-gray-light;
+  border-color: $famsf-gray-medium;
   border-image-source: none !important;
   border-image-slice: none;
   border-image-repeat: none;
@@ -417,7 +418,7 @@ button.button-with-icon.js-icon--read-more svg {
       color: $white !important;
     }
     .active {
-      background-color: rgba($anderson-blue, .8) !important;
+      background-color: $anderson-blue !important;
       color: $white !important;
     }
 
@@ -426,7 +427,7 @@ button.button-with-icon.js-icon--read-more svg {
 .dashboard__nav-item:active,
 .dashboard__nav-item:focus,
 .dashboard__nav-item:hover {
-  background-color: rgba($anderson-blue, .8) !important;
+  background-color: $anderson-blue !important;
   color: $white !important;
 }
 
@@ -485,7 +486,7 @@ button.button-with-icon.js-icon--read-more svg {
 .pullquote {
   margin: 1.5em 0 1em 2.5em;
   font-weight: 600;
-  color: rgba($anderson-blue, .6);
+  color: $anderson-blue;
 }
 
 .deep-dive {
@@ -518,7 +519,7 @@ figcaption {
 }
 
 .wysiwyg-enlarged {
-    color: rgba($anderson-blue, .6) !important;
+    color: $anderson-blue !important;
 }
 
 .comparison-section {
@@ -531,11 +532,11 @@ figcaption {
 
   .wysiwyg-enlarged,
   h2 {
-    color: rgba($anderson-blue, .6);
+    color: $anderson-blue;
   }
 
   a {
-    color: rgba($anderson-blue, .6);
+    color: $anderson-blue;
   }
 
   .figcaption-cta .icon--small svg,
@@ -544,7 +545,7 @@ figcaption {
   .figcaption-cta:hover .icon--small svg,
   .figcaption-cta:link .icon--small svg,
   .figcaption-cta:visited .icon--small svg {
-    fill: rgba($anderson-blue, .8);;
+    fill: $anderson-blue;
   }
 
   .figcaption,
