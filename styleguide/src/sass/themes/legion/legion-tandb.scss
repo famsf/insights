@@ -1,0 +1,642 @@
+/**
+ * @file
+ * Defines the custom De Young Light theme.
+ *
+ * When loaded, this file will override the base color scheme.
+ */
+
+// FAMSF color palette
+// FAMSF Blues
+$famsf-blue-light: #1c90cf;
+$famsf-blue-dark: #0f6088;
+// FAMSF Yellows
+$famsf-coral: #d15127;
+// FAMSF Grays
+$famsf-gray-light: #eaecf0;
+$famsf-gray-medium: #c0c6d2;
+$famsf-gray-dark: #3e3e3e;
+
+
+$black: #000000s;
+$gray-dark: #3e3e3e;
+$gray-medium: #a8abad;
+$gray-light: #ececec;
+$white: #fff;
+$white-10: rgba($white, .1);
+$white-20: rgba($white, .2);
+$white-30: rgba($white, .3);
+$white-60: rgba($white, .6);
+$white-80: rgba($white, .8);
+
+// oranges
+$sunshine: #ffedbd;
+$sherbet: #fcb275;
+$citrus: #e58638;
+$orange: #c14c2d;
+$clay: #bc432f;
+$rust: #bc3c2f;
+$earth: #b7342a;
+
+// red
+$red: #a83223;
+
+// blues
+$blue: #72b9c1;
+$blue-70: #9cced4;
+$blue-60: #aad5da;
+// Override this blue with Teo teal!
+$blue-40: #2a9a9a;
+// Override another blue
+$blue-30: rgba(#2a9a9a, 0.4);
+$blue-20: #e3f1f3;
+$blue-10: #edf6f7;
+
+// greens
+$green: #005244;
+$forest: #4c867c;
+$sage: #b2cbc7;
+$mint: #e5eeec;
+
+// yellows
+$yellow: #efe36e;
+$yellow-70: #f4eb99;
+$yellow-50: #f7f1b6;
+$yellow-30: #faf7d3;
+
+// teals
+$seafoam: #bacdce;
+$teal: #36545b;
+$blue-gray: #213538;
+$blue-black: #0f1616;
+
+// Theme-specific palette
+
+$cult-yellow: #d9a429;
+$cult-gray: #5e5e5e;
+$cult-beige: #5e5e5e;
+$anderson-blue: #961c1f;
+
+$background-a: $white;
+$background-b: $white;
+$background-c: $famsf-gray-medium;
+$background-d: $famsf-gray-medium;
+$pattern-a: $white;
+$pattern-b: $white;
+$border: $cult-beige;
+$text-color: $famsf-gray-dark;
+$text-color-invert: $white;
+$primary: $famsf-gray-dark;
+$primary-active: rgba($cult-yellow, .3);
+$secondary: $anderson-blue;
+$tertiary: $anderson-blue;
+$citation: $gray-medium;
+$hero-color: $white;
+
+
+
+$decorative-border: null; // Needed for Safari.
+$decorative-border-width: 2px;
+$decorative-border-style: solid;
+$decorative-border-color: $gray-light;
+$decorative-border-image: null;
+$rectangles-border: url('../../../imgs/deyoung-rectangles-light.png');
+$zoom-background: $white;
+$text-shadow-color: null;
+$hero-content-text: $famsf-gray-dark;
+$hero-content-text-active: $famsf-gray-dark;
+
+$section-hero-text: $white;
+$section-hero-shadow: $citrus;
+$section-hero-shadow-b: $orange;
+$section-hero-border-a: $famsf-coral;
+$section-hero-border-b: $rust;
+
+$next-icon: $famsf-blue-light;
+$next-icon-active: $famsf-blue-light;
+
+// icons
+$icon: $famsf-blue-light;
+$icon-active: $famsf-blue-light;
+$icon-stroke: null;
+$icon-stroke-active: null;
+
+// Let's override the footer some more, shall we?
+
+.footer {
+  color: $famsf-gray-dark;
+  background: rgba($cult-yellow, .3) !important;
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $famsf-gray-dark !important;
+  }
+
+  .footer-link:link,
+  .footer-link:visited {
+    color: $famsf-gray-dark !important;
+  }
+}
+
+.footer-section__title {
+
+    a:link {
+        color: $anderson-blue !important;
+    }
+}
+
+.section-hero__title--bold,
+.site-hero__title--bold {
+
+  h1 {
+    text-shadow: 0 1px 7px #2a2a2a !important;
+    font-family: "Roboto-Slab" !important;
+    font-weight: 500 !important;
+  }
+
+  .animated-border--top,
+  .animated-border--bottom {
+    display: none !important;
+  }
+
+}
+
+.site-hero__title--bold {
+
+  .site-hero__logo,
+  h2 {
+    background-color: transparent !important;
+    text-shadow: 0 1px 7px #2a2a2a !important;
+    font-family: "Roboto-Slab" !important;
+    font-weight: 500 !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  h2.ds-identity {
+    font-weight: 300 !important;
+    font-size: 1.52em !important;
+  }
+
+  a:link {
+    padding: 0 !important;
+  }
+
+  h1 {
+    text-transform: uppercase !important;
+    letter-spacing: .6px !important;
+    line-height: 1em !important;
+    font-size: 3.65em !important;
+  }
+
+}
+
+// Zoom Window
+
+@media (min-width: 768px) {
+    .zoom-window {
+      top: 7vw !important;
+      left: 27vw !important;
+      right: 27vw !important;
+    }
+}
+
+.zoom-window {
+    background: $famsf-gray-light !important;
+    max-height: inherit !important;
+
+    .zoom-close {
+        background: inherit !important;
+        box-shadow: none !important;
+    }
+}
+
+.zoom-marker-inner.animated.fadeInDownShort.delay-500.js-zoom-marker-inner.go {
+  background-color: $famsf-gray-light !important;
+}
+
+// Responsive wrapper for Street View iframe
+
+.embed-container {
+   position: relative;
+   padding-bottom: 56.25%;
+   height: 0;
+   overflow: hidden;
+   max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.standalone-quote::before {
+  background-color: $anderson-blue !important;
+ }
+
+// Style the timeline so it doesn't look like a mess
+
+.timeline-item {
+
+    img {
+        margin-bottom: .43em;
+    }
+
+    p {
+        max-width: 100% !important;
+        font-size: 85%;
+        line-height: 1.45em;
+    }
+
+
+}
+
+.timeline-item.odd {
+
+  .figcaption::after,
+  figcaption::after {
+      right: 0;
+      left: inherit;
+  }
+}
+
+ul.timeline-list {
+  padding: 0 3.5em;
+}
+
+@media (max-width: 768px) {
+
+    ul.timeline-list {
+        padding: 0;
+    }
+
+    .timeline-item {
+
+        img {
+            width: 100%;
+        }
+
+    }
+}
+
+ul.timeline-list.alternate li.timeline-item.even .timeline-item-wrapper .timeline-marker {
+    left: -5px;
+}
+
+ul.timeline-list.alternate li.timeline-item.odd .timeline-item-wrapper .timeline-marker {
+    right: -5px;
+}
+
+ul.timeline-list li.timeline-item .timeline-item-wrapper span.timeline-marker {
+    border-color: $anderson-blue;
+}
+
+ul.timeline-list:after {
+    background-color: $anderson-blue;
+}
+
+// Image fader with BXSlider jQuery
+
+.imagefader {
+  margin: 0 0 1em;
+  padding: 0;
+}
+
+.color-block-button--full {
+  color: #fff !important;
+  background: $anderson-blue !important;
+}
+
+.comparison__button {
+  background-color: $anderson-blue !important;
+}
+
+.comparison__answer {
+  color: $white;
+}
+
+.dashboard__nav-item a:link,
+.dashboard__nav-item a:visited {
+  color: $cult-yellow;
+}
+
+.section-hero__title--bold {
+  width: 34rem !important;
+
+  h1 {
+    text-shadow: 0 1px 7px #2a2a2a !important;
+    font-weight: 500 !important;
+    font-size: 3.25rem !important;
+  }
+
+  .animated-border--top,
+  .animated-border--bottom {
+    display: none !important;
+  }
+
+}
+
+.site-hero__title--bold {
+
+  .animated-border--top,
+  .animated-border--bottom {
+    display: none !important;
+  }
+
+  .site-hero__logo,
+  h2 {
+    background-color: transparent !important;
+    text-shadow: 0 1px 7px #2a2a2a !important;
+    font-weight: 500 !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  h2.ds-identity {
+    font-weight: 300 !important;
+    font-size: 1.52em !important;
+  }
+
+  a:link {
+    padding: 0 !important;
+  }
+
+  h1 {
+    text-transform: uppercase !important;
+    letter-spacing: .6px !important;
+    line-height: 1em !important;
+    font-size: 3.65em !important;
+    text-shadow: 0 1px 7px #2a2a2a !important;
+    font-weight: 500 !important;
+  }
+
+}
+
+.wordslider {
+
+    h1 {
+        font-size: 3em;
+        margin-top: 20px;
+    }
+}
+
+.bottom-right.section-hero__title--bold,
+.bottom-left.section-hero__title--bold {
+  padding: 0 !important;
+
+}
+
+.horizontal-slider__wrapper,
+.deep-dive {
+  box-shadow: none !important;
+}
+
+.cls-2 {
+  stroke-width: 0 !important;
+}
+
+.button-with-icon {
+  //background: $cult-beige !important;
+  color: $anderson-blue !important;
+  &:active,
+  &:hover,
+  &:focus {
+    color: $anderson-blue !important;
+    background: $white !important;
+  }
+
+}
+
+button.button-with-icon.js-icon--read-more svg {
+  fill: $anderson-blue !important;
+}
+
+//close section
+.button-with-icon.js-icon--read-more:hover,
+.button-with-icon.js-icon--read-more:active,
+.button-with-icon.js-icon--read-more:focus {
+  background: $famsf-gray-light !important;
+}
+
+// Move the next page button
+
+.next-page.hero {
+  margin-top: -50px !important;
+}
+
+// Get rid of the border rectangles
+
+.rectangles-bg {
+  border-width: 15px !important;
+  border-style: solid !important;
+  border-color: transparent;
+  border-image-source: none !important;
+  border-image-slice: none;
+  border-image-repeat: none;
+}
+
+.preCredit {
+  padding: .75em 1em 0;
+  font-weight: 400;
+  font-size: .75em;
+  line-height: 1.45em;
+}
+
+// Change the dashboard color scheme
+
+.dashboard__nav-item {
+
+    a:link,
+    a:visited {
+      color: $famsf-gray-dark;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      color: $white !important;
+    }
+    .active {
+      background-color: $anderson-blue !important;
+      color: $white !important;
+    }
+
+}
+
+.dashboard__nav-item:active,
+.dashboard__nav-item:focus,
+.dashboard__nav-item:hover {
+  background-color: $anderson-blue !important;
+  color: $white !important;
+}
+
+// Image zoom fun
+
+.image-zoom-container::before {
+  position: absolute;
+  z-index: 999;
+  right: 0px;
+  top: 0px;
+  content: "";
+  width: 100px;
+  height: 100px;
+  border-color: transparent #fff transparent transparent;
+  background: url(/themes/custom/famsf_digital_stories_theme/imgs/zoomit.png) no-repeat 0 0;
+  transition: .2s opacity;
+}
+
+.image-zoom-container:hover::before {
+   opacity: 0;
+   z-index: -999;
+}
+
+//.paragraph--type--zoom-hover-image {
+//  margin-bottom: 3.5em;
+//}
+
+.paragraph--type--_up-section {
+
+  .card-section {
+    padding: 0 0 2.25em;
+
+    .l-1up p {
+      max-width: 100%;
+    }
+  }
+}
+
+.lede {
+  border: none !important;
+  color: $anderson-blue !important;
+}
+
+//
+
+@media (max-width: 767px) {
+
+  .image-zoom-container::before {
+    width: 70px;
+    height: 70px;
+    background-size: 70px 70px;
+  }
+
+}
+
+.pullquote {
+  margin: 1.5em 0 1em 2.5em;
+  font-weight: 600;
+  color: $anderson-blue;
+}
+
+.deep-dive {
+  color: $famsf-gray-dark;
+  background: rgba($cult-yellow, .3) !important;
+}
+
+.figcaption,
+figcaption {
+  background-color: $anderson-blue !important;
+  color: $white !important;
+
+  p:first-child {
+    color: $white !important;
+  }
+}
+
+.js-figcaption--revealed::after,
+.figcaption::after {
+  border-bottom-color: $anderson-blue !important;
+}
+
+.figcaption-cta .icon--small svg,
+.figcaption-cta:active .icon--small svg,
+.figcaption-cta:focus .icon--small svg,
+.figcaption-cta:hover .icon--small svg,
+.figcaption-cta:link .icon--small svg,
+.figcaption-cta:visited .icon--small svg {
+  fill: $black !important;
+}
+
+.wysiwyg-enlarged {
+    color: $anderson-blue !important;
+}
+
+.comparison-section {
+  padding: 1em 0;
+  background: rgba($cult-yellow, .3);
+  color: $famsf-gray-dark;
+  border-bottom: 20px solid;
+  border-top: 20px solid;
+  border-color: $anderson-blue;
+
+  .wysiwyg-enlarged,
+  h2 {
+    color: $anderson-blue;
+  }
+
+  a {
+    color: $anderson-blue;
+  }
+
+  .figcaption-cta .icon--small svg,
+  .figcaption-cta:active .icon--small svg,
+  .figcaption-cta:focus .icon--small svg,
+  .figcaption-cta:hover .icon--small svg,
+  .figcaption-cta:link .icon--small svg,
+  .figcaption-cta:visited .icon--small svg {
+    fill: $anderson-blue;
+  }
+
+  .figcaption,
+  figcaption {
+    background-color: $anderson-blue !important;
+    color: $white !important;
+
+    p:first-child {
+      color: $white !important;
+    }
+  }
+
+  figcaption::after {
+    border-bottom-color: $anderson-blue !important;
+  }
+
+
+  .comparison-section-wrapper {
+    padding: 2em 0 0;
+
+    .card-section {
+      padding: 0;
+    }
+  }
+}
+
+.qp_btna input {
+  background-color: $famsf-coral !important;
+  outline-color: $famsf-coral !important;
+}
+
+svg {
+    fill: $anderson-blue !important;
+    color: $anderson-blue !important;
+}
+
+
+// Import theme specific components used in global
+// @import 'legion-section-hero';
+@import 'legion-section-hero';
+
+// Import the global theme styles.
+@import '../../global';
+
+// Import theme specific components
+@import 'legion-typography';
+@import 'legion-wysiwyg';
+@import 'legion-figure';

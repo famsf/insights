@@ -96,3 +96,11 @@ de-young-anderson:
         css/themes/de-young/de-young-anderson.css: {}
   js:
     //use.typekit.net/exo1zov.js: { every_page: true }
+    
+legion-tandb:
+  header: true
+  css:
+      theme:
+        css/themes/legion/legion-tandb.css: {}
+  js:
+    //use.typekit.net/exo1zov.js: { every_page: true }
