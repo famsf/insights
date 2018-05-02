@@ -38,6 +38,9 @@ settings:
     -
       value: de-young-anderson
       label: 'de Young Anderson'
+    -
+      value: legion-tandb
+      label: 'Truth and Beauty'
   allowed_values_function: ''
 module: options
 locked: false
