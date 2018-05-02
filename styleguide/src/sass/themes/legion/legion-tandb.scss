@@ -13,7 +13,7 @@ $famsf-blue-dark: #0f6088;
 $famsf-coral: #d15127;
 // FAMSF Grays
 $famsf-gray-light: #eaecf0;
-$famsf-gray-medium: #c0c6d2;
+$famsf-gray-medium: #8a8a8a;
 $famsf-gray-dark: #3e3e3e;
 
 
@@ -422,7 +422,7 @@ button.button-with-icon.js-icon--read-more svg {
 .button-with-icon.js-icon--read-more:hover,
 .button-with-icon.js-icon--read-more:active,
 .button-with-icon.js-icon--read-more:focus {
-  background: $famsf-gray-light !important;
+  background: rgba($cult-yellow, .3) !important;
 }
 
 // Move the next page button
@@ -533,6 +533,7 @@ button.button-with-icon.js-icon--read-more svg {
   margin: 1.5em 0 1em 2.5em;
   font-weight: 600;
   color: $anderson-blue;
+  font-family: "Roboto-Slab" !important;
 }
 
 .deep-dive {
