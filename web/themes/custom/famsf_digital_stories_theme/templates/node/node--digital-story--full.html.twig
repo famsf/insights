@@ -129,7 +129,9 @@ boldTitle?'':'animated delay-1500',
                     {% else %}
                     <span class="site-hero__logo {{ animatedClasses|join(' ') }}"><a href="https://deyoung.famsf.org/" >de Young Museum</a></span><br />
                     {% endif %}
-                    <h2 class="{{ sectionTitleClasses|join(' ') }}">{{ node.field_exhibition_dates.value }}</h2>
+                    {% if node.field_exhibition_dates.value is not empty %}
+                      <h2 class="{{ sectionTitleClasses|join(' ') }}">{{ node.field_exhibition_dates.value }}</h2>
+                    {% endif %}
                 </div>
                 {% if not boldTitle %}
                 <div class="site-hero__rectangle top animated fadeInLeft delay-250 js-section-hero--set_height"></div>
