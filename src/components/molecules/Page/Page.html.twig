@@ -8,7 +8,7 @@
     {% elseif pageType == 'annotatedImageObject' %}
     {% else %}
       {% if pageTitle %}
-        <h2>{{ pageTitle }}</h2>
+        <h2 class="page-title">{{ pageTitle }}</h2>
       {% endif %}
       <div class="content {{ contentClasses }}">
         {{ pageContent }}

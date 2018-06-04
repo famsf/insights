@@ -1,41 +1,12 @@
-@font-face {
-  font-family: SourceSansPro;
-  src: url('/fonts/SourceSansPro-Light.ttf');
-  font-weight: 300;
-  font-style: normal;
+$body-font-family: 'freight-text-pro', serif;
+
+$header-font-family: 'akzidenz-grotesk-next-pro', sans;
+
+%display {
+  font-family: $header-font-family;
 }
 
-@font-face {
-  font-family: SourceSansPro;
-  src: url('/fonts/SourceSansPro-LightItalic.ttf');
-  font-weight: 300;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: SourceSansPro;
-  src: url('/fonts/SourceSansPro-Regular.ttf');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: SourceSansPro;
-  src: url('/fonts/SourceSansPro-Italic.ttf');
-  font-weight: 500;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: SourceSansPro;
-  src: url('/fonts/SourceSansPro-Bold.ttf');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: SourceSansPro;
-  src: url('/fonts/SourceSansPro-BoldItalic.ttf');
-  font-weight: bold;
-  font-style: italic;
+.big-type {
+  font-family: 'freight-display-pro', 'freight-text-pro', serif;;
+  font-weight: bold
 }
