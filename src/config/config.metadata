@@ -6,6 +6,7 @@ stylesheets:
   - /styles/main.css
   - https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.css
   - https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css
+  - https://use.typekit.net/bmv1rht.css
 scripts:
   footer:
     all:
