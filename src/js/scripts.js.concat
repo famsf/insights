@@ -1,0 +1,17 @@
+---
+files:
+- https://code.jquery.com/jquery-3.3.1.min.js
+- https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js
+- https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js
+- js/poly/nextElementSibling.js
+- js/poly/windowscroll.js
+- js/poly/smoothscroll.js
+- js/covers.js
+- js/pages.js
+# nav calls fds.pages so needs to come after
+- components/molecules/ChapterNav/ChapterNav.js
+- components/molecules/TopBar/TopBar.js
+- js/main.js
+insertNewLine: true
+---
+// Concatenate all the scripts!

@@ -1,0 +1,101 @@
+{
+  "layout": "templates/layouts/wrapper.html.twig",
+  "chapters": [
+    {
+      "title": "Chapter One",
+      "id": "chapter1",
+      "pages": [
+        {
+          "id": "c1p1",
+          "pageTitle": "Page Title",
+          "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          "backgroundColor": "#222",
+          "classes": "cover"
+        },
+        {
+          "id": "c1p2",
+          "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          "backgroundColor": "#222",
+          "contentClasses": "big-type revealit",
+          "classes": "invert-top-bar"
+        },
+        {
+          "id": "c1p3",
+          "pageTitle": "Page Title",
+          "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          "backgroundColor": "#222",
+          "classes": "",
+          "pageType": "slideshow" 
+        },
+        {
+          "id": "c1p4",
+          "pageTitle": "Page Title",
+          "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          "backgroundColor": "#222",
+          "classes": ""
+        }
+      ]
+    },
+    {
+      "title": "Chapter Two",
+      "id": "chapter2",
+      "pages": [
+        {
+          "id": "c2p1",
+          "pageTitle": "Page Title",
+          "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          "backgroundColor": "#222",
+          "classes": "cover"
+        },
+        {
+          "id": "c2p2",
+          "pageTitle": "Page Title",
+          "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          "backgroundColor": "#222",
+          "classes": ""
+        },
+        {
+          "id": "c2p3",
+          "pageTitle": "Page Title",
+          "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          "backgroundColor": "#222",
+          "classes": "invert-top-bar"
+        }
+      ]
+    },
+    {
+      "title": "Chapter Three",
+      "id": "chapter3",
+      "pages": [
+        {
+          "id": "c3p1",
+          "pageTitle": "Page Title",
+          "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          "backgroundColor": "#222",
+          "classes": "cover"
+        },
+        {
+          "id": "c3p2",
+          "pageTitle": "Page Title",
+          "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          "backgroundColor": "#222",
+          "classes": ""
+        },
+        {
+          "id": "c3p3",
+          "pageTitle": "Page Title",
+          "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          "backgroundColor": "#222",
+          "classes": ""
+        },
+        {
+          "id": "c3p4",
+          "pageTitle": "Page Title",
+          "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          "backgroundColor": "#222",
+          "classes": ""
+        }
+      ]
+    }
+  ]
+}

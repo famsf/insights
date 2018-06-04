@@ -1,0 +1,32 @@
+// Primary Nav Proof of concept
+.top-bar__wrapper {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#topBar {
+  width: 100%;
+  transition: background-color .5s ease-in-out;
+  background-color: #fff;
+
+  ul {
+    background-color: transparent;
+  }
+
+  * {
+    transition: color .5s ease-in-out;
+    color: #000;
+    background-color: transparent;
+  }
+
+  &.invert {
+    background-color: #000;
+
+    * {
+      color: #ffffff;
+      background-color: transparent;
+    }
+  }
+}

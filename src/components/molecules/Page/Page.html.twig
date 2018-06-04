@@ -1,0 +1,18 @@
+<section class="page {{ classes|split(' ') }}" id="{{ id }}">
+  <div class="page__content">
+    {% if pageType == 'twoCol' %}
+      <div>
+        Two Col
+      </div>
+    {% elseif pageType == 'slideShow' %}
+    {% elseif pageType == 'annotatedImageObject' %}
+    {% else %}
+      {% if pageTitle %}
+        <h2>{{ pageTitle }}</h2>
+      {% endif %}
+      <div class="content {{ contentClasses }}">
+        {{ pageContent }}
+      </div>
+    {% endif %}
+  </div>
+</section>

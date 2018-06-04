@@ -1,0 +1,15 @@
+// Colors
+$c-kala-green: #94bf32;
+$c-kala-blue: #3f96d6;
+$c-kala-violet: #bfaed3;
+$c-kala-magenta: #d54688;
+$c-kala-orange: #ea8b35;
+$c-kala-yellow: #eacf3c;
+$c-kala-blue: #3f96d6;
+$c-kala-magenta: #d54688;
+
+// Bootstrap overrides
+$gray-base: #000;
+$gray-light: lighten($gray-base, 46.7%); // #777
+$gray-dark: lighten($gray-base, 20%); // #333
+$text-color: $gray-dark;

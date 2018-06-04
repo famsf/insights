@@ -1,0 +1,76 @@
+{% for chapter in chapters %}
+  {% include "@molecules/Chapter/Chapter.html.twig" with chapter only %}
+{% endfor %}
+{#
+<section class="chapter" id="chapter1">
+  <section class="page cover" id="c1p1">
+    <div>
+      <div class="page__content">
+        <h2>Chapter 1 - Page 1</h2>
+      </div>
+    </div>
+  </section>
+  <section class="page invert-top-bar" id="c1p2">
+    <div class="page__content">
+      <p class="big-type">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+      </p>
+    </div>
+  </section>
+  <section class="page" id="c1p3">
+    <div class="page__content">
+      <h2>Chapter 1 - Page 3</h2>
+    </div>
+  </section>
+  <section class="page invert-top-bar" id="c1p4">
+    <div class="page__content">
+      <h2>Chapter 1 - Page 4</h2>
+    </div>
+  </section>
+</section>
+
+<section class="chapter" id="chapter2">
+  <section class="page cover" id="c2p1">
+    <div class="page__content">
+      <h2>Chapter 2 - Page 1</h2>
+    </div>
+  </section>
+  <section class="page" id="c2p2">
+    <div class="page__content">
+      <h2>Chapter 2 - Page 2</h2>
+    </div>
+  </section>
+  <section class="page" id="c2p3">
+    <div class="page__content">
+      <h2>Chapter 2 - Page 3</h2>
+    </div>
+  </section>
+  <section class="page invert-top-bar" id="c2p4">
+    <div class="page__content">
+      <h2>Chapter 2 - Page 4</h2>
+    </div>
+  </section>
+</section>
+<section class="chapter" id="chapter3">
+  <section class="page cover" id="c3p1">
+    <div class="page__content">
+      <h2>Chapter 3 - Page 1</h2>
+    </div>
+  </section>
+  <section class="page" style="background-color: #444" id="c3p2">
+    <div class="page__content">
+      <h2>Chapter 3 - Page 2</h2>
+    </div>
+  </section>
+  <section class="page" id="c3p3">
+    <div class="page__content">
+      <h2>Chapter 3 - Page 3</h2>
+    </div>
+  </section>
+  <section class="page invert-top-bar" id="c3p4">
+    <div class="page__content">
+      <h2>Chapter 3 - Page 4</h2>
+    </div>
+  </section>
+</section>
+#}

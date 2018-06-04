@@ -1,0 +1,44 @@
+{
+  "version": "3.1.0",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalamuna/kalamuna.com.git"
+  },
+  "description": "Marketing site for Kalamuna",
+  "main": "build/index.html",
+  "scripts": {
+    "test": "kalastatic build",
+    "start": "kalastatic start",
+    "deploy": "push-dir --verbose --force --dir=\"$npm_package_config_dir\" --remote=\"$npm_package_config_deploy\" --branch=\"${TRAVIS_BRANCH:-deploy}\""
+  },
+  "keywords": [
+    "website"
+  ],
+  "author": "Josh Walker",
+  "bugs": {
+    "url": "https://github.com/kalamuna/kalamuna.com/issues"
+  },
+  "homepage": "https://github.com/kalamuna/kalamuna.com#readme",
+  "devDependencies": {
+    "kalastatic": "4.0.0-alpha.5",
+    "napa": "^3.0.0",
+    "push-dir": "^0.4.1"
+  },
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "jquery": "^3.3.1",
+    "jquery-match-height": "^0.7.2",
+    "jquery-smooth-scroll": "^2.2.0",
+    "kalastatic-twig-filters": "^0.2.0",
+    "kss-bootstrap": "^4.1.1",
+    "kstat-kss-builder": "^1.2.0",
+    "twig-drupal-filters": "^1.1.0",
+    "window-scroll": "^1.0.0"
+  },
+  "config": {
+    "dir": "build",
+    "deploy": "ssh://codeserver.dev.949b4f63-5ec6-4c65-ba10-c05f48cd90bd@codeserver.dev.949b4f63-5ec6-4c65-ba10-c05f48cd90bd.drush.in:2222/~/repository.git"
+  }
+}
