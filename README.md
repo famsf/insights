@@ -1,4 +1,4 @@
-# Kalamuna.com [![Build Status](https://magnum.travis-ci.com/kalamuna/kalamuna.com.svg?token=UMJYkSsaxoyZWAhX7jyb&branch=master)](https://magnum.travis-ci.com/kalamuna/kalamuna.com)
+# FAMSF Insights [![Build Status]()]()
 
 The new prototype hawtness.
 
@@ -20,8 +20,8 @@ The new prototype hawtness.
 
 ### Download the site
 
-    git clone git@github.com:kalamuna/kalamuna.com.git
-    cd kalamuna.com
+    git clone git@github.com:famsf/insights.com.git
+    cd insights
 
 
 ### Install Dependencies
@@ -51,7 +51,7 @@ The new prototype hawtness.
 
 ## Collaboration
 
-Kalamuna.com uses a modified [github flow](https://guides.github.com/introduction/flow/index.html) model for its collaboration workflow. Some of the key points here that should be obeyed:
+FAMSF Insights uses a modified [github flow](https://guides.github.com/introduction/flow/index.html) model for its collaboration workflow. Some of the key points here that should be obeyed:
 
 1. The code in `master` is always deployable. This means you should *never ever ever commit directly to master.*
 2. You should open a branch for every issue/topic/feature you are working on. The name of the branch should be the issue number, followed a hyphen and a named description. For example, if the issue you're working on is 47, and you're adding a Picard feature, the branch name would be `47-picard`.
@@ -63,15 +63,9 @@ Kalamuna.com uses a modified [github flow](https://guides.github.com/introductio
 
 ## Test, build and deploy
 
-Kalamuna.com uses [Travis CI](https://magnum.travis-ci.com) to test, build and deploy its code. At a high level the following steps happen for every pull request that is opened.
+TBD
 
-1. Contributor submits a pull request and Travis is triggered to run tests on the source code and also the build.
-2. If the tests fail then code should not be merged into master and people are notified of such shameful activity.
-3. If code tests pass then code then undergoes a manuel review.
-4. If the manual review passes then the PR is merged and a final Travis test/build is triggered.
-5. If this passes then the built code is deployed to our Pantheon dev environment.
-
-This is another reason why code should *never ever ever be committed directly to master.*
+Code should *never be committed directly to master.*
 
 ### Deployment
 
