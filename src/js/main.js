@@ -1,6 +1,6 @@
 
 fds.setStyle = function(el, obj) {
-  el.style = Object.assign({}, el.style, obj)
+  el.style = Object.assign(el.style, obj)
 }
 
 fds.getParentEl = function(el, selector) {
@@ -15,13 +15,18 @@ fds.getParentEl = function(el, selector) {
 		}
 	}
   if(elements.length === 1) elements = elements[0]
-	return elements;
+	try {
+    return elements;
+  } finally {
+    elements = null;
+  }
 }
 
 document.addEventListener("DOMContentLoaded", function(){
   var win = window
   var frameCount = 0
   var calcFps = true
+  var scrollDir;
   fds.targetFps = 60
   fds.FpsInterval = 1000 / fds.targetFps
   var st = 0;
@@ -41,10 +46,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
   animate = function (newtime) {
     requestAnimationFrame(animate);
-    var elapsed =  newtime - then
-    var didResize = false
-    var msPerFrame = 0
-    var oldWindowDim = Object.assign({}, wDim)
+    var elapsed, didResize, msPerFrame, oldWindowDim;
+    elapsed =  newtime - then
+    didResize = false
+    msPerFrame = 0
+    oldWindowDim = Object.assign({}, wDim)
     wDim = {
       w: win.innerWidth,
       h: win.innerHeight
@@ -57,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function(){
       st = window.poly.getScrollY()
       var scrollDiff = st - oldSt
       if( scrollDiff != 0 ) {
-        var scrollDir = ( scrollDiff > 0 ) ? 'down' : 'up';
+        scrollDir = ( scrollDiff > 0 ) ? 'down' : 'up';
         // console.log(st)
         window.fds.covers.onScroll(st, scrollDir, wDim.h, didResize)
         window.fds.pages.onScroll(st, scrollDir, wDim.h, didResize)
@@ -71,9 +77,11 @@ document.addEventListener("DOMContentLoaded", function(){
       var msPerFrame = Math.round(sinceStart/frameCount)
       fds.fpsEl.innerHTML = `${currentFps} fps at roughtly <br>${msPerFrame} ms/frame`
       then = newtime - (elapsed % fds.FpsInterval)
+      sinceStart = currentFps = curFrameTime = msPerFrame = null;
     }
   }
   var then = window.performance.now()
   fds.startTime = then
   requestAnimationFrame(animate);
+  then = elapsed = didResize = msPerFrame = oldWindowDim = null
 });
