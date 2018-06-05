@@ -10,8 +10,9 @@ $header-font-family: 'akzidenz-grotesk-next-pro', sans;
   font-weight: bold
 }
 
-body {
-  font-family: $body-font-family !important;
+.container,
+footer.footer {
+  font-family: $body-font-family;
 }
 
 h1,
@@ -20,5 +21,5 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: $header-font-family !important;
+  font-family: $header-font-family;
 }
