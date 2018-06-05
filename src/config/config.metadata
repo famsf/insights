@@ -11,4 +11,5 @@ scripts:
   footer:
     all:
       - /js/scripts.js
+      - https://use.fontawesome.com/releases/v5.0.13/js/all.js
 ---
