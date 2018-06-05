@@ -29,7 +29,7 @@ footer.footer {
     }
 
     > a {
-      color: $gray-dark;
+      color: $dark-gray;
       margin-right: 1rem;
     }
   }
@@ -38,8 +38,8 @@ footer.footer {
     font-size: $small-font-size;
     margin-top: auto;
     padding: 1.5rem 0;
-    border-top: 2px solid $gray-light;
-    color: $gray-dark;
+    border-top: 2px solid $medium-gray;
+    color: $dark-gray;
   }
 
   .footer-feature {
@@ -68,6 +68,8 @@ footer.footer {
 
   .copyright {
     text-align: center;
+    font-family: $header-font-family !important;
+    line-height: 2.125rem;
 
     //@include breakpoint(large) {
     @media screen and (min-width: 64em) {
@@ -75,5 +77,33 @@ footer.footer {
     }
   }
 
+}
+
+%menu--footer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+  //@include breakpoint(medium) {
+  @media screen and (min-width: 40em) {
+    text-align: left;
+    display: inline-flex;
+  }
+
+  a {
+    font-family: $header-font-family !important;
+    color: $dark-gray;
+    padding: 0;
+    margin: 0 1rem;
+
+    //@include breakpoint(medium) {
+    @media screen and (min-width: 40em) {
+      margin: 0 4rem 0 0;
+    }
+  }
+}
+
+.menu--footer {
+  @extend %menu--footer;
 }
 
