@@ -10,7 +10,7 @@
           "pageTitle": "Page Title",
           "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
           "backgroundColor": "#222",
-          "classes": "cover"
+          "classes": "cover invert-top-bar"
         },
         {
           "id": "c1p2",
@@ -18,7 +18,7 @@
           "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
           "backgroundColor": "#222",
           "contentClasses": "big-type revealit",
-          "classes": "invert-top-bar"
+          "classes": ""
         },
         {
           "id": "c1p3",
@@ -60,7 +60,7 @@
           "pageTitle": "Page Title",
           "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
           "backgroundColor": "#222",
-          "classes": "invert-top-bar"
+          "classes": ""
         }
       ]
     },
