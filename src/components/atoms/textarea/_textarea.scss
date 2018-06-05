@@ -1,0 +1,28 @@
+$textarea-font-size: 1em;
+$textarea-line-height: $textarea-font-size * 1.6;
+$textarea-leading-ratio: 1 / (10 / 3);
+$textarea-font-family: $body-font-family;
+
+%textarea {
+  font-family: $textarea-font-family;
+  font-size: $textarea-font-size;
+  line-height: $textarea-line-height;
+
+  &.drop-cap{
+    margin-top: $textarea-font-size * 3;
+
+    &:first-letter {
+      float: left;
+      font-size: $textarea-font-size * 10;
+      line-height: $textarea-line-height * .45;
+      top: -$textarea-font-size;
+      margin-top: $textarea-font-size * -$textarea-leading-ratio;
+      margin-right: $textarea-font-size / 15;
+    }
+  }
+}
+
+.textarea,
+p {
+  @extend %textarea;
+}

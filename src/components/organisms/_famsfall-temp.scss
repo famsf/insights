@@ -112,6 +112,14 @@ body {
   }
 }
 
+.page.wide .page__content {
+  @media (min-width: $screen-sm) {
+    padding-top: 5em;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
 .entering {
   box-sizing: border-box;
   .page__content {
