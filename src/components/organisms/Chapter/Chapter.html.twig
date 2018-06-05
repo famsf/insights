@@ -1,0 +1,9 @@
+<section class="chapter {{ classes|split(' ') }}" id="{{ id }}">
+  {% for page in pages %}
+    {% if page.pageType == 'maskedloader' %}
+      {% include "@organisms/MaskedLoader/MaskedLoader.html.twig" with page only %}
+    {% else %}
+      {% include "@organisms/Page/Page.html.twig" with page only %}
+    {% endif %}
+  {% endfor %}
+</section>

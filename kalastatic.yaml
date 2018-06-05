@@ -37,8 +37,11 @@ pluginOpts:
           atoms: src/components/atoms
           molecules: src/components/molecules
           organisms: src/components/organisms
+          ecosystems: src/components/ecosystems
+          environment: src/components/environment
           layouts: src/components/layouts
           images: src/images
+          assets: src/assets
         filters:
           clean_id: twig-drupal-filters/filters/clean_id
           bustcache: kalastatic-twig-filters/lib/filters/bustcache

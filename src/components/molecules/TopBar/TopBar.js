@@ -1,6 +1,6 @@
-(function(fds, topBar, win, doc, log) {
-
-  topBar.initialize = function(id, winScroll) {
+(function(fds, doc) {
+  var topBar = fds.topBar = {}
+  topBar.initialize = function(id) {
     topBar.el = document.getElementById(id)
     doc.addEventListener('topBarEvent', function(e) {
       switch(e.detail.action) {
@@ -13,6 +13,4 @@
       }
     }, {passive: true})
   }
-
-
-}(window.fds = window.fds || {}, window.fds.topBar = window.fds.topBar || {}, window, document, console.log));
+}(window.fds = window.fds || {}, document));

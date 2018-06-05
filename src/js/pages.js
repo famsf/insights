@@ -1,4 +1,7 @@
-(function(fds, pages, win, doc, log) {
+(function(fds, doc) {
+
+  var pages = fds.pages = {}
+
   pages.options = {
     scrollThreshhold: 0.2
   }
@@ -51,7 +54,6 @@
       var pageBottomBelowViewportTop = pageRect.top + marginTop + pageRect.height > 0
       var pageBottomAboveViewportTop = pageRect.top + marginTop + pageRect.height < 0
       var pageTopAboveViewportTop = pageRect.top < 0
-      // if(page.id == 'c1p3') console.log(pageRect.top, pageRect.height, marginTop);//pageOffset, pageHeight, parseInt(page.style.marginTop))
       if(scrollDir === 'down') {
         if (pageBottomAboveViewportTop){
           // page is now offscreen
@@ -112,11 +114,8 @@
 
   // For performance reasons we group our event handlers and create custom evennts
   doc.addEventListener('pageEvent', function(e) {
-
-//    console.log('pageEvent »', e.detail.action, e.detail.action == 'enter')
     switch(e.detail.action) {
       case 'enter':
-        // console.log(`|» ${e.target.id} entered viewport`)
         e.target.classList.add('in-viewport')
         pages.setCurrentPage(e.target)
         break
@@ -136,4 +135,4 @@
     }
   }, {passive: true})
 
-}(window.fds = window.fds || {}, window.fds.pages = window.fds.pages || {}, window, document, console.log));
+}(window.fds = window.fds || {}, document));
