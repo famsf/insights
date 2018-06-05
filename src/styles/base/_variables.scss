@@ -13,3 +13,19 @@ $gray-base: #000;
 $gray-light: lighten($gray-base, 46.7%); // #777
 $gray-dark: lighten($gray-base, 20%); // #333
 $text-color: $gray-dark;
+
+// Foundation Overrides
+$small-font-size: 80%;
+
+.grid-container {
+  max-width: 90rem !important;
+}
+
+.input-group {
+  .input-group-button {
+    height: 42px;
+    .button {
+      height: 100%;
+    }
+  }
+}

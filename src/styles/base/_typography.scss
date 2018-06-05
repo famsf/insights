@@ -1,5 +1,4 @@
 $body-font-family: 'freight-text-pro', serif;
-
 $header-font-family: 'akzidenz-grotesk-next-pro', sans;
 
 %display {
@@ -9,4 +8,17 @@ $header-font-family: 'akzidenz-grotesk-next-pro', sans;
 .big-type {
   font-family: 'freight-display-pro', 'freight-text-pro', serif;;
   font-weight: bold
+}
+
+body {
+  font-family: $body-font-family !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $header-font-family !important;
 }
