@@ -37,7 +37,7 @@ footer.footer {
   .footer__navigation {
     font-size: $small-font-size;
     margin-top: auto;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
     border-top: 2px solid $medium-gray;
     color: $dark-gray;
   }
@@ -69,7 +69,6 @@ footer.footer {
   .copyright {
     text-align: center;
     font-family: $header-font-family !important;
-    line-height: 2.125rem;
 
     //@include breakpoint(large) {
     @media screen and (min-width: 64em) {
@@ -83,9 +82,11 @@ footer.footer {
   text-align: center;
   display: flex;
   justify-content: center;
+  margin-top: .25rem !important;
 
   //@include breakpoint(medium) {
   @media screen and (min-width: 40em) {
+    justify-content: start;
     text-align: left;
     display: inline-flex;
   }
@@ -93,7 +94,7 @@ footer.footer {
   a {
     font-family: $header-font-family !important;
     color: $dark-gray;
-    padding: 0;
+    padding: 0 !important;
     margin: 0 1rem;
 
     //@include breakpoint(medium) {
