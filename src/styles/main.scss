@@ -3,8 +3,16 @@
 @import 'layouts/one_up';
 @import 'layouts/two_up';
 
+// Import Atoms.
+@import '../components/atoms/logo/logo';
+@import '../components/atoms/tagline/tagline';
+
+// Import Molecules.
 @import '../components/molecules/TopBar/TopBar';
 @import '../components/molecules/ChapterNav/ChapterNav';
-@import '../components/organisms/MaskedLoader/MaskedLoader';
 
+
+@import '../components/organisms/MaskedLoader/MaskedLoader';
+@import '../components/molecules/Footer/Footer';
+// Import Organisms.
 @import '../components/organisms/famsfall-temp';

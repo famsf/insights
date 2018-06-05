@@ -2,5 +2,4 @@
 source: src/assets/
 destination: assets/
 ---
-
 Bring in the whole assets folder.

@@ -10,6 +10,10 @@
     height: 100vh;
     width: 100vw;
   }
+  .svg-clip {
+    -webkit-clip-path: url(#mask);
+    clip-path: url(#mask);
+  }
   .bottom-content {
     position: absolute;
     text-align: center;

@@ -1,0 +1,9 @@
+%tagline {
+  font-weight: 300;
+  display: inline-block;
+  position: relative;
+}
+
+.tagline {
+  @extend %tagline;
+}
