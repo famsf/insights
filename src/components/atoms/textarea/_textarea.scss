@@ -1,7 +1,7 @@
 $textarea-font-size: 1em;
 $textarea-line-height: $textarea-font-size * 1.6;
 $textarea-leading-ratio: 1 / (10 / 3);
-$textarea-font-family: Georgia, "Times New Roman", Times, serif;
+$textarea-font-family: $body-font-family;
 
 %textarea {
   font-family: $textarea-font-family;
@@ -17,7 +17,7 @@ $textarea-font-family: Georgia, "Times New Roman", Times, serif;
       line-height: $textarea-line-height * .45;
       top: -$textarea-font-size;
       margin-top: $textarea-font-size * -$textarea-leading-ratio;
-      margin-right: $textarea-font-size / 10;
+      margin-right: $textarea-font-size / 15;
     }
   }
 }
