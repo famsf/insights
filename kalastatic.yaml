@@ -49,6 +49,16 @@ pluginOpts:
 # Settings for the Styleguide
 kss:
   builder: "node_modules/kstat-kss-builder"
+  namespaces:
+    kstat: src
+    atoms: src/components/atoms
+    molecules: src/components/molecules
+    organisms: src/components/organisms
+    ecosystems: src/components/ecosystems
+    environments: src/components/environments
+    layouts: src/components/layouts
+    images: src/images
+    assets: src/assets
   js:
     - ../js/scripts.js
   source:
