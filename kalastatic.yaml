@@ -38,7 +38,7 @@ pluginOpts:
           molecules: src/components/molecules
           organisms: src/components/organisms
           ecosystems: src/components/ecosystems
-          environment: src/components/environment
+          environments: src/components/environments
           layouts: src/components/layouts
           images: src/images
           assets: src/assets
@@ -47,4 +47,9 @@ pluginOpts:
           bustcache: kalastatic-twig-filters/lib/filters/bustcache
 
 # Settings for the Styleguide
-kss: false
+kss:
+  builder: "node_modules/kstat-kss-builder"
+  js:
+    - ../js/scripts.js
+  source:
+    - src/
