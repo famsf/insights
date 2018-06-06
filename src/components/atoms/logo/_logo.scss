@@ -1,0 +1,17 @@
+%logo {
+  font-size: 1.25rem;
+  font-family: "Helvetica Neue";
+  letter-spacing: 7px;
+  margin-right: 1.5rem;
+  font-weight: 400;
+  display: inline-block;
+
+  span {
+    font-family: $body-font-family;
+    font-size: 1.5rem;
+  }
+}
+
+.logo {
+  @extend %logo;
+}
