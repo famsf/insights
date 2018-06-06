@@ -1,7 +1,7 @@
 <section class="page {{ classes|split(' ') }}" id="{{ id }}">
 
     {% if pageType == 'maskedloader' %}
-      {% include "@organisms/MaskedLoader/MaskedLoader.html.twig" with page only %}
+      {% include "@organisms/MaskedLoader/MaskedLoader.html.twig" %}
     {% elseif pageType == 'twoCol' %}
       <div>
         Two Col

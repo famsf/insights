@@ -1,7 +1,12 @@
 ---
 title: "Kalamuna"
 description: "Let's Play"
-
+site:
+  title: "Klimt & Rodan"
+  subTitle: "An artistic journey"
+  cover:
+    background:
+      url: "/assets/images/lady-with-hat.jpg"
 stylesheets:
   - https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.css
   - https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css

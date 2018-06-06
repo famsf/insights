@@ -1,10 +1,18 @@
-<div class="masked-loader">
-  <h1 class="show-for-sr">Klimt and Rodan</h1>
-  {% include '@assets/masks/klimt-rodan-cover-maskA.svg' %}
-  <div class="svg-clip" style="background-image: url('/assets/images/lady-with-hat.jpg');"></div>
+<div class="masked-loader" style="{{}}">
+  <div class="maskedTitle">
+    <div class="titleMaskWrapper">
+      <h1 class="site-title mask" style="-webkit-text-fill-color: transparent; background: -webkit-linear-gradient(transparent, transparent), url({{backgroundImage}}) repeat; background: -o-linear-gradient(transparent, transparent); -webkit-background-clip: text;">{{pageTitle}}</h1>
+    </div>
+    <div class="titleUnderMaskWrapper">
+      <h1 class="aria-hidden site-title-under">{{pageTitle}}</h1>
+    </div>
+  </div>
+  <div class="background-image faded" style="background-image: url({{backgroundImage}}); background-repeat:no-repeat">
+
+  </div>
   <div class="bottom-content">
     <div class="text">
-      <h2 class="subtitle">{{pageTitle}}</h2>
+      <h2 class="subtitle">{{subTitle}}</h2>
     </div>
   </div>
 </div>

@@ -4,15 +4,14 @@
 
   covers.initialize = function(containerSelector, chapterSelector, coverSelector) {
     covers.container = doc.querySelector(containerSelector)
-    covers.coverSelector = coverSelector
     covers.covers = covers.container.querySelectorAll(coverSelector)
-    covers.chapters = []
-    var count = covers.covers.length
-    for( var i = 0; i < count; i++) {
-      var cover = covers.covers[i]
-      var chap = fds.getParentEl(cover, '.chapter');
-      covers.chapters.push(chap)
-    }
+    // covers.chapters = []
+    // var count = covers.covers.length
+    // for( var i = 0; i < count; i++) {
+    //   var cover = covers.covers[i]
+    //   var chap = fds.getParentEl(cover, '.chapter');
+    //   covers.chapters.push(chap)
+    // }
   }
 
   covers.onScroll = function(scrollY, didResize) {
