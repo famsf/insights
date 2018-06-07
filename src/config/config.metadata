@@ -3,8 +3,6 @@ title: "Insights | FAMSF"
 description: "Insights are a series of free, in-depth looks into our exhibitions, enriched with multimedia experiences. Learn more about an exhibition's cultural context and artworks before you visit and discover details about the works that might otherwise go unnoticed."
 
 stylesheets:
-  - https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.css
-  - https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css
   - https://use.typekit.net/bmv1rht.css
   - /styles/main.css
 scripts:
