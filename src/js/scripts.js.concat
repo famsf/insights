@@ -1,9 +1,5 @@
 ---
 files:
-# libraries
-- js/jquery/jquery.js
-- js/foundation/foundation.min.js
-# dependencies
 - js/poly/nextElementSibling.js
 - js/poly/windowscroll.js
 - js/poly/smoothscroll.js

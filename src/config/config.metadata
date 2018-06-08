@@ -8,6 +8,8 @@ stylesheets:
 scripts:
   footer:
     all:
+      - /js/jquery/jquery.js
+      - /js/foundation/foundation.min.js
       - /js/scripts.js
       - https://use.fontawesome.com/releases/v5.0.13/js/all.js
 ---
