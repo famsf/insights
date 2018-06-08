@@ -7,12 +7,19 @@
   }
 
   pages.initialize = function(containerSelector, pageSelector, clearElementSelector) {
-    pages.container = doc.querySelector(containerSelector)
+    console.log(clearElementSelector, doc.querySelector(clearElementSelector))
+    // pages.container = doc.querySelector(containerSelector)
+    //
     pages.pages = doc.querySelectorAll(pageSelector)
     pages.currentPage = pages.pages[0]
-    pages.clearElement = doc.querySelector(clearElementSelector)
-    pages.clearElementHeight = pages.clearElement.clientHeight
-    pages.container.style.height = pages.calculateContainerSize()
+    pages.clearElementHeight = doc.querySelector(clearElementSelector).clientHeight
+    // pages.container.style.height = pages.calculateContainerSize()
+
+    // prepare pages...
+
+    for(var i = 0; i < pages.pages.length; i ++) {
+      var page = pages.pages.length;
+    }
   }
 
   pages.getCurrentPage = function() {

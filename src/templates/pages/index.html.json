@@ -7,11 +7,12 @@
       "pages": [
         {
           "id": "c1p1",
-          "pageTitle": "Page Title",
+          "pageTitle": "Klimt &<br/>Rodan",
+          "subTitle": "An artistic journey",
           "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-          "backgroundColor": "#222",
-          "pageType": "maskedloader",
-          "classes": "cover"
+          "backgroundImage": "/assets/images/lady-with-hat.jpg",
+          "pageType": "clippathloader",
+          "classes": "cover invert-top-bar"
         },
         {
           "id": "c1p2",

@@ -1,18 +1,23 @@
-<section class="page {{ classes }}" id="{{ id }}">
-  <div class="page__content">
-    {% if pageType == 'twoCol' %}
+<section class="page {{ classes|split(' ') }}" id="{{ id }}">
+
+    {% if pageType == 'clippathloader' %}
+      {% include "@organisms/ClipPathLoader/ClipPathLoader.html.twig" %}    
+    {% else if pageType == 'maskedloader' %}
+      {% include "@organisms/MaskedLoader/MaskedLoader.html.twig" %}
+    {% elseif pageType == 'twoCol' %}
       <div>
         Two Col
       </div>
     {% elseif pageType == 'slideShow' %}
     {% elseif pageType == 'annotatedImageObject' %}
     {% else %}
-      {% if pageTitle %}
-        <h2 class="page-title">{{ pageTitle }}</h2>
-      {% endif %}
-      <div class="content {{ contentClasses }}">
-        {{ pageContent }}
+      <div class="page__content">
+        <div class="content {{ contentClasses }}">
+          {% if pageTitle %}
+            <h2 class="page-title">{{ pageTitle }}</h2>
+          {% endif %}
+          {{ pageContent }}
+        </div>
       </div>
     {% endif %}
-  </div>
 </section>

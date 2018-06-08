@@ -35,7 +35,8 @@
     "kss-bootstrap": "^4.1.1",
     "kstat-kss-builder": "^1.2.0",
     "twig-drupal-filters": "^1.1.0",
-    "window-scroll": "^1.0.0"
+    "window-scroll": "^1.0.0",
+    "background-clip-text-polyfill": "git@github.com:TimPietrusky/background-clip-text-polyfill.git"
   },
   "config": {
     "dir": "build",
