@@ -1,6 +1,9 @@
 @charset 'utf-8';
 
-@import 'settings';
+// Import Base.
+@import 'base/settings';
+
+// Import Foundation and Motion UI.
 @import 'foundation';
 @import 'motion-ui';
 
@@ -54,13 +57,12 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-// Import Base.
-@import 'base/variables';
-@import 'base/typography';
+// Import Layouts.
 @import 'layouts/one_up';
 @import 'layouts/two_up';
 
 // Import Atoms.
+@import '../components/atoms/big-type/big-type';
 @import '../components/atoms/logo/logo';
 @import '../components/atoms/tagline/tagline';
 @import '../components/atoms/textarea/textarea';
