@@ -1,3 +1,10 @@
+$(document).ready(function() {
+
+  // Initialize foundation.
+  $(document).foundation();
+
+});
+
 
 fds.setStyle = function(el, obj) {
   el.style = Object.assign({}, el.style, obj)

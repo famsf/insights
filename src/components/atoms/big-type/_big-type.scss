@@ -1,0 +1,8 @@
+%big-type {
+  font-family: 'freight-display-pro', 'freight-text-pro', serif;
+  font-weight: bold
+}
+
+.big-type {
+  @extend %big-type;
+}
