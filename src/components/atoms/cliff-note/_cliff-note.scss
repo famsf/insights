@@ -1,0 +1,32 @@
+/*
+Cliff Note (Blurb)
+
+A cliff note acts as a quick overview or as highlighted information of a chapter and is meant to be scanned. It can also help set the tone of the chapter.
+
+Markup: cliff-notes.html.twig
+
+Styleguide COMPONENTS.cliff-notes
+
+*/
+
+%cliff-note {
+  position: relative;
+  font-family: $header-font-family;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.75em;
+  letter-spacing: -1px;
+
+  &:before {
+    display: block;
+    width: 5rem;
+    height: 2px;
+    margin-bottom: 1em;
+    background-color: $primary-color;
+    content: '';
+  }
+}
+
+.cliff-note {
+  @extend %cliff-note;
+}
