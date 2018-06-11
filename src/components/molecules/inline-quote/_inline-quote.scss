@@ -1,0 +1,25 @@
+/*
+Inline Quotes
+
+Sometimes other people say smart things, and you may want to mention those things with a quote.
+
+Markup: quote.html.twig
+
+Styleguide COMPONENTS.quote
+
+*/
+
+%inline-quote {
+  q {
+    @extend %q;
+  }
+  cite {
+    @extend %cite;
+    margin-top: 1em;
+  }
+}
+
+blockquote,
+.inline-quote {
+  @extend %inline-quote;
+}
