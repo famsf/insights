@@ -1,8 +1,6 @@
 {
   "component_name": "inline-quote",
-  "quote": {
-    "name": "John Doe",
-    "date": "2018",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec nisl id purus pellentesque porta in id enim. Aliquam libero purus, eleifend quis lacinia non, pulvinar in neque."
-  }
+  "name": "John Doe",
+  "date": "2018",
+  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec nisl id purus pellentesque porta in id enim. Aliquam libero purus, eleifend quis lacinia non, pulvinar in neque."
 }
