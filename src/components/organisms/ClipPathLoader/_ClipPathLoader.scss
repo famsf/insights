@@ -1,8 +1,29 @@
 .clip-path-loader {
+
   .background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
-
-    clip-path: url("#mask")
+    clip-path: url("#mask");
   }
+
+  .loading-bar {
+    height: 100vh;
+    background-color: #f00;
+    width: 0;
+    // convert to % based animation
+    transition-property: width;
+    transition-duration: 1.2s;
+    transition-timing-function: ease-out;
+    &.loaded {
+      width: 100%;
+    }
+  }
+}
+
+#mask {
+  width: 100vw;
+  height: 100vh;
 }

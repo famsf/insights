@@ -1,8 +1,8 @@
 <section class="page {{ classes|split(' ') }}" id="{{ id }}">
 
     {% if pageType == 'clippathloader' %}
-      {% include "@organisms/ClipPathLoader/ClipPathLoader.html.twig" %}    
-    {% else if pageType == 'maskedloader' %}
+      {% include "@organisms/ClipPathLoader/ClipPathLoader.html.twig" %}
+    {% elseif pageType == 'maskedloader' %}
       {% include "@organisms/MaskedLoader/MaskedLoader.html.twig" %}
     {% elseif pageType == 'twoCol' %}
       <div>
