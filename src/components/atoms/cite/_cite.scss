@@ -1,0 +1,7 @@
+%cite {
+  font-style: normal;
+}
+
+cite {
+  @extend %cite;
+}
