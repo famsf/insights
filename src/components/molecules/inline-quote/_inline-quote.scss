@@ -1,9 +1,9 @@
 /*
 Inline Quotes
 
-Sometimes other people say smart things, and you may want to mention those things with a quote.
+Inline quotes are used to reinforce a quote within the body copy. They have less emphasis than a full viewport standalone quote and can be used more frequently when necessary.
 
-Markup: quote.html.twig
+Markup: inline-quote.html.twig
 
 Styleguide COMPONENTS.quote
 
@@ -19,7 +19,6 @@ Styleguide COMPONENTS.quote
   }
 }
 
-blockquote,
 .inline-quote {
   @extend %inline-quote;
 }
