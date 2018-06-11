@@ -41,6 +41,10 @@ document.addEventListener("DOMContentLoaded", function(){
     w: win.innerWidth,
     h: win.innerHeight
   }
+  if(!document.querySelector('.insights-app')) {
+    console.log('Bypassing main js loop in current context to allow for easier single component prototyping')
+    return;
+  }
   fds.fpsEl = document.getElementById('fpsEl')
   window.fds.pages.initialize('.container', '.page', '.top-bar')
   window.fds.covers.initialize('.container', '.chapter', '.cover')

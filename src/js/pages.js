@@ -9,6 +9,10 @@
   pages.initialize = function(containerSelector, pageSelector, clearElementSelector) {
     pages.container = doc.querySelector(containerSelector)
     pages.pages = doc.querySelectorAll(pageSelector)
+    if(!pages.container || !pages.pages) {
+      console.log('Warning: Failed to initialize pages, check your selectors, but maybe you`re just prototyping isolated components')
+      return;
+    }
     pages.currentPage = pages.pages[0]
     pages.clearElement = doc.querySelector(clearElementSelector)
     pages.clearElementHeight = pages.clearElement.clientHeight
