@@ -1,0 +1,5 @@
+---
+source: node_modules/jquery/dist/
+destination: js/jquery
+---
+Bring in jquery js assets
