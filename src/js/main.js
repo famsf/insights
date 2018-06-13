@@ -32,7 +32,7 @@ fds.getParentEl = function(el, selector) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   var win = window
   var frameCount = 0
   var calcFps = true
@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
     w: win.innerWidth,
     h: win.innerHeight
   }
-  if(!document.querySelector('.insights-app')) {
+  if (!document.querySelector('.insights-app')) {
     console.log('Bypassing main js loop in current context to allow for easier single component prototyping')
     return;
   }
@@ -69,22 +69,21 @@ document.addEventListener("DOMContentLoaded", function() {
       w: win.innerWidth,
       h: win.innerHeight
     }
-    if(wDim.w != oldWindowDim.w || wDim.h != oldWindowDim.h) {
+    if (wDim.w != oldWindowDim.w || wDim.h != oldWindowDim.h) {
       didResize = true
     }
-    if(elapsed > fds.FpsInterval) {
+    if (elapsed > fds.FpsInterval) {
       var oldSt = st
       st = window.poly.getScrollY()
       var scrollDiff = st - oldSt
       if( scrollDiff != 0 ) {
         scrollDir = ( scrollDiff > 0 ) ? 'down' : 'up';
-        // console.log(st)
         window.fds.covers.onScroll(st, scrollDir, wDim.h, didResize)
         window.fds.pages.onScroll(st, scrollDir, wDim.h, didResize)
         window.fds.chapterNav.onScroll()
       }
     }
-    if( calcFps == true ) {
+    if (calcFps == true) {
       var sinceStart = newtime - fds.startTime;
       var currentFps = Math.round((1000 / (sinceStart / ++frameCount) * 100) / 100)
       var curFrameTime = elapsed
