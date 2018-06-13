@@ -1,0 +1,11 @@
+%picture {
+  &.horizontal {
+    @extend .cell;
+    @extend .medium-3;
+    @extend .medium-offset-1;
+  }
+  &.vertical {
+    @extend .cell;
+    @extend .medium-4;
+  }
+}

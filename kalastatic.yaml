@@ -52,5 +52,8 @@ kss:
   builder: "node_modules/kstat-kss-builder"
   js:
     - ../js/scripts.js
+  css:
+    - ../styles/main.css
+    - ../styles/styleguide.scss
   source:
     - src/
