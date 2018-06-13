@@ -1,0 +1,8 @@
+%big-type {
+  font-family: $font-family-alternate;
+  font-weight: bold
+}
+
+.big-type {
+  @extend %big-type;
+}

@@ -28,15 +28,17 @@
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
+    "foundation-sites": "~6.4.1",
     "jquery": "^3.3.1",
     "jquery-match-height": "^0.7.2",
     "jquery-smooth-scroll": "^2.2.0",
     "kalastatic-twig-filters": "^0.2.0",
     "kss-bootstrap": "^4.1.1",
     "kstat-kss-builder": "^1.2.0",
+    "motion-ui": "~1.2.2",
     "twig-drupal-filters": "^1.1.0",
-    "window-scroll": "^1.0.0",
-    "background-clip-text-polyfill": "git@github.com:TimPietrusky/background-clip-text-polyfill.git"
+    "what-input": "^4.1.3",
+    "window-scroll": "^1.0.0"
   },
   "config": {
     "dir": "build",

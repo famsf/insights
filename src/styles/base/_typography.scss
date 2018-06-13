@@ -1,25 +1,11 @@
-$body-font-family: 'freight-text-pro', serif;
-$header-font-family: 'akzidenz-grotesk-next-pro', sans;
+// Body Fonts
+// See: $body-font-family in _settings.scss.
 
-%display {
-  font-family: $header-font-family;
-}
+// Header Fonts
+// See: $header-font-family in _settings.scss.
 
-.big-type {
-  font-family: 'freight-display-pro', 'freight-text-pro', serif;;
-  font-weight: bold
-}
+// Monospace Fonts
+// See: $font-family-monospace in _settings.scss.
 
-.container,
-footer.footer {
-  font-family: $body-font-family;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $header-font-family;
-}
+// Alternate Fonts
+$font-family-alternate: 'freight-display-pro', 'freight-text-pro', serif;
