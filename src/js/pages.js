@@ -3,7 +3,7 @@
   var pages = fds.pages = {};
 
   pages.options = {
-    scrollThreshhold: 0.2;
+    scrollThreshhold: 0.2
   }
 
   pages.initialize = function (containerSelector, pageSelector, clearElementSelector) {
