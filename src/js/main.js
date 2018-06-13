@@ -11,25 +11,28 @@ fds.setStyle = function(el, obj) {
 }
 
 fds.getParentEl = function(el, selector) {
-	var elements = []
-	var ishaveselector = selector !== undefined
-	while ((el = el.parentElement) !== null) {
-		if (el.nodeType !== Node.ELEMENT_NODE) {
-			continue;
-		}
-		if (!ishaveselector || el.matches(selector)) {
-			elements.push(el);
-		}
-	}
-  if(elements.length === 1) elements = elements[0]
-	try {
+  var elements = []
+  var ishaveselector = selector !== undefined
+  while ((el = el.parentElement) !== null) {
+    if (el.nodeType !== Node.ELEMENT_NODE) {
+      continue;
+    }
+    if (!ishaveselector || el.matches(selector)) {
+      elements.push(el);
+    }
+  }
+  if (elements.length === 1) {
+    elements = elements[0]
+  }
+  try {
     return elements;
-  } finally {
+  }
+  finally {
     elements = null;
   }
 }
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function() {
   var win = window
   var frameCount = 0
   var calcFps = true
