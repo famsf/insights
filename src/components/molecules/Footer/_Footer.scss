@@ -68,7 +68,7 @@ footer.footer {
 
   .copyright {
     text-align: center;
-    font-family: $header-font-family !important;
+    font-family: $alternate-header-font-family !important;
 
     //@include breakpoint(large) {
     @media screen and (min-width: 64em) {
@@ -92,7 +92,7 @@ footer.footer {
   }
 
   a {
-    font-family: $header-font-family !important;
+    font-family: $alternate-header-font-family !important;
     color: $dark-gray;
     padding: 0 !important;
     margin: 0 1rem;
@@ -107,4 +107,3 @@ footer.footer {
 .menu--footer {
   @extend %menu--footer;
 }
-

@@ -1,4 +1,4 @@
-<section class="chapter {{ classes|split(' ') }}" id="{{ id }}">
+<section class="chapter {% if classes %}{{ classes|split(' ') }}{% endif %}" id="{{ id }}">
   {% for page in pages %}
       {% include "@organisms/Page/Page.html.twig" with page only %}
   {% endfor %}
