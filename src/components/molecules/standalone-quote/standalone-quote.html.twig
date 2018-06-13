@@ -1,0 +1,11 @@
+<div class="{{ component_name ?: 'standalone-quote' }} {{ modifier_class }}">
+  {% include "@atoms/standalone-quote__icon/standalone-quote__icon.html.twig" %}
+
+  <q>{{ text }}</q>
+  <cite>{{ name }}</cite>
+
+  <div class="standalone-quote__social-links button-group">
+    <a href="#" class="button hollow icon"><i class="fab fa-twitter"></i><span class="show-for-sr">Twitter</span></a>
+    <a href="#" class="button hollow icon"><i class="fab fa-facebook-f"></i><span class="show-for-sr">Facebook</span></a>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+/*
+Standalone Quote
+
+Standalone quotes are used to reinforce a theme or are from a notable source. They should act as a breather moment in the design and help establish the tone.
+
+Markup: standalone-quote.html.twig
+
+.size--large - Large type variant
+
+Styleguide COMPONENTS.quote
+
+*/
+
+%standalone-quote {
+  @extend .text-center;
+  margin: 2rem;
+  position: relative;
+
+  q {
+    @extend %q;
+    color: $primary-color;
+    display: block;
+    font-family: $font-family-alternate;
+    margin: 3rem 0;
+    font-size: 2em;
+    line-height: 1.25em;
+
+    @include breakpoint(medium) {
+      font-size: 4em;
+    }
+
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+
+  cite {
+    @extend %cite;
+    color: $black;
+    font-size: 1.5em;
+
+    @include breakpoint(medium) {
+      font-size: 2em;
+    }
+  }
+
+  .standalone-quote__social-links {
+    margin: 1rem 0 0 0;
+    justify-content: center;
+  }
+
+  &.size--large {
+    q {
+      font-size: 3em;
+
+      @include breakpoint(medium) {
+        font-size: 6em;
+      }
+    }
+  }
+}
+
+.standalone-quote {
+  @extend %standalone-quote;
+}

@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var win = window
   var frameCount = 0
   var calcFps = true
-  var scrollDir;
+  var scrollDir
   fds.targetFps = 60
   fds.FpsInterval = 1000 / fds.targetFps
   var st = 0;
