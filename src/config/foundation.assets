@@ -1,0 +1,5 @@
+---
+source: node_modules/foundation-sites/dist/js
+destination: js/foundation
+---
+Bring in foundation js assets
