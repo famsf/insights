@@ -11,11 +11,12 @@
 // Import Molecules.
 @import '../components/molecules/TopBar/TopBar';
 @import '../components/molecules/ChapterNav/ChapterNav';
-@import '../components/organisms/ClipPathLoader/ClipPathLoader';
+@import '../components/molecules/CoverPage/CoverPage';
 @import '../components/molecules/Footer/Footer';
 
 // Import Organisms.
 @import '../components/organisms/famsfall-temp';
+@import '../components/organisms/Page/Page';
 // @import '../components/organisms/MaskedLoader/MaskedLoader';
 
 // Import Environments.

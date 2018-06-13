@@ -1,9 +1,7 @@
-<section class="page {{ classes|split(' ') }}" id="{{ id }}">
+<section class="page {{ classes }}" id="{{ id }}">
 
-    {% if pageType == 'clippathloader' %}
-      {% include "@organisms/ClipPathLoader/ClipPathLoader.html.twig" %}
-    {% elseif pageType == 'maskedloader' %}
-      {% include "@organisms/MaskedLoader/MaskedLoader.html.twig" %}
+    {% if pageType == 'coverPage' %}
+      {% include "@molecules/CoverPage/CoverPage.html.twig"%}
     {% elseif pageType == 'twoCol' %}
       <div>
         Two Col

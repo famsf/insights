@@ -18,7 +18,7 @@
       if( coverOffset > 0 ) {
         coverOffset = 0
       }
-      cover.nextElementSibling.style.marginTop = ( 105 * (win.innerHeight/win.innerWidth)) * .01 * win.innerHeight + 'px'
+      cover.nextElementSibling.style.paddingTop = ( 105 * (win.innerHeight/win.innerWidth)) * .01 * win.innerHeight + 'px'
       cover.style.transform = `translate3d(0, ${coverOffset}px ,0)`
     }
   }

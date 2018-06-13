@@ -1,0 +1,152 @@
+%CoverPage {
+
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTFqH4TR7oG4J3GzuFhr1NOAuYJw/w1200-h630-p-k-no-nu/Lady%2Bwith%2BHat%2Band%2BFeather%2BBoa%2Bby%2BGustav%2BKlimt.jpg');
+  background-size: cover;
+
+  .underlay {
+    position: absolute;
+    left: 0;
+    right:0;
+    width: 100vw;
+    height: 100vh;
+    .underlay_contents {
+      position: relative;
+      height: 100vh;
+      width: 100vw;
+    }
+    .subtitle {
+      top: 70%;
+      // transform: translateY(30%);
+      position: absolute;
+      color: #fff;
+      width: 100%;
+      text-align: center;
+    }
+    .headline {
+      color: transparent;
+      .solid {
+        color: #fff;
+      }
+      .outline {
+        // this is where anny progressive ennhancement for IE will go.
+        @supports(-webkit-text-stroke: 3px #fff) {
+          color: rgba(#f00, 0);
+          -webkit-text-stroke: 3px #fff;
+        }
+      }
+    }
+    .content {
+      position: absolute;
+      bottom: 0;
+      color: #fff;
+      text-align: center;
+      width: 100%;
+      padding-bottom: 3em;
+    }
+  }
+
+  .headline {
+    margin: 0;
+    display: block;
+    position: relative;
+    top: 40%;
+    transform: translateY(-40%);
+  }
+
+  .cover_lodaer_container {
+    background-color: #fff;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    transition-property: opacity;
+    transition-timing-function: ease-out;
+    transition-duration: 0.7s
+  }
+
+  .loaderpane {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    .text {
+      line-height: 0.75;
+    }
+
+  }
+
+  .top {
+    z-index: 10;
+  }
+
+  .loader {
+    z-index:11;
+    clip: rect(0 100vw 100vh 0);
+    .text {
+      color: #dedede;
+    }
+  }
+
+  .mask {
+    color: red;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(transparent, transparent),
+               url(https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTFqH4TR7oG4J3GzuFhr1NOAuYJw/w1200-h630-p-k-no-nu/Lady%2Bwith%2BHat%2Band%2BFeather%2BBoa%2Bby%2BGustav%2BKlimt.jpg) repeat;
+    background: -o-linear-gradient(transparent, transparent);
+    background-position: center center;
+    -webkit-background-clip: text;
+  }
+
+  /*
+   * This style will be shared with the SVG because
+   * I have to replace the DOM element in Firefox.
+   * Otherwise the SVG pattern will be broken.
+   */
+  .headline {
+
+    font-family: 'akzidenz-grotesk-next-pro', sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 100%;
+
+    @media(min-width: 900px) {
+      font-size: 150px;
+    }
+    letter-spacing: 2px;
+    text-align: center;
+  }
+
+  .fadeout {
+    opacity: 0;
+  }
+
+  .loader.open {
+    animation-name: stretch;
+    animation-duration: 1.25s;
+    animation-timing-function: ease-out;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  .to_top {
+    z-index:100;
+  }
+}
+
+.cover_page {
+  @extend %CoverPage;
+}
+
+@keyframes stretch {
+  0% {
+    clip: rect(0 100vw 100vh 0);
+  }
+  100% {
+    clip: rect(0 0 100vh 0);
+  }
+}
