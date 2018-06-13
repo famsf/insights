@@ -1,0 +1,24 @@
+%q {
+  line-height: 1em;
+  font-weight: bold;
+
+  &:before,
+  &:after {
+    position: relative;
+    width: 1em;
+    font-size: 1.75em;
+    top: .125em;
+  }
+
+  &:before {
+    padding-right: .25rem;
+  }
+
+  &:after {
+    padding-left: .25rem;
+  }
+}
+
+q {
+  @extend %q;
+}
