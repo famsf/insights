@@ -62,5 +62,7 @@ kss:
     assets: src/assets
   js:
     - ../js/scripts.js
+  css:
+    - ../styles/main.css
   source:
     - src/

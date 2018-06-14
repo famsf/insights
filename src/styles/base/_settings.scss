@@ -68,6 +68,34 @@
 $global-font-size: 100%;
 $global-width: rem-calc(1440);
 $global-lineheight: 1.5;
+
+/*
+Not sure how mappings would be set up for backround colors.
+There are only three custom colors in their sketch file.
+*/
+$beige: #917750;
+$cream: #f8f6ee;
+$splitpea: #927a0c;
+
+
+/*
+Insight Colors for Klimt & Rodin
+
+$beige - #917750
+$cream - #f8f6ee
+$splitpea - #927a0c
+$light-gray - #e6e6e6
+$medium-gray - #cacaca
+$dark-gray - #8a8a8a
+$black - #0a0a0a
+$white - #fefefe
+
+weight: -100
+
+Styleguide color-swatches
+*/
+
+
 $foundation-palette: (
   primary: #1779ba,
   secondary: #767676,
@@ -130,7 +158,7 @@ $block-grid-max: 8;
 // 4. Base Typography
 // ------------------
 
-$header-font-family: 'akzidenz-grotesk-next-pro', sans;
+$header-font-family: 'freight-display-pro', sans;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
