@@ -8,17 +8,6 @@ $screen-md: 1000px;
 $screen-lg: 1350px;
 $screen-xl: 1600px;
 
-@each $chapter in $chapters {
-  .chapter:nth-child( #{$chapter} ) {
-    background-color: nth($colors, $chapter);
-    @each $page in $pages {
-      .page:nth-child(#{$page}) {
-        background-color: darken( nth($colors, $chapter), 10*$page);
-      }
-    }
-  }
-}
-
 html,
 body {
   padding: 0;
@@ -45,14 +34,6 @@ body {
 
 .cover {
   @extend %performy;
-  border-top: 1px #fc0 solid;
-  border-bottom: 1px #ccc solid;
-  background-color: #222;
-}
-
-.chapter {
-  border-bottom: 1px #f00 solid;
-  border-top: 1px #f00 solid;
 }
 
 .chapter,
@@ -71,9 +52,9 @@ body {
   }
 }
 
-.subtitle,
+.sub-title,
 .page-title {
-  font-size: 2.25em;
+  font-size: 1.25em;
   color: #666;
   font-weight: 600;
   font-family: freight-display-pro;
@@ -88,7 +69,7 @@ body {
 }
 
 .big-type {
-  color: #fff;
+  color: #000 !important;
   margin-top: 1em;
   font-size: 2em;
   line-height: 1.2;
@@ -97,6 +78,10 @@ body {
   }
   @media (min-width: 800px) {
     font-size: 3em;
+  }
+
+  &.invert-top-bar {
+    color: #fff !important;
   }
 }
 
@@ -129,8 +114,6 @@ body {
 }
 
 .in-viewport {
-  outline-offset: -1px;
-  outline: 2px #f30 solid;
 }
 
 .currentPage {
@@ -139,5 +122,5 @@ body {
   top: 0;
   left: 0;
   width: 100vw;
-  outline: 1px #f30 solid;
+  height: 100vh;
 }

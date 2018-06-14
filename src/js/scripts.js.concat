@@ -3,6 +3,7 @@ files:
 - js/poly/nextElementSibling.js
 - js/poly/windowscroll.js
 - js/poly/smoothscroll.js
+- js/poly/background-clip-text.js
 - js/covers.js
 - js/pages.js
 # nav calls fds.pages so needs to come after

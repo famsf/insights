@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     if (calcFps == true) {
       var sinceStart = newtime - fds.startTime;
-      var currentFps = Math.round((1000 / (sinceStart / ++frameCount) * 100) / 100)
+      var currentFps = Math.round((1000 / (sinceStart / ++frameCount) * 100) * 0.01)
       var curFrameTime = elapsed
       var msPerFrame = Math.round(sinceStart/frameCount)
       fds.fpsEl.innerHTML = `${currentFps} fps at roughtly <br>${msPerFrame} ms/frame`
@@ -96,5 +96,5 @@ document.addEventListener("DOMContentLoaded", function () {
   var then = window.performance.now()
   fds.startTime = then
   requestAnimationFrame(animate);
-  then = elapsed = didResize = msPerFrame = oldWindowDim = null
+  then = elapsed = didResize = msPerFrame = oldWindowDim = scrollDir = null
 });
