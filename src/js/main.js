@@ -11,35 +11,42 @@ fds.setStyle = function(el, obj) {
 }
 
 fds.getParentEl = function(el, selector) {
-	var elements = []
-	var ishaveselector = selector !== undefined
-	while ((el = el.parentElement) !== null) {
-		if (el.nodeType !== Node.ELEMENT_NODE) {
-			continue;
-		}
-		if (!ishaveselector || el.matches(selector)) {
-			elements.push(el);
-		}
-	}
-  if(elements.length === 1) elements = elements[0]
-	try {
+  var elements = []
+  var ishaveselector = selector !== undefined
+  while ((el = el.parentElement) !== null) {
+    if (el.nodeType !== Node.ELEMENT_NODE) {
+      continue;
+    }
+    if (!ishaveselector || el.matches(selector)) {
+      elements.push(el);
+    }
+  }
+  if (elements.length === 1) {
+    elements = elements[0]
+  }
+  try {
     return elements;
-  } finally {
+  }
+  finally {
     elements = null;
   }
 }
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
   var win = window
   var frameCount = 0
   var calcFps = true
-  var scrollDir;
+  var scrollDir
   fds.targetFps = 60
   fds.FpsInterval = 1000 / fds.targetFps
   var st = 0;
   var wDim = {
     w: win.innerWidth,
     h: win.innerHeight
+  }
+  if (!document.querySelector('.insights-app')) {
+    console.log('Bypassing main js loop in current context to allow for easier single component prototyping')
+    return;
   }
   fds.fpsEl = document.getElementById('fpsEl')
   window.fds.pages.initialize('.container', '.page', '.top-bar')
@@ -62,22 +69,21 @@ document.addEventListener("DOMContentLoaded", function(){
       w: win.innerWidth,
       h: win.innerHeight
     }
-    if(wDim.w != oldWindowDim.w || wDim.h != oldWindowDim.h) {
+    if (wDim.w != oldWindowDim.w || wDim.h != oldWindowDim.h) {
       didResize = true
     }
-    if(elapsed > fds.FpsInterval) {
+    if (elapsed > fds.FpsInterval) {
       var oldSt = st
       st = window.poly.getScrollY()
       var scrollDiff = st - oldSt
       if( scrollDiff != 0 ) {
         scrollDir = ( scrollDiff > 0 ) ? 'down' : 'up';
-        // console.log(st)
         window.fds.covers.onScroll(st, scrollDir, wDim.h, didResize)
         window.fds.pages.onScroll(st, scrollDir, wDim.h, didResize)
         window.fds.chapterNav.onScroll()
       }
     }
-    if( calcFps == true ) {
+    if (calcFps == true) {
       var sinceStart = newtime - fds.startTime;
       var currentFps = Math.round((1000 / (sinceStart / ++frameCount) * 100) * 0.01)
       var curFrameTime = elapsed

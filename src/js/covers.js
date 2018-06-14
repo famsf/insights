@@ -4,6 +4,12 @@
 
   covers.initialize = function(containerSelector, chapterSelector, coverSelector) {
     covers.container = doc.querySelector(containerSelector)
+
+    covers.coverSelector = coverSelector
+    if(!covers.container || !covers.container.querySelectorAll(coverSelector)) {
+      console.log('Warning: Failed to initialize covers, check your selectors, but maybe you`re just prototyping isolated components')
+      return;
+    }
     covers.covers = covers.container.querySelectorAll(coverSelector)
   }
 
