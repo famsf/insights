@@ -6,20 +6,14 @@ The basic two column nav with two-grid-col offsets on either side.
 
 Markup: two_up--primary.html.twig
 
-Styleguide Layouts.two-up--primary
+Styleguide Layouts.two_up--primary
 
 */
-.two_up--primary {
-
-  > div {
-    > div:nth-child(1) {
-      @extend .cell;
-      @extend .large-4;
-      @extend .large-offset-2;
-    }
-    > div:nth-child(2) {
-      @extend .cell;
-      @extend .large-4;
+  .two_up--primary {
+    .wrapper {
+      > div:nth-child(1) {
+      }
+      > div:nth-child(2) {
+      }
     }
   }
-}

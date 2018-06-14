@@ -1,6 +1,14 @@
 <div class="two_up--primary fluid">
-  <div class="grid-x grid-margin-x">
-    <div>{% include left.component with left.content only %}</div>
-    <div>{% include right.component with right.content only %}</div>
+  <div class="wrapper grid-x grid-margin-x">
+    {% block two_up__left_content %}
+      <div class="cell medium-4 medium-offset-1">
+        {% include content_left.component with content_left.contents only %}
+      </div>
+    {% endblock %}
+    {% block two_up__right_content %}
+      <div class="cell medium-4 medium-offset-1">
+        {% include content_right.component with content_right.contents only %}
+      </div>
+    {% endblock %}
   </div>
 </div>

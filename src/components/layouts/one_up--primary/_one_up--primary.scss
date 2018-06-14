@@ -1,0 +1,22 @@
+/*
+
+One-up Primary
+
+The primary site nav with a central column.
+
+Markup: one_up--primary.html.twig
+
+Styleguide Layouts.one_up--primary
+
+*/
+.one_up--primary {
+  @extend .fluid;
+  > div {
+    @extend .grid-x;
+    @extend .grid-margin-x;
+    > div {
+      @extend .cell;
+      @extend .medium-10;
+    }
+  }
+}
