@@ -1,10 +1,7 @@
-<section class="page {{ classes|split(' ') }}" id="{{ id }}">
+<section class="page {{ classes }}" id="{{ id }}">
 
-
-    {% if pageType == 'twoCol' %}
-      <div>
-        Two Col
-      </div>
+    {% if pageType == 'coverPage' %}
+      {% include "@molecules/CoverPage/CoverPage.html.twig"%}
     {% elseif pageType == 'slideShow' %}
     {% elseif pageType == 'annotatedImageObject' %}
     {% else %}

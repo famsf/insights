@@ -3,12 +3,13 @@ files:
 - js/poly/nextElementSibling.js
 - js/poly/windowscroll.js
 - js/poly/smoothscroll.js
-- js/poly/background-clip-text.js
+- js/poly/clippath.js
 - js/covers.js
 - js/pages.js
 # nav calls fds.pages so needs to come after
 - components/molecules/ChapterNav/ChapterNav.js
 - components/molecules/TopBar/TopBar.js
+- components/molecules/CoverPage/CoverPage.js
 - js/main.js
 insertNewLine: true
 ---

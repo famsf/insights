@@ -78,13 +78,14 @@
 // Import Molecules.
 @import '../components/molecules/TopBar/TopBar';
 @import '../components/molecules/ChapterNav/ChapterNav';
-@import '../components/organisms/MaskedLoader/MaskedLoader';
+@import '../components/molecules/CoverPage/CoverPage';
 @import '../components/molecules/Footer/Footer';
 @import '../components/molecules/inline-quote/inline-quote';
 @import '../components/molecules/standalone-quote/standalone-quote';
 
 // Import Organisms.
 @import '../components/organisms/famsfall-temp';
+@import '../components/organisms/Page/Page';
 
 // Import Environments.
 
