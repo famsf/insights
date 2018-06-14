@@ -61,10 +61,6 @@
 @import 'base/typography';
 @import 'base/extends';
 
-// Import Layouts.
-@import 'layouts/one_up';
-@import 'layouts/two_up';
-
 // Import Atoms.
 @import '../components/atoms/big-type/big-type';
 @import '../components/atoms/button/button';
@@ -83,6 +79,11 @@
 @import '../components/molecules/Footer/Footer';
 @import '../components/molecules/inline-quote/inline-quote';
 @import '../components/molecules/standalone-quote/standalone-quote';
+@import '../components/molecules/Picture/Picture';
+
+// Import Layouts.
+@import '../components/layouts/one_up--primary/one_up--primary';
+@import '../components/layouts/two_up--primary/two_up--primary';
 
 // Import Organisms.
 @import '../components/organisms/famsfall-temp';

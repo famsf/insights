@@ -1,0 +1,6 @@
+<picture class="picture picture--{{ style ? style : 'vertical' }}">
+  {% for src in srcset %}
+    <source srcset="{{ src.url }}" media="(min-width: {{ src['min-width'] }})">
+  {% endfor %}
+ <img src="{{ url }}" alt="{{ alt }}">
+</picture>
