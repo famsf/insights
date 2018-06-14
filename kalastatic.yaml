@@ -43,6 +43,7 @@ pluginOpts:
           layouts: src/components/layouts
           images: src/images
           assets: src/assets
+          templates: src/templates/
         filters:
           clean_id: twig-drupal-filters/filters/clean_id
           bustcache: kalastatic-twig-filters/lib/filters/bustcache
@@ -50,6 +51,16 @@ pluginOpts:
 # Settings for the Styleguide
 kss:
   builder: "node_modules/kstat-kss-builder"
+  namespaces:
+    kstat: src
+    atoms: src/components/atoms
+    molecules: src/components/molecules
+    organisms: src/components/organisms
+    ecosystems: src/components/ecosystems
+    environments: src/components/environments
+    layouts: src/components/layouts
+    images: src/images
+    assets: src/assets
   js:
     - https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.js
     - ../js/scripts.js

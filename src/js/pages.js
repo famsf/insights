@@ -127,19 +127,19 @@
         e.target.classList.add('in-viewport');
         pages.setCurrentPage(e.target);
         break;
-        
+
       case 'leave':
         e.target.classList.remove('in-viewport');
         break;
-        
+
       case 'reachTop':
         e.target.classList.add('pinned');
         break;
-        
+
       case 'release':
         e.target.classList.remove('pinned');
         break;
-        
+
       default:
         console.log('Unknown page event?', e.target, e.detail);
         break;

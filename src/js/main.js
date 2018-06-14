@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
   // Initialize foundation.
+  console.log('A')
   $(document).foundation();
 
 });
@@ -33,6 +34,7 @@ fds.getParentEl = function(el, selector) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  console.log("B")
   var win = window
   var frameCount = 0
   var calcFps = true
@@ -53,11 +55,9 @@ document.addEventListener("DOMContentLoaded", function () {
   window.fds.covers.initialize('.container', '.chapter', '.cover')
   window.fds.chapterNav.initialize('#chapter_nav', '.chapter', '.top-bar')
   window.fds.topBar.initialize('topBar')
-
   window.fds.covers.onScroll(0, 'down', win.innerHeight, true)
   window.fds.pages.onScroll(0, 'down', win.innerHeight, true)
   window.fds.chapterNav.onScroll()
-
   animate = function (newtime) {
     requestAnimationFrame(animate);
     var elapsed, didResize, msPerFrame, oldWindowDim;
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     if (calcFps == true) {
       var sinceStart = newtime - fds.startTime;
-      var currentFps = Math.round((1000 / (sinceStart / ++frameCount) * 100) / 100)
+      var currentFps = Math.round((1000 / (sinceStart / ++frameCount) * 100) * 0.01)
       var curFrameTime = elapsed
       var msPerFrame = Math.round(sinceStart/frameCount)
       fds.fpsEl.innerHTML = `${currentFps} fps at roughtly <br>${msPerFrame} ms/frame`
@@ -96,5 +96,5 @@ document.addEventListener("DOMContentLoaded", function () {
   var then = window.performance.now()
   fds.startTime = then
   requestAnimationFrame(animate);
-  then = elapsed = didResize = msPerFrame = oldWindowDim = null
+  then = elapsed = didResize = msPerFrame = oldWindowDim = scrollDir = null
 });
