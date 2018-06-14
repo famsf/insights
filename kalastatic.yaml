@@ -62,8 +62,11 @@ kss:
     images: src/images
     assets: src/assets
   js:
+    - /js/jquery/jquery.js
+    - /js/foundation/foundation.js
     - ../js/scripts.js
   css:
     - ../styles/main.css
+    - ../styles/styleguide.scss
   source:
     - src/

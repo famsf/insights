@@ -1,0 +1,23 @@
+%picture {
+  display: inline-block;
+  width: 100%;
+  height: auto;
+
+  &.horizontal {
+
+  }
+
+  &.vertical {
+
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.picture {
+  @extend %picture
+}
