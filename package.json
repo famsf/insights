@@ -29,11 +29,9 @@
   "devDependencies": {
     "chalk": "^2.3.0",
     "chokidar": "^2.0.0",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^14.1.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.3",
     "glob": "^7.1.1",
     "kalastatic": "4.0.0-alpha.5",
     "minimist": "^1.2.0",

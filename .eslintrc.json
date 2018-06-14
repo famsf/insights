@@ -1,22 +1,14 @@
 {
-  "extends": "eslint-config-airbnb",
+  "extends": "eslint-config-airbnb-base/legacy",
   "root": true,
   "env": {
     "browser": true,
-    "es6": true,
     "node": true
   },
   "globals": {
-    "Drupal": true,
-    "drupalSettings": true,
-    "drupalTranslations": true,
     "domready": true,
     "jQuery": true,
-    "_": true,
-    "matchMedia": true,
-    "Backbone": true,
-    "Modernizr": true,
-    "CKEDITOR": true
+    "matchMedia": true
   },
   "rules": {
     "consistent-return": [0],
