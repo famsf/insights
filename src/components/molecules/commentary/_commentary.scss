@@ -1,0 +1,7 @@
+%commentary {
+  border: 2px solid $medium-gray;
+}
+
+.commentary {
+  @extend %commentary;
+}

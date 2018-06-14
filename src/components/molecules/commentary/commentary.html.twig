@@ -1,0 +1,19 @@
+<div class="grid-x">
+  <div class="cell large-10 large-offset-1">
+    <div class="grid-x {{ component_name ?: 'commentary' }}">
+      <div class="cell medium-5 commentary__layout-left">
+        <div class="commentary__image">
+          {{ author_image }}
+        </div>
+        <h2 class="commentary__author-name">{{ author_name }}</h2>
+        <h3 class="commentary__author-title">{{ author_title }}</h3>
+        <p class="commentary__author-bio">
+          {{ author_bio }}
+        </p>
+      </div>
+      <div class="cell medium-7 commentary__layout-right">
+        {% include "@atoms/textarea/textarea.html.twig" with text only %}
+      </div>
+    </div>
+  </div>
+</div>
