@@ -1,6 +1,7 @@
 $(document).ready(function() {
 
   // Initialize foundation.
+  console.log('A')
   $(document).foundation();
 
 });
