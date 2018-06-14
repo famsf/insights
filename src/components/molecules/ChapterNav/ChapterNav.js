@@ -34,7 +34,7 @@
      var count = chapterNav.navItems.length
      for(var i = 0; i < count; i++) {
        var item = chapterNav.navItems[i]
-       if(item.querySelector('a').getAttribute('href') !== `#${id}`) {
+       if(item.querySelector('a').getAttribute('href') !== '#' + id) {
           item.classList.remove('active')
        } else {
          // console.log(item)
