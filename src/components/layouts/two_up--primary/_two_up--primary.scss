@@ -1,0 +1,19 @@
+/*
+
+Two-up Primary
+
+The basic two column nav with two-grid-col offsets on either side.
+
+Markup: two_up--primary.html.twig
+
+Styleguide Layouts.two_up--primary
+
+*/
+.two_up--primary {
+  .wrapper {
+    > div:nth-child(1) {
+    }
+    > div:nth-child(2) {
+    }
+  }
+}

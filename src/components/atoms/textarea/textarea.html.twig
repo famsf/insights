@@ -1,12 +1,3 @@
-<div class="grid-container">
-  <div class="grid-x margin-top-3">
-    <div class="cell large-5">
-      <h3>With Drop Cap</h3>
-      <p class="drop-cap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab dolorum eius facere magnam maiores? Cupiditate dolores earum esse expedita hic inventore molestiae, mollitia nam necessitatibus odit rem rerum sint ullam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem dolor ducimus facilis illum in magnam praesentium sint totam vero. Ab architecto labore laudantium molestiae sint? Aut ipsum laboriosam vero?</p>
-    </div>
-    <div class="cell large-5 large-offset-2">
-      <h3>No Drop Cap</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At autem dolor ducimus facilis illum in magnam praesentium sint totam vero. Ab architecto labore laudantium molestiae sint? Aut ipsum laboriosam vero?</p>
-    </div>
-  </div>
+<div class="textarea {{ classes }}{{ (not dropcap)?: 'drop-cap' }}">
+  <p>{{ text }}</p>
 </div>

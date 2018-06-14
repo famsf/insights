@@ -1,11 +1,12 @@
-// Body Fonts
+// Body Fonts — freight-text-pro
 // See: $body-font-family in _settings.scss.
 
-// Header Fonts
+// Header Fonts — freight-display-pro
 // See: $header-font-family in _settings.scss.
+// Akzidenz is set below since it's only used once
 
 // Monospace Fonts
 // See: $font-family-monospace in _settings.scss.
 
 // Alternate Fonts
-$font-family-alternate: 'freight-display-pro', 'freight-text-pro', serif;
+$alternate-header-font-family: 'akzidenz-grotesk-next-pro', 'freight-text-pro', serif;
