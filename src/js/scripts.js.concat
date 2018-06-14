@@ -1,6 +1,7 @@
 ---
 files:
 - js/poly/nextElementSibling.js
+- js/poly/windowscroll.js
 - js/covers.js
 - js/pages.js
 # nav calls fds.pages so needs to come after
