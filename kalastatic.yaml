@@ -62,7 +62,8 @@ kss:
     images: src/images
     assets: src/assets
   js:
-    - https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.js
+    - /js/jquery/jquery.js
+    - /js/foundation/foundation.js
     - ../js/scripts.js
   css:
     - ../styles/main.css
