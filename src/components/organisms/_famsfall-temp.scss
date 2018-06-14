@@ -8,17 +8,6 @@ $screen-md: 1000px;
 $screen-lg: 1350px;
 $screen-xl: 1600px;
 
-// @each $chapter in $chapters {
-//   .chapter:nth-child( #{$chapter} ) {
-//     background-color: nth($colors, $chapter);
-//     @each $page in $pages {
-//       .page:nth-child(#{$page}) {
-//         background-color: darken( nth($colors, $chapter), 10*$page);
-//       }
-//     }
-//   }
-// }
-
 html,
 body {
   padding: 0;
