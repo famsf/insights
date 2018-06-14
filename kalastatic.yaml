@@ -38,11 +38,19 @@ pluginOpts:
           atoms: src/components/atoms
           molecules: src/components/molecules
           organisms: src/components/organisms
+          ecosystems: src/components/ecosystems
+          environments: src/components/environments
           layouts: src/components/layouts
           images: src/images
+          assets: src/assets
         filters:
           clean_id: twig-drupal-filters/filters/clean_id
           bustcache: kalastatic-twig-filters/lib/filters/bustcache
 
 # Settings for the Styleguide
-kss: false
+kss:
+  builder: "node_modules/kstat-kss-builder"
+  js:
+    - ../js/scripts.js
+  source:
+    - src/

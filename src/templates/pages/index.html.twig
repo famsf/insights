@@ -1,10 +1,13 @@
 {% block content %}
-  {% include '@molecules/TopBar/TopBar.html.twig' %}
-  {% include '@molecules/ChapterNav/ChapterNav.html.twig' %}
-  <div id="fpsEl" style="z-index: 1001; color: #fff; paddign: 0.25em 0.5em; position:fixed; bottom: 0; left:0; width: 10em; background-color: #000"></div>
-  <div class="container" id="app">
-    {% include '@organisms/chapters/chapters.html.twig' %}
-    {% include '@molecules/standalone-quote/standalone-quote.html.twig' %}
-    {% include '@molecules/Footer/Footer.html.twig' %}
+  <div class="insights-app">
+    {% include '@molecules/TopBar/TopBar.html.twig' %}
+    {% include '@molecules/ChapterNav/ChapterNav.html.twig' %}
+    <div id="fpsEl" style="z-index: 1001; color: #fff; paddign: 0.25em 0.5em; position:fixed; bottom: 0; left:0; width: 10em; background-color: #000"></div>
+    <div class="container" id="app">
+      {% include '@environments/chapters/chapters.html.twig' %}
+      {% include '@molecules/standalone-quote/standalone-quote.html.twig' %}
+      {% include '@molecules/Footer/Footer.html.twig' %}
+    </div>
+    <div id="fpsEl" style="z-index: 1001; color: #fff; paddign: 0.25em 0.5em; position:fixed; bottom: 0; left:0; width: 10em; background-color: #000"></div>
   </div>
 {% endblock %}

@@ -9,9 +9,14 @@
 #topBar {
   padding: 1rem;
   width: 100%;
-  transition: background-color .5s ease-in-out;
-  background-color: #fff;
+  transition: background-color .325s ease-in-out;
   font-family: $body-font-family;
+  background-color: #fff;
+
+  svg polygon,
+  svg path {
+    fill: #000 !important;
+  }
 
   .menu-text {
     padding: 0;
@@ -47,7 +52,7 @@
     background-color: #000;
 
     * {
-      color: #ffffff;
+      color: #fff;
       background-color: transparent;
     }
 
@@ -63,7 +68,7 @@
 
     svg polygon,
     svg path {
-      fill: #ffffff !important;
+      fill: #fff !important;
     }
 
   }

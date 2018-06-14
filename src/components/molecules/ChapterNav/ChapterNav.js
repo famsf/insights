@@ -41,6 +41,8 @@
           item.classList.add('active')
        }
      }
+     item = null;
    }
+   currentPage = chapter = id = null;
   }
 }( window.fds = window.fds || {}, window.fds.chapterNav = window.fds.chapterNav || {}, window, document, console.log));
