@@ -159,6 +159,7 @@ $block-grid-max: 8;
 // ------------------
 
 $header-font-family: 'freight-display-pro', sans;
+$alternate-header-font-family: 'akzidenz-grotesk-next-pro', 'freight-text-pro', serif;
 $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
@@ -306,7 +307,7 @@ $breadcrumbs-item-separator-color: $medium-gray;
 // 11. Button
 // ----------
 
-$button-font-family: $header-font-family;
+$button-font-family: $alternate-header-font-family;
 $button-padding: .85em 2em .25em 2em;
 $button-margin: 0 0 $global-margin 0;
 $button-fill: solid;
