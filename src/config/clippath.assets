@@ -1,0 +1,5 @@
+---
+source: node_modules/background-clip-text-polyfill/
+destination: js/clippath
+---
+Bring in a JS polyfill for "-webkit-background-clip: text".

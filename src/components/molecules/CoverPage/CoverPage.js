@@ -1,5 +1,5 @@
 
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function() {
 
   /*
    * Call the polyfill
@@ -9,13 +9,13 @@ document.addEventListener("DOMContentLoaded", function(){
    * class : the css-class applied to the SVG
    */
 
+  var element = document.querySelector('.headline');
   element.backgroundClipPolyfill({
     'patternID' : 'mypattern',
     // todp, put patternURL into a data-attribute
     'patternURL' : 'https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTFqH4TR7oG4J3GzuFhr1NOAuYJw/w1200-h630-p-k-no-nu/Lady%2Bwith%2BHat%2Band%2BFeather%2BBoa%2Bby%2BGustav%2BKlimt.jpg',
     'class' : 'headline'
   });
-
 
   var coverPage = document.getElementById('CoverPage')
   var container = coverPage.querySelector('.cover_lodaer_container');

@@ -1,3 +1,6 @@
+// Always use the smoothscroll polyfill, even in browsers with native support.
+window.__forceSmoothScrollPolyfill__ = true;
+
 $(document).ready(function() {
 
   // Initialize foundation.
@@ -50,6 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log('Bypassing main js loop in current context to allow for easier single component prototyping')
     return;
   }
+
   fds.fpsEl = document.getElementById('fpsEl')
   window.fds.pages.initialize('.container', '.page', '.top-bar')
   window.fds.covers.initialize('.container', '.chapter', '.cover')
