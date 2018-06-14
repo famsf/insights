@@ -1,0 +1,5 @@
+---
+source: node_modules/window-scroll/index.js
+destination: js/window-scroll.js
+---
+Bring in the getScrollX/getScrollY polyfill.
