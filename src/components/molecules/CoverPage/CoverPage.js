@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
   element.backgroundClipPolyfill({
     'patternID' : 'mypattern',
-    // todp, put patternnURL into a data-attribute
+    // todp, put patternURL into a data-attribute
     'patternURL' : 'https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTFqH4TR7oG4J3GzuFhr1NOAuYJw/w1200-h630-p-k-no-nu/Lady%2Bwith%2BHat%2Band%2BFeather%2BBoa%2Bby%2BGustav%2BKlimt.jpg',
     'class' : 'headline'
   });
@@ -21,8 +21,12 @@ document.addEventListener("DOMContentLoaded", function(){
   var container = coverPage.querySelector('.cover_lodaer_container');
   var maskLoader = container.querySelector('.mask_loader')
   var underlay = coverPage.querySelector('.underlay');
-  console.log(container, maskLoader, underlay)
+
   setTimeout(function() {
+    /*
+     move initializationn probably to when the image is loaded, we should see what we can learn from
+     https://www.lullabot.com/articles/making-legacy-sites-more-performant-using-modern-frontend-techniques
+    */
     maskLoader.classList.add('open')
     setTimeout(function() {
       container.classList.add('fadeout')

@@ -43,6 +43,7 @@ pluginOpts:
           layouts: src/components/layouts
           images: src/images
           assets: src/assets
+          templates: src/templates/
         filters:
           clean_id: twig-drupal-filters/filters/clean_id
           bustcache: kalastatic-twig-filters/lib/filters/bustcache

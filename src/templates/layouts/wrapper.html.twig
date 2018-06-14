@@ -33,7 +33,7 @@
   <body class="page-{{ pageSlug ?: title|default('')|clean_id }} {{bodyClass|clean_id}} {{classes}}">
     <div id="main">
       {% block content %}
-        {{ contents }}
+
       {% endblock %}
     </div>
     {% for script in config.scripts.footer.kalastatic %}
