@@ -1,5 +1,101 @@
+/*
+Commentary
+
+The commentary component is used when wanting to display long form historical, contemporary, or expert commentary related to the story.
+
+Markup: commentary.html.twig
+
+Styleguide COMPONENTS.commentary
+
+*/
+
 %commentary {
-  border: 2px solid $medium-gray;
+  $commentary-margin-default: 5rem;
+  $commentary-padding-default: 4vw;
+
+  .commentary__content {
+    margin: $commentary-margin-default 0;
+    border-top: 2px solid $medium-gray;
+    border-bottom: 2px solid $medium-gray;
+
+    @include breakpoint(large) {
+      border: 2px solid $medium-gray;
+    }
+  }
+
+  .commentary__layout-left {
+    padding: 0 $commentary-padding-default $commentary-padding-default $commentary-padding-default*1.5;
+    position: relative;
+
+    @include breakpoint(large) {
+      border-right: 2px solid $medium-gray;
+    }
+  }
+
+  &.no-img .commentary__layout-left {
+    padding-top: $commentary-padding-default;
+  }
+
+  .commentary__layout-right {
+    padding: $commentary-padding-default*1.5 $commentary-padding-default*1.5 $commentary-padding-default $commentary-padding-default;
+    position: relative;
+  }
+
+  .commentary__image {
+    position: relative;
+    top: -2rem;
+    text-align: center;
+
+    img {
+      max-width: 30rem;
+      border-radius: 1000rem;
+      border: 2px solid $medium-gray;
+      overflow: hidden;
+      margin-right: $commentary-padding-default/2;
+      display: inline-block;
+    }
+  }
+
+  .commentary__author-name {
+    font-weight: bold;
+    font-size: 3rem;
+
+    @include breakpoint(xlarge) {
+      font-size: 4rem;
+    }
+
+    @include breakpoint(xxlarge) {
+      font-size: 5rem;
+    }
+  }
+
+  .commentary__author-title {
+    font-style: italic;
+  }
+
+  .commentary__author-bio {
+    color: $dark-gray;
+  }
+
+  .commentary__icon {
+    text-align: center;
+    margin-bottom: $commentary-margin-default/2;
+
+    @include breakpoint(medium) {
+      margin-bottom: 0;
+      text-align: left;
+      position: absolute;
+      top: -2rem;
+      left: $commentary-padding-default;
+    }
+
+    svg {
+      @include breakpoint(medium) {
+        width: 5rem;
+      }
+    }
+  }
+
 }
 
 .commentary {
