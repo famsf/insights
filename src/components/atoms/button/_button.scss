@@ -10,6 +10,16 @@
     width: 1rem;
   }
 
+  &.hollow {
+    border: 2px solid $black;
+    color: $black;
+
+    &:hover {
+      border: 2px solid $black;
+      color: $black;
+    }
+  }
+
   &.icon {
     padding: .25rem;
     height: 2rem;
