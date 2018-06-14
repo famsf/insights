@@ -1,13 +1,13 @@
+{% block content %}
 <div class="insights-app">
   {% include '@molecules/TopBar/TopBar.html.twig' %}
   {% include '@molecules/ChapterNav/ChapterNav.html.twig' %}
   <div id="fpsEl" style="z-index: 1001; color: #fff; paddign: 0.25em 0.5em; position:fixed; bottom: 0; left:0; width: 10em; background-color: #000"></div>
   <div class="container" id="app">
-    {% block content %}
       {% include '@environments/Chapters/Chapters.html.twig' %}
-      {% include '@molecules/standalone-quote/standalone-quote.html.twig' %}
+      {# % include '@molecules/standalone-quote/standalone-quote.html.twig' % #}
       {% include '@molecules/Footer/Footer.html.twig' %}
-    {% endblock %}
   </div>
   <div id="fpsEl" style="z-index: 1001; color: #fff; paddign: 0.25em 0.5em; position:fixed; bottom: 0; left:0; width: 10em; background-color: #000"></div>
 </div>
+{% endblock %}

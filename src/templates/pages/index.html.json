@@ -30,7 +30,38 @@
           "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
           "backgroundColor": "#222",
           "classes": "",
-          "pageType": "slideshow"
+          "pageType": "twoUp",
+          "pageData": {
+            "content_left": {
+              "component": "@molecules/Picture/Picture.html.twig",
+              "contents": {
+                "srcset": [
+                  {
+                    "min-width": "0px",
+                    "src": "https://www.fillmurray.com/300/500"
+                  },
+                  {
+                    "min-width": "350px",
+                    "src": "https://www.fillmurray.com/300/500"
+                  },
+                  {
+                    "min-width": "800px",
+                    "src": "https://www.fillmurray.com/350/500"
+                  }
+                ],
+                "url": "https://www.fillmurray.com/350/500",
+                "alt": "A picture of Bill Murray",
+                "style": "vertical"
+              }
+            },
+            "content_right": {
+              "component": "@atoms/textarea/textarea.html.twig",
+              "contents": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "dropcap": true
+              }
+            }
+          }
         },
         {
           "id": "c1p4",

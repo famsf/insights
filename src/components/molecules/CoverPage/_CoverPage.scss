@@ -1,20 +1,11 @@
-@keyframes kenburn {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    left: 15%;
-    top: -17%;
-    transform: scale(1.5);
-  }
-}
+$bgURL: 'https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTFqH4TR7oG4J3GzuFhr1NOAuYJw/w1200-h630-p-k-no-nu/Lady%2Bwith%2BHat%2Band%2BFeather%2BBoa%2Bby%2BGustav%2BKlimt.jpg';
 
 %CoverPage {
 
   position: absolute;
   @extend %fill_screen;
-  background-image: url('https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTFqH4TR7oG4J3GzuFhr1NOAuYJw/w1200-h630-p-k-no-nu/Lady%2Bwith%2BHat%2Band%2BFeather%2BBoa%2Bby%2BGustav%2BKlimt.jpg');
-  background-size: cover;
+  // background-image: url('https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTFqH4TR7oG4J3GzuFhr1NOAuYJw/w1200-h630-p-k-no-nu/Lady%2Bwith%2BHat%2Band%2BFeather%2BBoa%2Bby%2BGustav%2BKlimt.jpg');
+  // background-size: cover;
 
   .underlay {
     @extend %abs;
@@ -23,9 +14,10 @@
     .bg-image {
       @extend %abs;
       @extend %fill_screen;
-      transform-origin: center center;
+      z-index: -1;
     }
     .underlay_contents {
+      z-index: 2;
       position: relative;
       @extend %fill_screen;
     }
@@ -94,13 +86,20 @@
     }
   }
 
+  .bg-image {
+    z-index: 1;
+    transform-origin: center center;
+    animation: kenburns 4s ease-out 0.75s 1 forwards running;
+  }
+
   .mask {
     color: red;
     -webkit-text-fill-color: transparent;
-    background: -webkit-linear-gradient(transparent, transparent),
-               url(https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTFqH4TR7oG4J3GzuFhr1NOAuYJw/w1200-h630-p-k-no-nu/Lady%2Bwith%2BHat%2Band%2BFeather%2BBoa%2Bby%2BGustav%2BKlimt.jpg) repeat;
-    background: -o-linear-gradient(transparent, transparent);
+    // we can set this as data attribute and bring up as svg
+    background-image: url($bgURL);
     background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
     -webkit-background-clip: text;
   }
 
@@ -124,9 +123,10 @@
   }
 
   .cover_loader_container {
+    @extend %fill_screen;
     background-color: #fff;
     position: relative;
-    @extend %fill_screen;
+    z-index: 3;
     transition-property: opacity;
     transition-timing-function: ease-out;
     transition-duration: 0.7s
@@ -141,10 +141,6 @@
       animation-delay: 0s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
-    }
-
-    .bg-image {
-      animation: kenburn 4s ease-in-out 0.75s 1 forwards;
     }
   }
 
@@ -175,5 +171,16 @@
   }
   100% {
     clip: rect(0 0 100vh 0);
+  }
+}
+
+@keyframes kenburns {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    left: 15%;
+    top: -17%;
+    transform: scale(1.5);
   }
 }

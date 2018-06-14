@@ -27,6 +27,8 @@
     var img = new Image()
     img.setAttribute('alt', imgAlt)
     img.setAttribute('src', imgSrc)
+    img.classList.add('bg-image')
+    fds.coverPageElement.querySelector('.underlay').appendChild(img)
     if(img.complete) {
       fds.onCoverImageLoaded()
     } else {

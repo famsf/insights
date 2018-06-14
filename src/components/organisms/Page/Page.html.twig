@@ -4,6 +4,8 @@
       {% include "@molecules/CoverPage/CoverPage.html.twig"%}
     {% elseif pageType == 'slideShow' %}
     {% elseif pageType == 'annotatedImageObject' %}
+    {% elseif pageType == 'twoUp' %}
+      {% include "@layouts/two_up--primary/two_up--primary.html.twig" with pageData only %}
     {% else %}
       <div class="page__content">
         <div class="content {{ contentClasses }}">
