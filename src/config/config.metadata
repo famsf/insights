@@ -10,7 +10,7 @@ scripts:
     all:
       - /js/jquery/jquery.js
       - /js/foundation/foundation.min.js
-      - /js/smoothscroll/window-scroll.js
+      - /js/window-scroll/index.js
       - /js/smoothscroll/smoothscroll.min.js
       - /js/scripts.js
       - https://use.fontawesome.com/releases/v5.0.13/js/all.js
