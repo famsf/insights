@@ -1,7 +1,11 @@
 %slide {
-  padding: 2rem;
+  figcaption {
+    padding-top: 1rem;
+    color: $white;
+    font-size: $small-font-size;
+  }
 }
 
-.slide {
+.owl-item {
   @extend %slide;
 }

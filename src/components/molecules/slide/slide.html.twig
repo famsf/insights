@@ -1,3 +1,7 @@
 <div class="item">
   {% include component with contents only %}
+
+  {% if caption %}
+    <figcaption>{{ caption }}</figcaption>
+  {% endif %}
 </div>

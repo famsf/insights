@@ -10,8 +10,9 @@ $(document).ready(function() {
     items: 2,
     merge: true,
     loop: false,
-    nav: true,
-    margin: 40,
+    nav: false,
+    dots: false,
+    margin: 32,
     mergeFit: true
   });
   

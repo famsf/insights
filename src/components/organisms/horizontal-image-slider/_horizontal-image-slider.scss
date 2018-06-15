@@ -10,10 +10,11 @@ Styleguide COMPONENTS.horizontal-image-slider
 */
 
 %horizontal-image-slider {
-  max-height: 630px;
+  padding: 2rem;
+  background: $black;
+  display: block;
 }
 
-.horizontal-image-slider,
 .owl-carousel {
   @extend %horizontal-image-slider;
 }
