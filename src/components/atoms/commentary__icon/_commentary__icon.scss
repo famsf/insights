@@ -1,0 +1,17 @@
+%commentary__icon {
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  path#quote {
+    fill: $black;
+  }
+  path#line {
+    stroke: $black;
+  }
+}
+
+.commentary__icon {
+  @extend %commentary__icon;
+}

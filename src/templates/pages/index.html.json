@@ -1,7 +1,5 @@
 {
   "layout": "templates/layouts/wrapper.html.twig",
-  "name": "John Doe",
-  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec nisl id purus pellentesque porta in id enim. Aliquam libero purus, eleifend quis lacinia non, pulvinar in neque.",
   "chapters": [
     {
       "title": "Chapter One",
