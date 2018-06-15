@@ -2,6 +2,7 @@
 
 // Import Base Foundation Settings.
 @import 'base/settings';
+@import 'base/extends';
 
 // Import Foundation and Motion UI.
 @import 'foundation';
@@ -79,6 +80,8 @@
 @import '../components/molecules/inline-quote/inline-quote';
 @import '../components/molecules/standalone-quote/standalone-quote';
 @import '../components/molecules/Picture/Picture';
+@import '../components/molecules/AmbientVideo/AmbientVideo';
+@import '../components/molecules/TextArea/TextArea';
 
 // Import Layouts.
 @import '../components/layouts/one_up--primary/one_up--primary';

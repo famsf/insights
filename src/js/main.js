@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
   // Initialize foundation.
-  console.log('A')
   $(document).foundation();
 
 });
@@ -34,7 +33,6 @@ fds.getParentEl = function(el, selector) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("B")
   var win = window
   var frameCount = 0
   var calcFps = true
