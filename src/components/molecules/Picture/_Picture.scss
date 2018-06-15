@@ -1,9 +1,12 @@
 /*
-Images & Captions
 
-Markup: PictureWithCaptionDemo.html.twig
+Picture
 
-Styleguide COMPONENTS.images-with-captions
+A responsive picture element with srcset
+
+Markup: Picture.html.twig
+
+Styleguide athing.anotherthign
 
 */
 
@@ -19,6 +22,7 @@ Styleguide COMPONENTS.images-with-captions
   &.vertical {
 
   }
+
 
   img {
     display: block;

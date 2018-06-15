@@ -1,0 +1,5 @@
+---
+source: node_modules/object-fit-images/dist
+destination: js/object-fit-images/
+---
+Bring in the whole assets folder.
