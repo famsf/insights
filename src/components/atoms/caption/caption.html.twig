@@ -1,10 +1,10 @@
 <div class="caption">
-  <button data-toggle="{{ id }}" class="button icon hollow toggle-caption">
+  <a data-toggle="{{ id }}" class="button icon hollow toggle-caption">
     <i class="fas fa-ellipsis-h"></i>
     <span class="show-for-sr">Toggle Caption</span>
-  </button>
+  </a>
 
-  <figurecaption id="{{ id }}">
+  <figurecaption style="display: none;" id="{{ id }}" data-toggler data-animate="fade-in fade-out">
     {{ text }}
   </figurecaption>
 </div>
