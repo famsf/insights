@@ -69,5 +69,6 @@ kss:
   css:
     - ../styles/main.css
     - ../styles/styleguide.scss
+    - https://use.typekit.net/bmv1rht.css
   source:
     - src/
