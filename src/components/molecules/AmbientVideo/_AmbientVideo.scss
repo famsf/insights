@@ -14,7 +14,8 @@ Styleguide COMPONENTS.AmbientVideo
 
   @extend %fill_screen;
   position: relative;
-
+  overflow: hidden;
+  
   .video_element {
     position: absolute;
     top: 50%;
