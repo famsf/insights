@@ -164,8 +164,8 @@ $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
-$header-lineheight: 1.4;
-$header-margin-bottom: 0.5rem;
+$header-lineheight: 1.1;
+$header-margin-bottom: 1rem;
 $header-styles: (
   small: (
     'h1': ('font-size': 24),
@@ -366,7 +366,7 @@ $card-margin-bottom: $global-margin;
 // 15. Close Button
 // ----------------
 
-$closebutton-position: right top;
+$closebutton-position: left top;
 $closebutton-offset-horizontal: (
   small: 0.66rem,
   medium: 1rem,
@@ -380,8 +380,8 @@ $closebutton-size: (
   medium: 2em,
 );
 $closebutton-lineheight: 1;
-$closebutton-color: $dark-gray;
-$closebutton-color-hover: $black;
+$closebutton-color: $white;
+$closebutton-color-hover: $white;
 
 // 16. Drilldown
 // -------------
@@ -757,14 +757,14 @@ $responsive-embed-ratios: (
 // 47. Reveal
 // ----------
 
-$reveal-background: $white;
+$reveal-background: transparent;
 $reveal-width: 600px;
 $reveal-max-width: $global-width;
-$reveal-padding: $global-padding;
-$reveal-border: 1px solid $medium-gray;
+$reveal-padding: $global-padding*8 $global-padding*3 $global-padding*3 $global-padding*3;
+$reveal-border: none;
 $reveal-radius: $global-radius;
-$reveal-zindex: 1005;
-$reveal-overlay-background: rgba($black, 0.45);
+$reveal-zindex: 2005;
+$reveal-overlay-background: rgba($black, 0.9);
 
 // 48. Slider
 // ----------
