@@ -1,0 +1,20 @@
+{#
+ Video needs to be muted, since Chrome 66+ will not autoplay video with sound.
+ WCAG general accessibility recommendation is that media such as background video play through only once.
+ Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button
+#}
+<div class="ambient_video">
+
+  <div class="text_content fluid">
+    <div class="wrapper grid-x grid-margin-x">
+      <div class="cell medium-4 medium-offset-6">
+        {% include "@atoms/textarea/textarea.html.twig" with { dropcap: dropcap, text: text } only %}
+      </div>
+    </div>
+  </div>
+
+  <video class="video_element" poster="/assets/images/video/rodin.jpg" id="bgvid" playsinline autoplay muted {# loop #}>
+    <source src="/assets/video/rodin.webm" type="video/webm">
+      <source src="/assets/video/rodin.m4v" type="video/m4v">
+  </video>
+</div>
