@@ -11,7 +11,7 @@ $(document).ready(function() {
     merge: true,
     loop: false,
     nav: true,
-    margin: 0,
+    margin: 40,
     mergeFit: true
   });
   
