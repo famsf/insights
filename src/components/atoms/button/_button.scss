@@ -13,6 +13,7 @@
   &.hollow {
     border: 2px solid $black;
     color: $black;
+    background: transparent;
 
     &:hover {
       border: 2px solid $black;
