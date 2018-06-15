@@ -1,0 +1,12 @@
+@mixin remove-outline() {
+  outline: none;
+  outline-color: transparent;
+  outline-style: none;
+  -webkit-appearance: none;
+  &:focus {
+    outline: none;
+    outline-color: transparent;
+    outline-style: none;
+    -webkit-appearance: none;
+  }
+}
