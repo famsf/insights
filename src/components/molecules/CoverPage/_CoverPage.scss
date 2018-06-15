@@ -1,21 +1,24 @@
+$bgURL: 'https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTFqH4TR7oG4J3GzuFhr1NOAuYJw/w1200-h630-p-k-no-nu/Lady%2Bwith%2BHat%2Band%2BFeather%2BBoa%2Bby%2BGustav%2BKlimt.jpg';
+
 %CoverPage {
 
   position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background-image: url('https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTFqH4TR7oG4J3GzuFhr1NOAuYJw/w1200-h630-p-k-no-nu/Lady%2Bwith%2BHat%2Band%2BFeather%2BBoa%2Bby%2BGustav%2BKlimt.jpg');
-  background-size: cover;
+  @extend %fill_screen;
+  overflow: hidden;
 
   .underlay {
-    position: absolute;
-    left: 0;
-    right:0;
-    width: 100vw;
-    height: 100vh;
+    @extend %abs;
+    @extend %fill_screen;
+
+    .bg-image {
+      @extend %abs;
+      @extend %fill_screen;
+      z-index: -1;
+    }
     .underlay_contents {
+      z-index: 2;
       position: relative;
-      height: 100vh;
-      width: 100vw;
+      @extend %fill_screen;
     }
     .subtitle {
       top: 70%;
@@ -35,7 +38,7 @@
         // this is where anny progressive ennhancement for IE will go.
         @supports(-webkit-text-stroke: 3px #fff) {
           color: rgba(#f00, 0);
-          -webkit-text-stroke: 3px #fff;
+          -webkit-text-stroke: 2px #fff;
         }
       }
     }
@@ -57,19 +60,9 @@
     transform: translateY(-40%);
   }
 
-  .cover_lodaer_container {
-    background-color: #fff;
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    transition-property: opacity;
-    transition-timing-function: ease-out;
-    transition-duration: 0.7s
-  }
 
   .loaderpane {
-    width: 100vw;
-    height: 100vh;
+    @extend %fill_screen;
     position: absolute;
     top: 0;
     left: 0;
@@ -92,13 +85,24 @@
     }
   }
 
+  .bg-image {
+    z-index: 1;
+    background-size: cover !important;
+    transform-origin: center center;
+    object-position: 50% 50%;
+    object-fit: cover;
+    font-family: 'object-fit: contain;object-position: 50% 50%';
+    animation: kenburns 4s ease-out 0.75s 1 forwards running;
+  }
+
   .mask {
     color: red;
     -webkit-text-fill-color: transparent;
-    background: -webkit-linear-gradient(transparent, transparent),
-               url(https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTFqH4TR7oG4J3GzuFhr1NOAuYJw/w1200-h630-p-k-no-nu/Lady%2Bwith%2BHat%2Band%2BFeather%2BBoa%2Bby%2BGustav%2BKlimt.jpg) repeat;
-    background: -o-linear-gradient(transparent, transparent);
+    // we can set this as data attribute and bring up as svg
+    background-image: url($bgURL);
     background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
     -webkit-background-clip: text;
   }
 
@@ -121,21 +125,42 @@
     text-align: center;
   }
 
-  .fadeout {
-    opacity: 0;
+  .cover_loader_container {
+    @extend %fill_screen;
+    background-color: #fff;
+    position: relative;
+    z-index: 3;
+    transition-property: opacity;
+    transition-timing-function: ease-out;
+    transition-duration: 0.7s
   }
 
-  .loader.open {
-    animation-name: stretch;
-    animation-duration: 1.25s;
-    animation-timing-function: ease-out;
-    animation-direction: normal;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+  &.loaded {
+    .loader {
+      animation-name: stretch;
+      animation-duration: 1.25s;
+      animation-timing-function: ease-out;
+      animation-direction: normal;
+      animation-delay: 0s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
   }
-  .to_top {
-    z-index:100;
+
+  &.post_loaded {
+    .cover_loader_container {
+      opacity: 0;
+    }
+  }
+
+  &.initialized {
+    .underlay {
+      z-index: 100;
+    }
+    .cover_loader_container,
+    .mask_loader {
+      display: none;
+    }
   }
 }
 
@@ -149,5 +174,16 @@
   }
   100% {
     clip: rect(0 0 100vh 0);
+  }
+}
+
+@keyframes kenburns {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    left: 15%;
+    top: -17%;
+    transform: scale(1.5);
   }
 }
