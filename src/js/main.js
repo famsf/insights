@@ -27,7 +27,6 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-
     var win = window
     var frameCount = 0
     var calcFps = true

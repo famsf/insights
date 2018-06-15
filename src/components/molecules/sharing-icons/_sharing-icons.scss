@@ -1,0 +1,14 @@
+%sharing-icons {
+  .icon {
+    transition: opacity .25s ease-in-out;
+    opacity: .25;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.sharing-icons {
+  @extend %sharing-icons;
+}

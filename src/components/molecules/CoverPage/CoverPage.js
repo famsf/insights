@@ -9,7 +9,7 @@
      * patternURL : the URL to the background-image
      * class : the css-class applied to the SVG
      */
-
+    if
     element.backgroundClipPolyfill({
       'patternID' : 'mypattern',
       // todp, put patternURL into a data-attribute

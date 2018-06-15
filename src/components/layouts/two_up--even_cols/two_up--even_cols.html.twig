@@ -1,0 +1,14 @@
+<div class="two_up--primary fluid">
+  <div class="wrapper grid-x grid-margin-x">
+    {% block two_up__even_content %}
+      <div class="cell medium-4 medium-offset-2">
+        {% include content_left.component with content_left.contents only %}
+      </div>
+    {% endblock %}
+    {% block two_up__even_content %}
+      <div class="cell medium-4">
+        {% include content_right.component with content_right.contents only %}
+      </div>
+    {% endblock %}
+  </div>
+</div>

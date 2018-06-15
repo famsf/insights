@@ -2,11 +2,20 @@ footer.footer {
   display: flex;
   flex-flow: column;
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  label {
+    font-family: $alternate-header-font-family;
+  }
+
   .footer__content {
     padding: 3rem 0;
 
-    //@include breakpoint(medium) {
-    @media screen and (min-width: 40em) {
+    @include breakpoint(medium) {
       padding: 5rem 0;
     }
   }
@@ -14,8 +23,7 @@ footer.footer {
   form {
     margin: 1rem 0;
 
-    //@include breakpoint(medium) {
-    @media screen and (min-width: 40em) {
+    @include breakpoint(medium) {
       margin: 2rem 0;
     }
   }
@@ -23,8 +31,7 @@ footer.footer {
   .footer__social {
     margin: 3rem 0 1rem 0;
 
-    //@include breakpoint(medium) {
-    @media screen and (min-width: 40em) {
+    @include breakpoint(medium) {
       margin: 5rem 0 2rem 0;
     }
 
@@ -44,8 +51,7 @@ footer.footer {
 
   .footer-feature {
 
-    //@include breakpoint(large) {
-    @media screen and (min-width: 64em) {
+    @include breakpoint(large) {
       margin-bottom: 4rem;
 
       &:last-of-type {
@@ -62,16 +68,13 @@ footer.footer {
     }
   }
 
-  .menu--footer {
-
-  }
+  .menu--footer {}
 
   .copyright {
     text-align: center;
     font-family: $alternate-header-font-family !important;
 
-    //@include breakpoint(large) {
-    @media screen and (min-width: 64em) {
+    @include breakpoint(large) {
       text-align: right;
     }
   }
@@ -84,8 +87,7 @@ footer.footer {
   justify-content: center;
   margin-top: .25rem !important;
 
-  //@include breakpoint(medium) {
-  @media screen and (min-width: 40em) {
+  @include breakpoint(medium) {
     justify-content: start;
     text-align: left;
     display: inline-flex;
@@ -97,8 +99,7 @@ footer.footer {
     padding: 0 !important;
     margin: 0 1rem;
 
-    //@include breakpoint(medium) {
-    @media screen and (min-width: 40em) {
+    @include breakpoint(medium) {
       margin: 0 4rem 0 0;
     }
   }

@@ -1,0 +1,11 @@
+%caption {
+  figcaption {
+    display: block;
+    background-color: $light-gray;
+    padding: 2rem;
+  }
+}
+
+.caption {
+  @extend %caption;
+}

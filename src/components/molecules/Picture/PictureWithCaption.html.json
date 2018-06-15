@@ -1,0 +1,25 @@
+{
+  "caption": {
+    "id": "caption",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et felis ac arcu cursus imperdiet. Mauris volutpat, ligula sit amet semper egestas, nunc velit pretium sem, id ornare nisl nisl nec erat."
+  },
+  "picture": {
+    "srcset": [
+      {
+        "min-width": "0px",
+        "src": "https://www.fillmurray.com/300/500"
+      },
+      {
+        "min-width": "350px",
+        "src": "https://www.fillmurray.com/300/500"
+      },
+      {
+        "min-width": "800px",
+        "src": "https://www.fillmurray.com/350/500"
+      }
+    ],
+    "src": "https://www.fillmurray.com/350/500",
+    "alt": "A picture of Bill Murray",
+    "style": "vertical"
+  }
+}
