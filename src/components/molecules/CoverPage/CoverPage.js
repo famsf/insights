@@ -9,16 +9,17 @@
      * patternURL : the URL to the background-image
      * class : the css-class applied to the SVG
      */
-    if
-    element.backgroundClipPolyfill({
-      'patternID' : 'mypattern',
-      // todp, put patternURL into a data-attribute
-      'patternURL' : 'https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTFqH4TR7oG4J3GzuFhr1NOAuYJw/w1200-h630-p-k-no-nu/Lady%2Bwith%2BHat%2Band%2BFeather%2BBoa%2Bby%2BGustav%2BKlimt.jpg',
-      'class' : 'headline'
-    });
+     fds.coverPageElement = document.getElementById('CoverPage')
 
-    fds.coverPageElement = document.getElementById('CoverPage')
-    fds.coverPage.initialize()
+    if (fds.coverPageElement) {
+      element.backgroundClipPolyfill({
+        'patternID' : 'mypattern',
+        // todp, put patternURL into a data-attribute
+        'patternURL' : 'https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTFqH4TR7oG4J3GzuFhr1NOAuYJw/w1200-h630-p-k-no-nu/Lady%2Bwith%2BHat%2Band%2BFeather%2BBoa%2Bby%2BGustav%2BKlimt.jpg',
+        'class' : 'headline'
+      })
+      fds.coverPage.initialize()
+    }
   })
 
   fds.coverPage.initialize = function() {
