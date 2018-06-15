@@ -1,0 +1,19 @@
+/*
+Horizontal Image Slider
+
+This is used to show a set of related images as a group.
+
+Markup: horizontal-image-slider.html.twig
+
+Styleguide COMPONENTS.horizontal-image-slider
+
+*/
+
+%horizontal-image-slider {
+  max-height: 630px;
+}
+
+.horizontal-image-slider,
+.owl-carousel {
+  @extend %horizontal-image-slider;
+}

@@ -50,6 +50,10 @@
 @include foundation-float-classes;
 @include foundation-flex-classes;
 
+// Owl Carousel.
+@import 'owl.carousel';
+@import 'owl.theme.default';
+
 // Foundation Prototype Classes.
 @include foundation-prototype-classes;
 
@@ -79,6 +83,7 @@
 @import '../components/molecules/inline-quote/inline-quote';
 @import '../components/molecules/standalone-quote/standalone-quote';
 @import '../components/molecules/Picture/Picture';
+@import '../components/molecules/slide/slide';
 
 // Import Layouts.
 @import '../components/layouts/one_up--primary/one_up--primary';
@@ -87,6 +92,7 @@
 // Import Organisms.
 @import '../components/organisms/famsfall-temp';
 @import '../components/organisms/Page/Page';
+@import '../components/organisms/horizontal-image-slider/horizontal-image-slider';
 
 // Import Environments.
 

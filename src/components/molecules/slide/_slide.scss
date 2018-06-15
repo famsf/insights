@@ -1,0 +1,7 @@
+%slide {
+  padding: 2rem;
+}
+
+.slide {
+  @extend %slide;
+}

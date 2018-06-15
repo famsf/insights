@@ -30,6 +30,7 @@ pluginOpts:
         includePaths:
           - node_modules/foundation-sites/scss
           - node_modules/motion-ui/src
+          - node_modules/owl.carousel/src/scss
           - src/styles
           - src/components
       twig:
@@ -64,6 +65,7 @@ kss:
   js:
     - /js/jquery/jquery.js
     - /js/foundation/foundation.js
+    - /js/owl/owl.carousel.js
     - ../js/scripts.js
   css:
     - ../styles/main.css
