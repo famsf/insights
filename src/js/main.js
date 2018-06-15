@@ -1,7 +1,6 @@
 $(document).ready(function() {
 
-  // Initialize Foundation.
-  console.log('A')
+  // Initialize foundation.
   $(document).foundation();
 
   // Initialize Owl Carousel.
@@ -53,7 +52,6 @@ fds.getParentEl = function(el, selector) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("B")
   var win = window
   var frameCount = 0
   var calcFps = true

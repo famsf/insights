@@ -1,0 +1,7 @@
+%modal__open-button {
+  display: inline;
+}
+
+.modal__open-button {
+  @extend %modal__open-button;
+}

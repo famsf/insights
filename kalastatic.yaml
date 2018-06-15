@@ -67,8 +67,10 @@ kss:
     - /js/foundation/foundation.js
     - /js/owl/owl.carousel.js
     - ../js/scripts.js
+    - https://use.fontawesome.com/releases/v5.0.13/js/all.js
   css:
     - ../styles/main.css
     - ../styles/styleguide.scss
+    - https://use.typekit.net/bmv1rht.css
   source:
     - src/
