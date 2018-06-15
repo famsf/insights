@@ -1,7 +1,9 @@
 <div class="one_up--primary fluid">
   <div class="grid-x grid-margin-x">
-    <div class="cell medium-grid-10">
-      {% include component with contents only %}
-    </div>
+    {% block column %}
+      <div class="cell medium-grid-10">
+        {% include component with contents only %}
+      </div>
+    {% endblock %}
   </div>
 </div>
