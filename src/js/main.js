@@ -1,8 +1,33 @@
 (function(fds, window, document, $ ) {
 
-  fds.setStyle = function(el, obj) {
-    el.style = Object.assign(el.style, obj)
-  }
+  // Initialize foundation.
+  $(document).foundation();
+
+  // Initialize Owl Carousel.
+  var owl = $('.owl-carousel');
+  owl.owlCarousel({
+    items: 2,
+    merge: true,
+    loop: false,
+    nav: false,
+    dots: false,
+    margin: 32,
+    mergeFit: true
+  });
+  
+  owl.on('mousewheel', '.owl-stage', function (e) {
+    if (e.deltaY > 0) {
+      owl.trigger('next.owl');
+    }
+    e.preventDefault();
+  });
+
+});
+
+
+fds.setStyle = function(el, obj) {
+  el.style = Object.assign(el.style, obj)
+}
 
   fds.getParentEl = function(el, selector) {
     var elements = []
