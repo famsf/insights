@@ -1,33 +1,32 @@
 (function(fds, window, document, $ ) {
 
-  // Initialize foundation.
-  $(document).foundation();
+  fds.onDomLoaded = function() {
+    // Initialize foundation.
+    $(document).foundation();
 
-  // Initialize Owl Carousel.
-  var owl = $('.owl-carousel');
-  owl.owlCarousel({
-    items: 2,
-    merge: true,
-    loop: false,
-    nav: false,
-    dots: false,
-    margin: 32,
-    mergeFit: true
-  });
-  
-  owl.on('mousewheel', '.owl-stage', function (e) {
-    if (e.deltaY > 0) {
-      owl.trigger('next.owl');
-    }
-    e.preventDefault();
-  });
+    // Initialize Owl Carousel.
+    var owl = $('.owl-carousel');
+    owl.owlCarousel({
+      items: 2,
+      merge: true,
+      loop: false,
+      nav: false,
+      dots: false,
+      margin: 32,
+      mergeFit: true
+    });
 
-});
+    owl.on('mousewheel', '.owl-stage', function (e) {
+      if (e.deltaY > 0) {
+        owl.trigger('next.owl');
+      }
+      e.preventDefault();
+    })
+  }
 
-
-fds.setStyle = function(el, obj) {
-  el.style = Object.assign(el.style, obj)
-}
+  fds.setStyle = function(el, obj) {
+    el.style = Object.assign(el.style, obj)
+  }
 
   fds.getParentEl = function(el, selector) {
     var elements = []
@@ -116,7 +115,7 @@ fds.setStyle = function(el, obj) {
     requestAnimationFrame(animate);
     then = elapsed = didResize = msPerFrame = oldWindowDim = scrollDir = null
 
-    $(document).foundation()
+    fds.onDomLoaded()
 
   })
 })( window.fds = window.fds || {}, window, document, jQuery);
