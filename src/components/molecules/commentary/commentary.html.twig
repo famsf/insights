@@ -4,7 +4,7 @@
       <div class="cell large-5 commentary__layout-left">
         {% if author_image %}
           <div class="commentary__image">
-            {% include "../../molecules/Picture/Picture.html.twig" with author_image only %}
+            {% include "@molecules/Picture/Picture.html.twig" with author_image only %}
           </div>
         {% endif %}
         <h2 class="commentary__author-name">{{ author_name }}</h2>
@@ -16,7 +16,7 @@
       <div class="cell large-7 commentary__layout-right">
         {% include "../../atoms/commentary__icon/commentary__icon.html.twig" %}
         {% include "../../atoms/textarea/textarea.html.twig" with {text: text} only %}
-        {% include "../../molecules/sharing-icons/sharing-icons.html.twig" %}
+        {% include "@molecules/sharing-icons/sharing-icons.html.twig" %}
       </div>
     </div>
   </div>
