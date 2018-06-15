@@ -1,0 +1,7 @@
+<div class="modal reveal {{ (not full_screen)?: 'full-screen' }}" id="{{ id }}" data-reveal>
+  {% block modal__content %}
+    {% include component with contents only %}
+  {% endblock %}
+
+  {% include "../../atoms/modal__close-button/modal__close-button.html.twig" %}
+</div>
