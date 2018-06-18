@@ -1,5 +1,5 @@
 {
-  "component": "../../atoms/textarea/textarea.html.twig",
+  "component": "@atoms/textarea/textarea.html.twig",
   "id": "modal-id-1",
   "full_screen": true,
   "modal_button_text": "open modal",

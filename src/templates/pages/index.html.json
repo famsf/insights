@@ -154,31 +154,167 @@
       "pages": [
         {
           "id": "c3p1",
-          "pageTitle": "Page Title",
-          "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-          "backgroundColor": "#222",
-          "classes": "cover"
+          "pageTitle": "Cliff Note",
+          "component": "@layouts/two_up--primary/two_up--primary.html.twig",
+          "pageData": {
+            "content_left": {
+              "component": "@atoms/cliff-note/cliff-note.html.twig",
+              "contents": {
+                "component_name": "cliff-note",
+                "text": "Cliff Note aka Blurb - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec nisl id purus pellentesque porta in id enim."
+              }
+            },
+            "content_right": {
+              "component": "@molecules/inline-quote/inline-quote.html.twig",
+              "contents": {
+                "component_name": "inline-quote",
+                "name": "John Doe",
+                "date": "2018",
+                "text": "Inline Quote - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec nisl id purus pellentesque porta in id enim. Aliquam libero purus, eleifend quis lacinia non, pulvinar in neque."
+              }
+            }
+          }
         },
         {
           "id": "c3p2",
-          "pageTitle": "Page Title",
-          "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-          "backgroundColor": "#222",
-          "classes": ""
+          "pageTitle": "Standalone Quote",
+          "component": "@layouts/one_up--primary/one_up--primary.html.twig",
+          "pageData": {
+            "component": "@molecules/standalone-quote/standalone-quote.html.twig",
+            "contents": {
+              "component_name": "standalone-quote",
+              "name": "Motto of Secession, 1900",
+              "text": "To every age its art. To every art its freedom.",
+              "large_text": true
+            }
+          }
         },
         {
           "id": "c3p3",
-          "pageTitle": "Page Title",
-          "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-          "backgroundColor": "#222",
-          "classes": ""
+          "pageTitle": "Commentary",
+          "component": "@molecules/commentary/commentary.html.twig",
+          "pageData": {
+            "component_name": "commentary",
+            "author_name": "Charles Desmarais",
+            "author_title": "Art Critic, San Francisc Chronicle",
+            "author_bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam.",
+            "author_image": {
+              "srcset": [
+                {
+                  "min-width": "0px",
+                  "src": "https://www.fillmurray.com/300/300"
+                },
+                {
+                  "min-width": "768px",
+                  "src": "https://www.fillmurray.com/400/400"
+                },
+                {
+                  "min-width": "960px",
+                  "src": "https://www.fillmurray.com/500/500"
+                }
+              ],
+              "url": "https://www.fillmurray.com/500/500",
+              "alt": "A picture of Bill Murray",
+              "style": "vertical"
+            },
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec nisl id purus pellentesque porta in id enim. Aliquam libero purus, eleifend quis lacinia non, pulvinar in neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec nisl id purus pellentesque porta in id enim. Aliquam libero purus, eleifend quis lacinia non, pulvinar in neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec nisl id purus pellentesque porta in id enim. Aliquam libero purus, eleifend quis lacinia non, pulvinar in neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec nisl id purus pellentesque porta in id enim. Aliquam libero purus, eleifend quis lacinia non, pulvinar in neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet."
+          }
         },
         {
           "id": "c3p4",
-          "pageTitle": "Page Title",
-          "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-          "backgroundColor": "#222",
-          "classes": ""
+          "pageTitle": "Horizontal Image Slider",
+          "component": "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig",
+          "pageData": {
+            "slides": [
+              {
+                "component": "@molecules/Picture/Picture.html.twig",
+                "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis est sit amet leo feugiat, in pulvinar tellus efficitur. Sed a leo nunc. Vivamus quam neque, accumsan et mauris in, mattis efficitur lorem.",
+                "contents": {
+                  "srcset": [
+                    {
+                      "min-width": "0px",
+                      "src": "http://www.fillmurray.com/900/630"
+                    },
+                    {
+                      "min-width": "350px",
+                      "src": "http://www.fillmurray.com/900/630"
+                    },
+                    {
+                      "min-width": "800px",
+                      "src": "http://www.fillmurray.com/900/630"
+                    }
+                  ],
+                  "url": "http://www.fillmurray.com/900/630",
+                  "alt": "A picture of Bill Murray",
+                  "style": "vertical"
+                }
+              },
+              {
+                "component": "@molecules/Picture/Picture.html.twig",
+                "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis est sit amet leo feugiat, in pulvinar tellus efficitur. Sed a leo nunc. Vivamus quam neque, accumsan et mauris in, mattis efficitur lorem.",
+                "contents": {
+                  "srcset": [
+                    {
+                      "min-width": "0px",
+                      "src": "http://www.placekitten.com/900/630"
+                    },
+                    {
+                      "min-width": "350px",
+                      "src": "http://www.placekitten.com/900/630"
+                    },
+                    {
+                      "min-width": "800px",
+                      "src": "http://www.placekitten.com/900/630"
+                    }
+                  ],
+                  "url": "http://www.placekitten.com/900/630",
+                  "alt": "A picture of a kitten",
+                  "style": "vertical"
+                }
+              },
+              {
+                "component": "@molecules/Picture/Picture.html.twig",
+                "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis est sit amet leo feugiat, in pulvinar tellus efficitur. Sed a leo nunc. Vivamus quam neque, accumsan et mauris in, mattis efficitur lorem.",
+                "contents": {
+                  "srcset": [
+                    {
+                      "min-width": "0px",
+                      "src": "http://www.placecage.com/900/630"
+                    },
+                    {
+                      "min-width": "350px",
+                      "src": "http://www.placecage.com/900/630"
+                    },
+                    {
+                      "min-width": "800px",
+                      "src": "http://www.placecage.com/900/630"
+                    }
+                  ],
+                  "url": "http://www.placecage.com/900/630",
+                  "alt": "A picture of Nicolas Cage",
+                  "style": "vertical"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "c3p5",
+          "pageTitle": "Modal",
+          "component": "@layouts/one_up--primary/one_up--primary.html.twig",
+          "pageData": {
+            "component": "@molecules/modal/modal-demo.html.twig",
+            "contents": {
+              "component": "@atoms/textarea/textarea.html.twig",
+              "id": "modal-id-1",
+              "full_screen": true,
+              "modal_button_text": "open modal",
+              "contents": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                "dropcap": false
+              }
+            }
+          }
         }
       ]
     }
