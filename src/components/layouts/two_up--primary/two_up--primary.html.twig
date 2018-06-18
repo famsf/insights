@@ -1,12 +1,13 @@
+{% import "@macros/inklude.html.twig" as inklude %}
 {% set offset_left = offset_left ?: 'medium-offset-1' %}
 {% set offset_right = offset_right ?: 'medium-offset-1' %}
 <div class="two_up--primary fluid">
   <div class="wrapper grid-x grid-margin-x">
     <div class="cell medium-4 {{ offset_left }}">
-      {% include content_left.component with content_left.contents only %}
+      {{ inklude.components(components_left) }}
     </div>
     <div class="cell medium-4 {{ offset_right }}">
-      {% include content_right.component with content_right.contents only %}
+      {{ inklude.components(components_right) }}
     </div>
   </div>
 </div>

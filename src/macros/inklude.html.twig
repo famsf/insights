@@ -1,0 +1,12 @@
+{% macro components(context) %}
+  {# Only one component? #}
+  {% if context.template and context.data %}
+    {% include context.template with context.data only %}
+
+  {# Multiple components, passed in either as a key or directly. #}
+  {% else %}
+    {% for component in context.components|default(context) %}
+      {% include component.template with component.data only %}
+    {% endfor %}
+  {% endif %}
+{% endmacro %}

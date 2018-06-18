@@ -1,5 +1,5 @@
 <section class="chapter {{ classes }}" id="{{ id }}">
-  {% for page in pages %}
-    {% include "@organisms/Page/Page.html.twig" with page only %}
+  {% for id, page in pages %}
+    {% include "@organisms/Page/Page.html.twig" with page|merge({id: id}) only %}
   {% endfor %}
 </section>
