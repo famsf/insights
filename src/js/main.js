@@ -93,7 +93,6 @@
         var oldSt = st
         st = window.poly.getScrollY()
         var scrollDiff = st - oldSt
-        console.log('»', scrollDiff)
         if( scrollDiff != 0 ) {
           scrollDir = ( scrollDiff > 0 ) ? 'down' : 'up';
           window.fds.covers.onScroll(st, scrollDir, wDim.h, didResize)
