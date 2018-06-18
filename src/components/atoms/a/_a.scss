@@ -1,0 +1,10 @@
+%a {
+  &.link--arrow {
+    @extend h6;
+    font-weight: bold;
+  }
+}
+
+a {
+  @extend %a;
+}

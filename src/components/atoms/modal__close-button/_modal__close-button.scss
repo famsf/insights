@@ -1,0 +1,27 @@
+%modal__close-button {
+  display: inline;
+  border-radius: $button-radius;
+  border-color: $white !important;
+  color: $white !important;
+  font-size: 1em;
+  text-transform: capitalize;
+  margin-top: 2rem;
+  margin-left: 2rem;
+
+  .close-button__icon {
+    font-size: 3em;
+    line-height: 0em;
+    font-weight: bolder;
+    margin-right: .5rem;
+  }
+
+  .close-button__text {
+    font-family: $alternate-header-font-family;
+    position: relative;
+    top: -.25rem;
+  }
+}
+
+.modal__close-button {
+  @extend %modal__close-button;
+}

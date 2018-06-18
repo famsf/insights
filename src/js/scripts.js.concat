@@ -8,6 +8,7 @@ files:
 - components/molecules/ChapterNav/ChapterNav.js
 - components/molecules/TopBar/TopBar.js
 - components/molecules/CoverPage/CoverPage.js
+- components/organisms/Page/Page.js
 - js/main.js
 insertNewLine: true
 ---

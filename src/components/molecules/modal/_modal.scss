@@ -1,0 +1,26 @@
+/*
+Modals
+
+Modal dialogs, or pop-up windows, are handy for displaying content as needed on click.
+
+Markup: modal-demo.html.twig
+
+Styleguide COMPONENTS.modal
+
+*/
+
+%modal {
+  @include remove-outline;
+  color: $white;
+
+  &.full-screen {
+    height: 100vh;
+    width: 100vw;
+    max-width: 100vw;
+  }
+}
+
+.modal,
+.reveal {
+  @extend %modal;
+}
