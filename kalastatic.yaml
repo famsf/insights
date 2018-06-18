@@ -44,23 +44,23 @@ pluginOpts:
           layouts: src/components/layouts
           images: src/images
           assets: src/assets
-          templates: src/templates/
+          templates: src/templates
         filters:
           clean_id: twig-drupal-filters/filters/clean_id
           bustcache: kalastatic-twig-filters/lib/filters/bustcache
 
 # Settings for the Styleguide
-kss:
-  builder: "node_modules/kstat-kss-builder"
-  js:
-    - /js/jquery/jquery.js
-    - /js/foundation/foundation.js
-    - /js/owl/owl.carousel.js
-    - ../js/scripts.js
-    - https://use.fontawesome.com/releases/v5.0.13/js/all.js
-  css:
-    - ../styles/main.css
-    - ../styles/styleguide.scss
-    - https://use.typekit.net/bmv1rht.css
-  source:
-    - src/
+kss: false
+  #  builder: "node_modules/kstat-kss-builder"
+  #  js:
+  #    - /js/jquery/jquery.js
+  #    - /js/foundation/foundation.js
+  #    - /js/owl/owl.carousel.js
+  #    - ../js/scripts.js
+  #    - https://use.fontawesome.com/releases/v5.0.13/js/all.js
+  #  css:
+  #    - ../styles/main.css
+  #    - ../styles/styleguide.scss
+  #    - https://use.typekit.net/bmv1rht.css
+  #  source:
+  #    - src/
