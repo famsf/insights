@@ -17,7 +17,7 @@
     margin: 32,
     mergeFit: true
   });
-  
+
   owl.on('mousewheel', '.owl-stage', function (e) {
     if (e.deltaY > 0) {
       owl.trigger('next.owl');
@@ -51,10 +51,10 @@
     }
   }
 
-  document.addEventListener("DOMContentLoaded", function () {
+  $(document).ready(function () {
     var win = window
     var frameCount = 0
-    var calcFps = true
+    var calcFps = false
     var scrollDir
     fds.targetFps = 60
     fds.FpsInterval = 1000 / fds.targetFps

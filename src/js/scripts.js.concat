@@ -5,6 +5,7 @@ files:
 - js/covers.js
 - js/pages.js
 # nav calls fds.pages so needs to come after
+- components/atoms/video--embed/video--embed.js
 - components/molecules/ChapterNav/ChapterNav.js
 - components/molecules/TopBar/TopBar.js
 - components/molecules/CoverPage/CoverPage.js

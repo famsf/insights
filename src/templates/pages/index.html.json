@@ -28,7 +28,7 @@
           "pageTitle": "Page Title",
           "backgroundColor": "#222",
           "classes": "",
-          "component": "@layouts/two_up--even_cols/two_up--even_cols.html.twig",
+          "component": "@layouts/two_up--primary/two_up--primary.html.twig",
           "pageData": {
             "content_left": {
               "component": "@molecules/Picture/Picture.html.twig",
@@ -96,10 +96,12 @@
           "backgroundColor": "#222",
           "classes": "",
           "pageType": "textEvenCols",
-          "component": "@atoms/textarea/textarea.html.twig",
+          "component": "@atoms/video--embed/video--embed.html.twig",
           "pageData": {
-            "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "dropcap": true
+            "sources": [
+              "a",
+              "b"
+            ]
           }
         },
         {

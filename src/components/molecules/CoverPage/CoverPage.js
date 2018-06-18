@@ -1,6 +1,6 @@
-(function(fds, coverPage, window){
+(function(fds, coverPage, window, $){
 
-  document.addEventListener("DOMContentLoaded", function(){
+  $(window.document).ready( function() {
 
     /*
      * Call the polyfill
@@ -45,11 +45,13 @@
     console.log('onCoverImageLoaded')
     fds.coverPageElement.classList.add('loaded')
     setTimeout(function() {
+      console.log('| coverImage » | post_loaded |')
       fds.coverPageElement.classList.add('post_loaded')
       setTimeout(function(){
         fds.coverPageElement.classList.add('initialized')
+        console.log('| coverImage » | initialized |')
       }, 750)
     }, 1250)
   }
 
-})(window.fds = window.fds || {}, window.fds.coverPage = window.fds.coverPage || {}, window);
+})(window.fds = window.fds || {}, window.fds.coverPage = window.fds.coverPage || {}, window, jQuery);
