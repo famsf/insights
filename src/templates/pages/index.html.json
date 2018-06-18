@@ -201,18 +201,18 @@
                   "srcset": [
                     {
                       "min-width": "0px",
-                      "src": "http://www.fillmurray.com/900/630"
+                      "src": "https://www.fillmurray.com/900/630"
                     },
                     {
                       "min-width": "350px",
-                      "src": "http://www.fillmurray.com/900/630"
+                      "src": "https://www.fillmurray.com/900/630"
                     },
                     {
                       "min-width": "800px",
-                      "src": "http://www.fillmurray.com/900/630"
+                      "src": "https://www.fillmurray.com/900/630"
                     }
                   ],
-                  "url": "http://www.fillmurray.com/900/630",
+                  "url": "https://www.fillmurray.com/900/630",
                   "alt": "A picture of Bill Murray",
                   "style": "vertical"
                 }
@@ -224,18 +224,18 @@
                   "srcset": [
                     {
                       "min-width": "0px",
-                      "src": "http://www.placekitten.com/900/630"
+                      "src": "https://www.stevensegallery.com/900/630"
                     },
                     {
                       "min-width": "350px",
-                      "src": "http://www.placekitten.com/900/630"
+                      "src": "https://www.stevensegallery.com/900/630"
                     },
                     {
                       "min-width": "800px",
-                      "src": "http://www.placekitten.com/900/630"
+                      "src": "https://www.stevensegallery.com/900/630"
                     }
                   ],
-                  "url": "http://www.placekitten.com/900/630",
+                  "url": "https://www.stevensegallery.com/900/630",
                   "alt": "A picture of a kitten",
                   "style": "vertical"
                 }
@@ -247,18 +247,18 @@
                   "srcset": [
                     {
                       "min-width": "0px",
-                      "src": "http://www.placecage.com/900/630"
+                      "src": "https://www.placecage.com/900/630"
                     },
                     {
                       "min-width": "350px",
-                      "src": "http://www.placecage.com/900/630"
+                      "src": "https://www.placecage.com/900/630"
                     },
                     {
                       "min-width": "800px",
-                      "src": "http://www.placecage.com/900/630"
+                      "src": "https://www.placecage.com/900/630"
                     }
                   ],
-                  "url": "http://www.placecage.com/900/630",
+                  "url": "https://www.placecage.com/900/630",
                   "alt": "A picture of Nicolas Cage",
                   "style": "vertical"
                 }
