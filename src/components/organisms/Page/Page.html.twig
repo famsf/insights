@@ -1,10 +1,6 @@
 <section class="page {{ classes }}" id="{{ id }}">
-  {% if pageType == 'coverPage' %}
-    {% include "@molecules/CoverPage/CoverPage.html.twig" %}
-  {% elseif pageType == 'ambientVideo' %}
-    {% include "@molecules/AmbientVideo/AmbientVideo.html.twig" with contents only %}
-  {% elseif pageType == 'slideShow' %}
-  {% elseif pageType == 'annotatedImageObject' %}
+  {% if component %}
+    {% include component with pageData only %}
   {% else %}
     <div class="page__content">
       <div class="content {{ contentClasses }}">

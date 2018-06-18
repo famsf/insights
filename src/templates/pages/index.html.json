@@ -11,13 +11,14 @@
           "subTitle": "An artistic journey",
           "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
           "backgroundImage": "/assets/images/lady-with-hat.jpg",
-          "pageType": "coverPage",
+          "component": "@molecules/CoverPage/CoverPage.html.twig",
+          "pageData": "@TODO",
           "classes": "cover invert-top-bar"
         },
         {
           "id": "c1p2",
-          "pageTitle": "Insights",
-          "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          "pageTitle": "Introduction",
+          "pageContent": "Upon the centennial of their deaths, Klimt & Rodin: An Artistic Encounter explores the dialogue between the work of French sculptor Auguste Rodin (1840–1917) and Austrian painter Gustav Klimt (1862–1918) and examines their numerous connections, ranging from their mutual interest in the human form to their philosophical outlooks on the world. A comparison of these two artists reminds the contemporary viewer of the challenges each encountered and how their work pushed the story of modern art forward.<br/><br/>This exhibition allows the public to study, for the very first time on the West Coast, the full evolution of Klimt’s artistic output, ranging from his early and academically applauded work to his provocative and critically debated mature style, as seen here in The Virgin. Revered today as a pioneer of modernism in Vienna, Klimt produced only a very limited number of canvases over his career. Many of these canvases are deemed too fragile to travel, making a sizable display of his work a once-in-a-lifetime opportunity.",
           "backgroundColor": "#222",
           "contentClasses": "big-type revealit",
           "classes": "invert-top-bar"
@@ -25,10 +26,9 @@
         {
           "id": "c1p3",
           "pageTitle": "Page Title",
-          "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
           "backgroundColor": "#222",
           "classes": "",
-          "pageType": "twoUp",
+          "component": "@layouts/two_up--even_cols/two_up--even_cols.html.twig",
           "pageData": {
             "content_left": {
               "component": "@molecules/Picture/Picture.html.twig",
@@ -66,8 +66,8 @@
           "pageTitle": "Page Title",
           "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
           "backgroundColor": "#000",
-          "pageType": "ambientVideo",
-          "contents": {
+          "component": "@molecules/AmbientVideo/AmbientVideo.html.twig",
+          "pageData": {
             "sources": [
               "a",
               "b"
@@ -97,7 +97,7 @@
           "classes": "",
           "pageType": "textEvenCols",
           "component": "@atoms/textarea/textarea.html.twig",
-          "contents": {
+          "pageData": {
             "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "dropcap": true
           }
