@@ -1,7 +1,7 @@
 <div class="one_up--primary fluid {{ classes }}">
   <div class="grid-x grid-margin-x">
     {% block column %}
-      <div class="cell {% set cols = cols ?: 'medium-grid-10' %} medium-offset-1">
+      <div class="cell {% set cols = cols ?: 'medium-grid-10' %} {% set offset_left = offset_left ?: 'medium-offset-1' %}">
         {% include component with contents only %}
       </div>
     {% endblock %}
