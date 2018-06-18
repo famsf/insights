@@ -188,7 +188,7 @@
           "template": "@layouts/one_up--primary/one_up--primary.html.twig",
           "data": {
             "classes": "dark",
-            "offset_left": "medium-offset-1",
+            "offset": "medium-offset-1",
             "components": [
               {
                 "template": "@atoms/video--embed/video--embed.html.twig",

@@ -1,10 +1,10 @@
 {% import "@macros/inklude.html.twig" as inklude %}
 <div class="two_up--primary fluid">
   <div class="wrapper grid-x grid-margin-x">
-    <div class="cell {{ left.size|default('medium-4') }} {{ left.offset|default('medium-offset-1') }}">
+    <div class="cell {{ left.cols|default('medium-4') }} {{ left.offset|default('medium-offset-1') }}">
       {{ inklude.components(left.components) }}
     </div>
-    <div class="cell {{ right.size|default('medium-4') }} {{ right.offset|default('medium-offset-1') }}">
+    <div class="cell {{ right.cols|default('medium-4') }} {{ right.offset|default('medium-offset-1') }}">
       {{ inklude.components(right.components) }}
     </div>
   </div>
