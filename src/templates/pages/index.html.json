@@ -113,29 +113,23 @@
           "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
           "backgroundColor": "#222",
           "classes": "invert-top-bar"
-        }
-      ]
-    },
-    {
-      "title": "Chapter Two",
-      "id": "chapter2",
-      "pages": [
+        },
         {
-          "id": "c2p1",
+          "id": "c2p4",
           "pageTitle": "Page Title",
           "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
           "backgroundColor": "#222",
           "classes": "cover"
         },
         {
-          "id": "c2p2",
+          "id": "c2p5",
           "pageTitle": "Page Title",
           "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
           "backgroundColor": "#222",
           "classes": "invert-top-bar"
         },
         {
-          "id": "c2p3",
+          "id": "c2p6",
           "pageTitle": "Page Title",
           "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
           "backgroundColor": "#222",
@@ -151,13 +145,6 @@
               ]
             }
           }
-        },
-        {
-          "id": "c2p4",
-          "pageTitle": "Page Title",
-          "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-          "backgroundColor": "#222",
-          "classes": "invert-top-bar"
         }
       ]
     },
