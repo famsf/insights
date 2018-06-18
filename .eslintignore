@@ -1,0 +1,4 @@
+build/**/*
+node_modules/**/*
+scripts/eslint-stats-by-type.js
+src/js/poly/*

@@ -1,5 +1,8 @@
 (function(fds, window, document, $ ) {
 
+  // Always use the smoothscroll polyfill, even in browsers with native support.
+  window.__forceSmoothScrollPolyfill__ = true;
+
   // Initialize foundation.
   $(document).foundation();
 
@@ -22,12 +25,9 @@
     e.preventDefault();
   });
 
-});
-
-
-fds.setStyle = function(el, obj) {
-  el.style = Object.assign(el.style, obj)
-}
+  fds.setStyle = function(el, obj) {
+    el.style = Object.assign(el.style, obj)
+  }
 
   fds.getParentEl = function(el, selector) {
     var elements = []
@@ -93,7 +93,6 @@ fds.setStyle = function(el, obj) {
         var oldSt = st
         st = window.poly.getScrollY()
         var scrollDiff = st - oldSt
-        console.log('»', scrollDiff)
         if( scrollDiff != 0 ) {
           scrollDir = ( scrollDiff > 0 ) ? 'down' : 'up';
           window.fds.covers.onScroll(st, scrollDir, wDim.h, didResize)

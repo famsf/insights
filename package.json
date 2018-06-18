@@ -1,30 +1,42 @@
 {
-  "version": "3.1.0",
+  "name": "famsf-insights",
+  "description": "FAMSF Insights: A series of free, in-depth looks into our exhibitions, enriched with multimedia experiences. Learn more about an exhibition's cultural context and artworks before you visit and discover details about the works that might otherwise go unnoticed.",
+  "version": "0.1.0",
   "private": true,
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kalamuna/kalamuna.com.git"
+    "url": "git+https://github.com/famsf/insights.git"
   },
-  "description": "Marketing site for Kalamuna",
   "main": "build/index.html",
   "scripts": {
-    "test": "kalastatic build",
+    "install": "napa TimPietrusky/background-clip-text-polyfill",
+    "test-with-linting": "[ \"${CONTEXT}\" = production ] && run-s play || run-s play lint:js",
+    "test": "run-s play",
+    "play": "kalastatic build",
     "start": "kalastatic start",
-    "deploy": "push-dir --verbose --force --dir=\"$npm_package_config_dir\" --remote=\"$npm_package_config_deploy\" --branch=\"${TRAVIS_BRANCH:-deploy}\""
+    "lint:js": "node ./node_modules/eslint/bin/eslint.js --quiet .",
+    "lint:js-fix": "node ./node_modules/eslint/bin/eslint.js --fix .",
+    "lint:js-passing": "node ./node_modules/eslint/bin/eslint.js --quiet --config=.eslintrc.passing.json .",
+    "lint:js-stats": "node ./node_modules/eslint/bin/eslint.js --format=./scripts/eslint-stats-by-type.js . || exit 0",
+    "lint:css": "stylelint \"**/*.css\" || exit 0",
+    "lint:css-checkstyle": "stylelint \"**/*.css\" --custom-formatter ./node_modules/stylelint-checkstyle-formatter/index.js || exit 0"
   },
   "keywords": [
     "website"
   ],
-  "author": "Josh Walker",
   "bugs": {
-    "url": "https://github.com/kalamuna/kalamuna.com/issues"
+    "url": "https://github.com/famsf/insights/issues"
   },
-  "homepage": "https://github.com/kalamuna/kalamuna.com#readme",
+  "homepage": "https://insights.famsf.org",
   "devDependencies": {
-    "kalastatic": "4.0.0-alpha.5",
-    "napa": "^3.0.0",
-    "push-dir": "^0.4.1"
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "stylelint": "^9.1.1",
+    "stylelint-checkstyle-formatter": "^0.1.1",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-no-browser-hacks": "^1.1.0"
   },
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
@@ -32,18 +44,18 @@
     "jquery": "^3.3.1",
     "jquery-match-height": "^0.7.2",
     "jquery-smooth-scroll": "^2.2.0",
+    "kalastatic": "4.0.0-alpha.5",
     "kalastatic-twig-filters": "^0.2.0",
     "kss-bootstrap": "^4.1.1",
     "kstat-kss-builder": "^1.2.0",
     "motion-ui": "~1.2.2",
-    "owl.carousel": "^2.3.4",
+    "napa": "^3.0.0",
+    "npm-run-all": "^4.1.3",
     "object-fit-images": "^3.2.3",
+    "owl.carousel": "^2.3.4",
+    "postcss-syntax": "^0.28.0",
+    "smoothscroll-polyfill": "^0.4.3",
     "twig-drupal-filters": "^1.1.0",
-    "what-input": "^4.1.3",
-    "window-scroll": "^1.0.0"
-  },
-  "config": {
-    "dir": "build",
-    "deploy": "ssh://codeserver.dev.949b4f63-5ec6-4c65-ba10-c05f48cd90bd@codeserver.dev.949b4f63-5ec6-4c65-ba10-c05f48cd90bd.drush.in:2222/~/repository.git"
+    "what-input": "^4.1.3"
   }
 }
