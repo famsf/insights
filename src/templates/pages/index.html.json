@@ -117,6 +117,44 @@
       ]
     },
     {
+      "title": "Chapter Two",
+      "id": "chapter2",
+      "pages": [
+        {
+          "id": "c2p1",
+          "pageTitle": "Page Title",
+          "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          "backgroundColor": "#222",
+          "classes": "cover"
+        },
+        {
+          "id": "c2p2",
+          "pageTitle": "Page Title",
+          "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          "backgroundColor": "#222",
+          "classes": "",
+          "component": "@layouts/one_up--primary/one_up--primary.html.twig",
+          "pageData": {
+            "classes": "dark",
+            "component": "@atoms/audio_player/audio_player.html.twig",
+            "contents": {
+              "srcset": [
+                "...",
+                "..."
+              ]
+            }
+          }
+        },
+        {
+          "id": "c2p4",
+          "pageTitle": "Page Title",
+          "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          "backgroundColor": "#222",
+          "classes": "invert-top-bar"
+        }
+      ]
+    },
+    {
       "title": "Chapter Three",
       "id": "chapter3",
       "pages": [
