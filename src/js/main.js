@@ -18,12 +18,13 @@
     mergeFit: true
   });
 
-  owl.on('mousewheel', '.owl-stage', function (e) {
-    if (e.deltaY > 0) {
-      owl.trigger('next.owl');
-    }
-    e.preventDefault();
-  });
+  // Prevents scrolling vertically until all slides have been seen.
+  // owl.on('mousewheel', '.owl-stage', function (e) {
+  //   if (e.deltaY > 0) {
+  //     owl.trigger('next.owl');
+  //   }
+  //   e.preventDefault();
+  // });
 
   fds.setStyle = function(el, obj) {
     el.style = Object.assign(el.style, obj)
