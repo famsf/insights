@@ -48,8 +48,10 @@
       console.log('| coverImage » | post_loaded |')
       fds.coverPageElement.classList.add('post_loaded')
       setTimeout(function(){
-        fds.coverPageElement.classList.add('initialized')
-        console.log('| coverImage » | initialized |')
+        // fds.coverPageElement.classList.add('initialized')
+        $(fds.coverPageElement).addClass('initialized')
+        // console.log('fds»»»', fds.coverPageElement,  fds.coverPageElement.classList)
+        // console.log('| coverImage » | initialized |')
       }, 750)
     }, 1250)
   }

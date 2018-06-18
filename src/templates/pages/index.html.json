@@ -95,13 +95,16 @@
           "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
           "backgroundColor": "#222",
           "classes": "",
-          "pageType": "textEvenCols",
-          "component": "@atoms/video--embed/video--embed.html.twig",
+          "component": "@layouts/one_up--primary/one_up--primary.html.twig",
           "pageData": {
-            "sources": [
-              "a",
-              "b"
-            ]
+            "classes": "dark",
+            "component": "@atoms/video--embed/video--embed.html.twig",
+            "contents": {
+              "srcset": [
+                "...",
+                "..."
+              ]
+            }
           }
         },
         {

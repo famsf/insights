@@ -12,67 +12,83 @@
   fds.initializeInlineVideo = function(el) {
 
     var controls = el.querySelector('.video--embed__controls')
+    console.log('|»»»', el, controls)
     var playButton = controls.querySelector('.play-pause')
     var seekBar = controls.querySelector('.seek-bar')
     var muteButton = controls.querySelector('.mute')
     var volumeBar = controls.querySelector('.volume-bar')
+    var video = el.querySelector('video')
+    var timeStamp = el.querySelector('.currentTime');
 
-    playButton.addEventListener("click", function() {
-      if (video.paused == true) {
-        // Play the video
-        video.play()
-        // Update the button text to 'Pause'
-        playButton.innerHTML = "Pause"
-      } else {
-        // Pause the video
+    if( playButton ) {
+      playButton.addEventListener("click", function() {
+        if (video.paused == true) {
+          // Play the video
+          video.play()
+          // Update the button text to 'Pause'
+          playButton.innerHTML = "Pause"
+        } else {
+          // Pause the video
+          video.pause()
+          // Update the button text to 'Play'
+          playButton.innerHTML = "Play"
+        }
+      });
+    }
+
+
+    if( muteButton ) {
+      // Event listener for the mute button
+      muteButton.addEventListener("click", function() {
+        if (video.muted == false) {
+          // Mute the video
+          video.muted = true;
+          // Update the button text
+          muteButton.innerHTML = "Unmute"
+        } else {
+          // Unmute the video
+          video.muted = false
+          // Update the button text
+          muteButton.innerHTML = "Mute"
+        }
+      })
+    }
+
+    if( seekBar ) {
+      // Event listener for the seek bar
+      seekBar.addEventListener("change", function() {
+        // Calculate the new time
+        var time = video.duration * (seekBar.value / 100)
+        // Update the video time
+        video.currentTime = time
+        timeStamp.innerHTML = currentTime + '/' + videoDuration
+
+      })
+
+
+      // Pause the video when the slider handle is being dragged
+      seekBar.addEventListener("mousedown", function() {
         video.pause()
-        // Update the button text to 'Play'
-        playButton.innerHTML = "Play"
-      }
-    });
+      })
 
-    // Event listener for the mute button
-    muteButton.addEventListener("click", function() {
-      if (video.muted == false) {
-        // Mute the video
-        video.muted = true;
-        // Update the button text
-        muteButton.innerHTML = "Unmute"
-      } else {
-        // Unmute the video
-        video.muted = false
-        // Update the button text
-        muteButton.innerHTML = "Mute"
-      }
-    })
+      // Play the video when the slider handle is dropped
+      seekBar.addEventListener("mouseup", function() {
+        video.play()
+      })
 
-    // Event listener for the seek bar
-    seekBar.addEventListener("change", function() {
-      // Calculate the new time
-      var time = video.duration * (seekBar.value / 100)
-      // Update the video time
-      video.currentTime = time
-    })
+    }
 
-    // Pause the video when the slider handle is being dragged
-    seekBar.addEventListener("mousedown", function() {
-      video.pause()
-    })
-
-    // Play the video when the slider handle is dropped
-    seekBar.addEventListener("mouseup", function() {
-      video.play()
-    })
-
-    // Event listener for the volume bar
-    volumeBar.addEventListener("change", function() {
-      // Update the video volume
-      video.volume = volumeBar.value
-    })
+    if( volumeBar ) {
+      // Event listener for the volume bar
+      volumeBar.addEventListener("change", function() {
+        // Update the video volume
+        video.volume = volumeBar.value
+      })
+    }
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    var vids = document.querySelectorAll('.video--embed__controls')
+    var vids = document.querySelectorAll('.video--embed')
     var count = vids.length
     for(var i = 0; i < count; i++) {
       fds.initializeInlineVideo(vids[i])

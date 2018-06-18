@@ -7,3 +7,21 @@ Ten col, 'full width' video
 Markup: video--embed.html.twig
 
 */
+
+.video--embed  {
+
+  background-color: #000;
+  position: relative;
+
+
+  video {
+    // width: 100%;
+  }
+
+  .video--embed__controls {
+    position: absolute;
+    bottom: 0;
+    height: 3em;
+    width: 100%;
+  }
+}
