@@ -15,7 +15,6 @@
 
   }
   p.initialize = function(el) {
-    console.log('hihihi', el)
     this.el = el
     el.setAttribute('data-instance', this)
     el.addEventListener("pageEvent", function(e) {
