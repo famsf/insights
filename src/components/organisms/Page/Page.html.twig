@@ -1,14 +1,16 @@
 <section class="page {{ classes }}" id="{{ id }}">
-  {% if component %}
-    {% include component with pageData only %}
-  {% else %}
-    <div class="page__content">
-      <div class="content {{ contentClasses }}">
-        {% if pageTitle %}
-          <h2 class="page-title">{{ pageTitle }}</h2>
-        {% endif %}
-        {{ pageContent }}
+  <div class="frame">
+    {% if component %}
+      {% include component with pageData only %}
+    {% else %}
+      <div class="page__content">
+        <div class="content {{ contentClasses }}">
+          {% if pageTitle %}
+            <h2 class="page-title">{{ pageTitle }}</h2>
+          {% endif %}
+          {{ pageContent }}
+        </div>
       </div>
-    </div>
-  {% endif %}
+    {% endif %}
+  </div>
 </section>

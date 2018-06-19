@@ -3,7 +3,7 @@
   var pages = fds.pages = {};
 
   pages.options = {
-    scrollThreshhold: 0.2
+    scrollThreshhold: 0.175
   }
 
   pages.initialize = function (containerSelector, pageSelector, clearElementSelector) {
@@ -26,7 +26,9 @@
 
   pages.setCurrentPage = function (pageEl) {
     pages.oldCurrentPage = pages.currentPage;
+    pages.oldCurrentPage.classList.remove('current')
     pages.currentPage = pageEl;
+    pages.currentPage.classList.add('current')
     return pageEl;
   }
 
@@ -38,13 +40,25 @@
     var count = pages.pages.length;
     var marginTop = currentPage.style.marginTop ? parseInt(currentPage.style.marginTop) : 0;
 
+    var pageTopAboveOrAtViewportTop = pageRect.top + marginTop <= 0
+    var pageTopPastScrollThreshhold = pageRect.top < - 1 * (wh * pages.options.scrollThreshhold)
+
+    console.log( currentPage.id, '?» ', scrollY, currentPage.offsetTop, currentPage.getBoundingClientRect().top, fds.getParentEl(currentPage, '.chapter').getBoundingClientRect().top )
     if (currentPage && currentPage.classList.contains('in-viewport')) {
       if (scrollDir === 'down') {
         shouldTriggerTopBar = pageRect.top - marginTop < pages.clearElementHeight;
-      }
-      else {
+      } else {
         shouldTriggerTopBar = pageRect.top - marginTop + pageRect.height > -1 * pages.clearElementHeight;
       }
+
+      if (pageTopAboveOrAtViewportTop && !currentPage.classList.contains('pinned')) {
+        pages.pageReachedTop(currentPage);
+      }
+
+      if(currentPage.classList.contains('pinned') && pageTopPastScrollThreshhold ) {
+        pages.releasePinned(currentPage);
+      }
+
       pages.triggerTopBarEvents(currentPage);
     }
 
@@ -55,10 +69,12 @@
       marginTop = page.style.marginTop ? parseInt(page.style.marginTop) : 0
       pageRect = page.getBoundingClientRect()
       var pageTopAboveViewportBottom = pageRect.top + marginTop < pageRect.height
+
       var pageTopBelowViewportBottom = pageRect.top + marginTop > pageRect.height
       var pageBottomBelowViewportTop = pageRect.top + marginTop + pageRect.height > 0
       var pageBottomAboveViewportTop = pageRect.top + marginTop + pageRect.height < 0
       var pageTopAboveViewportTop = pageRect.top < 0
+
       if(scrollDir === 'down') {
         if (pageBottomAboveViewportTop){
           // Page is now offscreen.
@@ -88,6 +104,24 @@
         detail: { action: 'leave' }
       }));
     }
+  }
+
+  pages.pageReachedTop = function (page) {
+    // if (page.classList.contains('in-viewport')) {
+      page.dispatchEvent(new CustomEvent('pageEvent', {
+        bubbles: true,
+        detail: { action: 'reachTop' }
+      }));
+    // }
+  }
+
+  pages.pageReachedTop = function (page) {
+    // if (page.classList.contains('current')) {
+      page.dispatchEvent(new CustomEvent('pageEvent', {
+        bubbles: true,
+        detail: { action: 'release' }
+      }));
+    // }
   }
 
   pages.pageEnteredViewport = function (page) {
@@ -133,10 +167,12 @@
         break;
 
       case 'reachTop':
+        console.log('| » |  reached the top | » ', e.target.id )
         e.target.classList.add('pinned');
         break;
 
       case 'release':
+      console.log('| » |  release | » ', e.target.id )
         e.target.classList.remove('pinned');
         break;
 
