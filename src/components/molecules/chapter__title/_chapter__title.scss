@@ -1,0 +1,57 @@
+/*
+Chapter title
+
+Cover pages for chapters
+
+Markup: chapter__title.html.twig
+*/
+
+%chapter__title {
+
+  .object-fit  {
+    position: absolute;
+    @extend %object-fit;
+    .pinned & {
+      @extend %kenburns;
+    }
+  }
+
+  .in_viewport & .object-fit {
+    border: 1px #f00 solid;
+  }
+
+
+  .overlay {
+    position: absolute;
+    z-index: 50;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+
+  .chapter__headline {
+
+    color: white;
+
+    .numeral,
+    .title {
+      display: block;
+      text-align: center;
+    }
+
+    .numeral {
+      font-size: 10rem;
+      color: white;
+    }
+
+    .title {
+      font-size: 3.125rem;
+    }
+  }
+
+
+}
+
+.chapter__title {
+  @extend %chapter__title
+}

@@ -1,4 +1,4 @@
-<div class="video--embed responsive-embed">
+<div class="video--embed">
   <video poster="/assets/images/video/rodin.jpg" id="bgvid" playsinline autoplay muted {# loop #}>
     <source src="/assets/video/rodin.webm" type="video/webm">
     <source src="/assets/video/rodin.m4v" type="video/m4v">
@@ -7,8 +7,8 @@
     <button type="button" class="play-pause">Play</button>
     <input type="range" class="seek-bar" value="0">
     <div class="currentTime"></div>
-{#    <button type="button" class="mute">Mute</button> #}
-{#    <input type="range" class="volume-bar" min="0" max="1" step="0.1" value="1"> #}
-{#    <button type="button" class="full-screen">Full-Screen</button> #}
+    {#    <button type="button" class="mute">Mute</button> #}
+   <input type="range" class="volume-bar" min="0" max="1" step="0.1" value="1">
+   <button type="button" class="full-screen">Full-Screen</button>
   </div>
 </div>

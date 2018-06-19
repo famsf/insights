@@ -13,15 +13,29 @@
           "backgroundImage": "/assets/images/lady-with-hat.jpg",
           "component": "@molecules/CoverPage/CoverPage.html.twig",
           "pageData": "@TODO",
-          "classes": "cover invert-top-bar"
+          "classes": "invert-top-bar"
         },
         {
           "id": "c1p2",
           "pageTitle": "Introduction",
           "pageContent": "Upon the centennial of their deaths, Klimt & Rodin: An Artistic Encounter explores the dialogue between the work of French sculptor Auguste Rodin (1840–1917) and Austrian painter Gustav Klimt (1862–1918) and examines their numerous connections, ranging from their mutual interest in the human form to their philosophical outlooks on the world. A comparison of these two artists reminds the contemporary viewer of the challenges each encountered and how their work pushed the story of modern art forward.<br/><br/>This exhibition allows the public to study, for the very first time on the West Coast, the full evolution of Klimt’s artistic output, ranging from his early and academically applauded work to his provocative and critically debated mature style, as seen here in The Virgin. Revered today as a pioneer of modernism in Vienna, Klimt produced only a very limited number of canvases over his career. Many of these canvases are deemed too fragile to travel, making a sizable display of his work a once-in-a-lifetime opportunity.",
           "backgroundColor": "#222",
-          "contentClasses": "big-type revealit",
-          "classes": "invert-top-bar"
+          "classes": "invert-top-bar",
+          "component": "@layouts/one_up--primary/one_up--primary.html.twig",
+          "pageData": {
+            "gridframe": "medium-grid-frame",
+            "grid": "big-type revealit grid-margin-x grid-margin-y grid-padding-y",
+            "cols": "medium-10 grid-margin-y",
+            "offset_left": "medium-offset-1",
+            "classes": "dark",
+            "component": "@atoms/video--embed/video--embed.html.twig",
+            "contents": {
+              "srcset": [
+                "...",
+                "..."
+              ]
+            }
+          }
         },
         {
           "id": "c1p3",
@@ -86,7 +100,7 @@
           "id": "c2p1",
           "pageTitle": "In Search of Modernity",
           "backgroundColor": "#000",
-          "classes": "cover",
+          "classes": "",
           "component": "@molecules/chapter__title/chapter__title.html.twig"
         },
         {
@@ -97,8 +111,11 @@
           "classes": "",
           "component": "@layouts/one_up--primary/one_up--primary.html.twig",
           "pageData": {
-            "classes": "dark",
+            "gridframe": "medium-grid-frame",
+            "grid": "grid-margin-x grid-margin-y grid-padding-y",
+            "cols": "medium-10 grid-margin-y",
             "offset_left": "medium-offset-1",
+            "classes": "dark",
             "component": "@atoms/video--embed/video--embed.html.twig",
             "contents": {
               "srcset": [
@@ -109,7 +126,34 @@
           }
         },
         {
-          "id": "c2p5",
+          "id": "c2p3",
+          "pageTitle": "Page Title",
+          "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+          "backgroundColor": "#222",
+          "classes": "",
+          "component": "@layouts/two_up--primary/two_up--primary.html.twig",
+          "pageData": {
+            "content_left": {
+              "component": "@atoms/cliff-note/cliff-note.html.twig",
+              "contents": {
+                "component_name": "cliff-note",
+                "text": "Cliff Note aka Blurb - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec nisl id purus pellentesque porta in id enim."
+              }
+            },
+            "content_right": {
+              "classes": "dark",
+              "component": "@atoms/audio_player/audio_player.html.twig",
+              "contents": {
+                "srcset": [
+                  "...",
+                  "..."
+                ]
+              }
+            }
+          }
+        },
+        {
+          "id": "c2p4",
           "pageTitle": "Page Title",
           "component": "@layouts/one_up--primary/one_up--primary.html.twig",
           "pageData": {

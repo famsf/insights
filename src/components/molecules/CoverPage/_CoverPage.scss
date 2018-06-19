@@ -11,8 +11,7 @@ $bgURL: 'https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTF
     @extend %fill_screen;
 
     .bg-image {
-      @extend %abs;
-      @extend %fill_screen;
+      @extend %object-fit;
       z-index: -1;
     }
     .underlay_contents {
@@ -86,12 +85,7 @@ $bgURL: 'https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTF
   }
 
   .bg-image {
-    z-index: 1;
-    background-size: cover !important;
-    transform-origin: center center;
-    object-position: 50% 50%;
-    object-fit: cover;
-    font-family: 'object-fit: contain;object-position: 50% 50%';
+    @extend %object-fit;
     animation: kenburns 4s ease-out 0.75s 1 forwards running;
   }
 
