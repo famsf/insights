@@ -79,15 +79,15 @@
       ]
     },
     {
-      "title": "Chapter Two",
+      "title": "In Search of Modernity",
       "id": "chapter2",
       "pages": [
         {
           "id": "c2p1",
-          "pageTitle": "Page Title",
-          "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-          "backgroundColor": "#222",
-          "classes": "cover"
+          "pageTitle": "In Search of Modernity",
+          "backgroundColor": "#000",
+          "classes": "cover",
+          "component": "@molecules/chapter__title/chapter__title.html.twig"
         },
         {
           "id": "c2p2",

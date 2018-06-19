@@ -1,0 +1,26 @@
+/*
+Chapter title
+
+Cover pages for chapters
+
+Markup: chapter__title.html.twig
+*/
+
+%chapter__title {
+
+  .object-fit  {
+    object-fit: cover;
+    font-family: 'object-fit: contain;object-position: 50% 50%';
+
+  }
+
+  .in_viewport & .object-fit {
+    border: 1px #f00 solid;
+    animation: kenburns 4s ease-out 0.75s 1 forwards running;
+  }
+
+}
+
+.chapter__title {
+  @extend %chapter__title
+}
