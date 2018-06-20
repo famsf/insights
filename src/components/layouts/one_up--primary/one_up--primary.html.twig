@@ -1,9 +1,8 @@
-<div class="one_up--primary fluid {{ gridframe ? gridframe : '' }} {{ classes }}">
+{% import "@macros/inklude.html.twig" as inklude %}
+<div class="one_up--primary fluid {{ gridframe|default('grid-frame') }} {{ classes }}">
   <div class="grid-x grid-margin-x {{ grid ? grid : '' }}">
-    {% block column %}
-      <div class="cell {{ cols ? cols : 'medium-grid-10' }} {{ offset_left ? offset_left : 'medium-offset-1' }}">
-        {% include component with contents only %}
-      </div>
-    {% endblock %}
+    <div class="cell {{ cols|default('medium-10') }} {{ offset|default('medium-offset-1') }}">
+      {{ inklude.components(_context) }}
+    </div>
   </div>
 </div>

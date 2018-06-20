@@ -12,7 +12,6 @@
   fds.initializeInlineVideo = function(el) {
 
     var controls = el.querySelector('.video--embed__controls')
-    console.log('|»»»', el, controls)
     var playButton = controls.querySelector('.play-pause')
     var seekBar = controls.querySelector('.seek-bar')
     var muteButton = controls.querySelector('.mute')

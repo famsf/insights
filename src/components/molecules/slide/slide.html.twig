@@ -1,6 +1,6 @@
+{% import "@macros/inklude.html.twig" as inklude %}
 <div class="item">
-  {% include component with contents only %}
-
+  {{ inklude.components(_context) }}
   {% if caption %}
     <figcaption>{{ caption }}</figcaption>
   {% endif %}

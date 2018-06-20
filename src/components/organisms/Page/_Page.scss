@@ -14,6 +14,10 @@
     box-sizing: border-box;
   }
 
+  .fluid {
+    min-height: 100vh;
+  }
+
   h2 {
     margin-top: 0;
   }
@@ -27,21 +31,18 @@
     font-style: italic;
   }
 
-  // &.current {
-  //   position: sticky;
-  //   top: 0;
-  //   bottom: 0;
-  //   border: 1px #0af solid;
-  // }
-
   &.pinned {
     .frame {
       @extend %fixed;
     }
-    // position: fixed;
-    // z-index: 500;
-    // top: 0;
-    // left: 0;
+  }
+
+  /* Color variations */
+  .dark {
+    background-color: black;
+    p {
+      color: #fff;
+    }
   }
 }
 

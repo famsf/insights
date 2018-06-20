@@ -53,14 +53,11 @@ Markup: chapter__title.html.twig
       font-size: 3.125rem;
     }
   }
-
-
 }
 
 .chapter__title {
   @extend %chapter__title
 }
-
 
 @keyframes kenburns--sonja {
   0% {

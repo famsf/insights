@@ -1,16 +1,4 @@
+{% import "@macros/inklude.html.twig" as inklude %}
 <section class="page {{ classes }}" id="{{ id }}">
-  <div class="frame">
-    {% if component %}
-      {% include component with pageData only %}
-    {% else %}
-      <div class="page__content">
-        <div class="content {{ contentClasses }}">
-          {% if pageTitle %}
-            <h2 class="page-title">{{ pageTitle }}</h2>
-          {% endif %}
-          {{ pageContent }}
-        </div>
-      </div>
-    {% endif %}
-  </div>
+  {{ inklude.components(_context) }}
 </section>

@@ -1,13 +1,23 @@
 {% extends "@layouts/two_up--primary/two_up--primary.html.twig" %}
 
-{% block two_up__left_content %}
-  <div class="cell medium-3 medium-offset-2">
-    {% include "PictureWithCaption.html.twig" with { caption:caption_1, picture:picture_1 } only %}
-  </div>
-{% endblock %}
+{% set left = {
+     cols: "medium-3",
+     offset: "medium-offset-2",
+     template: "PictureWithCaption.html.twig",
+     data: {
+       caption: caption_1,
+       picture: picture_1,
+     },
+   }
+%}
 
-{% block two_up__right_content %}
-  <div class="cell medium-4 medium-offset-1">
-    {% include "PictureWithCaption.html.twig" with { caption:caption_2, picture:picture_2 } only %}
-  </div>
-{% endblock %}
+{% set right = {
+     cols: "medium-4",
+     offset: "medium-offset-1",
+     template: "PictureWithCaption.html.twig",
+     data: {
+       caption: caption_2,
+       picture: picture_2,
+     },
+   }
+%}
