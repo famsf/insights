@@ -1,3 +1,3 @@
 {% extends "@layouts/two_up--primary/two_up--primary.html.twig" %}
-{% set offset_left = 'medium-offset-2' %}
-{% set offset_right = '' %}
+{% set left = left|merge({offset: left.offset ?: 'medium-offset-2'}) %}
+{% set right = right|merge({offset: right.offset ?: ''}) %}

@@ -1,4 +1,4 @@
-<div class="{{ component_name ?: 'standalone-quote' }} {{ (not large_text)?: 'size--large' }}">
+<div class="{{ component_name ?: 'standalone-quote' }} {{ large_text ? 'size--large' }}">
   {% include "@atoms/standalone-quote__icon/standalone-quote__icon.html.twig" %}
 
   <q>{{ text }}</q>

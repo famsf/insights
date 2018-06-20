@@ -45,6 +45,7 @@ pluginOpts:
           images: src/images
           assets: src/assets
           templates: src/templates
+          macros: src/macros
         filters:
           clean_id: twig-drupal-filters/filters/clean_id
           bustcache: kalastatic-twig-filters/lib/filters/bustcache
