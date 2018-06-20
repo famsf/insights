@@ -2,9 +2,9 @@
 
   font-family: $header-font-family;
   font-weight: bold;
-  margin-top: 1rem;
   font-size: 2rem;
   line-height: 1.2;
+  padding-bottom: 8rem;
   padding-top: 8rem;
 
   h2 {
@@ -23,11 +23,6 @@
 
     .cell:first-of-type {
       background-color: black;
-      opacity: 0;
-      transition-property: opacity;
-      transition-duration: 1.75s;
-      transition-delay: 0.25s;
-      transition-timing-function: ease-in-out;
     }
 
     p,
@@ -36,9 +31,18 @@
     }
   }
 
+  .cell:first-of-type {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: 1.25s;
+    transition-delay: 0.25s;
+    transition-timing-function: ease-in-out;
+    transform: translate3d(0, 4.5rem, 0)
+  }
   .trigger & {
     .cell:first-of-type {
       opacity: 1;
+      transform: translate3d(0, 0, 0)
     }
   }
 }
