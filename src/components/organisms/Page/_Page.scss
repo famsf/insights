@@ -6,24 +6,17 @@
   min-height: 100vh;
   overflow: hidden;
   background-color: #fff;
+  box-sizing: border-box;
 
 
   .frame {
     @extend %fill_screen;
+    box-sizing: border-box;
   }
 
   h2 {
     margin-top: 0;
   }
-
-  //
-  // &.cover {
-  //   position: absolute;
-  //   z-index: 100;
-  //   width: 100%;
-  //   box-shadow: 0 3px 12px rgba(#000,0.3);
-  // }
-
 
   .sub-title,
   .page-title {
@@ -32,10 +25,6 @@
     font-weight: 600;
     font-family: freight-display-pro;
     font-style: italic;
-  }
-
-  .entering {
-    box-sizing: border-box;
   }
 
   // &.current {

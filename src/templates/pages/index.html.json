@@ -39,7 +39,7 @@
         },
         {
           "id": "c1p3",
-          "pageTitle": "Page Title",
+          "pageTitle": "In Search of Modernity",
           "backgroundColor": "#222",
           "classes": "",
           "component": "@layouts/two_up--primary/two_up--primary.html.twig",
@@ -98,13 +98,6 @@
       "pages": [
         {
           "id": "c2p1",
-          "pageTitle": "In Search of Modernity",
-          "backgroundColor": "#000",
-          "classes": "",
-          "component": "@molecules/chapter__title/chapter__title.html.twig"
-        },
-        {
-          "id": "c2p2",
           "pageTitle": "Page Title",
           "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
           "backgroundColor": "#222",
@@ -126,7 +119,7 @@
           }
         },
         {
-          "id": "c2p3",
+          "id": "c2p2",
           "pageTitle": "Page Title",
           "pageContent": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
           "backgroundColor": "#222",
@@ -153,7 +146,7 @@
           }
         },
         {
-          "id": "c2p4",
+          "id": "c2p3",
           "pageTitle": "Page Title",
           "component": "@layouts/one_up--primary/one_up--primary.html.twig",
           "pageData": {

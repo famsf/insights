@@ -9,15 +9,20 @@ Markup: chapter__title.html.twig
 %chapter__title {
 
   .object-fit  {
-    position: absolute;
     @extend %object-fit;
-    .pinned & {
-      @extend %kenburns;
-    }
+    object-position: 50% 50%;
+    font-family: 'object-fit: contain;object-position: 50% 50%';
+    position: absolute;
   }
 
-  .in_viewport & .object-fit {
-    border: 1px #f00 solid;
+  .trigger & .object-fit {
+    animation-name: kenburns--sonja;
+    animation-duration: 1.25s;
+    animation-timing-function: ease-out;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
   }
 
 
@@ -54,4 +59,14 @@ Markup: chapter__title.html.twig
 
 .chapter__title {
   @extend %chapter__title
+}
+
+
+@keyframes kenburns--sonja {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
 }

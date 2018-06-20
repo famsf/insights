@@ -54,9 +54,10 @@ $bgURL: 'https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTF
   .headline {
     margin: 0;
     display: block;
-    position: relative;
+    position: absolute;
     top: 40%;
-    transform: translateY(-40%);
+    left: 50%;
+    transform: translate3d(-50%, -40%, 0);
   }
 
 
@@ -86,7 +87,7 @@ $bgURL: 'https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTF
 
   .bg-image {
     @extend %object-fit;
-    animation: kenburns 4s ease-out 0.75s 1 forwards running;
+    animation: kenburns--cover 4s ease-out 0.75s 1 forwards running;
   }
 
   .mask {
@@ -167,11 +168,11 @@ $bgURL: 'https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTF
     clip: rect(0 100vw 100vh 0);
   }
   100% {
-    clip: rect(0 0 100vh 0);
+    clip: rect(0 100vw 100vh 100vw);
   }
 }
 
-@keyframes kenburns {
+@keyframes kenburns--cover {
   0% {
     transform: scale(1);
   }
