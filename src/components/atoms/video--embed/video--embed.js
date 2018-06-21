@@ -19,7 +19,7 @@
 
     if (playButton) {
       playButton.addEventListener('click', function () {
-        if (video.paused == true) {
+        if (video.paused) {
           // Play the video
           video.play();
           // Update the button text to 'Pause'
@@ -38,7 +38,7 @@
     if (muteButton) {
       // Event listener for the mute button
       muteButton.addEventListener('click', function () {
-        if (video.muted == false) {
+        if (!video.muted) {
           // Mute the video
           video.muted = true;
           // Update the button text
@@ -60,7 +60,7 @@
         var time = video.duration * (seekBar.value / 100);
         // Update the video time
         video.currentTime = time;
-        timeStamp.innerHTML = currentTime + '/' + videoDuration;
+        timeStamp.innerHTML = time + '/' + video.duration;
       });
 
 
@@ -87,8 +87,14 @@
   document.addEventListener('DOMContentLoaded', function () {
     var vids = document.querySelectorAll('.video--embed');
     var count = vids.length;
-    for (var i = 0; i < count; i++) {
+    var i;
+    for (i = 0; i < count; i++) {
       fds.initializeInlineVideo(vids[i]);
     }
   });
-}(window.fds = window.fds || {}, window.fds.videoEmbed = window.fds.videoEmbed || {}, window, document));
+}(
+  window.fds = window.fds || {},
+  window.fds.videoEmbed = window.fds.videoEmbed || {},
+  window,
+  document
+));

@@ -1,5 +1,6 @@
 (function (fds, doc) {
-  var pages = fds.pages = {};
+  var pages = {};
+  fds.pages = {};
 
   pages.options = {
     scrollThreshhold: 0.175
@@ -35,18 +36,26 @@
     var pageRect = currentPage.getBoundingClientRect();
     var shouldTriggerTopBar = false;
     var count = pages.pages.length;
-    var marginTop = currentPage.style.marginTop ? parseInt(currentPage.style.marginTop) : 0;
+    var marginTop = currentPage.style.marginTop ? parseInt(currentPage.style.marginTop, 10) : 0;
 
     var pageTopAboveOrAtViewportTop = pageRect.top <= 0;
     var pageTopPastScrollThreshhold = pageRect.top < -1 * (wh * pages.options.scrollThreshhold);
+    var offset,
+      i,
+      page,
+      pageTopAboveViewportBottom,
+      pageTopBelowViewportBottom,
+      pageBottomBelowViewportTop,
+      pageBottomAboveViewportTop,
+      pageTopAboveViewportTop;
 
-    // console.log( currentPage.id, '?» ', scrollY, currentPage.offsetTop, currentPage.getBoundingClientRect().top, fds.getParentEl(currentPage, '.chapter').getBoundingClientRect().top )
     if (currentPage && currentPage.classList.contains('in_viewport')) {
       if (scrollDir === 'down') {
         shouldTriggerTopBar = pageRect.top - marginTop < pages.clearElementHeight;
       }
       else {
-        shouldTriggerTopBar = pageRect.top - marginTop + pageRect.height > -1 * pages.clearElementHeight;
+        offset = pageRect.top - marginTop + pageRect.height;
+        shouldTriggerTopBar = offset > -1 * pages.clearElementHeight;
       }
 
       if (currentPage.classList.contains('pinned') && pageTopPastScrollThreshhold) {
@@ -57,16 +66,16 @@
     }
 
     // Loop through pages, we can eventually filter out doing stuff to pages that are offscreen.
-    for (var i = 0; i < count; i++) {
-      var page = pages.pages[i];
+    for (i = 0; i < count; i++) {
+      page = pages.pages[i];
       marginTop = page.style.marginTop ? parseInt(page.style.marginTop) : 0;
       pageRect = page.getBoundingClientRect();
-      var pageTopAboveViewportBottom = pageRect.top + marginTop < pageRect.height;
+      pageTopAboveViewportBottom = pageRect.top + marginTop < pageRect.height;
 
-      var pageTopBelowViewportBottom = pageRect.top + marginTop > pageRect.height;
-      var pageBottomBelowViewportTop = pageRect.top + marginTop + pageRect.height > 0;
-      var pageBottomAboveViewportTop = pageRect.top + marginTop + pageRect.height < 0;
-      var pageTopAboveViewportTop = pageRect.top < 0;
+      pageTopBelowViewportBottom = pageRect.top + marginTop > pageRect.height;
+      pageBottomBelowViewportTop = pageRect.top + marginTop + pageRect.height > 0;
+      pageBottomAboveViewportTop = pageRect.top + marginTop + pageRect.height < 0;
+      pageTopAboveViewportTop = pageRect.top < 0;
 
       if (scrollDir === 'down') {
         shouldTriggerTopBar = pageRect.top - marginTop < pages.clearElementHeight;
@@ -171,7 +180,7 @@
     }
   };
 
-  // For performance reasons we group our event handlers and create custom evennts
+  // For performance reasons we group our event handlers and create custom events.
   doc.addEventListener('pageEvent', function (e) {
     console.log('| pageEvent » |', e.target.id, e.detail.action);
     switch (e.detail.action) {
@@ -190,12 +199,10 @@
         break;
 
       case 'reachTop':
-        // console.log('| » |  reached the top | » ', e.target.id )
         e.target.classList.add('pinned');
         break;
 
       case 'release':
-        // console.log('| » |  release | » ', e.target.id )
         e.target.classList.remove('pinned');
         break;
 

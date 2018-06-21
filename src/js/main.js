@@ -111,7 +111,7 @@
         var currentFps = Math.round((1000 / (sinceStart / ++frameCount) * 100) * 0.01)
         var curFrameTime = elapsed
         var msPerFrame = Math.round(sinceStart/frameCount)
-        fds.fpsEl.innerHTML = `${currentFps} fps at roughtly <br>${msPerFrame} ms/frame`
+        fds.fpsEl.innerHTML = currentFps + ' fps at roughly<br/>' + msPerFrame + ' ms/frame';
         then = newtime - (elapsed % fds.FpsInterval)
         sinceStart = currentFps = curFrameTime = msPerFrame = null;
       }

@@ -1,10 +1,11 @@
 (function (fds, Page, window) {
+  var p;
   Page = function (el) {
     this.initialize(el);
     console.log('hihihi');
   };
 
-  var p = Page.prototype;
+  p = Page.prototype;
   p.constructor = Page;
 
   p.onEnter = function () {

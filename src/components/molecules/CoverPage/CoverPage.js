@@ -54,4 +54,8 @@
       }, 750);
     }, 1250);
   };
-}(window.fds = window.fds || {}, window.fds.coverPage = window.fds.coverPage || {}, window, jQuery));
+}(window.fds = window.fds || {},
+  window.fds.coverPage = window.fds.coverPage || {},
+  window,
+  jQuery
+));
