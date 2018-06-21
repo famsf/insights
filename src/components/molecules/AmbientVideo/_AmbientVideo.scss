@@ -15,21 +15,10 @@ Styleguide COMPONENTS.AmbientVideo
   @extend %fill_screen;
   position: relative;
   overflow: hidden;
-  
+
   .video_element {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
+    @extend %object-fit;
     z-index: -100;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background-size: cover;
 
     &.stopfade {
       opacity: .5;

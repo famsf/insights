@@ -1,7 +1,7 @@
 {% import "@macros/inklude.html.twig" as inklude %}
-<div class="one_up--primary fluid {{ classes }}">
-  <div class="grid-x grid-margin-x">
-    <div class="cell {{ cols|default('medium-grid-10') }} {{ offset|default('medium-offset-1') }}">
+<div class="one_up--primary fluid {{ gridframe|default('grid-frame') }} {{ classes }}">
+  <div class="grid-x grid-margin-x {{ grid }}">
+    <div class="cell {{ cols|default('medium-10') }} {{ offset|default('medium-offset-1') }}">
       {{ inklude.components(_context) }}
     </div>
   </div>

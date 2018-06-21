@@ -3,6 +3,7 @@
   topBar.initialize = function(id) {
     topBar.el = document.getElementById(id)
     doc.addEventListener('topBarEvent', function(e) {
+      console.log('| topBarEvent » |', e.target.id, e.detail.action)
       switch(e.detail.action) {
         case 'invert':
           topBar.el.classList.add('invert')

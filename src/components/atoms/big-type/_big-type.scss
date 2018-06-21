@@ -1,8 +1,0 @@
-%big-type {
-  font-family: $header-font-family;
-  font-weight: bold
-}
-
-.big-type {
-  @extend %big-type;
-}

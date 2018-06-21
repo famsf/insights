@@ -20,14 +20,6 @@ body {
   perspective: 1000;
 }
 
-.revealit {
-  opacity: 0;
-  transition-property: opacity;
-  transition-duration: 1.75s;
-  transition-delay: 0.25s;
-  transition-timing-function: ease-in-out;
-}
-
 .in-viewport .revealit {
   opacity: 1;
 }

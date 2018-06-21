@@ -5,7 +5,7 @@
       "title": "Chapter One",
       "pages": {
         "c1p1": {
-          "classes": "cover invert-top-bar",
+          "classes": "invert-top-bar",
           "template": "@molecules/CoverPage/CoverPage.html.twig",
           "data": {
             "pageTitle": "Klimt &<br/>Rodan",
@@ -14,11 +14,36 @@
           }
         },
         "c1p2": {
-          "template": "@atoms/big-type/big-type.html.twig",
+          "template": "@layouts/one_up--primary/one_up--primary.html.twig",
           "data": {
-            "classes": "revealit",
-            "title": "Introduction",
-            "text": "Upon the centennial of their deaths, Klimt & Rodin: An Artistic Encounter explores the dialogue between the work of French sculptor Auguste Rodin (1840–1917) and Austrian painter Gustav Klimt (1862–1918) and examines their numerous connections, ranging from their mutual interest in the human form to their philosophical outlooks on the world. A comparison of these two artists reminds the contemporary viewer of the challenges each encountered and how their work pushed the story of modern art forward"
+            "classes": "dark",
+            "cols": "medium-8",
+            "offset": "medium-offset-2",
+            "dropcap": false,
+            "classes": "revealit big_type dark",
+            "components": [
+              {
+                "template": "@atoms/h2/h2.html.twig",
+                "data": {
+                  "text": "Introduction"
+                }
+              },
+              {
+                "template": "@atoms/textarea/textarea.html.twig",
+                "data": {
+                  "text": "Upon the centennial of their deaths, Klimt & Rodin: An Artistic Encounter explores the dialogue between the work of French sculptor Auguste Rodin (1840–1917) and Austrian painter Gustav Klimt (1862–1918) and examines their numerous connections, ranging from their mutual interest in the human form to their philosophical outlooks on the world. A comparison of these two artists reminds the contemporary viewer of the challenges each encountered and how their work pushed the story of modern art forward"
+                }
+              }
+            ]
+          }
+        },
+        "c1p3": {
+          "id": "c1p3",
+          "numeral": "I",
+          "title": "In Search of Modernity",
+          "classes": "",
+          "template": "@molecules/chapter__title/chapter__title.html.twig",
+          "data": {
           }
         },
         "c1p3": {
