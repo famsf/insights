@@ -1,6 +1,7 @@
 (function (fds, doc) {
-  var pages = {};
+  var pages;
   fds.pages = {};
+  pages = fds.pages;
 
   pages.options = {
     scrollThreshhold: 0.175
@@ -40,22 +41,24 @@
 
     var pageTopAboveOrAtViewportTop = pageRect.top <= 0;
     var pageTopPastScrollThreshhold = pageRect.top < -1 * (wh * pages.options.scrollThreshhold);
-    var offset,
-      i,
-      page,
-      pageTopAboveViewportBottom,
-      pageTopBelowViewportBottom,
-      pageBottomBelowViewportTop,
-      pageBottomAboveViewportTop,
-      pageTopAboveViewportTop;
+    var offset;
+    var sum;
+    var i;
+    var page;
+    var pageTopAboveViewportBottom;
+    var pageTopBelowViewportBottom;
+    var pageBottomBelowViewportTop;
+    var pageBottomAboveViewportTop;
+    var pageTopAboveViewportTop;
 
     if (currentPage && currentPage.classList.contains('in_viewport')) {
       if (scrollDir === 'down') {
         shouldTriggerTopBar = pageRect.top - marginTop < pages.clearElementHeight;
       }
       else {
-        offset = pageRect.top - marginTop + pageRect.height;
-        shouldTriggerTopBar = offset > -1 * pages.clearElementHeight;
+        sum = pageRect.top + marginTop;
+        offset = sum - pageRect.height;
+        shouldTriggerTopBar = offset < pages.clearElementHeight;
       }
 
       if (currentPage.classList.contains('pinned') && pageTopPastScrollThreshhold) {
@@ -68,7 +71,7 @@
     // Loop through pages, we can eventually filter out doing stuff to pages that are offscreen.
     for (i = 0; i < count; i++) {
       page = pages.pages[i];
-      marginTop = page.style.marginTop ? parseInt(page.style.marginTop) : 0;
+      marginTop = page.style.marginTop ? parseInt(page.style.marginTop, 10) : 0;
       pageRect = page.getBoundingClientRect();
       pageTopAboveViewportBottom = pageRect.top + marginTop < pageRect.height;
 
@@ -94,7 +97,9 @@
         }
       }
       else if (scrollDir === 'up') {
-        shouldTriggerTopBar = pageRect.top - marginTop + pageRect.height > -1 * pages.clearElementHeight;
+        sum = pageRect.top + marginTop;
+        offset = sum - pageRect.height;
+        shouldTriggerTopBar = offset < pages.clearElementHeight;
 
         // This is implied with else, but easier to read this way.
         if (pageTopAboveViewportTop && pageBottomBelowViewportTop) {

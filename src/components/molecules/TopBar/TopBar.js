@@ -1,6 +1,7 @@
 (function (fds, doc) {
-  var topBar = {};
+  var topBar;
   fds.topBar = {};
+  topBar = fds.topBar;
   topBar.initialize = function (id) {
     topBar.el = document.getElementById(id);
     doc.addEventListener('topBarEvent', function (e) {

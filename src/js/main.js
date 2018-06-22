@@ -1,4 +1,6 @@
 (function (fds, window, document, $) {
+  var owl;
+
   // Always use the smoothscroll polyfill, even in browsers with native support.
   window.__forceSmoothScrollPolyfill__ = true;
 
@@ -6,7 +8,7 @@
   $(document).foundation();
 
   // Initialize Owl Carousel.
-  var owl = $('.owl-carousel');
+  owl = $('.owl-carousel');
   owl.owlCarousel({
     items: 2,
     merge: true,
@@ -32,12 +34,12 @@
   fds.getParentEl = function (el, selector) {
     var elements = [];
     var ishaveselector = selector !== undefined;
-    while ((el = el.parentElement) !== null) {
-      if (el.nodeType !== Node.ELEMENT_NODE) {
-        continue;
-      }
-      if (!ishaveselector || el.matches(selector)) {
-        elements.push(el);
+    while (el.parentElement !== null) {
+      el = el.parentElement;
+      if (el.nodeType === Node.ELEMENT_NODE) {
+        if (!ishaveselector || el.matches(selector)) {
+          elements.push(el);
+        }
       }
     }
     if (elements.length === 1) {
@@ -56,15 +58,16 @@
     var frameCount = 0;
     var calcFps = true;
     var scrollDir;
-    if (calcFps) {
-      fds.targetFps = 60;
-      fds.FpsInterval = 1000 / fds.targetFps;
-    }
     var st = 0;
+    var animate;
     var wDim = {
       w: win.innerWidth,
       h: win.innerHeight
     };
+    if (calcFps) {
+      fds.targetFps = 60;
+      fds.fpsInterval = 1000 / fds.targetFps;
+    }
 
     if (!document.querySelector('.insights-app')) {
       console.log('Bypassing main js loop in current context to allow for easier single component prototyping');
@@ -78,14 +81,17 @@
     window.fds.pages.onScroll(0, 'down', win.innerHeight, true);
     window.fds.chapterNav.onScroll();
     animate = function (newtime) {
-      // console.log('»', newtime, )
+      var elapsed;
+      var didResize;
+      var msPerFrame;
+      var oldWindowDim;
+      var oldSt;
+      var scrollDiff;
+      var sinceStart;
+      var currentFps;
       requestAnimationFrame(animate);
-      var elapsed,
-        didResize,
-        msPerFrame,
-        oldWindowDim;
       if (calcFps) {
-        elapsed = newtime - then;
+        elapsed = newtime;
         didResize = false;
         msPerFrame = 0;
       }
@@ -94,34 +100,29 @@
         w: win.innerWidth,
         h: win.innerHeight
       };
-      if (wDim.w != oldWindowDim.w || wDim.h != oldWindowDim.h) {
+      if (wDim.w !== oldWindowDim.w || wDim.h !== oldWindowDim.h) {
         didResize = true;
       }
-      if (elapsed > fds.FpsInterval) {
-        var oldSt = st;
+      if (elapsed > fds.fpsInterval) {
+        oldSt = st;
         st = window.poly.getScrollY();
-        var scrollDiff = st - oldSt;
-        if (scrollDiff != 0) {
+        scrollDiff = st - oldSt;
+        if (scrollDiff !== 0) {
           scrollDir = (scrollDiff > 0) ? 'down' : 'up';
           window.fds.pages.onScroll(st, scrollDir, wDim.h, didResize);
           window.fds.chapterNav.onScroll();
         }
       }
       if (calcFps) {
-        var sinceStart = newtime - fds.startTime;
-        var currentFps = Math.round((1000 / (sinceStart / ++frameCount) * 100) * 0.01);
-        var curFrameTime = elapsed;
-        var msPerFrame = Math.round(sinceStart / frameCount);
+        sinceStart = newtime - fds.startTime;
+        currentFps = Math.round(1000 / (sinceStart / ++frameCount));
+        msPerFrame = Math.round(sinceStart / frameCount);
         fds.fpsEl.innerHTML = currentFps + ' fps at roughly<br/>' + msPerFrame + ' ms/frame';
-        then = newtime - (elapsed % fds.FpsInterval);
-        sinceStart = currentFps = curFrameTime = msPerFrame = null;
       }
     };
     if (calcFps) {
-      var then = window.performance.now();
-      fds.startTime = then;
+      fds.startTime = window.performance.now();
     }
     requestAnimationFrame(animate);
-    then = elapsed = didResize = msPerFrame = oldWindowDim = scrollDir = null;
   });
 }(window.fds = window.fds || {}, window, document, jQuery));
