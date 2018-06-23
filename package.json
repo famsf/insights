@@ -13,7 +13,7 @@
     "install": "napa TimPietrusky/background-clip-text-polyfill",
     "test": "[ \"${CONTEXT}\" = production ] && run-s play || run-s play lint:js",
     "play": "kalastatic build",
-    "start": "kalastatic start",
+    "start": "run-s lint:js && kalastatic start",
     "lint:js": "node ./node_modules/eslint/bin/eslint.js --quiet .",
     "lint:js-fix": "node ./node_modules/eslint/bin/eslint.js --fix .",
     "lint:js-passing": "node ./node_modules/eslint/bin/eslint.js --quiet --config=.eslintrc.passing.json .",
