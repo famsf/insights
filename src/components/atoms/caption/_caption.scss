@@ -20,6 +20,21 @@
     padding: 2rem;
     margin-top: .5rem;
   }
+
+  // Inverted color variants.
+  .horizontal-image-slider & {
+    color: $white;
+
+    .toggle-caption {
+      border-color: $white;
+      color: $white;
+    }
+
+    figcaption {
+      padding: 0;
+      background: transparent;
+    }
+  }
 }
 
 .caption {
