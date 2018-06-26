@@ -10,7 +10,7 @@ Styleguide COMPONENTS.horizontal-image-slider
 */
 
 %horizontal-image-slider {
-  padding: 2rem;
+  padding: 4rem 2rem;
   background: $black;
   height: 100vh;
   display: block;
@@ -36,6 +36,10 @@ Styleguide COMPONENTS.horizontal-image-slider
       padding: 2rem 2rem 2rem 3rem;
       max-width: 25rem;
     }
+  }
+
+  h3 {
+    font-family: $alternate-header-font-family;
   }
 
   picture {
