@@ -1,15 +1,16 @@
 (function (fds, window, document, $) {
-  var owl;
+  var horizontalImageSlider;
+  var inDepthSlider;
 
   // Always use the smoothscroll polyfill, even in browsers with native support.
   window.__forceSmoothScrollPolyfill__ = true;
 
-  // Initialize foundation.
+  // Initialize Foundation.
   $(document).foundation();
 
-  // Initialize Owl Carousel.
-  owl = $('.owl-carousel');
-  owl.owlCarousel({
+  // Initialize Horizontal Image Slider.
+  horizontalImageSlider = $(':not(.in-depth-modal) > .horizontal-image-slider');
+  horizontalImageSlider.owlCarousel({
     margin: 32,
     loop: false,
     nav: false,
@@ -20,6 +21,16 @@
         autoWidth: true
       }
     }
+  });
+
+  // Initialize In Depth Slider.
+  inDepthSlider = $('.in-depth-modal > .horizontal-image-slider');
+  inDepthSlider.owlCarousel({
+    margin: 0,
+    loop: false,
+    nav: true,
+    dots: true,
+    items: 1
   });
 
   fds.setStyle = function (el, obj) {

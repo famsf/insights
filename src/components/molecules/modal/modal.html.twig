@@ -1,5 +1,5 @@
 {% import "@macros/inklude.html.twig" as inklude %}
-<div class="modal reveal {{ full_screen ? 'full-screen' }}" id="{{ id }}" data-reveal>
+<div class="modal reveal {{ full_screen ? 'full-screen' }} {{ class ? class }}" id="{{ id }}" data-reveal>
   {{ inklude.components(_context) }}
   {% include "@atoms/modal__close-button/modal__close-button.html.twig" %}
 </div>

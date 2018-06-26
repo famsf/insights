@@ -1,0 +1,74 @@
+/*
+In Depth
+
+This is used to show additional information that is related to the content in the chapter but not necessary to show the user. This content is often shareable, fun, digestible "Did you know?" type content.
+
+Markup: in-depth.html.twig
+
+Styleguide COMPONENTS.in-depth
+
+*/
+
+%in-depth {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+
+  .in-depth__intro {
+    width: 100%;
+  }
+
+  .in-depth__image {
+    img {
+      border-radius: 1000rem;
+      overflow: hidden;
+    }
+  }
+
+  .in-depth__title {
+    @extend h1;
+
+    @include breakpoint(medium) {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+  }
+}
+
+%in-depth-modal {
+  .horizontal-image-slider {
+    @extend %horizontal-image-slider;
+    padding: 0;
+
+    .item__content {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+
+      > * {
+        flex-grow: 1;
+      }
+    }
+
+    picture {
+      flex-basis: 75%;
+      height: 100vh;
+      min-height: 100vh;
+      width: auto;
+    }
+
+    .caption {
+      flex-basis: 25%;
+      position: relative;
+      margin: 4rem;
+    }
+  }
+}
+
+.in-depth {
+  @extend %in-depth;
+}
+
+.in-depth-modal {
+  @extend %in-depth-modal;
+}
