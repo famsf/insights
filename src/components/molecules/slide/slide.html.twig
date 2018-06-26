@@ -2,6 +2,6 @@
 <div class="item">
   {{ inklude.components(_context) }}
   {% if caption %}
-    <figcaption>{{ caption }}</figcaption>
+    {% include "@atoms/caption/caption.html.twig" with {brief: caption.brief, id: caption.id, text: caption.text} only %}
   {% endif %}
 </div>

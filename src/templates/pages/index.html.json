@@ -325,11 +325,16 @@
           }
         },
         "c3p4": {
+          "classes": "invert-top-bar",
           "template": "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig",
           "data": {
             "slides": [
               {
-                "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis est sit amet leo feugiat, in pulvinar tellus efficitur. Sed a leo nunc. Vivamus quam neque, accumsan et mauris in, mattis efficitur lorem.",
+                "caption": {
+                  "id": "slide-1-caption",
+                  "brief": "Lorem ipsum dolor sit amet",
+                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et felis ac arcu cursus imperdiet. Mauris volutpat, ligula sit amet semper egestas, nunc velit pretium sem, id ornare nisl nisl nec erat."
+                },
                 "template": "@molecules/Picture/Picture.html.twig",
                 "data": {
                   "srcset": [
@@ -352,7 +357,9 @@
                 }
               },
               {
-                "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis est sit amet leo feugiat, in pulvinar tellus efficitur. Sed a leo nunc. Vivamus quam neque, accumsan et mauris in, mattis efficitur lorem.",
+                "caption": {
+                  "brief": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et felis ac arcu cursus imperdiet. Mauris volutpat, ligula sit amet semper egestas, nunc velit pretium sem, id ornare nisl nisl nec erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et felis ac arcu cursus imperdiet. Mauris volutpat, ligula sit amet semper egestas, nunc velit pretium sem, id ornare nisl nisl nec erat."
+                },
                 "template": "@molecules/Picture/Picture.html.twig",
                 "data": {
                   "srcset": [
