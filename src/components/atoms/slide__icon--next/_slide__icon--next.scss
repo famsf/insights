@@ -1,10 +1,30 @@
 %slide__icon--next {
   margin: 3rem 0 0 0;
+  position: relative;
+  
+  &:before {
+    height: 1px;
+    width: 5rem;
+    content: "";
+    position: relative;
+    background: $white;
+    right: -5px;
+    top: calc(-1rem + 1px);
+    display: inline-block;
+    z-index: 9999;
+    opacity: .5;
+  }
 
   svg {
     max-width: 100%;
-    width: 7rem;
-    height: auto;
+    height: 2rem;
+    width: auto;
+
+    &:before {
+      height: 1px;
+      width: 10rem;
+      content: "";
+    }
   }
 
   path {
