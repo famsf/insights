@@ -1,4 +1,5 @@
 {
+  "intro_slide": false,
   "caption": {
     "id": "slide-1-caption",
     "brief": "Lorem ipsum dolor sit amet",

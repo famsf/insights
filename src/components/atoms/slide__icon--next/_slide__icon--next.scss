@@ -1,0 +1,16 @@
+%slide__icon--next {
+  svg {
+    max-width: 100%;
+    width: 15rem;
+    height: auto;
+  }
+
+  path {
+    fill: $white;
+    stroke: $white;
+  }
+}
+
+.slide__icon--next {
+  @extend %slide__icon--next;
+}
