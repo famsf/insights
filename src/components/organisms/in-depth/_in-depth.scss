@@ -83,38 +83,67 @@ Styleguide COMPONENTS.in-depth
 %in-depth-modal {
   .horizontal-image-slider {
     @extend %horizontal-image-slider;
+    position: absolute;
+    height: auto;
     padding: 0;
 
-    .item__content {
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: center;
+    @include breakpoint(medium) {
+      height: 100vh;
+    }
 
-      > * {
-        flex-grow: 1;
+    .item__content {
+      margin: 2rem;
+
+      @include breakpoint(medium) {
+        margin: 0;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+        > * {
+          flex-grow: 1;
+        }
       }
     }
 
     picture {
-      flex-basis: 75%;
-      height: 100vh;
-      min-height: 100vh;
-      width: auto;
-      position: relative;
+      @include breakpoint(medium) {
+        flex-basis: 75%;
+        height: 100vh;
+        min-height: 100vh;
+        width: auto;
+        position: relative;
+      }
 
       img {
         @extend %object-fit;
+
+        @include breakpoint(small down) {
+          position: relative;
+          height: auto;
+          width: 100%;
+          object-fit: initial !important;
+          background-size: initial !important;
+        }
       }
     }
 
     .caption {
-      flex-basis: 25%;
       position: relative;
-      margin: 4rem 12rem 4rem 6rem;
+
+      @include breakpoint(medium) {
+        flex-basis: 25%;
+        position: relative;
+        margin: 4rem 12rem 4rem 6rem;
+      }
     }
 
     .caption__brief {
       @extend .lead;
+
+      @include breakpoint(small down) {
+        font-size: $base-font-size !important;
+      }
     }
 
     .owl-dots {

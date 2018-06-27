@@ -1,13 +1,25 @@
 %modal__close-button {
+  position: fixed;
   display: inline;
   border-radius: $button-radius;
   border-color: $white !important;
   color: $white !important;
-  font-size: 1em;
   text-transform: capitalize;
-  margin-top: 2rem;
-  margin-left: 2rem;
+  margin: .5rem 0 0 0;
   z-index: 999;
+  left: initial;
+  right: 1rem;
+  top: 0.5rem;
+  font-size: .75rem;
+  padding: .5rem .5rem .125rem;
+
+  @include breakpoint(medium) {
+    padding: $button-padding;
+    font-size: 1em;
+    margin: 2rem 0 0 2rem;
+    left: 1rem;
+    right: initial;
+  }
 
   .close-button__icon {
     font-family: $header-font-family;

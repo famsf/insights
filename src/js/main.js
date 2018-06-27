@@ -1,6 +1,14 @@
 (function (fds, window, document, $) {
+  // Variable declarations.
   var horizontalImageSlider;
   var inDepthSlider;
+  var inDepthSliderOptions = {
+    margin: 0,
+    loop: false,
+    nav: true,
+    dots: true,
+    items: 1
+  };
 
   // Always use the smoothscroll polyfill, even in browsers with native support.
   window.__forceSmoothScrollPolyfill__ = true;
@@ -25,12 +33,29 @@
 
   // Initialize In Depth Slider.
   inDepthSlider = $('.in-depth-modal > .horizontal-image-slider');
-  inDepthSlider.owlCarousel({
-    margin: 0,
-    loop: false,
-    nav: true,
-    dots: true,
-    items: 1
+
+  if (Foundation.MediaQuery.is('small only')) {
+    inDepthSlider.addClass('off');
+  }
+  else {
+    inDepthSlider.owlCarousel(inDepthSliderOptions);
+  }
+
+  $(window).resize(function () {
+    if (Foundation.MediaQuery.atLeast('medium')) {
+      if ($('.owl-carousel').hasClass('off')) {
+        inDepthSlider.owlCarousel(inDepthSliderOptions);
+        inDepthSlider.removeClass('off');
+      }
+    }
+    else {
+      inDepthSlider.removeClass('owl-hidden');
+
+      if (!$('.owl-carousel').hasClass('off')) {
+        inDepthSlider.addClass('off').trigger('destroy.owl.carousel');
+        inDepthSlider.find('.owl-stage-outer').children(':eq(0)').unwrap();
+      }
+    }
   });
 
   fds.setStyle = function (el, obj) {
