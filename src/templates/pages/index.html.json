@@ -442,7 +442,7 @@
               "style": "square"
             },
 
-            "modal_button_text": "Learn More",
+            "modal_button_text": "Learn more",
             "id": "in-depth-example",
             "full_screen": true,
             "class": "in-depth-modal",
