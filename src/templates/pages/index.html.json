@@ -31,7 +31,7 @@
               {
                 "template": "@atoms/textarea/textarea.html.twig",
                 "data": {
-                  "text": "Upon the centennial of their deaths, Klimt & Rodin: An Artistic Encounter explores the dialogue between the work of French sculptor Auguste Rodin (1840–1917) and Austrian painter Gustav Klimt (1862–1918) and examines their numerous connections, ranging from their mutual interest in the human form to their philosophical outlooks on the world. A comparison of these two artists reminds the contemporary viewer of the challenges each encountered and how their work pushed the story of modern art forward"
+                  "text": "<p>Upon the centennial of their deaths, Klimt & Rodin: An Artistic Encounter explores the dialogue between the work of French sculptor Auguste Rodin (1840–1917) and Austrian painter Gustav Klimt (1862–1918) and examines their numerous connections, ranging from their mutual interest in the human form to their philosophical outlooks on the world. A comparison of these two artists reminds the contemporary viewer of the challenges each encountered and how their work pushed the story of modern art forward<p>"
                 }
               }
             ]
@@ -55,7 +55,7 @@
                 {
                   "template": "@atoms/textarea/textarea.html.twig",
                   "data": {
-                    "text": "This exhibition allows the public to study, for the very first time on the West Coast, the full evolution of Klimt’s artistic output, ranging from his early and academically applauded work to his provocative and critically debated mature style, as seen here in The Virgin. Revered today as a pioneer of modernism in Vienna, Klimt produced only a very limited number of canvases over his career. Many of these canvases are deemed too fragile to travel, making a sizable display of his work a once-in-a-lifetime opportunity.",
+                    "text": "<p>This exhibition allows the public to study, for the very first time on the West Coast, the full evolution of Klimt’s artistic output, ranging from his early and academically applauded work to his provocative and critically debated mature style, as seen here in The Virgin. Revered today as a pioneer of modernism in Vienna, Klimt produced only a very limited number of canvases over his career. Many of these canvases are deemed too fragile to travel, making a sizable display of his work a once-in-a-lifetime opportunity.</p><p>This exhibition allows the public to study, for the very first time on the West Coast, the full evolution of Klimt’s artistic output, ranging from his early and academically applauded work to his provocative and critically debated mature style, as seen here in The Virgin. Revered today as a pioneer of modernism in Vienna, Klimt produced only a very limited number of canvases over his career. Many of these canvases are deemed too fragile to travel, making a sizable display of his work a once-in-a-lifetime opportunity.</p>",
                     "dropcap": true
                   }
                 }
@@ -105,7 +105,7 @@
                 {
                   "template": "@atoms/textarea/textarea.html.twig",
                   "data": {
-                    "text": "At the turn of the 19th century to the 20th, the art world in all of Europe was in a constant flux. Regarding Vienna, the Austrian writer and critic Hermann Bahr stated, “Common to all the people of this age is the fact that more is weighing on them than they can bear; no one is equal to his or her burden. Never before has life been so heavy for people; just to exist, they muster an effort that goes beyond their strength.” This was the environment that surrounded Auguste Rodin and Gustav Klimt. Through their art, these two men aspired to convey the experience of being human as being deeply rooted in the Symbolist idea of becoming and passing away. In doing so, they broke with traditions of art.",
+                    "text": "<p>At the turn of the 19th century to the 20th, the art world in all of Europe was in a constant flux. Regarding Vienna, the Austrian writer and critic Hermann Bahr stated, “Common to all the people of this age is the fact that more is weighing on them than they can bear; no one is equal to his or her burden. Never before has life been so heavy for people; just to exist, they muster an effort that goes beyond their strength.” This was the environment that surrounded Auguste Rodin and Gustav Klimt. Through their art, these two men aspired to convey the experience of being human as being deeply rooted in the Symbolist idea of becoming and passing away. In doing so, they broke with traditions of art.</p>",
                     "dropcap": true
                   }
                 }
@@ -196,7 +196,7 @@
                 {
                   "template": "@atoms/textarea/textarea.html.twig",
                   "data": {
-                    "text": "By comparison, Gustav Klimt, at age 38 in 1900, although achieving financial success, continued to struggle with dogged critiques of his paintings. His city of Vienna was experiencing an economic upturn and an architectural rebirth. Nonetheless, as the capital of Austria-Hungary and the seat of its emperor and his court, Vienna was engaged with its great past and slow to adopt a modern aesthetic. The prevailing artistic style was historicist—an academic style based on the imitation of past masters, depicting scenes from mythology and history. Klimt had created many paintings in this style for the many new buildings springing up around Vienna but, starting in the 1890s, he shifted toward a more modern and challenging mode. He became the leader of modern art in Vienna and, thus, was a founding member and first president of the Viennese Secession, a group of artists that was looking both forward and further afield to the new artistic ideas emerging from Paris.",
+                    "text": "<p>By comparison, Gustav Klimt, at age 38 in 1900, although achieving financial success, continued to struggle with dogged critiques of his paintings. His city of Vienna was experiencing an economic upturn and an architectural rebirth. Nonetheless, as the capital of Austria-Hungary and the seat of its emperor and his court, Vienna was engaged with its great past and slow to adopt a modern aesthetic. The prevailing artistic style was historicist—an academic style based on the imitation of past masters, depicting scenes from mythology and history. Klimt had created many paintings in this style for the many new buildings springing up around Vienna but, starting in the 1890s, he shifted toward a more modern and challenging mode. He became the leader of modern art in Vienna and, thus, was a founding member and first president of the Viennese Secession, a group of artists that was looking both forward and further afield to the new artistic ideas emerging from Paris.</p>",
                     "dropcap": true
                   }
                 }
@@ -545,7 +545,7 @@
                     {
                       "template": "@atoms/textarea/textarea.html.twig",
                       "data": {
-                        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
                         "dropcap": false
                       }
                     }
