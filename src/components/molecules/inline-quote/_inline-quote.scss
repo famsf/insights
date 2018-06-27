@@ -12,6 +12,16 @@ Styleguide COMPONENTS.inline-quote
 %inline-quote {
   q {
     @extend %q;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      display: inline-block;
+      left: -1rem;
+      top: 0;
+      width: 1rem;
+      padding: 0;
+    }
   }
   cite {
     @extend %cite;
