@@ -85,6 +85,8 @@
 @import '../components/atoms/modal__close-button/modal__close-button';
 @import '../components/atoms/modal__open-button/modal__open-button';
 @import '../components/atoms/video--embed/video--embed';
+@import '../components/atoms/slide__icon--next/slide__icon--next';
+@import '../components/atoms/cta__button/cta__button';
 
 // Import Molecules.
 @import '../components/molecules/TopBar/TopBar';
@@ -110,6 +112,7 @@
 @import '../components/organisms/famsfall-temp';
 @import '../components/organisms/Page/Page';
 @import '../components/organisms/horizontal-image-slider/horizontal-image-slider';
+@import '../components/organisms/in-depth/in-depth';
 
 // Import Environments.
 

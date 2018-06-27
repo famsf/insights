@@ -1,7 +1,12 @@
 {% import "@macros/inklude.html.twig" as inklude %}
-<div class="item">
-  {{ inklude.components(_context) }}
-  {% if caption %}
-    <figcaption>{{ caption }}</figcaption>
-  {% endif %}
+<div class="item {{ intro_slide ? 'intro-slide' }}">
+  <div class="item__content">
+    {{ inklude.components(_context) }}
+    {% if caption %}
+      {% include "@atoms/caption/caption.html.twig" with {brief: caption.brief, id: caption.id, text: caption.text} only %}
+    {% endif %}
+    {% if intro_slide %}
+      {% include "@atoms/slide__icon--next/slide__icon--next.html.twig" %}
+    {% endif %}
+  </div>
 </div>
