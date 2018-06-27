@@ -100,12 +100,21 @@ Styleguide COMPONENTS.in-depth
       height: 100vh;
       min-height: 100vh;
       width: auto;
+      position: relative;
+
+      img {
+        @extend %object-fit;
+      }
     }
 
     .caption {
       flex-basis: 25%;
       position: relative;
-      margin: 4rem;
+      margin: 4rem 12rem 4rem 6rem;
+    }
+
+    .caption__brief {
+      @extend .lead;
     }
 
     .owl-dots {
@@ -134,6 +143,43 @@ Styleguide COMPONENTS.in-depth
         content: "0" counter(dots);
       }
     }
+
+    .owl-nav {
+      button {
+        transition: all .25s ease-in-out;
+        position: absolute;
+        top: calc(50% - 1.25rem);
+        color: transparent;
+        background-image: url("../assets/images/slide__icon--next.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 4rem;
+        height: 2.5rem;
+        opacity: 1;
+
+        &:hover {
+          background-color: transparent;
+          background-image: url("../assets/images/slide__icon--next.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          color: transparent;
+        }
+
+        &.disabled {
+          opacity: .25;
+        }
+
+        &.owl-prev {
+          left: 2rem;
+          transform: rotate(180deg);
+        }
+
+        &.owl-next {
+          right: 2rem;
+        }
+      }
+    }
+
   }
 }
 
