@@ -1,24 +1,32 @@
-$textarea-font-size: 1em;
-$textarea-line-height: $textarea-font-size * 1.6;
-$textarea-leading-ratio: 1 / (10 / 3);
-$textarea-font-family: $body-font-family;
+/*
+Text Area
+
+Text area's contain paragraphs and related text copy and offer a drop cap feature for the first contained paragraph.
+
+Markup: textarea.html.twig
+
+Styleguide COMPONENTS.textarea
+
+*/
 
 %textarea {
+  $textarea-font-size: 1em;
+  $textarea-line-height: $textarea-font-size * 1.6;
+  $textarea-leading-ratio: 1 / (10 / 3);
+  $textarea-font-family: $body-font-family;
 
   font-family: $textarea-font-family;
   font-size: $textarea-font-size;
   line-height: $textarea-line-height;
 
-  &.drop-cap{
-
+  &.drop-cap {
     margin-top: $textarea-font-size * 3;
-    p:first-of-type {
+
+    > p:first-of-type {
       &:first-letter {
         float: left;
         font-size: $textarea-font-size * 10;
         line-height: $textarea-line-height * .45;
-        top: -$textarea-font-size;
-        margin-top: $textarea-font-size * -$textarea-leading-ratio;
         margin-right: $textarea-font-size / 15;
       }
     }

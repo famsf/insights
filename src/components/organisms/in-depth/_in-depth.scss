@@ -1,0 +1,221 @@
+/*
+In Depth
+
+This is used to show additional information that is related to the content in the chapter but not necessary to show the user. This content is often shareable, fun, digestible "Did you know?" type content.
+
+Markup: in-depth.html.twig
+
+Styleguide COMPONENTS.in-depth
+
+*/
+
+%in-depth {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  padding: 2rem;
+
+  @include breakpoint(medium) {
+    padding: 0;
+  }
+
+  .in-depth__intro {
+    width: 100%;
+  }
+
+  .in-depth__image {
+    img {
+      border-radius: 1000rem;
+      overflow: hidden;
+    }
+  }
+
+  .in-depth__title {
+    @extend h1;
+    font-size: 2rem;
+    font-weight: bold;
+
+    @include breakpoint(medium) {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    @include breakpoint(large) {
+      font-size: 4rem;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .in-depth__left-col {
+    position: relative;
+    z-index: 5;
+  }
+
+  .in-depth__right-col {
+    position: relative;
+    z-index: 10;
+    transform: translate(0, -2rem);
+    padding: 0 2rem;
+
+    @include breakpoint(medium) {
+      padding: 0;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      transform: translate(-2rem, 0);
+    }
+
+    @include breakpoint(large) {
+      transform: translate(-4rem, 0);
+    }
+
+    @include breakpoint(xlarge) {
+      transform: translate(-6rem, 0);
+    }
+
+    @include breakpoint(xxlarge) {
+      transform: translate(-8rem, 0);
+    }
+  }
+}
+
+%in-depth-modal {
+  .horizontal-image-slider {
+    @extend %horizontal-image-slider;
+    position: absolute;
+    height: auto;
+    padding: 0;
+
+    @include breakpoint(medium) {
+      height: 100vh;
+    }
+
+    .item__content {
+      margin: 2rem;
+
+      @include breakpoint(medium) {
+        margin: 0;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+
+        > * {
+          flex-grow: 1;
+        }
+      }
+    }
+
+    picture {
+      @include breakpoint(medium) {
+        flex-basis: 75%;
+        height: 100vh;
+        min-height: 100vh;
+        width: auto;
+        position: relative;
+      }
+
+      img {
+        @extend %object-fit;
+
+        @include breakpoint(small down) {
+          position: relative;
+          height: auto;
+          width: 100%;
+          object-fit: initial !important;
+          background-size: initial !important;
+        }
+      }
+    }
+
+    .caption {
+      position: relative;
+
+      @include breakpoint(medium) {
+        flex-basis: 25%;
+        position: relative;
+        margin: 4rem 12rem 4rem 6rem;
+      }
+    }
+
+    .caption__brief {
+      @extend .lead;
+
+      @include breakpoint(small down) {
+        font-size: $base-font-size !important;
+      }
+    }
+
+    .owl-dots {
+      position: absolute;
+      right: 2rem;
+      bottom: 2rem;
+      counter-reset: dots;
+    }
+
+    .owl-dot {
+      margin: 0 .5rem;
+      color: rgba($white, .5);
+
+      &.active {
+        color: $white;
+      }
+
+      span {
+        display: none;
+      }
+
+      &:before {
+        font-size: .75rem;
+        font-family: $alternate-header-font-family;
+        counter-increment: dots;
+        content: "0" counter(dots);
+      }
+    }
+
+    .owl-nav {
+      button {
+        transition: all .25s ease-in-out;
+        position: absolute;
+        top: calc(50% - 1.25rem);
+        color: transparent;
+        background-image: url("../assets/images/slide__icon--next.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 4rem;
+        height: 2.5rem;
+        opacity: 1;
+
+        &:hover {
+          background-color: transparent;
+          background-image: url("../assets/images/slide__icon--next.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          color: transparent;
+        }
+
+        &.disabled {
+          opacity: .25;
+        }
+
+        &.owl-prev {
+          left: 2rem;
+          transform: rotate(180deg);
+        }
+
+        &.owl-next {
+          right: 2rem;
+        }
+      }
+    }
+
+  }
+}
+
+.in-depth {
+  @extend %in-depth;
+}
+
+.in-depth-modal {
+  @extend %in-depth-modal;
+}
