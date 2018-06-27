@@ -1,6 +1,7 @@
 {
   "caption_1": {
     "id": "caption_1",
+    "brief": "Lorem ipsum dolor sit amet",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et felis ac arcu cursus imperdiet. Mauris volutpat, ligula sit amet semper egestas, nunc velit pretium sem, id ornare nisl nisl nec erat."
   },
   "picture_1": {
@@ -25,6 +26,7 @@
 
   "caption_2": {
     "id": "caption_2",
+    "brief": "Lorem ipsum dolor sit amet",
     "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et felis ac arcu cursus imperdiet. Mauris volutpat, ligula sit amet semper egestas, nunc velit pretium sem, id ornare nisl nisl nec erat."
   },
   "picture_2": {

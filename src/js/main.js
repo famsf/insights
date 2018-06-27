@@ -1,31 +1,62 @@
 (function (fds, window, document, $) {
-  var owl;
+  // Variable declarations.
+  var horizontalImageSlider;
+  var inDepthSlider;
+  var inDepthSliderOptions = {
+    margin: 0,
+    loop: false,
+    nav: true,
+    dots: true,
+    items: 1
+  };
 
   // Always use the smoothscroll polyfill, even in browsers with native support.
   window.__forceSmoothScrollPolyfill__ = true;
 
-  // Initialize foundation.
+  // Initialize Foundation.
   $(document).foundation();
 
-  // Initialize Owl Carousel.
-  owl = $('.owl-carousel');
-  owl.owlCarousel({
-    items: 2,
-    merge: true,
+  // Initialize Horizontal Image Slider.
+  horizontalImageSlider = $(':not(.in-depth-modal) > .horizontal-image-slider');
+  horizontalImageSlider.owlCarousel({
+    margin: 32,
     loop: false,
     nav: false,
     dots: false,
-    margin: 32,
-    mergeFit: true
+    items: 1,
+    responsive: {
+      1024: {
+        autoWidth: true
+      }
+    }
   });
 
-  // Prevents scrolling vertically until all slides have been seen.
-  // owl.on('mousewheel', '.owl-stage', function (e) {
-  //   if (e.deltaY > 0) {
-  //     owl.trigger('next.owl');
-  //   }
-  //   e.preventDefault();
-  // });
+  // Initialize In Depth Slider.
+  inDepthSlider = $('.in-depth-modal > .horizontal-image-slider');
+
+  if (Foundation.MediaQuery.is('small only')) {
+    inDepthSlider.addClass('off');
+  }
+  else {
+    inDepthSlider.owlCarousel(inDepthSliderOptions);
+  }
+
+  $(window).resize(function () {
+    if (Foundation.MediaQuery.atLeast('medium')) {
+      if ($('.owl-carousel').hasClass('off')) {
+        inDepthSlider.owlCarousel(inDepthSliderOptions);
+        inDepthSlider.removeClass('off');
+      }
+    }
+    else {
+      inDepthSlider.removeClass('owl-hidden');
+
+      if (!$('.owl-carousel').hasClass('off')) {
+        inDepthSlider.addClass('off').trigger('destroy.owl.carousel');
+        inDepthSlider.find('.owl-stage-outer').children(':eq(0)').unwrap();
+      }
+    }
+  });
 
   fds.setStyle = function (el, obj) {
     el.style = Object.assign(el.style, obj);

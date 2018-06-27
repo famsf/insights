@@ -68,6 +68,7 @@
                   "data": {
                     "caption": {
                       "id": "caption",
+                      "brief": "Gustav Klimt",
                       "text": "Gustav Klimt, The Virgin, 1913. Oil on canvas, 74 3/4 x 78 3/4 in. (190 x 200 cm). Národní Galerie, Prague, 04152"
                     },
                     "picture": {
@@ -324,11 +325,27 @@
           }
         },
         "c3p4": {
+          "classes": "invert-top-bar",
           "template": "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig",
           "data": {
             "slides": [
               {
-                "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis est sit amet leo feugiat, in pulvinar tellus efficitur. Sed a leo nunc. Vivamus quam neque, accumsan et mauris in, mattis efficitur lorem.",
+                "intro_slide": true,
+                "components": [
+                  {
+                    "template": "@atoms/textarea/textarea.html.twig",
+                    "data": {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    }
+                  }
+                ]
+              },
+              {
+                "caption": {
+                  "id": "slide-1-caption",
+                  "brief": "Lorem ipsum dolor sit amet",
+                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et felis ac arcu cursus imperdiet. Mauris volutpat, ligula sit amet semper egestas, nunc velit pretium sem, id ornare nisl nisl nec erat."
+                },
                 "template": "@molecules/Picture/Picture.html.twig",
                 "data": {
                   "srcset": [
@@ -351,7 +368,9 @@
                 }
               },
               {
-                "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis est sit amet leo feugiat, in pulvinar tellus efficitur. Sed a leo nunc. Vivamus quam neque, accumsan et mauris in, mattis efficitur lorem.",
+                "caption": {
+                  "brief": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et felis ac arcu cursus imperdiet. Mauris volutpat, ligula sit amet semper egestas, nunc velit pretium sem, id ornare nisl nisl nec erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et felis ac arcu cursus imperdiet. Mauris volutpat, ligula sit amet semper egestas, nunc velit pretium sem, id ornare nisl nisl nec erat."
+                },
                 "template": "@molecules/Picture/Picture.html.twig",
                 "data": {
                   "srcset": [
@@ -399,6 +418,120 @@
             ]
           }
         },
+        "c3p45": {
+          "template": "@organisms/in-depth/in-depth.html.twig",
+          "data": {
+            "title": "Lorem ipsum lorem ipsum",
+            "picture": {
+              "srcset": [
+                {
+                  "min-width": "0px",
+                  "src": "https://www.fillmurray.com/300/300"
+                },
+                {
+                  "min-width": "768px",
+                  "src": "https://www.fillmurray.com/400/400"
+                },
+                {
+                  "min-width": "960px",
+                  "src": "https://www.fillmurray.com/500/500"
+                }
+              ],
+              "url": "https://www.fillmurray.com/500/500",
+              "alt": "A picture of Bill Murray",
+              "style": "square"
+            },
+
+            "modal_button_text": "Learn more",
+            "id": "in-depth-example",
+            "full_screen": true,
+            "class": "in-depth-modal",
+
+            "component": {
+              "id": "in-depth-example",
+              "template": "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig",
+              "data": {
+                "slides": [
+                  {
+                    "caption": {
+                      "id": "in-depth-slide-1-caption",
+                      "brief": "Lorem ipsum dolor sit amet",
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et felis ac arcu cursus imperdiet. Mauris volutpat, ligula sit amet semper egestas, nunc velit pretium sem, id ornare nisl nisl nec erat."
+                    },
+                    "template": "@molecules/Picture/Picture.html.twig",
+                    "data": {
+                      "srcset": [
+                        {
+                          "min-width": "0px",
+                          "src": "https://www.fillmurray.com/900/630"
+                        },
+                        {
+                          "min-width": "350px",
+                          "src": "https://www.fillmurray.com/900/630"
+                        },
+                        {
+                          "min-width": "800px",
+                          "src": "https://www.fillmurray.com/900/630"
+                        }
+                      ],
+                      "url": "https://www.fillmurray.com/900/630",
+                      "alt": "A picture of Bill Murray",
+                      "style": "vertical"
+                    }
+                  },
+                  {
+                    "caption": {
+                      "brief": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et felis ac arcu cursus imperdiet. Mauris volutpat, ligula sit amet semper egestas, nunc velit pretium sem, id ornare nisl nisl nec erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et felis ac arcu cursus imperdiet. Mauris volutpat, ligula sit amet semper egestas, nunc velit pretium sem, id ornare nisl nisl nec erat."
+                    },
+                    "template": "@molecules/Picture/Picture.html.twig",
+                    "data": {
+                      "srcset": [
+                        {
+                          "min-width": "0px",
+                          "src": "https://www.stevensegallery.com/900/630"
+                        },
+                        {
+                          "min-width": "350px",
+                          "src": "https://www.stevensegallery.com/900/630"
+                        },
+                        {
+                          "min-width": "800px",
+                          "src": "https://www.stevensegallery.com/900/630"
+                        }
+                      ],
+                      "url": "https://www.stevensegallery.com/900/630",
+                      "alt": "A picture of a kitten",
+                      "style": "vertical"
+                    }
+                  },
+                  {
+                    "template": "@molecules/Picture/Picture.html.twig",
+                    "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis est sit amet leo feugiat, in pulvinar tellus efficitur. Sed a leo nunc. Vivamus quam neque, accumsan et mauris in, mattis efficitur lorem.",
+                    "data": {
+                      "srcset": [
+                        {
+                          "min-width": "0px",
+                          "src": "https://www.placecage.com/900/630"
+                        },
+                        {
+                          "min-width": "350px",
+                          "src": "https://www.placecage.com/900/630"
+                        },
+                        {
+                          "min-width": "800px",
+                          "src": "https://www.placecage.com/900/630"
+                        }
+                      ],
+                      "url": "https://www.placecage.com/900/630",
+                      "alt": "A picture of Nicolas Cage",
+                      "style": "vertical"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
         "c3p5": {
           "template": "@layouts/one_up--primary/one_up--primary.html.twig",
           "data": {
@@ -407,7 +540,6 @@
                 "template": "@molecules/modal/modal-demo.html.twig",
                 "data": {
                   "id": "modal-id-1",
-                  "full_screen": true,
                   "modal_button_text": "open modal",
                   "components": [
                     {
