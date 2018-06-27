@@ -1,8 +1,39 @@
 %caption {
+  margin-bottom: 1rem;
+
+  .caption__brief {
+    display: inline-block;
+    line-height: 1.75rem;
+  }
+
+  .toggle-caption {
+    margin: 0 0 0 .5rem;
+    padding: .125rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    font-size: 1em;
+  }
+
   figcaption {
     display: block;
     background-color: $light-gray;
     padding: 2rem;
+    margin-top: .5rem;
+  }
+
+  // Inverted color variants.
+  .horizontal-image-slider & {
+    color: $white;
+
+    .toggle-caption {
+      border-color: $white;
+      color: $white;
+    }
+
+    figcaption {
+      padding: 0;
+      background: transparent;
+    }
   }
 }
 

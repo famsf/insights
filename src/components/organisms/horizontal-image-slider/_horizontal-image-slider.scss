@@ -10,10 +10,47 @@ Styleguide COMPONENTS.horizontal-image-slider
 */
 
 %horizontal-image-slider {
-  padding: 2rem;
+  padding: 4rem 2rem;
   background: $black;
   height: 100vh;
   display: block;
+  color: $white;
+
+  .owl-stage-outer,
+  .owl-stage,
+  .owl-item {
+    height: 100%;
+  }
+
+  .item.intro-slide {
+    padding: 2rem;
+    display: flex;
+    height: 100%;
+
+    .item__content {
+      margin: auto 0;
+    }
+
+    @include breakpoint(large) {
+      max-height: 630px;
+      padding: 2rem 2rem 2rem 3rem;
+      max-width: 25rem;
+    }
+  }
+
+  h3 {
+    font-family: $alternate-header-font-family;
+  }
+
+  picture {
+    max-height: 630px;
+    width: auto;
+    margin-bottom: .5rem;
+  }
+
+  .caption {
+    position: absolute;
+  }
 }
 
 .owl-carousel {
