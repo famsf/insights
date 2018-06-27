@@ -13,6 +13,11 @@ Styleguide COMPONENTS.in-depth
   display: flex;
   align-items: center;
   height: 100vh;
+  padding: 2rem;
+
+  @include breakpoint(medium) {
+    padding: 0;
+  }
 
   .in-depth__intro {
     width: 100%;
@@ -27,10 +32,49 @@ Styleguide COMPONENTS.in-depth
 
   .in-depth__title {
     @extend h1;
+    font-size: 3rem;
+    font-weight: bold;
 
     @include breakpoint(medium) {
+      margin-bottom: 2rem;
+    }
+
+    @include breakpoint(large) {
       font-size: 4rem;
-      font-weight: bold;
+      margin-bottom: 4rem;
+    }
+  }
+
+  .in-depth__left-col {
+    position: relative;
+    z-index: 5;
+  }
+
+  .in-depth__right-col {
+    position: relative;
+    z-index: 10;
+    transform: translate(0, -3rem);
+    padding: 0 2rem;
+
+    @include breakpoint(medium) {
+      padding: 0;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      transform: translate(-2rem, 0);
+    }
+
+    @include breakpoint(large) {
+      transform: translate(-4rem, 0);
+    }
+
+    @include breakpoint(xlarge) {
+      transform: translate(-6rem, 0);
+    }
+
+    @include breakpoint(xxlarge) {
+      transform: translate(-8rem, 0);
     }
   }
 }
