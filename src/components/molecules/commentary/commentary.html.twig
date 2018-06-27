@@ -1,3 +1,4 @@
+{% import "@macros/inklude.html.twig" as inklude %}
 <div class="grid-x">
   <div class="cell large-10 large-offset-1 {{ component_name ?: 'commentary' }} {{ author_image ? 'has-img' : 'no-img' }}">
     <div class="grid-x commentary__content">
@@ -15,7 +16,7 @@
       </div>
       <div class="cell large-7 commentary__layout-right">
         {% include "@atoms/commentary__icon/commentary__icon.html.twig" %}
-        {% include "@atoms/textarea/textarea.html.twig" with {text: text} only %}
+        {{ inklude.components(_context) }}
         {% include "@molecules/sharing-icons/sharing-icons.html.twig" %}
       </div>
     </div>

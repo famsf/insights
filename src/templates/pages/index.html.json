@@ -300,7 +300,7 @@
           "data": {
             "component_name": "commentary",
             "author_name": "Charles Desmarais",
-            "author_title": "Art Critic, San Francisc Chronicle",
+            "author_title": "Art Critic, San Francisco Chronicle",
             "author_bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam.",
             "author_image": {
               "srcset": [
@@ -321,7 +321,15 @@
               "alt": "A picture of Bill Murray",
               "style": "vertical"
             },
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec nisl id purus pellentesque porta in id enim. Aliquam libero purus, eleifend quis lacinia non, pulvinar in neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec nisl id purus pellentesque porta in id enim. Aliquam libero purus, eleifend quis lacinia non, pulvinar in neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec nisl id purus pellentesque porta in id enim. Aliquam libero purus, eleifend quis lacinia non, pulvinar in neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec nisl id purus pellentesque porta in id enim. Aliquam libero purus, eleifend quis lacinia non, pulvinar in neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet."
+            "components": [
+              {
+                "template": "@atoms/textarea/textarea.html.twig",
+                "data": {
+                  "text": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+                  "dropcap": false
+                }
+              }
+            ]
           }
         },
         "c3p4": {
