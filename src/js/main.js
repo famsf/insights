@@ -1,9 +1,24 @@
 (function (fds, window, document, $) {
   // Variable declarations.
   var horizontalImageSlider;
+  var horizontalImageSliderOptions = {
+    margin: 32,
+    loop: false,
+    nav: false,
+    dots: false,
+    items: 1,
+    responsive: {
+      1024: {
+        autoWidth: true
+      }
+    }
+  };
   var inDepthSlider;
   var inDepthSliderOptions = {
     margin: 0,
+    autoPlay: 1000,
+    slideSpeed: 1000,
+    smartSpeed: 1000,
     loop: false,
     nav: true,
     dots: true,
@@ -18,18 +33,7 @@
 
   // Initialize Horizontal Image Slider.
   horizontalImageSlider = $(':not(.in-depth-modal) > .horizontal-image-slider');
-  horizontalImageSlider.owlCarousel({
-    margin: 32,
-    loop: false,
-    nav: false,
-    dots: false,
-    items: 1,
-    responsive: {
-      1024: {
-        autoWidth: true
-      }
-    }
-  });
+  horizontalImageSlider.owlCarousel(horizontalImageSliderOptions);
 
   // Initialize In Depth Slider.
   inDepthSlider = $('.in-depth-modal > .horizontal-image-slider');
@@ -56,6 +60,12 @@
         inDepthSlider.find('.owl-stage-outer').children(':eq(0)').unwrap();
       }
     }
+  });
+
+  // In Depth Slider Modal Close Methods.
+  $('.in-depth-modal .modal__close-button').click(function () {
+    // Simulate a click on the first slide dot nav link.
+    $(this).siblings('.owl-carousel').find('.owl-dots .owl-dot:first-of-type').trigger('click');
   });
 
   fds.setStyle = function (el, obj) {
