@@ -1,6 +1,5 @@
 %modal__open-button {
-  display: inline;
-  padding-bottom: .35rem;
+  @extend %cta__button;
 }
 
 .modal__open-button {

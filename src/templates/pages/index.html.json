@@ -31,7 +31,7 @@
               {
                 "template": "@atoms/textarea/textarea.html.twig",
                 "data": {
-                  "text": "Upon the centennial of their deaths, Klimt & Rodin: An Artistic Encounter explores the dialogue between the work of French sculptor Auguste Rodin (1840–1917) and Austrian painter Gustav Klimt (1862–1918) and examines their numerous connections, ranging from their mutual interest in the human form to their philosophical outlooks on the world. A comparison of these two artists reminds the contemporary viewer of the challenges each encountered and how their work pushed the story of modern art forward"
+                  "text": "<p>Upon the centennial of their deaths, Klimt & Rodin: An Artistic Encounter explores the dialogue between the work of French sculptor Auguste Rodin (1840–1917) and Austrian painter Gustav Klimt (1862–1918) and examines their numerous connections, ranging from their mutual interest in the human form to their philosophical outlooks on the world. A comparison of these two artists reminds the contemporary viewer of the challenges each encountered and how their work pushed the story of modern art forward<p>"
                 }
               }
             ]
@@ -55,7 +55,7 @@
                 {
                   "template": "@atoms/textarea/textarea.html.twig",
                   "data": {
-                    "text": "This exhibition allows the public to study, for the very first time on the West Coast, the full evolution of Klimt’s artistic output, ranging from his early and academically applauded work to his provocative and critically debated mature style, as seen here in The Virgin. Revered today as a pioneer of modernism in Vienna, Klimt produced only a very limited number of canvases over his career. Many of these canvases are deemed too fragile to travel, making a sizable display of his work a once-in-a-lifetime opportunity.",
+                    "text": "<p>This exhibition allows the public to study, for the very first time on the West Coast, the full evolution of Klimt’s artistic output, ranging from his early and academically applauded work to his provocative and critically debated mature style, as seen here in The Virgin. Revered today as a pioneer of modernism in Vienna, Klimt produced only a very limited number of canvases over his career. Many of these canvases are deemed too fragile to travel, making a sizable display of his work a once-in-a-lifetime opportunity.</p><p>This exhibition allows the public to study, for the very first time on the West Coast, the full evolution of Klimt’s artistic output, ranging from his early and academically applauded work to his provocative and critically debated mature style, as seen here in The Virgin. Revered today as a pioneer of modernism in Vienna, Klimt produced only a very limited number of canvases over his career. Many of these canvases are deemed too fragile to travel, making a sizable display of his work a once-in-a-lifetime opportunity.</p>",
                     "dropcap": true
                   }
                 }
@@ -68,6 +68,7 @@
                   "data": {
                     "caption": {
                       "id": "caption",
+                      "brief": "Gustav Klimt",
                       "text": "Gustav Klimt, The Virgin, 1913. Oil on canvas, 74 3/4 x 78 3/4 in. (190 x 200 cm). Národní Galerie, Prague, 04152"
                     },
                     "picture": {
@@ -104,7 +105,7 @@
                 {
                   "template": "@atoms/textarea/textarea.html.twig",
                   "data": {
-                    "text": "At the turn of the 19th century to the 20th, the art world in all of Europe was in a constant flux. Regarding Vienna, the Austrian writer and critic Hermann Bahr stated, “Common to all the people of this age is the fact that more is weighing on them than they can bear; no one is equal to his or her burden. Never before has life been so heavy for people; just to exist, they muster an effort that goes beyond their strength.” This was the environment that surrounded Auguste Rodin and Gustav Klimt. Through their art, these two men aspired to convey the experience of being human as being deeply rooted in the Symbolist idea of becoming and passing away. In doing so, they broke with traditions of art.",
+                    "text": "<p>At the turn of the 19th century to the 20th, the art world in all of Europe was in a constant flux. Regarding Vienna, the Austrian writer and critic Hermann Bahr stated, “Common to all the people of this age is the fact that more is weighing on them than they can bear; no one is equal to his or her burden. Never before has life been so heavy for people; just to exist, they muster an effort that goes beyond their strength.” This was the environment that surrounded Auguste Rodin and Gustav Klimt. Through their art, these two men aspired to convey the experience of being human as being deeply rooted in the Symbolist idea of becoming and passing away. In doing so, they broke with traditions of art.</p>",
                     "dropcap": true
                   }
                 }
@@ -195,7 +196,7 @@
                 {
                   "template": "@atoms/textarea/textarea.html.twig",
                   "data": {
-                    "text": "By comparison, Gustav Klimt, at age 38 in 1900, although achieving financial success, continued to struggle with dogged critiques of his paintings. His city of Vienna was experiencing an economic upturn and an architectural rebirth. Nonetheless, as the capital of Austria-Hungary and the seat of its emperor and his court, Vienna was engaged with its great past and slow to adopt a modern aesthetic. The prevailing artistic style was historicist—an academic style based on the imitation of past masters, depicting scenes from mythology and history. Klimt had created many paintings in this style for the many new buildings springing up around Vienna but, starting in the 1890s, he shifted toward a more modern and challenging mode. He became the leader of modern art in Vienna and, thus, was a founding member and first president of the Viennese Secession, a group of artists that was looking both forward and further afield to the new artistic ideas emerging from Paris.",
+                    "text": "<p>By comparison, Gustav Klimt, at age 38 in 1900, although achieving financial success, continued to struggle with dogged critiques of his paintings. His city of Vienna was experiencing an economic upturn and an architectural rebirth. Nonetheless, as the capital of Austria-Hungary and the seat of its emperor and his court, Vienna was engaged with its great past and slow to adopt a modern aesthetic. The prevailing artistic style was historicist—an academic style based on the imitation of past masters, depicting scenes from mythology and history. Klimt had created many paintings in this style for the many new buildings springing up around Vienna but, starting in the 1890s, he shifted toward a more modern and challenging mode. He became the leader of modern art in Vienna and, thus, was a founding member and first president of the Viennese Secession, a group of artists that was looking both forward and further afield to the new artistic ideas emerging from Paris.</p>",
                     "dropcap": true
                   }
                 }
@@ -299,7 +300,7 @@
           "data": {
             "component_name": "commentary",
             "author_name": "Charles Desmarais",
-            "author_title": "Art Critic, San Francisc Chronicle",
+            "author_title": "Art Critic, San Francisco Chronicle",
             "author_bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam.",
             "author_image": {
               "srcset": [
@@ -320,15 +321,39 @@
               "alt": "A picture of Bill Murray",
               "style": "vertical"
             },
-            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec nisl id purus pellentesque porta in id enim. Aliquam libero purus, eleifend quis lacinia non, pulvinar in neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec nisl id purus pellentesque porta in id enim. Aliquam libero purus, eleifend quis lacinia non, pulvinar in neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec nisl id purus pellentesque porta in id enim. Aliquam libero purus, eleifend quis lacinia non, pulvinar in neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec nisl id purus pellentesque porta in id enim. Aliquam libero purus, eleifend quis lacinia non, pulvinar in neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet."
+            "components": [
+              {
+                "template": "@atoms/textarea/textarea.html.twig",
+                "data": {
+                  "text": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+                  "dropcap": false
+                }
+              }
+            ]
           }
         },
         "c3p4": {
+          "classes": "invert-top-bar",
           "template": "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig",
           "data": {
             "slides": [
               {
-                "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis est sit amet leo feugiat, in pulvinar tellus efficitur. Sed a leo nunc. Vivamus quam neque, accumsan et mauris in, mattis efficitur lorem.",
+                "intro_slide": true,
+                "components": [
+                  {
+                    "template": "@atoms/textarea/textarea.html.twig",
+                    "data": {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    }
+                  }
+                ]
+              },
+              {
+                "caption": {
+                  "id": "slide-1-caption",
+                  "brief": "Lorem ipsum dolor sit amet",
+                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et felis ac arcu cursus imperdiet. Mauris volutpat, ligula sit amet semper egestas, nunc velit pretium sem, id ornare nisl nisl nec erat."
+                },
                 "template": "@molecules/Picture/Picture.html.twig",
                 "data": {
                   "srcset": [
@@ -351,7 +376,9 @@
                 }
               },
               {
-                "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis est sit amet leo feugiat, in pulvinar tellus efficitur. Sed a leo nunc. Vivamus quam neque, accumsan et mauris in, mattis efficitur lorem.",
+                "caption": {
+                  "brief": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et felis ac arcu cursus imperdiet. Mauris volutpat, ligula sit amet semper egestas, nunc velit pretium sem, id ornare nisl nisl nec erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et felis ac arcu cursus imperdiet. Mauris volutpat, ligula sit amet semper egestas, nunc velit pretium sem, id ornare nisl nisl nec erat."
+                },
                 "template": "@molecules/Picture/Picture.html.twig",
                 "data": {
                   "srcset": [
@@ -399,6 +426,120 @@
             ]
           }
         },
+        "c3p45": {
+          "template": "@organisms/in-depth/in-depth.html.twig",
+          "data": {
+            "title": "Lorem ipsum lorem ipsum",
+            "picture": {
+              "srcset": [
+                {
+                  "min-width": "0px",
+                  "src": "https://www.fillmurray.com/300/300"
+                },
+                {
+                  "min-width": "768px",
+                  "src": "https://www.fillmurray.com/400/400"
+                },
+                {
+                  "min-width": "960px",
+                  "src": "https://www.fillmurray.com/500/500"
+                }
+              ],
+              "url": "https://www.fillmurray.com/500/500",
+              "alt": "A picture of Bill Murray",
+              "style": "square"
+            },
+
+            "modal_button_text": "Learn more",
+            "id": "in-depth-example",
+            "full_screen": true,
+            "class": "in-depth-modal",
+
+            "component": {
+              "id": "in-depth-example",
+              "template": "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig",
+              "data": {
+                "slides": [
+                  {
+                    "caption": {
+                      "id": "in-depth-slide-1-caption",
+                      "brief": "Lorem ipsum dolor sit amet",
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et felis ac arcu cursus imperdiet. Mauris volutpat, ligula sit amet semper egestas, nunc velit pretium sem, id ornare nisl nisl nec erat."
+                    },
+                    "template": "@molecules/Picture/Picture.html.twig",
+                    "data": {
+                      "srcset": [
+                        {
+                          "min-width": "0px",
+                          "src": "https://www.fillmurray.com/900/630"
+                        },
+                        {
+                          "min-width": "350px",
+                          "src": "https://www.fillmurray.com/900/630"
+                        },
+                        {
+                          "min-width": "800px",
+                          "src": "https://www.fillmurray.com/900/630"
+                        }
+                      ],
+                      "url": "https://www.fillmurray.com/900/630",
+                      "alt": "A picture of Bill Murray",
+                      "style": "vertical"
+                    }
+                  },
+                  {
+                    "caption": {
+                      "brief": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et felis ac arcu cursus imperdiet. Mauris volutpat, ligula sit amet semper egestas, nunc velit pretium sem, id ornare nisl nisl nec erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et felis ac arcu cursus imperdiet. Mauris volutpat, ligula sit amet semper egestas, nunc velit pretium sem, id ornare nisl nisl nec erat."
+                    },
+                    "template": "@molecules/Picture/Picture.html.twig",
+                    "data": {
+                      "srcset": [
+                        {
+                          "min-width": "0px",
+                          "src": "https://www.stevensegallery.com/900/630"
+                        },
+                        {
+                          "min-width": "350px",
+                          "src": "https://www.stevensegallery.com/900/630"
+                        },
+                        {
+                          "min-width": "800px",
+                          "src": "https://www.stevensegallery.com/900/630"
+                        }
+                      ],
+                      "url": "https://www.stevensegallery.com/900/630",
+                      "alt": "A picture of a kitten",
+                      "style": "vertical"
+                    }
+                  },
+                  {
+                    "template": "@molecules/Picture/Picture.html.twig",
+                    "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis est sit amet leo feugiat, in pulvinar tellus efficitur. Sed a leo nunc. Vivamus quam neque, accumsan et mauris in, mattis efficitur lorem.",
+                    "data": {
+                      "srcset": [
+                        {
+                          "min-width": "0px",
+                          "src": "https://www.placecage.com/900/630"
+                        },
+                        {
+                          "min-width": "350px",
+                          "src": "https://www.placecage.com/900/630"
+                        },
+                        {
+                          "min-width": "800px",
+                          "src": "https://www.placecage.com/900/630"
+                        }
+                      ],
+                      "url": "https://www.placecage.com/900/630",
+                      "alt": "A picture of Nicolas Cage",
+                      "style": "vertical"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
         "c3p5": {
           "template": "@layouts/one_up--primary/one_up--primary.html.twig",
           "data": {
@@ -407,13 +548,12 @@
                 "template": "@molecules/modal/modal-demo.html.twig",
                 "data": {
                   "id": "modal-id-1",
-                  "full_screen": true,
                   "modal_button_text": "open modal",
                   "components": [
                     {
                       "template": "@atoms/textarea/textarea.html.twig",
                       "data": {
-                        "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
                         "dropcap": false
                       }
                     }
