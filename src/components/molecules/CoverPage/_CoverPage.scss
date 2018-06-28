@@ -7,6 +7,7 @@ $bgURL: 'https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTF
   overflow: hidden;
 
   .underlay {
+    @extend %performy;
     @extend %abs;
     @extend %fill_screen;
 
@@ -62,6 +63,7 @@ $bgURL: 'https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTF
 
 
   .loaderpane {
+    @extend %performy;
     @extend %fill_screen;
     position: absolute;
     top: 0;
@@ -70,7 +72,6 @@ $bgURL: 'https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTF
     .text {
       line-height: 0.75;
     }
-
   }
 
   .top {

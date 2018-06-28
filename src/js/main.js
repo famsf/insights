@@ -18,14 +18,6 @@
     mergeFit: true
   });
 
-  // Prevents scrolling vertically until all slides have been seen.
-  // owl.on('mousewheel', '.owl-stage', function (e) {
-  //   if (e.deltaY > 0) {
-  //     owl.trigger('next.owl');
-  //   }
-  //   e.preventDefault();
-  // });
-
   fds.setStyle = function(el, obj) {
     el.style = Object.assign(el.style, obj)
   }
@@ -52,6 +44,14 @@
     }
   }
 
+  fds.getScrollY = function() {
+    return window.poly.getScrollY();
+  }
+
+  fds.getHeight = function() {
+    return document.getElementById('insights-app').clientHeight;
+  }
+
   $(document).ready(function () {
 
     var win = window
@@ -62,7 +62,6 @@
       fds.targetFps = 60
       fds.FpsInterval = 1000 / fds.targetFps
     }
-    var st = 0;
     var wDim = {
       w: win.innerWidth,
       h: win.innerHeight
@@ -71,14 +70,17 @@
     if (!document.querySelector('.insights-app')) {
       console.log('Bypassing main js loop in current context to allow for easier single component prototyping')
       return;
+    } else {
+      fds.rootElement = document.querySelector('.insights-app');
     }
 
     fds.fpsEl = document.getElementById('fpsEl')
-    window.fds.pages.initialize('.container', '.page', '.top-bar')
-    window.fds.chapterNav.initialize('#chapter_nav', '.chapter', '.top-bar')
-    window.fds.topBar.initialize('topBar')
-    window.fds.pages.onScroll(0, 'down', win.innerHeight, true)
-    window.fds.chapterNav.onScroll()
+    console.log('rootElement', window.fds.rootElement)
+    fds.pages.initialize('.chapters_container', '.page', '.top-bar')
+    fds.chapterNav.initialize('chapter_nav', '.chapter', '.top-bar')
+    fds.topBar.initialize('topBar')
+    fds.pages.onScroll(0, 'down', win.innerHeight, true)
+    fds.chapterNav.onScroll(0)
     animate = function (newtime) {
       // console.log('»', newtime, )
       requestAnimationFrame(animate);
@@ -97,13 +99,13 @@
         didResize = true
       }
       if (elapsed > fds.FpsInterval) {
-        var oldSt = st
-        st = window.poly.getScrollY()
-        var scrollDiff = st - oldSt
-        if( scrollDiff != 0 ) {
+        var oldScrollY = scrollY || 0
+        scrollY = window.poly.getScrollY()
+        var scrollDiff = scrollY - oldScrollY
+        if( scrollDiff !== 0 ) {
           scrollDir = ( scrollDiff > 0 ) ? 'down' : 'up';
-          window.fds.pages.onScroll(st, scrollDir, wDim.h, didResize)
-          window.fds.chapterNav.onScroll()
+          fds.pages.onScroll(scrollY, scrollDir, wDim.h, didResize);
+          fds.chapterNav.onScroll(scrollY);
         }
       }
       if (calcFps) {
@@ -111,7 +113,7 @@
         var currentFps = Math.round((1000 / (sinceStart / ++frameCount) * 100) * 0.01)
         var curFrameTime = elapsed
         var msPerFrame = Math.round(sinceStart/frameCount)
-        fds.fpsEl.innerHTML = `${currentFps} fps at roughtly <br>${msPerFrame} ms/frame`
+        fds.fpsEl.innerHTML = currentFps + " fps at roughtly <br> " + msPerFrame + "ms/frame";
         then = newtime - (elapsed % fds.FpsInterval)
         sinceStart = currentFps = curFrameTime = msPerFrame = null;
       }
@@ -124,4 +126,4 @@
     then = elapsed = didResize = msPerFrame = oldWindowDim = scrollDir = null
 
   })
-})( window.fds = window.fds || {}, window, document, jQuery);
+}( window.fds = window.fds || {}, window, document, jQuery));

@@ -1,10 +1,13 @@
 {
   "layout": "templates/layouts/wrapper.html.twig",
   "chapters": {
-    "chapter1": {
-      "title": "Chapter One",
+    "intro": {
+      "title": "Introduction",
+      "numeral": "",
+      "active": "active",
+      "id": "intro",
       "pages": {
-        "c1p1": {
+        "intro1": {
           "classes": "invert-top-bar",
           "template": "@molecules/CoverPage/CoverPage.html.twig",
           "data": {
@@ -13,14 +16,14 @@
             "backgroundImage": "/assets/images/lady-with-hat.jpg"
           }
         },
-        "c1p2": {
+        "intro2": {
           "template": "@layouts/one_up--primary/one_up--primary.html.twig",
+          "classes": "dark",
           "data": {
-            "classes": "dark",
             "cols": "medium-8",
             "offset": "medium-offset-2",
             "dropcap": false,
-            "classes": "revealit big_type dark",
+            "classes": "big_type dark",
             "components": [
               {
                 "template": "@atoms/h2/h2.html.twig",
@@ -36,17 +39,27 @@
               }
             ]
           }
-        },
-        "c1p3": {
+        }
+      }
+    },
+    "chapter1": {
+      "title": "In Search of Modernity",
+      "numeral": "I",
+      "id": "chapter1",
+      "pages": {
+        "c1p1": {
           "id": "c1p3",
-          "numeral": "I",
-          "title": "In Search of Modernity",
           "classes": "",
           "template": "@molecules/chapter__title/chapter__title.html.twig",
           "data": {
+            "numeral": "I",
+            "title": "In Search of Modernity",
+            "img": {
+              "url": "/assets/images/Portrait-of-Sonja-Knips.jpg"
+            }
           }
         },
-        "c1p3": {
+        "c1p2": {
           "classes": "",
           "template": "@layouts/two_up--primary/two_up--primary.html.twig",
           "data": {
@@ -95,7 +108,7 @@
             }
           }
         },
-        "c1p4": {
+        "c1p3": {
           "classes": "",
           "template": "@layouts/two_up--even_cols/two_up--even_cols.html.twig",
           "data": {
@@ -144,7 +157,7 @@
             }
           }
         },
-        "c1p5": {
+        "c1p4": {
           "template": "@molecules/AmbientVideo/AmbientVideo.html.twig",
           "data": {
             "sources": [
@@ -154,7 +167,7 @@
             "text": "By 1900—after 30 years of creating groundbreaking work that often brought about adverse criticism and numerous scandals—Rodin, at the age of 60, was at last enjoying international acclaim. He was widely regarded as the greatest living sculptor, French or otherwise, of his age. He exhibited his sculpture throughout Europe and the United States, sharing his work with new audiences. Reviewing the first major display of Rodin’s work in Vienna, in 1898, the art critic Ludwig Hevesi went so far as to describe the artist as the “Parisian Michelangelo.”"
           }
         },
-        "c1p6": {
+        "c1p5": {
           "classes": "",
           "template": "@layouts/two_up--even_cols/two_up--even_cols.html.twig",
           "data": {
@@ -206,9 +219,23 @@
       }
     },
     "chapter2": {
-      "title": "Chapter Two",
+      "id": "chapter2",
+      "title": "Meeting of the Minds",
+      "numeral": "II",
       "pages": {
         "c2p1": {
+          "id": "c1p3",
+          "classes": "",
+          "template": "@molecules/chapter__title/chapter__title.html.twig",
+          "data": {
+            "numeral": "II",
+            "title": "Meeting of the Minds",
+            "img": {
+              "url": "/assets/images/klimt_portrait_of_ria_munk_iii.jpg"
+            }
+          }
+        },
+        "c2p2": {
           "classes": "",
           "template": "@layouts/one_up--primary/one_up--primary.html.twig",
           "data": {
@@ -227,7 +254,7 @@
             ]
           }
         },
-        "c2p2": {
+        "c2p3": {
           "template": "@layouts/one_up--primary/one_up--primary.html.twig",
           "data": {
             "classes": "dark",
@@ -247,9 +274,23 @@
       }
     },
     "chapter3": {
-      "title": "Chapter Three",
+      "id": "chapter3",
+      "title": "Comparing Genius",
+      "numeral": "III",
       "pages": {
         "c3p1": {
+          "id": "c3p1",
+          "classes": "",
+          "template": "@molecules/chapter__title/chapter__title.html.twig",
+          "data": {
+            "numeral": "IV",
+            "title": "Comparing Genius",
+            "img": {
+              "url": "/assets/images/beethoven_frieze.jpg"
+            }
+          }
+        },
+        "c3p2": {
           "template": "@layouts/two_up--primary/two_up--primary.html.twig",
           "data": {
             "left": {
@@ -278,7 +319,7 @@
             }
           }
         },
-        "c3p2": {
+        "c3p3": {
           "template": "@layouts/one_up--primary/one_up--primary.html.twig",
           "data": {
             "components": [
@@ -294,7 +335,7 @@
             ]
           }
         },
-        "c3p3": {
+        "c3p4": {
           "template": "@molecules/commentary/commentary.html.twig",
           "data": {
             "component_name": "commentary",
@@ -323,7 +364,7 @@
             "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec nisl id purus pellentesque porta in id enim. Aliquam libero purus, eleifend quis lacinia non, pulvinar in neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec nisl id purus pellentesque porta in id enim. Aliquam libero purus, eleifend quis lacinia non, pulvinar in neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec nisl id purus pellentesque porta in id enim. Aliquam libero purus, eleifend quis lacinia non, pulvinar in neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec nisl id purus pellentesque porta in id enim. Aliquam libero purus, eleifend quis lacinia non, pulvinar in neque. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet."
           }
         },
-        "c3p4": {
+        "c3p5": {
           "template": "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig",
           "data": {
             "slides": [
@@ -399,7 +440,7 @@
             ]
           }
         },
-        "c3p5": {
+        "c3p6": {
           "template": "@layouts/one_up--primary/one_up--primary.html.twig",
           "data": {
             "components": [
