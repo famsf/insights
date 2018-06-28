@@ -154,6 +154,7 @@ Styleguide COMPONENTS.in-depth
     }
 
     .owl-dot {
+      @include remove-outline();
       margin: 0 .5rem;
       color: rgba($white, .5);
 
@@ -175,6 +176,7 @@ Styleguide COMPONENTS.in-depth
 
     .owl-nav {
       button {
+        @include remove-outline();
         transition: all .25s ease-in-out;
         position: absolute;
         top: calc(50% - 1.25rem);
