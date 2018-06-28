@@ -11,10 +11,10 @@
   "main": "build/index.html",
   "scripts": {
     "install": "napa TimPietrusky/background-clip-text-polyfill",
-    "test-with-linting": "[ \"${CONTEXT}\" = production ] && run-s play || run-s play lint:js",
-    "test": "run-s play",
+    "test": "[ \"${CONTEXT}\" = production ] && run-s play || run-s play lint:js",
     "play": "kalastatic build",
-    "start": "kalastatic start",
+    "start": "run-s lint:js && kalastatic start",
+    "start-no-lint": "kalastatic start",
     "lint:js": "node ./node_modules/eslint/bin/eslint.js --quiet .",
     "lint:js-fix": "node ./node_modules/eslint/bin/eslint.js --fix .",
     "lint:js-passing": "node ./node_modules/eslint/bin/eslint.js --quiet --config=.eslintrc.passing.json .",

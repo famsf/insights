@@ -14,20 +14,32 @@ Styleguide COMPONENTS.commentary
   $commentary-padding-default: 4vw;
 
   .commentary__content {
-    margin: $commentary-margin-default 0;
-    border-top: 2px solid $medium-gray;
-    border-bottom: 2px solid $medium-gray;
+    margin: 25vh 1rem $commentary-margin-default 1rem;
+    border: 2px solid $medium-gray;
 
     @include breakpoint(large) {
-      border: 2px solid $medium-gray;
+      max-height: calc(100vh - 10rem);
+      margin: $commentary-margin-default 0;
+    }
+  }
+
+  .commentary__layout-left,
+  .commentary__layout-right {
+    transform: translateY(-25vw);
+
+    @include breakpoint(large) {
+      transform: translateY(0);
     }
   }
 
   .commentary__layout-left {
-    padding: 0 $commentary-padding-default $commentary-padding-default $commentary-padding-default*1.5;
+    padding: 0 $commentary-padding-default $commentary-padding-default $commentary-padding-default;
     position: relative;
+    border-bottom: 2px solid $medium-gray;
 
     @include breakpoint(large) {
+      padding: 0 $commentary-padding-default $commentary-padding-default $commentary-padding-default*1.5;
+      border-bottom: none;
       border-right: 2px solid $medium-gray;
     }
   }
@@ -37,14 +49,32 @@ Styleguide COMPONENTS.commentary
   }
 
   .commentary__layout-right {
-    padding: $commentary-padding-default*1.5 $commentary-padding-default*1.5 $commentary-padding-default $commentary-padding-default;
+    padding: $commentary-padding-default*3 $commentary-padding-default $commentary-padding-default $commentary-padding-default;
     position: relative;
+    margin-bottom: -25vw;
+
+    @include breakpoint(large) {
+      padding: $commentary-padding-default $commentary-padding-default*1.5 $commentary-padding-default $commentary-padding-default;
+      margin-bottom: 0;
+    }
   }
 
   .commentary__image {
     position: relative;
-    top: -2rem;
     text-align: center;
+    width: 50vw;
+    margin: 0 auto 2rem auto;
+
+    @include breakpoint(medium) {
+      margin: 0 auto;
+      width: auto;
+      top: -2rem;
+    }
+
+    @include breakpoint(large) {
+      left: -1vw;
+      max-width: 20vw;
+    }
 
     img {
       max-width: 30rem;
@@ -78,15 +108,13 @@ Styleguide COMPONENTS.commentary
   }
 
   .commentary__icon {
-    text-align: center;
-    margin-bottom: $commentary-margin-default/2;
+    text-align: left;
+    position: absolute;
+    top: -1.25rem;
+    left: $commentary-padding-default;
 
     @include breakpoint(medium) {
-      margin-bottom: 0;
-      text-align: left;
-      position: absolute;
       top: -2rem;
-      left: $commentary-padding-default;
     }
 
     svg {
