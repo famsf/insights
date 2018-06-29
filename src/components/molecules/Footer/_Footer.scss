@@ -1,6 +1,8 @@
 footer.footer {
+  background: $white;
   display: flex;
   flex-flow: column;
+  padding: 0 2rem;
 
   h1,
   h2,
@@ -10,6 +12,10 @@ footer.footer {
   h6,
   label {
     font-family: $alternate-header-font-family;
+  }
+
+  .grid-container {
+    padding: 0;
   }
 
   .footer__content {
@@ -76,6 +82,35 @@ footer.footer {
 
     @include breakpoint(large) {
       text-align: right;
+    }
+  }
+
+  // Overrides for footer in mobile menu
+  & {
+    display: none;
+
+    @include breakpoint(medium) {
+      display: block;
+    }
+  }
+
+  .off-canvas & {
+    display: block;
+
+    .footer-feature {
+      h3 {
+        @extend p;
+        font-family: $base-font-family;
+        margin: .5rem 0 0 0;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    .footer__navigation {
+      display: none;
     }
   }
 

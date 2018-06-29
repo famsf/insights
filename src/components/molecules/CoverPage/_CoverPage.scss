@@ -158,6 +158,29 @@ $bgURL: 'https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTF
       display: none;
     }
   }
+
+  // Menu cover page style overrides.
+  .off-canvas & {
+    position: relative;
+    min-height: auto;
+
+    .underlay {
+      position: relative;
+      min-height: auto;
+
+      .underlay_contents {
+        padding: 2rem 2rem 1rem 2rem;
+        min-height: auto;
+      }
+
+      .headline {
+        font-size: 3rem;
+        position: relative;
+        left: 50%;
+        transform: translate3d(-50%, 0%, 0);
+      }
+    }
+  }
 }
 
 .cover_page {
