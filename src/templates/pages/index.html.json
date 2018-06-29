@@ -281,7 +281,7 @@
           "classes": "dark",
           "template": "@molecules/chapter__title/chapter__title.html.twig",
           "data": {
-            "numeral": "IV",
+            "numeral": "III",
             "title": "Comparing Genius",
             "img": {
               "url": "/assets/images/beethoven_frieze.jpg"
