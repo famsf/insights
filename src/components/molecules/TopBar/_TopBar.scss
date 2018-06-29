@@ -1,21 +1,32 @@
 // Primary Nav Proof of concept
-.top-bar__wrapper {
+%top-bar__wrapper {
   z-index: 999;
   position: fixed;
   top: 0;
   width: 100%;
 }
 
-#topBar {
-  padding: 1rem;
+%top-bar {
+  padding: 1rem 1.5rem;
   width: 100%;
   transition: background-color .325s ease-in-out;
   font-family: $body-font-family;
-  background-color: #fff;
+  background-color: $white;
+  display: flex;
+  flex-flow: row nowrap;
+
+  @include breakpoint(medium) {
+    padding: 1rem
+  }
+
+  .top-bar-left,
+  .top-bar-right {
+    flex-basis: auto;
+  }
 
   svg polygon,
   svg path {
-    fill: #000 !important;
+    fill: $black !important;
   }
 
   .menu-text {
@@ -28,7 +39,7 @@
 
   * {
     transition: all .5s ease-in-out;
-    color: #000;
+    color: $black;
     background-color: transparent;
   }
 
@@ -38,13 +49,13 @@
 
   .button {
     margin-bottom: 0;
-    background: black;
-    color: white;
+    background: $black;
+    color: $white;
 
     &.hollow {
-      color: black;
+      color: $black;
       background: transparent;
-      border: 2px solid black;
+      border: 2px solid $black;
     }
   }
 
@@ -52,24 +63,32 @@
     background-color: transparent;
 
     * {
-      color: #fff;
+      color: $white;
       background-color: transparent;
     }
 
     .button {
-      background: white;
-      color: black;
+      background: $white;
+      color: $black;
 
       &.hollow {
         background: transparent;
-        border: 2px solid white;
+        border: 2px solid $white;
       }
     }
 
     svg polygon,
     svg path {
-      fill: #fff !important;
+      fill: $white !important;
     }
 
   }
+}
+
+.top-bar__wrapper {
+  @extend %top-bar__wrapper;
+}
+
+.top-bar {
+  @extend %top-bar;
 }

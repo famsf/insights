@@ -1,0 +1,19 @@
+%hamburger {
+  $hamburger-width: 30px;
+  $hamburger-height: 20px;
+  $hamburger-weight: 2px;
+
+  @include remove-outline();
+  @include famsf-hamburger($color: $black, $color-hover: $black, $width: $hamburger-width, $height: $hamburger-height, $weight: $hamburger-weight);
+
+  .invert & {
+    @include famsf-hamburger($color: $white, $color-hover: $white, $width: $hamburger-width, $height: $hamburger-height, $weight: $hamburger-weight);
+  }
+
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.hamburger {
+  @extend %hamburger;
+}
