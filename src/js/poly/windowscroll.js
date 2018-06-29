@@ -15,7 +15,7 @@
     var elProp = props[1];
     var winProp = props[2];
 
-    window.poly[fnName] = function() {
+    poly[fnName] = function() {
       if (winProp in window) {
         return window[winProp];
       }

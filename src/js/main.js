@@ -75,15 +75,19 @@
   };
 
   fds.initialize = function () {
+    var sy;
     if (!doc.querySelector('.insights-app')) {
       console.log('Bypassing main js loop in current context to allow for easier single component prototyping');
       return;
     }
+    console.log(win.poly);
+    sy = win.poly.getScrollY();
+    console.log(sy);
     fds.scroll = {
       last: {
-        y: win.poly.getScrollY()
+        y: sy
       },
-      y: win.poly.getScrollY()
+      y: sy
     };
     fds.rootElement = doc.querySelector('.insights-app');
     fds.fpsEl = doc.getElementById('fpsEl');
