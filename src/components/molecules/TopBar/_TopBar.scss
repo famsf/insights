@@ -82,7 +82,12 @@
     svg path {
       fill: $white !important;
     }
+  }
 
+
+
+  .off-canvas-opened & {
+    background-color: $black;
   }
 }
 
