@@ -6,7 +6,7 @@
     "no-new": "off",
     "no-continue": "off",
     "new-cap": "off",
-    "max-len": "off",
+    "max-len": "on",
     "default-case": "off"
   }
 }

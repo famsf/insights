@@ -2,7 +2,7 @@
   <ul>
     {% for key, chapter in chapters %}
       <li class="{{ chapter.active }}">
-        <a href="#{{ chapter.id }}" data-template-classes="chapter_nav__tip" data-position="right" data-fade-in-duration="625" data-fade-out-duration="525" data-alignment="center" data-tooltip title="{{ chapter.numeral }}&nbsp;&nbsp;&nbsp;{{ chapter.title }}">
+        <a href="#{{ chapter.id }}" data-template-classes="chapter_nav__tip" data-position="right" data-fade-in-duration="625" data-fade-out-duration="525" data-alignment="center" data-tooltip title="{{ chapter.numeral }}&nbsp;&nbsp;&nbsp;{{ chapter.title }}" data-chapter="{{chapter.id}}">
           <div class="dot_wrapper">
             <div class="dot">
               <span class="show-for-sr">{{ chapter.title }}</span>

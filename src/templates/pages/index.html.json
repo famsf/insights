@@ -3,7 +3,7 @@
   "chapters": {
     "intro": {
       "title": "Introduction",
-      "numeral": "",
+      "numeral": "A",
       "active": "active",
       "id": "intro",
       "pages": {
@@ -48,7 +48,7 @@
       "id": "chapter1",
       "pages": {
         "c1p1": {
-          "id": "c1p3",
+          "id": "c1p1",
           "classes": "",
           "template": "@molecules/chapter__title/chapter__title.html.twig",
           "data": {
@@ -60,6 +60,7 @@
           }
         },
         "c1p2": {
+          "id": "c1p2",
           "classes": "",
           "template": "@layouts/two_up--primary/two_up--primary.html.twig",
           "data": {
@@ -111,6 +112,7 @@
         },
         "c1p3": {
           "classes": "",
+          "id": "c1p3",
           "template": "@layouts/two_up--even_cols/two_up--even_cols.html.twig",
           "data": {
             "left": {
@@ -159,6 +161,7 @@
           }
         },
         "c1p4": {
+          "id": "c1p4",
           "template": "@molecules/AmbientVideo/AmbientVideo.html.twig",
           "data": {
             "sources": [
@@ -169,6 +172,7 @@
           }
         },
         "c1p5": {
+          "id": "c1p5",
           "classes": "",
           "template": "@layouts/two_up--even_cols/two_up--even_cols.html.twig",
           "data": {
@@ -225,7 +229,7 @@
       "numeral": "II",
       "pages": {
         "c2p1": {
-          "id": "c1p3",
+          "id": "c1p2",
           "classes": "",
           "template": "@molecules/chapter__title/chapter__title.html.twig",
           "data": {
@@ -237,6 +241,7 @@
           }
         },
         "c2p2": {
+          "id": "c1p2",
           "classes": "",
           "template": "@layouts/one_up--primary/one_up--primary.html.twig",
           "data": {
@@ -256,6 +261,7 @@
           }
         },
         "c2p3": {
+          "id": "c2p3",
           "template": "@layouts/one_up--primary/one_up--primary.html.twig",
           "data": {
             "classes": "dark",
@@ -281,7 +287,7 @@
       "pages": {
         "c3p1": {
           "id": "c3p1",
-          "classes": "",
+          "classes": "dark",
           "template": "@molecules/chapter__title/chapter__title.html.twig",
           "data": {
             "numeral": "IV",
@@ -292,6 +298,7 @@
           }
         },
         "c3p2": {
+          "id": "c3p2",
           "template": "@layouts/two_up--primary/two_up--primary.html.twig",
           "data": {
             "left": {
@@ -321,6 +328,7 @@
           }
         },
         "c3p3": {
+          "id": "c3p3",
           "template": "@layouts/one_up--primary/one_up--primary.html.twig",
           "data": {
             "components": [
@@ -337,6 +345,7 @@
           }
         },
         "c3p4": {
+          "id": "c3p4",
           "template": "@molecules/commentary/commentary.html.twig",
           "data": {
             "component_name": "commentary",
@@ -374,6 +383,7 @@
           }
         },
         "c3p5": {
+          "id": "c3p5",
           "template": "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig",
           "data": {
             "slides": [
@@ -467,6 +477,7 @@
           }
         },
         "c3p6": {
+          "id": "c3p6",
           "template": "@organisms/in-depth/in-depth.html.twig",
           "data": {
             "title": "Lorem ipsum lorem ipsum",
@@ -581,6 +592,7 @@
           }
         },
         "c3p7": {
+          "id": "c3p7",
           "template": "@layouts/one_up--primary/one_up--primary.html.twig",
           "data": {
             "components": [
