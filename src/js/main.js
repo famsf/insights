@@ -18,7 +18,7 @@
 
   // Inform .off-canvas-wrapper that the mobile menu is open or closed.
   $('.off-canvas').on('opened.zf.offcanvas closed.zf.offcanvas', function() {
-    $('.off-canvas-wrapper').toggleClass('off-canvas-opened');
+    $('body').toggleClass('off-canvas-opened');
   });
 
   // Initialize Horizontal Image Slider.
