@@ -59,7 +59,8 @@
     }
   }
 
-  &.invert {
+  &.invert,
+  .off-canvas-opened & {
     background-color: transparent;
 
     * {
