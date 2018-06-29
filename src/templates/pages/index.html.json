@@ -544,26 +544,55 @@
           }
         },
         "c3p5": {
-          "template": "@layouts/one_up--primary/one_up--primary.html.twig",
+          "template": "@layouts/two_up--primary/two_up--primary.html.twig",
           "data": {
-            "components": [
-              {
-                "template": "@molecules/modal/modal-demo.html.twig",
-                "data": {
-                  "id": "modal-id-1",
-                  "modal_button_text": "open modal",
-                  "components": [
-                    {
-                      "template": "@atoms/textarea/textarea.html.twig",
-                      "data": {
-                        "text": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
-                        "dropcap": false
-                      }
-                    }
-                  ]
+            "right": {
+              "id": "sample-sticky-anchor",
+              "components": [
+                {
+                  "template": "@atoms/textarea/textarea.html.twig",
+                  "data": {
+                    "text": "<p>This exhibition allows the public to study, for the very first time on the West Coast, the full evolution of Klimt’s artistic output, ranging from his early and academically applauded work to his provocative and critically debated mature style, as seen here in The Virgin. Revered today as a pioneer of modernism in Vienna, Klimt produced only a very limited number of canvases over his career. Many of these canvases are deemed too fragile to travel, making a sizable display of his work a once-in-a-lifetime opportunity.</p><p>This exhibition allows the public to study, for the very first time on the West Coast, the full evolution of Klimt’s artistic output, ranging from his early and academically applauded work to his provocative and critically debated mature style, as seen here in The Virgin. Revered today as a pioneer of modernism in Vienna, Klimt produced only a very limited number of canvases over his career. Many of these canvases are deemed too fragile to travel, making a sizable display of his work a once-in-a-lifetime opportunity.</p><p>This exhibition allows the public to study, for the very first time on the West Coast, the full evolution of Klimt’s artistic output, ranging from his early and academically applauded work to his provocative and critically debated mature style, as seen here in The Virgin. Revered today as a pioneer of modernism in Vienna, Klimt produced only a very limited number of canvases over his career. Many of these canvases are deemed too fragile to travel, making a sizable display of his work a once-in-a-lifetime opportunity.</p><p>This exhibition allows the public to study, for the very first time on the West Coast, the full evolution of Klimt’s artistic output, ranging from his early and academically applauded work to his provocative and critically debated mature style, as seen here in The Virgin. Revered today as a pioneer of modernism in Vienna, Klimt produced only a very limited number of canvases over his career. Many of these canvases are deemed too fragile to travel, making a sizable display of his work a once-in-a-lifetime opportunity.</p><p>This exhibition allows the public to study, for the very first time on the West Coast, the full evolution of Klimt’s artistic output, ranging from his early and academically applauded work to his provocative and critically debated mature style, as seen here in The Virgin. Revered today as a pioneer of modernism in Vienna, Klimt produced only a very limited number of canvases over his career. Many of these canvases are deemed too fragile to travel, making a sizable display of his work a once-in-a-lifetime opportunity.</p><p>This exhibition allows the public to study, for the very first time on the West Coast, the full evolution of Klimt’s artistic output, ranging from his early and academically applauded work to his provocative and critically debated mature style, as seen here in The Virgin. Revered today as a pioneer of modernism in Vienna, Klimt produced only a very limited number of canvases over his career. Many of these canvases are deemed too fragile to travel, making a sizable display of his work a once-in-a-lifetime opportunity.</p><p>This exhibition allows the public to study, for the very first time on the West Coast, the full evolution of Klimt’s artistic output, ranging from his early and academically applauded work to his provocative and critically debated mature style, as seen here in The Virgin. Revered today as a pioneer of modernism in Vienna, Klimt produced only a very limited number of canvases over his career. Many of these canvases are deemed too fragile to travel, making a sizable display of his work a once-in-a-lifetime opportunity.</p>",
+                    "dropcap": true
+                  }
                 }
-              }
-            ]
+              ]
+            },
+            "left": {
+              "attributes": "data-sticky-container",
+              "components": [
+                {
+                  "template": "@molecules/Picture/PictureWithCaption.html.twig",
+                  "data": {
+                    "attributes": "data-sticky data-anchor='sample-sticky-anchor'",
+                    "caption": {
+                      "id": "caption",
+                      "brief": "Gustav Klimt",
+                      "text": "Gustav Klimt, The Virgin, 1913. Oil on canvas, 74 3/4 x 78 3/4 in. (190 x 200 cm). Národní Galerie, Prague, 04152"
+                    },
+                    "picture": {
+                      "srcset": [
+                        {
+                          "min-width": "0px",
+                          "src": "https://lh3.googleusercontent.com/3QCNuJKnnA8I7TdfZEP2Wb1OKaouHbLmHZWDbvY0jlRsFjcex-p72iAFfsDIkDp60kLjefLBvMifZg9nU-BN3D8azKC28zrRIGoemeblgidEoiyuWwAX4EEY5hBseVCwh5CLTNvrcdedtcYJ38lIGM26suRHXYZ_EKDSIWbpAU5sW9DtB2UehdVFs-d-4z34Tm8bMVLfIdwE_1cvfpk6H44xPFB8Nt-TXJBlpBaVtLDAo4dWYPmqUnUBXjDgm6bdXXRVcOKCumvmJgc7idqxpiBGixFSWpBcgtfDxGTLxyPSnrg_95VNyz7RMEKYFR_mIfrF4WlY0h5E1U1BW5ZWc7Ibbg9Dr-pWDApOGg4AzfpV-COuAc7GX-dHg_mxCKwI72uRtdC5eSO4klalGsRFQ7MCJGMSxfdoNtLgYVoJRBsxuTOwxQjs2GoRjSAcxW55rZyV5nK2GdYsy5wmn1mZSryPfrmxjEf2jpmgR64HBwRU4qbs7r4_c8hyUurEvNGrHOvjjYOLEVBvswyutFI8vKej3YcRjJTQJlvIpuetNZrPUWX38bDmIFm6vQPSaPpu=w1612-h1654"
+                        },
+                        {
+                          "min-width": "350px",
+                          "src": "https://lh3.googleusercontent.com/3QCNuJKnnA8I7TdfZEP2Wb1OKaouHbLmHZWDbvY0jlRsFjcex-p72iAFfsDIkDp60kLjefLBvMifZg9nU-BN3D8azKC28zrRIGoemeblgidEoiyuWwAX4EEY5hBseVCwh5CLTNvrcdedtcYJ38lIGM26suRHXYZ_EKDSIWbpAU5sW9DtB2UehdVFs-d-4z34Tm8bMVLfIdwE_1cvfpk6H44xPFB8Nt-TXJBlpBaVtLDAo4dWYPmqUnUBXjDgm6bdXXRVcOKCumvmJgc7idqxpiBGixFSWpBcgtfDxGTLxyPSnrg_95VNyz7RMEKYFR_mIfrF4WlY0h5E1U1BW5ZWc7Ibbg9Dr-pWDApOGg4AzfpV-COuAc7GX-dHg_mxCKwI72uRtdC5eSO4klalGsRFQ7MCJGMSxfdoNtLgYVoJRBsxuTOwxQjs2GoRjSAcxW55rZyV5nK2GdYsy5wmn1mZSryPfrmxjEf2jpmgR64HBwRU4qbs7r4_c8hyUurEvNGrHOvjjYOLEVBvswyutFI8vKej3YcRjJTQJlvIpuetNZrPUWX38bDmIFm6vQPSaPpu=w1612-h1654"
+                        },
+                        {
+                          "min-width": "800px",
+                          "src": "https://lh3.googleusercontent.com/3QCNuJKnnA8I7TdfZEP2Wb1OKaouHbLmHZWDbvY0jlRsFjcex-p72iAFfsDIkDp60kLjefLBvMifZg9nU-BN3D8azKC28zrRIGoemeblgidEoiyuWwAX4EEY5hBseVCwh5CLTNvrcdedtcYJ38lIGM26suRHXYZ_EKDSIWbpAU5sW9DtB2UehdVFs-d-4z34Tm8bMVLfIdwE_1cvfpk6H44xPFB8Nt-TXJBlpBaVtLDAo4dWYPmqUnUBXjDgm6bdXXRVcOKCumvmJgc7idqxpiBGixFSWpBcgtfDxGTLxyPSnrg_95VNyz7RMEKYFR_mIfrF4WlY0h5E1U1BW5ZWc7Ibbg9Dr-pWDApOGg4AzfpV-COuAc7GX-dHg_mxCKwI72uRtdC5eSO4klalGsRFQ7MCJGMSxfdoNtLgYVoJRBsxuTOwxQjs2GoRjSAcxW55rZyV5nK2GdYsy5wmn1mZSryPfrmxjEf2jpmgR64HBwRU4qbs7r4_c8hyUurEvNGrHOvjjYOLEVBvswyutFI8vKej3YcRjJTQJlvIpuetNZrPUWX38bDmIFm6vQPSaPpu=w1612-h1654"
+                        }
+                      ],
+                      "url": "https://lh3.googleusercontent.com/3QCNuJKnnA8I7TdfZEP2Wb1OKaouHbLmHZWDbvY0jlRsFjcex-p72iAFfsDIkDp60kLjefLBvMifZg9nU-BN3D8azKC28zrRIGoemeblgidEoiyuWwAX4EEY5hBseVCwh5CLTNvrcdedtcYJ38lIGM26suRHXYZ_EKDSIWbpAU5sW9DtB2UehdVFs-d-4z34Tm8bMVLfIdwE_1cvfpk6H44xPFB8Nt-TXJBlpBaVtLDAo4dWYPmqUnUBXjDgm6bdXXRVcOKCumvmJgc7idqxpiBGixFSWpBcgtfDxGTLxyPSnrg_95VNyz7RMEKYFR_mIfrF4WlY0h5E1U1BW5ZWc7Ibbg9Dr-pWDApOGg4AzfpV-COuAc7GX-dHg_mxCKwI72uRtdC5eSO4klalGsRFQ7MCJGMSxfdoNtLgYVoJRBsxuTOwxQjs2GoRjSAcxW55rZyV5nK2GdYsy5wmn1mZSryPfrmxjEf2jpmgR64HBwRU4qbs7r4_c8hyUurEvNGrHOvjjYOLEVBvswyutFI8vKej3YcRjJTQJlvIpuetNZrPUWX38bDmIFm6vQPSaPpu=w1612-h1654",
+                      "alt": "Gustav Klimt, The Virgin, 1913",
+                      "style": "vertical"
+                    }
+                  }
+                }
+              ]
+            }
           }
         }
       }
