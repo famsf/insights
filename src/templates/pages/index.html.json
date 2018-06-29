@@ -452,14 +452,11 @@
               "alt": "A picture of Bill Murray",
               "style": "square"
             },
-
             "modal_button_text": "Learn more",
             "id": "in-depth-example",
             "full_screen": true,
             "class": "in-depth-modal",
-
             "component": {
-              "id": "in-depth-example",
               "template": "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig",
               "data": {
                 "slides": [
