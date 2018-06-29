@@ -1,0 +1,9 @@
+%body {
+  &.off-canvas-opened {
+    overflow: hidden;
+  }
+}
+
+body {
+  @extend %body;
+}
