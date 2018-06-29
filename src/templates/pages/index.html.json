@@ -564,7 +564,7 @@
                 {
                   "template": "@molecules/Picture/PictureWithCaption.html.twig",
                   "data": {
-                    "attributes": "data-sticky data-anchor='sample-sticky-anchor'",
+                    "attributes": "data-sticky data-anchor='sample-sticky-anchor' data-margin-top='4'",
                     "caption": {
                       "id": "caption",
                       "brief": "Gustav Klimt",
