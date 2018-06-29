@@ -34,6 +34,9 @@
   chapterNav.setActiveItem = function (target) {
     var count = chapterNav.navItems.length;
     var chapterIndex = target.getAttribute('data-chapter-index');
+    var item = chapterNav.navItems[chapterIndex];
+    var i;
+    item.classList.add('active');
     for (i = 0; i < count; i++) {
       if (i <= chapterIndex) {
         chapterNav.navItems[i].classList.add('past');
@@ -41,11 +44,7 @@
       else {
         chapterNav.navItems[i].classList.remove('past');
       }
-      navItem = chapterNav.navItems[i];
-      a = navItem.querySelector('a');
     }
-    var item = chapterNav.navItems[chapterIndex];
-    item.classList.add('active');
     console.log(item, target.getAttribute('data-chapter-index'));
     if (chapterNav.activeItem) {
       chapterNav.activeItem.classList.remove('active');
