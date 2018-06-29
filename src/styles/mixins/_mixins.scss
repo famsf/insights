@@ -52,33 +52,45 @@
   cursor: pointer;
 
   // Icon bars
+  &::before,
   &::after {
     transition: background .25s ease-in-out, box-shadow .25s ease-in-out;
     position: absolute;
     top: 0;
     left: 0;
-
     display: block;
     width: 100%;
     height: $weight;
-
-    background: $color;
-    box-shadow: $shadow;
-
     content: '';
+    background: $color;
+  }
+  &::after {
+    background-color: transparent;
+    box-shadow: $shadow;
   }
 
   // Hover state
   @if $color-hover {
     // Generate CSS
-    @for $i from 2 through $bars {
+    @for $i from 1 through $bars {
       $offset: ($weight + $spacing) * ($i - 1);
-      $hover-shadow: append($hover-shadow, 0 $offset 0 $color-hover, comma);
+      $hover-shadow: 0 $offset 0 $color-hover;
     }
 
-    &:hover::after {
-      background: $color-hover;
-      box-shadow: $hover-shadow;
+    &[aria-expanded="true"] {
+      overflow: visible;
+
+      &::before {
+        transform: rotate(45deg);
+        top: 10px;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+        box-shadow: $hover-shadow;
+        top: -3px;
+        left: -12px;
+      }
     }
   }
 }
