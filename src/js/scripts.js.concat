@@ -2,8 +2,6 @@
 files:
 - js/poly/windowScroll.js
 - js/poly/performantScrollTo.js
-- js/poly/previousElementSibling.js
-- js/poly/nextElementSibling.js
 - js/pages.js
 # nav calls fds.pages so needs to come after
 - components/atoms/video--embed/video--embed.js
