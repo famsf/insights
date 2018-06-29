@@ -1,8 +1,8 @@
-%mobile-menu {
+%off-canvas {
   padding-top: 4rem;
   color: $white;
 }
 
 .off-canvas {
-  @extend %mobile-menu;
+  @extend %off-canvas;
 }
