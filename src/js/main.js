@@ -18,13 +18,6 @@
 
   fds.frameCount = 0;
 
-  fds.scroll = {
-    last: {
-      y: win.poly.getScrollY()
-    },
-    y: win.poly.getScrollY()
-  };
-
   fds.setStyle = function (el, obj) {
     el.style = Object.assign(el.style, obj);
   };
@@ -86,6 +79,12 @@
       console.log('Bypassing main js loop in current context to allow for easier single component prototyping');
       return;
     }
+    fds.scroll = {
+      last: {
+        y: win.poly.getScrollY()
+      },
+      y: win.poly.getScrollY()
+    };
     fds.rootElement = doc.querySelector('.insights-app');
     fds.fpsEl = doc.getElementById('fpsEl');
     fds.pages.initialize('.chapters_container', '.page', '.top-bar');

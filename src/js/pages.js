@@ -1,4 +1,4 @@
-(function (fds, win) {
+(function (fds, win, $) {
   var doc = win.document;
   var pages = {
     debug: false
@@ -43,6 +43,7 @@
       }
       if (hashes.currentPage) {
         startPage = doc.getElementById(hashes.currentPage);
+        $('.tooltip').foundation('hide');
         pages.snapScroll(startPage);
       }
     }
@@ -196,4 +197,4 @@
       }, { passive: true }));
     }
   };
-}(window.fds = window.fds || {}, window));
+}(window.fds = window.fds || {}, window, jQuery));
