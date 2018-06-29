@@ -2,13 +2,12 @@
 files:
 - js/poly/windowScroll.js
 - js/poly/performantScrollTo.js
-- js/pages.js
-# nav calls fds.pages so needs to come after
 - components/atoms/video--embed/video--embed.js
-- components/molecules/ChapterNav/ChapterNav.js
 - components/molecules/TopBar/TopBar.js
 - components/molecules/CoverPage/CoverPage.js
 - components/molecules/sharing-icons/sharing-icons.js
+- components/molecules/ChapterNav/ChapterNav.js
+- js/pages.js
 - js/main.js
 insertNewLine: true
 ---
