@@ -2,7 +2,8 @@
   "layout": "templates/layouts/wrapper.html.twig",
   "chapters": {
     "chapter1": {
-      "title": "Chapter One",
+      "title": "Introduction",
+      "numeral": "A",
       "pages": {
         "c1p1": {
           "classes": "invert-top-bar",
@@ -207,7 +208,8 @@
       }
     },
     "chapter2": {
-      "title": "Chapter Two",
+      "title": "In Search of Modernity",
+      "numeral": "I",
       "pages": {
         "c2p1": {
           "classes": "",
@@ -248,7 +250,8 @@
       }
     },
     "chapter3": {
-      "title": "Chapter Three",
+      "title": "Meeting of the Minds",
+      "numeral": "II",
       "pages": {
         "c3p1": {
           "template": "@layouts/two_up--primary/two_up--primary.html.twig",

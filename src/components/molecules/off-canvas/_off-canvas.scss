@@ -1,0 +1,15 @@
+%off-canvas {
+  padding-top: 4rem;
+
+  .off-canvas__buttons {
+    .button,
+    button {
+      background: $white;
+      color: $black;
+    }
+  }
+}
+
+.off-canvas {
+  @extend %off-canvas;
+}

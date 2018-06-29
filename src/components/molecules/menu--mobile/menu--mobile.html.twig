@@ -1,0 +1,13 @@
+<ul class="menu vertical menu--mobile">
+  <li>
+    <h3>Chapters</h3>
+  </li>
+  {% for id, chapter in chapters %}
+    <li>
+      <a href="#{{ id }}">
+        <span class="menu--mobile__numeral">{{ chapter.numeral }}</span>
+        <span class="menu--mobile__title">{{ chapter.title }}</span>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

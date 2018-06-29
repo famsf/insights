@@ -87,6 +87,8 @@
 @import '../components/atoms/video--embed/video--embed';
 @import '../components/atoms/slide__icon--next/slide__icon--next';
 @import '../components/atoms/cta__button/cta__button';
+@import '../components/atoms/hamburger/hamburger';
+@import '../components/atoms/body/body';
 
 // Import Molecules.
 @import '../components/molecules/TopBar/TopBar';
@@ -104,6 +106,8 @@
 @import '../components/molecules/TextArea/TextArea';
 @import '../components/molecules/modal/modal';
 @import '../components/molecules/chapter__title/chapter__title';
+@import '../components/molecules/menu--mobile/menu--mobile';
+@import '../components/molecules/off-canvas/off-canvas';
 
 // Import Layouts.
 @import '../components/layouts/one_up--primary/one_up--primary';
