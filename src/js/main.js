@@ -48,7 +48,7 @@
       didResize = true;
     }
     if (elapsed > fds.FpsInterval) {
-      fds.scroll.y = win.poly.getScrollY();
+      fds.scroll.y = window.pageYOffset;
       scrollDiff = fds.scroll.y - fds.scroll.last.y;
       if (scrollDiff !== 0) {
         scrollDir = (scrollDiff > 0) ? 'down' : 'up';
@@ -81,7 +81,7 @@
       return;
     }
     console.log(win.poly);
-    sy = win.poly.getScrollY();
+    sy = window.pageYOffset;
     console.log(sy);
     fds.scroll = {
       last: {

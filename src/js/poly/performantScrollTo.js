@@ -20,7 +20,7 @@
   })();
 
   fds.performantScrollTo = function(to, callback, duration) {
-    var start = window.poly.getScrollY(),
+    var start = window.pageYOffset,
       change = to - start,
       currentTime = 0,
       increment = 20;
