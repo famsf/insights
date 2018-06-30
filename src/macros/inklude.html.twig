@@ -1,7 +1,12 @@
 {% macro components(context) %}
+
   {# Only one component? #}
   {% if context.template and context.data %}
     {% include context.template with context.data only %}
+
+  {# Single component, keyed as "component". #}
+  {% elseif context.component %}
+    {% include context.component.template with context.component.data only %}
 
   {# Multiple components, passed in either as a key or directly. #}
   {% else %}
