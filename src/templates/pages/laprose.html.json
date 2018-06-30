@@ -1,0 +1,349 @@
+{
+  "layout": "templates/layouts/wrapper.html.twig",
+  "chapters": {
+    "chapter1": {
+      "title": "Chapter One",
+      "pages": {
+        "c1p1": {
+          "classes": "invert-top-bar",
+          "template": "@molecules/CoverPage/CoverPage.html.twig",
+          "data": {
+            "title": "La prose",
+            "subTitle": "du Transsibérien et de la petite Jehanne de France",
+            "backgroundImage": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/0_la-prose-title-card.jpg"
+          }
+        },
+        "c1p2": {
+          "template": "@layouts/one_up--primary/one_up--primary.html.twig",
+          "data": {
+            "classes": "dark",
+            "cols": "medium-8",
+            "offset": "medium-offset-2",
+            "dropcap": false,
+            "classes": "revealit big_type light",
+            "components": [
+              {
+                "template": "@atoms/h2/h2.html.twig",
+                "data": {
+                  "text": "Introduction"
+                }
+              },
+              {
+                "template": "@atoms/textarea/textarea.html.twig",
+                "data": {
+                  "text": "<p>By 1913, Paris had been for more than a decade the epicenter of artistic revolution in Europe. That year, artist Sonia Delaunay and poet Blaise Cendrars collaborated on La prose du Transsibérien et de la petite Jehanne de France (Prose of the Trans-Siberian and of Little Jehanne of France). Hailed as the first “simultaneous book,” the artwork was conceived as a unified experience of text and image, indivisible and apprehended concurrently.<p>"
+                }
+              }
+            ]
+          }
+        },
+        "c1p3": {
+          "template": "@layouts/one_up--primary/one_up--primary.html.twig",
+          "data": {
+            "components": [
+              {
+                "template": "@atoms/video--embed/video--embed.html.twig",
+                "data": {
+                }
+              }
+            ]
+          }
+        },
+        "c1p4": {
+          "id": "c1p4",
+          "img.url": "",
+          "numeral": "I",
+          "title": "Introducing the Book",
+          "classes": "",
+          "template": "@molecules/chapter__title/chapter__title.html.twig",
+          "data": {
+          }
+        },
+        "c1p5": {
+          "id": "c1p5",
+          "classes": "",
+          "template": "@layouts/one_up--primary/one_up--primary.html.twig",
+          "data": {
+            "components": [
+              {
+                "template": "@atoms/textarea/standalone-quote.html.twig",
+                "data": {
+                  "text": "Mme. Delaunay has made such a beautiful book of colors that my poem is more  saturated with light than is my life. . . .  Besides, think that this book should be two meters high! Moreover, that the edition should reach the height of the Eiffel Tower!",
+                  "name": "-Blaise Cendrars in <em>Der Sturm</em> (Berlin), September, 1913"
+                }
+              }
+            ]
+          }
+        },
+        "c1p6": {
+          "classes": "",
+          "template": "@layouts/two_up--even_cols/two_up--even_cols.html.twig",
+          "data": {
+            "left": {
+              "components": [
+                {
+                  "template": "@molecules/Picture/PictureWithCaption.html.twig",
+                  "data": {
+                    "caption": {
+                      "id": "caption2",
+                      "text": "Sonia Delaunay-Terk (artist), Blaise Cendrars (author), <em>La Prose du Transsibérien et de la petite Jehanne de France</em> (detail), 1913. Illustrated book with pochoir, case: 80 x 17 in. (203.2 x 43.2 cm). FAMSF, Gift of the Reva and David Logan Foundation, 2016.15.4.1"
+                    },
+                    "picture": {
+                      "srcset": [
+                        {
+                          "min-width": "0px",
+                          "src": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg"
+                        },
+                        {
+                          "min-width": "800px",
+                          "src": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg"
+                        }
+                      ],
+                      "url": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg",
+                      "alt": "La Prose du Transsibérien",
+                      "style": "vertical"
+                    }
+                  }
+                }
+              ]
+            },
+            "right": {
+              "components": [
+                {
+                  "template": "@atoms/textarea/textarea.html.twig",
+                  "data": {
+                    "text": "<p>It was an audacious work of art: Appropriating a map-fold format, the book unfurls to over six feet in length, then opens to reveal Delaunay’s abstract forms confronting a poem of more than 400 lines splashed across the right-hand side of the opening</p>.",
+                    "dropcap": true
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "c1p7": {
+          "id": "c1p7",
+          "classes": "",
+          "template": "@layouts/two_up--even_cols/two_up--even_cols.html.twig",
+          "data": {
+            "left": {
+              "components": [
+                {
+                  "template": "@molecules/Picture/PictureWithCaption.html.twig",
+                  "data": {
+                    "caption": {
+                      "id": "caption3",
+                      "text": "Photo: Florence Henri, 1931. Martini & Ronchetti Gallery and image source"
+                    },
+                    "picture": {
+                      "srcset": [
+                        {
+                          "min-width": "0px",
+                          "src": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg"
+                        },
+                        {
+                          "min-width": "350px",
+                          "src": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg"
+                        },
+                        {
+                          "min-width": "800px",
+                          "src": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg"
+                        }
+                      ],
+                      "url": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg",
+                      "alt": "Photo of sonia delaunay-terk",
+                      "style": "vertical"
+                    }
+                  }
+                },
+                {
+                  "template": "@atoms/textarea/textarea.html.twig",
+                  "data": {
+                    "text": "<p>Delaunay-Terk (1885-1979) was born in the Ukraine and raised in St. Petersburg. She moved to Paris in 1905. In 1910 she married Robert Delaunay, an artist known for his bold use of color and abstract form. The Delaunays were exemplars of “Orphism,” as Apollinaire had called it, their work infusing Cubism with dynamic light and color. In addition to painting, Delaunay-Terk’s practice encompassed textile and fashion design, bookbinding, furniture design, and set design.</p>",
+                    "dropcap": true
+                  }
+                }
+
+              ]
+            },
+            "right": {
+              "components": [
+                {
+                  "template": "@molecules/Picture/PictureWithCaption.html.twig",
+                  "data": {
+                    "caption": {
+                      "id": "caption4",
+                      "text": "Ca.1907. Wikimedia Commonse"
+                    },
+                    "picture": {
+                      "srcset": [
+                        {
+                          "min-width": "0px",
+                          "src": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg"
+                        },
+                        {
+                          "min-width": "350px",
+                          "src": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg"
+                        },
+                        {
+                          "min-width": "800px",
+                          "src": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg"
+                        }
+                      ],
+                      "url": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg",
+                      "alt": "Photo of blaise cendrars",
+                      "style": "vertical"
+                    }
+                  }
+                },
+                {
+                  "template": "@atoms/textarea/textarea.html.twig",
+                  "data": {
+                    "text": "<p>Cendrars (1887-1961) was born Frédéric-Louis Sauser in Neuchatel, Switzerland, and became a French citizen in 1916. One of the leading literary figures of 20th century France, he was a friend and collaborator with many artists, including Fernand Léger, Marc Chagall, and Amedeo Modigliani.</p>",
+                    "dropcap": true
+                  }
+                }
+              ]
+            }
+          }
+        },
+        "ch1p8": {
+          "template": "@organisms/in-depth/in-depth.html.twig",
+          "data": {
+            "title": "What is an Artist’s Book?",
+            "picture": {
+              "srcset": [
+                {
+                  "min-width": "0px",
+                  "src": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg"
+                },
+                {
+                  "min-width": "768px",
+                  "src": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg"
+                },
+                {
+                  "min-width": "960px",
+                  "src": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg"
+                }
+              ],
+              "url": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg",
+              "alt": "Image of chi-rho page from book of kells",
+              "style": "vertical"
+            },
+
+            "modal_button_text": "Learn more",
+            "id": "in-depth-artist-book",
+            "full_screen": true,
+            "class": "in-depth-modal",
+
+            "component": {
+              "id": "in-depth-artist-book",
+              "template": "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig",
+              "data": {
+                "slides": [
+                  {
+                    "caption": {
+                      "id": "in-depth-slide-1-caption",
+                      "brief": "What is an Artist's Book?",
+                      "text": "Book art has a long history. In the <em>Book of Kells,</em> the letterform is an expression of transcendance; even beyond its overt religious significance, here the book is truly, in the words of Stéphane Mallarmé, an “<em>instrument spirituel.</em>”"
+                    },
+                    "template": "@molecules/Picture/Picture.html.twig",
+                    "data": {
+                      "srcset": [
+                        {
+                          "min-width": "0px",
+                          "src": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg"
+                        },
+                        {
+                          "min-width": "350px",
+                          "src": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg"
+                        },
+                        {
+                          "min-width": "800px",
+                          "src": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg"
+                        }
+                      ],
+                      "url": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg",
+                      "alt": "The Book of Kells",
+                      "style": "vertical"
+                    }
+                  },
+                  {
+                    "caption": {
+                      "brief": "William Blake’s illustrations display a singular vision and deep interpenetration of text and image, a unified expression that has rarely been equaled. Many consider Blake the father of book art."
+                    },
+                    "template": "@molecules/Picture/Picture.html.twig",
+                    "data": {
+                      "srcset": [
+                        {
+                          "min-width": "0px",
+                          "src": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg"
+                        },
+                        {
+                          "min-width": "350px",
+                          "src": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg"
+                        },
+                        {
+                          "min-width": "800px",
+                          "src": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg"
+                        }
+                      ],
+                      "url": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg",
+                      "alt": "Plate 16 from the book of job by william blake",
+                      "style": "vertical"
+                    }
+                  },
+                  {
+                    "template": "@molecules/Picture/Picture.html.twig",
+                    "caption": "Publication of deluxe editions illustrated by contemporary artists was taken up in earnest with <em>livre d’artiste</em> editions such as <em>Parallelement,</em> published by Ambroise Vollard (1866–1939). Vollard’s contemporary Daniel-Henry Kahnweiler (1884–1979) published adventurous works by Pablo Picasso, Georges Braque, and others, with literary texts by as-yet obscure writers such as Guillaume Apollinaire, Max Jacob, André Malraux, and Gertrude Stein.",
+                    "data": {
+                      "srcset": [
+                        {
+                          "min-width": "0px",
+                          "src": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg"
+                        },
+                        {
+                          "min-width": "350px",
+                          "src": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg"
+                        },
+                        {
+                          "min-width": "800px",
+                          "src": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg"
+                        }
+                      ],
+                      "url": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg",
+                      "alt": "untitled page from parallelement by paul verlaine and pierre bonnard",
+                      "style": "vertical"
+                    }
+                  },
+                  {
+                    "template": "@molecules/Picture/Picture.html.twig",
+                    "caption": "The concept of the book as art was further developed by the Russian Futurists in non-luxurious but conceptually advanced editions. The deluxe <em>livre d’artiste</em> and its lower-cost counterpart, the artist-published “democratic multiple,” have persisted to the present day. So has the third way taken by La prose, where self-publishing artists combine high craft values with a visionary approach to the form of the book.",
+                    "data": {
+                      "srcset": [
+                        {
+                          "min-width": "0px",
+                          "src": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg"
+                        },
+                        {
+                          "min-width": "350px",
+                          "src": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg"
+                        },
+                        {
+                          "min-width": "800px",
+                          "src": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg"
+                        }
+                      ],
+                      "url": "http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg",
+                      "alt": "page from the book dlia golosa by vladimir vladimirovich and el lissitsky",
+                      "style": "vertical"
+                    }
+                  },
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
