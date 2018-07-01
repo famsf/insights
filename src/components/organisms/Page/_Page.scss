@@ -1,4 +1,5 @@
 %page {
+
   z-index: 1;
   top: 0;
   padding: 0;
@@ -7,11 +8,15 @@
   overflow: hidden;
   background-color: #fff;
   box-sizing: border-box;
-
+  @extend %performy;
 
   .frame {
     @extend %fill_screen;
     box-sizing: border-box;
+    > .fluid {
+      padding-top: 9rem;
+      padding-bottom: 4rem;
+    }
   }
 
   .fluid {
@@ -31,10 +36,17 @@
     font-style: italic;
   }
 
-  &.pinned {
-    .frame {
-      @extend %fixed;
-    }
+  // &.pinned:not(.released) {
+  //   @extend %fixed;
+  //   z-index: 250;
+  //   // .frame {
+  //   //   @extend %fixed;
+  //   // }
+  // }
+
+  .picture-with-caption {
+    position: sticky;
+    top: 20vh;
   }
 
   /* Color variations */
@@ -46,7 +58,11 @@
   }
 }
 
-
 .page {
   @extend %page;
+}
+
+.chapter,
+.page {
+  position: relative;
 }

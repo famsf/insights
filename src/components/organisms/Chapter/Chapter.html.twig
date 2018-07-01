@@ -1,5 +1,5 @@
-<section class="chapter {{ classes }}" id="{{ id }}">
+<section class="chapter {{ classes }}" id="{{ id }}" data-chapter-index="{{ index }}" data-chapter-length="{{ pages|length }}">
   {% for id, page in pages %}
-    {% include "@organisms/Page/Page.html.twig" with page|merge({id: id}) only %}
+    {% include "@organisms/Page/Page.html.twig" with page|merge({id: id, pageIndex: loop.index0 }) only %}
   {% endfor %}
 </section>
