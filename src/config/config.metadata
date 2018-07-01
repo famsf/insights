@@ -16,7 +16,5 @@ scripts:
       - /js/object-fit-images/ofi.min.js
       - /js/clippath/background-clip-text-polyfill.js
       - /js/scripts.js
-      # - /js/smoothscroll/smoothscroll.min.js
       - https://use.fontawesome.com/releases/v5.0.13/js/all.js
 ---
-Include the smoothscroll lib after our custom scripts so that we can set the global variable that forces use of the smoothscroll polyfill even in browsers that support it natively.

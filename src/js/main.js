@@ -1,7 +1,5 @@
 (function (fds, win, doc, $) {
   var owl;
-  // Always use the smoothscroll polyfill, even in browsers with native support.
-  win.__forceSmoothScrollPolyfill__ = true;
   // Initialize foundation.
   $(document).foundation();
   // Initialize Owl Carousel.
