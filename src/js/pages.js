@@ -90,6 +90,8 @@
     var page;
     var pageRect;
     var pageIterator;
+    var otherCondition;
+
     // Loop through pages, we can eventually filter out doing stuff to pages that are offscreen.
     for (pageIterator = 0; pageIterator < count; pageIterator++) {
       page = pages.pages[pageIterator];
@@ -108,7 +110,8 @@
 
       if (scrollDir === 'down') {
         pageNearEdge = pageRect.top >= fds.edgeDownThreshHold;
-        shouldTriggerTopBar = pageNearEdge && (pageRect.top <= fds.topBarDownThreshhold && pageRect.bottom > 0);
+        otherCondition = pageRect.top <= fds.topBarDownThreshhold && pageRect.bottom > 0;
+        shouldTriggerTopBar = pageNearEdge && otherCondition;
         shouldAdvance = pageNearEdge && pageRect.top <= fds.snapDownThreshhold;
         if (!shouldAdvance && pageRect.top >= wh) {
           page.classList.remove('triggered');
@@ -116,8 +119,12 @@
       }
       else if (scrollDir === 'up') {
         pageNearEdge = pageRect.bottom >= wh - fds.edgeUpThreshHold;
-        shouldTriggerTopBar = pageNearEdge && (pageRect.top <= fds.topBarUpThreshhold && pageRect.top < wh);
-        shouldAdvance = pageRect.top < 0 && pageRect.bottom >= fds.snapUpThreshhold && pageRect.bottom > 0;
+        otherCondition = pageRect.top <= fds.topBarUpThreshhold && pageRect.top < wh;
+        shouldTriggerTopBar = pageNearEdge && otherCondition;
+        shouldAdvance =
+          pageRect.top < 0 &&
+          pageRect.bottom >= fds.snapUpThreshhold &&
+          pageRect.bottom > 0;
         if (!shouldAdvance && pageRect.top >= wh) {
           page.classList.remove('triggered');
         }
