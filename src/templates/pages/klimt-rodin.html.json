@@ -11,9 +11,16 @@
           "classes": "invert-top-bar",
           "template": "@molecules/CoverPage/CoverPage.html.twig",
           "data": {
-            "pageTitle": "Klimt &<br/>Rodan",
-            "subTitle": "An artistic journey",
-            "backgroundImage": "/assets/images/lady-with-hat.jpg"
+            "title": {
+              "firstLine": "Klimt &",
+              "secondLine": "Rodin"
+            },
+            "subtitle": "An artistic journey",
+            "info": "Legion of Honor Museum<br>October 14, 2017 – January 28, 2018",
+            "image": {
+              "url": "https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTFqH4TR7oG4J3GzuFhr1NOAuYJw/w1200-h630-p-k-no-nu/Lady%2Bwith%2BHat%2Band%2BFeather%2BBoa%2Bby%2BGustav%2BKlimt.jpg",
+              "alt": "An Image of Lady with Hat and Feather Boa, 1909 by Gustav Klimt"
+            }
           }
         },
         "intro2": {
@@ -54,7 +61,8 @@
             "numeral": "I",
             "title": "In Search of Modernity",
             "img": {
-              "url": "/assets/images/Portrait-of-Sonja-Knips.jpg"
+              "url": "/assets/images/Portrait-of-Sonja-Knips.jpg",
+              "alt": ""
             }
           }
         },
@@ -160,11 +168,15 @@
         "c1p4": {
           "template": "@molecules/AmbientVideo/AmbientVideo.html.twig",
           "data": {
-            "sources": [
-              "https://doc-0k-6o-docs.googleusercontent.com/docs/securesc/ha0ro937gcuc7l7deffksulhg5h7mbp1/t9ibdoomehfrs6keioee43imrennhkn7/1529337600000/05791871818971148396/*/1dcP9SES_0P7TLtsisZiDiiVkW8a-oAS_?e=download"
-            ],
-            "dropcap": true,
-            "text": "By 1900—after 30 years of creating groundbreaking work that often brought about adverse criticism and numerous scandals—Rodin, at the age of 60, was at last enjoying international acclaim. He was widely regarded as the greatest living sculptor, French or otherwise, of his age. He exhibited his sculpture throughout Europe and the United States, sharing his work with new audiences. Reviewing the first major display of Rodin’s work in Vienna, in 1898, the art critic Ludwig Hevesi went so far as to describe the artist as the “Parisian Michelangelo.”"
+            "poster": "/assets/images/video/rodin.jpg",
+            "sources": {
+              "webm": "/assets/video/rodin.webm",
+              "m4v": "/assets/video/rodin.m4v"
+            },
+            "textarea": {
+              "dropcap": true,
+              "text": "By 1900—after 30 years of creating groundbreaking work that often brought about adverse criticism and numerous scandals—Rodin, at the age of 60, was at last enjoying international acclaim. He was widely regarded as the greatest living sculptor, French or otherwise, of his age. He exhibited his sculpture throughout Europe and the United States, sharing his work with new audiences. Reviewing the first major display of Rodin’s work in Vienna, in 1898, the art critic Ludwig Hevesi went so far as to describe the artist as the “Parisian Michelangelo.”"
+            }
           }
         },
         "c1p5": {
@@ -230,7 +242,8 @@
             "numeral": "II",
             "title": "Meeting of the Minds",
             "img": {
-              "url": "/assets/images/klimt_portrait_of_ria_munk_iii.jpg"
+              "url": "/assets/images/klimt_portrait_of_ria_munk_iii.jpg",
+              "alt": ""
             }
           }
         },
@@ -244,10 +257,11 @@
               {
                 "template": "@atoms/video--embed/video--embed.html.twig",
                 "data": {
-                  "srcset": [
-                    "...",
-                    "..."
-                  ]
+                  "poster": "https://files.slack.com/files-pri/T024Y2MQC-FB9BE7CCC/alee.jpg?pub_secret=c6f841d9eb",
+                  "sources": {
+                    "webm": "/assets/video/rodin.webm",
+                    "m4v": "/assets/video/rodin.m4v"
+                  }
                 }
               }
             ]
@@ -284,7 +298,8 @@
             "numeral": "III",
             "title": "Comparing Genius",
             "img": {
-              "url": "/assets/images/beethoven_frieze.jpg"
+              "url": "/assets/images/beethoven_frieze.jpg",
+              "alt": ""
             }
           }
         },

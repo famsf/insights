@@ -1,5 +1,5 @@
 ---
-layout: "templates/pages/index.html.twig"
+layout: "templates/pages/klimt-rodin.html.twig"
 title: Home
 permalink: false
 
