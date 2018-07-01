@@ -8,13 +8,14 @@
   <div class="text_content fluid">
     <div class="wrapper grid-x grid-margin-x">
       <div class="cell medium-4 medium-offset-6">
-        {% include "@atoms/textarea/textarea.html.twig" with { dropcap: dropcap, text: text } only %}
+        {% include "@atoms/textarea/textarea.html.twig" with textarea only %}
       </div>
     </div>
   </div>
 
-  <video class="video_element" poster="/assets/images/video/rodin.jpg" id="bgvid" playsinline autoplay muted {# loop #}>
-    <source src="/assets/video/rodin.webm" type="video/webm">
-      <source src="/assets/video/rodin.m4v" type="video/m4v">
+  <video class="video_element" poster="{{ poster }}" playsinline autoplay muted {# loop #}>
+    {% for type, source in sources %}
+      <source src="{{ source }}" type="video/{{ type }}">
+    {% endfor %}
   </video>
 </div>

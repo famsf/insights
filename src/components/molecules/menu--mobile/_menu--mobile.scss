@@ -1,0 +1,46 @@
+%menu--mobile {
+  color: $white;
+  padding: 2rem;
+  border-bottom: 2px solid rgba($white, .25);
+
+  h3 {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+
+  li {
+    border-bottom: 1px solid rgba($white, .25);
+
+    &:first-of-type,
+    &:last-of-type {
+      border: none;
+    }
+
+    &:last-of-type a {
+      padding-bottom: 0;
+    }
+  }
+
+  a {
+    @include remove-outline();
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 0;
+    color: $white;
+  }
+
+  .menu--mobile__numeral {
+    display: inline-block;
+    width: 2.5rem;
+    opacity: .5;
+  }
+
+  .menu--mobile__title {
+    font-style: italic;
+  }
+
+}
+
+.menu--mobile {
+  @extend %menu--mobile;
+}

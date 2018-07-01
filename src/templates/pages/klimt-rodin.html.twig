@@ -1,7 +1,7 @@
-<div class="insights-app">
+<div class="insights-app" id="insights-app">
   {% include '@molecules/TopBar/TopBar.html.twig' %}
-  {% include '@molecules/ChapterNav/ChapterNav.html.twig' %}
-  <div class="container" id="app">
+  {% include '@molecules/ChapterNav/ChapterNav.html.twig' with { chapters: chapters } only %}
+  <div class="chapters_container" id="app">
     {% include '@environments/Chapters/Chapters.html.twig' with { chapters: chapters } only %}
     {% include '@molecules/Footer/Footer.html.twig' %}
   </div>

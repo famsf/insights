@@ -1,5 +1,0 @@
----
-source: node_modules/smoothscroll-polyfill/dist/
-destination: js/smoothscroll
----
-Bring in the smoothscroll JS polyfill.
