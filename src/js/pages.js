@@ -1,176 +1,196 @@
-(function (fds, doc) {
-  var pages;
-  fds.pages = {};
-  pages = fds.pages;
-
-  pages.options = {
-    scrollThreshhold: 0.175
+(function (fds, win, $) {
+  var doc = win.document;
+  var pages = {
+    debug: false
   };
+  fds.pages = pages;
 
   pages.initialize = function (containerSelector, pageSelector, clearElementSelector) {
+    var locHash = window.location.hash.substr(1);
+    var hashes = {};
+    var params;
+    var hashKey;
+    var hashVal;
+    var hashCount = 0;
+    var param;
+    var i;
+    var startPage;
     pages.container = doc.querySelector(containerSelector);
     pages.pages = doc.querySelectorAll(pageSelector);
-    if (!pages.container || !pages.pages) {
+
+    if (!pages.container || !pages.pages.length) {
       console.log('Warning: Failed to initialize pages, check your selectors, but maybe you`re just prototyping isolated components');
       return;
     }
+
     pages.currentPage = pages.pages[0];
     pages.clearElement = doc.querySelector(clearElementSelector);
     pages.clearElementHeight = pages.clearElement.clientHeight;
+
+    if (locHash.length > 1) {
+      params = locHash.split('&');
+      if (Array.isArray(params) && locHash.indexOf('=') > -1) {
+        hashCount = params.length;
+        for (i = 0; i < hashCount; i++) {
+          param = params[i].split('=');
+          hashKey = param[0];
+          hashVal = param[1];
+          hashes[hashKey] = hashVal;
+        }
+      }
+      else {
+        hashes.currentPage = locHash;
+      }
+      if (hashes.currentPage) {
+        startPage = doc.getElementById(hashes.currentPage);
+        $('.tooltip').foundation('hide');
+        pages.snapScroll(startPage);
+      }
+    }
+    pages.calculateEdgeThreshhold(win.innerHeight);
   };
 
   pages.getCurrentPage = function () {
-    // if we have no current page, then the first page should be currentPage
-    return pages.currentPage || pages.setCurrentPage(pages.pages[0]);
+    return pages.currentPage || pages.pages[0];
   };
 
   pages.setCurrentPage = function (pageEl) {
-    pages.oldCurrentPage = pages.currentPage;
-    pages.oldCurrentPage.classList.remove('current');
+    if (pages.currentPage) {
+      pages.oldCurrentPage = pages.currentPage;
+      pages.oldCurrentPage.classList.remove('current');
+    }
     pages.currentPage = pageEl;
+    fds.chapterNav.setActiveItem(pageEl.parentElement);
     pages.currentPage.classList.add('current');
+    window.location.hash = '&chapter=' + pageEl.parentElement.id + '&page=' + pageEl.id;
     return pageEl;
+  };
+
+  pages.calculateEdgeThreshhold = function (wh) {
+    fds.snapDownThreshhold = wh * 0.25;
+    fds.topBarDownThreshhold = wh * 0.4;
+    fds.edgeDownThreshHold = -1 * wh * 0.1;
+    fds.snapUpThreshhold = wh * 0.75;
+    fds.topBarUpThreshhold = wh * 0.6;
+    fds.edgeUpThreshHold = wh * 0.1;
   };
 
   pages.onScroll = function (scrollY, scrollDir, wh, didResize) {
     var currentPage = pages.getCurrentPage();
-    var pageRect = currentPage.getBoundingClientRect();
     var shouldTriggerTopBar = false;
     var count = pages.pages.length;
-    var marginTop = currentPage.style.marginTop ? parseInt(currentPage.style.marginTop, 10) : 0;
-
-    var pageTopAboveOrAtViewportTop = pageRect.top <= 0;
-    var pageTopPastScrollThreshhold = pageRect.top < -1 * (wh * pages.options.scrollThreshhold);
-    var offset;
-    var sum;
-    var i;
-    var page;
+    var pageNearEdge;
     var pageTopAboveViewportBottom;
     var pageTopBelowViewportBottom;
     var pageBottomBelowViewportTop;
     var pageBottomAboveViewportTop;
     var pageTopAboveViewportTop;
-
-    if (currentPage && currentPage.classList.contains('in_viewport')) {
-      if (scrollDir === 'down') {
-        shouldTriggerTopBar = pageRect.top - marginTop < pages.clearElementHeight;
-      }
-      else {
-        sum = pageRect.top + marginTop;
-        offset = sum - pageRect.height;
-        shouldTriggerTopBar = offset < pages.clearElementHeight;
-      }
-
-      if (currentPage.classList.contains('pinned') && pageTopPastScrollThreshhold) {
-        pages.releasePinned(currentPage);
-      }
-
-      pages.triggerTopBarEvents(currentPage);
-    }
+    var shouldAdvance;
+    var shouldStabilize;
+    var page;
+    var pageRect;
+    var pageIterator;
+    var otherCondition;
 
     // Loop through pages, we can eventually filter out doing stuff to pages that are offscreen.
-    for (i = 0; i < count; i++) {
-      page = pages.pages[i];
-      marginTop = page.style.marginTop ? parseInt(page.style.marginTop, 10) : 0;
+    for (pageIterator = 0; pageIterator < count; pageIterator++) {
+      page = pages.pages[pageIterator];
       pageRect = page.getBoundingClientRect();
-      pageTopAboveViewportBottom = pageRect.top + marginTop < pageRect.height;
-
-      pageTopBelowViewportBottom = pageRect.top + marginTop > pageRect.height;
-      pageBottomBelowViewportTop = pageRect.top + marginTop + pageRect.height > 0;
-      pageBottomAboveViewportTop = pageRect.top + marginTop + pageRect.height < 0;
+      pageTopAboveViewportBottom = pageRect.top <= pageRect.height;
+      pageTopBelowViewportBottom = pageRect.top > pageRect.height;
+      pageBottomBelowViewportTop = pageRect.top + pageRect.height > 0;
+      pageBottomAboveViewportTop = pageRect.top + pageRect.height < 0;
       pageTopAboveViewportTop = pageRect.top < 0;
+      shouldAdvance = false;
+      shouldStabilize = false;
+
+      if (didResize) {
+        pages.calculateEdgeThreshhold(wh, scrollDir);
+      }
 
       if (scrollDir === 'down') {
-        shouldTriggerTopBar = pageRect.top - marginTop < pages.clearElementHeight;
-
-        if (pageBottomAboveViewportTop) {
-          // Page is now offscreen.
-          pages.pageLeftViewport(page);
-        }
-        else if (pageTopAboveViewportBottom) {
-          // Page is enntering viewport.
-          pages.pageEnteredViewport(page);
-        }
-
-        if (shouldTriggerTopBar) {
-          pages.triggerPage(page);
+        pageNearEdge = pageRect.top >= fds.edgeDownThreshHold;
+        otherCondition = pageRect.top <= fds.topBarDownThreshhold && pageRect.bottom > 0;
+        shouldTriggerTopBar = pageNearEdge && otherCondition;
+        shouldAdvance = pageNearEdge && pageRect.top <= fds.snapDownThreshhold;
+        if (!shouldAdvance && pageRect.top >= wh) {
+          page.classList.remove('triggered');
         }
       }
       else if (scrollDir === 'up') {
-        sum = pageRect.top + marginTop;
-        offset = sum - pageRect.height;
-        shouldTriggerTopBar = offset < pages.clearElementHeight;
-
-        // This is implied with else, but easier to read this way.
-        if (pageTopAboveViewportTop && pageBottomBelowViewportTop) {
-          pages.pageEnteredViewport(page);
+        pageNearEdge = pageRect.bottom >= wh - fds.edgeUpThreshHold;
+        otherCondition = pageRect.top <= fds.topBarUpThreshhold && pageRect.top < wh;
+        shouldTriggerTopBar = pageNearEdge && otherCondition;
+        shouldAdvance =
+          pageRect.top < 0 &&
+          pageRect.bottom >= fds.snapUpThreshhold &&
+          pageRect.bottom > 0;
+        if (!shouldAdvance && pageRect.top >= wh) {
+          page.classList.remove('triggered');
         }
-        else if (pageTopBelowViewportBottom) {
-          pages.pageLeftViewport(page);
-        }
-
-        if (shouldTriggerTopBar) {
-          pages.triggerPage(page);
-        }
+      }
+      if (shouldTriggerTopBar) {
+        pages.triggerTopBarEvents(page);
+      }
+      if (page !== currentPage && shouldAdvance && !fds.scrollLock) {
+        if (pages.debug) pages.debugLog(page, pageRect, scrollDir);
+        pages.snapScroll(page, scrollDir, wh);
       }
     }
   };
 
-  pages.triggerPage = function (page) {
-    if (page.classList.contains('in_viewport')) {
-      page.dispatchEvent(new CustomEvent('pageEvent', {
-        bubbles: true,
-        detail: { action: 'trigger' }
-      }));
+  pages.debugLog = function (page, pageRect, scrollDir) {
+    /*
+      Please leave this in here for now, very useful for debugging
+    */
+    console.log('');
+    console.log('»» Snapping to: ', page.id);
+    console.log('  top:', pageRect.top);
+    console.log('  bottom:', pageRect.bottom);
+    console.log('  scroll.y:', fds.scroll.y);
+    console.log('  fds.scrollLock:', scrollDir);
+    if (scrollDir === 'down') {
+      console.log('  thresshold', fds.snapDownThreshhold);
     }
+    else if (scrollDir === 'up') {
+      console.log('  thresshold', fds.snapUpThreshhold);
+    }
+    console.log('');
   };
 
-  pages.pageLeftViewport = function (page) {
-    if (page.classList.contains('in_viewport')) {
-      page.dispatchEvent(new CustomEvent('pageEvent', {
-        bubbles: true,
-        detail: { action: 'leave' }
-      }));
+  pages.snapScroll = function (el, scrollDir, wh) {
+    var scrollTo;
+    var isPage;
+    if (fds.scrollLock || el === pages.getCurrentPage()) return;
+    fds.scrollLock = true;
+    document.body.style.overflow = 'hidden';
+    isPage = el.classList.contains('page');
+    if (isPage) {
+      pages.setCurrentPage(el);
+      scrollTo = (scrollDir === 'down') ? el.parentElement.offsetTop + el.offsetTop : (el.parentElement.offsetTop + el.offsetTop + el.clientHeight) - wh;
     }
-  };
-
-  pages.pageReachedTop = function (page) {
-    if (!page.classList.contains('pinned') && page.classList.contains('in_viewport')) {
-      page.dispatchEvent(new CustomEvent('pageEvent', {
-        bubbles: true,
-        detail: { action: 'reachTop' }
-      }));
+    else {
+      pages.setCurrentPage(el.querySelector('.page'));
+      scrollTo = el.offsetTop;
     }
-  };
-
-  pages.releasePage = function (page) {
-    if (page.classList.contains('pinned')) {
-      page.dispatchEvent(new CustomEvent('pageEvent', {
-        bubbles: true,
-        detail: { action: 'release' }
-      }));
-    }
-  };
-
-  pages.pageHalfWayIn = function (page) {
-    if (page.classList.contains('in_viewport')) {
-      page.dispatchEvent(new CustomEvent('pageEvent', {
-        bubbles: true,
-        detail: { action: 'makeActive' }
-      }));
-    }
-  };
-
-  pages.pageEnteredViewport = function (page) {
-    if (!page.classList.contains('in_viewport')) {
-      page.dispatchEvent(new CustomEvent('pageEvent', {
-        bubbles: true,
-        detail: { action: 'enter' }
-      }));
-    }
+    fds.performantScrollTo(scrollTo, function () {
+      if (isPage) {
+        el.classList.add('triggered');
+      }
+      setTimeout(function () {
+        fds.scrollLock = false;
+        document.body.style.overflow = 'auto';
+      }, 250);
+    }, 475);
   };
 
   pages.triggerTopBarEvents = function (page) {
+    if (page.classList.contains('dark')) {
+      doc.body.classList.add('dark');
+    }
+    else {
+      doc.body.classList.remove('dark');
+    }
     if (page.classList.contains('invert-top-bar') && !fds.topBar.el.classList.contains('inverted-top-bar')) {
       page.dispatchEvent(new CustomEvent('topBarEvent', {
         bubbles: true,
@@ -184,36 +204,4 @@
       }, { passive: true }));
     }
   };
-
-  // For performance reasons we group our event handlers and create custom events.
-  doc.addEventListener('pageEvent', function (e) {
-    console.log('| pageEvent » |', e.target.id, e.detail.action);
-    switch (e.detail.action) {
-      case 'enter':
-        e.target.classList.add('in_viewport');
-        break;
-
-      case 'leave':
-        e.target.classList.remove('in_viewport');
-        break;
-
-      case 'trigger':
-        console.log('| » | trigger » |', e.target.id);
-        pages.setCurrentPage(e.target);
-        e.target.classList.add('trigger');
-        break;
-
-      case 'reachTop':
-        e.target.classList.add('pinned');
-        break;
-
-      case 'release':
-        e.target.classList.remove('pinned');
-        break;
-
-      default:
-        console.log('Unknown page event?', e.target, e.detail);
-        break;
-    }
-  }, { passive: true });
-}(window.fds = window.fds || {}, document));
+}(window.fds = window.fds || {}, window, jQuery));

@@ -113,7 +113,6 @@
 @import '../components/layouts/two_up--primary/two_up--primary';
 
 // Import Organisms.
-@import '../components/organisms/famsfall-temp';
 @import '../components/organisms/Page/Page';
 @import '../components/organisms/horizontal-image-slider/horizontal-image-slider';
 @import '../components/organisms/in-depth/in-depth';
@@ -126,3 +125,11 @@ FAMSF Insights Navigation
 
 Styleguide nav
 */
+
+
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}

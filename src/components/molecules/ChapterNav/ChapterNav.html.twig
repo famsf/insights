@@ -1,13 +1,25 @@
 <nav id="chapter_nav">
   <ul>
-    <li class="active">
-      <a href="#chapter1"><span class="show-for-sr">1</span></a>
-    </li>
-    <li><a href="#chapter2">
-      <span class="show-for-sr">2</span></a>
-    </li>
-    <li>
-      <a href="#chapter3"><span class="show-for-sr">3</span></a>
+    {% for key, chapter in chapters %}
+      <li class="{{ chapter.active }}">
+        <a href="#{{ chapter.id }}" data-template-classes="chapter_nav__tip" data-position="right" data-fade-in-duration="625" data-fade-out-duration="525" data-alignment="center" data-tooltip title="{{ chapter.numeral }}&nbsp;&nbsp;&nbsp;{{ chapter.title }}" data-chapter="{{chapter.id}}">
+          <div class="dot_wrapper">
+            <div class="dot">
+              <span class="show-for-sr">{{ chapter.title }}</span>
+            </div>
+          </div>
+        </a>
+      </li>
+    {% endfor %}
+    <li class="placeholder">
+      <a href="#endcap" aria-hidden="true" style="display:none;">
+        <div class="dot_wrapper">
+          <div class="dot">
+            <span class="show-for-sr">{{ chapter.title }}</span>
+          </div>
+        </div>
+      </a>
     </li>
   </ul>
+  <div class="scroll_percent" aria-hidden="true"></div>
 </nav>

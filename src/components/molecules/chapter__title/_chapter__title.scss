@@ -11,28 +11,46 @@ Markup: chapter__title.html.twig
   .object-fit  {
     @extend %object-fit;
     object-position: 50% 50%;
-    font-family: 'object-fit: contain;object-position: 50% 50%';
+    font-family: 'object-fit: contain; object-position: 50% 50%';
     position: absolute;
   }
 
-  .trigger & .object-fit {
-    animation-name: kenburns--sonja;
-    animation-duration: 1.25s;
-    animation-timing-function: ease-out;
-    animation-direction: normal;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-  }
-
-
   .overlay {
+    @extend %performy;
     position: absolute;
     z-index: 50;
     top: 50%;
     left: 50%;
-    transform: translate3d(-50%, -50%, 0);
+    display: none;
+    opacity: 0;
+    transform: translate3d(-50%, -40%, 0);
+    transition-property: transform, opacity;
+    transition-duration: 1.875s;
+    transition-timing-function: ease-out;
   }
+
+  .triggered & {
+    .object-fit {
+      animation-name: kenburns--sonja;
+      animation-duration: 1.325s;
+      animation-timing-function: ease-in-out;
+      animation-direction: normal;
+      animation-delay: 0s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+    .overlay {
+      display: block;
+      animation-name: fadein;
+      animation-duration: 1.325s;
+      animation-timing-function: ease-out;
+      animation-direction: normal;
+      animation-delay: 0.25s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+  }
+
 
   .chapter__headline {
 
@@ -56,8 +74,9 @@ Markup: chapter__title.html.twig
 }
 
 .chapter__title {
-  @extend %chapter__title
+  @extend %chapter__title;
 }
+
 
 @keyframes kenburns--sonja {
   0% {
@@ -65,5 +84,16 @@ Markup: chapter__title.html.twig
   }
   100% {
     transform: scale(1.2);
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translate3d(-50%, -30%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(-50%, -50%, 0);
   }
 }

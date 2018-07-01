@@ -1,17 +1,9 @@
-(function (fds, coverPage, window, $) {
-  $(window.document).ready(function () {
-    /*
-     * Call the polyfill
-     *
-     * patternID : the unique ID of the SVG pattern
-     * patternURL : the URL to the background-image
-     * class : the css-class applied to the SVG
-     */
+(function (fds, coverPage, win) {
+  win.document.addEventListener('DOMContentLoaded', function () {
     fds.coverPageElement = document.getElementById('CoverPage');
     if (fds.coverPageElement) {
       fds.coverPageElement.backgroundClipPolyfill({
         patternID: 'mypattern',
-        // @TODO: Put patternURL into a data-attribute.
         patternURL: 'https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTFqH4TR7oG4J3GzuFhr1NOAuYJw/w1200-h630-p-k-no-nu/Lady%2Bwith%2BHat%2Band%2BFeather%2BBoa%2Bby%2BGustav%2BKlimt.jpg',
         class: 'headline'
       });
@@ -41,22 +33,12 @@
   };
 
   fds.onCoverImageLoaded = function () {
-    console.log('onCoverImageLoaded');
     fds.coverPageElement.classList.add('loaded');
     setTimeout(function () {
-      console.log('| coverImage » | post_loaded |');
       fds.coverPageElement.classList.add('post_loaded');
       setTimeout(function () {
-        // fds.coverPageElement.classList.add('initialized')
-        $(fds.coverPageElement).addClass('initialized');
-        // console.log('fds»»»', fds.coverPageElement,  fds.coverPageElement.classList)
-        // console.log('| coverImage » | initialized |')
+        fds.coverPageElement.classList.add('initialized');
       }, 750);
     }, 1250);
   };
-}(
-  window.fds = window.fds || {},
-  window.fds.coverPage = window.fds.coverPage || {},
-  window,
-  jQuery
-));
+}(window.fds = window.fds || {}, window.fds.coverPage = window.fds.coverPage || {}, window));
