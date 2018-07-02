@@ -122,7 +122,6 @@
         shouldTriggerTopBar = pageNearEdge && otherCondition;
         shouldAdvance = pageNearEdge && pageRect.top <= fds.snapDownThreshhold;
         if (!shouldAdvance && (pageRect.top >= wh || pageRect.bottom <= 0)) {
-          console.log('okdeokdoekodkeokdoekodkeokdokeo', page.id)
           page.classList.remove('triggered');
           pages.untriggerVideo(page);
         }
@@ -136,7 +135,6 @@
           pageRect.bottom >= fds.snapUpThreshhold &&
           pageRect.bottom > 0;
         if (!shouldAdvance && (pageRect.top >= wh || pageRect.bottom <= 0)) {
-          console.log('okdeokdoekodkeokdoekodkeokdokeo', page.id)
           page.classList.remove('triggered');
           pages.untriggerVideo(page);
         }
@@ -210,7 +208,6 @@
         plyr.on('ready', function (e) {
           e.detail.plyr.muted = true;
           e.detail.plyr.play();
-          console.log('ambientVideo!!!!!', e.detail.plyr);
         });
         pages.ambientVideos[vidElement.id] = plyr;
       }
@@ -223,7 +220,6 @@
           controls: ['play', 'progress', 'current-time', 'mute', 'captions', 'settings', 'pip', 'fullscreen']
         });
         plyr.on('ready', function (e) {
-          console.log('embeddedVideo!!!!!', e.detail.plyr);
           pages.embeddedVideopls[embeddedVideo.id] = plyr;
         });
       }
@@ -231,10 +227,9 @@
   };
 
   pages.untriggerVideo = function (page) {
-    console.log('untriggerVideo', page.id)
+    var plyr;
     var vidElement = page.querySelector('.ambient_video .plyr_embed');
     var embeddedVideo = page.querySelector('.video--embed .plyr_target');
-    var plyr;
     if (vidElement) {
       plyr = pages.ambientVideo[vidElement.id];
       if (plyr) {
