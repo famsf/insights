@@ -1,0 +1,10 @@
+%h3 {
+  .dark & {
+    color: $white;
+  }
+}
+
+h3,
+.h3 {
+  @extend %h3;
+}
