@@ -2,6 +2,17 @@
   var owl;
   // Initialize foundation.
   $(document).foundation();
+
+  // Inform .off-canvas-wrapper that the mobile menu is open or closed.
+  $('.off-canvas').on('opened.zf.offcanvas closed.zf.offcanvas', function () {
+    $('body').toggleClass('off-canvas-opened');
+  });
+
+  // Close off canvas menu when menu link is clicked.
+  $('.menu--mobile a').click(function () {
+    $('.off-canvas').foundation('close');
+  });
+
   // Initialize Owl Carousel.
   owl = $('.owl-carousel');
   owl.owlCarousel({
