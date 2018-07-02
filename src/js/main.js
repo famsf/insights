@@ -1,5 +1,4 @@
 (function (fds, win, doc, $) {
-  var owl;
   // Variable declarations.
   var horizontalImageSlider;
   var horizontalImageSliderOptions = {
