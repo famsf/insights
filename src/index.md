@@ -49,14 +49,6 @@ chapters:
           components:
           - template: "@atoms/video--embed/video--embed.html.twig"
             data: {}
-      c1p4:
-        id: c1p4
-        img.url: ''
-        numeral: I
-        title: Introducing the Book
-        classes: ''
-        template: "@molecules/chapter__title/chapter__title.html.twig"
-        data: {}
       c1p5:
         id: c1p5
         classes: ''
