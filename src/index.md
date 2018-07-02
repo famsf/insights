@@ -184,7 +184,8 @@ chapters:
             template: "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig"
             data:
               slides:
-              - template: "@molecules/slide--in-depth__intro/slide--in-depth__intro.html.twig"
+              - caption: ''
+                template: "@molecules/slide--in-depth__intro/slide--in-depth__intro.html.twig"
                 data:
                   title: Scandals & Controversies
                   text: 'Book art has a long history. In the <em>Book of Kells</em>, the letterform is an expression of transcendance; even beyond its overt religious significance, here the book is truly, in the words of Stéphane Mallarmé, an <em>"instrument spirituel."</em>'
@@ -199,6 +200,54 @@ chapters:
                     url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
                     alt: Image of chi-rho page from book of kells
                     style: square
+              - caption:
+                  id: ch1p5-slide-2-caption
+                  brief: William Blake’s illustrations display a singular vision and deep interpenetration of text and image, a unified expression that has rarely been equaled. Many consider Blake the father of book art. William Blake, illustration for Book of Job (1823)
+                  text: 'William Blake, Plate 16: "Thou hast fulfilled the Judgment of the wicked" from the complete proof edition of Blake''s Book of Job, 1825. Engraving, 19.6 x 16.2 cm (image). FAMSF, museum purchase, William H. Noble Bequest Fund, 1979.1.11.17'
+                template: "@molecules/Picture/Picture.html.twig"
+                data:
+                  srcset:
+                  - min-width: 0px
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
+                  - min-width: 350px
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
+                  - min-width: 800px
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
+                  url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
+                  alt: untitled page from parallelement by paul verlaine and pierre bonnard
+                  style: vertical
+              - caption:
+                  id: ch1p5-slide-3-caption
+                  brief: Publication of deluxe editions illustrated by contemporary artists was taken up in earnest with livre d’artiste editions such as Parallelement, published by Ambroise Vollard (1866–1939). Vollard’s contemporary Daniel-Henry Kahnweiler (1884–1979) published adventurous works by Pablo Picasso, Georges Braque, and others, with literary texts by as-yet obscure writers such as Guillaume Apollinaire, Max Jacob, André Malraux, and Gertrude Stein. Pierre Bonnard/Paul Verlaine, Parallelement (1900)
+                  text: 'Pierre Bonnard (artist), Tony  Beltrand, Ambroise Vollard (publisher), Paul Verlaine (author), René Kieffer (binder), Imprimerie Nationale de France (printer), Auguste Clot (printer), Untitled, page 4 in the book Parallèlement by Paul Verlaine (Paris: Ambroise Vollard, 1900)., 1887–1900. Lithograph (pink sanguine) on Holland wove paper watermarked "Parallèlement", sheet: 295 x 240 mm (11 5/8 x 9 7/16 in.); image: 93 x 179 mm (3 11/16 x 7 1/16 in.). FAMSF, The Reva and David Logan Collection of Illustrated Books, 2000.200.45.6'
+                template: "@molecules/Picture/Picture.html.twig"
+                data:
+                  srcset:
+                  - min-width: 0px
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
+                  - min-width: 350px
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
+                  - min-width: 800px
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
+                  url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
+                  alt: untitled page from parallelement by paul verlaine and pierre bonnard
+                  style: vertical
+              - caption:
+                  id: ch1p5-slide-4-caption
+                  brief: 'The concept of the book as art was further developed by the Russian Futurists in non-luxurious but conceptually advanced editions. The deluxe livre d''artiste and its lower-cost counterpart, the artist-published "democratic multiple," have persisted to the present day. So has the third way taken by La prose, where self-publishing artists combine high craft values with a visionary approach to the form of the book. El Lissitsky/Vladimir Mayakovsky: Dlia Golosa (For the Voice), 1923'
+                  text: 'El Lissitzky (artist), Gosizdat (publisher), fourth chapter, page 17 in the book Dlia Golosa (For the Voice) by Vladimir Vladimirovich Mayakovsky (Berlin: Gosizdat, 1923), 1923. Lithograph (color) on cream wove paper, sheet: 187 x 124 mm (7 3/8 x 4 7/8 in.); image: 134 x 112 mm (5 1/4 x 4 7/16 in.). FAMSF, Gift of the Reva and David Logan Foundation, 1998.40.79.8'
+                template: "@molecules/Picture/Picture.html.twig"
+                data:
+                  srcset:
+                  - min-width: 0px
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
+                  - min-width: 350px
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
+                  - min-width: 800px
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
+                  url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
+                  alt: untitled page from parallelement by paul verlaine and pierre bonnard
+                  style: vertical
   chapter2:
     title: "Paris: 1913"
     numeral: II
