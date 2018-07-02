@@ -272,14 +272,140 @@ chapters:
             components:
               - template: "@atoms/textarea/textarea.html.twig"
                 data:
-                  text: "<p><em>La prose</em> was a product of its time and place, a period like no other before or since. Georges Braque and Pablo Picasso were creating the radical new artistic vision of Cubism, leading to the birth of abstraction, and Marcel Duchamp was brewing his own conceptual artistic revolution. In poetry, Guillaume Apollinaire was charging through the door that Stéphane Mallarmé (1842–1898) had opened with his sophisticated exploration of visual poetics. Russian emigrés were injecting energy and radical ideas into the mix, bringing with them the bold dynamics of Futurism. The modernist spirit that was centered in Paris extended to all of Europe and the world beyond, setting the stage for the advent of Dada and Surrealism.</p>"
-                  dropcap: false
+                  text: "<p>La prose was a product of its time and place, a period like no other before or since. Georges Braque and Pablo Picasso were creating the radical new artistic vision of Cubism, leading to the birth of abstraction, and Marcel Duchamp was brewing his own conceptual artistic revolution. In poetry, Guillaume Apollinaire was charging through the door that Stéphane Mallarmé (1842–1898) had opened with his sophisticated exploration of visual poetics. Russian emigrés were injecting energy and radical ideas into the mix, bringing with them the bold dynamics of Futurism. The modernist spirit that was centered in Paris extended to all of Europe and the world beyond, setting the stage for the advent of Dada and Surrealism.</p>"
+                  dropcap: true
               - template: "@molecules/inline-quote/inline-quote.html.twig"
                 data:
                   component_name: inline-quote
                   name: Blaise Cendrars, La lotissement du ciel (Sky)
                   date: '1949'
-                  text: It was not the art dealers, nor the critics, nor the collectors who made these painters famous, it was the modern poets, and people forget it rather too easily, and so do all these painters who, today, are millionaires and are still indebted to us, the poor poets!
+                  text: It was not the art dealers, nor the critics, nor the collectors who made these painters famous, it was the modern poets, and people forget it rather too easily, and so do all these painters who, today, are millionaires and are still indebted to us, the poor poets!     
+      c2p3:
+        classes: ''
+        template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
+        data:
+          left:
+            components:
+            - template: "@molecules/Picture/PictureWithCaption.html.twig"
+              data:
+                caption:
+                  id: c2p3-caption-1
+                  text: 'Stéphane Mallarmé, ca. 1890. Nadar studio. © The New York Public Library'
+                picture:
+                  srcset:
+                  - min-width: 0px
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/10_mallarme.jpg
+                  - min-width: 350px
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/10_mallarme.jpg
+                  - min-width: 800px
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/10_mallarme.jpg
+                  url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/10_mallarme.jpg
+                  alt: Photo of Stéphane Mallarmé
+                  style: vertical
+            - template: "@atoms/h3/h3.html.twig"
+              data:
+                text: "Stephané Mallarmé"
+            - template: "@atoms/textarea/textarea.html.twig"
+              data:
+                text: "<p>Mallarmé (1842-1898) is widely credited with opening the field of modernist visual poetics with his poem Un coup de dés jamais n’abolira le hazard (A Throw of the Dice Will Never Abolish Chance). He was a major influence on many of the poets, and even visual artists, of the generation that followed, an influence that is still felt today.</p>"
+                dropcap: true
+            - template: "@molecules/inline-quote/inline-quote.html.twig"
+              data:
+                component_name: inline-quote
+                name: R. Howard Bloch, One Toss of the Dice
+                date: 2017
+                text: One Toss of the Dice” was the birth certificate of modern poetry...
+          right:
+            components:
+            - template: "@molecules/Picture/PictureWithCaption.html.twig"
+              data:
+                caption:
+                  id: c2p3-caption-2
+                  text: Photograph of Guillaume Apollinaire with a shrapnel wound to the temple, spring 1916. Wikimedia
+                picture:
+                  srcset:
+                  - min-width: 0px
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/11_apollinaire.jpg
+                  - min-width: 350px
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/11_apollinaire.jpg
+                  - min-width: 800px
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/11_apollinaire.jpg
+                  url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/11_apollinaire.jpg
+                  alt: Photo of Guillaume Apollinaire
+                  style: vertical
+            - template: "@atoms/h3/h3.html.twig"
+              data:
+                text: "Guillaume Apollinaire"
+            - template: "@atoms/textarea/textarea.html.twig"
+              data:
+                text: '<p>Apollinaire (1880-1918) was the quintessential poet of modernism. Immensely influential among his contemporaries, poets and artists alike, he helped define the avant-garde in both art and literature, and coined the terms "cubism" and "surrealism."</p>'
+                dropcap: true
+            - template: "@molecules/inline-quote/inline-quote.html.twig"
+              data:
+                component_name: inline-quote
+                name: Jacques Vaché, letter to André Breton
+                date: 1918
+                text: "[Apollinaire] marks an epoch. The beautiful things we can do now!"  
+      c2p4:
+        template: "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig"
+        data:
+          slides:
+          - intro_slide: true
+            components:
+            - template: "@atoms/h3/h3.html.twig"
+              data:
+                text: Painter-Poet collaborations
+            - template: "@atoms/textarea/textarea.html.twig"
+              data:
+                text: The hothouse atmosphere of Paris produced what historian Roger Shattuck called “an atmosphere of perpetual collaboration,” a cross-disciplinary burgeoning of the avant-garde at a time when artists, poets, and musicians frequented the same cafes and saw one another regularly.
+          - caption:
+              id: c2p4-slide-2-caption
+              brief: The avant-garde writer Max Jacob was one of Picasso’s earliest Paris friends. Picasso spent the summer of 1910 in Cadaqués, Spain, where he made a series of etchings to illustrate Jacob’s Saint Matorel. They are among his greatest cubist prints.
+              text: "Pablo Picasso (artist), Henry Kahnweiler (publisher), Max Jacob (author), Paul Birault (printer), Les Presses Eugène Delâtre (printer), Saint Matorel by Max Jacob (Paris: Henry Kahnweiler, 1911), 1911. 4 etchings (one with drypoint) on ivory laid Holland van Gelder paper; publisher's device on title page after a woodcut by Andre Derain; quarter leather with decorated Japanese paper covers, gold lettering on spine; decorated Japanese paper endpapers; original wrappers bound in, object: 267 x 200 mm (10 1/2 x 7 7/8 in.). FAMSF, The Reva and David Logan Collection of Illustrated Books, 2000.200.59.1-4"
+            template: "@molecules/Picture/Picture.html.twig"
+            data:
+              srcset:
+              - min-width: 0px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/12_picasso-jacob.jpg
+              - min-width: 350px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/12_picasso-jacob.jpg
+              - min-width: 800px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/12_picasso-jacob.jpg
+              url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/12_picasso-jacob.jpg
+              alt: the book saint matorel by max jacob and pablo picasso
+              style: vertical
+          - caption:
+              id: c2p4-slide-3-caption
+              brief: "<em>L'Enchanteur pourrissant</em> was a book of firsts: Apollinaire's first published book, illustrated with Derain's first book illustrations – also the first book from the great publisher Daniel-Henry Kahnweiler, then age 25."
+              text: "André Derain (artist), Henry Kahnweiler (publisher), Guillaume Apollinaire (author), Paul Birault (printer), Untitled, title page, publisher’s detail, in the book L'Enchanteur pourrissant by Guillaume Apollinaire (Paris: Henry Kahnweiler, 1909)., 1909. Woodcut on Arches laid paper, sheet: 265 x 200 mm (10 7/16 x 7 7/8 in.); Image: 64 x 73 mm (2 1/2 x 2 7/8 in.). FAMSF, The Reva and David Logan Collection of Illustrated Books, 2000.200.49.1"
+            template: "@molecules/Picture/Picture.html.twig"
+            data:
+              srcset:
+              - min-width: 0px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/13_lenchanteur-pourrissant.jpg
+              - min-width: 350px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/13_lenchanteur-pourrissant.jpg
+              - min-width: 800px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/13_lenchanteur-pourrissant.jpg
+              url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/13_lenchanteur-pourrissant.jpg
+              alt:  title page from the book L'Enchanteur pourrissant by Guillaume Apollinaire
+              style: vertical
+          - caption:
+              id: c2p4-slide-4-caption
+              brief: "<em>La fin du monde</em> was conceived as a screenplay, begun in collaboration with Guillaume Apollinaire and Jean Cocteau, both of whom soon dropped out. Léger and Cendrars had both suffered serious injuries in the trenches of First World War, and each felt a strong affinity with the other’s work."
+              text: "Fernand Léger (artist), Editions de la Sirène (publisher), Blaise Cendrars (author), Richard Marcelle (printer), Frazier-Soye (printer), 12th illustration in the book La Fin du monde, filmée par l'ange N.D. by Blaise Cendrars (Paris: Editions de la Sirène, 1919), 1919. Color pochoir on ivory wove, lafuma paper, sheet: 320 x 250 mm (12 5/8 x 9 13/16 in.); image: 320 x 79 mm (12 5/8 x 3 1/8 in.), FAMSF, Gift of the Reva and David Logan Foundation, 1998.40.77.12"
+            template: "@molecules/Picture/Picture.html.twig"
+            data:
+              srcset:
+              - min-width: 0px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/14_la-fin-du-monde.jpg
+              - min-width: 350px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/14_la-fin-du-monde.jpg
+              - min-width: 800px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/14_la-fin-du-monde.jpg
+              url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/14_la-fin-du-monde.jpg
+              alt: illustration in the book La Fin du monde by Blaise Cendrars and Fernand Léger
+              style: vertical
   chapter3:
     title: The Book
     numeral: III
