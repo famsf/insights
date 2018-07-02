@@ -1,0 +1,145 @@
+%slide--in-depth__intro {
+  @include breakpoint(medium) {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .slide--in-depth__intro__image {
+    margin: -2rem -2rem -5rem -2rem;
+    position: relative;
+    z-index: -1;
+
+    &:before {
+      background: linear-gradient(0.5turn, transparent, $black);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 15rem;
+      content: "";
+    }
+
+    @include breakpoint(medium) {
+      margin: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:before {
+        position: absolute;
+        top: calc(50% + 5px);
+        right: calc(6rem + 3px);
+        left: auto;
+        height: 1px;
+        width: 100%;
+        background: $white;
+        content: "";
+        opacity: .5;
+      }
+    }
+
+    picture {
+      @include breakpoint(medium) {
+        max-height: inherit;
+        height: 75vh;
+        width: 75vh;
+      }
+    }
+
+    img {
+      @include breakpoint(medium) {
+        border-radius: 1000rem;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .slide--in-depth__intro__title {
+    @extend h1;
+    font-family: $header-font-family !important;
+    font-size: 2rem;
+    font-weight: bold;
+
+    @include breakpoint(medium) {
+      margin: 0;
+      font-size: 3rem;
+    }
+
+    @include breakpoint(large) {
+      font-size: 4rem;
+    }
+  }
+
+  .slide--in-depth__intro__content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    > .cell {
+      @include breakpoint(medium) {
+        position: relative;
+      }
+    }
+  }
+
+  .slide--in-depth__intro__content--top {
+    @include breakpoint(medium) {
+      position: absolute;
+      bottom: calc(50% - 5px);
+      margin-bottom: 3rem;
+      width: 60%;
+    }
+  }
+
+  .slide--in-depth__intro__content--bottom {
+    @include breakpoint(medium) {
+      position: absolute;
+      top: calc(50% + 5px);
+      right: 0;
+      margin-top: 3rem;
+      width: 40%;
+    }
+  }
+  
+  .sharing-icons {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    margin-top: 0;
+
+    @include breakpoint(medium) {
+      position: initial;
+      margin-top: 2rem;
+    }
+  }
+
+  .slide__icon--next {
+    margin-top: 2rem;
+    text-align: center;
+
+    @include breakpoint(medium) {
+      display: none;
+    }
+
+    &:before {
+      display: none;
+    }
+
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.owl-carousel .slide--in-depth__intro {
+  @extend %slide--in-depth__intro;
+}
