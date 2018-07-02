@@ -329,5 +329,81 @@ chapters:
                   url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/31_logan-gallery.jpg
                   alt: Photo of David and Reva Logan
                   style: horizontal
+  chapter6:
+    title: About the Collectors
+    numeral: VI
+    pages:
+      c2p1:
+        template: "@molecules/chapter__title/chapter__title.html.twig"
+        data:
+          numeral: VI
+          title: About the Collectors
+          img:
+            url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/29_la-prose-collectors.jpg"
+            alt: 'Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars'
+      c2p2:
+        template: "@layouts/two_up--primary/two_up--primary.html.twig"
+        data:
+          classes: dark
+          right:
+            components:
+              - template: "@atoms/h3/h3.html.twig"
+                data:
+                  text: The Reva and David Logan Collection of Illustrated Books
+              - template: "@atoms/textarea/textarea.html.twig"
+                data:
+                  text: "<p>Over a period of 20 years the Chicago collectors Reva and David Logan built one of the great private collections of artists’ books, and in 1998 donated that collection to the Achenbach Foundation, home of works on paper at the Fine Arts Museums of San Francisco.</p>
+                         <p>With more than more than 400 carefully assembled titles, the Logan Collection contains many of the most important works in the genre, with significant artists’ books representing virtually every major art movement dating from the beginnings of the genre of the livre d’artiste in the late 19th century. Augmented by important works already held by the Achenbach, the Logan gift established the Fine Arts Museums of San Francisco as stewards of one of the most historically-significant collections of artists’ books in the United States.</p>"
+                  dropcap: false
+          left:
+            components:
+            - template: "@molecules/Picture/PictureWithCaption.html.twig"
+              data:
+                caption:
+                  id: c2p2-caption-1
+                  brief: David and Reva Logan
+                  text: Courtesy of the Logan Foundation
+                picture:
+                  srcset:
+                    - min-width: 0px
+                      src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/30_the-logans.jpg
+                    - min-width: 350px
+                      src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/30_the-logans.jpg
+                    - min-width: 800px
+                      src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/30_the-logans.jpg
+                  url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/30_the-logans.jpg
+                  alt: Photo of David and Reva Logan
+                  style: vertical
+      c2p3:
+        template: "@layouts/two_up--primary/two_up--primary.html.twig"
+        data:
+          right:
+            components:
+              - template: "@atoms/h3/h3.html.twig"
+                data:
+                  text: This Project
+              - template: "@atoms/textarea/textarea.html.twig"
+                data:
+                  text: "<p>As the only works of art that must be handled to be fully experienced, artists’ books present a challenge for an institution charged with their conservation and display. The current project, funded by a generous grant from the Reva and David Logan Foundation, addresses this challenge by making contents of, and related information about, selected books from the collection available online utilizing the affordances of digital media. The project aims in this way to raise the profile of the collection and to create greater public understanding and awareness of what critic and historian Johanna Drucker has called arguably “the quintessential 20th century artform.” This project intends to make significant work by many of the most important artists of the twentieth century available in its entirety to public access for the first time.</p>
+                         <p>With more than more than 400 carefully assembled titles, the Logan Collection contains many of the most important works in the genre, with significant artists’ books representing virtually every major art movement dating from the beginnings of the genre of the livre d’artiste in the late 19th century. Augmented by important works already held by the Achenbach, the Logan gift established the Fine Arts Museums of San Francisco as stewards of one of the most historically-significant collections of artists’ books in the United States.</p>"
+                  dropcap: false
+          left:
+            components:
+            - template: "@molecules/Picture/PictureWithCaption.html.twig"
+              data:
+                caption:
+                  brief: The Reva and David Logan Gallery of Illustrated Books at the Legion of Honor
+                  text: ''
+                picture:
+                  srcset:
+                    - min-width: 0px
+                      src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/31_logan-gallery.jpg
+                    - min-width: 350px
+                      src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/31_logan-gallery.jpg
+                    - min-width: 800px
+                      src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/31_logan-gallery.jpg
+                  url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/31_logan-gallery.jpg
+                  alt: Photo of David and Reva Logan
+                  style: horizontal
 ---
 La Prose story to go here. In the meantime, would you care to visit the [Klimt-Rodin story](/klimt-rodin)?

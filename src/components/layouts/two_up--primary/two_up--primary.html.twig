@@ -1,5 +1,5 @@
 {% import "@macros/inklude.html.twig" as inklude %}
-<div class="two_up--primary fluid">
+<div class="two_up--primary fluid {{ classes }}">
   <div class="wrapper grid-x grid-margin-x" id="{{ id }}">
     <div id="{{ left.id }}" class="cell {{ left.cols|default('medium-4') }} {{ left.offset|default('medium-offset-1') }}" {{ left.attributes }}>
       {{ inklude.components(left.components) }}
