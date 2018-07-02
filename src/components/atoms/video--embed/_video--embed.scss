@@ -8,13 +8,33 @@ Markup: video--embed.html.twig
 
 */
 
-.video--embed  {
+.plyr__control {
+  path {
+    fill: $white;
+  }
+}
 
+.plyr__control:hover {
+  background-color: #fff !important;
+  path {
+    fill: $black !important;
+  }
+}
+
+.video--embed  {
+  @include object-fit;
   background-color: #000;
   position: relative;
-
   video {
     width: 100%;
+  }
+
+  .plyr--full-ui input[type=range] {
+    height: 0.25rem;
+    color: #fff !important;
+    .plyr__progress__buffer {
+      box-shadow: none;
+    }
   }
 
   .video--embed__controls {

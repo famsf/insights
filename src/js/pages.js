@@ -4,7 +4,8 @@
     debug: false
   };
   fds.pages = pages;
-  fds.pages.ambientVideo = {};
+  fds.pages.ambientVideos = {};
+  fds.pages.embeddedVideos = {};
   fds.pages.hashes = {};
 
   pages.initialize = function (containerSelector, pageSelector, clearElementSelector) {
@@ -120,7 +121,8 @@
         otherCondition = pageRect.top <= fds.topBarDownThreshhold && pageRect.bottom > 0;
         shouldTriggerTopBar = pageNearEdge && otherCondition;
         shouldAdvance = pageNearEdge && pageRect.top <= fds.snapDownThreshhold;
-        if (!shouldAdvance && pageRect.top >= wh) {
+        if (!shouldAdvance && (pageRect.top >= wh || pageRect.bottom <= 0)) {
+          console.log('okdeokdoekodkeokdoekodkeokdokeo', page.id)
           page.classList.remove('triggered');
           pages.untriggerVideo(page);
         }
@@ -133,7 +135,8 @@
           pageRect.top < 0 &&
           pageRect.bottom >= fds.snapUpThreshhold &&
           pageRect.bottom > 0;
-        if (!shouldAdvance && pageRect.top >= wh) {
+        if (!shouldAdvance && (pageRect.top >= wh || pageRect.bottom <= 0)) {
+          console.log('okdeokdoekodkeokdoekodkeokdokeo', page.id)
           page.classList.remove('triggered');
           pages.untriggerVideo(page);
         }
@@ -195,31 +198,54 @@
   };
 
   pages.triggerVideo = function (page) {
-    var vidElement = page.querySelector('.ambient_video .plyr_embed');
+    var vidElement = page.querySelector('.ambient_video .plyr_target');
+    var embeddedVideo = page.querySelector('.video--embed .plyr_target');
     var plyr;
+
     if (vidElement) {
-      console.log('a »»');
-      if (!pages.ambientVideo[vidElement.id]) {
+      if (!pages.ambientVideos[vidElement.id]) {
         plyr = new Plyr(vidElement, {
           hideControls: 'true'
         });
         plyr.on('ready', function (e) {
-          console.log('»|»»»»', e.detail.plyr.npmedia);
           e.detail.plyr.muted = true;
           e.detail.plyr.play();
+          console.log('ambientVideo!!!!!', e.detail.plyr);
         });
-        pages.ambientVideo[vidElement.id] = plyr;
+        pages.ambientVideos[vidElement.id] = plyr;
+      }
+    }
+
+    if (embeddedVideo) {
+      if (!pages.embeddedVideos[embeddedVideo.id]) {
+        plyr = new Plyr(embeddedVideo, {
+          hideControls: 'false',
+          controls: ['play', 'progress', 'current-time', 'mute', 'captions', 'settings', 'pip', 'fullscreen']
+        });
+        plyr.on('ready', function (e) {
+          console.log('embeddedVideo!!!!!', e.detail.plyr);
+          pages.embeddedVideopls[embeddedVideo.id] = plyr;
+        });
       }
     }
   };
 
   pages.untriggerVideo = function (page) {
+    console.log('untriggerVideo', page.id)
     var vidElement = page.querySelector('.ambient_video .plyr_embed');
+    var embeddedVideo = page.querySelector('.video--embed .plyr_target');
     var plyr;
-    if (!vidElement) return;
-    plyr = pages.ambientVideo[vidElement.id];
-    if (plyr) {
-      plyr.stop();
+    if (vidElement) {
+      plyr = pages.ambientVideo[vidElement.id];
+      if (plyr) {
+        plyr.stop();
+      }
+    }
+    if (embeddedVideo) {
+      plyr = pages.embeddedVideos[embeddedVideo.id];
+      if (plyr) {
+        plyr.stop();
+      }
     }
   };
 

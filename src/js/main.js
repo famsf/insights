@@ -80,7 +80,7 @@
   });
 
   fds.frameCount = 0;
-  
+
   fds.setStyle = function (el, obj) {
     el.style = Object.assign(el.style, obj);
   };

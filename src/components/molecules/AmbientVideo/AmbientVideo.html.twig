@@ -11,7 +11,7 @@
    Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button
   #}
   {% if youtube %}
-    <div class="plyr_embed video_player" data-plyr-provider="youtube" id="{{ id }}_vid" data-plyr-embed-id="{{ youtube.embed }}" ></div>
+    <div class="plyr_target video_player" data-plyr-provider="youtube" id="{{ id }}_vid" data-plyr-embed-id="{{ youtube.embed }}" ></div>
   {% else %}
     <video class="video_element video_player" id="{{ id }}_vid" poster="{{ poster }}" playsinline autoplay muted loop>
       {% for type, source in sources %}
