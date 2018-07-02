@@ -38,10 +38,9 @@
     var secondsSinceStart;
 
     requestAnimationFrame(fds.renderLoop);
-
+    didResize = false;
     if (fds.calcFps) {
       elapsed = newtime - fds.then;
-      didResize = false;
     }
     oldWindowDim = Object.assign({}, { w: win.innerWidth, h: win.innerHeight });
     if (win.innerWidth !== oldWindowDim.w || win.innerHeight !== oldWindowDim.h) {
@@ -80,9 +79,7 @@
       console.log('Bypassing main js loop in current context to allow for easier single component prototyping');
       return;
     }
-    console.log(win.poly);
     sy = window.pageYOffset;
-    console.log(sy);
     fds.scroll = {
       last: {
         y: sy
@@ -106,7 +103,7 @@
   };
 
   doc.addEventListener('DOMContentLoaded', function () {
-    fds.calcFps = true;
+    fds.calcFps = false;
     fds.targetFps = 60;
     fds.FpsInterval = 1000 / fds.targetFps;
     fds.initialize();

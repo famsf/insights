@@ -5,6 +5,7 @@ description: "Insights are a series of free, in-depth looks into our exhibitions
 stylesheets:
   - https://use.typekit.net/bmv1rht.css
   - /styles/main.css
+  - /js/plyr/plyr.css
   - https://use.fontawesome.com/releases/v5.0.13/css/all.css
 
 scripts:
@@ -15,8 +16,8 @@ scripts:
       - /js/owl/owl.carousel.js
       - /js/object-fit-images/ofi.min.js
       - /js/clippath/background-clip-text-polyfill.js
+      - /js/plyr/plyr.js
       - /js/scripts.js
-      # - /js/smoothscroll/smoothscroll.min.js
       - https://use.fontawesome.com/releases/v5.0.13/js/all.js
 ---
 Include the smoothscroll lib after our custom scripts so that we can set the global variable that forces use of the smoothscroll polyfill even in browsers that support it natively.

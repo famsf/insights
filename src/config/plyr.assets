@@ -1,0 +1,5 @@
+---
+source: node_modules/plyr/dist/
+destination: js/plyr/
+---
+Bring in a JS polyfill for "-webkit-background-clip: text".
