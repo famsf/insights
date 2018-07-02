@@ -104,26 +104,26 @@ Styleguide COMPONENTS.in-depth
           flex-grow: 1;
         }
       }
-    }
 
-    picture {
-      @include breakpoint(medium) {
-        flex-basis: 75%;
-        height: 100vh;
-        min-height: 100vh;
-        width: auto;
-        position: relative;
-      }
-
-      img {
-        @extend %object-fit;
-
-        @include breakpoint(small down) {
+      > picture {
+        @include breakpoint(medium) {
+          flex-basis: 75%;
+          height: 100vh;
+          min-height: 100vh;
+          width: auto;
           position: relative;
-          height: auto;
-          width: 100%;
-          object-fit: initial !important;
-          background-size: initial !important;
+        }
+
+        img {
+          @extend %object-fit;
+
+          @include breakpoint(small down) {
+            position: relative;
+            height: auto;
+            width: 100%;
+            object-fit: initial !important;
+            background-size: initial !important;
+          }
         }
       }
     }
@@ -154,6 +154,7 @@ Styleguide COMPONENTS.in-depth
     }
 
     .owl-dot {
+      @include remove-outline();
       margin: 0 .5rem;
       color: rgba($white, .5);
 
@@ -175,6 +176,7 @@ Styleguide COMPONENTS.in-depth
 
     .owl-nav {
       button {
+        @include remove-outline();
         transition: all .25s ease-in-out;
         position: absolute;
         top: calc(50% - 1.25rem);
@@ -195,7 +197,7 @@ Styleguide COMPONENTS.in-depth
         }
 
         &.disabled {
-          opacity: .25;
+          opacity: 0;
         }
 
         &.owl-prev {

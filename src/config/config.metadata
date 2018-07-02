@@ -20,4 +20,3 @@ scripts:
       - /js/scripts.js
       - https://use.fontawesome.com/releases/v5.0.13/js/all.js
 ---
-Include the smoothscroll lib after our custom scripts so that we can set the global variable that forces use of the smoothscroll polyfill even in browsers that support it natively.

@@ -1,36 +1,33 @@
-<div class="cover_page" id="CoverPage" data-bg-image="/assets/images/lady-with-hat.jpg"
-      data-bg-image-alt="An Image of Lady with Hat and Feather Boa, 1909 by Gustav Klimt, a red headed lady with a blue hat.">
-
+<div class="cover_page" id="CoverPage" data-bg-image="{{ image.url }}" data-bg-image-alt="{{ image.alt }}">
   <div class="underlay">
     <div class="underlay_contents">
-
       <h1 class="headline exhibit_logo">
-        <span class="solid">Klimt &</span><br><span class="outline">Rodin</span>
+        <span class="solid">{{ title is iterable ? title.firstLine : title }}</span>
+        {% if title.secondLine is not empty %}
+          <br/><span class="outline">{{ title.secondLine }}</span>
+        {% endif %}
       </h1>
-      <h2 class="subtitle">An Artistic Encounter</h2>
+      <h2 class="subtitle">{{ subtitle }}</h2>
       <div class="content">
         <div class="info">
-          <div class="loc">Legion of Honor Museum</div>
-          <div class="date">October 14, 2017 – January 28, 2018</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="cover_loader_container">
-
-    <div class="top loaderpane">
-      <div class="headline mask">
-        <div>
-          <span class="text">Klimt &<br>Rodin</span>
+          <div class="loc">{{ info.location }}</div>
+          <div class="date">{{ info.date }}</div>
         </div>
       </div>
     </div>
-
+  </div>
+  <div class="cover_loader_container">
+    <div class="top loaderpane">
+      <div class="headline mask">
+        <div>
+          <span class="text">{{ title is iterable ? title|join('<br/>') : title }}</span>
+        </div>
+      </div>
+    </div>
     <div id="mask_loader" class="mask_loader loader loaderpane">
       <div class="headline">
-        <span class="text">Klimt &<br>Rodin</span>
+        <span class="text">{{ title is iterable ? title|join('<br/>') : title }}</span>
       </div>
     </div>
   </div>
-
 </div>
