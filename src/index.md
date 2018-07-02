@@ -1,10 +1,13 @@
 ---
 layout: "templates/pages/digital-story.html.twig"
 chapters:
-  chapter1:
-    title: Chapter One
+  intro:
+    title: Introduction
+    numeral: A
+    active: active
+    id: intro
     pages:
-      c1p1:
+      intro1:
         classes: invert-top-bar
         template: "@molecules/CoverPage/CoverPage.html.twig"
         data:
@@ -14,26 +17,32 @@ chapters:
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/0_la-prose-title-card.jpg
             alt: "Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars"
           info: "Reva and David Logan Collection of Illustrated Books Legion of Honor Museum"
-      c1p2:
+      intro2:
         template: "@layouts/one_up--primary/one_up--primary.html.twig"
         data:
-          classes: revealit big_type light
           cols: medium-8
           offset: medium-offset-2
           dropcap: false
+          classes: big_type
           components:
           - template: "@atoms/h2/h2.html.twig"
             data:
               text: Introduction
           - template: "@atoms/textarea/textarea.html.twig"
             data:
-              text: "<p>By 1913, Paris had been for more than a decade the epicenter
-                of artistic revolution in Europe. That year, artist Sonia Delaunay
-                and poet Blaise Cendrars collaborated on La prose du Transsibérien
-                et de la petite Jehanne de France (Prose of the Trans-Siberian and
-                of Little Jehanne of France). Hailed as the first “simultaneous book,”
-                the artwork was conceived as a unified experience of text and image,
-                indivisible and apprehended concurrently.<p>"
+              text: "<p>By 1913, Paris had been for more than a decade the epicenter of artistic revolution in Europe. That year, artist Sonia Delaunay and poet Blaise Cendrars collaborated on <em>La prose du Transsibérien et de la petite Jehanne de France (Prose of the Trans-Siberian and of Little Jehanne of France)</em>. Hailed as the first “simultaneous book,” the artwork was conceived as a unified experience of text and image, indivisible and apprehended concurrently.<p>"
+  chapter1:
+    title: "Introducing the Book"
+    numeral: I
+    pages:
+      c1p1:
+        template: "@molecules/chapter__title/chapter__title.html.twig"
+        data:
+          numeral: I
+          title: "Introducing the Book"
+          img:
+            url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
+            alt: 'Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars'
       c1p3:
         template: "@layouts/one_up--primary/one_up--primary.html.twig"
         data:
@@ -255,11 +264,67 @@ chapters:
                   alt: page from the book dlia golosa by vladimir vladimirovich and
                     el lissitsky
                   style: vertical
+  chapter2:
+    title: "Paris: 1913"
+    numeral: II
+    pages:
+      c2p1:
+        template: "@molecules/chapter__title/chapter__title.html.twig"
+        data:
+          numeral: II
+          title: "Paris: 1913"
+          img:
+            url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/9_paris-aerial-view.jpg"
+            alt: 'Aerial view of Paris, France, from a balloon, showing the River Seine, the Eiffel Tower and buildings of the Exposition Universelle of 1889'
+      c2p2:
+        template: "@layouts/two_up--primary/two_up--primary.html.twig"
+        data:
+          left:
+            components:
+              - template: "@atoms/cliff-note/cliff-note.html.twig"
+                data:
+                  text: The year 1913, on the cusp of the Great War, was a kind of fulcrum in time, and Paris was the balance point.
+          right:
+            components:
+              - template: "@atoms/textarea/textarea.html.twig"
+                data:
+                  text: "<p><em>La prose</em> was a product of its time and place, a period like no other before or since. Georges Braque and Pablo Picasso were creating the radical new artistic vision of Cubism, leading to the birth of abstraction, and Marcel Duchamp was brewing his own conceptual artistic revolution. In poetry, Guillaume Apollinaire was charging through the door that Stéphane Mallarmé (1842–1898) had opened with his sophisticated exploration of visual poetics. Russian emigrés were injecting energy and radical ideas into the mix, bringing with them the bold dynamics of Futurism. The modernist spirit that was centered in Paris extended to all of Europe and the world beyond, setting the stage for the advent of Dada and Surrealism.</p>"
+                  dropcap: false
+              - template: "@molecules/inline-quote/inline-quote.html.twig"
+                data:
+                  component_name: inline-quote
+                  name: Blaise Cendrars, La lotissement du ciel (Sky)
+                  date: '1949'
+                  text: It was not the art dealers, nor the critics, nor the collectors who made these painters famous, it was the modern poets, and people forget it rather too easily, and so do all these painters who, today, are millionaires and are still indebted to us, the poor poets!
+  chapter3:
+    title: The Book
+    numeral: III
+    pages:
+      c3p1:
+        template: "@molecules/chapter__title/chapter__title.html.twig"
+        data:
+          numeral: III
+          title: The Book
+          img:
+            url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/21_la-prose-the-book.jpg"
+            alt: 'Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars'
+  chapter4:
+    title: The Making of <em>La prose</em>
+    numeral: IV
+    pages:
+      c4p1:
+        template: "@molecules/chapter__title/chapter__title.html.twig"
+        data:
+          numeral: IV
+          title: The Making of <em>La prose</em>
+          img:
+            url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/25_la-prose-making-of.jpg"
+            alt: 'Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars'
   chapter5:
     title: Contemporary Relevance
     numeral: V
     pages:
-      c2p1:
+      c5p1:
         template: "@molecules/chapter__title/chapter__title.html.twig"
         data:
           numeral: V
@@ -267,7 +332,7 @@ chapters:
           img:
             url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/28-bill-ham-light-show.jpg"
             alt: 'Still from Kinetic Light Painting by Bill Ham'
-      c2p2:
+      c5p2:
         template: "@layouts/two_up--primary/two_up--primary.html.twig"
         data:
           left:
@@ -298,7 +363,7 @@ chapters:
                 data:
                   text: "<p>The steady growth of the field of book art in recent decades finds an iconic predecessor in La prose. Its unique appropriation of structure, and its hybrid nature, have made it an influence on succeeding generations of artists and writers who take the book beyond the limits of conventional form. For his spectacular book Nature Abhors, Philip Zimmermann used a structure devised by influential book artist Hedi Kyle.</p>"
                   dropcap: false
-      c2p3:
+      c5p3:
         template: "@layouts/two_up--primary/two_up--primary.html.twig"
         data:
           right:
