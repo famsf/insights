@@ -38,13 +38,9 @@ chapters:
         classes: dark
         template: "@atoms/video--embed/video--embed.html.twig"
         data:
-          id: c2p2vidembed
-          poster: https://files.slack.com/files-pri/T024Y2MQC-FB9BE7CCC/alee.jpg?pub_secret=c6f841d9eb
+          id: WmrP8JhWb2U
           youtube:
             embed: WmrP8JhWb2U
-          sources:
-            webm: "/assets/video/rodin.webm"
-            m4v: "/assets/video/rodin.m4v"
   chapter1:
     title: "Introducing the Book"
     numeral: I
@@ -697,6 +693,96 @@ chapters:
           img:
             url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/25_la-prose-making-of.jpg"
             alt: 'Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars'
+      c4p2:
+        template: "@layouts/two_up--primary/two_up--primary.html.twig"
+        data:
+          left:
+            components:
+              - template: "@atoms/cliff-note/cliff-note.html.twig"
+                data:
+                  text: In creating an authentic facsimile edition, artist and educator Kitty Maryatt has conducted exhaustive research into the production processes used for La prose in 1913.
+              - template: "@molecules/Picture/PictureWithCaption.html.twig"
+                data:
+                  caption:
+                    id: c4p2-caption-1
+                    brief: "Paper conservator Victoria Binder used a microscope to analyze the fiber composition of the copy of <em>La prose</em> in the Logan Collection at the Legion of Honor"
+                    text: 'Sonia Delaunay-Terk (artist), Blaise Cendrars (author), <em>La Prose du Transsibérien et de la petite Jehanne de France</em> (detail), 1913. Illustrated book with pochoir, case: 80 x 17 in. (203.2 x 43.2 cm). FAMSF, Gift of the Reva and David Logan Foundation, 2016.15.4.1'
+                  picture:
+                    srcset:
+                      - min-width: 0px
+                        src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/27_microscopic-view-la-prose.jpg
+                      - min-width: 350px
+                        src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/27_microscopic-view-la-prose.jpg
+                      - min-width: 800px
+                        src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/27_microscopic-view-la-prose.jpg
+                    url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/27_microscopic-view-la-prose.jpg
+                    alt: Microscopic view of La prose du Transsiberien used to analyze fiber composition
+                    style: horizontal
+          right:
+            components:
+              - template: "@atoms/h3/h3.html.twig"
+                data:
+                  text: "Typography"
+              - template: "@atoms/textarea/textarea.html.twig"
+                data:
+                  text: "<p>Maryatt has identified 30 separate typefaces used in the typographic composition for the poem. The book was printed at Imprimérie Crété, the largest printing facility in France. Cendrars provided detailed instructions for the compositors, most likely by consulting Crété’s type specimen catalogue. </p>"
+                  dropcap: false
+              - template: "@molecules/Picture/PictureWithCaption.html.twig"
+                data:
+                  caption:
+                    id: c4p2-caption-2
+                    brief: "Type compositors at Crété"
+                    text: '<em>Imprimerie Crété</em> by Société Anonyme (Paris: Corbeil, 1925). Courtesy of Kitty Maryatt'
+                  picture:
+                    srcset:
+                      - min-width: 0px
+                        src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/26_type-compositors.jpg
+                      - min-width: 350px
+                        src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/26_type-compositors.jpg
+                      - min-width: 800px
+                        src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/26_type-compositors.jpg
+                    url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/26_type-compositors.jpg
+                    alt: Photo of type compositors at Crété
+                    style: horizontal
+              - template: "@atoms/h3/h3.html.twig"
+                data:
+                  text: "Art"
+              - template: "@atoms/textarea/textarea.html.twig"
+                data:
+                  text: "<p>Sonia Delaunay painted the image for La prose on mattress ticking first. The image was reproduced for the edition by pochoir, a stencil process, with color applied by hand using prescribed brush strokes, exacting manipulation of stencils, precise registration, and consistent color matching. It is likely that the pochoir was performed at Crété.</p>"
+                  dropcap: false
+      c4p3:
+        classes: dark
+        template: "@atoms/video--embed/video--embed.html.twig"
+        data:
+          id: 6vGKaYv7Iho
+          youtube:
+            embed: 6vGKaYv7Iho
+      c4p4:
+        template: "@layouts/two_up--primary/two_up--primary.html.twig"
+        data:
+          left:
+            components:
+              - template: "@atoms/textarea/textarea.html.twig"
+                data:
+                  text: ""
+                  dropcap: false
+          right:
+            components:
+              - template: "@atoms/h3/h3.html.twig"
+                data:
+                  text: "Structure"
+              - template: "@atoms/textarea/textarea.html.twig"
+                data:
+                  text: "<p>The book appropriated the form of a folded map, and a map of the route of the Trans-Siberian Railroad was included at the top corner of the layout, with the poem unfolding to more than six feet vertically. It was designed to first unfold with only the blank back side showing so that it could then be dramatically opened to expose the contents all at once, in keeping with the precepts of simultaneité. It was enclosed in a hand-painted vellum cover, which is said to have been made for only 30 copies.</p>"
+                  dropcap: false
+              - template: "@atoms/h3/h3.html.twig"
+                data:
+                  text: "Edition"
+              - template: "@atoms/textarea/textarea.html.twig"
+                data:
+                  text: "<p>There were to be 150 copies in total, but it is likely that only about half that many were produced. A prospectus announced eight deluxe copies printed on vellum, 28 on japon (imported Japanese) paper, and for the standard trade copies simulated japon (similé japon). Maryatt has identified the Logan copy at the Legion of Honor, with its crisp letterpress printing, as one of the rare copies on japon.</p>"
+                  dropcap: false
   chapter5:
     title: Contemporary Relevance
     numeral: V
