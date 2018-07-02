@@ -1,5 +1,8 @@
 ---
 layout: "templates/pages/digital-story.html.twig"
+title:
+  firstLine: La
+  secondLine: Prose
 chapters:
   intro:
     title: Introduction
@@ -31,6 +34,17 @@ chapters:
           - template: "@atoms/textarea/textarea.html.twig"
             data:
               text: "<p>By 1913, Paris had been for more than a decade the epicenter of artistic revolution in Europe. That year, artist Sonia Delaunay and poet Blaise Cendrars collaborated on <em>La prose du Transsibérien et de la petite Jehanne de France (Prose of the Trans-Siberian and of Little Jehanne of France)</em>. Hailed as the first “simultaneous book,” the artwork was conceived as a unified experience of text and image, indivisible and apprehended concurrently.<p>"
+      intro3:
+        classes: dark
+        template: "@atoms/video--embed/video--embed.html.twig"
+        data:
+          id: c2p2vidembed
+          poster: https://files.slack.com/files-pri/T024Y2MQC-FB9BE7CCC/alee.jpg?pub_secret=c6f841d9eb
+          youtube:
+            embed: WmrP8JhWb2U
+          sources:
+            webm: "/assets/video/rodin.webm"
+            m4v: "/assets/video/rodin.m4v"
   chapter1:
     title: "Introducing the Book"
     numeral: I
@@ -43,26 +57,17 @@ chapters:
           img:
             url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
             alt: 'Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars'
-      c1p3:
-        template: "@layouts/one_up--primary/one_up--primary.html.twig"
-        data:
-          components:
-          - template: "@atoms/video--embed/video--embed.html.twig"
-            data: {}
-      c1p5:
-        id: c1p5
-        classes: ''
+      c1p2:
         template: "@layouts/one_up--primary/one_up--primary.html.twig"
         data:
           components:
           - template: "@molecules/standalone-quote/standalone-quote.html.twig"
             data:
-              text: Mme. Delaunay has made such a beautiful book of colors that my
-                poem is more  saturated with light than is my life. . . .  Besides,
-                think that this book should be two meters high! Moreover, that the
-                edition should reach the height of the Eiffel Tower!
-              name: "-Blaise Cendrars in <em>Der Sturm</em> (Berlin), September, 1913"
-      c1p6:
+              component_name: standalone-quote
+              name: Blaise Cendrars in Der Sturm (Berlin), September, 1913
+              text: Mme. Delaunay has made such a beautiful book of colors that my poem is more saturated with light than is my life. . . .  Besides, think that this book should be two meters high! Moreover, that the edition should reach the height of the Eiffel Tower!.
+              large_text: false
+      c1p3:
         classes: ''
         template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
         data:
@@ -71,7 +76,7 @@ chapters:
             - template: "@molecules/Picture/PictureWithCaption.html.twig"
               data:
                 caption:
-                  id: caption2
+                  id: c1p3-caption-1
                   text: 'Sonia Delaunay-Terk (artist), Blaise Cendrars (author), <em>La
                     Prose du Transsibérien et de la petite Jehanne de France</em>
                     (detail), 1913. Illustrated book with pochoir, case: 80 x 17 in.
@@ -84,7 +89,7 @@ chapters:
                   - min-width: 800px
                     src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg
                   url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg
-                  alt: La Prose du Transsibérien
+                  alt: Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars
                   style: vertical
           right:
             components:
@@ -93,10 +98,9 @@ chapters:
                 text: "<p>It was an audacious work of art: Appropriating a map-fold
                   format, the book unfurls to over six feet in length, then opens
                   to reveal Delaunay’s abstract forms confronting a poem of more than
-                  400 lines splashed across the right-hand side of the opening</p>."
+                  400 lines splashed across the right-hand side of the opening.</p>"
                 dropcap: true
-      c1p7:
-        id: c1p7
+      c1p4:
         classes: ''
         template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
         data:
@@ -156,7 +160,7 @@ chapters:
                   with many artists, including Fernand Léger, Marc Chagall, and Amedeo
                   Modigliani.</p>"
                 dropcap: true
-      ch1p8:
+      ch1p5:
         template: "@organisms/in-depth/in-depth.html.twig"
         data:
           title: What is an Artist’s Book?
@@ -180,82 +184,21 @@ chapters:
             template: "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig"
             data:
               slides:
-              - caption:
-                  id: in-depth-slide-1-caption
-                  brief: What is an Artist's Book?
-                  text: Book art has a long history. In the <em>Book of Kells,</em>
-                    the letterform is an expression of transcendance; even beyond
-                    its overt religious significance, here the book is truly, in the
-                    words of Stéphane Mallarmé, an “<em>instrument spirituel.</em>”
-                template: "@molecules/Picture/Picture.html.twig"
+              - template: "@molecules/slide--in-depth__intro/slide--in-depth__intro.html.twig"
                 data:
-                  srcset:
-                  - min-width: 0px
-                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
-                  - min-width: 350px
-                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
-                  - min-width: 800px
-                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
-                  url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
-                  alt: The Book of Kells
-                  style: vertical
-              - caption:
-                  brief: William Blake’s illustrations display a singular vision and
-                    deep interpenetration of text and image, a unified expression
-                    that has rarely been equaled. Many consider Blake the father of
-                    book art.
-                template: "@molecules/Picture/Picture.html.twig"
-                data:
-                  srcset:
-                  - min-width: 0px
-                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
-                  - min-width: 350px
-                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
-                  - min-width: 800px
-                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
-                  url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
-                  alt: Plate 16 from the book of job by william blake
-                  style: vertical
-              - template: "@molecules/Picture/Picture.html.twig"
-                caption: Publication of deluxe editions illustrated by contemporary
-                  artists was taken up in earnest with <em>livre d’artiste</em> editions
-                  such as <em>Parallelement,</em> published by Ambroise Vollard (1866–1939).
-                  Vollard’s contemporary Daniel-Henry Kahnweiler (1884–1979) published
-                  adventurous works by Pablo Picasso, Georges Braque, and others,
-                  with literary texts by as-yet obscure writers such as Guillaume
-                  Apollinaire, Max Jacob, André Malraux, and Gertrude Stein.
-                data:
-                  srcset:
-                  - min-width: 0px
-                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
-                  - min-width: 350px
-                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
-                  - min-width: 800px
-                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
-                  url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
-                  alt: untitled page from parallelement by paul verlaine and pierre
-                    bonnard
-                  style: vertical
-              - template: "@molecules/Picture/Picture.html.twig"
-                caption: The concept of the book as art was further developed by the
-                  Russian Futurists in non-luxurious but conceptually advanced editions.
-                  The deluxe <em>livre d’artiste</em> and its lower-cost counterpart,
-                  the artist-published “democratic multiple,” have persisted to the
-                  present day. So has the third way taken by La prose, where self-publishing
-                  artists combine high craft values with a visionary approach to the
-                  form of the book.
-                data:
-                  srcset:
-                  - min-width: 0px
-                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
-                  - min-width: 350px
-                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
-                  - min-width: 800px
-                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
-                  url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
-                  alt: page from the book dlia golosa by vladimir vladimirovich and
-                    el lissitsky
-                  style: vertical
+                  title: Scandals & Controversies
+                  text: 'Book art has a long history. In the <em>Book of Kells</em>, the letterform is an expression of transcendance; even beyond its overt religious significance, here the book is truly, in the words of Stéphane Mallarmé, an <em>"instrument spirituel."</em>'
+                  picture:
+                    srcset:
+                    - min-width: 0px
+                      src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+                    - min-width: 768px
+                      src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+                    - min-width: 960px
+                      src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+                    url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+                    alt: Image of chi-rho page from book of kells
+                    style: square
   chapter2:
     title: "Paris: 1913"
     numeral: II
