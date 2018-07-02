@@ -4,9 +4,9 @@ files:
 - components/atoms/video--embed/video--embed.js
 - components/molecules/TopBar/TopBar.js
 - components/molecules/CoverPage/CoverPage.js
-- components/molecules/sharing-icons/sharing-icons.js
 - components/molecules/ChapterNav/ChapterNav.js
 - js/pages.js
+- components/molecules/sharing-icons/sharing-icons.js
 - js/main.js
 insertNewLine: true
 ---

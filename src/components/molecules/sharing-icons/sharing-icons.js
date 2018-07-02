@@ -1,10 +1,21 @@
 (function (fds, sharingIcons, window, document) {
   fds.initializeSharingIcons = function (el) {
+    var hash;
+    var shareUrl;
+    var shareFacebook;
+    var shareTwitter;
     var url = window.location.origin;
-    var hash = el.closest('.page').id;
-    var shareUrl = url + '%23' + hash;
-    var shareFacebook = el.querySelector('.share--facebook');
-    var shareTwitter = el.querySelector('.share--twitter');
+    /*
+    This was breaking on in depths slide, for some reason el.closest('.page')
+    was returning undefined).
+    I think we can just read the location hash, and dont need to rad the page id,
+    since the hash changes as the page scrolls in.
+    */
+    if (!el.closest('.page')) return;
+    hash = el.closest('.page').id;
+    shareUrl = url + '%23' + hash;
+    shareFacebook = el.querySelector('.share--facebook');
+    shareTwitter = el.querySelector('.share--twitter');
 
     if (shareFacebook) {
       shareFacebook.setAttribute('href', 'https://www.facebook.com/sharer/sharer.php?u=' + shareUrl);

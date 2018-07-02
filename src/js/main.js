@@ -100,9 +100,7 @@
 
     requestAnimationFrame(fds.renderLoop);
     didResize = false;
-    if (fds.calcFps) {
-      elapsed = newtime - fds.then;
-    }
+    elapsed = newtime - fds.then;
     oldWindowDim = Object.assign({}, { w: win.innerWidth, h: win.innerHeight });
     if (win.innerWidth !== oldWindowDim.w || win.innerHeight !== oldWindowDim.h) {
       didResize = true;
@@ -122,8 +120,8 @@
         currentFps = fds.frameCount / secondsSinceStart;
         msPerFrame = sinceStart / fds.frameCount;
         fds.fpsEl.innerHTML = Math.round(currentFps) + 'fps at roughtly <br> ' + Math.round(msPerFrame) + 'ms/frame<br>currentPage: ' + fds.pages.getCurrentPage().id + '<br>y:' + fds.scroll.y;
-        fds.then = newtime - (elapsed % fds.FpsInterval);
       }
+      fds.then = newtime - (elapsed % fds.FpsInterval);
       if (fds.footer.getBoundingClientRect().top < win.innerHeight * 0.66667) {
         fds.chapterNav.nav.classList.add('fade');
       }
@@ -156,10 +154,8 @@
     fds.pages.onScroll(0, 'down', win.innerHeight, true);
     fds.chapterNav.onScroll(0);
     fds.renderLoop();
-    if (fds.calcFps) {
-      fds.then = win.performance.now();
-      fds.startTime = fds.then;
-    }
+    fds.then = win.performance.now();
+    fds.startTime = fds.then;
     requestAnimationFrame(fds.renderLoop);
   };
 
