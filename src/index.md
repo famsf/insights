@@ -552,6 +552,139 @@ chapters:
           img:
             url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/21_la-prose-the-book.jpg"
             alt: 'Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars'
+      c3p2:
+        template: "@layouts/one_up--primary/one_up--primary.html.twig"
+        data:
+          components:
+          - template: "@molecules/standalone-quote/standalone-quote.html.twig"
+            data:
+              component_name: standalone-quote
+              name: Blaise Cendrars
+              text: A sad poem printed on sunlight.
+              large_text: true
+      c3p3:
+        template: "@layouts/two_up--primary/two_up--primary.html.twig"
+        data:
+          right:
+            components:
+              - template: "@atoms/textarea/textarea.html.twig"
+                data:
+                  text: "<p>The book is a vortex of convergent and oppositional energies, an environment created for a remarkable reading experience. When folded, roughly four by seven inches, and just over an inch thick, it can be read by flipping the accordion-fold “pages.” Alternatively, one can unfold it to full length, more than six feet, on a long table. That way the entire design and text can be apprehended – not, as Apollinaire said, at a glance, but by following the poetic narrative as it weaves through splashes of color.</p>"
+                  dropcap: true
+              - template: "@atoms/cta__button/cta__button.html.twig"
+                data:
+                  text: Read an English translation of the Poem
+                  href: "https://lyricstranslate.com/en/prose-du-transsib%C3%A9rien-et-de-la-petite-jehanne-de-france-trans-siberian-prose-and-little-jeann.html"
+                  target: _blank
+          left:
+            components:
+            - template: "@molecules/Picture/PictureWithCaption.html.twig"
+              data:
+                caption:
+                  id: c3p3-caption-1
+                  brief: Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars
+                  text: 'Sonia Delaunay-Terk (artist), Blaise Cendrars (author), La Prose du Transsibérien et de la petite Jehanne de France (detail), 1913. Illustrated book with pochoir, case: 80 x 17 in. (203.2 x 43.2 cm). FAMSF, Gift of the Reva and David Logan Foundation, 2016.15.4.1'
+                picture:
+                  srcset:
+                    - min-width: 0px
+                      src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/22_la-prose-detail-the-book.jpg
+                    - min-width: 350px
+                      src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/22_la-prose-detail-the-book.jpg
+                    - min-width: 800px
+                      src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/22_la-prose-detail-the-book.jpg
+                  url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/22_la-prose-detail-the-book.jpg
+                  alt: Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars
+                  style: horizontal
+      c3p4:
+        template: "@layouts/two_up--primary/two_up--primary.html.twig"
+        data:
+          right:
+            components:
+              - template: "@atoms/h3/h3.html.twig"
+                data:
+                  text: "Using Light"
+              - template: "@atoms/textarea/textarea.html.twig"
+                data:
+                  text: "Mary Ann Caws explains a source of Robert and Sonia Delaunay’s experimentation with chromatic simultaneity."
+              - template: "@molecules/inline-quote/inline-quote.html.twig"
+                data:
+                  component_name: inline-quote
+                  name: Mary Ann Caws
+                  date: '2017'
+                  text: "La prose is at once a simultaneous riot of colors, as both painter and poet intended, according to the authors' acquaintance with the theories of Michel-Eugène Chevreul, author of De la loi du contraste simultané des couleurs (The Laws of Contrast of Color, 1839). Chevreul experimented with a color wheel, and his discoveries had a great influence on the impressionists and the post-impressionists, and, in turn, on the whirling colors of this brightly-lit scroll of a poem."
+          left:
+            components:
+            - template: "@molecules/Picture/PictureWithCaption.html.twig"
+              data:
+                caption:
+                  id: c3p4-caption-1
+                  brief: Chevreul color chart
+                  text: 'Chevreul color wheel, 1839. Wikimedia'
+                picture:
+                  srcset:
+                    - min-width: 0px
+                      src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/23_chevreul-color-chart.jpg
+                    - min-width: 350px
+                      src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/23_chevreul-color-chart.jpg
+                    - min-width: 800px
+                      src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/23_chevreul-color-chart.jpg
+                  url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/23_chevreul-color-chart.jpg
+                  alt: Chevreul color wheel
+                  style: horizontal
+      c3p5:
+        template: "@layouts/two_up--primary/two_up--primary.html.twig"
+        data:
+          right:
+            components:
+              - template: "@atoms/h3/h3.html.twig"
+                data:
+                  text: "Painting Sunlight"
+              - template: "@atoms/textarea/textarea.html.twig"
+                data:
+                  text: "Blaise Cendrars describes the kind of experimentation Robert and Sonia Delaunay were undertaking at the beginnings of modernist abstraction in painting."
+              - template: "@molecules/inline-quote/inline-quote.html.twig"
+                data:
+                  component_name: inline-quote
+                  name: "Blaise Cendrars, Aujourd’hui"
+                  date: '1931'
+                  text: "[Robert Delaunay] closed the shutters and shut himself up in his dark room... he made a little hole in the shutter with a brace and bit. A thin ray of sunlight filtered into the [room] and he began to paint it... to analyze all its elements of form and color. Without knowing it, he was doing spectrum analysis. He worked for months like this,... reaching the sources of emotion without any subject matter whatever."
+          left:
+            components:
+            - template: "@molecules/Picture/PictureWithCaption.html.twig"
+              data:
+                caption:
+                  id: c3p5-caption-1
+                  brief: "Robert Delaunay’s shaped canvas <em>Windows Open Simultaneously</em>, 1912"
+                  text: 'Robert Delaunay, Windows Open Simultaneously 1st Part, 3rd Motif (Fenetres ouvertes simultanément 1ère partie 3e motif),1912. The Solomon R. Guggenheim Foundation Peggy Guggenheim Collection, Venice, 1976'
+                picture:
+                  srcset:
+                    - min-width: 0px
+                      src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/24_windows-open.jpg
+                    - min-width: 350px
+                      src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/24_windows-open.jpg
+                    - min-width: 800px
+                      src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/24_windows-open.jpg
+                  url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/24_windows-open.jpg
+                  alt: Windows Open Simultaneously 1st Part, 3rd Motif by Robert Delaunay
+                  style: horizontal
+      c2p6:
+        template: "@molecules/commentary/commentary.html.twig"
+        data:
+          component_name: commentary
+          author_name: Marjorie Perloff
+          author_title: "Sadie D. Patek Professor of Humanities Emerita at Stanford University and Florence Scott Professor Emerita of English at the University of Southern California"
+          author_bio: "Marjorie Perloff is the author of many books on poetry and poetics, including <em>The Futurist Moment: Avant-Garde, Avant-Guerre, and the Language of Rupture</em> (1986), which deals extensively with artists and poets in the years leading up to WWI."
+          author_image: ''
+          components:
+          - template: "@atoms/textarea/textarea.html.twig"
+            data:
+              text: "<p>La prose du Transsibérien is a text full of contradictions. The title, for starters, is odd: it should be “le prose” and, even then, why call a lineated lyric “prose”? Cendrars declared that he used the word “prose” so as to open up the discourse; then, too, the poem is “dedicated to the musicians”—evidently those new musicians of the period, such as Eric Satie or Igor Stravinsky, who were avoiding all conventional rhythms. The long free-verse lines, with their paratactic structure and repetition, remind one of Walt Whitman, but the voice of this poem is hardly Whitman’s oracular one. Rather, Cendrars stresses immediacy, nervous energy, and excitement:</p>"
+              dropcap: false
+          - template: "@atoms/cta__button/cta__button.html.twig"
+            data:
+              text: Read more from this essay by Marjorie Perloff
+              href: "https://legionofhonor.famsf.org/marjorie-perloff-s-cubist-collaboration-abstract-assemblage"
+              target: _blank
   chapter4:
     title: The Making of <em>La prose</em>
     numeral: IV
