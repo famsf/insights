@@ -36,7 +36,6 @@
     var chapterIndex = target.getAttribute('data-chapter-index');
     var item = chapterNav.navItems[chapterIndex];
     var i;
-    item.classList.add('active');
     for (i = 0; i < count; i++) {
       if (i <= chapterIndex) {
         chapterNav.navItems[i].classList.add('past');
@@ -45,11 +44,11 @@
         chapterNav.navItems[i].classList.remove('past');
       }
     }
-    console.log(item, target.getAttribute('data-chapter-index'));
     if (chapterNav.activeItem) {
-      chapterNav.activeItem.classList.remove('active');
+      chapterNav.activeItem.classList.remove('active_item');
     }
     chapterNav.activeItem = item;
+    item.classList.add('active_item');
   };
 
   chapterNav.onNavItemClicked = function (target) {

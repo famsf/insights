@@ -1,0 +1,34 @@
+@mixin fill_screen {
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+@mixin  performy {
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  perspective: 1000;
+}
+
+@mixin abs {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@mixin fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+@mixin object-fit {
+  @include abs;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-size: cover !important;
+  transform-origin: center center;
+  object-position: 50% 50%;
+  object-fit: cover;
+  font-family: 'object-fit: contain;object-position: 50% 50%';
+}

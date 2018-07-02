@@ -4,10 +4,11 @@
     debug: false
   };
   fds.pages = pages;
+  fds.pages.ambientVideo = {};
+  fds.pages.hashes = {};
 
   pages.initialize = function (containerSelector, pageSelector, clearElementSelector) {
     var locHash = window.location.hash.substr(1);
-    var hashes = {};
     var params;
     var hashKey;
     var hashVal;
@@ -35,16 +36,19 @@
           param = params[i].split('=');
           hashKey = param[0];
           hashVal = param[1];
-          hashes[hashKey] = hashVal;
+          pages.hashes[hashKey] = hashVal;
         }
       }
       else {
-        hashes.currentPage = locHash;
+        pages.hashes.currentPage = locHash;
       }
-      if (hashes.currentPage) {
-        startPage = doc.getElementById(hashes.currentPage);
+      if (pages.hashes.currentPage) {
+        startPage = doc.getElementById(pages.hashes.currentPage);
         $('.tooltip').foundation('hide');
         pages.snapScroll(startPage);
+      }
+      else {
+        pages.snapScroll(pages.currentPage);
       }
     }
     pages.calculateEdgeThreshhold(win.innerHeight);
@@ -55,6 +59,7 @@
   };
 
   pages.setCurrentPage = function (pageEl) {
+    var chapterId = pageEl.parentElement.id;
     if (pages.currentPage) {
       pages.oldCurrentPage = pages.currentPage;
       pages.oldCurrentPage.classList.remove('current');
@@ -62,7 +67,9 @@
     pages.currentPage = pageEl;
     fds.chapterNav.setActiveItem(pageEl.parentElement);
     pages.currentPage.classList.add('current');
-    window.location.hash = '&chapter=' + pageEl.parentElement.id + '&page=' + pageEl.id;
+    window.location.hash = '&chapter=' + chapterId + '&page=' + pageEl.id;
+    pages.hashes.page = pageEl.id;
+    pages.hashes.chapter = chapterId;
     return pageEl;
   };
 
@@ -115,6 +122,7 @@
         shouldAdvance = pageNearEdge && pageRect.top <= fds.snapDownThreshhold;
         if (!shouldAdvance && pageRect.top >= wh) {
           page.classList.remove('triggered');
+          pages.untriggerVideo(page);
         }
       }
       else if (scrollDir === 'up') {
@@ -127,6 +135,7 @@
           pageRect.bottom > 0;
         if (!shouldAdvance && pageRect.top >= wh) {
           page.classList.remove('triggered');
+          pages.untriggerVideo(page);
         }
       }
       if (shouldTriggerTopBar) {
@@ -176,12 +185,42 @@
     fds.performantScrollTo(scrollTo, function () {
       if (isPage) {
         el.classList.add('triggered');
+        pages.triggerVideo(el);
       }
       setTimeout(function () {
         fds.scrollLock = false;
         document.body.style.overflow = 'auto';
       }, 250);
     }, 475);
+  };
+
+  pages.triggerVideo = function (page) {
+    var vidElement = page.querySelector('.ambient_video .plyr_embed');
+    var plyr;
+    if (vidElement) {
+      console.log('a »»');
+      if (!pages.ambientVideo[vidElement.id]) {
+        plyr = new Plyr(vidElement, {
+          hideControls: 'true'
+        });
+        plyr.on('ready', function (e) {
+          console.log('»|»»»»', e.detail.plyr.npmedia);
+          e.detail.plyr.muted = true;
+          e.detail.plyr.play();
+        });
+        pages.ambientVideo[vidElement.id] = plyr;
+      }
+    }
+  };
+
+  pages.untriggerVideo = function (page) {
+    var vidElement = page.querySelector('.ambient_video .plyr_embed');
+    var plyr;
+    if (!vidElement) return;
+    plyr = pages.ambientVideo[vidElement.id];
+    if (plyr) {
+      plyr.stop();
+    }
   };
 
   pages.triggerTopBarEvents = function (page) {

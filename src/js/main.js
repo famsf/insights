@@ -1,4 +1,5 @@
 (function (fds, win, doc, $) {
+  var owl;
   // Variable declarations.
   var horizontalImageSlider;
   var horizontalImageSliderOptions = {
@@ -71,13 +72,14 @@
     }
   });
 
-  fds.frameCount = 0;
 
   // In Depth Slider Modal Close Methods.
   $('.in-depth-modal .modal__close-button').click(function () {
     // Simulate a click on the first slide dot nav link.
     $(this).siblings('.owl-carousel').find('.owl-dots .owl-dot:first-of-type').trigger('click');
   });
+
+  fds.frameCount = 0;
 
   fds.setStyle = function (el, obj) {
     el.style = Object.assign(el.style, obj);
@@ -99,11 +101,8 @@
     var secondsSinceStart;
 
     requestAnimationFrame(fds.renderLoop);
-
-    if (fds.calcFps) {
-      elapsed = newtime - fds.then;
-      didResize = false;
-    }
+    didResize = false;
+    elapsed = newtime - fds.then;
     oldWindowDim = Object.assign({}, { w: win.innerWidth, h: win.innerHeight });
     if (win.innerWidth !== oldWindowDim.w || win.innerHeight !== oldWindowDim.h) {
       didResize = true;
@@ -123,8 +122,8 @@
         currentFps = fds.frameCount / secondsSinceStart;
         msPerFrame = sinceStart / fds.frameCount;
         fds.fpsEl.innerHTML = Math.round(currentFps) + 'fps at roughtly <br> ' + Math.round(msPerFrame) + 'ms/frame<br>currentPage: ' + fds.pages.getCurrentPage().id + '<br>y:' + fds.scroll.y;
-        fds.then = newtime - (elapsed % fds.FpsInterval);
       }
+      fds.then = newtime - (elapsed % fds.FpsInterval);
       if (fds.footer.getBoundingClientRect().top < win.innerHeight * 0.66667) {
         fds.chapterNav.nav.classList.add('fade');
       }
@@ -141,9 +140,7 @@
       console.log('Bypassing main js loop in current context to allow for easier single component prototyping');
       return;
     }
-    console.log(win.poly);
-    sy = win.pageYOffset;
-    console.log(sy);
+    sy = window.pageYOffset;
     fds.scroll = {
       last: {
         y: sy
@@ -159,15 +156,13 @@
     fds.pages.onScroll(0, 'down', win.innerHeight, true);
     fds.chapterNav.onScroll(0);
     fds.renderLoop();
-    if (fds.calcFps) {
-      fds.then = win.performance.now();
-      fds.startTime = fds.then;
-    }
+    fds.then = win.performance.now();
+    fds.startTime = fds.then;
     requestAnimationFrame(fds.renderLoop);
   };
 
   doc.addEventListener('DOMContentLoaded', function () {
-    fds.calcFps = true;
+    fds.calcFps = false;
     fds.targetFps = 60;
     fds.FpsInterval = 1000 / fds.targetFps;
     fds.initialize();
