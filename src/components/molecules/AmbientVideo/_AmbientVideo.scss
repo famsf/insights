@@ -16,32 +16,69 @@ Styleguide COMPONENTS.AmbientVideo
   position: relative;
   overflow: hidden;
   background-color: black;
+  z-index: -100;
+
+  &::before {
+    content: "";
+    @extend %abs;
+    @extend %fill_screen;
+    z-index: 2;
+    background: linear-gradient(90deg, rgba($black,0) 20%, rgba($black, 0.85) 50%);
+  }
+
   .video_element {
     @extend %performy;
     @extend %object-fit;
+    opacity: 0;
     transition-property: opacity;
     transition-duration: 0.25s;
     transition-timing-function: ease-out;
-    display: none;
-    opacity: 0em;
-    z-index: -100;
-
     &.stopfade {
-      opacity: .5;
+      opacity: 0.5;
     }
   }
 
-  .text_content {
-    @extend %abs;
-    @extend %fill_screen;
-    padding-top: 8em;
-    color: #fff;
+  .plyr--video {
+    @extend %performy;
+    @extend %object-fit;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-out;
   }
 
-  &.triggered {
-    display: block;
+  .text_content {
+    position: relative;
+    top: 5em;
+    z-index: 5;
+    color: #fff;
+    opacity: 0;
+    transition-property: top, opacity;
+    transition-duration: 1s;
+    transition-delay: 0.75s;
+    transition-timing-function: ease-out;
+  }
 
-    opacity: 1;
+  .triggered & {
+    display: block;
+    opacity: 1em;
+    .video_element,
+    .plyr--video {
+      opacity: 1 !important;
+    }
+    .text_content {
+      top: 0;
+      opacity: 1;
+    }
+  }
+  .plyr__controls,
+  .plyr__control {
+    display: none;
+    opacity: 0;
+    & > * {
+        pointer-events: none;
+        cursor: auto;
+    }
   }
 }
 
