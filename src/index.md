@@ -857,11 +857,18 @@ chapters:
                   url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/31_logan-gallery.jpg
                   alt: Photo of David and Reva Logan
                   style: horizontal
+      c5p4:
+        classes: dark
+        template: "@atoms/video--embed/video--embed.html.twig"
+        data:
+          id: p6io0gBiXe0
+          youtube:
+            embed: p6io0gBiXe0
   chapter6:
     title: About the Collectors
     numeral: VI
     pages:
-      c2p1:
+      c6p1:
         template: "@molecules/chapter__title/chapter__title.html.twig"
         data:
           numeral: VI
@@ -869,7 +876,7 @@ chapters:
           img:
             url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/29_la-prose-collectors.jpg"
             alt: 'Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars'
-      c2p2:
+      c6p2:
         template: "@layouts/two_up--primary/two_up--primary.html.twig"
         data:
           classes: dark
@@ -888,7 +895,7 @@ chapters:
             - template: "@molecules/Picture/PictureWithCaption.html.twig"
               data:
                 caption:
-                  id: c2p2-caption-1
+                  id: c6p2-caption-1
                   brief: David and Reva Logan
                   text: Courtesy of the Logan Foundation
                 picture:
@@ -902,7 +909,7 @@ chapters:
                   url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/30_the-logans.jpg
                   alt: Photo of David and Reva Logan
                   style: vertical
-      c2p3:
+      c6p3:
         template: "@layouts/two_up--primary/two_up--primary.html.twig"
         data:
           right:
@@ -933,5 +940,12 @@ chapters:
                   url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/31_logan-gallery.jpg
                   alt: Photo of David and Reva Logan
                   style: horizontal
+      c6p4:
+        classes: dark
+        template: "@atoms/video--embed/video--embed.html.twig"
+        data:
+          id: _QWKwhv8MG4
+          youtube:
+            embed: _QWKwhv8MG4
 ---
 La Prose story to go here. In the meantime, would you care to visit the [Klimt-Rodin story](/klimt-rodin)?
