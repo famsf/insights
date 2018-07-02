@@ -5,10 +5,10 @@
   };
   fds.pages = pages;
   fds.pages.ambientVideo = {};
+  fds.pages.hashes = {};
 
   pages.initialize = function (containerSelector, pageSelector, clearElementSelector) {
     var locHash = window.location.hash.substr(1);
-    var hashes = {};
     var params;
     var hashKey;
     var hashVal;
@@ -36,16 +36,19 @@
           param = params[i].split('=');
           hashKey = param[0];
           hashVal = param[1];
-          hashes[hashKey] = hashVal;
+          pages.hashes[hashKey] = hashVal;
         }
       }
       else {
-        hashes.currentPage = locHash;
+        pages.hashes.currentPage = locHash;
       }
-      if (hashes.currentPage) {
-        startPage = doc.getElementById(hashes.currentPage);
+      if (pages.hashes.currentPage) {
+        startPage = doc.getElementById(pages.hashes.currentPage);
         $('.tooltip').foundation('hide');
         pages.snapScroll(startPage);
+      }
+      else {
+        pages.snapScroll(pages.currentPage);
       }
     }
     pages.calculateEdgeThreshhold(win.innerHeight);
@@ -208,10 +211,10 @@
   };
 
   pages.untriggerVideo = function (page) {
-    var vidElement = page.querySelector('.ambient_video');
+    var vidElement = page.querySelector('.ambient_video .plyr_embed');
     var plyr;
     if (!vidElement) return;
-    plyr = vidElement.getAttribute('data-video-player');
+    plyr = pages.ambientVideo[vidElement.id];
     if (plyr) {
       plyr.stop();
     }
