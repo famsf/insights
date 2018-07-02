@@ -59,6 +59,7 @@
   };
 
   pages.setCurrentPage = function (pageEl) {
+    var chapterId = pageEl.parentElement.id;
     if (pages.currentPage) {
       pages.oldCurrentPage = pages.currentPage;
       pages.oldCurrentPage.classList.remove('current');
@@ -66,7 +67,9 @@
     pages.currentPage = pageEl;
     fds.chapterNav.setActiveItem(pageEl.parentElement);
     pages.currentPage.classList.add('current');
-    window.location.hash = '&chapter=' + pageEl.parentElement.id + '&page=' + pageEl.id;
+    window.location.hash = '&chapter=' + chapterId + '&page=' + pageEl.id;
+    pages.hashes.page = pageEl.id;
+    pages.hashes.chapter = chapterId;
     return pageEl;
   };
 
