@@ -145,20 +145,13 @@ chapters:
         template: "@molecules/AmbientVideo/AmbientVideo.html.twig"
         data:
           poster: "/assets/images/video/rodin.jpg"
-          text: By 1900—after 30 years of creating groundbreaking work that often
-            brought about adverse criticism and numerous scandals—Rodin, at the
-            age of 60, was at last enjoying international acclaim. He was widely
-            regarded as the greatest living sculptor, French or otherwise, of his
-            age. He exhibited his sculpture throughout Europe and the United States,
-            sharing his work with new audiences. Reviewing the first major display
-            of Rodin’s work in Vienna, in 1898, the art critic Ludwig Hevesi went
-            so far as to describe the artist as the “Parisian Michelangelo.”
+          text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
           poster: "/assets/images/video/rodin.jpg"
           youtube:
             embed: "BcYu-BrGiGs"
           sources:
-            webm: "/assets/video/rodin.webm"
-            m4v: "/assets/video/rodin.m4v"
+          - webm: "/assets/video/rodin.webm"
+          - m4v: "/assets/video/rodin.m4v"
       c1p5:
         classes: ''
         template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
