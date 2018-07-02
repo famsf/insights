@@ -11,7 +11,7 @@ chapters:
           title: La Prose
           subtitle: du Transsibérien et de la petite Jehanne de France
           image:
-            url: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/0_la-prose-title-card.jpg
+            url: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/0_la-prose-title-card.jpg
             alt: "Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars"
           info: "Reva and David Logan Collection of Illustrated Books Legion of Honor Museum"
       c1p2:
@@ -79,10 +79,10 @@ chapters:
                 picture:
                   srcset:
                   - min-width: 0px
-                    src: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg
+                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg
                   - min-width: 800px
-                    src: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg
-                  url: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg
+                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg
+                  url: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg
                   alt: La Prose du Transsibérien
                   style: vertical
           right:
@@ -110,12 +110,12 @@ chapters:
                 picture:
                   srcset:
                   - min-width: 0px
-                    src: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
+                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
                   - min-width: 350px
-                    src: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
+                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
                   - min-width: 800px
-                    src: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
-                  url: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
+                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
+                  url: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
                   alt: Photo of sonia delaunay-terk
                   style: vertical
             - template: "@atoms/textarea/textarea.html.twig"
@@ -139,12 +139,12 @@ chapters:
                 picture:
                   srcset:
                   - min-width: 0px
-                    src: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
+                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
                   - min-width: 350px
-                    src: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
+                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
                   - min-width: 800px
-                    src: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
-                  url: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
+                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
+                  url: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
                   alt: Photo of blaise cendrars
                   style: vertical
             - template: "@atoms/textarea/textarea.html.twig"
@@ -162,12 +162,12 @@ chapters:
           picture:
             srcset:
             - min-width: 0px
-              src: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+              src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
             - min-width: 768px
-              src: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+              src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
             - min-width: 960px
-              src: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
-            url: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+              src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+            url: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
             alt: Image of chi-rho page from book of kells
             style: vertical
           modal_button_text: Learn more
@@ -190,12 +190,12 @@ chapters:
                 data:
                   srcset:
                   - min-width: 0px
-                    src: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
                   - min-width: 350px
-                    src: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
                   - min-width: 800px
-                    src: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
-                  url: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+                  url: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
                   alt: The Book of Kells
                   style: vertical
               - caption:
@@ -207,12 +207,12 @@ chapters:
                 data:
                   srcset:
                   - min-width: 0px
-                    src: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
+                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
                   - min-width: 350px
-                    src: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
+                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
                   - min-width: 800px
-                    src: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
-                  url: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
+                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
+                  url: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
                   alt: Plate 16 from the book of job by william blake
                   style: vertical
               - template: "@molecules/Picture/Picture.html.twig"
@@ -226,12 +226,12 @@ chapters:
                 data:
                   srcset:
                   - min-width: 0px
-                    src: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
+                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
                   - min-width: 350px
-                    src: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
+                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
                   - min-width: 800px
-                    src: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
-                  url: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
+                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
+                  url: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
                   alt: untitled page from parallelement by paul verlaine and pierre
                     bonnard
                   style: vertical
@@ -246,12 +246,12 @@ chapters:
                 data:
                   srcset:
                   - min-width: 0px
-                    src: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
+                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
                   - min-width: 350px
-                    src: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
+                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
                   - min-width: 800px
-                    src: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
-                  url: http://dev-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
+                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
+                  url: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
                   alt: page from the book dlia golosa by vladimir vladimirovich and
                     el lissitsky
                   style: vertical
