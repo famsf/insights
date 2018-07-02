@@ -6,7 +6,7 @@
     loop: false,
     nav: false,
     dots: false,
-    items: 2,
+    items: 1,
     merge: true,
     mergeFit: true,
     responsive: {
