@@ -412,6 +412,23 @@ chapters:
             template: "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig"
             data:
               slides:
+              - template: "@molecules/slide--in-depth__intro/slide--in-depth__intro.html.twig"
+                data:
+                  title: Scandals & Controversies
+                  text: 'Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem
+                    ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum
+                    lorem ipsum '
+                  picture:
+                    srcset:
+                    - min-width: 0px
+                      src: https://www.fillmurray.com/300/300
+                    - min-width: 768px
+                      src: https://www.fillmurray.com/400/400
+                    - min-width: 960px
+                      src: https://www.fillmurray.com/500/500
+                    url: https://www.fillmurray.com/500/500
+                    alt: A picture of Bill Murray
+                    style: square
               - caption:
                   id: in-depth-slide-1-caption
                   brief: Lorem ipsum dolor sit amet

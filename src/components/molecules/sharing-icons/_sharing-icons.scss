@@ -7,6 +7,16 @@
       opacity: 1;
     }
   }
+
+  .horizontal-image-slider & {
+    margin-top: 2rem;
+
+    .icon {
+      border-color: $white;
+      color: $white;
+      opacity: 1;
+    }
+  }
 }
 
 .sharing-icons {
