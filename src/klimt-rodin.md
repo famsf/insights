@@ -327,6 +327,9 @@ chapters:
           slides:
           - intro_slide: true
             components:
+            - template: "@atoms/h3/h3.html.twig"
+              data:
+                text: This is a heading
             - template: "@atoms/textarea/textarea.html.twig"
               data:
                 text: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
