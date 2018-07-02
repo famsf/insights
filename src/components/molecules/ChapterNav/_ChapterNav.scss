@@ -22,6 +22,7 @@
 }
 
 #chapter_nav {
+  @extend .hide-for-small-only;
 
   width: 3em;
   position: fixed;
