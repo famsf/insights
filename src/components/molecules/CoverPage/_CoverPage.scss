@@ -49,8 +49,29 @@ $bgURL: 'https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTF
       text-align: center;
       width: 100%;
       padding-bottom: 3em;
+      .info {
+        .date {
+          transition-property: top, opacity;
+          transition-timing-function: ease-out;
+          transition-duration: 0.625s;
+          opacity: 0;
+          position: relative;
+          top: 4em;
+        }
+      }
     }
   }
+
+  // .triggered & {
+  //   .underlay {
+  //     .info {
+  //       .date {
+  //         opacity: 1;
+  //         top: 0;
+  //       }
+  //     }
+  //   }
+  // }
 
   .headline {
     margin: 0;
@@ -123,7 +144,7 @@ $bgURL: 'https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTF
 
   .cover_loader_container {
     @extend %fill_screen;
-    background-color: #fff;
+    background-color: #f00;
     position: relative;
     z-index: 3;
     transition-property: opacity;
