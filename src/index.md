@@ -345,7 +345,7 @@ chapters:
                 component_name: inline-quote
                 name: Jacques Vaché, letter to André Breton
                 date: 1918
-                text: "[Apollinaire] marks an epoch. The beautiful things we can do now!"  
+                text: "[Apollinaire] marks an epoch. The beautiful things we can do now!"
       c2p4:
         template: "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig"
         data:
@@ -405,6 +405,140 @@ chapters:
                 src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/14_la-fin-du-monde.jpg
               url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/14_la-fin-du-monde.jpg
               alt: illustration in the book La Fin du monde by Blaise Cendrars and Fernand Léger
+              style: vertical
+          - caption:
+              id: c2p4-slide-5-caption
+              brief: "Raymond Radiguet, a charismatic prodigy, died in 1923 at age 20, leaving behind two brilliant and scandalous novels and a string of lovers, male and female, that seemed to include half of Paris bohemia. Gris, for his part, met an untimely death at age 40, in the year following publication of <em>Denise</em>."
+              text: "Juan Gris (artist), Galerie Simon (publisher), Imprimerie Pitault (printer), Raymond Radiguet (author), Leibovitz (printer), Denise by Raymond Radiguet (Paris: Éditions de la Galerie Simon, 1926), 1926. Book with five lithographs on  japon ancien, including front cover; cream japon wrappers with lithograph on front, object: 264 x 195 x 4 mm (10 3/8 x 7 11/16 x 3/16 in.). FAMSF, Gift of the Reva and David Logan Foundation, 1998.40.55.1-5. © 2018 Artists Rights Society (ARS), New York / ADAGP, Paris"
+            template: "@molecules/Picture/Picture.html.twig"
+            data:
+              srcset:
+              - min-width: 0px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/15_denise.jpg
+              - min-width: 350px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/15_denise.jpg
+              - min-width: 800px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/15_denise.jpg
+              url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/15_denise.jpg
+              alt: title page from the book Denise by Raymond Radiguet and Juan Gris
+              style: vertical
+      c2p5:
+        template: "@molecules/commentary/commentary.html.twig"
+        data:
+          component_name: commentary
+          author_name: Mary Ann Caws
+          author_title: "Distinguished Professor Emerita of English, French, and Comparative Literature at the Graduate School of the City University of New York"
+          author_bio: "Mary Ann Caws is the author of more than 40 books, including The Surrealist Look: An Erotics of Encounter (1997), and Picasso’s Weeping Woman: The Life and Art of Dora Maar (2000)."
+          author_image: ''
+          components:
+          - template: "@atoms/textarea/textarea.html.twig"
+            data:
+              text: "<p>The cacophonous <em>Rite of Spring</em> was the centerpiece of a simultaneity of sound, color, and movement. Nijinsky danced its May 29 premiere for Sergei Diaghilev’s Ballets Russes in Paris’s Théâtre des Champs-Élysées, and the spectacle provoked a celebrated pandemonium. Igor Stravinsky’s discordant music touched off outrage from the more conservative audience members, with others equally vehement in its defense. This riot against modernism, to put it bluntly, conferred on the piece more glory than anything positive could possibly have done—riots led to revelry in the long run.</p>"
+              dropcap: false
+      c2p6:
+        classes: ''
+        template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
+        data:
+          left:
+            components:
+            - template: "@molecules/Picture/PictureWithCaption.html.twig"
+              data:
+                caption:
+                  id: c2p6-caption-1
+                  brief: Diaghilev with Stravinsky at the Rite of Spring premiere, 1913
+                  text: 'Rite of Spring premiere 1913. © Hulton Archive/Getty Images'
+                picture:
+                  srcset:
+                  - min-width: 0px
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/16_stravinsky-diaghilev.jpg
+                  - min-width: 800px
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/16_stravinsky-diaghilev.jpg
+                  url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/16_stravinsky-diaghilev.jpg
+                  alt: Sergei Diaghilev with Igor Stravinsky at the Rite of Spring premiere, 1913
+                  style: horizontal
+          right:
+            components:
+              - template: "@molecules/inline-quote/inline-quote.html.twig"
+                data:
+                  component_name: inline-quote
+                  name: Blaise Cendrars, radio interview
+                  date: '1950'
+                  text: "A woman nearby, covered by diamonds, but the music of Stravinsky drove her crazy, tore out a brand new folding seat and smashed me over the head with it, so I had to spend the rest of the night drinking champagne in Montmartre with Stravinsky [and] Diaghilev . . . still wearing the folding chair like a horse collar..."
+      c2p7:
+        template: "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig"
+        data:
+          slides:
+          - intro_slide: true
+            components:
+            - template: "@atoms/h3/h3.html.twig"
+              data:
+                text: Other Events of 1913
+            - template: "@atoms/textarea/textarea.html.twig"
+              data:
+                text: Rarely had there been a time when artists felt so emboldened to disregard rules and traditions. Here are a few other landmarks of the tumultuous year of 1913.
+          - caption:
+              id: c2p7-slide-2-caption
+              brief: 'Marcel Duchamp creates his first "ready-made," <em>Bicycle Wheel</em>'
+              text: "Marcel Duchamp, Bicycle Wheel, third version, 1951. Museum of Modern Art, MOMA, New York, USA. © Album / Alamy Stock Photo"
+            template: "@molecules/Picture/Picture.html.twig"
+            data:
+              srcset:
+              - min-width: 0px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/17_duchamp.jpg
+              - min-width: 350px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/17_duchamp.jpg
+              - min-width: 800px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/17_duchamp.jpg
+              url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/17_duchamp.jpg
+              alt: third version of Bicycle Wheel by Marcel Duchamp
+              style: vertical
+          - caption:
+              id: c2p7-slide-3-caption
+              brief: "Marcel Proust writes Swann’s Way"
+              text: "Some of Marcel Proust’s notes for Swann’s Way, with doodles. © Bibliotheque nationale de France (BnF), Paris, France, Dist. RMN-Grand Palais/Art Resource, NY"
+            template: "@molecules/Picture/Picture.html.twig"
+            data:
+              srcset:
+              - min-width: 0px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/18_proust.jpg
+              - min-width: 350px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/18_proust.jpg
+              - min-width: 800px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/18_proust.jpg
+              url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/18_proust.jpg
+              alt: pages of Marcel Proust’s notes for Swann’s Way with drawings
+              style: vertical
+          - caption:
+              id: c2p7-slide-4-caption
+              brief: "Maurice Ravel composes <em>Trois poèmes de Stéphane Mallarmé</em>"
+              text: "Maurice Ravel. Bibliothèque nationale de France"
+            template: "@molecules/Picture/Picture.html.twig"
+            data:
+              srcset:
+              - min-width: 0px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/19_maurice-ravel.jpg
+              - min-width: 350px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/19_maurice-ravel.jpg
+              - min-width: 800px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/19_maurice-ravel.jpg
+              url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/19_maurice-ravel.jpg
+              alt: photo of maurice ravel
+              style: vertical
+          - caption:
+              id: c2p7-slide-5-caption
+              brief: "Guillaume Apollinaire writes Alcools, with a portrait by Picasso and etchings by Louis Marcoussis"
+              text: "Guillaume Apollinaire: Alcools, with a portrait by Picasso and etchings by Louis Marcoussis"
+            template: "@molecules/Picture/Picture.html.twig"
+            data:
+              srcset:
+              - min-width: 0px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/20_alcools.jpg
+              - min-width: 350px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/20_alcools.jpg
+              - min-width: 800px
+                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/20_alcools.jpg
+              url: https://live-famsf-insights.pantheonsite.io/sites/default/files/20_alcools.jpg
+              alt: title page for the book alcools by guillaume apollinaire with a portrait by Picasso and etchings by Louis Marcoussis
               style: vertical
   chapter3:
     title: The Book
