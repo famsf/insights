@@ -1,11 +1,13 @@
 ---
 layout: "templates/pages/digital-story.html.twig"
+title:
+  firstLine: Klimt &
+  secondLine: Rodin
 chapters:
   intro:
     title: Introduction
     numeral: A
-    active: active
-    id: intro
+    active: true
     pages:
       intro1:
         classes: invert-top-bar
@@ -44,7 +46,6 @@ chapters:
   chapter1:
     title: In Search of Modernity
     numeral: I
-    id: chapter1
     pages:
       c1p1:
         classes: ''
@@ -201,7 +202,6 @@ chapters:
                   new artistic ideas emerging from Paris.</p>"
                 dropcap: true
   chapter2:
-    id: chapter2
     title: Meeting of the Minds
     numeral: II
     pages:
@@ -234,11 +234,8 @@ chapters:
           components:
           - template: "@atoms/audio_player/audio_player.html.twig"
             data:
-              srcset:
-              - "..."
-              - "..."
+              src: "/assets/audio/music.ogg"
   chapter3:
-    id: chapter3
     title: Comparing Genius
     numeral: III
     pages:
