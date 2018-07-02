@@ -11,7 +11,7 @@ chapters:
           title: La Prose
           subtitle: du Transsibérien et de la petite Jehanne de France
           image:
-            url: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/0_la-prose-title-card.jpg
+            url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/0_la-prose-title-card.jpg
             alt: "Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars"
           info: "Reva and David Logan Collection of Illustrated Books Legion of Honor Museum"
       c1p2:
@@ -79,10 +79,10 @@ chapters:
                 picture:
                   srcset:
                   - min-width: 0px
-                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg
                   - min-width: 800px
-                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg
-                  url: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg
+                  url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg
                   alt: La Prose du Transsibérien
                   style: vertical
           right:
@@ -110,12 +110,12 @@ chapters:
                 picture:
                   srcset:
                   - min-width: 0px
-                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
                   - min-width: 350px
-                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
                   - min-width: 800px
-                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
-                  url: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
+                  url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
                   alt: Photo of sonia delaunay-terk
                   style: vertical
             - template: "@atoms/textarea/textarea.html.twig"
@@ -139,12 +139,12 @@ chapters:
                 picture:
                   srcset:
                   - min-width: 0px
-                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
                   - min-width: 350px
-                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
                   - min-width: 800px
-                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
-                  url: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
+                  url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
                   alt: Photo of blaise cendrars
                   style: vertical
             - template: "@atoms/textarea/textarea.html.twig"
@@ -162,12 +162,12 @@ chapters:
           picture:
             srcset:
             - min-width: 0px
-              src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
             - min-width: 768px
-              src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
             - min-width: 960px
-              src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
-            url: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+            url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
             alt: Image of chi-rho page from book of kells
             style: vertical
           modal_button_text: Learn more
@@ -190,12 +190,12 @@ chapters:
                 data:
                   srcset:
                   - min-width: 0px
-                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
                   - min-width: 350px
-                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
                   - min-width: 800px
-                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
-                  url: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+                  url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
                   alt: The Book of Kells
                   style: vertical
               - caption:
@@ -207,12 +207,12 @@ chapters:
                 data:
                   srcset:
                   - min-width: 0px
-                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
                   - min-width: 350px
-                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
                   - min-width: 800px
-                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
-                  url: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
+                  url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
                   alt: Plate 16 from the book of job by william blake
                   style: vertical
               - template: "@molecules/Picture/Picture.html.twig"
@@ -226,12 +226,12 @@ chapters:
                 data:
                   srcset:
                   - min-width: 0px
-                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
                   - min-width: 350px
-                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
                   - min-width: 800px
-                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
-                  url: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
+                  url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
                   alt: untitled page from parallelement by paul verlaine and pierre
                     bonnard
                   style: vertical
@@ -246,14 +246,88 @@ chapters:
                 data:
                   srcset:
                   - min-width: 0px
-                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
                   - min-width: 350px
-                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
                   - min-width: 800px
-                    src: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
-                  url: http://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
+                    src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
+                  url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
                   alt: page from the book dlia golosa by vladimir vladimirovich and
                     el lissitsky
                   style: vertical
+  chapter5:
+    title: Contemporary Relevance
+    numeral: V
+    pages:
+      c2p1:
+        template: "@molecules/chapter__title/chapter__title.html.twig"
+        data:
+          numeral: V
+          title: Contemporary Relevance
+          img:
+            url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/28-bill-ham-light-show.jpg"
+            alt: 'Still from Kinetic Light Painting by Bill Ham'
+      c2p2:
+        template: "@layouts/two_up--primary/two_up--primary.html.twig"
+        data:
+          left:
+            components:
+              - template: "@atoms/cliff-note/cliff-note.html.twig"
+                data:
+                  text: The avant-garde, forward-looking nature of La prose has many parallels in our time.
+          right:
+            components:
+              - template: "@atoms/h3/h3.html.twig"
+                data:
+                  text: "The 1950s: Cendrars and Kerouac"
+              - template: "@atoms/textarea/textarea.html.twig"
+                data:
+                  text: "<p>In some respects, the poem resembles Jack Kerouac’s On the Road. In composition, they share a common conceit: the illusion that they were composed, or narrated, in a single sitting, the intimate testimonial quality of a tale of alienation and transgression, drawing the listener or reader in. Both are road-trip stories, with socially marginalized traveling companions, that move across vast landscapes. Both are simultaneously life-changing inward journeys. And anyone who’s seen the Kerouac manuscript, the scroll, will immediately recognize the physical resemblance. With visual art, though, the two reading experiences diverge, and it is the hybrid nature of what we are looking at that distinguishes La prose as a unique and transcendent experience for the reader and viewer.</p>"
+                  dropcap: false
+              - template: "@atoms/h3/h3.html.twig"
+                data:
+                  text: "The 1960s: Light, Color, Motion"
+              - template: "@atoms/textarea/textarea.html.twig"
+                data:
+                  text: "<p>The interplay of colors and the synesthetic illusion of movement in Delaunay’s pochoir has an uncanny parallel in the psychedelic light shows of the 1960’s, where bright, pulsating, liquid forms merged with an experience of rhythmic sound, as the rhythms of Cendrars’s lines – dedicated, as he says, “to the musicians” – seem to emerge from the artist’s abstract color-forms.</p>"
+                  dropcap: false
+              - template: "@atoms/h3/h3.html.twig"
+                data:
+                  text: "Book Art Now"
+              - template: "@atoms/textarea/textarea.html.twig"
+                data:
+                  text: "<p>The steady growth of the field of book art in recent decades finds an iconic predecessor in La prose. Its unique appropriation of structure, and its hybrid nature, have made it an influence on succeeding generations of artists and writers who take the book beyond the limits of conventional form. For his spectacular book Nature Abhors, Philip Zimmermann used a structure devised by influential book artist Hedi Kyle.</p>"
+                  dropcap: false
+      c2p3:
+        template: "@layouts/two_up--primary/two_up--primary.html.twig"
+        data:
+          right:
+            components:
+              - template: "@atoms/h3/h3.html.twig"
+                data:
+                  text: This Project
+              - template: "@atoms/textarea/textarea.html.twig"
+                data:
+                  text: "<p>As the only works of art that must be handled to be fully experienced, artists’ books present a challenge for an institution charged with their conservation and display. The current project, funded by a generous grant from the Reva and David Logan Foundation, addresses this challenge by making contents of, and related information about, selected books from the collection available online utilizing the affordances of digital media. The project aims in this way to raise the profile of the collection and to create greater public understanding and awareness of what critic and historian Johanna Drucker has called arguably “the quintessential 20th century artform.” This project intends to make significant work by many of the most important artists of the twentieth century available in its entirety to public access for the first time.</p>
+                         <p>With more than more than 400 carefully assembled titles, the Logan Collection contains many of the most important works in the genre, with significant artists’ books representing virtually every major art movement dating from the beginnings of the genre of the livre d’artiste in the late 19th century. Augmented by important works already held by the Achenbach, the Logan gift established the Fine Arts Museums of San Francisco as stewards of one of the most historically-significant collections of artists’ books in the United States.</p>"
+                  dropcap: false
+          left:
+            components:
+            - template: "@molecules/Picture/PictureWithCaption.html.twig"
+              data:
+                caption:
+                  brief: The Reva and David Logan Gallery of Illustrated Books at the Legion of Honor
+                  text: ''
+                picture:
+                  srcset:
+                    - min-width: 0px
+                      src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/31_logan-gallery.jpg
+                    - min-width: 350px
+                      src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/31_logan-gallery.jpg
+                    - min-width: 800px
+                      src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/31_logan-gallery.jpg
+                  url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/31_logan-gallery.jpg
+                  alt: Photo of David and Reva Logan
+                  style: horizontal
 ---
 La Prose story to go here. In the meantime, would you care to visit the [Klimt-Rodin story](/klimt-rodin)?
