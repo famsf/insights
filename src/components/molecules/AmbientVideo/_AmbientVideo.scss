@@ -12,23 +12,29 @@ Styleguide COMPONENTS.AmbientVideo
 
 %ambient_video {
 
-  @extend %fill_screen;
-  position: relative;
-  overflow: hidden;
-  background-color: black;
-  z-index: -100;
+  @include breakpoint(medium) {
+    @include fill_screen;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+    z-index: -100;
+  }
 
   &::before {
-    content: "";
-    @extend %abs;
-    @extend %fill_screen;
-    z-index: 2;
-    background: linear-gradient(90deg, rgba($black,0) 20%, rgba($black, 0.85) 50%);
+    @include breakpoint(medium) {
+      content: "";
+      @include abs;
+      @include fill_screen;
+      z-index: 2;
+      background: linear-gradient(90deg, rgba($black,0) 20%, rgba($black, 0.85) 50%);
+    }
   }
 
   .video_element {
-    @extend %performy;
-    @extend %object-fit;
+    @include breakpoint(medium) {
+      @include performy;
+      @include object-fit;
+    }
     opacity: 0;
     transition-property: opacity;
     transition-duration: 0.25s;
@@ -39,8 +45,10 @@ Styleguide COMPONENTS.AmbientVideo
   }
 
   .plyr--video {
-    @extend %performy;
-    @extend %object-fit;
+    @include breakpoint(medium) {
+      @include performy;
+      @include object-fit;
+    }
     opacity: 0;
     transition-property: opacity;
     transition-duration: 0.25s;

@@ -1,4 +1,5 @@
 (function (fds, win, doc, $) {
+  var owl;
   // Variable declarations.
   var horizontalImageSlider;
   var horizontalImageSliderOptions = {
@@ -71,7 +72,6 @@
     }
   });
 
-  fds.frameCount = 0;
 
   // In Depth Slider Modal Close Methods.
   $('.in-depth-modal .modal__close-button').click(function () {
@@ -79,6 +79,8 @@
     $(this).siblings('.owl-carousel').find('.owl-dots .owl-dot:first-of-type').trigger('click');
   });
 
+  fds.frameCount = 0;
+  
   fds.setStyle = function (el, obj) {
     el.style = Object.assign(el.style, obj);
   };
