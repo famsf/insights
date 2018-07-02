@@ -4,7 +4,7 @@
     if (fds.coverPageElement) {
       fds.coverPageElement.backgroundClipPolyfill({
         patternID: 'mypattern',
-        patternURL: 'https://3.bp.blogspot.com/-RE9D7tm8uVU/VvecOJZ5ddI/AAAAAAAAgqc/TUZpJwTFqH4TR7oG4J3GzuFhr1NOAuYJw/w1200-h630-p-k-no-nu/Lady%2Bwith%2BHat%2Band%2BFeather%2BBoa%2Bby%2BGustav%2BKlimt.jpg',
+        patternURL: fds.coverPageElement.getAttribute('data-bg-image'),
         class: 'headline'
       });
       fds.coverPage.initialize();
@@ -16,6 +16,7 @@
     var imgAlt = fds.coverPageElement.getAttribute('data-bg-image-alt');
     var img = new Image();
     img.setAttribute('alt', imgAlt);
+    fds.coverPageElement.querySelector('.mask').style.backgroundImage = imgSrc;
     img.setAttribute('src', imgSrc);
     img.classList.add('bg-image');
     fds.coverPageElement.querySelector('.underlay').appendChild(img);
