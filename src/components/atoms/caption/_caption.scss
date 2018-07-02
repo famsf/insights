@@ -22,7 +22,8 @@
   }
 
   // Inverted color variants.
-  .horizontal-image-slider & {
+  .horizontal-image-slider &,
+  .dark & {
     color: $white;
 
     .toggle-caption {
