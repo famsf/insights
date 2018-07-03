@@ -37,10 +37,10 @@ Markup: video--embed.html.twig
     }
   }
 
-  .video--embed__controls {
-    position: absolute;
+  .plyr--video .plyr__controls {
     bottom: 0;
     height: 3em;
-    width: 100%;
+    margin-left: 16.66667%;
+    margin-right: 16.66667%;
   }
 }

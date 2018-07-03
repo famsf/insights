@@ -11,9 +11,9 @@
     var a;
     chapterNav.nav = doc.getElementById(navSelector);
     navItems = chapterNav.nav.querySelectorAll('li');
+    chapterNav.navItems = navItems;
     clearElement = fds.rootElement.querySelector(clearElementSelector);
     count = navItems.length;
-    chapterNav.navItems = navItems;
     chapterNav.height = chapterNav.nav.querySelector('ul').clientHeight;
     chapterNav.clearHeight = (clearElement) ? clearElement.clientHeight : 0;
     chapterNav.chapters = fds.rootElement.querySelectorAll(chapterSelector);
@@ -56,9 +56,6 @@
     var currentPage;
     var scrollTo;
     var chapterElement;
-    if (fds.scrollLock) {
-      return;
-    }
     chapterElement = fds.rootElement.querySelector(target.getAttribute('href'));
     currentPage = chapterElement.querySelector('.page');
     window.location.hash = '&chapter=' + chapterElement.id + '&page=' + currentPage.id;
@@ -70,7 +67,8 @@
     }, 475);
   };
 
-  chapterNav.onScroll = function (scrollY) {
+  chapterNav.onScroll = function () {
+    var scrollY = win.pageYOffset;
     var page = fds.pages.getCurrentPage();
     var chapter = page.parentElement;
     var chapterIndex = Number(chapter.getAttribute('data-chapter-index'));

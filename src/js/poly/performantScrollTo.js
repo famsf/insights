@@ -9,12 +9,6 @@
     return -c/2 * (t*(t-2) - 1) + b;
   };
 
-  fds.inOutQuintic = function(t, b, c, d) {
-    var ts = (t/=d)*t,
-    tc = ts*t;
-    return b+c*(6*tc*ts + -15*ts*ts + 10*tc);
-  };
-
   var requestAnimFrame = (function() {
     return  window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function( callback ) { window.setTimeout(callback, 1000 / 60); };
   })();
@@ -24,12 +18,12 @@
       change = to - start,
       currentTime = 0,
       increment = 20;
-    duration = (typeof(duration) === 'undefined') ? 475 : duration;
+    duration = (typeof(duration) === 'undefined') ? 380 : duration;
     var animateScroll = function() {
       // increment the time
       currentTime += increment;
       // find the value with the quadratic in-out easing function
-      var val = fds.inOutQuintic(currentTime, start, change, duration);
+      var val = fds.inOutQuad(currentTime, start, change, duration);
       // scroll
       document.scrollingElement.scrollTop = val;
       // do the animation unless its over

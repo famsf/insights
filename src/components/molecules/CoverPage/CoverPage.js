@@ -16,7 +16,6 @@
     var imgAlt = fds.coverPageElement.getAttribute('data-bg-image-alt');
     var img = new Image();
     img.setAttribute('alt', imgAlt);
-    fds.coverPageElement.querySelector('.mask').style.backgroundImage = imgSrc;
     img.setAttribute('src', imgSrc);
     img.classList.add('bg-image');
     fds.coverPageElement.querySelector('.underlay').appendChild(img);
@@ -37,6 +36,7 @@
     fds.coverPageElement.classList.add('loaded');
     setTimeout(function () {
       fds.coverPageElement.classList.add('post_loaded');
+      win.document.getElementById('intro1').classList.add('triggered');
       setTimeout(function () {
         fds.coverPageElement.classList.add('initialized');
       }, 750);
