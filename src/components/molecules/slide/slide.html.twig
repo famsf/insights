@@ -3,7 +3,7 @@
   <div class="item__content">
     {{ inklude.components(_context) }}
     {% if caption %}
-      {% include "@atoms/caption/caption.html.twig" with {brief: caption.brief, id: caption.id, text: caption.text} only %}
+      {% include "@atoms/caption/caption.html.twig" with caption only %}
     {% endif %}
     {% if intro_slide %}
       {% include "@atoms/slide__icon--next/slide__icon--next.html.twig" %}

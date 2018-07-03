@@ -1,17 +1,36 @@
 {% macro components(context) %}
+  {% macro clean(component, context, excludes) %}
+    {# Populate the passthrough variables. #}
+    {% set clean = context.passthrough|default({}) %}
+    {# Scrub "template" from the data of the component being included. #}
+    {% for key, value in component %}
+      {% if key not in excludes|default(['template']) %}
+        {% set clean = clean|merge({ (key): value }) %}
+      {% endif %}
+    {% endfor %}
+    {% include component.template with clean only %}
+  {% endmacro %}
+  {% import _self as inklude %}
 
-  {# Only one component? #}
-  {% if context.template and context.data %}
-    {% include context.template with context.data only %}
+  {# Current context as single component. #}
+  {% if context.template is not empty %}
+    {{ inklude.clean(context, context) }}
 
   {# Single component, keyed as "component". #}
-  {% elseif context.component %}
-    {% include context.component.template with context.component.data only %}
+  {% elseif context.component is iterable and context.component.template is not empty %}
+    {{ inklude.clean(context.component, context) }}
 
-  {# Multiple components, passed in either as a key or directly. #}
+  {# Multiple components via "components" key or directly in the current context. #}
   {% else %}
-    {% for component in context.components|default(context) %}
-      {% include component.template with component.data only %}
-    {% endfor %}
+    {% set components = context.components|default(context) %}
+    {% if components is iterable %}
+      {% for component in components %}
+        {% if component is iterable and component.template is not empty %}
+          {{ inklude.clean(component, context) }}
+        {% endif %}
+      {% endfor %}
+    {% else %}
+      {# No components found. Print error message in development environments? #}
+    {% endif %}
   {% endif %}
 {% endmacro %}
