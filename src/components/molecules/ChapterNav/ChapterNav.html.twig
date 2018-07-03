@@ -4,7 +4,7 @@
   <ul>
     {% for chapter in chapters %}
       {% set id = get.id(chapter|merge({index: loop.index0})) %}
-      <li class="active">
+      <li>
         <a href="#{{ id }}" data-template-classes="chapter_nav__tip" data-position="right" data-fade-in-duration="625" data-fade-out-duration="525" data-alignment="center" data-tooltip title="{{ chapter.numeral }}&nbsp;&nbsp;&nbsp;{{ chapter.title }}" data-chapter="{{ id }}">
           <div class="dot_wrapper">
             <div class="dot">
