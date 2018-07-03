@@ -117,10 +117,6 @@ $plyr-color-heather: #b7c5cd !default;
 @import 'base/typography';
 @import 'base/extends';
 
-// Import Environments.
-@import '../components/environments/LaProse/LaProse';
-@import '../components/environments/KlimtRodin/KlimtRodin';
-
 // Import Atoms.
 @import '../components/atoms/a/a';
 @import '../components/atoms/down_arrow/down_arrow';
