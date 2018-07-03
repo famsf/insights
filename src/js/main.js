@@ -148,12 +148,12 @@
     };
     fds.rootElement = doc.querySelector('.insights-app');
     fds.fpsEl = doc.getElementById('fpsEl');
-    fds.pages.initialize('.chapters_container', '.page', '.top-bar');
     fds.chapterNav.initialize('chapter_nav', '.chapter', '.top-bar');
+    fds.pages.initialize('.chapters_container', '.page', '.top-bar');
     fds.topBar.initialize('topBar');
     fds.footer = doc.getElementById('insights__footer');
-    fds.pages.onScroll(0, 'down', win.innerHeight, true);
-    fds.chapterNav.onScroll(0);
+    fds.pages.onScroll(sy, 'down', 0, win.innerHeight, true);
+    fds.chapterNav.onScroll(sy);
     fds.renderLoop();
     fds.then = win.performance.now();
     fds.startTime = fds.then;
