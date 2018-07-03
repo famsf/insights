@@ -74,7 +74,7 @@
   };
 
   pages.calculateThreshholds = function () {
-    var wh = win.innerHeight
+    var wh = win.innerHeight;
     fds.snapDownthreshhold = wh * 0.25;
     fds.topBarDownthreshhold = wh * 0.4;
     fds.edgeDownthreshhold = -1 * wh * 0.1;
@@ -138,9 +138,6 @@
           page.classList.remove('triggered');
           pages.untriggerVideo(page);
         }
-      }
-      if (page.id === 'intro2') {
-        console.log('»', pageRect.top, fds.topBarDownthreshhold, fds.edgeDownthreshhold, pageNearEdge, otherCondition)
       }
       if (shouldTriggerTopBar) console.log(page.id, 'shouldTriggerTopBar', shouldTriggerTopBar);
       if (shouldTriggerTopBar) {
