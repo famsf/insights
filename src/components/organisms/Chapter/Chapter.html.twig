@@ -6,15 +6,18 @@
 
 <section class="chapter {{ classes }}" id="{{ id }}" data-chapter-index="{{ index }}" data-chapter-length="{{ pages|length }}">
   {% for page in pages %}
-    {# Use "withContext" to pass chapter/story data to CoverPage + chapter__title. #}
-    {# On CoverPage, send the story title instead of chapter title ("contextualTitle"). #}
+    {# Use "passthrough" to send chapter/story data to CoverPage + chapter__title. #}
+    {# On CoverPage, use the story title instead of chapter title. #}
+    {% set isFirstPageOfChapter = loop.first %}
+    {% set isCoverPage = index == 0 %}
     {%
       include "@organisms/Page/Page.html.twig" with page|merge({
         index: loop.index0,
-        withContext: loop.first,
-        contextualTitle: index > 0 ? title : story,
-        numeral: numeral,
         chapter: id,
+        passthrough: isFirstPageOfChapter ? {
+          title: isCoverPage ? story : title,
+          numeral: numeral,
+        } : {},
       }) only
     %}
   {% endfor %}

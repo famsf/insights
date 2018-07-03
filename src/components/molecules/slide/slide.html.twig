@@ -1,7 +1,7 @@
-{% import "@macros/inklude.html.twig" as inklu %}
+{% import "@macros/inklude.html.twig" as inklude %}
 <div class="item {{ intro_slide ? 'intro-slide' }}">
   <div class="item__content">
-    {{ inklu.de(components) }}
+    {{ inklude.components(_context) }}
     {% if caption %}
       {% include "@atoms/caption/caption.html.twig" with caption only %}
     {% endif %}
