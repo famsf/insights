@@ -1,4 +1,4 @@
-<section class="page {{ classes }}" id="{{ id|default(chapter.id ~ "p" ~  index) }}" data-page-index="{{ index }}">
+<section class="page {{ classes }}" id="{{ id|default(chapter ~ "p" ~  index) }}" data-page-index="{{ index }}">
   <div class="frame">
     {# Include the Page's context for access to parent variables,
     {# e.g., CoverPage and chapter__title need chapter and story data. #}
