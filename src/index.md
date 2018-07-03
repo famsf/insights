@@ -1,6 +1,7 @@
 ---
 layout: "templates/pages/digital-story.html.twig"
 title: La Prose
+bodyId: "la-prose"
 chapters:
   intro:
     title: Introduction

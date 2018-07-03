@@ -70,6 +70,10 @@
 @import 'base/typography';
 @import 'base/extends';
 
+// Import Environments.
+@import '../components/environments/KlimtRodin/KlimtRodin';
+@import '../components/environments/LaProse/LaProse';
+
 // Import Atoms.
 @import '../components/atoms/a/a';
 @import '../components/atoms/big_type/big_type';
@@ -120,7 +124,6 @@
 @import '../components/organisms/horizontal-image-slider/horizontal-image-slider';
 @import '../components/organisms/in-depth/in-depth';
 
-// Import Environments.
 
 
 /*
