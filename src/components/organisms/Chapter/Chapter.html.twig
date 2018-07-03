@@ -1,5 +1,5 @@
 {% macro id(chapter) %}
-  {{- chapter.id|default('chapter' ~ chapter.numeral) -}}
+  {{- chapter.id|default('chapter' ~ chapter.index) -}}
 {% endmacro %}
 {% import _self as get %}
 {% set id = get.id(_context) %}
