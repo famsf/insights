@@ -1,6 +1,6 @@
 ---
 layout: "templates/pages/digital-story.html.twig"
-story: La Prose
+title: La Prose
 tagline: From the de Young and Legion of Honor
 bodyId: "la-prose"
 chapters:

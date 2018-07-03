@@ -1,7 +1,7 @@
 {% for chapter in chapters %}
   {%
     include "@organisms/Chapter/Chapter.html.twig" with chapter|merge({
-      story: story,
+      story: title,
       index: loop.index0,
     }) only
   %}
