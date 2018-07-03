@@ -5,7 +5,6 @@ description: "Insights are a series of free, in-depth looks into our exhibitions
 stylesheets:
   - https://use.typekit.net/bmv1rht.css
   - /styles/main.css
-  # - /js/plyr/plyr.css
   - https://use.fontawesome.com/releases/v5.0.13/css/all.css
 
 scripts:
