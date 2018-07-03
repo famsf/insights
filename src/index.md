@@ -1,8 +1,6 @@
 ---
 layout: "templates/pages/digital-story.html.twig"
-title:
-  firstLine: La
-  secondLine: Prose
+title: La Prose
 chapters:
   intro:
     title: Introduction
