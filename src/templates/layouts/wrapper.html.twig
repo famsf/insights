@@ -30,7 +30,7 @@
         <link rel="stylesheet" type="text/css" href="{{ sheet }}?{{ 'now'|date('U') }}">
       {% endfor %}
   </head>
-  <body class="page-{{ pageSlug ?: title|default('')|clean_id }} {{bodyClass|clean_id}} {{classes}}">
+  <body class="{{bodyClass|clean_id}} {{classes}} {{bodyId|clean_id}}">
     <div id="main">
       {{ contents }}
     </div>

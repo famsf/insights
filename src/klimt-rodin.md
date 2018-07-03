@@ -1,5 +1,6 @@
 ---
 layout: "templates/pages/digital-story.html.twig"
+bodyId: "klimt-rodin"
 title:
   firstLine: Klimt &
   secondLine: Rodin
