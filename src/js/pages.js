@@ -1,7 +1,7 @@
 (function (fds, win, $) {
   var doc = win.document;
   var pages = {
-    debug: false
+    debugLog: true
   };
   fds.pages = pages;
   fds.pages.ambientVideos = {};
@@ -28,6 +28,7 @@
     pages.currentPage = pages.pages[0];
     pages.clearElement = doc.querySelector(clearElementSelector);
     pages.clearElementHeight = pages.clearElement.clientHeight;
+    pages.calculateThreshholds(win.innerHeight);
 
     if (locHash.length > 1) {
       params = locHash.split('&');
@@ -45,14 +46,12 @@
       }
       if (pages.hashes.currentPage) {
         startPage = doc.getElementById(pages.hashes.currentPage);
-        $('.tooltip').foundation('hide');
         pages.snapScroll(startPage);
       }
       else {
         pages.snapScroll(pages.currentPage);
       }
     }
-    pages.calculateEdgeThreshhold(win.innerHeight);
   };
 
   pages.getCurrentPage = function () {
@@ -74,13 +73,14 @@
     return pageEl;
   };
 
-  pages.calculateEdgeThreshhold = function (wh) {
-    fds.snapDownThreshhold = wh * 0.25;
-    fds.topBarDownThreshhold = wh * 0.4;
-    fds.edgeDownThreshHold = -1 * wh * 0.1;
-    fds.snapUpThreshhold = wh * 0.75;
-    fds.topBarUpThreshhold = wh * 0.6;
-    fds.edgeUpThreshHold = wh * 0.1;
+  pages.calculateThreshholds = function () {
+    var wh = win.innerHeight
+    fds.snapDownthreshhold = wh * 0.25;
+    fds.topBarDownthreshhold = wh * 0.4;
+    fds.edgeDownthreshhold = -1 * wh * 0.1;
+    fds.snapUpthreshhold = wh * 0.75;
+    fds.topBarUpthreshhold = wh * 0.6;
+    fds.edgeUpthreshhold = wh * 0.1;
   };
 
   pages.onScroll = function (scrollY, scrollDir, wh, didResize) {
@@ -113,36 +113,38 @@
       shouldStabilize = false;
 
       if (didResize) {
-        pages.calculateEdgeThreshhold(wh, scrollDir);
+        pages.calculateThreshholds(wh, scrollDir);
       }
 
       if (scrollDir === 'down') {
-        pageNearEdge = pageRect.top >= fds.edgeDownThreshHold;
-        otherCondition = pageRect.top <= fds.topBarDownThreshhold && pageRect.bottom > 0;
+        pageNearEdge = pageRect.top >= fds.edgeDownthreshhold;
+        otherCondition = pageRect.top <= fds.topBarDownthreshhold;
         shouldTriggerTopBar = pageNearEdge && otherCondition;
-        shouldAdvance = pageNearEdge && pageRect.top <= fds.snapDownThreshhold;
+        shouldAdvance = pageNearEdge && pageRect.top <= fds.snapDownthreshhold;
         if (!shouldAdvance && (pageRect.top >= wh || pageRect.bottom <= 0)) {
           page.classList.remove('triggered');
           pages.untriggerVideo(page);
         }
       }
       else if (scrollDir === 'up') {
-        pageNearEdge = pageRect.bottom >= wh - fds.edgeUpThreshHold;
-        otherCondition = pageRect.top <= fds.topBarUpThreshhold && pageRect.top < wh;
+        pageNearEdge = pageRect.bottom >= wh - fds.edgeUpthreshhold;
+        otherCondition = pageRect.top <= fds.topBarUpthreshhold && pageRect.top < wh;
         shouldTriggerTopBar = pageNearEdge && otherCondition;
         shouldAdvance =
           pageRect.top < 0 &&
-          pageRect.bottom >= fds.snapUpThreshhold &&
+          pageRect.bottom >= fds.snapUpthreshhold &&
           pageRect.bottom > 0;
         if (!shouldAdvance && (pageRect.top >= wh || pageRect.bottom <= 0)) {
           page.classList.remove('triggered');
           pages.untriggerVideo(page);
         }
       }
+      if (page.id === 'intro2') {
+        console.log('»', pageRect.top, fds.topBarDownthreshhold, fds.edgeDownthreshhold, pageNearEdge, otherCondition)
+      }
+      if (shouldTriggerTopBar) console.log(page.id, 'shouldTriggerTopBar', shouldTriggerTopBar);
       if (shouldTriggerTopBar) {
         pages.triggerTopBarEvents(page);
-      }
-      if (page !== currentPage && shouldAdvance && !fds.scrollLock) {
         if (pages.debug) pages.debugLog(page, pageRect, scrollDir);
         pages.snapScroll(page, scrollDir, wh);
       }
@@ -160,10 +162,10 @@
     console.log('  scroll.y:', fds.scroll.y);
     console.log('  fds.scrollLock:', scrollDir);
     if (scrollDir === 'down') {
-      console.log('  thresshold', fds.snapDownThreshhold);
+      console.log('  thresshold', fds.snapDownthreshhold);
     }
     else if (scrollDir === 'up') {
-      console.log('  thresshold', fds.snapUpThreshhold);
+      console.log('  thresshold', fds.snapUpthreshhold);
     }
     console.log('');
   };
