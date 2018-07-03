@@ -28,6 +28,7 @@ pluginOpts:
         sourceMap: true
         sourceComments: false
         includePaths:
+          - node_modules/
           - node_modules/foundation-sites/scss
           - node_modules/motion-ui/src
           - node_modules/owl.carousel/src/scss
