@@ -3,11 +3,11 @@ layout: "templates/pages/digital-story.html.twig"
 title:
   firstLine: Klimt &
   secondLine: Rodin
+tagline: From the de Young and Legion of Honor
 chapters:
   intro:
     title: Introduction
     numeral: A
-    active: true
     pages:
       intro1:
         classes: invert-top-bar
@@ -395,86 +395,88 @@ chapters:
             url: https://www.fillmurray.com/500/500
             alt: A picture of Bill Murray
             style: square
-          modal_button_text: Learn more
-          id: in-depth-example
-          full_screen: true
-          class: in-depth-modal
-          component:
-            template: "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig"
-            data:
-              slides:
-              - template: "@molecules/slide--in-depth__intro/slide--in-depth__intro.html.twig"
-                data:
-                  title: Scandals & Controversies
-                  text: 'Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem
-                    ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum
-                    lorem ipsum '
-                  picture:
+          button:
+            text: Learn more
+            id: in-depth-example
+          modal:
+            full_screen: true
+            class: in-depth-modal
+            component:
+              template: "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig"
+              data:
+                slides:
+                - template: "@molecules/slide--in-depth__intro/slide--in-depth__intro.html.twig"
+                  data:
+                    title: Scandals & Controversies
+                    text: 'Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem
+                      ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum
+                      lorem ipsum '
+                    picture:
+                      srcset:
+                      - min-width: 0px
+                        src: https://www.fillmurray.com/300/300
+                      - min-width: 768px
+                        src: https://www.fillmurray.com/400/400
+                      - min-width: 960px
+                        src: https://www.fillmurray.com/500/500
+                      url: https://www.fillmurray.com/500/500
+                      alt: A picture of Bill Murray
+                      style: square
+                - caption:
+                    id: in-depth-slide-1-caption
+                    brief: Lorem ipsum dolor sit amet
+                    text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                      et felis ac arcu cursus imperdiet. Mauris volutpat, ligula sit
+                      amet semper egestas, nunc velit pretium sem, id ornare nisl nisl
+                      nec erat.
+                  template: "@molecules/Picture/Picture.html.twig"
+                  data:
                     srcset:
                     - min-width: 0px
-                      src: https://www.fillmurray.com/300/300
-                    - min-width: 768px
-                      src: https://www.fillmurray.com/400/400
-                    - min-width: 960px
-                      src: https://www.fillmurray.com/500/500
-                    url: https://www.fillmurray.com/500/500
+                      src: https://www.fillmurray.com/900/630
+                    - min-width: 350px
+                      src: https://www.fillmurray.com/900/630
+                    - min-width: 800px
+                      src: https://www.fillmurray.com/900/630
+                    url: https://www.fillmurray.com/900/630
                     alt: A picture of Bill Murray
-                    style: square
-              - caption:
-                  id: in-depth-slide-1-caption
-                  brief: Lorem ipsum dolor sit amet
-                  text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                    et felis ac arcu cursus imperdiet. Mauris volutpat, ligula sit
-                    amet semper egestas, nunc velit pretium sem, id ornare nisl nisl
-                    nec erat.
-                template: "@molecules/Picture/Picture.html.twig"
-                data:
-                  srcset:
-                  - min-width: 0px
-                    src: https://www.fillmurray.com/900/630
-                  - min-width: 350px
-                    src: https://www.fillmurray.com/900/630
-                  - min-width: 800px
-                    src: https://www.fillmurray.com/900/630
-                  url: https://www.fillmurray.com/900/630
-                  alt: A picture of Bill Murray
-                  style: vertical
-              - caption:
-                  brief: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Nam et felis ac arcu cursus imperdiet. Mauris volutpat, ligula
-                    sit amet semper egestas, nunc velit pretium sem, id ornare nisl
-                    nisl nec erat. Lorem ipsum dolor sit amet, consectetur adipiscing
-                    elit. Nam et felis ac arcu cursus imperdiet. Mauris volutpat,
-                    ligula sit amet semper egestas, nunc velit pretium sem, id ornare
-                    nisl nisl nec erat.
-                template: "@molecules/Picture/Picture.html.twig"
-                data:
-                  srcset:
-                  - min-width: 0px
-                    src: https://www.stevensegallery.com/900/630
-                  - min-width: 350px
-                    src: https://www.stevensegallery.com/900/630
-                  - min-width: 800px
-                    src: https://www.stevensegallery.com/900/630
-                  url: https://www.stevensegallery.com/900/630
-                  alt: A picture of a kitten
-                  style: vertical
-              - template: "@molecules/Picture/Picture.html.twig"
-                caption: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Cras convallis est sit amet leo feugiat, in pulvinar tellus efficitur.
-                  Sed a leo nunc. Vivamus quam neque, accumsan et mauris in, mattis
-                  efficitur lorem.
-                data:
-                  srcset:
-                  - min-width: 0px
-                    src: https://www.placecage.com/900/630
-                  - min-width: 350px
-                    src: https://www.placecage.com/900/630
-                  - min-width: 800px
-                    src: https://www.placecage.com/900/630
-                  url: https://www.placecage.com/900/630
-                  alt: A picture of Nicolas Cage
-                  style: vertical
+                    style: vertical
+                - caption:
+                    brief: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      Nam et felis ac arcu cursus imperdiet. Mauris volutpat, ligula
+                      sit amet semper egestas, nunc velit pretium sem, id ornare nisl
+                      nisl nec erat. Lorem ipsum dolor sit amet, consectetur adipiscing
+                      elit. Nam et felis ac arcu cursus imperdiet. Mauris volutpat,
+                      ligula sit amet semper egestas, nunc velit pretium sem, id ornare
+                      nisl nisl nec erat.
+                  template: "@molecules/Picture/Picture.html.twig"
+                  data:
+                    srcset:
+                    - min-width: 0px
+                      src: https://www.stevensegallery.com/900/630
+                    - min-width: 350px
+                      src: https://www.stevensegallery.com/900/630
+                    - min-width: 800px
+                      src: https://www.stevensegallery.com/900/630
+                    url: https://www.stevensegallery.com/900/630
+                    alt: A picture of a kitten
+                    style: vertical
+                - template: "@molecules/Picture/Picture.html.twig"
+                  caption: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Cras convallis est sit amet leo feugiat, in pulvinar tellus efficitur.
+                    Sed a leo nunc. Vivamus quam neque, accumsan et mauris in, mattis
+                    efficitur lorem.
+                  data:
+                    srcset:
+                    - min-width: 0px
+                      src: https://www.placecage.com/900/630
+                    - min-width: 350px
+                      src: https://www.placecage.com/900/630
+                    - min-width: 800px
+                      src: https://www.placecage.com/900/630
+                    url: https://www.placecage.com/900/630
+                    alt: A picture of Nicolas Cage
+                    style: vertical
       c3p7:
         template: "@layouts/two_up--primary/two_up--primary.html.twig"
         data:

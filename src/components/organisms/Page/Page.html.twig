@@ -1,6 +1,14 @@
-{% import "@macros/inklude.html.twig" as inklude %}
-<section class="page {{ classes }}" id="{{ id }}" data-page-index="{{ pageIndex }}">
+<section class="page {{ classes }}" id="{{ id|default(chapter.id ~ "p" ~  index) }}" data-page-index="{{ index }}">
   <div class="frame">
-    {{ inklude.components(_context) }}
+    {# Include the Page's context for access to parent variables,
+    {# e.g., CoverPage and chapter__title need chapter and story data. #}
+    {% if withContext %}
+      {% for component in components %}
+        {% include component.template with component %}
+      {% endfor %}
+    {% else %}
+      {% import "@macros/inklude.html.twig" as inklu %}
+      {{ inklu.de(components) }}
+    {% endif %}
   </div>
 </section>

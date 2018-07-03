@@ -1,8 +1,8 @@
-{% import "@macros/inklude.html.twig" as inklude %}
+{% import "@macros/inklude.html.twig" as inklu %}
 <div class="one_up--primary fluid {{ gridframe|default('grid-frame') }} {{ classes }}">
   <div class="grid-x grid-margin-x {{ grid }}">
     <div class="cell {{ cols|default('medium-10') }} {{ offset|default('medium-offset-1') }}">
-      {{ inklude.components(_context) }}
+      {{ inklu.de(components) }}
     </div>
   </div>
 </div>

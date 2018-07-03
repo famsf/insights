@@ -1,5 +1,21 @@
+{% macro id(chapter) %}
+  {{- chapter.id|default('chapter' ~ chapter.numeral) -}}
+{% endmacro %}
+{% import _self as get %}
+{% set id = get.id(_context) %}
+
 <section class="chapter {{ classes }}" id="{{ id }}" data-chapter-index="{{ index }}" data-chapter-length="{{ pages|length }}">
-  {% for id, page in pages %}
-    {% include "@organisms/Page/Page.html.twig" with page|merge({id: id, pageIndex: loop.index0 }) only %}
+  {% for page in pages %}
+    {# Use "withContext" to pass chapter/story data to CoverPage + chapter__title. #}
+    {# On CoverPage, send the story title instead of chapter title ("contextualTitle"). #}
+    {%
+      include "@organisms/Page/Page.html.twig" with page|merge({
+        index: loop.index0,
+        withContext: loop.first,
+        contextualTitle: index > 0 ? title : story,
+        numeral: numeral,
+        chapter: id,
+      }) only
+    %}
   {% endfor %}
 </section>

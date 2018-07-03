@@ -1,17 +1,17 @@
-{% macro components(context) %}
+{% macro de(context) %}
 
   {# Only one component? #}
-  {% if context.template and context.data %}
-    {% include context.template with context.data only %}
+  {% if context.template %}
+    {% include context.template %}
 
   {# Single component, keyed as "component". #}
   {% elseif context.component %}
-    {% include context.component.template with context.component.data only %}
+    {% include context.component.template with context.component only %}
 
-  {# Multiple components, passed in either as a key or directly. #}
+  {# Multiple components, passed in either as a key or array. #}
   {% else %}
     {% for component in context.components|default(context) %}
-      {% include component.template with component.data only %}
+      {% include component.template with component only %}
     {% endfor %}
   {% endif %}
 {% endmacro %}

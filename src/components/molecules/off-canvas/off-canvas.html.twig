@@ -1,8 +1,8 @@
 <div class="off-canvas position-right" id="off-canvas" data-off-canvas data-transition="push">
-  {% include '@molecules/CoverPage/CoverPageForMenu.html.twig' %}
+  {% include '@molecules/CoverPage/CoverPageForMenu.html.twig' with { title: title } only %}
   <div class="off-canvas__buttons text-center">
     <a href="#" class="button">Buy Tickets</a>
   </div>
   {% include '@molecules/menu--mobile/menu--mobile.html.twig' with { chapters: chapters } only %}
-  {% include '@molecules/Footer/Footer.html.twig' %}
+  {% include '@molecules/Footer/Footer.html.twig' with only %}
 </div>
