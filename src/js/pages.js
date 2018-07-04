@@ -219,7 +219,7 @@
           controls: ['play', 'progress', 'current-time', 'mute', 'captions', 'settings', 'pip', 'fullscreen']
         });
         plyr.on('ready', function (e) {
-          pages.embeddedVideopls[embeddedVideo.id] = plyr;
+          pages.embeddedVideos[embeddedVideo.id] = plyr;
         });
       }
     }
