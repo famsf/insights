@@ -46,16 +46,21 @@
       }
       if (pages.hashes.currentPage) {
         startPage = doc.getElementById(pages.hashes.currentPage);
-        pages.snapScroll(startPage);
       }
       else {
-        pages.snapScroll(pages.currentPage);
+        startPage = pages.currentPage;
       }
+      console.log('startPage = ', startPage);
+      pages.snapScroll(startPage);
     }
   };
 
   pages.getCurrentPage = function () {
     return pages.currentPage || pages.pages[0];
+  };
+
+  pages.nextPage = function (el) {
+    pages.snapScroll(el.nextElementSibling, 'down', win.innerHeight);
   };
 
   pages.setCurrentPage = function (pageEl) {
@@ -139,7 +144,6 @@
           pages.untriggerVideo(page);
         }
       }
-      if (shouldTriggerTopBar) console.log(page.id, 'shouldTriggerTopBar', shouldTriggerTopBar);
       if (shouldTriggerTopBar) {
         pages.triggerTopBarEvents(page);
         if (pages.debug) pages.debugLog(page, pageRect, scrollDir);
@@ -170,7 +174,7 @@
   pages.snapScroll = function (el, scrollDir, wh) {
     var scrollTo;
     var isPage;
-    if (fds.scrollLock || el === pages.getCurrentPage()) return;
+    if (fds.scrollLock || el === pages.getCurrentPage() || !el) return;
     fds.scrollLock = true;
     document.body.style.overflow = 'hidden';
     isPage = el.classList.contains('page');
