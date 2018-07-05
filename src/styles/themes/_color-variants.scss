@@ -33,6 +33,17 @@
     }
   }
 
+  &.theme--primary-light {
+    background: rgba($primary-color, .10);
+
+    h1,
+    h2,
+    h3,
+    p {
+      color: $primary-color;
+    }
+  }
+
 }
 
 * {
