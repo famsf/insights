@@ -29,7 +29,7 @@ chapters:
       cols: medium-8
       offset: medium-offset-2
       dropcap: false
-      classes: big_type
+      classes: big_type theme--primary
       components:
       - template: "@atoms/h2/h2.html.twig"
         text: Introduction
