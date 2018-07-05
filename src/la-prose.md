@@ -102,7 +102,7 @@ chapters:
 
   # c1p4
   - components:
-    - template: "@organisms/scroll-comparisson/scroll-comparisson.html.twig"
+    - template: "@organisms/scroll-comparison/scroll-comparison.html.twig"
       left:
         components:
         - template: "@molecules/Picture/PictureWithCaption.html.twig"
