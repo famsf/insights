@@ -1,0 +1,33 @@
+%scroll-comparison {
+
+  .cell.active,
+  .cell:hover {
+    .picture {
+      /*
+       we may have to have to cater it to different breakpoints
+       somewhat specifically,
+       sadly animations dont resolve well when
+       transforming max-height to 100% or auto
+      */
+      @include breakpoint(medium) {
+        max-height: 550px;
+      }
+
+    }
+  }
+  .cell:nth-child(1) {
+    border: 1px #f00 solid;
+  }
+  .picture {
+    overflow: hidden;
+    max-height: 400px;
+    transition-property: max-height;
+    transition-duration: 0.325s;
+    transition-timing-function: ease-in-out;
+  }
+
+}
+
+.scroll-comparison {
+  @extend %scroll-comparison;
+}
