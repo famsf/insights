@@ -41,18 +41,19 @@ Markup: video--embed.html.twig
     }
   }
 
-  .video--embed__controls {
+  .plyr-video {
+    max-height: 100vh;
+  }
+  
+  .plyr--video .plyr__controls {
+    background: none;
+    padding-left: 16.6667%;
+    padding-right: 16.6667%;
     position: fixed;
     top: auto;
     bottom: 2em;
     height: 3em;
     width: 100%;
-  }
-
-  .plyr--video .plyr__controls {
-    background: none;
-    padding-left: 16.6667%;
-    padding-right: 16.6667%;
   }
 
   .plyr__video-wrapper {
@@ -72,13 +73,6 @@ Markup: video--embed.html.twig
       }
     }
   }
-  // 
-  // iframe {
-  //   @include object-fit;
-  //   position: relative;
-  //   height: 100vh;
-  //   overflow: hidden;
-  // }
 }
 
 .video--embed.file {
