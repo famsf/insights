@@ -4,8 +4,6 @@
     debugLog: true
   };
   fds.pages = pages;
-  fds.pages.ambientVideos = {};
-  fds.pages.embeddedVideos = {};
   fds.pages.hashes = {};
   fds.pages.byId = {};
 
@@ -53,7 +51,6 @@
       else {
         startPage = pages.currentPage;
       }
-      console.log('startPage = ', startPage);
       pages.snapScroll(startPage);
     }
   };
@@ -234,7 +231,6 @@
 
   pages.triggerPage = function (page) {
     var pageEl = page.el;
-    console.log('triggerPage»', page);
     pageEl.classList.add('triggered');
     pages.triggerVideo(page);
   };

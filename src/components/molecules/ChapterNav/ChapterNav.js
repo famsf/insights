@@ -36,7 +36,6 @@
     var count = chapterNav.navItems.length;
     var item = chapterNav.navItems[targetChapter.dataset.chapterIndex];
     var i;
-    console.log('»»»', targetChapter.dataset.chapterIndex);
     for (i = 0; i < count; i++) {
       if (i <= chapterIndex) {
         chapterNav.navItems[i].classList.add('past');
