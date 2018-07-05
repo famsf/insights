@@ -547,6 +547,7 @@ chapters:
   # c3p2
   - components:
     - template: "@layouts/one_up--primary/one_up--primary.html.twig"
+      grid: align-middle
       components:
       - template: "@molecules/standalone-quote/standalone-quote.html.twig"
         component_name: standalone-quote
