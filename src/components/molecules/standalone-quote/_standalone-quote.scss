@@ -61,6 +61,13 @@ Styleguide COMPONENTS.standalone-quote
       }
     }
   }
+
+  .theme--primary-dark & {
+    q,
+    cite  {
+      color: $white;
+    }
+  }
 }
 
 .standalone-quote {

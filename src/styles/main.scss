@@ -117,6 +117,9 @@ $plyr-color-heather: #b7c5cd !default;
 @import 'base/typography';
 @import 'base/extends';
 
+// Import Themes.
+@import 'themes/color-variants';
+
 // Import Environments.
 @import '../components/environments/KlimtRodin/KlimtRodin';
 @import '../components/environments/LaProse/LaProse';
@@ -169,16 +172,6 @@ $plyr-color-heather: #b7c5cd !default;
 @import '../components/organisms/Page/Page';
 @import '../components/organisms/horizontal-image-slider/horizontal-image-slider';
 @import '../components/organisms/in-depth/in-depth';
-
-
-
-/*
-FAMSF Insights Navigation
-
-Styleguide nav
-*/
-
-
 
 html,
 body {

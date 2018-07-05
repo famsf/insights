@@ -1,0 +1,31 @@
+%color-variants {
+
+  &.theme--dark {
+    background-color: $black;
+
+    p {
+      color: $white;
+    }
+  }
+
+  &.theme--primary {
+    background: $white;
+
+    p {
+      color: $primary-color;
+    }
+  }
+
+  &.theme--primary-dark {
+    background: $primary-color;
+
+    p {
+      color: $white;
+    }
+  }
+
+}
+
+* {
+  @extend %color-variants;
+}
