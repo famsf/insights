@@ -52,19 +52,11 @@
   };
 
   chapterNav.onNavItemClicked = function (target) {
-    var chap;
-    var currentPage;
-    var scrollTo;
-    var chapterElement;
-    chapterElement = fds.rootElement.querySelector(target.getAttribute('href'));
-    currentPage = chapterElement.querySelector('.page');
-    window.location.hash = '&chapter=' + chapterElement.id + '&page=' + currentPage.id;
-    scrollTo = chapterElement.offsetTop + Number(currentPage.getAttribute('data-top-target'));
-    fds.pages.setCurrentPage(currentPage);
-    fds.scrollLock = true;
-    fds.performantScrollTo(scrollTo, function () {
-      fds.scrollLock = false;
-    }, 475);
+    var page;
+    var chapter;
+    chapter = fds.rootElement.querySelector(target.getAttribute('href'));
+    page = chapter.querySelector('.page');
+    fds.pages.snapScroll(page, null, win.innerHeight);
   };
 
   chapterNav.onScroll = function () {

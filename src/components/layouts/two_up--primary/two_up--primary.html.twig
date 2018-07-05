@@ -1,10 +1,14 @@
 {% import "@macros/inklude.html.twig" as inklude %}
+{% macro print(value, default) %}
+  {{- value is defined ? value : default -}}
+{% endmacro %}
+{% import _self as do %}
 <div class="two_up--primary fluid {{ classes }}">
   <div class="wrapper grid-x grid-margin-x {{ grid }}" id="{{ id }}">
-    <div id="{{ left.id }}" class="cell {{ left.cols|default('medium-4') }} {{ left.offset|default('medium-offset-1') }}" {{ left.attributes }}>
+    <div id="{{ left.id }}" class="cell {{ do.print(left.cols, 'medium-4') }} {{ do.print(left.offset, 'medium-offset-1') }}" {{ left.attributes }}>
       {{ inklude.components(left) }}
     </div>
-    <div id="{{ right.id }}" class="cell {{ right.cols|default('medium-4') }} {{ right.offset|default('medium-offset-1') }}" {{ right.attributes }}>
+    <div id="{{ right.id }}" class="cell {{ do.print(right.cols, 'medium-4') }} {{ do.print(right.offset, 'medium-offset-1') }}" {{ right.attributes }}>
       {{ inklude.components(right) }}
     </div>
   </div>

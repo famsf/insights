@@ -35,7 +35,7 @@
   .frame > * > .grid-x,
   .frame > .grid-x {
     min-height: 100vh;
-    padding: 4rem 2rem 2rem 2rem;
+    padding: 6rem 2rem 2rem 2rem;
 
     @include breakpoint(medium) {
       padding: 8rem 5rem 5rem 5rem;
