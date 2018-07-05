@@ -13,10 +13,6 @@
   .frame {
     @extend %fill_screen;
     box-sizing: border-box;
-    > .fluid {
-      padding-top: 9rem;
-      padding-bottom: 4rem;
-    }
   }
 
   .fluid {

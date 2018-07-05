@@ -30,11 +30,12 @@ chapters:
       offset: medium-offset-2
       dropcap: false
       classes: big_type theme--primary
+      grid: align-middle
       components:
       - template: "@atoms/h2/h2.html.twig"
         text: Introduction
       - template: "@atoms/textarea/textarea.html.twig"
-        text: "<p>By 1913, Paris had been for more than a decade the epicenter of artistic revolution in Europe. That year, artist Sonia Delaunay and poet Blaise Cendrars collaborated on <em>La prose du Transsibérien et de la petite Jehanne de France (Prose of the Trans-Siberian and of Little Jehanne of France)</em>. Hailed as the first “simultaneous book,” the artwork was conceived as a unified experience of text and image, indivisible and apprehended concurrently.<p>"
+        text: "<p>By 1913, Paris had been for more than a decade the epicenter of artistic revolution in Europe. That year, artist Sonia Delaunay and poet Blaise Cendrars collaborated on <em>La prose du Transsibérien et de la petite Jehanne de France (Prose of the Trans-Siberian and of Little Jehanne of France)</em>. Hailed as the first “simultaneous book,” the artwork was conceived as a unified experience of text and image, indivisible and apprehended concurrently.</p>"
 
   # iii
   - classes: theme--dark
