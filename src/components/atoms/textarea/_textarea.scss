@@ -12,7 +12,7 @@ Styleguide COMPONENTS.textarea
 %textarea {
   $textarea-font-size: 1em;
   $textarea-line-height: $textarea-font-size * 1.6;
-  $textarea-leading-ratio: 1 / (10 / 3);
+  $textarea-leading-ratio: 1 / (10 / 4);
   $textarea-font-family: $body-font-family;
 
   font-family: $textarea-font-family;
@@ -25,7 +25,8 @@ Styleguide COMPONENTS.textarea
     > p:first-of-type {
       &:first-letter {
         float: left;
-        font-size: $textarea-font-size * 10;
+        font-size: $textarea-font-size * 8.25;
+        font-weight: 900;
         line-height: $textarea-line-height * .45;
         margin-right: $textarea-font-size / 15;
       }
