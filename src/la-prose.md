@@ -29,15 +29,16 @@ chapters:
       cols: medium-8
       offset: medium-offset-2
       dropcap: false
-      classes: big_type
+      classes: big_type theme--primary
+      grid: align-middle
       components:
       - template: "@atoms/h2/h2.html.twig"
         text: Introduction
       - template: "@atoms/textarea/textarea.html.twig"
-        text: "<p>By 1913, Paris had been for more than a decade the epicenter of artistic revolution in Europe. That year, artist Sonia Delaunay and poet Blaise Cendrars collaborated on <em>La prose du Transsibérien et de la petite Jehanne de France (Prose of the Trans-Siberian and of Little Jehanne of France)</em>. Hailed as the first “simultaneous book,” the artwork was conceived as a unified experience of text and image, indivisible and apprehended concurrently.<p>"
+        text: "<p>By 1913, Paris had been for more than a decade the epicenter of artistic revolution in Europe. That year, artist Sonia Delaunay and poet Blaise Cendrars collaborated on <em>La prose du Transsibérien et de la petite Jehanne de France (Prose of the Trans-Siberian and of Little Jehanne of France)</em>. Hailed as the first “simultaneous book,” the artwork was conceived as a unified experience of text and image, indivisible and apprehended concurrently.</p>"
 
   # iii
-  - classes: dark
+  - classes: theme--dark
     components:
     - template: "@atoms/video--embed/video--embed.html.twig"
       id: WmrP8JhWb2U
@@ -62,6 +63,8 @@ chapters:
   # c1p2
   - components:
     - template: "@layouts/one_up--primary/one_up--primary.html.twig"
+      classes: theme--primary-dark
+      grid: align-middle
       components:
       - template: "@molecules/standalone-quote/standalone-quote.html.twig"
         component_name: standalone-quote
@@ -544,6 +547,7 @@ chapters:
   # c3p2
   - components:
     - template: "@layouts/one_up--primary/one_up--primary.html.twig"
+      grid: align-middle
       components:
       - template: "@molecules/standalone-quote/standalone-quote.html.twig"
         component_name: standalone-quote
@@ -733,7 +737,7 @@ chapters:
             dropcap: false
 
   # c4p3
-  - classes: dark
+  - classes: theme--dark
     components:
     - template: "@atoms/video--embed/video--embed.html.twig"
       id: 6vGKaYv7Iho
@@ -831,7 +835,7 @@ chapters:
             style: horizontal
 
   # c5p4
-  - classes: dark
+  - classes: theme--dark
     components:
     - template: "@atoms/video--embed/video--embed.html.twig"
       id: p6io0gBiXe0
@@ -856,7 +860,7 @@ chapters:
   # c6p2
   - components:
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
-      classes: dark
+      classes: theme--dark
       right:
         components:
           - template: "@atoms/h3/h3.html.twig"
@@ -914,7 +918,7 @@ chapters:
             style: horizontal
 
   # c6p4
-  - classes: dark
+  - classes: theme--dark
     components:
     - template: "@atoms/video--embed/video--embed.html.twig"
       id: _QWKwhv8MG4

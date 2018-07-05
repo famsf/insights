@@ -12,15 +12,17 @@ Styleguide COMPONENTS.commentary
 %commentary {
   $commentary-margin-default: 5rem;
   $commentary-padding-default: 4vw;
+  margin-top: 4rem;
+
+  @include breakpoint(large) {
+    margin-top: 0;
+  }
 
   .commentary__content {
-    margin: 25vh 1rem $commentary-margin-default 1rem;
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
     border: 2px solid $medium-gray;
-
-    @include breakpoint(large) {
-      max-height: calc(100vh - 10rem);
-      margin: $commentary-margin-default 0;
-    }
   }
 
   .commentary__layout-left,
@@ -44,10 +46,6 @@ Styleguide COMPONENTS.commentary
     }
   }
 
-  &.no-img .commentary__layout-left {
-    padding-top: $commentary-padding-default;
-  }
-
   .commentary__layout-right {
     padding: $commentary-padding-default*3 $commentary-padding-default $commentary-padding-default $commentary-padding-default;
     position: relative;
@@ -56,6 +54,21 @@ Styleguide COMPONENTS.commentary
     @include breakpoint(large) {
       padding: $commentary-padding-default $commentary-padding-default*1.5 $commentary-padding-default $commentary-padding-default;
       margin-bottom: 0;
+    }
+  }
+
+  &.no-img {
+    margin-top: 0;
+
+    .commentary__layout-left {
+      padding-top: $commentary-padding-default;
+      transform: translateY(0);
+    }
+
+    .commentary__layout-right {
+      margin-bottom: 0;
+      padding-bottom: $commentary-padding-default;
+      transform: translateY(0);
     }
   }
 

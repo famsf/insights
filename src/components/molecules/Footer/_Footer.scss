@@ -49,7 +49,7 @@ footer.footer {
 
   .footer__navigation {
     font-size: $small-font-size;
-    margin-top: auto;
+    margin: auto -2rem 0 -2rem;
     padding: 2rem 0;
     border-top: 2px solid $medium-gray;
     color: $dark-gray;
