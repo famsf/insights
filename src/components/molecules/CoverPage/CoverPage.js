@@ -4,7 +4,7 @@
     if (fds.coverPageElement) {
       fds.coverPageElement.backgroundClipPolyfill({
         patternID: 'mypattern',
-        patternURL: fds.coverPageElement.getAttribute('data-bg-image'),
+        patternURL: fds.coverPageElement.dataset.bgImage,
         class: 'headline'
       });
       fds.coverPage.initialize();
@@ -12,8 +12,8 @@
   });
 
   fds.coverPage.initialize = function () {
-    var imgSrc = fds.coverPageElement.getAttribute('data-bg-image');
-    var imgAlt = fds.coverPageElement.getAttribute('data-bg-image-alt');
+    var imgSrc = fds.coverPageElement.dataset.bgImage;
+    var imgAlt = fds.coverPageElement.dataset.bgImageAlt;
     var downArrow = fds.coverPageElement.querySelector('.down_arrow');
     var img = new Image();
     img.setAttribute('alt', imgAlt);

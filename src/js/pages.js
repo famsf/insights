@@ -7,6 +7,7 @@
   fds.pages.ambientVideos = {};
   fds.pages.embeddedVideos = {};
   fds.pages.hashes = {};
+  fds.pages.byId = {};
 
   pages.initialize = function (containerSelector, pageSelector, clearElementSelector) {
     var locHash = window.location.hash.substr(1);
@@ -29,7 +30,8 @@
     pages.clearElement = doc.querySelector(clearElementSelector);
     pages.clearElementHeight = pages.clearElement.clientHeight;
     pages.calculateThreshholds(win.innerHeight);
-    pages.cachePageRelativesAsDataAttributes();
+
+    pages.populatePagesById();
 
     if (locHash.length > 1) {
       params = locHash.split('&');
@@ -56,39 +58,59 @@
     }
   };
 
-  pages.cachePageRelativesAsDataAttributes = function (pageElements) {
-    var pageEls = pages.pages;
+  pages.populatePagesById = function () {
+    /*
+      Both for performance in accessing data, and to possibly allow us
+      to pull the active page out of the chapter dom eleemnt for scroll-stikcyness
+      smooth solution.
+      If that happens, we'll be able to update relationships and re-cache.
+    */
     var i;
-    var page;
-    var count = pageEls.length;
+    var pageEl;
+    var chapter;
+    var ambientVideo;
+    var embeddedVideo;
+    var count = pages.pages.length;
     for (i = 0; i < count; i++) {
-      page = pageEls[i];
-      page.setAttribute('data-parent-element', page.parentElement);
-      page.setAttribute('data-next-sibling', page.nextElementSibling);
+      pageEl = pages.pages[i];
+      chapter = pageEl.parentElement;
+      ambientVideo = pageEl.querySelector('.ambient_video .plyr_target');
+      embeddedVideo = pageEl.querySelector('.video--embed .plyr_target');
+      pages.byId[pageEl.id] = {
+        id: pageEl.id,
+        el: pageEl,
+        chapter: chapter,
+        chapterIndex: chapter.dataset.chapterIndex,
+        chapterId: chapter.id,
+        nextPage: pageEl.nextElementSibling,
+        index: pageEl.dataset.pageIndex,
+        ambientVideoEl: ambientVideo,
+        embeddedVideoEl: embeddedVideo
+      };
     }
   };
 
   pages.getCurrentPage = function () {
-    return pages.currentPage || pages.pages[0];
+    return pages.currentPage || pages.byId[pages.pages[0].id];
   };
 
-  pages.nextPage = function (el) {
-    pages.snapScroll(el.nextElementSibling, 'down', win.innerHeight);
+  pages.nextPage = function (page) {
+    pages.snapScroll(page.el.nextElementSibling, 'down', win.innerHeight);
   };
 
   pages.setCurrentPage = function (page) {
-    var parent = page.getAttribute('data-parent-element');
-    var chapterId = parent.id;
-    if (pages.currentPage) {
-      pages.oldCurrentPage = pages.currentPage;
-      pages.oldCurrentPage.classList.remove('current');
+    var pageEl = page.el;
+    console.log('setCurrentPage', page.el.classList);
+    pages.oldCurrentPage = pages.currentPage;
+    if (pages.oldCurrentPage && pages.oldCurrentPage.el) {
+      pages.oldCurrentPage.el.classList.remove('current');
     }
     pages.currentPage = page;
-    fds.chapterNav.setActiveItem(parent);
-    pages.currentPage.classList.add('current');
-    window.location.hash = '&chapter=' + chapterId + '&page=' + page.id;
-    pages.hashes.page = page.id;
-    pages.hashes.chapter = chapterId;
+    fds.chapterNav.setActiveItem(page.chapter);
+    pages.currentPage.el.classList.add('current');
+    window.location.hash = '&chapter=' + page.chapterId + '&page=' + pageEl.id;
+    pages.hashes.page = pageEl.id;
+    pages.hashes.chapter = page.chapterId;
     return page;
   };
 
@@ -118,11 +140,13 @@
     var pageRect;
     var pageIterator;
     var otherCondition;
+    var pageEl;
 
     // Loop through pages, we can eventually filter out doing stuff to pages that are offscreen.
     for (pageIterator = 0; pageIterator < count; pageIterator++) {
-      page = pages.pages[pageIterator];
-      pageRect = page.getBoundingClientRect();
+      pageEl = pages.pages[pageIterator];
+      page = pages.byId[pageEl.id];
+      pageRect = pageEl.getBoundingClientRect();
       pageTopAboveViewportBottom = pageRect.top <= pageRect.height;
       pageTopBelowViewportBottom = pageRect.top > pageRect.height;
       pageBottomBelowViewportTop = pageRect.top + pageRect.height > 0;
@@ -141,8 +165,8 @@
         shouldTriggerTopBar = pageNearEdge && otherCondition;
         shouldAdvance = pageNearEdge && pageRect.top <= fds.snapDownthreshhold;
         if (!shouldAdvance && (pageRect.top >= wh || pageRect.bottom <= 0)) {
-          page.classList.remove('triggered');
-          pages.untriggerVideo(page);
+          pageEl.classList.remove('triggered');
+          pages.untriggerVideo(pageEl);
         }
       }
       else if (scrollDir === 'up') {
@@ -154,24 +178,24 @@
           pageRect.bottom >= fds.snapUpthreshhold &&
           pageRect.bottom > 0;
         if (!shouldAdvance && (pageRect.top >= wh || pageRect.bottom <= 0)) {
-          page.classList.remove('triggered');
-          pages.untriggerVideo(page);
+          pageEl.classList.remove('triggered');
+          pages.untriggerVideo(pageEl);
         }
       }
       if (shouldTriggerTopBar) {
-        pages.triggerTopBarEvents(page);
-        if (pages.debug) pages.debugLog(page, pageRect, scrollDir);
+        pages.triggerTopBarEvents(pageEl);
+        if (pages.debug) pages.debugLog(pageEl, pageRect, scrollDir);
         pages.snapScroll(page, scrollDir, wh);
       }
     }
   };
 
-  pages.debugLog = function (page, pageRect, scrollDir) {
+  pages.debugLog = function (pageEl, pageRect, scrollDir) {
     /*
       Please leave this in here for now, very useful for debugging
     */
     console.log('');
-    console.log('»» Snapping to: ', page.id);
+    console.log('»» Snapping to: ', pageEl.id);
     console.log('  top:', pageRect.top);
     console.log('  bottom:', pageRect.bottom);
     console.log('  scroll.y:', fds.scroll.y);
@@ -185,22 +209,22 @@
     console.log('');
   };
 
-  pages.snapScroll = function (el, scrollDir, wh) {
+  pages.snapScroll = function (page, scrollDir, wh) {
     var scrollTo;
-    var parent = el.getAttribute('data-parent-element');
-    if (fds.scrollLock || el === pages.getCurrentPage() || !el) return;
+    var pageEl = page.el;
+    var chapter = page.chapter;
+    if (fds.scrollLock || page === pages.getCurrentPage() || !page) return;
     fds.scrollLock = true;
     document.body.style.overflow = 'hidden';
-    pages.setCurrentPage(el);
+    pages.setCurrentPage(page);
     if (scrollDir === 'down') {
-      scrollTo = el.getAttribute('data-parent-element').offsetTop + el.offsetTop;
+      scrollTo = chapter.offsetTop + pageEl.offsetTop;
     }
     else {
-      scrollTo = (parent.offsetTop + el.offsetTop + el.clientHeight) - wh;
+      scrollTo = (chapter.offsetTop + pageEl.offsetTop + pageEl.clientHeight) - wh;
     }
     fds.performantScrollTo(scrollTo, function () {
-      el.classList.add('triggered');
-      pages.triggerVideo(el);
+      pages.triggerPage(page);
       setTimeout(function () {
         fds.scrollLock = false;
         document.body.style.overflow = 'auto';
@@ -208,32 +232,36 @@
     }, 475);
   };
 
-  pages.triggerVideo = function (page) {
-    var vidElement = page.querySelector('.ambient_video .plyr_target');
-    var embeddedVideo = page.querySelector('.video--embed .plyr_target');
-    var plyr;
+  pages.triggerPage = function (page) {
+    var pageEl = page.el;
+    console.log('triggerPage»', page);
+    pageEl.classList.add('triggered');
+    pages.triggerVideo(page);
+  };
 
-    if (vidElement) {
-      if (!pages.ambientVideos[vidElement.id]) {
-        plyr = new Plyr(vidElement, {
+  pages.triggerVideo = function (page) {
+    var plyr;
+    var pageEl = page.el;
+    if (page.ambientVideoEl) {
+      if (!page.embeddedVideo) {
+        plyr = new Plyr(page.ambientVideoEl, {
           hideControls: 'true'
         });
         plyr.on('ready', function (e) {
           e.detail.plyr.muted = true;
           e.detail.plyr.play();
         });
-        pages.ambientVideos[vidElement.id] = plyr;
+        page.ambientVideo = plyr;
       }
     }
-
-    if (embeddedVideo) {
-      if (!pages.embeddedVideos[embeddedVideo.id]) {
-        plyr = new Plyr(embeddedVideo, {
+    if (page.embeddedVideoEl) {
+      if (!page.embeddedVideo) {
+        plyr = new Plyr(page.embeddedVideoEl, {
           hideControls: 'false',
           controls: ['play', 'progress', 'current-time', 'mute', 'captions', 'settings', 'pip', 'fullscreen']
         });
         plyr.on('ready', function (e) {
-          pages.embeddedVideos[embeddedVideo.id] = plyr;
+          page.embeddedVideo = plyr;
         });
       }
     }
@@ -241,37 +269,36 @@
 
   pages.untriggerVideo = function (page) {
     var plyr;
-    var vidElement = page.querySelector('.ambient_video .plyr_embed');
-    var embeddedVideo = page.querySelector('.video--embed .plyr_target');
-    if (vidElement) {
-      plyr = pages.ambientVideo[vidElement.id];
+    var pageEl = page.el;
+    if (page.ambientVideo) {
+      plyr = page.ambientVideo;
       if (plyr) {
         plyr.stop();
       }
     }
-    if (embeddedVideo) {
-      plyr = pages.embeddedVideos[embeddedVideo.id];
+    if (page.embeddedVideo) {
+      plyr = page.embeddedVideo;
       if (plyr) {
         plyr.stop();
       }
     }
   };
 
-  pages.triggerTopBarEvents = function (page) {
-    if (page.classList.contains('dark')) {
+  pages.triggerTopBarEvents = function (pageEl) {
+    if (pageEl.classList.contains('dark')) {
       doc.body.classList.add('dark');
     }
     else {
       doc.body.classList.remove('dark');
     }
-    if (page.classList.contains('invert-top-bar') && !fds.topBar.el.classList.contains('inverted-top-bar')) {
-      page.dispatchEvent(new CustomEvent('topBarEvent', {
+    if (pageEl.classList.contains('invert-top-bar') && !fds.topBar.el.classList.contains('inverted-top-bar')) {
+      pageEl.dispatchEvent(new CustomEvent('topBarEvent', {
         bubbles: true,
         detail: { action: 'invert' }
       }, { passive: true }));
     }
     else {
-      page.dispatchEvent(new CustomEvent('topBarEvent', {
+      pageEl.dispatchEvent(new CustomEvent('topBarEvent', {
         bubbles: true,
         detail: { action: 'reset' }
       }, { passive: true }));
