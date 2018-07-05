@@ -77,6 +77,14 @@ Styleguide COMPONENTS.in-depth
       transform: translate(-8rem, 0);
     }
   }
+
+  // Theme overrides.
+  .theme--dark &,
+  &.theme--dark {
+    .in-depth__title {
+      color: $white;
+    }
+  }
 }
 
 %in-depth-modal {
@@ -209,7 +217,6 @@ Styleguide COMPONENTS.in-depth
         }
       }
     }
-
   }
 }
 
