@@ -1,7 +1,44 @@
 %scroll-comparison {
+  $transDuration: 0.25s;
+  .cell {
 
-  .cell.active,
-  .cell:hover {
+    width: calc(25% - 1.875rem);
+    transition-property: width;
+    transition-duration: 0.475s;
+    transition-timing-function: ease-out;
+    .picture {
+      position: relative;
+      z-index: 5;
+    }
+    .caption {
+      position: relative;
+      @include heightTransition;
+      transition-property: opacity, max-height, top;
+      transition-delay: 0.475s;
+      opacity: 0;
+      z-index: 2;
+      top: -5rem;
+    }
+    h3 {
+      font-family: $alternate-header-font-family;
+    }
+    .textarea {
+      transition-delay: 0.475s;
+      margin-top: 0.5rem;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      @include heightTransition;
+    }
+  }
+  .cell.active {
+
+    width: calc(41.66667% - 1.875rem);
+
+    .caption {
+      opacity: 1;
+      top: 0;
+    }
     .picture {
       /*
        we may have to have to cater it to different breakpoints
@@ -11,12 +48,24 @@
       */
       @include breakpoint(medium) {
         max-height: 550px;
+        width: 100%;
       }
 
     }
-  }
-  .cell:nth-child(1) {
-    border: 1px #f00 solid;
+    h3,
+    .textarea,
+    .caption {
+      opacity: 1;
+    }
+    h3 {
+      max-height: 3em;
+    }
+    .textarea {
+      max-height: 80vh;
+    }
+    .caption {
+      max-height: 3em;
+    }
   }
   .picture {
     overflow: hidden;

@@ -186,12 +186,26 @@
       if (isPage) {
         el.classList.add('triggered');
         pages.triggerVideo(el);
+        pages.instantiateScrollComparison(el);
       }
       setTimeout(function () {
         fds.scrollLock = false;
         document.body.style.overflow = 'auto';
       }, 250);
     }, 475);
+  };
+
+  pages.instantiateScrollComparison = function (pageEl) {
+    var i = 0;
+    var scEl;
+    var sc = pageEl.querySelectorAll('.scroll-comparison');
+    for (i = 0; i < sc.length; i++) {
+      scEl = sc[i];
+      console.log('instantiateScrollComparison', pageEl, scEl);
+      if (scEl) {
+        fds.scrollComparison.initialize(scEl);
+      }
+    }
   };
 
   pages.triggerVideo = function (page) {

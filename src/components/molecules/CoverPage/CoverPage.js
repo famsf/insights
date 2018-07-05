@@ -36,7 +36,7 @@
     fds.coverPageElement.classList.add('loaded');
     setTimeout(function () {
       fds.coverPageElement.classList.add('post_loaded');
-      win.document.getElementById('intro1').classList.add('triggered');
+      fds.rootElement.querySelector('.page').classList.add('triggered');
       setTimeout(function () {
         fds.coverPageElement.classList.add('initialized');
       }, 750);
