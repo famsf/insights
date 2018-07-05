@@ -63,6 +63,7 @@ chapters:
   - components:
     - template: "@layouts/one_up--primary/one_up--primary.html.twig"
       classes: theme--primary-dark
+      grid: align-middle
       components:
       - template: "@molecules/standalone-quote/standalone-quote.html.twig"
         component_name: standalone-quote
