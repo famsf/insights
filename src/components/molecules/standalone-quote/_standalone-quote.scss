@@ -25,10 +25,10 @@ Styleguide COMPONENTS.standalone-quote
     font-family: $header-font-family;
     margin: 3rem 0;
     font-size: 2em;
-    line-height: 1.25em;
+    line-height: 1.125em;
 
     @include breakpoint(medium) {
-      font-size: 4em;
+      font-size: 3.75em;
     }
 
     &:before,
@@ -43,7 +43,7 @@ Styleguide COMPONENTS.standalone-quote
     font-size: 1.5em;
 
     @include breakpoint(medium) {
-      font-size: 2em;
+      font-size: 1.75em;
     }
   }
 
