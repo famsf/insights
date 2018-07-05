@@ -63,7 +63,7 @@
     var scrollY = win.pageYOffset;
     var page = fds.pages.getCurrentPage();
     var chapter = page.parentElement;
-    var chapterIndex = Number(chapter.getAttribute('data-chapter-index'));
+    var chapterIndex = Number(fds.pages.hashes.chapter.substr('chapter'.length));
     var pageIndex = Number(page.getAttribute('data-page-index')) ? Number(page.getAttribute('data-page-index')) : 0;
     var pageCount = Number(chapter.getAttribute('data-chapter-length'));
     var chapterNavSegmentHeight = chapterNav.height / chapterNav.chapters.length;

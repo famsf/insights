@@ -40,8 +40,7 @@
     fds.coverPageElement.classList.add('loaded');
     setTimeout(function () {
       fds.coverPageElement.classList.add('post_loaded');
-      // First page (intro)
-      win.document.querySelector('.page').classList.add('triggered');
+      fds.rootElement.querySelector('.page').classList.add('triggered');
       setTimeout(function () {
         fds.coverPageElement.classList.add('initialized');
       }, 750);

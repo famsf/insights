@@ -29,6 +29,7 @@
     pages.clearElement = doc.querySelector(clearElementSelector);
     pages.clearElementHeight = pages.clearElement.clientHeight;
     pages.calculateThreshholds(win.innerHeight);
+    pages.cachePageRelativesAsDataAttributes();
 
     if (locHash.length > 1) {
       params = locHash.split('&');
@@ -55,6 +56,18 @@
     }
   };
 
+  pages.cachePageRelativesAsDataAttributes = function (pageElements) {
+    var pageEls = pages.pages;
+    var i;
+    var page;
+    var count = pageEls.length;
+    for (i = 0; i < count; i++) {
+      page = pageEls[i];
+      page.setAttribute('data-parent-element', page.parentElement);
+      page.setAttribute('data-next-sibling', page.nextElementSibling);
+    }
+  };
+
   pages.getCurrentPage = function () {
     return pages.currentPage || pages.pages[0];
   };
@@ -63,19 +76,20 @@
     pages.snapScroll(el.nextElementSibling, 'down', win.innerHeight);
   };
 
-  pages.setCurrentPage = function (pageEl) {
-    var chapterId = pageEl.parentElement.id;
+  pages.setCurrentPage = function (page) {
+    var parent = page.getAttribute('data-parent-element');
+    var chapterId = parent.id;
     if (pages.currentPage) {
       pages.oldCurrentPage = pages.currentPage;
       pages.oldCurrentPage.classList.remove('current');
     }
-    pages.currentPage = pageEl;
-    fds.chapterNav.setActiveItem(pageEl.parentElement);
+    pages.currentPage = page;
+    fds.chapterNav.setActiveItem(parent);
     pages.currentPage.classList.add('current');
-    window.location.hash = '&chapter=' + chapterId + '&page=' + pageEl.id;
-    pages.hashes.page = pageEl.id;
+    window.location.hash = '&chapter=' + chapterId + '&page=' + page.id;
+    pages.hashes.page = page.id;
     pages.hashes.chapter = chapterId;
-    return pageEl;
+    return page;
   };
 
   pages.calculateThreshholds = function () {
@@ -173,24 +187,20 @@
 
   pages.snapScroll = function (el, scrollDir, wh) {
     var scrollTo;
-    var isPage;
+    var parent = el.getAttribute('data-parent-element');
     if (fds.scrollLock || el === pages.getCurrentPage() || !el) return;
     fds.scrollLock = true;
     document.body.style.overflow = 'hidden';
-    isPage = el.classList.contains('page');
-    if (isPage) {
-      pages.setCurrentPage(el);
-      scrollTo = (scrollDir === 'down') ? el.parentElement.offsetTop + el.offsetTop : (el.parentElement.offsetTop + el.offsetTop + el.clientHeight) - wh;
+    pages.setCurrentPage(el);
+    if (scrollDir === 'down') {
+      scrollTo = el.getAttribute('data-parent-element').offsetTop + el.offsetTop;
     }
     else {
-      pages.setCurrentPage(el.querySelector('.page'));
-      scrollTo = el.offsetTop;
+      scrollTo = (parent.offsetTop + el.offsetTop + el.clientHeight) - wh;
     }
     fds.performantScrollTo(scrollTo, function () {
-      if (isPage) {
-        el.classList.add('triggered');
-        pages.triggerVideo(el);
-      }
+      el.classList.add('triggered');
+      pages.triggerVideo(el);
       setTimeout(function () {
         fds.scrollLock = false;
         document.body.style.overflow = 'auto';
