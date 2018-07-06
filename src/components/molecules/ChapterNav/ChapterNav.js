@@ -31,10 +31,10 @@
     }
   };
 
-  chapterNav.setActiveItem = function (target) {
+  chapterNav.setActiveItem = function (targetChapter) {
+    var chapterIndex;
     var count = chapterNav.navItems.length;
-    var chapterIndex = target.getAttribute('data-chapter-index');
-    var item = chapterNav.navItems[chapterIndex];
+    var item = chapterNav.navItems[targetChapter.dataset.chapterIndex];
     var i;
     for (i = 0; i < count; i++) {
       if (i <= chapterIndex) {
@@ -51,21 +51,24 @@
     item.classList.add('active_item');
   };
 
-  chapterNav.onNavItemClicked = function (target) {
+  chapterNav.onNavItemClicked = function (clickTarget) {
     var page;
+    var pageEl;
     var chapter;
-    chapter = fds.rootElement.querySelector(target.getAttribute('href'));
-    page = chapter.querySelector('.page');
+    chapter = fds.rootElement.querySelector(clickTarget.getAttribute('href'));
+    pageEl = chapter.querySelector('.page');
+    page = fds.pages.byId[pageEl.id];
     fds.pages.snapScroll(page, null, win.innerHeight);
   };
 
   chapterNav.onScroll = function () {
     var scrollY = win.pageYOffset;
     var page = fds.pages.getCurrentPage();
-    var chapter = page.parentElement;
-    var chapterIndex = Number(chapter.getAttribute('data-chapter-index'));
-    var pageIndex = Number(page.getAttribute('data-page-index')) ? Number(page.getAttribute('data-page-index')) : 0;
-    var pageCount = Number(chapter.getAttribute('data-chapter-length'));
+    var chapter = page.chapter;
+    var chapterIndex = page.chapterIndex;
+    var pageIndex = page.index ? page.index : 0;
+    var pageCount = page.chapterLength;
+    console.log('»»»»»»', chapter)
     var chapterNavSegmentHeight = chapterNav.height / chapterNav.chapters.length;
     var pageToChapterRatio = page.clientHeight / chapter.clientHeight;
     var id = page.id;
@@ -73,7 +76,8 @@
     var i;
     var item;
     var href;
-    var scrollbarHeight = (chapterIndex * chapterNavSegmentHeight);
+    var scrollbarHeight;
+    scrollbarHeight = (chapterIndex * chapterNavSegmentHeight);
     scrollbarHeight += (pageIndex > 0) ? (chapterNavSegmentHeight * pageToChapterRatio) : 0;
     chapterNav.scrollPercent.style.height = Math.round(scrollbarHeight) + 'px';
     if (chapterNav.lastId !== id) {

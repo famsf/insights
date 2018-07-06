@@ -1,12 +1,11 @@
 (function (fds, win, $) {
   var doc = win.document;
-  var pages = {
-    debugLog: true
-  };
+  var pages = {};
   fds.pages = pages;
-  fds.pages.ambientVideos = {};
-  fds.pages.embeddedVideos = {};
   fds.pages.hashes = {};
+  fds.pages.byId = {};
+  fds.pages.oldScrollY = null;
+  fds.pages.snapThreshhold = 55;
 
   pages.initialize = function (containerSelector, pageSelector, clearElementSelector) {
     var locHash = window.location.hash.substr(1);
@@ -30,6 +29,8 @@
     pages.clearElementHeight = pages.clearElement.clientHeight;
     pages.calculateThreshholds(win.innerHeight);
 
+    pages.populatePagesById();
+
     if (locHash.length > 1) {
       params = locHash.split('&');
       if (Array.isArray(params) && locHash.indexOf('=') > -1) {
@@ -46,31 +47,69 @@
       }
       if (pages.hashes.currentPage) {
         startPage = doc.getElementById(pages.hashes.currentPage);
-        pages.snapScroll(startPage);
       }
       else {
-        pages.snapScroll(pages.currentPage);
+        startPage = pages.currentPage;
       }
+      pages.oldScrollY = win.pageYOffset;
+      pages.snapScroll(startPage);
+    }
+  };
+
+  pages.populatePagesById = function () {
+    /*
+      Both for performance in accessing data, and to possibly allow us
+      to pull the active page out of the chapter dom eleemnt for scroll-stikcyness
+      smooth solution.
+      If that happens, we'll be able to update relationships and re-cache.
+    */
+    var i;
+    var pageEl;
+    var chapter;
+    var ambientVideo;
+    var embeddedVideo;
+    var count = pages.pages.length;
+    for (i = 0; i < count; i++) {
+      pageEl = pages.pages[i];
+      chapter = pageEl.parentElement;
+      ambientVideo = pageEl.querySelector('.ambient_video .plyr_target');
+      embeddedVideo = pageEl.querySelector('.video--embed .plyr_target');
+      pages.byId[pageEl.id] = {
+        id: pageEl.id,
+        el: pageEl,
+        chapter: chapter,
+        chapterIndex: chapter.dataset.chapterIndex,
+        chapterId: chapter.id,
+        nextPage: pageEl.nextElementSibling,
+        index: pageEl.dataset.pageIndex,
+        ambientVideoEl: ambientVideo,
+        embeddedVideoEl: embeddedVideo
+      };
     }
   };
 
   pages.getCurrentPage = function () {
-    return pages.currentPage || pages.pages[0];
+    return pages.currentPage || pages.byId[pages.pages[0].id];
   };
 
-  pages.setCurrentPage = function (pageEl) {
-    var chapterId = pageEl.parentElement.id;
-    if (pages.currentPage) {
-      pages.oldCurrentPage = pages.currentPage;
-      pages.oldCurrentPage.classList.remove('current');
+  pages.nextPage = function (page) {
+    pages.snapScroll(page.el.nextElementSibling, 'down', win.innerHeight);
+  };
+
+  pages.setCurrentPage = function (page) {
+    console.log('setCurrentPage', page.id);
+    var pageEl = page.el;
+    pages.oldCurrentPage = pages.currentPage;
+    if (pages.oldCurrentPage && pages.oldCurrentPage.el) {
+      pages.oldCurrentPage.el.classList.remove('current');
     }
-    pages.currentPage = pageEl;
-    fds.chapterNav.setActiveItem(pageEl.parentElement);
-    pages.currentPage.classList.add('current');
-    window.location.hash = '&chapter=' + chapterId + '&page=' + pageEl.id;
+    pages.currentPage = page;
+    fds.chapterNav.setActiveItem(page.chapter);
+    pages.currentPage.el.classList.add('current');
+    window.location.hash = '&chapter=' + page.chapterId + '&page=' + pageEl.id;
     pages.hashes.page = pageEl.id;
-    pages.hashes.chapter = chapterId;
-    return pageEl;
+    pages.hashes.chapter = page.chapterId;
+    return page;
   };
 
   pages.calculateThreshholds = function () {
@@ -99,94 +138,85 @@
     var pageRect;
     var pageIterator;
     var otherCondition;
+    var pageEl;
+    var scrollDiff;
+    var pageTop;
 
     // Loop through pages, we can eventually filter out doing stuff to pages that are offscreen.
-    for (pageIterator = 0; pageIterator < count; pageIterator++) {
-      page = pages.pages[pageIterator];
-      pageRect = page.getBoundingClientRect();
-      pageTopAboveViewportBottom = pageRect.top <= pageRect.height;
-      pageTopBelowViewportBottom = pageRect.top > pageRect.height;
-      pageBottomBelowViewportTop = pageRect.top + pageRect.height > 0;
-      pageBottomAboveViewportTop = pageRect.top + pageRect.height < 0;
-      pageTopAboveViewportTop = pageRect.top < 0;
-      shouldAdvance = false;
-      shouldStabilize = false;
-
-      if (didResize) {
-        pages.calculateThreshholds(wh, scrollDir);
+    if (currentPage.pinned === true) {
+      scrollDiff = Math.abs(scrollY - pages.oldScrollY || 0);
+      pages.oldScrollY = scrollY;
+      console.log('shouldUnpin ? »»»»', currentPage, scrollDiff, pages.snapThreshhold);
+      if (scrollDiff > pages.snapThreshhold) {
+        pages.unpinPage(currentPage);
       }
-
-      if (scrollDir === 'down') {
-        pageNearEdge = pageRect.top >= fds.edgeDownthreshhold;
-        otherCondition = pageRect.top <= fds.topBarDownthreshhold;
-        shouldTriggerTopBar = pageNearEdge && otherCondition;
-        shouldAdvance = pageNearEdge && pageRect.top <= fds.snapDownthreshhold;
-        if (!shouldAdvance && (pageRect.top >= wh || pageRect.bottom <= 0)) {
-          page.classList.remove('triggered');
-          pages.untriggerVideo(page);
-        }
-      }
-      else if (scrollDir === 'up') {
-        pageNearEdge = pageRect.bottom >= wh - fds.edgeUpthreshhold;
-        otherCondition = pageRect.top <= fds.topBarUpthreshhold && pageRect.top < wh;
-        shouldTriggerTopBar = pageNearEdge && otherCondition;
-        shouldAdvance =
-          pageRect.top < 0 &&
-          pageRect.bottom >= fds.snapUpthreshhold &&
-          pageRect.bottom > 0;
-        if (!shouldAdvance && (pageRect.top >= wh || pageRect.bottom <= 0)) {
-          page.classList.remove('triggered');
-          pages.untriggerVideo(page);
-        }
-      }
-      if (shouldTriggerTopBar) console.log(page.id, 'shouldTriggerTopBar', shouldTriggerTopBar);
-      if (shouldTriggerTopBar) {
-        pages.triggerTopBarEvents(page);
-        if (pages.debug) pages.debugLog(page, pageRect, scrollDir);
-        pages.snapScroll(page, scrollDir, wh);
-      }
-    }
-  };
-
-  pages.debugLog = function (page, pageRect, scrollDir) {
-    /*
-      Please leave this in here for now, very useful for debugging
-    */
-    console.log('');
-    console.log('»» Snapping to: ', page.id);
-    console.log('  top:', pageRect.top);
-    console.log('  bottom:', pageRect.bottom);
-    console.log('  scroll.y:', fds.scroll.y);
-    console.log('  fds.scrollLock:', scrollDir);
-    if (scrollDir === 'down') {
-      console.log('  thresshold', fds.snapDownthreshhold);
-    }
-    else if (scrollDir === 'up') {
-      console.log('  thresshold', fds.snapUpthreshhold);
-    }
-    console.log('');
-  };
-
-  pages.snapScroll = function (el, scrollDir, wh) {
-    var scrollTo;
-    var isPage;
-    if (fds.scrollLock || el === pages.getCurrentPage()) return;
-    fds.scrollLock = true;
-    document.body.style.overflow = 'hidden';
-    isPage = el.classList.contains('page');
-    if (isPage) {
-      pages.setCurrentPage(el);
-      scrollTo = (scrollDir === 'down') ? el.parentElement.offsetTop + el.offsetTop : (el.parentElement.offsetTop + el.offsetTop + el.clientHeight) - wh;
     }
     else {
-      pages.setCurrentPage(el.querySelector('.page'));
-      scrollTo = el.offsetTop;
+      for (pageIterator = 0; pageIterator < count; pageIterator++) {
+        pageEl = pages.pages[pageIterator];
+        page = pages.byId[pageEl.id];
+        pageRect = pageEl.getBoundingClientRect();
+        pageTop = pageTop + pageEl.style.marginTop;
+        pageTopAboveViewportBottom = pageTop  <= pageRect.height;
+        pageTopBelowViewportBottom = pageTop > pageRect.height;
+        pageBottomBelowViewportTop = pageTop + pageRect.height > 0;
+        pageBottomAboveViewportTop = pageTop + pageRect.height < 0;
+        pageTopAboveViewportTop = pageTop < 0;
+        shouldAdvance = false;
+        shouldStabilize = false;
+
+        console.log( 'pageLoop', currentPage.pinned, page.id, pageTop)
+
+        if (didResize) {
+          pages.calculateThreshholds(wh, scrollDir);
+        }
+
+        if (scrollDir === 'down') {
+          pageNearEdge = pageTop >= fds.edgeDownthreshhold;
+          otherCondition = pageTop <= fds.topBarDownthreshhold;
+          shouldTriggerTopBar = pageNearEdge && otherCondition;
+          shouldAdvance = pageNearEdge && pageTop <= fds.snapDownthreshhold;
+          if (!shouldAdvance && (pageTop >= wh || pageRect.bottom <= 0)) {
+            pages.untriggerPage(page);
+          }
+        }
+        else if (scrollDir === 'up') {
+          pageNearEdge = pageRect.bottom >= wh - fds.edgeUpthreshhold;
+          otherCondition = pageToptop <= fds.topBarUpthreshhold && pageTop < wh;
+          shouldTriggerTopBar = pageNearEdge && otherCondition;
+          shouldAdvance =
+            pageTop < 0 &&
+            pageRect.bottom >= fds.snapUpthreshhold &&
+            pageRect.bottom > 0;
+          if (!shouldAdvance && (pageTopAboveViewportTop >= wh || pageRect.bottom <= 0)) {
+            pages.untriggerPage(page);
+          }
+        }
+
+        if (shouldTriggerTopBar) {
+          pages.triggerTopBarEvents(pageEl);
+          pages.snapScroll(page, scrollDir, wh);
+        }
+      }
+    }
+  };
+
+  pages.snapScroll = function (page, scrollDir, wh) {
+    var scrollTo;
+    var pageEl = page.el;
+    var chapter = page.chapter;
+    if (fds.scrollLock || page === pages.getCurrentPage() || !page) return;
+    fds.scrollLock = true;
+    document.body.style.overflow = 'hidden';
+    pages.setCurrentPage(page);
+    if (scrollDir === 'down') {
+      scrollTo = chapter.offsetTop + pageEl.offsetTop;
+    }
+    else {
+      scrollTo = (chapter.offsetTop + pageEl.offsetTop + pageEl.clientHeight) - wh;
     }
     fds.performantScrollTo(scrollTo, function () {
-      if (isPage) {
-        el.classList.add('triggered');
-        pages.triggerVideo(el);
-      }
+      pages.triggerPage(page);
       setTimeout(function () {
         fds.scrollLock = false;
         document.body.style.overflow = 'auto';
@@ -194,32 +224,58 @@
     }, 475);
   };
 
-  pages.triggerVideo = function (page) {
-    var vidElement = page.querySelector('.ambient_video .plyr_target');
-    var embeddedVideo = page.querySelector('.video--embed .plyr_target');
-    var plyr;
+  pages.triggerPage = function (page) {
+    var pageEl = page.el;
+    console.log('triggerPage', page.id);
+    pages.pinned = true;
+    pageEl.classList.add('triggered');
+    pageEl.classList.add('pinned');
+    if(page.nextPage) {
+      page.nextPage.style.marginTop = pageEl.clientHeight;
+    }
+    else {
+      page.chapter.style.paddingBottom = pageEl.clientHeight;
+    }
+    pages.triggerVideo(page);
+  };
 
-    if (vidElement) {
-      if (!pages.ambientVideos[vidElement.id]) {
-        plyr = new Plyr(vidElement, {
+  pages.unpinPage = function (page) {
+    page.pinned = false;
+    if(page.nextPage) page.nextPage.style.marginTop = 0;
+    page.chapter.style.paddingBottom = 0;
+    page.el.classList.remove('pinned');
+    console.log('unpinPage', page.id);
+  };
+
+  pages.untriggerPage = function (page) {
+    var pageEl = page.el;
+    pageEl.classList.remove('triggered');
+    pages.untriggerVideo(pageEl);
+  };
+
+  pages.triggerVideo = function (page) {
+    var plyr;
+    var pageEl = page.el;
+    if (page.ambientVideoEl) {
+      if (!page.embeddedVideo) {
+        plyr = new Plyr(page.ambientVideoEl, {
           hideControls: 'true'
         });
         plyr.on('ready', function (e) {
           e.detail.plyr.muted = true;
           e.detail.plyr.play();
         });
-        pages.ambientVideos[vidElement.id] = plyr;
+        page.ambientVideo = plyr;
       }
     }
-
-    if (embeddedVideo) {
-      if (!pages.embeddedVideos[embeddedVideo.id]) {
-        plyr = new Plyr(embeddedVideo, {
+    if (page.embeddedVideoEl) {
+      if (!page.embeddedVideo) {
+        plyr = new Plyr(page.embeddedVideoEl, {
           hideControls: 'false',
           controls: ['play', 'progress', 'current-time', 'mute', 'captions', 'settings', 'pip', 'fullscreen']
         });
         plyr.on('ready', function (e) {
-          pages.embeddedVideos[embeddedVideo.id] = plyr;
+          page.embeddedVideo = plyr;
         });
       }
     }
@@ -227,37 +283,36 @@
 
   pages.untriggerVideo = function (page) {
     var plyr;
-    var vidElement = page.querySelector('.ambient_video .plyr_embed');
-    var embeddedVideo = page.querySelector('.video--embed .plyr_target');
-    if (vidElement) {
-      plyr = pages.ambientVideo[vidElement.id];
+    var pageEl = page.el;
+    if (page.ambientVideo) {
+      plyr = page.ambientVideo;
       if (plyr) {
         plyr.stop();
       }
     }
-    if (embeddedVideo) {
-      plyr = pages.embeddedVideos[embeddedVideo.id];
+    if (page.embeddedVideo) {
+      plyr = page.embeddedVideo;
       if (plyr) {
         plyr.stop();
       }
     }
   };
 
-  pages.triggerTopBarEvents = function (page) {
-    if (page.classList.contains('dark')) {
+  pages.triggerTopBarEvents = function (pageEl) {
+    if (pageEl.classList.contains('dark')) {
       doc.body.classList.add('dark');
     }
     else {
       doc.body.classList.remove('dark');
     }
-    if (page.classList.contains('invert-top-bar') && !fds.topBar.el.classList.contains('inverted-top-bar')) {
-      page.dispatchEvent(new CustomEvent('topBarEvent', {
+    if (pageEl.classList.contains('invert-top-bar') && !fds.topBar.el.classList.contains('inverted-top-bar')) {
+      pageEl.dispatchEvent(new CustomEvent('topBarEvent', {
         bubbles: true,
         detail: { action: 'invert' }
       }, { passive: true }));
     }
     else {
-      page.dispatchEvent(new CustomEvent('topBarEvent', {
+      pageEl.dispatchEvent(new CustomEvent('topBarEvent', {
         bubbles: true,
         detail: { action: 'reset' }
       }, { passive: true }));

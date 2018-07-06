@@ -97,7 +97,7 @@
     color: red;
     -webkit-text-fill-color: transparent;
     // we can set this as data attribute and bring up as svg
-    background-image: url(/assets/images/lady-with-hat.jpg) no-repeas;
+    background-image: url($bgURL) no-repeat;
     background-position: center center;
     background-attachment: fixed;
     background-size: cover;
