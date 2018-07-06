@@ -1,6 +1,6 @@
 <div class="video--embed">
   {% if youtube %}
-    <div class="plyr_target video_player" data-plyr-provider="youtube" id="{{ id }}_vid" data-plyr-embed-id="{{ youtube.embed }}" ></div>
+    <div class="plyr_target video_player youtube" data-plyr-provider="youtube" id="{{ id }}_vid" data-plyr-embed-id="{{ youtube.embed }}" ></div>
   {% else %}
     <video class="plyr_target video_element video_player" id="{{ id }}_vid" poster="{{ poster }}" {{ controls }} {{ playsinline }} {{ autoplay }} {{ muted }} {{ loop}}>
       {% for type, source in sources %}
