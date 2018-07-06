@@ -89,8 +89,14 @@
     return pages.currentPage || pages.byId[pages.pages[0].id];
   };
 
-  pages.nextPage = function (page) {
-    pages.snapScroll(page.el.nextElementSibling, 'down', win.innerHeight);
+  pages.nextPage = function () {
+    var currentPage = pages.currentPage;
+    var nextPage = pages.byId[pages.byId[currentPage.id].nextPage.id];
+    if (!nextPage) {
+      console.log('NextPage called, but we were unable to figure out what element that is.');
+      return;
+    }
+    pages.snapScroll(nextPage, 'down', win.innerHeight);
   };
 
   pages.setCurrentPage = function (page) {
@@ -100,6 +106,7 @@
       pages.oldCurrentPage.el.classList.remove('current');
     }
     pages.currentPage = page;
+    console.log('pages.setCurrentPage', page.id, page.chapter);
     fds.chapterNav.setActiveItem(page.chapter);
     pages.currentPage.el.classList.add('current');
     window.location.hash = '&chapter=' + page.chapterId + '&page=' + pageEl.id;
