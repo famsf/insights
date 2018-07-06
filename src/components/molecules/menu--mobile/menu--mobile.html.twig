@@ -1,8 +1,11 @@
+{% import "@organisms/Chapter/Chapter.html.twig" as get %}
+
 <ul class="menu vertical menu--mobile">
   <li>
     <h3>Chapters</h3>
   </li>
-  {% for id, chapter in chapters %}
+  {% for chapter in chapters %}
+    {% set id = get.id(chapter|merge({index: loop.index0})) %}
     <li>
       <a href="#{{ id }}">
         <span class="menu--mobile__numeral">{{ chapter.numeral }}</span>
