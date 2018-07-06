@@ -66,6 +66,7 @@
     }
     pages.currentPage = pageEl;
     fds.chapterNav.setActiveItem(pageEl.parentElement);
+    fds.mobileNav.setActiveItem(pageEl.parentElement);
     pages.currentPage.classList.add('current');
     window.location.hash = '&chapter=' + chapterId + '&page=' + pageEl.id;
     pages.hashes.page = pageEl.id;
