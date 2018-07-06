@@ -1,8 +1,6 @@
 (function (fds, win, $) {
   var doc = win.document;
-  var pages = {
-    debugLog: true
-  };
+  var pages = {};
   fds.pages = pages;
   fds.pages.hashes = {};
   fds.pages.byId = {};
@@ -97,7 +95,6 @@
 
   pages.setCurrentPage = function (page) {
     var pageEl = page.el;
-    console.log('setCurrentPage', page.el.classList);
     pages.oldCurrentPage = pages.currentPage;
     if (pages.oldCurrentPage && pages.oldCurrentPage.el) {
       pages.oldCurrentPage.el.classList.remove('current');
@@ -181,29 +178,9 @@
       }
       if (shouldTriggerTopBar) {
         pages.triggerTopBarEvents(pageEl);
-        if (pages.debug) pages.debugLog(pageEl, pageRect, scrollDir);
         pages.snapScroll(page, scrollDir, wh);
       }
     }
-  };
-
-  pages.debugLog = function (pageEl, pageRect, scrollDir) {
-    /*
-      Please leave this in here for now, very useful for debugging
-    */
-    console.log('');
-    console.log('»» Snapping to: ', pageEl.id);
-    console.log('  top:', pageRect.top);
-    console.log('  bottom:', pageRect.bottom);
-    console.log('  scroll.y:', fds.scroll.y);
-    console.log('  fds.scrollLock:', scrollDir);
-    if (scrollDir === 'down') {
-      console.log('  thresshold', fds.snapDownthreshhold);
-    }
-    else if (scrollDir === 'up') {
-      console.log('  thresshold', fds.snapUpthreshhold);
-    }
-    console.log('');
   };
 
   pages.snapScroll = function (page, scrollDir, wh) {
