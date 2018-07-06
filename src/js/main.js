@@ -96,7 +96,6 @@
     var sinceStart;
     var scrollDir;
     var secondsSinceStart;
-
     requestAnimationFrame(fds.renderLoop);
     didResize = false;
     elapsed = newtime - fds.then;
@@ -169,6 +168,5 @@
         fds.initInterval = null;
       }
     });
-
   });
 }(window.fds = window.fds || {}, window, document, jQuery));
