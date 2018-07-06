@@ -74,7 +74,7 @@ Markup: video--embed.html.twig
     }
   }
 
-  &.dark .plyr__video-wrapper {
+  &.theme--dark .plyr__video-wrapper {
     background: $black;
     .icon--not-pressed {
       path {
