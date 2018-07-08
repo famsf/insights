@@ -113,33 +113,27 @@
   pages.calculateThreshholds = function () {
     var wh = win.innerHeight;
     fds.snapDownthreshhold = wh * 0.45;
-    fds.topBarDownthreshhold = wh * 0.4;
+    fds.topBarDownthreshhold = wh * 0.45;
     fds.edgeDownthreshhold = -1 * wh * 0.1;
     fds.snapUpthreshhold = wh * 0.55;
-    fds.topBarUpthreshhold = wh * 0.6;
+    fds.topBarUpthreshhold = wh * 0.55;
     fds.edgeUpthreshhold = wh * 0.1;
   };
 
   pages.onScroll = function (scrollY, scrollDir, wh, didResize) {
     var currentPage = pages.getCurrentPage();
-    var shouldTriggerTopBar = false;
-    var count = pages.pages.length;
-    var pageNearEdge;
-    var pageTopAboveViewportBottom;
-    var pageTopBelowViewportBottom;
-    var pageBottomBelowViewportTop;
-    var pageBottomAboveViewportTop;
-    var pageTopAboveViewportTop;
-    var shouldAdvance;
-    var shouldStabilize;
-    var page;
-    var pageRect;
-    var pageIterator;
-    var otherCondition;
-    var pageEl;
     var scrollDiff;
+    var count = pages.pages.length;
+    var page;
+    var pageEl;
     var pageTop;
     var pageMarginTop;
+    var pageIterator;
+    var pageRect;
+    var pageNearEdge;
+    var pageTopAboveViewportTop;
+    var shouldTrigger = false;
+    var otherCondition;
     // Loop through pages, we can eventually filter out doing stuff to pages that are offscreen.
     if (currentPage.pinned === true && !fds.scrollLock) {
       scrollDiff = Math.abs(scrollY - pages.oldScrollY || 0);
@@ -161,38 +155,27 @@
           else {
             pageTop = pageRect.top;
           }
-          pageTopAboveViewportBottom = pageTop <= pageRect.height;
-          pageTopBelowViewportBottom = pageTop > pageRect.height;
-          pageBottomBelowViewportTop = pageTop + pageRect.height > 0;
-          pageBottomAboveViewportTop = pageTop + pageRect.height < 0;
           pageTopAboveViewportTop = pageTop < 0;
-          shouldAdvance = false;
-          shouldStabilize = false;
           if (didResize) {
             pages.calculateThreshholds(wh, scrollDir);
           }
           if (scrollDir === 'down') {
             pageNearEdge = pageTop >= fds.edgeDownthreshhold;
             otherCondition = pageTop <= fds.topBarDownthreshhold;
-            shouldTriggerTopBar = pageNearEdge && otherCondition;
-            shouldAdvance = pageNearEdge && pageTop <= fds.snapDownthreshhold;
-            if (!shouldAdvance && (pageTop >= wh || pageRect.bottom <= 0)) {
+            shouldTrigger = pageNearEdge && otherCondition;
+            if (!shouldTrigger && (pageTop >= wh || pageRect.bottom <= 0)) {
               pages.untriggerPage(page);
             }
           }
           else if (scrollDir === 'up') {
             pageNearEdge = pageRect.bottom >= wh - fds.edgeUpthreshhold;
             otherCondition = pageTop <= fds.topBarUpthreshhold && pageTop < wh;
-            shouldTriggerTopBar = pageNearEdge && otherCondition;
-            shouldAdvance =
-              pageTop < 0 &&
-              pageRect.bottom >= fds.snapUpthreshhold &&
-              pageRect.bottom > 0;
-            if (!shouldAdvance && (pageTopAboveViewportTop >= wh || pageRect.bottom <= 0)) {
+            shouldTrigger = pageNearEdge && otherCondition;
+            if (!shouldTrigger && (pageTopAboveViewportTop >= wh || pageRect.bottom <= 0)) {
               pages.untriggerPage(page);
             }
           }
-          if (shouldTriggerTopBar && pages.lastPinned !== page) {
+          if (shouldTrigger && pages.lastPinned !== page) {
             pages.triggerTopBarEvents(pageEl);
             pages.snapScroll(page, scrollDir, wh);
           }
