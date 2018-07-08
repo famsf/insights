@@ -27,12 +27,18 @@ Markup: video--embed.html.twig
 
 .video--embed  {
 
-  @include object-fit;
   position: relative;
+  // @include object-fit;
   height: 100vh;
   overflow: hidden;
-  background-image: url(attr(data-poster));
   background-size: cover;
+
+  .video--embed__wrapper {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.325s;
+    transition-timing-function: ease-out;
+  }
 
   .plyr--full-ui input[type=range] {
     height: 0.25rem;
@@ -47,20 +53,21 @@ Markup: video--embed.html.twig
   }
 
   .plyr--video .plyr__controls {
-    opacity: 0;
     position: fixed;
-    bottom: -12em;
+    visibility: hidden;
+    bottom: 2em;
   }
 
   .triggered & {
-    .plyr--video .plyr__controls {
+    .video--embed__wrapper {
       opacity: 1;
+    }
+    .plyr--video .plyr__controls {
       opacity: 1;
       background: none;
       padding-left: 16.6667%;
       padding-right: 16.6667%;
       top: auto;
-      bottom: 2em;
       height: 3em;
       width: 100%;
     }

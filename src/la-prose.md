@@ -39,7 +39,7 @@ chapters:
 
   # iii
   - components:
-    - template: "@atoms/video--embed/video--embed.html.twig"
+    - template: "@organisms/video--embed/video--embed.html.twig"
       id: WmrP8JhWb2U
       poster: http://i3.ytimg.com/vi/WmrP8JhWb2U/maxresdefault.jpg
       youtube:
@@ -739,7 +739,7 @@ chapters:
   # c4p3
   - classes: theme--dark
     components:
-    - template: "@atoms/video--embed/video--embed.html.twig"
+    - template: "@organisms/video--embed/video--embed.html.twig"
       id: 6vGKaYv7Iho
       youtube:
         embed: 6vGKaYv7Iho
@@ -837,7 +837,7 @@ chapters:
   # c5p4
   - classes: theme--dark
     components:
-    - template: "@atoms/video--embed/video--embed.html.twig"
+    - template: "@organisms/video--embed/video--embed.html.twig"
       id: p6io0gBiXe0
       youtube:
         embed: p6io0gBiXe0
@@ -920,7 +920,7 @@ chapters:
   # c6p4
   - classes: theme--dark
     components:
-    - template: "@atoms/video--embed/video--embed.html.twig"
+    - template: "@organisms/video--embed/video--embed.html.twig"
       id: _QWKwhv8MG4
       youtube:
         embed: _QWKwhv8MG4
