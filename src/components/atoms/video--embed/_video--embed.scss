@@ -14,6 +14,10 @@ Markup: video--embed.html.twig
   }
 }
 
+.plyr__controls {
+  background: transparent !important;
+}
+
 .plyr__control:hover {
   background-color: #fff !important;
   path {
@@ -22,12 +26,13 @@ Markup: video--embed.html.twig
 }
 
 .video--embed  {
+
   @include object-fit;
-  background-color: #000;
   position: relative;
-  video {
-    width: 100%;
-  }
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(attr(data-poster));
+  background-size: cover;
 
   .plyr--full-ui input[type=range] {
     height: 0.25rem;
@@ -37,10 +42,57 @@ Markup: video--embed.html.twig
     }
   }
 
+  .plyr-video {
+    max-height: 100vh;
+  }
+
   .plyr--video .plyr__controls {
-    bottom: 0;
-    height: 3em;
-    margin-left: 16.66667%;
-    margin-right: 16.66667%;
+    opacity: 0;
+    position: fixed;
+    bottom: -12em;
+  }
+
+  .triggered & {
+    .plyr--video .plyr__controls {
+      opacity: 1;
+      opacity: 1;
+      background: none;
+      padding-left: 16.6667%;
+      padding-right: 16.6667%;
+      top: auto;
+      bottom: 2em;
+      height: 3em;
+      width: 100%;
+    }
+  }
+
+  .plyr__video-wrapper {
+    background: $white;
+    height: 100vh;
+    .icon--not-pressed {
+      path {
+        fill: $black !important;
+      }
+    }
+  }
+
+  &.theme--dark .plyr__video-wrapper {
+    background: $black;
+    .icon--not-pressed {
+      path {
+        fill: $white;
+      }
+    }
+  }
+  .plyr__poster {
+    background-size: cover;
+  }
+
+}
+.video--embed.file {
+  .plyr__poster,
+  .plyr--video .plyr--video,
+  .plyr--video video {
+    @include object-fit;
   }
 }
