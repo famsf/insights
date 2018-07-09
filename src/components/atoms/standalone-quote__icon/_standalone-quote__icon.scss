@@ -11,6 +11,14 @@
   path#line {
     stroke: $primary-color;
   }
+
+  .theme--primary-dark & {
+    path#quote,
+    path#line  {
+      fill: $white;
+      stroke: $white;
+    }
+  }
 }
 
 .standalone-quote__icon {

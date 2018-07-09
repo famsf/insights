@@ -15,7 +15,7 @@ Styleguide COMPONENTS.standalone-quote
   @extend .text-center;
   margin: 2rem;
   position: relative;
-  max-width: 65rem;
+  max-width: 75rem;
   margin: auto;
 
   q {
@@ -25,10 +25,10 @@ Styleguide COMPONENTS.standalone-quote
     font-family: $header-font-family;
     margin: 3rem 0;
     font-size: 2em;
-    line-height: 1.25em;
+    line-height: 1.125em;
 
     @include breakpoint(medium) {
-      font-size: 4em;
+      font-size: 3.75em;
     }
 
     &:before,
@@ -43,7 +43,7 @@ Styleguide COMPONENTS.standalone-quote
     font-size: 1.5em;
 
     @include breakpoint(medium) {
-      font-size: 2em;
+      font-size: 1.75em;
     }
   }
 
@@ -59,6 +59,13 @@ Styleguide COMPONENTS.standalone-quote
       @include breakpoint(medium) {
         font-size: 6em;
       }
+    }
+  }
+
+  .theme--primary-dark & {
+    q,
+    cite  {
+      color: $white;
     }
   }
 }
