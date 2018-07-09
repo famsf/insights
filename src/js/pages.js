@@ -102,6 +102,7 @@
       pages.oldCurrentPage.el.classList.remove('current');
     }
     pages.currentPage = page;
+    console.log('pages.setCurrentPage', page.id, page.chapter);
     fds.chapterNav.setActiveItem(page.chapter);
     pages.currentPage.el.classList.add('current');
     window.location.hash = '&chapter=' + page.chapterId + '&page=' + pageEl.id;
@@ -248,6 +249,12 @@
     pages.untriggerVideo(pageEl);
   };
 
+  pages.triggerPage = function (page) {
+    var pageEl = page.el;
+    pageEl.classList.add('triggered');
+    pages.triggerVideo(page);
+  };
+
   pages.triggerVideo = function (page) {
     var plyr;
     var pageEl = page.el;
@@ -300,10 +307,10 @@
         Which is why i liked the event model, but this site is so small, and
         turns out dispatching events is computationally spensive.
       */
-      doc.body.classList.add('dark');
+      doc.body.classList.add('theme--dark');
     }
     else {
-      doc.body.classList.remove('dark');
+      doc.body.classList.remove('theme--dark');
     }
     if (pageEl.classList.contains('invert-top-bar') && !fds.topBar.el.classList.contains('inverted-top-bar')) {
       pageEl.dispatchEvent(new CustomEvent('topBarEvent', {
