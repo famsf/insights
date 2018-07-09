@@ -29,9 +29,11 @@ Markup: video--embed.html.twig
 
   position: relative;
   // @include object-fit;
-  height: 100vh;
-  overflow: hidden;
-  background-size: cover;
+  @include breakpoint(medium) {
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;    
+  }
 
   .video--embed__wrapper {
     opacity: 0;
