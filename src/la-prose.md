@@ -2,6 +2,7 @@
 layout: "templates/pages/digital-story.html.twig"
 title: La Prose
 tagline: From the de Young and Legion of Honor
+tickets_url: '#'
 bodyId: "la-prose"
 chapters:
 

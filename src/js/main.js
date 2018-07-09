@@ -144,6 +144,7 @@
       y: sy
     };
     fds.fpsEl = doc.getElementById('fpsEl');
+    fds.mobileNav.initialize('mobile_nav');
     fds.chapterNav.initialize('chapter_nav', '.chapter', '.top-bar');
     fds.pages.initialize('.chapters_container', '.page', '.top-bar');
     fds.topBar.initialize('topBar');
