@@ -32,12 +32,3 @@
   object-fit: cover;
   font-family: 'object-fit: contain;object-position: 50% 50%';
 }
-
-@mixin heightTransition {
-  max-height: 0;
-  overflow: hidden;
-  opacity: 0;
-  transition-property: opacity max-height;
-  transition-duration: 0.575s;
-  transition-timing-function: ease-out;
-}
