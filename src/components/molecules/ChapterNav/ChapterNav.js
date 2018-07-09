@@ -58,7 +58,7 @@
     chapter = fds.rootElement.querySelector(clickTarget.getAttribute('href'));
     pageEl = chapter.querySelector('.page');
     page = fds.pages.byId[pageEl.id];
-    fds.pages.snapScroll(page, null, win.innerHeight);
+    fds.pages.snapScroll(page, null, win.innerHeight, true);
   };
 
   chapterNav.onScroll = function () {

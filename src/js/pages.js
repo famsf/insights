@@ -102,7 +102,7 @@
       pages.oldCurrentPage.el.classList.remove('current');
     }
     pages.currentPage = page;
-    console.log('pages.setCurrentPage', page.id, page.chapter);
+    // console.log('pages.setCurrentPage', page.id, page.chapter);
     fds.chapterNav.setActiveItem(page.chapter);
     pages.currentPage.el.classList.add('current');
     window.location.hash = '&chapter=' + page.chapterId + '&page=' + pageEl.id;
@@ -185,10 +185,13 @@
     }
   };
 
-  pages.snapScroll = function (page, scrollDir, wh) {
+  pages.snapScroll = function (page, scrollDir, wh, unpin) {
     var scrollTo;
     var pageEl = page.el;
     var chapter = page.chapter;
+    if (unpin) {
+      pages.unpinPage(pages.getCurrentPage());
+    }
     if (fds.scrollLock || page === pages.getCurrentPage() || !page) return;
     document.body.style.overflow = 'hidden';
     pages.setCurrentPage(page);

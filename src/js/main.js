@@ -42,6 +42,7 @@
 
   // Initialize Horizontal Image Slider.
   horizontalImageSlider = $(':not(.in-depth-modal) > .horizontal-image-slider');
+  console.log(':::::', horizontalImageSlider, horizontalImageSliderOptions);
   horizontalImageSlider.owlCarousel(horizontalImageSliderOptions);
 
   // Initialize In Depth Slider.
