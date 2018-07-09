@@ -18,7 +18,7 @@ chapters:
   - classes: invert-top-bar
     components:
     - template: "@molecules/CoverPage/CoverPage.html.twig"
-      subtitle: du Transsibérien et de la petite Jehanne de France
+      subtitle: du Transsibérien et de<br>la petite Jehanne de France
       info: "Reva and David Logan Collection of Illustrated Books Legion of Honor Museum"
       image:
         url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/0_la-prose-title-card.jpg
