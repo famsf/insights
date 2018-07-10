@@ -924,4 +924,46 @@ chapters:
       id: _QWKwhv8MG4
       youtube:
         embed: _QWKwhv8MG4
+
+################################################################################
+## Footer ######################################################################
+################################################################################
+
+footer:
+  sections:
+    - classes: theme--primary-light
+      template: "@molecules/footer__cta/footer__cta__wrapper.html.twig"
+      components:
+        - template: "@molecules/footer__cta/footer__cta.html.twig"
+          components:
+          - template: "@atoms/h4/h4.html.twig"
+            text: Plan your visit
+          - template: "@atoms/textarea/textarea.html.twig"
+            text: "<p>Purchase tickets, view hours, and get directions to prepare for your visit.</p>"
+          - template: "@atoms/cta__button/cta__button.html.twig"
+            text: Start planning
+            href: https://tickets.famsf.org/events/283/list
+            target: _blank
+        - template: "@molecules/footer__cta/footer__cta.html.twig"
+          components:
+          - template: "@atoms/h4/h4.html.twig"
+            text: Shop exhibition exclusives
+          - template: "@atoms/textarea/textarea.html.twig"
+            text: "<p>Bring home the exhibition catalogue, tumblers, and more.</p>"
+          - template: "@atoms/cta__button/cta__button.html.twig"
+            text: Shop
+            href: https://shop.famsf.org/
+            target: _blank
+        - template: "@molecules/footer__cta/footer__cta.html.twig"
+          classes: theme--primary-dark
+          components:
+          - template: "@atoms/h4/h4.html.twig"
+            text: Subscribe to Insights
+          - template: "@atoms/textarea/textarea.html.twig"
+            text: "<p>Subscribe to Insights and be the first to see the next edition</p>"
+          - template: "@atoms/cta__button/cta__button.html.twig"
+            text: Subscribe to Insights
+            href: http://famsf.us4.list-manage1.com/subscribe?u=d7a49f337e55b897015517194&id=9757c5111b
+            target: _blank
+
 ---
