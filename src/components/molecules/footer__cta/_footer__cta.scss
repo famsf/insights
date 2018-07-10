@@ -1,0 +1,42 @@
+%footer__cta {
+  background: $white;
+  padding: 2rem !important;
+
+  h4,
+  p {
+    color: $body-font-color !important;
+  }
+
+  p {
+
+  }
+
+  @include breakpoint(large) {
+    padding: 3rem !important;
+  }
+
+  &.theme--primary-dark {
+    background: $primary-color;
+
+    h4,
+    p {
+      color: $white !important;
+    }
+  }
+}
+
+%footer__cta__wrapper {
+  padding: 2rem 0;
+
+  @include breakpoint(large) {
+    padding: 6rem 0;
+  }
+}
+
+.footer__cta {
+  @extend %footer__cta;
+}
+
+.footer__cta__wrapper {
+  @extend %footer__cta__wrapper;
+}

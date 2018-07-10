@@ -1,4 +1,9 @@
 <footer class="footer" id="insights__footer">
+
+  {% for section in sections %}
+    {% include "@organisms/Section/Section.html.twig" with {section: section, classes: section.classes} only %}
+  {% endfor %}
+
   <div class="grid-container grid-container-padded">
     <div class="grid-x grid-margin-x footer__content">
       <div class="cell medium-6 large-4">

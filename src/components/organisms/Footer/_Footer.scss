@@ -2,7 +2,6 @@ footer.footer {
   background: $white;
   display: flex;
   flex-flow: column;
-  padding: 0 2rem;
 
   h1,
   h2,
@@ -95,6 +94,7 @@ footer.footer {
   }
 
   .off-canvas & {
+    padding: 0 2rem;
     display: block;
 
     .footer-feature {
