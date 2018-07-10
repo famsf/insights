@@ -1,6 +1,10 @@
 %off-canvas {
   padding-top: 4rem;
 
+  .footer__cta__wrapper {
+    display: none;
+  }
+
   .off-canvas__buttons {
     .button,
     button {
