@@ -1,0 +1,26 @@
+%menu--footer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: .25rem !important;
+
+  @include breakpoint(medium) {
+    text-align: left;
+    justify-content: start;
+  }
+
+  a {
+    font-family: $alternate-header-font-family !important;
+    color: $dark-gray;
+    padding: 0 !important;
+    margin: 0 1rem;
+
+    @include breakpoint(medium) {
+      margin: 0 4rem 0 0;
+    }
+  }
+}
+
+.menu--footer {
+  @extend %menu--footer;
+}
