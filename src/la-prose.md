@@ -2,7 +2,9 @@
 layout: "templates/pages/digital-story.html.twig"
 title: La Prose
 tagline: From the de Young and Legion of Honor
-tickets_url: '#'
+twitter_url: 'https://twitter.com/legionofhonor'
+facebook_url: 'https://www.facebook.com/LegionofHonor/'
+tickets_url: 'https://tickets.famsf.org/events/283/list'
 bodyId: "la-prose"
 chapters:
 
