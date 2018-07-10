@@ -10,8 +10,7 @@
   };
 
   mobileNav.setActiveItem = function (target) {
-    var chapterIndex = target.getAttribute('data-chapter-index');
-    var item = mobileNav.navItems[chapterIndex];
+    var item = mobileNav.navItems[target.dataset.chapterIndex];
     if (mobileNav.activeItem) {
       mobileNav.activeItem.classList.remove('active_item');
     }
