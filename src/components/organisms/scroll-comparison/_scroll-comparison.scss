@@ -34,17 +34,13 @@
       position: absolute;
       font-family: $alternate-header-font-family;
       transition-duration: $transitionDuration;
-      top: calc(25% - 1.875rem);
+      top: 25vw;
     }
     .textarea {
       position: absolute;
       margin-top: 0.5rem;
-      opacity: 0;
-      width: calc(41.66667% - 1.875rem);
-      @include scrollComparisonTransition;
-      transition-delay: $transitionDuration;
-      transition-duration: $transitionDuration * 0.8;
-
+      width: calc(30vw - 1.875rem);
+      top: 37vw;
     }
   }
   .cell.active {
@@ -71,9 +67,6 @@
       opacity: 1;
     }
     .text-area {
-      transition-delay: 0;
-      top: calc(41.66667vw - 1.875rem);
-
     }
     .caption {
       max-height: 5rem;
