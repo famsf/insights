@@ -79,10 +79,6 @@
 
   fds.frameCount = 0;
 
-  fds.setStyle = function (el, obj) {
-    el.style = Object.assign(el.style, obj);
-  };
-
   fds.getHeight = function () {
     return doc.getElementById('insights-app').clientHeight;
   };
