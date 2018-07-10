@@ -1,46 +1,61 @@
 %menu--mobile {
   color: $white;
-  padding: 2rem;
+  padding: 1rem;
   border-bottom: 2px solid rgba($white, .25);
 
   h3 {
     font-weight: bold;
     font-size: 2rem;
+    margin-left: 1rem;
   }
 
-  li {
-    border-bottom: 1px solid rgba($white, .25);
+  .menu--mobile {
+    li {
+      position: relative;
 
-    &:first-of-type,
-    &:last-of-type {
-      border: none;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: calc(100% - 2rem);
+        margin: 0 1rem;
+        height: 1px;
+        background-color: rgba($white, .25);
+      }
+
+      &:last-of-type,
+      &.active_item {
+        &::after {
+          display: none;
+        }
+      }
+
+      &.active_item {
+        background: $primary-color;
+      }
     }
 
-    &:last-of-type a {
-      padding-bottom: 0;
+    a {
+      @include remove-outline();
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: 1rem;
+      color: $white;
+    }
+
+    .menu--mobile__numeral {
+      display: inline-block;
+      width: 2.5rem;
+      opacity: .5;
+    }
+
+    .menu--mobile__title {
+      font-style: italic;
     }
   }
-
-  a {
-    @include remove-outline();
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 1rem 0;
-    color: $white;
-  }
-
-  .menu--mobile__numeral {
-    display: inline-block;
-    width: 2.5rem;
-    opacity: .5;
-  }
-
-  .menu--mobile__title {
-    font-style: italic;
-  }
-
 }
 
-.menu--mobile {
+nav#mobile_nav {
   @extend %menu--mobile;
 }

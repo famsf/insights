@@ -14,6 +14,10 @@ Markup: video--embed.html.twig
   }
 }
 
+.plyr__controls {
+  background: transparent !important;
+}
+
 .plyr__control:hover {
   background-color: #fff !important;
   path {
@@ -22,12 +26,12 @@ Markup: video--embed.html.twig
 }
 
 .video--embed  {
+
   @include object-fit;
-  background-color: #000;
   position: relative;
-  video {
-    width: 100%;
-  }
+  height: 100vh;
+  overflow: hidden;
+
 
   .plyr--full-ui input[type=range] {
     height: 0.25rem;
@@ -37,10 +41,72 @@ Markup: video--embed.html.twig
     }
   }
 
+  .plyr-video {
+    max-height: 100vh;
+  }
+
   .plyr--video .plyr__controls {
-    bottom: 0;
-    height: 3em;
-    margin-left: 16.66667%;
-    margin-right: 16.66667%;
+    opacity: 0;
+    position: fixed;
+    bottom: -12em;
+  }
+
+  .triggered & {
+    .plyr--video .plyr__controls {
+      opacity: 1;
+      opacity: 1;
+      background: none;
+      padding-left: 16.6667%;
+      padding-right: 16.6667%;
+      top: auto;
+      bottom: 2em;
+      height: 3em;
+      width: 100%;
+    }
+  }
+
+  .plyr__video-wrapper {
+    background: $white;
+    .icon--not-pressed {
+      path {
+        fill: $black !important;
+      }
+    }
+  }
+
+  &.theme--dark .plyr__video-wrapper {
+    background: $black;
+    .icon--not-pressed {
+      path {
+        fill: $white;
+      }
+    }
+  }
+}
+
+.video--embed.file {
+
+  /*
+    Full page video background
+    Simulate object-fit: cover
+    Based on http://fvsch.com/code/video-background/
+  */
+
+  @media (min-aspect-ratio: 16/9) {
+    .plyr--video .plyr--video { height: 300%; top: -100%; }
+  }
+  @media (max-aspect-ratio: 16/9) {
+    .plyr--video .plyr--video { width: 300%; left: -100%; }
+  }
+
+  @supports (object-fit: cover) {
+    .plyr--video .plyr--video {
+      width: 100%;
+      height: 100%;
+      top: 0; left: 0;
+    }
+    .plyr--video video {
+      object-fit: cover;
+    }
   }
 }
