@@ -114,11 +114,13 @@ Styleguide COMPONENTS.in-depth
       }
 
       > picture {
+        width: 100% !important;
+
         @include breakpoint(medium) {
           flex-basis: 75%;
           height: 100vh;
           min-height: 100vh;
-          width: auto;
+          width: auto !important;
           position: relative;
 
           &:before {
@@ -153,7 +155,7 @@ Styleguide COMPONENTS.in-depth
       @include breakpoint(medium) {
         flex-basis: 25%;
         position: relative;
-        margin: 4rem 12rem 4rem 6rem;
+        margin: 4rem 12rem;
       }
     }
 
