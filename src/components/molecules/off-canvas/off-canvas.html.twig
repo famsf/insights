@@ -8,5 +8,5 @@
   {% endif %}
 
   {% include '@molecules/menu--mobile/menu--mobile.html.twig' with { chapters: chapters } only %}
-  {% include '@molecules/Footer/Footer.html.twig' with only %}
+  {% include '@organisms/Footer/Footer.html.twig' with { sections: sections, classes: classes } only %}
 </div>

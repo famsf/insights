@@ -1,0 +1,15 @@
+%cta__button--alt {
+  @extend %cta__button;
+  letter-spacing: 0px;
+  padding: 0;
+  font-size: .90em;
+
+  &:before {
+    display: none !important;
+  }
+}
+
+.button.cta--alt,
+.cta__button--alt {
+  @extend %cta__button--alt;
+}
