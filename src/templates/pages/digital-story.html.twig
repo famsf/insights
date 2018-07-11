@@ -1,11 +1,11 @@
 <div class="insights-app off-canvas-wrapper" id="insights-app">
-  {% include '@molecules/TopBar/TopBar.html.twig' with { tagline: tagline, tickets_url: tickets_url } only %}
+  {% include '@molecules/TopBar/TopBar.html.twig' with { tagline: tagline, tickets_url: tickets_url, facebook_url: facebook_url, twitter_url: twitter_url } only %}
   {% include '@molecules/ChapterNav/ChapterNav.html.twig' with { chapters: chapters } only %}
   <div class="chapters_container off-canvas-content" id="app">
     {% include '@environments/Chapters/Chapters.html.twig' with { chapters: chapters, title: title } only %}
-    {% include '@molecules/Footer/Footer.html.twig' with only %}
+    {% include '@organisms/Footer/Footer.html.twig' with { sections: footer.sections, classes: footer.classes } only %}
   </div>
   <div id="fpsEl" style="z-index: 1001; color: #fff; paddign: 0.25em 0.5em; position:fixed; bottom: 0; left:0; width: 10em; background-color: #000"></div>
 </div>
 
-{% include '@molecules/off-canvas/off-canvas.html.twig' with { chapters: chapters, title: title, tickets_url: tickets_url } only %}
+{% include '@molecules/off-canvas/off-canvas.html.twig' with { chapters: chapters, title: title, tickets_url: tickets_url, sections: footer.sections, classes: footer.classes } only %}

@@ -17,6 +17,10 @@
   &:after {
     padding-left: .25rem;
   }
+
+  .theme--dark & {
+    color: $white;
+  }
 }
 
 q {
