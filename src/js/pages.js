@@ -108,6 +108,7 @@
     pages.currentPage = page;
     console.log('pages.setCurrentPage', page.id, page.chapter);
     fds.chapterNav.setActiveItem(page.chapter);
+    fds.mobileNav.setActiveItem(page.chapter);
     pages.currentPage.el.classList.add('current');
     window.location.hash = '&chapter=' + page.chapterId + '&page=' + pageEl.id;
     pages.hashes.page = pageEl.id;
