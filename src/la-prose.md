@@ -165,6 +165,7 @@ chapters:
   # c1p5
   - components:
     - template: "@organisms/in-depth/in-depth.html.twig"
+      classes: theme--dark
       title: What is an Artist’s Book?
       picture:
         srcset:
