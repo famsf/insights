@@ -153,68 +153,9 @@ Styleguide COMPONENTS.in-depth
       }
     }
 
-    .owl-dots {
-      position: absolute;
-      right: 2rem;
-      bottom: 2rem;
-      counter-reset: dots;
-    }
-
-    .owl-dot {
-      @include remove-outline();
-      margin: 0 .5rem;
-      color: rgba($white, .5);
-
-      &.active {
-        color: $white;
-      }
-
-      span {
-        display: none;
-      }
-
-      &:before {
-        font-size: .75rem;
-        font-family: $alternate-header-font-family;
-        counter-increment: dots;
-        content: "0" counter(dots);
-      }
-    }
-
     .owl-nav {
       button {
-        @include remove-outline();
-        transition: all .25s ease-in-out;
-        position: absolute;
         top: calc(50% - 1.25rem);
-        color: transparent;
-        background-image: url("../assets/images/slide__icon--next.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        width: 4rem;
-        height: 2.5rem;
-        opacity: 1;
-
-        &:hover {
-          background-color: transparent;
-          background-image: url("../assets/images/slide__icon--next.svg");
-          background-size: contain;
-          background-repeat: no-repeat;
-          color: transparent;
-        }
-
-        &.disabled {
-          opacity: 0;
-        }
-
-        &.owl-prev {
-          left: 2rem;
-          transform: rotate(180deg);
-        }
-
-        &.owl-next {
-          right: 2rem;
-        }
       }
     }
   }
