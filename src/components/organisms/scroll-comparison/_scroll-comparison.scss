@@ -3,7 +3,7 @@
   $transitionDuration: 0.325s;
   $inactiveImageWidth: calc(25% - 1.875rem);
   $activeImageWidth: calc(41.66667% - 1.875rem);
-  animation-play-state: paused;
+  $inactiveH3Top: 17vw;
 
   .picture-with-caption {
     position: relative;
@@ -13,8 +13,9 @@
     position: relative;
     width: $inactiveImageWidth;
     transition-property: width;
-    transition-duration: 0.75s;
-    transition-timing-function: ease-out;
+    transition-delay: 0.425s;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
     .picture {
       position: relative;
       z-index: 5;
@@ -32,11 +33,11 @@
     h3 {
       position: absolute;
       font-family: $alternate-header-font-family;
-      top: calc($inactiveImageWidth + 1rem);
+      top: $inactiveH3Top;
       transition-property: top;
-      transition-delay: 0;
-      transition-duration: 0.75s;
-      transition-timing-function: ease-out;
+      transition-delay: 0.425s;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-in-out;
     }
     .textarea {
       position: absolute;
@@ -57,7 +58,7 @@
     .caption,
     .textarea {
       animation-name: fadeIn;
-      animation-duration: 0.75s;
+      animation-duration: 0.5s;
       animation-timing-function: ease-in-out;
       animation-direction: normal;
       animation-delay: 0.5s;
@@ -73,6 +74,9 @@
     }
   }
   .cell.inactive_col {
+    h3 {
+      top: $inactiveH3Top;
+    }
     .caption,
     .textarea {
       animation-name: fadeOut;

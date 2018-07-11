@@ -1004,7 +1004,7 @@ footer:
           classes: margin-bottom-0
       right:
         offset: large-offset-2
-        cols: medium-6 large-6 
+        cols: medium-6 large-6
         components:
         - template: "@layouts/two_up--primary/two_up--primary.html.twig"
           classes: footer-feature
@@ -1049,7 +1049,7 @@ footer:
               classes: separator-left
               text: Legion of Honor
             - template: "@atoms/textarea/textarea.html.twig"
-              text: 
+              text:
                 <p class="show-for-large">
                 Lincoln Park<br/>
                 100 34th Avenue<br/>

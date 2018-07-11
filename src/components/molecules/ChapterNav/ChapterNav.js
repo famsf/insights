@@ -69,6 +69,7 @@
     var pageIndex = page.index ? page.index : 0;
     var pageCount = page.chapterLength;
     var chapterNavSegmentHeight = chapterNav.height / chapterNav.chapters.length;
+    console.log('-– page', page);
     var pageToChapterRatio = page.clientHeight / chapter.clientHeight;
     var id = page.id;
     var count;

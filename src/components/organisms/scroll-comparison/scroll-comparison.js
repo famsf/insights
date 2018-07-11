@@ -8,9 +8,15 @@
     var id = el.id;
     var left = el.querySelector('.cell');
     var right = el.querySelector('.cell:nth-child(2)');
-    var textAreaBoundingRect = left.querySelector('.textarea').getBoundingClientRect();
+    var leftTextAreaBoundingRect = left.querySelector('.textarea').getBoundingClientRect();
+    var rightTextAreaBoundingRect = right.querySelector('.textarea').getBoundingClientRect();
     var instance;
-    el.style.height = textAreaBoundingRect.top + textAreaBoundingRect.height + 'px';
+    if (leftTextAreaBoundingRect.height > rightTextAreaBoundingRect) {
+      el.style.height = leftTextAreaBoundingRect.top + leftTextAreaBoundingRect.height + 'px';
+    }
+    else {
+      el.style.height = rightTextAreaBoundingRect.top + rightTextAreaBoundingRect.height + 'px';
+    }
     if (!scrollComparison.instances[id]) {
       scrollComparison.instances[id] = { el: el };
       if (left.classList.contains('active_col')) {
