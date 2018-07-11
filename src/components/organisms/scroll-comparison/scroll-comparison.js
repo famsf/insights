@@ -8,12 +8,13 @@
     var id = el.id;
     var left = el.querySelector('.cell');
     var right = el.querySelector('.cell:nth-child(2)');
+    var textAreaBoundingRect = left.querySelector('.textarea').getBoundingClientRect();
     var instance;
+    el.style.height = textAreaBoundingRect.top + textAreaBoundingRect.height + 'px';
     if (!scrollComparison.instances[id]) {
       scrollComparison.instances[id] = { el: el };
-      instance = scrollComparison.instances[id];
-      if (left.classList.contains('active')) {
-        instance.activeColumn = left;
+      if (left.classList.contains('active_col')) {
+        scrollComparison.instances[id].activeColumn = left;
       }
       left.addEventListener('click', function (e) {
         scrollComparison.setActiveColumn(el, left);
@@ -25,11 +26,14 @@
   };
 
   scrollComparison.setActiveColumn = function (el, col) {
-    var instance = scrollComparison.instances[el.id];
-    if (instance.activeColumn) {
-      instance.activeColumn.classList.remove('active');
+    console.log('setActiveColumn', el, col);
+    if (scrollComparison.instances[el.id].activeColumn) {
+      console.log('setActiveColumn B', scrollComparison.instances[el.id].activeColumn);
+      scrollComparison.instances[el.id].activeColumn.classList.add('inactive_col');
+      scrollComparison.instances[el.id].activeColumn.classList.remove('active_col');
     }
-    col.classList.add('active');
-    instance.activeColumn = col;
+    col.classList.add('active_col');
+    col.classList.remove('inactive_col');
+    scrollComparison.instances[el.id].activeColumn = col;
   };
 }(window.fds = window.fds || {}, window));

@@ -1,85 +1,112 @@
-@mixin scrollComparisonTransition {
-  opacity: 0;
-  transition-property: opacity;
-  transition-duration: 0.475s;
-  transition-timing-function: ease-out;
-}
-
 %scroll-comparison {
+
   $transitionDuration: 0.325s;
+  $inactiveImageWidth: calc(25% - 1.875rem);
+  $activeImageWidth: calc(41.66667% - 1.875rem);
+  animation-play-state: paused;
+
   .picture-with-caption {
     position: relative;
   }
-  .cell {
 
-    width: calc(25% - 1.875rem);
-    transition-property: width;
-    transition-duration: $transitionDuration;
-    transition-timing-function: ease-out;
+  .cell {
     position: relative;
+    width: $inactiveImageWidth;
+    transition-property: width;
+    transition-duration: 0.75s;
+    transition-timing-function: ease-out;
     .picture {
       position: relative;
       z-index: 5;
     }
     .caption {
       position: absolute;
-      top: calc(41.66667% - 1.875rem);
-      @include scrollComparisonTransition;
-      transition-delay: $transitionDuration;
-      transition-duration: $transitionDuration * 0.8;
       opacity: 0;
       z-index: 2;
+      top: 29vw;
+      width: 28vw;
+      .caption__brief {
+        line-height: 1.2;
+      }
     }
     h3 {
       position: absolute;
       font-family: $alternate-header-font-family;
-      transition-duration: $transitionDuration;
-      top: 25vw;
+      top: calc($inactiveImageWidth + 1rem);
+      transition-property: top;
+      transition-delay: 0;
+      transition-duration: 0.75s;
+      transition-timing-function: ease-out;
     }
     .textarea {
       position: absolute;
       margin-top: 0.5rem;
-      width: calc(30vw - 1.875rem);
+      width: 28vw;
       top: 37vw;
+      opacity: 0;
+    }
+    .caption,
+    .textarea {
+      animation-direction: forwards;
     }
   }
-  .cell.active {
 
+  .cell.active_col {
     width: calc(41.66667% - 1.875rem);
 
-    .picture {
-      /*
-       we may have to have to cater it to different breakpoints
-       somewhat specifically,
-       sadly animations dont resolve well when
-       transforming max-height to 100% or auto
-      */
-      transition-delay: $transitionDuration;
-
-      @include breakpoint(medium) {
-        max-height: 550px;
-        width: 100%;
-      }
-
-    }
-    .textarea,
-    .caption {
-      opacity: 1;
-    }
-    .text-area {
+    .caption,
+    .textarea {
+      animation-name: fadeIn;
+      animation-duration: 0.75s;
+      animation-timing-function: ease-in-out;
+      animation-direction: normal;
+      animation-delay: 0.5s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
     }
     .caption {
       max-height: 5rem;
-      top: 29vw;
     }
     h3 {
       top: 35vw;
     }
   }
+  .cell.inactive_col {
+    .caption,
+    .textarea {
+      animation-name: fadeOut;
+      animation-duration: 0.75s;
+      animation-timing-function: ease-out;
+      animation-delay: 0s;
+      animation-iteration-count: 1;
+      animation-play-state: running;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+    }
+  }
   .picture {
     overflow: hidden;
   }
+}
 
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .scroll-comparison {

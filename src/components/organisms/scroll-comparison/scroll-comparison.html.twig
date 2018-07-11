@@ -5,7 +5,7 @@
 {% import _self as do %}
 <div class="scroll-comparison fluid {{ classes }}" id="{{ id }}">
   <div class="wrapper grid-x grid-margin-x medium-8 medium-offset-2">
-    <div id="{{ left.id }}" class="cell active {{ do.print(left.cols, 'medium-5') }} {{ do.print(left.offset, '') }}" {{ left.attributes }}>
+    <div id="{{ left.id }}" class="cell active_col {{ do.print(left.cols, 'medium-5') }} {{ do.print(left.offset, '') }}" {{ left.attributes }}>
       {{ inklude.components(left) }}
     </div>
     <div id="{{ right.id }}" class="cell {{ do.print(right.cols, 'medium-3 end') }} {{ do.print(right.offset, '') }}" {{ right.attributes }}>
