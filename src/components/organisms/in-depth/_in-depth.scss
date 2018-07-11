@@ -20,6 +20,7 @@ Styleguide COMPONENTS.in-depth
 
   .in-depth__intro {
     width: 100%;
+    min-height: auto !important;
   }
 
   .in-depth__image {
@@ -119,6 +120,17 @@ Styleguide COMPONENTS.in-depth
           min-height: 100vh;
           width: auto;
           position: relative;
+
+          &:before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: calc(100% / 3);
+            height: 100%;
+            content: '';
+            background: linear-gradient(to right, transparent, $black);
+            z-index: 9;
+          }
         }
 
         img {
