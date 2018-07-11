@@ -1,0 +1,12 @@
+%copyright {
+  text-align: center;
+  font-family: $alternate-header-font-family !important;
+
+  @include breakpoint(large) {
+    text-align: right;
+  }
+}
+
+.copyright {
+  @extend %copyright;
+}

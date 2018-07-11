@@ -20,8 +20,6 @@ Styleguide COMPONENTS.textarea
   line-height: $textarea-line-height;
 
   &.drop-cap {
-    margin-top: $textarea-font-size * 3;
-
     > p:first-of-type {
       &:first-letter {
         float: left;

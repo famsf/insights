@@ -1,0 +1,14 @@
+%h4 {
+  .theme--dark & {
+    color: $white;
+  }
+
+  .theme--primary-dark & {
+    color: $white;
+  }
+}
+
+h4,
+.h4 {
+  @extend %h4;
+}

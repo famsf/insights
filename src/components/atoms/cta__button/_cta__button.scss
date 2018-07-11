@@ -40,6 +40,14 @@
   .theme--dark & {
     color: $white;
   }
+
+  .theme--primary-dark & {
+    color: $white;
+
+    &:before {
+      background: rgba($white, .35);
+    }
+  }
 }
 
 .button.cta,

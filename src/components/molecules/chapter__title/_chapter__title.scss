@@ -65,10 +65,12 @@ Markup: chapter__title.html.twig
     .numeral {
       font-size: 10rem;
       color: white;
+      font-weight: 900;
     }
 
     .title {
       font-size: 3.125rem;
+      font-style: italic;
     }
   }
 }
