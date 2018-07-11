@@ -8,9 +8,17 @@
     </div>
     <div class="top-bar-right">
       <div class="button-group hide-for-small-only">
-        <a href="#" class="button hollow icon"><i class="fab fa-twitter"></i><span class="show-for-sr">Twitter</span></a>
-        <a href="#" class="button hollow icon"><i class="fab fa-facebook-f"></i><span class="show-for-sr">Facebook</span></a>
-        {% include '@atoms/button/button.html.twig' with { text: 'Buy Tickets', href: tickets_url } only %}
+        {% if twitter_url %}
+         {% include '@atoms/button/button--icon.html.twig' with { text: 'Twitter', icon: '<i class="fab fa-twitter"></i>', href: twitter_url, target: '_blank' } only %}
+        {% endif %}
+
+        {% if facebook_url %}
+          {% include '@atoms/button/button--icon.html.twig' with { text: 'Facebook', icon: '<i class="fab fa-facebook-f"></i>', href: facebook_url, target: '_blank' } only %}
+        {% endif %}
+
+        {% if tickets_url %}
+          {% include '@atoms/button/button.html.twig' with { text: 'Buy Tickets', href: tickets_url, target: '_blank' } only %}
+        {% endif %}
       </div>
       <div class="cell shrink top-bar-hamburger text-right show-for-small-only">
         <button class="hamburger" type="button" data-toggle="off-canvas"></button>
