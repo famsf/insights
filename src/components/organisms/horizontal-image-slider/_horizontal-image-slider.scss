@@ -81,6 +81,12 @@ Styleguide COMPONENTS.horizontal-image-slider
   }
 
   .owl-nav {
+    display: none;
+
+    @include breakpoint(medium) {
+      display: block;
+    }
+
     button {
       @include remove-outline();
       transition: all .25s ease-in-out;
