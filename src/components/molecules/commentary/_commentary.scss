@@ -14,7 +14,7 @@ Styleguide COMPONENTS.commentary
   $commentary-padding-default: 4vw;
   margin-top: 4rem;
 
-  @include breakpoint(large) {
+  @include breakpoint(medium) {
     margin-top: 0;
   }
 
@@ -29,7 +29,7 @@ Styleguide COMPONENTS.commentary
   .commentary__layout-right {
     transform: translateY(-25vw);
 
-    @include breakpoint(large) {
+    @include breakpoint(medium) {
       transform: translateY(0);
     }
   }
@@ -40,7 +40,7 @@ Styleguide COMPONENTS.commentary
     border-bottom: 2px solid $medium-gray;
 
     @include breakpoint(large) {
-      padding: 0 $commentary-padding-default $commentary-padding-default $commentary-padding-default*1.5;
+      padding: 0 $commentary-padding-default*1.25 $commentary-padding-default $commentary-padding-default*1.5;
       border-bottom: none;
       border-right: 2px solid $medium-gray;
     }
@@ -51,8 +51,12 @@ Styleguide COMPONENTS.commentary
     position: relative;
     margin-bottom: -25vw;
 
+    @include breakpoint(medium) {
+      margin-bottom: 0;
+    }
+
     @include breakpoint(large) {
-      padding: $commentary-padding-default $commentary-padding-default*1.5 $commentary-padding-default $commentary-padding-default;
+      padding: $commentary-padding-default*1.25 $commentary-padding-default*1.5 $commentary-padding-default $commentary-padding-default;
       margin-bottom: 0;
     }
   }
@@ -61,7 +65,7 @@ Styleguide COMPONENTS.commentary
     margin-top: 0;
 
     .commentary__layout-left {
-      padding-top: $commentary-padding-default;
+      padding-top: $commentary-padding-default*1.25;
       transform: translateY(0);
     }
 
@@ -106,13 +110,10 @@ Styleguide COMPONENTS.commentary
     @include breakpoint(xlarge) {
       font-size: 4rem;
     }
-
-    @include breakpoint(xxlarge) {
-      font-size: 5rem;
-    }
   }
 
   .commentary__author-title {
+    font-size: 1.75rem;
     font-style: italic;
   }
 
