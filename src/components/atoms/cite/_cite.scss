@@ -1,5 +1,9 @@
 %cite {
   font-style: normal;
+
+  .theme--dark & {
+    color: $white;
+  }
 }
 
 cite {
