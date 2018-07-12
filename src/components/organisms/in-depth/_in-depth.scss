@@ -20,6 +20,7 @@ Styleguide COMPONENTS.in-depth
 
   .in-depth__intro {
     width: 100%;
+    min-height: auto !important;
   }
 
   .in-depth__image {
@@ -113,12 +114,25 @@ Styleguide COMPONENTS.in-depth
       }
 
       > picture {
+        width: 100% !important;
+
         @include breakpoint(medium) {
           flex-basis: 75%;
           height: 100vh;
           min-height: 100vh;
-          width: auto;
+          width: auto !important;
           position: relative;
+
+          &:before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: calc(100% / 3);
+            height: 100%;
+            content: '';
+            background: linear-gradient(to right, transparent, $black);
+            z-index: 9;
+          }
         }
 
         img {
@@ -141,7 +155,7 @@ Styleguide COMPONENTS.in-depth
       @include breakpoint(medium) {
         flex-basis: 25%;
         position: relative;
-        margin: 4rem 12rem 4rem 6rem;
+        margin: 4rem 12rem;
       }
     }
 

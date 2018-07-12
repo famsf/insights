@@ -45,10 +45,17 @@
     }
 
     picture {
+      width: 100% !important;
+
       @include breakpoint(medium) {
         max-height: inherit;
-        height: 75vh;
-        width: 75vh;
+        height: 80vh;
+        width: 80vh !important;
+      }
+
+      @include breakpoint(large) {
+        height: 85vh;
+        width: 85vh !important;
       }
     }
 
@@ -74,6 +81,21 @@
     @include breakpoint(large) {
       font-size: 4rem;
     }
+
+    @include breakpoint(xlarge) {
+      font-size: 5rem;
+    }
+
+    @include breakpoint(xxlarge) {
+      font-size: 6rem;
+    }
+  }
+
+  .slide--in-depth__intro__text {
+    @include breakpoint(xlarge) {
+      font-size: $lead-font-size;
+      line-height: $lead-lineheight;
+    }
   }
 
   .slide--in-depth__intro__content {
@@ -96,6 +118,11 @@
       position: absolute;
       bottom: calc(50% - 5px);
       margin-bottom: 3rem;
+      width: 100%;
+    }
+
+    @include breakpoint(large) {
+      margin-bottom: 5rem;
       width: 60%;
     }
   }
@@ -106,7 +133,16 @@
       top: calc(50% + 5px);
       right: 0;
       margin-top: 3rem;
+      width: 100%;
+    }
+
+    @include breakpoint(large) {
+      margin-top: 5rem;
       width: 40%;
+    }
+
+    @include breakpoint(xxlarge) {
+      right: 5rem;
     }
   }
   
