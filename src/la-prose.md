@@ -221,7 +221,7 @@ chapters:
           - caption:
               id: ch1p5-slide-3-caption
               brief: <em>Livres d’artistes</em>, deluxe editions illustrated by contemporary artists, came of age in the new century with <em>Parallelement</em>, published by Ambroise Vollard (1866–1939). Vollard’s younger contemporary Daniel-Henry Kahnweiler (1884–1979) published adventurous works by Pablo Picasso, Georges Braque, and others, with literary texts by as-yet obscure writers such as Guillaume Apollinaire, Max Jacob, André Malraux, and Gertrude Stein. Pierre Bonnard/Paul Verlaine, Parallelement (1900)
-              text: 'Pierre Bonnard (artist), Tony  Beltrand, Ambroise Vollard (publisher), Paul Verlaine (author), René Kieffer (binder), Imprimerie Nationale de France (printer), Auguste Clot (printer), Untitled, page 4 in the book Parallèlement by Paul Verlaine (Paris: Ambroise Vollard, 1900)., 1887–1900. Lithograph (pink sanguine) on Holland wove paper watermarked "Parallèlement", sheet: 295 x 240 mm (11 5/8 x 9 7/16 in.); image: 93 x 179 mm (3 11/16 x 7 1/16 in.). FAMSF, The Reva and David Logan Collection of Illustrated Books, 2000.200.45.6'
+              text: 'Pierre Bonnard (artist), Tony  Beltrand, Ambroise Vollard (publisher), Paul Verlaine (author), René Kieffer (binder), Imprimerie Nationale de France (printer), Auguste Clot (printer), Untitled, page 4 in the book <em>Parallèlement</em> by Paul Verlaine (Paris: Ambroise Vollard, 1900)., 1887–1900. Lithograph (pink sanguine) on Holland wove paper watermarked "Parallèlement", sheet: 295 x 240 mm (11 5/8 x 9 7/16 in.); image: 93 x 179 mm (3 11/16 x 7 1/16 in.). FAMSF, The Reva and David Logan Collection of Illustrated Books, 2000.200.45.6'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
               srcset:
@@ -236,8 +236,8 @@ chapters:
               style: vertical
           - caption:
               id: ch1p5-slide-4-caption
-              brief: 'Russian Futurists further developed the notion of the book as art with non-luxurious but conceptually advanced editions. The deluxe <em>livre d''artiste</em> and its lower-cost counterpart, the artist-published "democratic multiple," have persisted to the present day. So has the third way taken by <em>La prose</em>, where self-publishing artists combine high craft values with a visionary approach to the form of the book. El Lissitsky/Vladimir Mayakovsky: Dlia Golosa (For the Voice), 1923'
-              text: 'El Lissitzky (artist), Gosizdat (publisher), fourth chapter, page 17 in the book Dlia Golosa (For the Voice) by Vladimir Vladimirovich Mayakovsky (Berlin: Gosizdat, 1923), 1923. Lithograph (color) on cream wove paper, sheet: 187 x 124 mm (7 3/8 x 4 7/8 in.); image: 134 x 112 mm (5 1/4 x 4 7/16 in.). FAMSF, Gift of the Reva and David Logan Foundation, 1998.40.79.8'
+              brief: 'Russian Futurists further developed the notion of the book as art with non-luxurious but conceptually advanced editions. The deluxe <em>livre d’artiste</em> and its lower-cost counterpart, the artist-published "democratic multiple," have persisted to the present day. So has the third way taken by <em>La prose</em>, where self-publishing artists combine high craft values with a visionary approach to the form of the book. El Lissitsky/Vladimir Mayakovsky: <em>Dlia Golosa (For the Voice)</em>, 1923'
+              text: 'El Lissitzky (artist), Gosizdat (publisher), fourth chapter, page 17 in the book <em>Dlia Golosa (For the Voice)</em> by Vladimir Vladimirovich Mayakovsky (Berlin: Gosizdat, 1923), 1923. Lithograph (color) on cream wove paper, sheet: 187 x 124 mm (7 3/8 x 4 7/8 in.); image: 134 x 112 mm (5 1/4 x 4 7/16 in.). FAMSF, Gift of the Reva and David Logan Foundation, 1998.40.79.8'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
               srcset:
@@ -276,11 +276,11 @@ chapters:
       right:
         components:
           - template: "@atoms/textarea/textarea.html.twig"
-            text: "<p>La prose was a product of its time and place, a period like no other before or since. Georges Braque and Pablo Picasso were creating the radical new artistic vision of Cubism, leading to the birth of abstraction, and Marcel Duchamp was brewing his own conceptual artistic revolution. In poetry, Guillaume Apollinaire was charging through the door that Stéphane Mallarmé (1842–1898) had opened with his sophisticated exploration of visual poetics. Russian emigrés were injecting energy and radical ideas into the mix, bringing with them the bold dynamics of Futurism. The modernist spirit that was centered in Paris extended to all of Europe and the world beyond, setting the stage for the advent of Dada and Surrealism.</p>"
+            text: "<p><em>La prose</em> was a product of its time and place, a period like no other before or since. Georges Braque and Pablo Picasso were creating the radical new artistic vision of Cubism, leading to the birth of abstraction, and Marcel Duchamp was brewing his own conceptual artistic revolution. In poetry, Guillaume Apollinaire was charging through the door that Stéphane Mallarmé (1842–1898) had opened with his sophisticated exploration of visual poetics. Russian emigrés were injecting energy and radical ideas into the mix, bringing with them the bold dynamics of Futurism. The modernist spirit that was centered in Paris extended to all of Europe and the world beyond, setting the stage for the advent of Dada and Surrealism.</p>"
             dropcap: true
           - template: "@molecules/inline-quote/inline-quote.html.twig"
             component_name: inline-quote
-            name: Blaise Cendrars, La lotissement du ciel (Sky)
+            name: Blaise Cendrars, <em>La lotissement du ciel (Sky)</em>
             date: '1949'
             text: It was not the art dealers, nor the critics, nor the collectors who made these painters famous, it was the modern poets, and people forget it rather too easily, and so do all these painters who, today, are millionaires and are still indebted to us, the poor poets!     
 
@@ -307,11 +307,11 @@ chapters:
         - template: "@atoms/h3/h3.html.twig"
           text: "Stephané Mallarmé"
         - template: "@atoms/textarea/textarea.html.twig"
-          text: "<p>Mallarmé (1842-1898) is widely credited with opening the field of modernist visual poetics with his poem Un coup de dés jamais n’abolira le hazard (A Throw of the Dice Will Never Abolish Chance). He was a major influence on many of the poets, and even visual artists, of the generation that followed, an influence that is still felt today.</p>"
+          text: "<p>Mallarmé (1842-1898) is widely credited with opening the field of modernist visual poetics with his poem <em>Un coup de dés jamais n’abolira le hazard (A Throw of the Dice Will Never Abolish Chance)</em>. He was a major influence on many of the poets, and even visual artists, of the generation that followed, an influence that is still felt today.</p>"
           dropcap: true
         - template: "@molecules/inline-quote/inline-quote.html.twig"
           component_name: inline-quote
-          name: R. Howard Bloch, One Toss of the Dice
+          name: R. Howard Bloch, <em>One Toss of the Dice</em>
           date: 2017
           text: One Toss of the Dice” was the birth certificate of modern poetry...
       right:
@@ -354,8 +354,8 @@ chapters:
           text: The hothouse atmosphere of Paris produced what historian Roger Shattuck called “an atmosphere of perpetual collaboration,” a cross-disciplinary burgeoning of the avant-garde at a time when artists, poets, and musicians frequented the same cafes and saw one another regularly.
       - caption:
           id: c2p4-slide-2-caption
-          brief: The avant-garde writer Max Jacob was one of Picasso’s earliest friends in Paris. Picasso spent the summer of 1910 in Cadaqués, Spain, where he made a series of etchings to illustrate Jacob’s Saint Matorel. They are among his greatest cubist prints.
-          text: "Pablo Picasso (artist), Henry Kahnweiler (publisher), Max Jacob (author), Paul Birault (printer), Les Presses Eugène Delâtre (printer), Saint Matorel by Max Jacob (Paris: Henry Kahnweiler, 1911), 1911. 4 etchings (one with drypoint) on ivory laid Holland van Gelder paper; publisher's device on title page after a woodcut by Andre Derain; quarter leather with decorated Japanese paper covers, gold lettering on spine; decorated Japanese paper endpapers; original wrappers bound in, object: 267 x 200 mm (10 1/2 x 7 7/8 in.). FAMSF, The Reva and David Logan Collection of Illustrated Books, 2000.200.59.1-4"
+          brief: The avant-garde writer Max Jacob was one of Picasso’s earliest friends in Paris. Picasso spent the summer of 1910 in Cadaqués, Spain, where he made a series of etchings to illustrate Jacob’s <em>Saint Matorel</em>. They are among his greatest cubist prints.
+          text: "Pablo Picasso (artist), Henry Kahnweiler (publisher), Max Jacob (author), Paul Birault (printer), Les Presses Eugène Delâtre (printer), <em>Saint Matorel</em> by Max Jacob (Paris: Henry Kahnweiler, 1911), 1911. 4 etchings (one with drypoint) on ivory laid Holland van Gelder paper; publisher's device on title page after a woodcut by Andre Derain; quarter leather with decorated Japanese paper covers, gold lettering on spine; decorated Japanese paper endpapers; original wrappers bound in, object: 267 x 200 mm (10 1/2 x 7 7/8 in.). FAMSF, The Reva and David Logan Collection of Illustrated Books, 2000.200.59.1-4"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
           srcset:
@@ -398,12 +398,12 @@ chapters:
           - min-width: 800px
             src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/14_la-fin-du-monde.jpg
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/14_la-fin-du-monde.jpg
-          alt: illustration in the book La Fin du monde by Blaise Cendrars and Fernand Léger
+          alt: illustration in the book <em>La Fin du monde</em> by Blaise Cendrars and Fernand Léger
           style: vertical
       - caption:
           id: c2p4-slide-5-caption
           brief: "Raymond Radiguet, a charismatic prodigy, died in 1923 at age 20, leaving behind two brilliant and scandalous novels and a string of lovers, male and female, that seemed to include half of Paris bohemia. Gris met an untimely death at age 40, in the year following publication of <em>Denise</em>."
-          text: "Juan Gris (artist), Galerie Simon (publisher), Imprimerie Pitault (printer), Raymond Radiguet (author), Leibovitz (printer), Denise by Raymond Radiguet (Paris: Éditions de la Galerie Simon, 1926), 1926. Book with five lithographs on japon ancien, including front cover; cream japon wrappers with lithograph on front, object: 264 x 195 x 4 mm (10 3/8 x 7 11/16 x 3/16 in.). FAMSF, Gift of the Reva and David Logan Foundation, 1998.40.55.1-5. © 2018 Artists Rights Society (ARS), New York / ADAGP, Paris"
+          text: "Juan Gris (artist), Galerie Simon (publisher), Imprimerie Pitault (printer), Raymond Radiguet (author), Leibovitz (printer), <em>Denise</em> by Raymond Radiguet (Paris: Éditions de la Galerie Simon, 1926), 1926. Book with five lithographs on japon ancien, including front cover; cream japon wrappers with lithograph on front, object: 264 x 195 x 4 mm (10 3/8 x 7 11/16 x 3/16 in.). FAMSF, Gift of the Reva and David Logan Foundation, 1998.40.55.1-5. © 2018 Artists Rights Society (ARS), New York / ADAGP, Paris"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
           srcset:
@@ -423,7 +423,7 @@ chapters:
       component_name: commentary
       author_name: Mary Ann Caws
       author_title: "Distinguished Professor Emerita of English, French, and Comparative Literature at the Graduate School of the City University of New York"
-      author_bio: "Mary Ann Caws is the author of more than 40 books, including The Surrealist Look: An Erotics of Encounter (1997), and Picasso’s Weeping Woman: The Life and Art of Dora Maar (2000)."
+      author_bio: "Mary Ann Caws is the author of more than 40 books, including <em>The Surrealist Look: An Erotics of Encounter</em> (1997), and <em>Picasso’s Weeping Woman: The Life and Art of Dora Maar</em> (2000)."
       author_image: ''
       components:
       - template: "@atoms/textarea/textarea.html.twig"
@@ -438,7 +438,7 @@ chapters:
         - template: "@molecules/Picture/PictureWithCaption.html.twig"
           caption:
             id: c2p6-caption-1
-            brief: Diaghilev with Stravinsky at the Rite of Spring premiere, 1913
+            brief: Diaghilev with Stravinsky at the <em>Rite of Spring</em> premiere, 1913
             text: 'Rite of Spring premiere 1913. © Hulton Archive/Getty Images'
           picture:
             srcset:
@@ -447,7 +447,7 @@ chapters:
             - min-width: 800px
               src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/16_stravinsky-diaghilev.jpg
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/16_stravinsky-diaghilev.jpg
-            alt: Sergei Diaghilev with Igor Stravinsky at the Rite of Spring premiere, 1913
+            alt: Sergei Diaghilev with Igor Stravinsky at the <em>Rite of Spring</em> premiere, 1913
             style: horizontal
       right:
         components:
@@ -470,7 +470,7 @@ chapters:
       - caption:
           id: c2p7-slide-2-caption
           brief: 'Marcel Duchamp creates his first "ready-made," <em>Bicycle Wheel</em>'
-          text: "Marcel Duchamp, Bicycle Wheel, third version, 1951. Museum of Modern Art, MOMA, New York, USA. © Album / Alamy Stock Photo"
+          text: "Marcel Duchamp, <em>Bicycle Wheel</em>, third version, 1951. Museum of Modern Art, MOMA, New York, USA. © Album / Alamy Stock Photo"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
           srcset:
@@ -497,7 +497,7 @@ chapters:
           - min-width: 800px
             src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/18_proust.jpg
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/18_proust.jpg
-          alt: pages of Marcel Proust’s notes for Swann’s Way with drawings
+          alt: pages of Marcel Proust’s notes for <em>Swann’s Way</em> with drawings
           style: vertical
       - caption:
           id: c2p7-slide-4-caption
@@ -576,8 +576,8 @@ chapters:
         - template: "@molecules/Picture/PictureWithCaption.html.twig"
           caption:
             id: c3p3-caption-1
-            brief: Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars
-            text: 'Sonia Delaunay-Terk (artist), Blaise Cendrars (author), La Prose du Transsibérien et de la petite Jehanne de France (detail), 1913. Illustrated book with pochoir, case: 80 x 17 in. (203.2 x 43.2 cm). FAMSF, Gift of the Reva and David Logan Foundation, 2016.15.4.1'
+            brief: Detail of <em>La prose du Transsibérien et de la petite Jehanne de France</em> by Sonia Delaunay-Terk and Blaise Cendrars
+            text: 'Sonia Delaunay-Terk (artist), Blaise Cendrars (author), <em>La Prose du Transsibérien et de la petite Jehanne de France</em> (detail), 1913. Illustrated book with pochoir, case: 80 x 17 in. (203.2 x 43.2 cm). FAMSF, Gift of the Reva and David Logan Foundation, 2016.15.4.1'
           picture:
             srcset:
               - min-width: 0px
@@ -643,7 +643,7 @@ chapters:
           caption:
             id: c3p5-caption-1
             brief: "Robert Delaunay’s shaped canvas <em>Windows Open Simultaneously</em>, 1912"
-            text: 'Robert Delaunay, Windows Open Simultaneously 1st Part, 3rd Motif (Fenetres ouvertes simultanément 1ère partie 3e motif),1912. The Solomon R. Guggenheim Foundation Peggy Guggenheim Collection, Venice, 1976'
+            text: 'Robert Delaunay, <em>Windows Open Simultaneously 1st Part, 3rd Motif (Fenetres ouvertes simultanément 1ère partie 3e motif)</em>, 1912. The Solomon R. Guggenheim Foundation Peggy Guggenheim Collection, Venice, 1976'
           picture:
             srcset:
               - min-width: 0px
@@ -694,7 +694,7 @@ chapters:
       left:
         components:
           - template: "@atoms/cliff-note/cliff-note.html.twig"
-            text: In creating an authentic facsimile edition, artist and educator Kitty Maryatt has conducted exhaustive research into the production processes used for La prose in 1913.
+            text: In creating an authentic facsimile edition, artist and educator Kitty Maryatt has conducted exhaustive research into the production processes used for <em>La prose</em> in 1913.
       right:
         components:
           - template: "@atoms/h3/h3.html.twig"
@@ -721,7 +721,7 @@ chapters:
           - template: "@atoms/h3/h3.html.twig"
             text: "Art"
           - template: "@atoms/textarea/textarea.html.twig"
-            text: "<p>Sonia Delaunay painted the image for La prose on mattress ticking first. The image was reproduced for the edition by pochoir, a stencil process, with color applied by hand using prescribed brush strokes, exacting manipulation of stencils, precise registration, and consistent color matching. It is likely that the pochoir was performed at Crété.</p>"
+            text: "<p>Sonia Delaunay painted the image for La prose on mattress ticking first. The image was reproduced for the edition by <em>pochoir</em>, a stencil process, with color applied by hand using prescribed brush strokes, exacting manipulation of stencils, precise registration, and consistent color matching. It is likely that the pochoir was performed at Crété.</p>"
             dropcap: false
 
   # c4p3
@@ -761,12 +761,12 @@ chapters:
           - template: "@atoms/h3/h3.html.twig"
             text: "Structure"
           - template: "@atoms/textarea/textarea.html.twig"
-            text: "<p>The book appropriated the form of a folded map, and a map of the route of the Trans-Siberian Railroad was included at the top corner of the layout, with the poem unfolding to more than six feet vertically. It was designed to first unfold with only the blank back side showing so that it could then be dramatically opened to expose the contents all at once, in keeping with the precepts of simultaneité. It was enclosed in a hand-painted vellum cover, which is said to have been made for only 30 copies.</p>"
+            text: "<p>The book appropriated the form of a folded map, and a map of the route of the Trans-Siberian Railroad was included at the top corner of the layout, with the poem unfolding to more than six feet vertically. It was designed to first unfold with only the blank back side showing so that it could then be dramatically opened to expose the contents all at once, in keeping with the precepts of <em>simultaneité</em>. It was enclosed in a hand-painted vellum cover, which is said to have been made for only 30 copies.</p>"
             dropcap: false
           - template: "@atoms/h3/h3.html.twig"
             text: "Edition"
           - template: "@atoms/textarea/textarea.html.twig"
-            text: "<p>There were to be 150 copies in total, but it is likely that only about half that many were produced. A prospectus announced eight deluxe copies printed on vellum, 28 on japon (imported Japanese) paper, and for the standard trade copies simulated japon (similé japon). Maryatt has identified the Logan copy at the Legion of Honor, with its crisp letterpress printing, as one of the rare copies on japon.</p>"
+            text: "<p>There were to be 150 copies in total, but it is likely that only about half that many were produced. A prospectus announced eight deluxe copies printed on vellum, 28 on <em>japon</em> (imported Japanese) paper, and for the standard trade copies simulated <em>japon</em> (<em>similé japon</em>). Maryatt has identified the Logan copy at the Legion of Honor, with its crisp letterpress printing, as one of the rare copies on japon.</p>"
             dropcap: false
 
 ################################################################################
@@ -796,7 +796,7 @@ chapters:
           - template: "@atoms/h3/h3.html.twig"
             text: "The 1950s: Cendrars and Kerouac"
           - template: "@atoms/textarea/textarea.html.twig"
-            text: "<p>In some respects, the poem resembles Jack Kerouac’s On the Road. In composition, they share a common conceit: the illusion that they were composed, or narrated, in a single sitting, the intimate testimonial quality of a tale of alienation and transgression, drawing the listener or reader in. Both are road-trip stories, with socially marginalized traveling companions, that move across vast landscapes. Both are simultaneously life-changing inward journeys. And anyone who’s seen the Kerouac manuscript, the scroll, will immediately recognize the physical resemblance. With visual art, though, the two reading experiences diverge, and it is the hybrid nature of what we are looking at that distinguishes La prose as a unique and transcendent experience for the reader and viewer.</p>"
+            text: "<p>In some respects, the poem resembles Jack Kerouac’s <em>On the Road</em>. In composition, they share a common conceit: the illusion that they were composed, or narrated, in a single sitting, the intimate testimonial quality of a tale of alienation and transgression, drawing the listener or reader in. Both are road-trip stories, with socially marginalized traveling companions, that move across vast landscapes. Both are simultaneously life-changing inward journeys. And anyone who’s seen the Kerouac manuscript, the scroll, will immediately recognize the physical resemblance. With visual art, though, the two reading experiences diverge, and it is the hybrid nature of what we are looking at that distinguishes <em>La prose</em> as a unique and transcendent experience for the reader and viewer.</p>"
             dropcap: false
           - template: "@atoms/h3/h3.html.twig"
             text: "The 1960s: Light, Color, Motion"
@@ -806,7 +806,7 @@ chapters:
           - template: "@atoms/h3/h3.html.twig"
             text: "Book Art Now"
           - template: "@atoms/textarea/textarea.html.twig"
-            text: "<p>The steady growth of the field of book art in recent decades finds an iconic predecessor in La prose. Its unique appropriation of structure, and its hybrid nature, have made it an influence on succeeding generations of artists and writers who take the book beyond the limits of conventional form. For his spectacular book Nature Abhors, Philip Zimmermann used a structure devised by influential book artist Hedi Kyle.</p>"
+            text: "<p>The steady growth of the field of book art in recent decades finds an iconic predecessor in <em>La prose</em>. Its unique appropriation of structure, and its hybrid nature, have made it an influence on succeeding generations of artists and writers who take the book beyond the limits of conventional form. For his spectacular book <em>Nature Abhors</em>, Philip Zimmermann used a structure devised by influential book artist Hedi Kyle.</p>"
             dropcap: false
 
   # c5p3
@@ -842,7 +842,7 @@ chapters:
             text: The Reva and David Logan Collection of Illustrated Books
           - template: "@atoms/textarea/textarea.html.twig"
             text: "<p>Over a period of 20 years the Chicago collectors Reva and David Logan built one of the great private collections of artists’ books, and in 1998 donated that collection to the Achenbach Foundation for Graphic Arts, home of works on paper at the Fine Arts Museums of San Francisco.</p>
-                   <p>With more than more than 400 carefully assembled titles, the Logan Collection contains many of the most important works in the genre, with significant artists’ books representing virtually every major art movement dating from the beginnings of the genre of the livre d’artiste in the late 19th century. Augmented by important works already held by the Achenbach, the Logan gift established the Fine Arts Museums of San Francisco as stewards of one of the most historically-significant collections of artists’ books in the United States.</p>"
+                   <p>With more than more than 400 carefully assembled titles, the Logan Collection contains many of the most important works in the genre, with significant artists’ books representing virtually every major art movement dating from the beginnings of the genre of the <em>livre d’artiste</em> in the late 19th century. Augmented by important works already held by the Achenbach, the Logan gift established the Fine Arts Museums of San Francisco as stewards of one of the most historically-significant collections of artists’ books in the United States.</p>"
             dropcap: false
       left:
         components:
