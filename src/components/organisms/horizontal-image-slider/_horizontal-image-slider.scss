@@ -10,11 +10,15 @@ Styleguide COMPONENTS.horizontal-image-slider
 */
 
 %horizontal-image-slider {
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 2rem 2rem;
   background: $black;
   height: 100vh;
   display: block;
   color: $white;
+
+  @include breakpoint(medium) {
+    padding: 8rem 2rem 4rem 2rem;
+  }
 
   .owl-stage-outer,
   .owl-stage,
@@ -22,19 +26,34 @@ Styleguide COMPONENTS.horizontal-image-slider
     height: 100%;
   }
 
-  .item.intro-slide {
-    padding: 2rem;
-    display: flex;
+  .item {
     height: 100%;
 
     .item__content {
-      margin: auto 0;
+      height: 100%;
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      
+      @include breakpoint(medium) {
+        display: block;
+      }
     }
 
-    @include breakpoint(large) {
-      max-height: 630px;
-      padding: 2rem 2rem 2rem 4rem;
-      max-width: 25rem;
+    &.intro-slide {
+      padding: 2rem;
+      display: flex;
+      height: 100%;
+
+      .item__content {
+        margin: auto 0;
+      }
+
+      @include breakpoint(large) {
+        max-height: 630px;
+        padding: 2rem 2rem 2rem 4rem;
+        max-width: 25rem;
+      }
     }
   }
 
@@ -43,13 +62,39 @@ Styleguide COMPONENTS.horizontal-image-slider
   }
 
   picture {
-    max-height: 630px;
-    width: auto;
     margin-bottom: .5rem;
+    width: 100%;
+
+    @include breakpoint(medium) {
+      max-height: 630px;
+      width: auto;
+    }
+
+    img {
+      max-height: 50vh;
+      width: auto;
+      margin: auto;
+
+      @include breakpoint(medium) {
+        max-height: 630px;
+        width: auto;
+        height: 100%;
+      }
+    }
   }
 
   .caption {
-    position: absolute;
+    @include breakpoint(medium) {
+      position: absolute;
+    }
+
+    .toggle-caption {
+      display: none;
+
+      @include breakpoint(medium) {
+        display: inline-block;
+      }
+    }
   }
 
   .owl-dots {
