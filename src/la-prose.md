@@ -344,7 +344,8 @@ chapters:
           text: "[Apollinaire] marks an epoch. The beautiful things we can do now!"
 
   # c2p4
-  - components:
+  - classes: hide-chapter-nav invert-top-bar
+    components:
     - template: "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig"
       slides:
       - intro_slide: true
@@ -459,7 +460,8 @@ chapters:
             text: "A woman nearby, covered by diamonds, but the music of Stravinsky drove her crazy, tore out a brand new folding seat and smashed me over the head with it, so I had to spend the rest of the night drinking champagne in Montmartre with Stravinsky [and] Diaghilev . . . still wearing the folding chair like a horse collar..."
 
   # c2p7
-  - components:
+  - classes: hide-chapter-nav invert-top-bar
+    components:
     - template: "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig"
       slides:
       - intro_slide: true
