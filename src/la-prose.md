@@ -44,9 +44,9 @@ chapters:
   - classes: theme--dark
     components:
     - template: "@atoms/video--embed/video--embed.html.twig"
-      id: WmrP8JhWb2U
+      id: xt27-zrvHkk
       youtube:
-        embed: WmrP8JhWb2U
+        embed: xt27-zrvHkk
 
 ################################################################################
 ## CHAPTER 1 ###################################################################
@@ -71,7 +71,7 @@ chapters:
       components:
       - template: "@molecules/standalone-quote/standalone-quote.html.twig"
         component_name: standalone-quote
-        name: Blaise Cendrars in Der Sturm (Berlin), September, 1913
+        name: Blaise Cendrars in <em>Der Sturm</em> (Berlin), September, 1913
         text: Mme. Delaunay has made such a beautiful book of colors that my poem is more saturated with light than is my life. . . .  Besides, think that this book should be two meters high! Moreover, that the edition should reach the height of the Eiffel Tower!.
         large_text: false
 
@@ -131,7 +131,7 @@ chapters:
           text: "<p>Delaunay-Terk (1885-1979) was born in the Ukraine and raised
             in St. Petersburg. She moved to Paris in 1905. In 1910 she married
             Robert Delaunay, an artist known for his bold use of color and abstract
-            form. The Delaunays were exemplars of “Orphism,” as Apollinaire
+            form. The Delaunays were exemplars of “Orphism,” as the poet Guillaume Apollinaire
             had called it, their work infusing Cubism with dynamic light and
             color. In addition to painting, Delaunay-Terk’s practice encompassed
             textile and fashion design, bookbinding, furniture design, and set
@@ -142,7 +142,7 @@ chapters:
         - template: "@molecules/Picture/PictureWithCaption.html.twig"
           caption:
             id: caption4
-            text: Ca.1907. Wikimedia Commonse
+            text: Blaise Cendrars, ca.1907. Wikimedia Commons
           picture:
             srcset:
             - min-width: 0px
@@ -189,8 +189,8 @@ chapters:
           - caption: ''
             components:
             - template: "@molecules/slide--in-depth__intro/slide--in-depth__intro.html.twig"
-              title: Scandals & Controversies
-              text: 'Book art has a long history. In the <em>Book of Kells</em>, the letterform is an expression of transcendance; even beyond its overt religious significance, here the book is truly, in the words of Stéphane Mallarmé, an <em>"instrument spirituel."</em>'
+              title: What is an Artist's Book?
+              text: 'Book art has a long history. In the <em>Book of Kells</em>, the letterform is an expression of transcendance. Even beyond its overt religious significance, the book is truly, in the words of Stéphane Mallarmé, an <em>"instrument spirituel."</em>'
               picture:
                 srcset:
                 - min-width: 0px
@@ -204,8 +204,8 @@ chapters:
                 style: square
           - caption:
               id: ch1p5-slide-2-caption
-              brief: William Blake’s illustrations display a singular vision and deep interpenetration of text and image, a unified expression that has rarely been equaled. Many consider Blake the father of book art. William Blake, illustration for Book of Job (1823)
-              text: 'William Blake, Plate 16: "Thou hast fulfilled the Judgment of the wicked" from the complete proof edition of Blake''s Book of Job, 1825. Engraving, 19.6 x 16.2 cm (image). FAMSF, museum purchase, William H. Noble Bequest Fund, 1979.1.11.17'
+              brief: William Blake’s illustrations display a singular vision and deep interpenetration of text and image, a unified expression that has rarely been equaled. Many consider Blake the father of book art. William Blake, illustration for <em>Book of Job</em (1823)
+              text: 'William Blake, Plate 16: "Thou hast fulfilled the Judgment of the wicked" from the complete proof edition of Blake’s <em>Book of Job</em>, 1825. Engraving, 19.6 x 16.2 cm (image). FAMSF, museum purchase, William H. Noble Bequest Fund, 1979.1.11.17'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
               srcset:
@@ -220,7 +220,7 @@ chapters:
               style: vertical
           - caption:
               id: ch1p5-slide-3-caption
-              brief: Publication of deluxe editions illustrated by contemporary artists was taken up in earnest with livre d’artiste editions such as Parallelement, published by Ambroise Vollard (1866–1939). Vollard’s contemporary Daniel-Henry Kahnweiler (1884–1979) published adventurous works by Pablo Picasso, Georges Braque, and others, with literary texts by as-yet obscure writers such as Guillaume Apollinaire, Max Jacob, André Malraux, and Gertrude Stein. Pierre Bonnard/Paul Verlaine, Parallelement (1900)
+              brief: <em>Livres d’artistes</em>, deluxe editions illustrated by contemporary artists, came of age in the new century with <em>Parallelement</em>, published by Ambroise Vollard (1866–1939). Vollard’s younger contemporary Daniel-Henry Kahnweiler (1884–1979) published adventurous works by Pablo Picasso, Georges Braque, and others, with literary texts by as-yet obscure writers such as Guillaume Apollinaire, Max Jacob, André Malraux, and Gertrude Stein. Pierre Bonnard/Paul Verlaine, Parallelement (1900)
               text: 'Pierre Bonnard (artist), Tony  Beltrand, Ambroise Vollard (publisher), Paul Verlaine (author), René Kieffer (binder), Imprimerie Nationale de France (printer), Auguste Clot (printer), Untitled, page 4 in the book Parallèlement by Paul Verlaine (Paris: Ambroise Vollard, 1900)., 1887–1900. Lithograph (pink sanguine) on Holland wove paper watermarked "Parallèlement", sheet: 295 x 240 mm (11 5/8 x 9 7/16 in.); image: 93 x 179 mm (3 11/16 x 7 1/16 in.). FAMSF, The Reva and David Logan Collection of Illustrated Books, 2000.200.45.6'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
@@ -236,7 +236,7 @@ chapters:
               style: vertical
           - caption:
               id: ch1p5-slide-4-caption
-              brief: 'The concept of the book as art was further developed by the Russian Futurists in non-luxurious but conceptually advanced editions. The deluxe livre d''artiste and its lower-cost counterpart, the artist-published "democratic multiple," have persisted to the present day. So has the third way taken by La prose, where self-publishing artists combine high craft values with a visionary approach to the form of the book. El Lissitsky/Vladimir Mayakovsky: Dlia Golosa (For the Voice), 1923'
+              brief: 'Russian Futurists further developed the notion of the book as art with non-luxurious but conceptually advanced editions. The deluxe <em>livre d''artiste</em> and its lower-cost counterpart, the artist-published "democratic multiple," have persisted to the present day. So has the third way taken by <em>La prose</em>, where self-publishing artists combine high craft values with a visionary approach to the form of the book. El Lissitsky/Vladimir Mayakovsky: Dlia Golosa (For the Voice), 1923'
               text: 'El Lissitzky (artist), Gosizdat (publisher), fourth chapter, page 17 in the book Dlia Golosa (For the Voice) by Vladimir Vladimirovich Mayakovsky (Berlin: Gosizdat, 1923), 1923. Lithograph (color) on cream wove paper, sheet: 187 x 124 mm (7 3/8 x 4 7/8 in.); image: 134 x 112 mm (5 1/4 x 4 7/16 in.). FAMSF, Gift of the Reva and David Logan Foundation, 1998.40.79.8'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
@@ -354,7 +354,7 @@ chapters:
           text: The hothouse atmosphere of Paris produced what historian Roger Shattuck called “an atmosphere of perpetual collaboration,” a cross-disciplinary burgeoning of the avant-garde at a time when artists, poets, and musicians frequented the same cafes and saw one another regularly.
       - caption:
           id: c2p4-slide-2-caption
-          brief: The avant-garde writer Max Jacob was one of Picasso’s earliest Paris friends. Picasso spent the summer of 1910 in Cadaqués, Spain, where he made a series of etchings to illustrate Jacob’s Saint Matorel. They are among his greatest cubist prints.
+          brief: The avant-garde writer Max Jacob was one of Picasso’s earliest friends in Paris. Picasso spent the summer of 1910 in Cadaqués, Spain, where he made a series of etchings to illustrate Jacob’s Saint Matorel. They are among his greatest cubist prints.
           text: "Pablo Picasso (artist), Henry Kahnweiler (publisher), Max Jacob (author), Paul Birault (printer), Les Presses Eugène Delâtre (printer), Saint Matorel by Max Jacob (Paris: Henry Kahnweiler, 1911), 1911. 4 etchings (one with drypoint) on ivory laid Holland van Gelder paper; publisher's device on title page after a woodcut by Andre Derain; quarter leather with decorated Japanese paper covers, gold lettering on spine; decorated Japanese paper endpapers; original wrappers bound in, object: 267 x 200 mm (10 1/2 x 7 7/8 in.). FAMSF, The Reva and David Logan Collection of Illustrated Books, 2000.200.59.1-4"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
@@ -386,8 +386,8 @@ chapters:
           style: vertical
       - caption:
           id: c2p4-slide-4-caption
-          brief: "<em>La fin du monde</em> was conceived as a screenplay, begun in collaboration with Guillaume Apollinaire and Jean Cocteau, both of whom soon dropped out. Léger and Cendrars had both suffered serious injuries in the trenches of First World War, and each felt a strong affinity with the other’s work."
-          text: "Fernand Léger (artist), Editions de la Sirène (publisher), Blaise Cendrars (author), Richard Marcelle (printer), Frazier-Soye (printer), 12th illustration in the book La Fin du monde, filmée par l'ange N.D. by Blaise Cendrars (Paris: Editions de la Sirène, 1919), 1919. Color pochoir on ivory wove, lafuma paper, sheet: 320 x 250 mm (12 5/8 x 9 13/16 in.); image: 320 x 79 mm (12 5/8 x 3 1/8 in.), FAMSF, Gift of the Reva and David Logan Foundation, 1998.40.77.12"
+          brief: "<em>La fin du monde</em> was conceived as a screenplay, begun in collaboration with Guillaume Apollinaire and Jean Cocteau, both of whom soon dropped out. Léger and Cendrars had both suffered serious injuries in the trenches in the First World War, and each felt a strong affinity with the other’s work."
+          text: "Fernand Léger (artist), Editions de la Sirène (publisher), Blaise Cendrars (author), Richard Marcelle (printer), Frazier-Soye (printer), 12th illustration in the book <em>La Fin du monde, filmée par l'ange N.D.</em> by Blaise Cendrars (Paris: Editions de la Sirène, 1919), 1919. Color pochoir on ivory wove, lafuma paper, sheet: 320 x 250 mm (12 5/8 x 9 13/16 in.); image: 320 x 79 mm (12 5/8 x 3 1/8 in.), FAMSF, Gift of the Reva and David Logan Foundation, 1998.40.77.12"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
           srcset:
@@ -402,8 +402,8 @@ chapters:
           style: vertical
       - caption:
           id: c2p4-slide-5-caption
-          brief: "Raymond Radiguet, a charismatic prodigy, died in 1923 at age 20, leaving behind two brilliant and scandalous novels and a string of lovers, male and female, that seemed to include half of Paris bohemia. Gris, for his part, met an untimely death at age 40, in the year following publication of <em>Denise</em>."
-          text: "Juan Gris (artist), Galerie Simon (publisher), Imprimerie Pitault (printer), Raymond Radiguet (author), Leibovitz (printer), Denise by Raymond Radiguet (Paris: Éditions de la Galerie Simon, 1926), 1926. Book with five lithographs on  japon ancien, including front cover; cream japon wrappers with lithograph on front, object: 264 x 195 x 4 mm (10 3/8 x 7 11/16 x 3/16 in.). FAMSF, Gift of the Reva and David Logan Foundation, 1998.40.55.1-5. © 2018 Artists Rights Society (ARS), New York / ADAGP, Paris"
+          brief: "Raymond Radiguet, a charismatic prodigy, died in 1923 at age 20, leaving behind two brilliant and scandalous novels and a string of lovers, male and female, that seemed to include half of Paris bohemia. Gris met an untimely death at age 40, in the year following publication of <em>Denise</em>."
+          text: "Juan Gris (artist), Galerie Simon (publisher), Imprimerie Pitault (printer), Raymond Radiguet (author), Leibovitz (printer), Denise by Raymond Radiguet (Paris: Éditions de la Galerie Simon, 1926), 1926. Book with five lithographs on japon ancien, including front cover; cream japon wrappers with lithograph on front, object: 264 x 195 x 4 mm (10 3/8 x 7 11/16 x 3/16 in.). FAMSF, Gift of the Reva and David Logan Foundation, 1998.40.55.1-5. © 2018 Artists Rights Society (ARS), New York / ADAGP, Paris"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
           srcset:
@@ -485,8 +485,8 @@ chapters:
           style: vertical
       - caption:
           id: c2p7-slide-3-caption
-          brief: "Marcel Proust writes Swann’s Way"
-          text: "Some of Marcel Proust’s notes for Swann’s Way, with doodles. © Bibliotheque nationale de France (BnF), Paris, France, Dist. RMN-Grand Palais/Art Resource, NY"
+          brief: "Marcel Proust publishes <em>Swann’s Way</em>"
+          text: "Some of Marcel Proust’s notes for <em>Swann’s Way</em>, with doodles. © Bibliotheque nationale de France (BnF), Paris, France, Dist. RMN-Grand Palais/Art Resource, NY"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
           srcset:
@@ -517,8 +517,9 @@ chapters:
           style: vertical
       - caption:
           id: c2p7-slide-5-caption
-          brief: "Guillaume Apollinaire writes Alcools, with a portrait by Picasso and etchings by Louis Marcoussis"
-          text: "Guillaume Apollinaire: Alcools, with a portrait by Picasso and etchings by Louis Marcoussis"
+          brief: "Guillaume Apollinaire publishes <em>Alcools</em>, with a portrait by Picasso and etchings by Louis Marcoussis"
+          text: "Guillaume Apollinaire: <em>Alcools</em>, with a portrait by Picasso and etchings by Louis Marcoussis (Paris: Mercure de France, 1913), 1913
+"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
           srcset:
@@ -564,7 +565,7 @@ chapters:
       right:
         components:
           - template: "@atoms/textarea/textarea.html.twig"
-            text: "<p>The book is a vortex of convergent and oppositional energies, an environment created for a remarkable reading experience. When folded, roughly four by seven inches, and just over an inch thick, it can be read by flipping the accordion-fold “pages.” Alternatively, one can unfold it to full length, more than six feet, on a long table. That way the entire design and text can be apprehended – not, as Apollinaire said, at a glance, but by following the poetic narrative as it weaves through splashes of color.</p>"
+            text: "<p>The book is a vortex of convergent and oppositional energies, an environment created for a remarkable reading experience. When folded it is roughly four by seven inches, and just over an inch thick. It can be read by unfolding the accordion-fold “pages” one segment at a time. Alternatively, one can unfold it to full length, more than six feet, on a long table. That way the entire design and text can be apprehended – not, as Apollinaire said, at a glance, but by following the poetic narrative as it weaves through splashes of color.</p>"
             dropcap: true
           - template: "@atoms/cta__button/cta__button.html.twig"
             text: Read an English translation of the Poem
@@ -602,7 +603,7 @@ chapters:
             component_name: inline-quote
             name: Mary Ann Caws
             date: '2017'
-            text: "La prose is at once a simultaneous riot of colors, as both painter and poet intended, according to the authors' acquaintance with the theories of Michel-Eugène Chevreul, author of De la loi du contraste simultané des couleurs (The Laws of Contrast of Color, 1839). Chevreul experimented with a color wheel, and his discoveries had a great influence on the impressionists and the post-impressionists, and, in turn, on the whirling colors of this brightly-lit scroll of a poem."
+            text: "<em>La prose</em> is at once a simultaneous riot of colors, as both painter and poet intended, according to the authors' acquaintance with the theories of Michel-Eugène Chevreul, author of <em>De la loi du contraste simultané des couleurs (The Laws of Contrast of Color)</em>, 1839. Chevreul experimented with a color wheel, and his discoveries had a great influence on the impressionists and the post-impressionists, and, in turn, on the whirling colors of this brightly-lit scroll of a poem."
       left:
         components:
         - template: "@molecules/Picture/PictureWithCaption.html.twig"
@@ -694,22 +695,6 @@ chapters:
         components:
           - template: "@atoms/cliff-note/cliff-note.html.twig"
             text: In creating an authentic facsimile edition, artist and educator Kitty Maryatt has conducted exhaustive research into the production processes used for La prose in 1913.
-          - template: "@molecules/Picture/PictureWithCaption.html.twig"
-            caption:
-              id: c4p2-caption-1
-              brief: "Paper conservator Victoria Binder used a microscope to analyze the fiber composition of the copy of <em>La prose</em> in the Logan Collection at the Legion of Honor"
-              text: 'Sonia Delaunay-Terk (artist), Blaise Cendrars (author), <em>La Prose du Transsibérien et de la petite Jehanne de France</em> (detail), 1913. Illustrated book with pochoir, case: 80 x 17 in. (203.2 x 43.2 cm). FAMSF, Gift of the Reva and David Logan Foundation, 2016.15.4.1'
-            picture:
-              srcset:
-                - min-width: 0px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/27_microscopic-view-la-prose.jpg
-                - min-width: 350px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/27_microscopic-view-la-prose.jpg
-                - min-width: 800px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/27_microscopic-view-la-prose.jpg
-              url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/27_microscopic-view-la-prose.jpg
-              alt: Microscopic view of La prose du Transsiberien used to analyze fiber composition
-              style: horizontal
       right:
         components:
           - template: "@atoms/h3/h3.html.twig"
@@ -755,6 +740,22 @@ chapters:
           - template: "@atoms/textarea/textarea.html.twig"
             text: ""
             dropcap: false
+          - template: "@molecules/Picture/PictureWithCaption.html.twig"
+            caption:
+              id: c4p2-caption-1
+              brief: "Paper conservator Victoria Binder used a microscope to analyze the fiber composition of the copy of <em>La prose</em> in the Logan Collection at the Legion of Honor"
+              text: 'Sonia Delaunay-Terk (artist), Blaise Cendrars (author), <em>La Prose du Transsibérien et de la petite Jehanne de France</em> (detail), 1913. Illustrated book with pochoir, case: 80 x 17 in. (203.2 x 43.2 cm). FAMSF, Gift of the Reva and David Logan Foundation, 2016.15.4.1'
+            picture:
+              srcset:
+                - min-width: 0px
+                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/27_microscopic-view-la-prose.jpg
+                - min-width: 350px
+                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/27_microscopic-view-la-prose.jpg
+                - min-width: 800px
+                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/27_microscopic-view-la-prose.jpg
+              url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/27_microscopic-view-la-prose.jpg
+              alt: Microscopic view of La prose du Transsiberien used to analyze fiber composition
+              style: horizontal
       right:
         components:
           - template: "@atoms/h3/h3.html.twig"
@@ -809,41 +810,12 @@ chapters:
             dropcap: false
 
   # c5p3
-  - components:
-    - template: "@layouts/two_up--primary/two_up--primary.html.twig"
-      right:
-        components:
-          - template: "@atoms/h3/h3.html.twig"
-            text: This Project
-          - template: "@atoms/textarea/textarea.html.twig"
-            text: "<p>As the only works of art that must be handled to be fully experienced, artists’ books present a challenge for an institution charged with their conservation and display. The current project, funded by a generous grant from the Reva and David Logan Foundation, addresses this challenge by making contents of, and related information about, selected books from the collection available online utilizing the affordances of digital media. The project aims in this way to raise the profile of the collection and to create greater public understanding and awareness of what critic and historian Johanna Drucker has called arguably “the quintessential 20th century artform.” This project intends to make significant work by many of the most important artists of the twentieth century available in its entirety to public access for the first time.</p>
-                   <p>With more than more than 400 carefully assembled titles, the Logan Collection contains many of the most important works in the genre, with significant artists’ books representing virtually every major art movement dating from the beginnings of the genre of the livre d’artiste in the late 19th century. Augmented by important works already held by the Achenbach, the Logan gift established the Fine Arts Museums of San Francisco as stewards of one of the most historically-significant collections of artists’ books in the United States.</p>"
-            dropcap: false
-      left:
-        components:
-        - template: "@molecules/Picture/PictureWithCaption.html.twig"
-          caption:
-            brief: The Reva and David Logan Gallery of Illustrated Books at the Legion of Honor
-            text: ''
-          picture:
-            srcset:
-              - min-width: 0px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/31_logan-gallery.jpg
-              - min-width: 350px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/31_logan-gallery.jpg
-              - min-width: 800px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/31_logan-gallery.jpg
-            url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/31_logan-gallery.jpg
-            alt: Photo of David and Reva Logan
-            style: horizontal
-
-  # c5p4
   - classes: theme--dark
     components:
     - template: "@atoms/video--embed/video--embed.html.twig"
-      id: p6io0gBiXe0
+      id: tOg9IEvt154
       youtube:
-        embed: p6io0gBiXe0
+        embed: tOg9IEvt154
 
 ################################################################################
 ## CHAPTER 6 ###################################################################
@@ -869,7 +841,7 @@ chapters:
           - template: "@atoms/h3/h3.html.twig"
             text: The Reva and David Logan Collection of Illustrated Books
           - template: "@atoms/textarea/textarea.html.twig"
-            text: "<p>Over a period of 20 years the Chicago collectors Reva and David Logan built one of the great private collections of artists’ books, and in 1998 donated that collection to the Achenbach Foundation, home of works on paper at the Fine Arts Museums of San Francisco.</p>
+            text: "<p>Over a period of 20 years the Chicago collectors Reva and David Logan built one of the great private collections of artists’ books, and in 1998 donated that collection to the Achenbach Foundation for Graphic Arts, home of works on paper at the Fine Arts Museums of San Francisco.</p>
                    <p>With more than more than 400 carefully assembled titles, the Logan Collection contains many of the most important works in the genre, with significant artists’ books representing virtually every major art movement dating from the beginnings of the genre of the livre d’artiste in the late 19th century. Augmented by important works already held by the Achenbach, the Logan gift established the Fine Arts Museums of San Francisco as stewards of one of the most historically-significant collections of artists’ books in the United States.</p>"
             dropcap: false
       left:
@@ -899,9 +871,12 @@ chapters:
           - template: "@atoms/h3/h3.html.twig"
             text: This Project
           - template: "@atoms/textarea/textarea.html.twig"
-            text: "<p>As the only works of art that must be handled to be fully experienced, artists’ books present a challenge for an institution charged with their conservation and display. The current project, funded by a generous grant from the Reva and David Logan Foundation, addresses this challenge by making contents of, and related information about, selected books from the collection available online utilizing the affordances of digital media. The project aims in this way to raise the profile of the collection and to create greater public understanding and awareness of what critic and historian Johanna Drucker has called arguably “the quintessential 20th century artform.” This project intends to make significant work by many of the most important artists of the twentieth century available in its entirety to public access for the first time.</p>
-                   <p>With more than more than 400 carefully assembled titles, the Logan Collection contains many of the most important works in the genre, with significant artists’ books representing virtually every major art movement dating from the beginnings of the genre of the livre d’artiste in the late 19th century. Augmented by important works already held by the Achenbach, the Logan gift established the Fine Arts Museums of San Francisco as stewards of one of the most historically-significant collections of artists’ books in the United States.</p>"
+            text: "<p>As the only works of art that must be handled to be fully experienced, artists’ books present a challenge for an institution charged with their conservation and display. The current project, funded by a generous grant from the Reva and David Logan Foundation, addresses this challenge by making contents of, and related information about, selected books from the collection available online utilizing the affordances of digital media. The project aims in this way to raise the profile of the collection and to create greater public understanding and awareness of what critic and historian Johanna Drucker has called arguably “the quintessential 20th century artform.” This project intends to make significant works by many of the most important artists of the century available to public access in their entirety for the first time.</p>"
             dropcap: false
+          - template: "@atoms/cta__button/cta__button.html.twig"
+            text: Find more resources related to this project
+            href: "https://legionofhonor.famsf.org/related-resources-la-prose"
+            target: _blank
       left:
         components:
         - template: "@molecules/Picture/PictureWithCaption.html.twig"
@@ -924,9 +899,9 @@ chapters:
   - classes: theme--dark
     components:
     - template: "@atoms/video--embed/video--embed.html.twig"
-      id: _QWKwhv8MG4
+      id: yTDiYSA_nQE
       youtube:
-        embed: _QWKwhv8MG4
+        embed: yTDiYSA_nQE
 
 ################################################################################
 ## Footer ######################################################################
