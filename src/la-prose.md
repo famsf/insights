@@ -169,12 +169,12 @@ chapters:
       picture:
         srcset:
         - min-width: 0px
-          src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+          src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells-detail.jpg
         - min-width: 768px
-          src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+          src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells-detail.jpg
         - min-width: 960px
-          src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
-        url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+          src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells-detail.jpg
+        url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells-detail.jpg
         alt: Image of chi-rho page from book of kells
         style: vertical
       button:
@@ -194,12 +194,12 @@ chapters:
               picture:
                 srcset:
                 - min-width: 0px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells-detail.jpg
                 - min-width: 768px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells-detail.jpg
                 - min-width: 960px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
-                url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
+                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells-detail.jpg
+                url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells-detail.jpg
                 alt: Image of chi-rho page from book of kells
                 style: square
           - caption:
