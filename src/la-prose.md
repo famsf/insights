@@ -44,9 +44,9 @@ chapters:
   - classes: theme--dark
     components:
     - template: "@atoms/video--embed/video--embed.html.twig"
-      id: WmrP8JhWb2U
+      id: xt27-zrvHkk
       youtube:
-        embed: WmrP8JhWb2U
+        embed: xt27-zrvHkk
 
 ################################################################################
 ## CHAPTER 1 ###################################################################
@@ -107,12 +107,12 @@ chapters:
           dropcap: true
 
   # c1p4
-    - components:
+  - components:
     - template: "@organisms/scroll-comparison/scroll-comparison.html.twig"
       id: laprosescrollcomparison
       left:
         components:
-        - template: "@molecules/Picture/PictureWithCaption.html.twig"
+        - template: "@molecules/scroll-comparison__picture/scroll-comparison__picture.html.twig"
           caption:
             id: caption3
             brief: 'Photo: Florence Henri, 1931. Martini & Ronchetti Gallery
@@ -142,7 +142,7 @@ chapters:
           dropcap: true
       right:
         components:
-        - template: "@molecules/Picture/PictureWithCaption.html.twig"
+        - template: "@molecules/scroll-comparison__picture/scroll-comparison__picture.html.twig"
           caption:
             id: caption4
             brief: Ca.1907. Wikimedia Commons
