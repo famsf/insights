@@ -107,16 +107,15 @@ chapters:
           dropcap: true
 
   # c1p4
-  - components:
+  - classes: theme--dark
+    components:
     - template: "@organisms/scroll-comparison/scroll-comparison.html.twig"
       id: laprosescrollcomparison
       left:
-        components:
-        - template: "@molecules/scroll-comparison__picture/scroll-comparison__picture.html.twig"
+        visible:
+        - template: "@molecules/Picture/PictureWithCaption.html.twig"
           caption:
-            id: caption3
-            brief: 'Photo: Florence Henri, 1931. Martini & Ronchetti Gallery
-              and image source'
+            brief: 'Photo: Florence Henri, 1931. Martini & Ronchetti Gallery and image source'
           picture:
             srcset:
             - min-width: 0px
@@ -130,6 +129,7 @@ chapters:
             style: vertical
         - template: "@atoms/h3/h3.html.twig"
           text: "Sonia Delaunay-Terk"
+        hidden:
         - template: "@atoms/textarea/textarea.html.twig"
           text: "<p>Delaunay-Terk (1885-1979) was born in the Ukraine and raised
             in St. Petersburg. She moved to Paris in 1905. In 1910 she married
@@ -139,12 +139,11 @@ chapters:
             color. In addition to painting, Delaunay-Terk’s practice encompassed
             textile and fashion design, bookbinding, furniture design, and set
             design.</p>"
-          dropcap: true
+          dropcap: false
       right:
-        components:
-        - template: "@molecules/scroll-comparison__picture/scroll-comparison__picture.html.twig"
+        visible:
+        - template: "@molecules/Picture/PictureWithCaption.html.twig"
           caption:
-            id: caption4
             brief: Ca.1907. Wikimedia Commons
           picture:
             srcset:
@@ -159,13 +158,14 @@ chapters:
             style: vertical
         - template: "@atoms/h3/h3.html.twig"
           text: "Blaise Cendrars"
+        hidden:
         - template: "@atoms/textarea/textarea.html.twig"
           text: "<p>Cendrars (1887-1961) was born Frédéric-Louis Sauser in Neuchatel,
             Switzerland, and became a French citizen in 1916. One of the leading
             literary figures of 20th century France, he was a friend and collaborator
             with many artists, including Fernand Léger, Marc Chagall, and Amedeo
             Modigliani.</p>"
-          dropcap: true
+          dropcap: false
 
   # c1p5
   - components:
