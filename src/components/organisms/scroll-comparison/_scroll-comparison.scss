@@ -1,169 +1,103 @@
 %scroll-comparison {
+  background: transparent;
 
-  $transitionDuration: 0.325s;
-  $inactiveImageWidthMd: 20%;
-  $activeImageWidthMd: 60%;
-  $inactiveImageWidthLg: calc(25% - 1.875rem);
-  $activeImageWidthLg: calc(41.66667% - 1.875rem);
+  .content {
+    transition: all .5s ease-in-out;
+    opacity: 0;
+    width: calc(100vw - 4rem);
 
-  .picture-with-caption {
-    position: relative;
+    @include breakpoint(medium) {
+      width: 100%;
+    }
   }
 
-  .cell {
-    position: relative;
-    transition-property: width;
-    transition-delay: 0.5s;
-    transition-duration: 0.5s;
-    @include breakpoint(small down) {
-      margin-right: 0;
+  picture {
+    margin-bottom: 1rem;
+
+    @include breakpoint(medium) {
+      margin-bottom: 0;
     }
-    transition-timing-function: ease-in-out;
-    .picture-with-caption {
+  }
+
+  .wrapper > .cell {
+    @extend .small-4;
+    transition: all .5s ease-in-out;
+
+    picture {
       position: relative;
-      z-index: 5;
-      .mobile-overlay {
+
+      &:after {
+        transition: all .5s ease-in-out;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f067";
+        text-align: center;
+        padding-top: calc(50% - .5rem);
+        color: $white;
         position: absolute;
+        height: 100%;
+        width: 100%;
         top: 0;
         left: 0;
-        width: 64px;
-        height: 64px;
-        transition-property: opacity;
-        transition-duration: 0s;
-        transition-delay: 0.5s;
-        transition-timing-function: ease-in-out;
-        color: #fff;
-        .svg-inline--fa {
-          position: relative;
-          left: 50%;
-          top: 50%;
-          transform: translate3d(-50%, -50%, 0);
-        }
-      }
-      @include breakpoint(medium) {
-        .mobile-overlay {
-          display: none;
-        }
-      }
-    }
-    .caption {
-      z-index: 2;
-      margin-top: 0.5em;
-      .caption__brief {
-        line-height: 1.2;
-      }
-    }
-    h3 {
-      font-family: $alternate-header-font-family;
-      transition-property: top;
-      transition-duration: 0.325s;
-      transition-timing-function: ease-in-out;
-      position: absolute;
-      left: -3000px;
-      top: -3000px;
-      height: 0;
-      width: 0;
-      overflow: hidden;
-    }
-    .caption,
-    .textarea {
-      transition-property: opacity;
-      transition-duration: 0.5s;
-      transition-timing-function: ease-in-out;
-      opacity: 0;
-    }
-    @include breakpoint(medium) {
-      h3 {
-        position: absolute;
-      }
-      .caption {
-        position: absolute;
-      }
-      .textarea {
-        position: absolute;
-      }
-    }
-    @include breakpoint(large) {
-      width: $inactiveImageWidthLg;
-      h3 {
-        left: 0;
-        height: auto;
-        width: auto;
-        overflow: visible;
-      }
-    }
-  }
-
-  .cell.active_col {
-    width: 70%;
-    .picture-with-caption {
-      .mobile-overlay {
-        opacity: 0;
-        transition-duration: 0s;
-        transition-delay: 0s;
-      }
-    }
-    .caption {
-      max-height: 5rem;
-    }
-    .caption,
-    .textarea {
-      opacity: 0;
-      transition-duration: 0.325s;
-    }
-    @include breakpoint(medium) {
-      width: 60%;
-      h3 {
-        left: 0;
-        height: auto;
-        width: auto;
-        overflow: visible;
-      }
-      .caption {
-        position: absolute;
-      }
-    }
-    @include breakpoint(large) {
-      width: calc(41.66667% - 1.875rem);
-      .caption {
-        position: absolute;
-      }
-    }
-  }
-  .cell.inactive_col {
-    width:64px;
-    .picture-with-caption {
-      position: relative;
-      .mobile-overlay {
-        border: 2px $black solid;
+        background: rgba($black, .5);
         opacity: 1;
-        transition-duration: 0s;
-        transition-delay: 0.75s;
-        background-color: rgba($black, 0.5);
+        border: 2px solid $white;
       }
-      .caption {
-        position: fixed;
-        left: 120%;
-        top: 120%;
+
+      &:hover {
+        cursor: pointer;
       }
-    }
-    .caption,
-    .textarea {
-      transition-duration: 0.325s;
-      opacity: 0;
-    }
-    @include breakpoint(medium) {
-      width: $inactiveImageWidthMd;
-      .mobile-overlay {
-        opacity: 0;
+
+      + .caption {
+        display: none;
+
+        @include breakpoint(medium) {
+          display: block;
+        }
       }
     }
-  }
-  .cell.show-text {
-    .caption,
-    .textarea {
-      transition-duration: 0.325s;
-      opacity: 1;
+
+   h3 {
+      display: none;
+
+      @include breakpoint(medium) {
+        display: block;
+      }
+    }
+
+    &.active {
+      @extend .small-8;
+
+      picture {
+        &:after {
+          opacity: 0;
+        }
+
+        &:hover {
+          cursor: none;
+        }
+      }
+
+      h3 {
+        display: block;
+      }
+
+      .content {
+        transition-delay: .5s;
+        opacity: 1;
+      }
+    }
+
+    &:last-of-type {
+      h3,
+      .content {
+        margin-left: calc(calc(-100vw / 3) + 1rem);
+
+
+        @include breakpoint(medium) {
+          margin-left: 0;
+        }
+      }
     }
   }
 }
