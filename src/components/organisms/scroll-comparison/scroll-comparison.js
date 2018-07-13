@@ -41,7 +41,6 @@
     instance.activeColumn.el.addEventListener('transitionend', function (e) {
       instance.activeColumn.el.classList.add('show-text');
       if (e.target !== instance.activeColumn.el) {
-        console.log('transitionend', e.target);
         instance.activeColumn.el.classList.add('show-text');
       }
       else {
