@@ -84,9 +84,6 @@
       };
       pages.byId[pageEl.id] = page;
       pages.triggerVideo(page);
-      if (pageEl.querySelector('.scroll-comparison')) {
-        fds.scrollComparison.initialize(pageEl.querySelector('.scroll-comparison'));
-      }
     }
   };
 

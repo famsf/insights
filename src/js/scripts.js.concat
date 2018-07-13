@@ -5,7 +5,6 @@ files:
 - components/atoms/video--embed/video--embed.js
 - components/molecules/TopBar/TopBar.js
 - components/molecules/CoverPage/CoverPage.js
-- components/organisms/scroll-comparison/scroll-comparison.js
 - js/pages.js
 - components/molecules/ChapterNav/ChapterNav.js
 - components/molecules/menu--mobile/menu--mobile.js

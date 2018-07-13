@@ -71,6 +71,13 @@
     }
   });
 
+  // Scroll Comparison JS.
+  if ($('.scroll-comparison .wrapper .cell').length) {
+    $('.scroll-comparison .wrapper .cell').click(function () {
+      $(this).siblings('.cell').toggleClass('active');
+      $(this).toggleClass('active');
+    });
+  }
 
   // In Depth Slider Modal Close Methods.
   $('.in-depth-modal .modal__close-button').click(function () {
