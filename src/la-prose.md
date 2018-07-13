@@ -110,7 +110,6 @@ chapters:
   - classes: theme--dark
     components:
     - template: "@organisms/scroll-comparison/scroll-comparison.html.twig"
-      id: laprosescrollcomparison
       left:
         visible:
         - template: "@molecules/Picture/PictureWithCaption.html.twig"
