@@ -1,0 +1,11 @@
+%footer__navigation {
+  font-size: $small-font-size;
+  margin: auto 0 0 0;
+  padding: 2rem 0;
+  border-top: 2px solid $medium-gray;
+  color: $dark-gray;
+}
+
+.footer__navigation {
+  @extend %footer__navigation;
+}

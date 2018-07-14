@@ -1,0 +1,51 @@
+%color-variants {
+
+  &.theme--dark {
+    background: $black !important;
+
+    h1,
+    h2,
+    h3,
+    p {
+      color: $white;
+    }
+  }
+
+  &.theme--primary {
+    background: $white !important;
+
+    h1,
+    h2,
+    h3,
+    p {
+      color: $primary-color;
+    }
+  }
+
+  &.theme--primary-dark {
+    background: $primary-color !important;
+
+    h1,
+    h2,
+    h3,
+    p {
+      color: $white;
+    }
+  }
+
+  &.theme--primary-light {
+    background: rgba($primary-color, .10) !important;
+
+    h1,
+    h2,
+    h3,
+    p {
+      color: $primary-color;
+    }
+  }
+
+}
+
+* {
+  @extend %color-variants;
+}

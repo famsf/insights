@@ -1,0 +1,14 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.grid-container {
+  max-width: $global-width;
+
+  @include breakpoint(medium) {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}

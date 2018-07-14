@@ -13,7 +13,6 @@ Styleguide COMPONENTS.in-depth
   display: flex;
   align-items: center;
   height: 100vh;
-  padding: 2rem;
 
   @include breakpoint(medium) {
     padding: 0;
@@ -54,7 +53,7 @@ Styleguide COMPONENTS.in-depth
   .in-depth__right-col {
     position: relative;
     z-index: 10;
-    transform: translate(0, -2rem);
+    transform: translate(0, -4rem);
     padding: 0 2rem;
 
     @include breakpoint(medium) {
@@ -76,6 +75,14 @@ Styleguide COMPONENTS.in-depth
 
     @include breakpoint(xxlarge) {
       transform: translate(-8rem, 0);
+    }
+  }
+
+  // Theme overrides.
+  .theme--dark &,
+  &.theme--dark {
+    .in-depth__title {
+      color: $white;
     }
   }
 }
@@ -210,7 +217,6 @@ Styleguide COMPONENTS.in-depth
         }
       }
     }
-
   }
 }
 

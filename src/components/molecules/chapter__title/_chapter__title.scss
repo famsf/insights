@@ -31,7 +31,7 @@ Markup: chapter__title.html.twig
 
   .triggered & {
     .object-fit {
-      animation-name: kenburns--sonja;
+      animation-name: kenburns;
       animation-duration: 1.325s;
       animation-timing-function: ease-in-out;
       animation-direction: normal;
@@ -65,10 +65,12 @@ Markup: chapter__title.html.twig
     .numeral {
       font-size: 10rem;
       color: white;
+      font-weight: 900;
     }
 
     .title {
       font-size: 3.125rem;
+      font-style: italic;
     }
   }
 }
@@ -78,7 +80,7 @@ Markup: chapter__title.html.twig
 }
 
 
-@keyframes kenburns--sonja {
+@keyframes kenburns {
   0% {
     transform: scale(1);
   }

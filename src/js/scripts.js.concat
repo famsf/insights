@@ -1,11 +1,13 @@
 ---
 files:
+- js/poly/nextElementSibling.js
 - js/poly/performantScrollTo.js
 - components/atoms/video--embed/video--embed.js
 - components/molecules/TopBar/TopBar.js
 - components/molecules/CoverPage/CoverPage.js
 - js/pages.js
 - components/molecules/ChapterNav/ChapterNav.js
+- components/molecules/menu--mobile/menu--mobile.js
 - components/molecules/sharing-icons/sharing-icons.js
 - js/main.js
 insertNewLine: true

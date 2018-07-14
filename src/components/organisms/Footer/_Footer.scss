@@ -2,7 +2,6 @@ footer.footer {
   background: $white;
   display: flex;
   flex-flow: column;
-  padding: 0 2rem;
 
   h1,
   h2,
@@ -14,15 +13,13 @@ footer.footer {
     font-family: $alternate-header-font-family;
   }
 
-  .grid-container {
-    padding: 0;
-  }
-
   .footer__content {
-    padding: 3rem 0;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 
     @include breakpoint(medium) {
-      padding: 5rem 0;
+      padding-top: 6rem;
+      padding-bottom: 6rem;
     }
   }
 
@@ -47,15 +44,11 @@ footer.footer {
     }
   }
 
-  .footer__navigation {
-    font-size: $small-font-size;
-    margin-top: auto;
-    padding: 2rem 0;
-    border-top: 2px solid $medium-gray;
-    color: $dark-gray;
-  }
-
   .footer-feature {
+
+    @include breakpoint(medium) {
+      margin-bottom: 4rem;
+    }
 
     @include breakpoint(large) {
       margin-bottom: 4rem;
@@ -71,17 +64,7 @@ footer.footer {
 
     p {
       font-size: $small-font-size;
-    }
-  }
-
-  .menu--footer {}
-
-  .copyright {
-    text-align: center;
-    font-family: $alternate-header-font-family !important;
-
-    @include breakpoint(large) {
-      text-align: right;
+      line-height: 1.3em;
     }
   }
 
@@ -95,6 +78,7 @@ footer.footer {
   }
 
   .off-canvas & {
+    padding: 0 2rem;
     display: block;
 
     .footer-feature {
@@ -114,32 +98,4 @@ footer.footer {
     }
   }
 
-}
-
-%menu--footer {
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  margin-top: .25rem !important;
-
-  @include breakpoint(medium) {
-    justify-content: start;
-    text-align: left;
-    display: inline-flex;
-  }
-
-  a {
-    font-family: $alternate-header-font-family !important;
-    color: $dark-gray;
-    padding: 0 !important;
-    margin: 0 1rem;
-
-    @include breakpoint(medium) {
-      margin: 0 4rem 0 0;
-    }
-  }
-}
-
-.menu--footer {
-  @extend %menu--footer;
 }

@@ -71,6 +71,13 @@
     }
   });
 
+  // Scroll Comparison JS.
+  if ($('.scroll-comparison .wrapper .cell').length) {
+    $('.scroll-comparison .wrapper .cell').click(function () {
+      $(this).siblings('.cell').toggleClass('active');
+      $(this).toggleClass('active');
+    });
+  }
 
   // In Depth Slider Modal Close Methods.
   $('.in-depth-modal .modal__close-button').click(function () {
@@ -148,6 +155,7 @@
     };
     fds.rootElement = doc.querySelector('.insights-app');
     fds.fpsEl = doc.getElementById('fpsEl');
+    fds.mobileNav.initialize('mobile_nav');
     fds.chapterNav.initialize('chapter_nav', '.chapter', '.top-bar');
     fds.pages.initialize('.chapters_container', '.page', '.top-bar');
     fds.topBar.initialize('topBar');

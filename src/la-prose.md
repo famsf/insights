@@ -2,6 +2,9 @@
 layout: "templates/pages/digital-story.html.twig"
 title: La Prose
 tagline: From the de Young and Legion of Honor
+twitter_url: 'https://twitter.com/legionofhonor'
+facebook_url: 'https://www.facebook.com/LegionofHonor/'
+tickets_url: 'https://tickets.famsf.org/events/283/list'
 bodyId: "la-prose"
 chapters:
 
@@ -17,7 +20,7 @@ chapters:
   - classes: invert-top-bar
     components:
     - template: "@molecules/CoverPage/CoverPage.html.twig"
-      subtitle: du Transsibérien et de la petite Jehanne de France
+      subtitle: du Transsibérien et de<br>la petite Jehanne de France
       info: "Reva and David Logan Collection of Illustrated Books Legion of Honor Museum"
       image:
         url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/0_la-prose-title-card.jpg
@@ -29,20 +32,21 @@ chapters:
       cols: medium-8
       offset: medium-offset-2
       dropcap: false
-      classes: big_type
+      classes: big_type theme--primary
+      grid: align-middle
       components:
       - template: "@atoms/h2/h2.html.twig"
         text: Introduction
       - template: "@atoms/textarea/textarea.html.twig"
-        text: "<p>By 1913, Paris had been for more than a decade the epicenter of artistic revolution in Europe. That year, artist Sonia Delaunay and poet Blaise Cendrars collaborated on <em>La prose du Transsibérien et de la petite Jehanne de France (Prose of the Trans-Siberian and of Little Jehanne of France)</em>. Hailed as the first “simultaneous book,” the artwork was conceived as a unified experience of text and image, indivisible and apprehended concurrently.<p>"
+        text: "<p>By 1913, Paris had been for more than a decade the epicenter of artistic revolution in Europe. That year, artist Sonia Delaunay and poet Blaise Cendrars collaborated on <em>La prose du Transsibérien et de la petite Jehanne de France (Prose of the Trans-Siberian and of Little Jehanne of France)</em>. Hailed as the first “simultaneous book,” the artwork was conceived as a unified experience of text and image, indivisible and apprehended concurrently.</p>"
 
   # iii
-  - classes: dark
+  - classes: theme--dark
     components:
     - template: "@atoms/video--embed/video--embed.html.twig"
-      id: WmrP8JhWb2U
+      id: xt27-zrvHkk
       youtube:
-        embed: WmrP8JhWb2U
+        embed: xt27-zrvHkk
 
 ################################################################################
 ## CHAPTER 1 ###################################################################
@@ -62,6 +66,8 @@ chapters:
   # c1p2
   - components:
     - template: "@layouts/one_up--primary/one_up--primary.html.twig"
+      classes: theme--primary-dark
+      grid: align-middle
       components:
       - template: "@molecules/standalone-quote/standalone-quote.html.twig"
         component_name: standalone-quote
@@ -101,26 +107,28 @@ chapters:
           dropcap: true
 
   # c1p4
-  - components:
+  - classes: theme--dark
+    components:
     - template: "@organisms/scroll-comparison/scroll-comparison.html.twig"
       left:
-        components:
+        visible:
         - template: "@molecules/Picture/PictureWithCaption.html.twig"
           caption:
-            id: caption3
-            text: 'Photo: Florence Henri, 1931. Martini & Ronchetti Gallery
-              and image source'
+            brief: 'Photo: Florence Henri, 1931. Martini & Ronchetti Gallery and image source'
           picture:
             srcset:
             - min-width: 0px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
+              src: /assets/images/delaunay.jpg
             - min-width: 350px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
+              src: /assets/images/delaunay.jpg
             - min-width: 800px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
-            url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
+              src: /assets/images/delaunay.jpg
+            url: /assets/images/delaunay.jpg
             alt: Photo of sonia delaunay-terk
             style: vertical
+        - template: "@atoms/h3/h3.html.twig"
+          text: "Sonia Delaunay-Terk"
+        hidden:
         - template: "@atoms/textarea/textarea.html.twig"
           text: "<p>Delaunay-Terk (1885-1979) was born in the Ukraine and raised
             in St. Petersburg. She moved to Paris in 1905. In 1910 she married
@@ -130,31 +138,33 @@ chapters:
             color. In addition to painting, Delaunay-Terk’s practice encompassed
             textile and fashion design, bookbinding, furniture design, and set
             design.</p>"
-          dropcap: true
+          dropcap: false
       right:
-        components:
+        visible:
         - template: "@molecules/Picture/PictureWithCaption.html.twig"
           caption:
-            id: caption4
-            text: Ca.1907. Wikimedia Commonse
+            brief: Ca.1907. Wikimedia Commons
           picture:
             srcset:
             - min-width: 0px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
+              src: /assets/images/cendrars.jpg
             - min-width: 350px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
+              src: /assets/images/cendrars.jpg
             - min-width: 800px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
-            url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
+              src: /assets/images/cendrars.jpg
+            url: /assets/images/cendrars.jpg
             alt: Photo of blaise cendrars
             style: vertical
+        - template: "@atoms/h3/h3.html.twig"
+          text: "Blaise Cendrars"
+        hidden:
         - template: "@atoms/textarea/textarea.html.twig"
           text: "<p>Cendrars (1887-1961) was born Frédéric-Louis Sauser in Neuchatel,
             Switzerland, and became a French citizen in 1916. One of the leading
             literary figures of 20th century France, he was a friend and collaborator
             with many artists, including Fernand Léger, Marc Chagall, and Amedeo
             Modigliani.</p>"
-          dropcap: true
+          dropcap: false
 
   # c1p5
   - components:
@@ -544,6 +554,7 @@ chapters:
   # c3p2
   - components:
     - template: "@layouts/one_up--primary/one_up--primary.html.twig"
+      grid: align-middle
       components:
       - template: "@molecules/standalone-quote/standalone-quote.html.twig"
         component_name: standalone-quote
@@ -733,7 +744,7 @@ chapters:
             dropcap: false
 
   # c4p3
-  - classes: dark
+  - classes: theme--dark
     components:
     - template: "@atoms/video--embed/video--embed.html.twig"
       id: 6vGKaYv7Iho
@@ -831,7 +842,7 @@ chapters:
             style: horizontal
 
   # c5p4
-  - classes: dark
+  - classes: theme--dark
     components:
     - template: "@atoms/video--embed/video--embed.html.twig"
       id: p6io0gBiXe0
@@ -856,7 +867,7 @@ chapters:
   # c6p2
   - components:
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
-      classes: dark
+      classes: theme--dark
       right:
         components:
           - template: "@atoms/h3/h3.html.twig"
@@ -914,10 +925,165 @@ chapters:
             style: horizontal
 
   # c6p4
-  - classes: dark
+  - classes: theme--dark
     components:
     - template: "@atoms/video--embed/video--embed.html.twig"
       id: _QWKwhv8MG4
       youtube:
         embed: _QWKwhv8MG4
+
+################################################################################
+## Footer ######################################################################
+################################################################################
+
+footer:
+  sections:
+    - section_classes: theme--primary-light
+      template: "@molecules/footer__cta/footer__cta__wrapper.html.twig"
+      components:
+        - template: "@molecules/footer__cta/footer__cta.html.twig"
+          components:
+          - template: "@atoms/h4/h4.html.twig"
+            text: Plan your visit
+          - template: "@atoms/textarea/textarea.html.twig"
+            text: "<p>Purchase tickets, view hours, and get directions to prepare for your visit.</p>"
+          - template: "@atoms/cta__button/cta__button.html.twig"
+            text: Start planning
+            href: https://tickets.famsf.org/events/283/list
+            target: _blank
+        - template: "@molecules/footer__cta/footer__cta.html.twig"
+          components:
+          - template: "@atoms/h4/h4.html.twig"
+            text: Shop exhibition exclusives
+          - template: "@atoms/textarea/textarea.html.twig"
+            text: "<p>Bring home the exhibition catalogue, tumblers, and more.</p>"
+          - template: "@atoms/cta__button/cta__button.html.twig"
+            text: Shop
+            href: https://shop.famsf.org/
+            target: _blank
+        - template: "@molecules/footer__cta/footer__cta.html.twig"
+          classes: theme--primary-dark
+          components:
+          - template: "@atoms/h4/h4.html.twig"
+            text: Subscribe to Insights
+          - template: "@atoms/textarea/textarea.html.twig"
+            text: "<p>Subscribe to Insights and be the first to see the next edition</p>"
+          - template: "@atoms/cta__button/cta__button.html.twig"
+            text: Subscribe to Insights
+            href: http://famsf.us4.list-manage1.com/subscribe?u=d7a49f337e55b897015517194&id=9757c5111b
+            target: _blank
+    - section_classes: grid-container grid-container-padded footer__content
+      template: "@layouts/two_up--primary/two_up--primary.html.twig"
+      left:
+        offset:
+        cols: medium-6 large-4
+        components:
+        - template: "@atoms/h3/h3.html.twig"
+          text: "We Are The Fine Arts Museum of San Francisco"
+        - template: "@atoms/textarea/textarea.html.twig"
+          text: "<p class='margin-bottom-3'>Our organization oversees two unique museums—the de Young in Golden Gate Park and the Legion of Honor in Lincoln Park—and stands as one of the most visited arts institutions in the United States.</p>"
+        - template: "@atoms/cta__button--alt/cta__button--alt.html.twig"
+          text: Tickets
+          href: https://tickets.famsf.org/events/283/list
+          target: _blank
+          classes: margin-bottom-0
+        - template: "@atoms/textarea/textarea.html.twig"
+          text: </br>
+        - template: "@atoms/cta__button--alt/cta__button--alt.html.twig"
+          text: Become a member
+          href: http://www.famsf.org/join
+          target: _blank
+          classes: margin-bottom-0
+        - template: "@atoms/textarea/textarea.html.twig"
+          text: </br>
+        - template: "@atoms/cta__button--alt/cta__button--alt.html.twig"
+          text: Subscribe to Insights
+          href: http://famsf.us4.list-manage1.com/subscribe?u=d7a49f337e55b897015517194&id=9757c5111b
+          target: _blank
+          classes: margin-bottom-0
+      right:
+        offset: large-offset-2
+        cols: medium-6 large-6
+        components:
+        - template: "@layouts/two_up--primary/two_up--primary.html.twig"
+          classes: footer-feature
+          left:
+            offset:
+            cols: medium-7
+            components:
+            - template: "@atoms/img/img.html.twig"
+              url: ../assets/images/de-young-museum.jpg
+              alt: de Young Museum
+          right:
+            offset:
+            cols: medium-5
+            components:
+            - template: "@atoms/h4/h4.html.twig"
+              classes: separator-left
+              text: de Young Museum
+            - template: "@atoms/textarea/textarea.html.twig"
+              text:
+                <p class="show-for-large">
+                Golden Gate Park<br/>
+                50 Hagiwara Tea Garden Drive<br/>
+                San Francisco, CA 94118<br/>
+                Open 9:30 a.m.—5:15 p.m.<br/>
+                Tuesdays—Sundays<br/>
+                415 750-3600<br/>
+                </p>
+        - template: "@layouts/two_up--primary/two_up--primary.html.twig"
+          classes: footer-feature
+          left:
+            offset:
+            cols: medium-7
+            components:
+            - template: "@atoms/img/img.html.twig"
+              url: ../assets/images/legion-of-honor.jpg
+              alt: Legion of Honor
+          right:
+            offset:
+            cols: medium-5
+            components:
+            - template: "@atoms/h4/h4.html.twig"
+              classes: separator-left
+              text: Legion of Honor
+            - template: "@atoms/textarea/textarea.html.twig"
+              text:
+                <p class="show-for-large">
+                Lincoln Park<br/>
+                100 34th Avenue<br/>
+                San Franciso, CA 94121<br/>
+                Open 9:30 a.m.—5:15 p.m.<br/>
+                Tuesdays—Sundays<br/>
+                415 750-3600<br/>
+                </p>
+    - template: "@molecules/footer__navigation/footer__navigation.html.twig"
+      left:
+        components:
+        - template: "@molecules/ul/ul.html.twig"
+          classes: menu menu--footer
+          components:
+          - template: "@atoms/li/li.html.twig"
+            components:
+            - template: "@atoms/a/a.html.twig"
+              url: http://www.famsf.org/contact
+              target: _blank
+              text: Contact
+          - template: "@atoms/li/li.html.twig"
+            components:
+            - template: "@atoms/a/a.html.twig"
+              url: http://www.famsf.org/privacy
+              target: _blank
+              text: Privacy
+          - template: "@atoms/li/li.html.twig"
+            components:
+            - template: "@atoms/a/a.html.twig"
+              url: http://www.famsf.org/terms
+              target: _blank
+              text: Terms & Conditions
+      right:
+        components:
+        - template: "@atoms/copyright/copyright.html.twig"
+          text: "2018 Fine Arts Museum of San Francisco"
+
 ---
