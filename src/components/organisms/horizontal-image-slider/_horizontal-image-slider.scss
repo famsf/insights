@@ -10,7 +10,7 @@ Styleguide COMPONENTS.horizontal-image-slider
 */
 
 %horizontal-image-slider {
-  padding: 4rem 2rem;
+  padding: 0;
   background: $black;
   height: 100vh;
   display: block;
@@ -21,6 +21,12 @@ Styleguide COMPONENTS.horizontal-image-slider
   .owl-item {
     height: 100%;
   }
+
+  .owl-stage-outer {
+    padding: 6rem 2rem 4rem 4rem;
+  }
+
+
 
   .item.intro-slide {
     padding: 2rem;
@@ -46,6 +52,9 @@ Styleguide COMPONENTS.horizontal-image-slider
     max-height: 630px;
     width: auto;
     margin-bottom: .5rem;
+    img {
+      max-height: 67vh;
+    }
   }
 
   .caption {
