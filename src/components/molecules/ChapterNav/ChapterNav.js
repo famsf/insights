@@ -77,7 +77,7 @@
     var href;
     var scrollbarHeight;
     scrollbarHeight = (chapterIndex * chapterNavSegmentHeight);
-    scrollbarHeight += (pageIndex > 0) ? (chapterNavSegmentHeight / pageCount) * pageIndex  : 0;
+    scrollbarHeight += (pageIndex > 0) ? (chapterNavSegmentHeight / pageCount) * pageIndex : 0;
     chapterNav.scrollPercent.style.height = Math.round(scrollbarHeight) + 'px';
     if (chapterNav.lastId !== id) {
       chapterNav.lastId = id;
