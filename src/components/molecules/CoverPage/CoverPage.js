@@ -44,7 +44,7 @@
       fds.rootElement.classList.add('initialized');
       setTimeout(function () {
         fds.coverPageElement.classList.add('initialized');
-      }, 750);
+      }, 700);
     }, 1250);
   };
 }(window.fds = window.fds || {}, window.fds.coverPage = window.fds.coverPage || {}, window));

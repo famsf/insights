@@ -170,7 +170,7 @@
   &.loaded {
     .loader {
       animation-name: stretch;
-      animation-duration: 1.25s;
+      animation-duration: 0.7s;
       animation-timing-function: ease-out;
       animation-direction: normal;
       animation-delay: 0s;
@@ -187,7 +187,7 @@
 
   &.initialized {
     .underlay {
-      z-index: 100;
+      z-index: 15;
     }
     .cover_loader_container,
     .mask_loader {

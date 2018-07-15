@@ -5,7 +5,7 @@
   fds.pages.hashes = {};
   fds.pages.byId = {};
   fds.pages.oldScrollY = null;
-  fds.pages.snapThreshhold = 24;
+  fds.pages.snapThreshhold = 18;
 
   pages.initialize = function (containerSelector, pageSelector, clearElementSelector) {
     var locHash = window.location.hash.substr(1);
@@ -24,12 +24,11 @@
       return;
     }
 
-    pages.currentPage = pages.pages[0];
+    pages.populatePagesById();
+    pages.currentPage = pages.byId[pages.pages[0].id];
     pages.clearElement = doc.querySelector(clearElementSelector);
     pages.clearElementHeight = pages.clearElement.clientHeight;
     pages.calculateThreshholds(win.innerHeight);
-
-    pages.populatePagesById();
 
     if (locHash.length > 1) {
       params = locHash.split('&');
@@ -43,15 +42,15 @@
         }
       }
       else {
-        pages.hashes.currentPage = locHash;
+        pages.hashes.page = locHash;
       }
-      if (pages.hashes.currentPage) {
-        startPage = doc.getElementById(pages.hashes.currentPage);
+      if (pages.hashes.page) {
+        startPage = pages.byId[pages.hashes.page];
       }
       else {
         startPage = pages.currentPage;
       }
-      pages.snapScroll(pages.byId[startPage.id]);
+      pages.snapScroll(pages.byId[startPage.id], 'down', win.innerHeight);
     }
   };
 
@@ -103,7 +102,6 @@
       pages.oldCurrentPage.el.classList.remove('current');
     }
     pages.currentPage = page;
-    // console.log('pages.setCurrentPage', page.id, page.chapter);
     fds.chapterNav.setActiveItem(page.chapter);
     fds.mobileNav.setActiveItem(page.chapter);
     pages.currentPage.el.classList.add('current');
@@ -166,7 +164,7 @@
             pageNearEdge = pageTop >= fds.edgeDownthreshhold;
             otherCondition = pageTop <= fds.topBarDownthreshhold;
             shouldTrigger = pageNearEdge && otherCondition;
-            if (!shouldTrigger && (pageTop >= wh || pageRect.bottom <= 0)) {
+            if (page.el.classList.contains('triggered') && !shouldTrigger && (pageTop >= wh || pageRect.bottom < 0)) {
               pages.untriggerPage(page);
             }
           }
@@ -174,7 +172,7 @@
             pageNearEdge = pageRect.bottom >= wh - fds.edgeUpthreshhold;
             otherCondition = pageTop <= fds.topBarUpthreshhold && pageTop < wh;
             shouldTrigger = pageNearEdge && otherCondition;
-            if (!shouldTrigger && (pageTopAboveViewportTop >= wh || pageRect.bottom <= 0)) {
+            if (!shouldTrigger && !pageNearEdge && (pageTop >= wh || pageRect.bottom <= 0)) {
               pages.untriggerPage(page);
             }
           }
@@ -210,9 +208,9 @@
       setTimeout(function () {
         pages.oldScrollY = win.pageYOffset;
         fds.scrollLock = false;
-        document.body.style.overflow = 'auto';
         pages.pinPage(page);
-      }, 250);
+        document.body.style.overflow = 'auto';
+      }, 150);
     }, 375);
   };
 
@@ -236,18 +234,6 @@
     page.el.classList.remove('pinned');
   };
 
-  pages.triggerPage = function (page) {
-    var pageEl = page.el;
-    pageEl.classList.add('triggered');
-    if (page.nextPage) {
-      page.nextPage.style.marginTop = pageEl.clientHeight;
-    }
-    else {
-      page.chapter.style.paddingBottom = pageEl.clientHeight;
-    }
-    pages.triggerVideo(page);
-  };
-
   pages.untriggerPage = function (page) {
     var pageEl = page.el;
     pageEl.classList.remove('triggered');
@@ -257,6 +243,12 @@
   pages.triggerPage = function (page) {
     var pageEl = page.el;
     pageEl.classList.add('triggered');
+    if (pageEl.classList.contains('hide-chapter-nav')) {
+      fds.chapterNav.hideNav();
+    }
+    else if (fds.chapterNav.isHidden){
+      fds.chapterNav.showNav();
+    }
     pages.triggerVideo(page);
   };
 
