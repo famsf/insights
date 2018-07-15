@@ -289,14 +289,14 @@ chapters:
             text: It was not the art dealers, nor the critics, nor the collectors who made these painters famous, it was the modern poets, and people forget it rather too easily, and so do all these painters who, today, are millionaires and are still indebted to us, the poor poets!     
 
   # c2p3
-  - components:
-    - template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
+  - classes: theme--dark
+    components:
+    - template: "@organisms/scroll-comparison/scroll-comparison.html.twig"
       left:
-        components:
+        visible:
         - template: "@molecules/Picture/PictureWithCaption.html.twig"
           caption:
-            id: c2p3-caption-1
-            text: 'Stéphane Mallarmé, ca. 1890. Nadar studio. © The New York Public Library'
+            brief: 'Stéphane Mallarmé, ca. 1890. Nadar studio. © The New York Public Library'
           picture:
             srcset:
             - min-width: 0px
@@ -310,20 +310,20 @@ chapters:
             style: vertical
         - template: "@atoms/h3/h3.html.twig"
           text: "Stephané Mallarmé"
+        hidden:
         - template: "@atoms/textarea/textarea.html.twig"
           text: "<p>Mallarmé (1842-1898) is widely credited with opening the field of modernist visual poetics with his poem Un coup de dés jamais n’abolira le hazard (A Throw of the Dice Will Never Abolish Chance). He was a major influence on many of the poets, and even visual artists, of the generation that followed, an influence that is still felt today.</p>"
-          dropcap: true
+          dropcap: false
         - template: "@molecules/inline-quote/inline-quote.html.twig"
           component_name: inline-quote
           name: R. Howard Bloch, One Toss of the Dice
           date: 2017
           text: One Toss of the Dice” was the birth certificate of modern poetry...
       right:
-        components:
+        visible:
         - template: "@molecules/Picture/PictureWithCaption.html.twig"
           caption:
-            id: c2p3-caption-2
-            text: Photograph of Guillaume Apollinaire with a shrapnel wound to the temple, spring 1916. Wikimedia
+            brief: Photograph of Guillaume Apollinaire with a shrapnel wound to the temple, spring 1916. Wikimedia
           picture:
             srcset:
             - min-width: 0px
@@ -337,9 +337,10 @@ chapters:
             style: vertical
         - template: "@atoms/h3/h3.html.twig"
           text: "Guillaume Apollinaire"
+        hidden:
         - template: "@atoms/textarea/textarea.html.twig"
           text: '<p>Apollinaire (1880-1918) was the quintessential poet of modernism. Immensely influential among his contemporaries, poets and artists alike, he helped define the avant-garde in both art and literature, and coined the terms "cubism" and "surrealism."</p>'
-          dropcap: true
+          dropcap: false
         - template: "@molecules/inline-quote/inline-quote.html.twig"
           component_name: inline-quote
           name: Jacques Vaché, letter to André Breton
