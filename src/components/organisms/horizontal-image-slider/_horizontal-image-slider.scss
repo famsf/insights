@@ -53,7 +53,6 @@ Styleguide COMPONENTS.horizontal-image-slider
       }
 
       @include breakpoint(large) {
-        max-height: 630px;
         padding: 2rem 2rem 2rem 4rem;
         max-width: 25rem;
       }
@@ -69,7 +68,6 @@ Styleguide COMPONENTS.horizontal-image-slider
     width: 100%;
 
     @include breakpoint(medium) {
-      max-height: 630px;
       width: auto;
     }
 
@@ -79,7 +77,6 @@ Styleguide COMPONENTS.horizontal-image-slider
       margin: auto;
 
       @include breakpoint(medium) {
-        max-height: 630px;
         width: auto;
         height: 100%;
       }
