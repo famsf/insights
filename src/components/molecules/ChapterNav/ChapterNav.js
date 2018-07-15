@@ -11,6 +11,7 @@
     var i;
     var navItem;
     var a;
+    var footerOffset;
     chapterNav.nav = doc.getElementById(navSelector);
     navItems = chapterNav.nav.querySelectorAll('li');
     chapterNav.navItems = navItems;
@@ -20,14 +21,26 @@
     chapterNav.clearHeight = (clearElement) ? clearElement.clientHeight : 0;
     chapterNav.chapters = fds.rootElement.querySelectorAll(chapterSelector);
     chapterNav.scrollPercent = chapterNav.nav.querySelector('.scroll_percent');
+    footerOffset = document.getElementById('insights__footer').parentElement.offsetTop + document.getElementById('insights__footer').offsetTop;
     for (i = 0; i < count; i++) {
       navItem = chapterNav.navItems[i];
       a = navItem.querySelector('a');
-      if (chapterNav.chapters[i]) {
+      if (chapterNav.chapters[i] && navItem.id !== 'chapter_nav__footer_link') {
         a.setAttribute('data-top-target', chapterNav.chapters[i].offsetTop);
         a.addEventListener('click', function (e) {
           e.preventDefault();
           chapterNav.onNavItemClicked(e.currentTarget);
+        }, false);
+      }
+      else if (navItem.id === 'chapter_nav__footer_link') {
+        a.addEventListener('click', function (e) {
+          e.preventDefault();
+          fds.performantScrollTo(footerOffset, function () {
+            fds.scrollLock = true;
+            setTimeout(function () {
+              fds.scrollLock = false;
+            });
+          });
         });
       }
     }
