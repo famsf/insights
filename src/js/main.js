@@ -45,7 +45,6 @@
 
   // Initialize Horizontal Image Slider.
   horizontalImageSlider = $(':not(.in-depth-modal) > .horizontal-image-slider');
-  console.log(':::::', horizontalImageSlider, horizontalImageSliderOptions);
   horizontalImageSlider.owlCarousel(horizontalImageSliderOptions);
 
   horizontalImageSlider.find('.slide__icon--next svg').click(function () {
