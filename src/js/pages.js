@@ -139,7 +139,9 @@
     var pageNearEdge;
     var pageTopAboveViewportTop;
     var shouldTrigger = false;
-    var otherCondition;
+    var shouldUntrigger = false;
+    var otherCondition = false;
+    var inView = false;
     // Loop through pages, we can eventually filter out doing stuff to pages that are offscreen.
     if (currentPage.pinned === true && !fds.scrollLock) {
       scrollDiff = Math.abs(scrollY - pages.oldScrollY || 0);
@@ -175,7 +177,8 @@
             pageNearEdge = pageRect.bottom >= wh - fds.edgeUpthreshhold;
             otherCondition = pageTop <= fds.topBarUpthreshhold && pageTop < wh;
             shouldTrigger = pageNearEdge && otherCondition;
-            shouldUntrigger = (!shouldTrigger && !pageNearEdge && (pageTop >= wh || pageRect.top < 0));
+            inView = (pageTop >= wh || pageRect.top < 0);
+            shouldUntrigger = (!shouldTrigger && !pageNearEdge && inView);
           }
           if (shouldTrigger && pages.lastPinned !== page) {
             pages.triggerTopBarEvents(pageEl);
