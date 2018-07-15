@@ -29,6 +29,9 @@ Styleguide COMPONENTS.horizontal-image-slider
     }
   }
 
+  .item {
+    height: 100%;
+
     .item__content {
       height: 100%;
       display: flex;
