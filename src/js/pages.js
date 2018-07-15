@@ -118,11 +118,11 @@
 
   pages.calculateThreshholds = function () {
     var wh = win.innerHeight;
-    fds.snapDownthreshhold = wh * 0.45;
-    fds.topBarDownthreshhold = wh * 0.45;
+    fds.snapDownthreshhold = wh * 0.55;
+    fds.topBarDownthreshhold = wh * 0.55;
     fds.edgeDownthreshhold = -1 * wh * 0.1;
-    fds.snapUpthreshhold = wh * 0.55;
-    fds.topBarUpthreshhold = wh * 0.55;
+    fds.snapUpthreshhold = wh * 0.45;
+    fds.topBarUpthreshhold = wh * 0.45;
     fds.edgeUpthreshhold = wh * 0.1;
   };
 
