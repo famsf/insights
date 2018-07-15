@@ -169,21 +169,20 @@
             pageNearEdge = pageTop >= fds.edgeDownthreshhold;
             otherCondition = pageTop <= fds.topBarDownthreshhold;
             shouldTrigger = pageNearEdge && otherCondition;
-            if (page.el.classList.contains('triggered') && !shouldTrigger && (pageTop >= wh || pageRect.bottom < 0)) {
-              pages.untriggerPage(page);
-            }
+            shouldUntrigger = page.el.classList.contains('triggered') && !shouldTrigger && (pageTop >= wh || pageRect.bottom < 0);
           }
           else if (scrollDir === 'up') {
             pageNearEdge = pageRect.bottom >= wh - fds.edgeUpthreshhold;
             otherCondition = pageTop <= fds.topBarUpthreshhold && pageTop < wh;
             shouldTrigger = pageNearEdge && otherCondition;
-            if (!shouldTrigger && !pageNearEdge && (pageTop >= wh || pageRect.top < 0)) {
-              pages.untriggerPage(page);
-            }
+            shouldUntrigger = (!shouldTrigger && !pageNearEdge && (pageTop >= wh || pageRect.top < 0));
           }
           if (shouldTrigger && pages.lastPinned !== page) {
             pages.triggerTopBarEvents(pageEl);
             pages.snapScroll(page, scrollDir, wh);
+          }
+          else if (shouldUntrigger) {
+            pages.untriggerPage(page);
           }
         }
       }
@@ -207,23 +206,28 @@
       scrollTo = (chapter.offsetTop + pageEl.offsetTop + pageEl.clientHeight) - wh;
     }
     fds.scrollLock = true;
+    pages.triggerPage(page);
     fds.performantScrollTo(scrollTo, function () {
       pages.snapPoint = scrollTo;
-      pages.triggerPage(page);
       setTimeout(function () {
         pages.oldScrollY = win.pageYOffset;
         fds.scrollLock = false;
-        pages.pinPage(page);
+        pages.pinPage(page, scrollDir);
         document.body.style.overflow = 'auto';
       }, 150);
-    }, 375);
+    }, 455);
   };
 
-  pages.pinPage = function (page) {
+  pages.pinPage = function (page, scrollDir) {
     var pageEl = page.el;
     pages.lastPinned = null;
     page.pinned = true;
-    pageEl.classList.add('pinned');
+    if (scrollDir === 'down') {
+      pageEl.classList.add('pinnedTop');
+    }
+    else {
+      pageEl.classList.add('pinnedBottom');
+    }
   };
 
   pages.unpinPage = function (page) {
@@ -236,7 +240,8 @@
         top: page.snapPoint
       });
     }
-    page.el.classList.remove('pinned');
+    page.el.classList.remove('pinnedBottom');
+    page.el.classList.remove('pinnedTop');
   };
 
   pages.untriggerPage = function (page) {

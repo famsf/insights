@@ -45,10 +45,20 @@
     }
   }
 
-  &.pinned {
+  &.pinnedTop,
+  &.pinnedBottom {
     position: fixed;
-    top: 0;
     z-index: 50;
+  }
+
+  &.pinnedTop {
+    top: 0;
+    bottom: auto;
+  }
+
+  &.pinnedBottom {
+    top: auto;
+    bottom: 0;
   }
 
   &.current_page {
