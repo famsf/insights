@@ -78,6 +78,7 @@
         el: pageEl,
         chapter: chapter,
         chapterIndex: chapter.dataset.chapterIndex,
+        chapterLength: chapter.dataset.chapterLength,
         chapterId: chapter.id,
         nextPage: pageEl.nextElementSibling,
         index: pageEl.dataset.pageIndex,
