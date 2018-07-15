@@ -124,10 +124,7 @@
       }
       fds.then = newtime - (elapsed % fds.FpsInterval);
       if (fds.footer.getBoundingClientRect().top < win.innerHeight * 0.66667) {
-        fds.chapterNav.nav.classList.add('fade');
-      }
-      else {
-        fds.chapterNav.nav.classList.remove('fade');
+        fds.chapterNav.hideNav();
       }
     }
     fds.scroll.last.y = fds.scroll.y;

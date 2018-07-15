@@ -1,6 +1,8 @@
 (function (fds, win, doc) {
   var chapterNav = {};
   fds.chapterNav = chapterNav;
+  fds.chapterNav.isHidden = false;
+
   chapterNav.initialize = function (navSelector, chapterSelector, clearElementSelector) {
     var lastId;
     var navItems;
@@ -49,6 +51,16 @@
     }
     chapterNav.activeItem = item;
     item.classList.add('active_item');
+  };
+
+  chapterNav.showNav = function () {
+    chapterNav.nav.classList.remove('hidden');
+    chapterNav.isHidden = false;
+  };
+
+  chapterNav.hideNav = function () {
+    chapterNav.nav.classList.add('hidden');
+    chapterNav.isHidden = true;
   };
 
   chapterNav.onNavItemClicked = function (clickTarget) {

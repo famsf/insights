@@ -246,7 +246,7 @@
     if (pageEl.classList.contains('hide-chapter-nav')) {
       fds.chapterNav.hideNav();
     }
-    else if (fds.chapterNav.isHidden){
+    else if (fds.chapterNav.isHidden) {
       fds.chapterNav.showNav();
     }
     pages.triggerVideo(page);
