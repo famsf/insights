@@ -123,7 +123,7 @@
         fds.fpsEl.innerHTML = Math.round(currentFps) + 'fps at roughtly <br> ' + Math.round(msPerFrame) + 'ms/frame<br>currentPage: ' + fds.pages.getCurrentPage().id + '<br>y:' + fds.scroll.y;
       }
       fds.then = newtime - (elapsed % fds.FpsInterval);
-      if (fds.footer.getBoundingClientRect().top < win.innerHeight * 0.66667) {
+      if (fds.footer.getBoundingClientRect().top < win.innerHeight * 0.25) {
         fds.chapterNav.hideNav();
       }
     }

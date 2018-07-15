@@ -62,6 +62,7 @@
       If that happens, we'll be able to update relationships and re-cache.
     */
     var i;
+    var page;
     var pageEl;
     var chapter;
     var ambientVideo;
@@ -72,7 +73,7 @@
       chapter = pageEl.parentElement;
       ambientVideo = pageEl.querySelector('.ambient_video .plyr_target');
       embeddedVideo = pageEl.querySelector('.video--embed .plyr_target');
-      pages.byId[pageEl.id] = {
+      page = {
         id: pageEl.id,
         el: pageEl,
         chapter: chapter,
@@ -84,6 +85,10 @@
         ambientVideoEl: ambientVideo,
         embeddedVideoEl: embeddedVideo
       };
+      pages.byId[pageEl.id] = page;
+      if (ambientVideo || embeddedVideo) {
+        pages.triggerVideo(page);
+      }
     }
   };
 
@@ -172,7 +177,7 @@
             pageNearEdge = pageRect.bottom >= wh - fds.edgeUpthreshhold;
             otherCondition = pageTop <= fds.topBarUpthreshhold && pageTop < wh;
             shouldTrigger = pageNearEdge && otherCondition;
-            if (!shouldTrigger && !pageNearEdge && (pageTop >= wh || pageRect.bottom <= 0)) {
+            if (!shouldTrigger && !pageNearEdge && (pageTop >= wh || pageRect.top < 0)) {
               pages.untriggerPage(page);
             }
           }
@@ -249,7 +254,6 @@
     else if (fds.chapterNav.isHidden) {
       fds.chapterNav.showNav();
     }
-    pages.triggerVideo(page);
   };
 
   pages.triggerVideo = function (page) {
