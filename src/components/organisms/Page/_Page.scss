@@ -50,6 +50,9 @@
     top: 0;
     z-index: 50;
   }
+  &.hide-chapter-nav {
+    z-index: 500;
+  }
 }
 
 .page {
