@@ -39,10 +39,11 @@
     .content {
       color: #fff;
       text-align: center;
-      width: 100%;
       padding-bottom: 3em;
       position: absolute;
-      bottom: 5rem;
+      margin-left: 2em;
+      margin-right: 2em;
+      bottom: 3rem;
       .info {
         transition-property: top, opacity;
         transition-timing-function: ease-in-out;
@@ -50,6 +51,12 @@
         opacity: 0;
         position: relative;
         top: 4em;
+      }
+      @include breakpoint(medium) {
+        bottom: 5rem;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
       }
     }
   }
@@ -120,13 +127,13 @@
     display: block;
     position: absolute;
     width: 100vw;
-    top: 40%;
+    top: 30%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
     margin: 0;
     font-family: 'akzidenz-grotesk-next-pro', sans-serif;
     font-weight: bold;
-    font-size: 80px;
+    font-size: 70px;
     line-height: 100%;
     @include breakpoint(medium) {
       top: 40%;
@@ -141,7 +148,6 @@
   }
 
   .subtitle {
-    top: 50%;
     // transform: translateY(30%);
     position: absolute;
     color: #fff;
@@ -149,8 +155,9 @@
     text-align: center;
     font-style: italic;
     font-size: 32px;
+    top: 40%;
     @include breakpoint(medium) {
-      top: 50%;
+      top: 52%;
       font-size: 42px;
     }
     @include breakpoint(large) {
@@ -172,7 +179,7 @@
   &.loaded {
     .loader {
       animation-name: stretch;
-      animation-duration: 1.25s;
+      animation-duration: 0.7s;
       animation-timing-function: ease-out;
       animation-direction: normal;
       animation-delay: 0s;
@@ -189,7 +196,7 @@
 
   &.initialized {
     .underlay {
-      z-index: 100;
+      z-index: 15;
     }
     .cover_loader_container,
     .mask_loader {

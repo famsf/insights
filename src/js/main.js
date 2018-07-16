@@ -70,7 +70,6 @@
     }
     else {
       inDepthSlider.removeClass('owl-hidden');
-
       if (!$('.owl-carousel').hasClass('off')) {
         inDepthSlider.addClass('off').trigger('destroy.owl.carousel');
         inDepthSlider.find('.owl-stage-outer').children(':eq(0)').unwrap();
@@ -94,10 +93,6 @@
 
   fds.frameCount = 0;
 
-  fds.setStyle = function (el, obj) {
-    el.style = Object.assign(el.style, obj);
-  };
-
   fds.getHeight = function () {
     return doc.getElementById('insights-app').clientHeight;
   };
@@ -112,7 +107,6 @@
     var sinceStart;
     var scrollDir;
     var secondsSinceStart;
-
     requestAnimationFrame(fds.renderLoop);
     didResize = false;
     elapsed = newtime - fds.then;
@@ -123,7 +117,7 @@
     if (elapsed > fds.FpsInterval) {
       fds.scroll.y = win.pageYOffset;
       scrollDiff = fds.scroll.y - fds.scroll.last.y;
-      if (scrollDiff !== 0) {
+      if (scrollDiff !== 0 && fds.rootElement.classList.contains('initialized')) {
         scrollDir = (scrollDiff > 0) ? 'down' : 'up';
         fds.pages.onScroll(fds.scroll.y, scrollDir, win.innerHeight, didResize);
         fds.chapterNav.onScroll(fds.scroll.y);
@@ -137,11 +131,8 @@
         fds.fpsEl.innerHTML = Math.round(currentFps) + 'fps at roughtly <br> ' + Math.round(msPerFrame) + 'ms/frame<br>currentPage: ' + fds.pages.getCurrentPage().id + '<br>y:' + fds.scroll.y;
       }
       fds.then = newtime - (elapsed % fds.FpsInterval);
-      if (fds.footer.getBoundingClientRect().top < win.innerHeight * 0.66667) {
-        fds.chapterNav.nav.classList.add('fade');
-      }
-      else {
-        fds.chapterNav.nav.classList.remove('fade');
+      if (fds.footer.getBoundingClientRect().top < win.innerHeight * 0.25) {
+        fds.chapterNav.hideNav();
       }
     }
     fds.scroll.last.y = fds.scroll.y;
@@ -160,7 +151,6 @@
       },
       y: sy
     };
-    fds.rootElement = doc.querySelector('.insights-app');
     fds.fpsEl = doc.getElementById('fpsEl');
     fds.mobileNav.initialize('mobile_nav');
     fds.chapterNav.initialize('chapter_nav', '.chapter', '.top-bar');
@@ -179,6 +169,13 @@
     fds.calcFps = false;
     fds.targetFps = 60;
     fds.FpsInterval = 1000 / fds.targetFps;
-    fds.initialize();
+    fds.rootElement = doc.querySelector('.insights-app');
+    fds.initInterval = setInterval(function () {
+      if (fds.rootElement.classList.contains('initialized')) {
+        fds.initialize();
+        clearInterval(fds.initInterval);
+        fds.initInterval = null;
+      }
+    });
   });
 }(window.fds = window.fds || {}, window, document, jQuery));

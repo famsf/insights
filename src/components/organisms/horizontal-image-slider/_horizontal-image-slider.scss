@@ -10,20 +10,23 @@ Styleguide COMPONENTS.horizontal-image-slider
 */
 
 %horizontal-image-slider {
-  padding: 4rem 2rem 2rem 2rem;
+  padding: 0;
   background: $black;
   height: 100vh;
   display: block;
   color: $white;
 
-  @include breakpoint(medium) {
-    padding: 8rem 2rem 4rem 2rem;
-  }
 
   .owl-stage-outer,
   .owl-stage,
   .owl-item {
     height: 100%;
+  }
+
+  .owl-stage-outer {
+    @include breakpoint(medium) {
+      padding: 8rem 2rem 4rem 2rem;
+    }
   }
 
   .item {
@@ -34,7 +37,7 @@ Styleguide COMPONENTS.horizontal-image-slider
       display: flex;
       flex-flow: column;
       justify-content: center;
-      
+
       @include breakpoint(medium) {
         display: block;
       }
@@ -50,7 +53,6 @@ Styleguide COMPONENTS.horizontal-image-slider
       }
 
       @include breakpoint(large) {
-        max-height: 630px;
         padding: 2rem 2rem 2rem 4rem;
         max-width: 25rem;
       }
@@ -66,7 +68,6 @@ Styleguide COMPONENTS.horizontal-image-slider
     width: 100%;
 
     @include breakpoint(medium) {
-      max-height: 630px;
       width: auto;
     }
 
@@ -76,7 +77,6 @@ Styleguide COMPONENTS.horizontal-image-slider
       margin: auto;
 
       @include breakpoint(medium) {
-        max-height: 630px;
         width: auto;
         height: 100%;
       }
