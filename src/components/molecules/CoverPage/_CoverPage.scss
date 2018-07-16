@@ -55,6 +55,8 @@
       @include breakpoint(medium) {
         bottom: 5rem;
         width: 100%;
+        margin-left: 0;
+        margin-right: 0;
       }
     }
   }
@@ -90,6 +92,8 @@
     clip: rect(0 100vw 100vh 0);
     .text {
       color: #dedede;
+      vertical-align: baseline;
+      line-height: 100vh;
     }
   }
 
@@ -100,13 +104,18 @@
 
   .mask {
     color: red;
+    width: 100%;
+    height: 100vh;
     -webkit-text-fill-color: transparent;
-    // we can set this as data attribute and bring up as svg
-    background-image: url($bgURL) no-repeat;
+    background-image: url($bgURL);
+    background-repeat: no-repeat;
     background-position: center center;
-    background-attachment: fixed;
-    background-size: cover;
+    background-size: 100vw 100vh;
     -webkit-background-clip: text;
+    .text {
+      vertical-align: baseline;
+      line-height: 100vh;
+    }
   }
 
   /*
@@ -120,7 +129,7 @@
     width: 100vw;
     top: 30%;
     left: 50%;
-    transform: translate3d(-50%, -40%, 0);
+    transform: translate3d(-50%, -50%, 0);
     margin: 0;
     font-family: 'akzidenz-grotesk-next-pro', sans-serif;
     font-weight: bold;
@@ -128,7 +137,7 @@
     line-height: 100%;
     @include breakpoint(medium) {
       top: 40%;
-      width: 80vw;
+      width: 100vw;
       font-size: 122px;
     }
     @include breakpoint(large) {
