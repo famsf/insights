@@ -32,7 +32,7 @@ Markup: video--embed.html.twig
   @include breakpoint(medium) {
     height: 100vh;
     overflow: hidden;
-    background-size: cover;    
+    background-size: cover;
   }
 
   .video--embed__wrapper {
@@ -56,7 +56,6 @@ Markup: video--embed.html.twig
 
   .plyr--video .plyr__controls {
     position: fixed;
-    visibility: hidden;
     bottom: 2em;
   }
 
