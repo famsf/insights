@@ -907,7 +907,7 @@ chapters:
   # c6p4
   - classes: hide-chapter-nav theme--dark
     components:
-    - template: "@atoms/video--embed/video--embed.html.twig"
+    - template: "@organisms/video--embed/video--embed.html.twig"
       id: yTDiYSA_nQE
       youtube:
         embed: yTDiYSA_nQE
