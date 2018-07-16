@@ -57,14 +57,14 @@ chapters:
   numeral: I
   pages:
 
-  # c1p1
+  # c1p0
   - components:
     - template: "@molecules/chapter__title/chapter__title.html.twig"
       img:
         url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
         alt: 'Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars'
 
-  # c1p2
+  # c1p1
   - components:
     - template: "@layouts/one_up--primary/one_up--primary.html.twig"
       classes: theme--primary-dark
@@ -76,7 +76,7 @@ chapters:
         text: Mme. Delaunay has made such a beautiful book of colors that my poem is more saturated with light than is my life. . . .  Besides, think that this book should be two meters high! Moreover, that the edition should reach the height of the Eiffel Tower!.
         large_text: false
 
-  # c1p3
+  # c1p2
   - components:
     - template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
       left:
@@ -107,7 +107,7 @@ chapters:
             400 lines splashed across the right-hand side of the opening.</p>"
           dropcap: true
 
-  # c1p4
+  # c1p3
   - classes: theme--dark
     components:
     - template: "@organisms/scroll-comparison/scroll-comparison.html.twig"
@@ -167,7 +167,7 @@ chapters:
             Modigliani.</p>"
           dropcap: false
 
-  # c1p5
+  # c1p4
   - components:
     - template: "@organisms/in-depth/in-depth.html.twig"
       classes: theme--dark
@@ -265,14 +265,14 @@ chapters:
   numeral: II
   pages:
 
-  # c2p1
+  # c2p0
   - components:
     - template: "@molecules/chapter__title/chapter__title.html.twig"
       img:
         url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/9_paris-aerial-view.jpg"
         alt: 'Aerial view of Paris, France, from a balloon, showing the River Seine, the Eiffel Tower and buildings of the Exposition Universelle of 1889'
 
-  # c2p2
+  # c2p1
   - components:
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
       left:
@@ -290,7 +290,7 @@ chapters:
             date: '1949'
             text: It was not the art dealers, nor the critics, nor the collectors who made these painters famous, it was the modern poets, and people forget it rather too easily, and so do all these painters who, today, are millionaires and are still indebted to us, the poor poets!     
 
-  # c2p3
+  # c2p2
   - classes: theme--dark
     components:
     - template: "@organisms/scroll-comparison/scroll-comparison.html.twig"
@@ -349,7 +349,7 @@ chapters:
           date: 1918
           text: "[Apollinaire] marks an epoch. The beautiful things we can do now!"
 
-  # c2p4
+  # c2p3
   - classes: hide-chapter-nav invert-top-bar
     components:
     - template: "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig"
@@ -425,7 +425,7 @@ chapters:
           alt: title page from the book Denise by Raymond Radiguet and Juan Gris
           style: vertical
 
-  # c2p5
+  # c2p4
   - components:
     - template: "@molecules/commentary/commentary.html.twig"
       component_name: commentary
@@ -438,7 +438,7 @@ chapters:
         text: "<p>The cacophonous <em>Rite of Spring</em> was the centerpiece of a simultaneity of sound, color, and movement. Nijinsky danced its May 29 premiere for Sergei Diaghilev’s Ballets Russes in Paris’s Théâtre des Champs-Élysées, and the spectacle provoked a celebrated pandemonium. Igor Stravinsky’s discordant music touched off outrage from the more conservative audience members, with others equally vehement in its defense. This riot against modernism, to put it bluntly, conferred on the piece more glory than anything positive could possibly have done—riots led to revelry in the long run.</p>"
         dropcap: false
 
-  # c2p6
+  # c2p5
   - components:
     - template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
       left:
@@ -465,7 +465,7 @@ chapters:
             date: '1950'
             text: "A woman nearby, covered by diamonds, but the music of Stravinsky drove her crazy, tore out a brand new folding seat and smashed me over the head with it, so I had to spend the rest of the night drinking champagne in Montmartre with Stravinsky [and] Diaghilev . . . still wearing the folding chair like a horse collar..."
 
-  # c2p7
+  # c2p6
   - classes: hide-chapter-nav invert-top-bar
     components:
     - template: "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig"
@@ -550,14 +550,14 @@ chapters:
   numeral: III
   pages:
 
-  # c3p1
+  # c3p0
   - components:
     - template: "@molecules/chapter__title/chapter__title.html.twig"
       img:
         url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/21_la-prose-the-book.jpg"
         alt: 'Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars'
 
-  # c3p2
+  # c3p1
   - components:
     - template: "@layouts/one_up--primary/one_up--primary.html.twig"
       grid: align-middle
@@ -599,7 +599,7 @@ chapters:
             alt: Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars
             style: horizontal
 
-  # c3p4
+  # c3p3
   - components:
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
       right:
@@ -632,7 +632,7 @@ chapters:
             alt: Chevreul color wheel
             style: horizontal
 
-  # c3p5
+  # c3p4
   - components:
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
       right:
@@ -665,7 +665,7 @@ chapters:
             alt: Windows Open Simultaneously 1st Part, 3rd Motif by Robert Delaunay
             style: horizontal
 
-  # c3p6
+  # c3p5
   - components:
     - template: "@molecules/commentary/commentary.html.twig"
       component_name: commentary
@@ -690,14 +690,14 @@ chapters:
   numeral: IV
   pages:
 
-  # c4p1
+  # c4p0
   - components:
     - template: "@molecules/chapter__title/chapter__title.html.twig"
       img:
         url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/25_la-prose-making-of.jpg"
         alt: 'Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars'
 
-  # c4p2
+  # c4p1
   - components:
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
       left:
@@ -733,7 +733,7 @@ chapters:
             text: "<p>Sonia Delaunay painted the image for La prose on mattress ticking first. The image was reproduced for the edition by <em>pochoir</em>, a stencil process, with color applied by hand using prescribed brush strokes, exacting manipulation of stencils, precise registration, and consistent color matching. It is likely that the pochoir was performed at Crété.</p>"
             dropcap: false
 
-  # c4p3
+  # c4p2
   - classes: hide-chapter-nav theme--dark
     components:
     - template: "@organisms/video--embed/video--embed.html.twig"
@@ -741,7 +741,7 @@ chapters:
       youtube:
         embed: 6vGKaYv7Iho
 
-  # c4p4
+  # c4p3
   - components:
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
       left:
@@ -786,14 +786,14 @@ chapters:
   numeral: V
   pages:
 
-  # c5p1
+  # c5p0
   - components:
     - template: "@molecules/chapter__title/chapter__title.html.twig"
       img:
         url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/28-bill-ham-light-show.jpg"
         alt: 'Still from Kinetic Light Painting by Bill Ham'
 
-  # c5p2
+  # c5p1
   - components:
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
       left:
@@ -818,7 +818,7 @@ chapters:
             text: "<p>The steady growth of the field of book art in recent decades finds an iconic predecessor in <em>La prose</em>. Its unique appropriation of structure, and its hybrid nature, have made it an influence on succeeding generations of artists and writers who take the book beyond the limits of conventional form. For his spectacular book <em>Nature Abhors</em>, Philip Zimmermann used a structure devised by influential book artist Hedi Kyle.</p>"
             dropcap: false
 
-  # c5p3
+  # c5p2
   - classes: theme--dark
     components:
     - template: "@atoms/video--embed/video--embed.html.twig"
@@ -834,14 +834,14 @@ chapters:
   numeral: VI
   pages:
 
-  # c6p1
+  # c6p0
   - components:
     - template: "@molecules/chapter__title/chapter__title.html.twig"
       img:
         url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/29_la-prose-collectors.jpg"
         alt: 'Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars'
 
-  # c6p2
+  # c6p1
   - components:
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
       classes: theme--dark
@@ -872,7 +872,7 @@ chapters:
             alt: Photo of David and Reva Logan
             style: vertical
 
-  # c6p3
+  # c6p2
   - components:
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
       right:
@@ -904,7 +904,7 @@ chapters:
             alt: Photo of David and Reva Logan
             style: horizontal
 
-  # c6p4
+  # c6p3
   - classes: hide-chapter-nav theme--dark
     components:
     - template: "@organisms/video--embed/video--embed.html.twig"
