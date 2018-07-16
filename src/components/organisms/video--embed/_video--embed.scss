@@ -51,17 +51,20 @@ Markup: video--embed.html.twig
     position: fixed;
     z-index: -1;
     top: -1000px;
+    bottom: auto;
+    visibility: hidden;
   }
 
   .triggered & {
     .plyr--video .plyr__controls {
       padding-left: 16.6667%;
       padding-right: 16.6667%;
-      top: auto;
       height: 3em;
       width: 100%;
-      bottom: 2em;
       z-index: 3;
+      top: auto;
+      bottom: 2em;
+      visibility: visible;
     }
   }
 
