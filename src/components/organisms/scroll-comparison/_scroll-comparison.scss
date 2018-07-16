@@ -1,0 +1,107 @@
+%scroll-comparison {
+  background: transparent;
+
+  .content {
+    transition: all .5s ease-in-out;
+    opacity: 0;
+    width: calc(100vw - 4rem);
+
+    @include breakpoint(medium) {
+      width: 100%;
+    }
+  }
+
+  picture {
+    margin-bottom: 1rem;
+
+    @include breakpoint(medium) {
+      margin-bottom: 0;
+    }
+  }
+
+  .wrapper > .cell {
+    @extend .small-4;
+    transition: all .5s ease-in-out;
+
+    picture {
+      position: relative;
+
+      &:after {
+        transition: all .5s ease-in-out;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f067";
+        text-align: center;
+        padding-top: calc(50% - .5rem);
+        color: $white;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: rgba($black, .5);
+        opacity: 1;
+        border: 2px solid $white;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      + .caption {
+        display: none;
+
+        @include breakpoint(medium) {
+          display: block;
+        }
+      }
+    }
+
+   h3 {
+      display: none;
+
+      @include breakpoint(medium) {
+        display: block;
+      }
+    }
+
+    &.active {
+      @extend .small-8;
+
+      picture {
+        &:after {
+          opacity: 0;
+        }
+
+        &:hover {
+          cursor: default;
+        }
+      }
+
+      h3 {
+        display: block;
+      }
+
+      .content {
+        transition-delay: .5s;
+        opacity: 1;
+      }
+    }
+
+    &:last-of-type {
+      h3,
+      .content {
+        margin-left: calc(calc(-100vw / 3) + 1rem);
+
+
+        @include breakpoint(medium) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.scroll-comparison {
+  @extend %scroll-comparison;
+}
