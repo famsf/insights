@@ -2,7 +2,7 @@
 
   &.theme--dark {
 
-    background-color: $black;
+    background: $black !important;
 
     h1,
     h2,
@@ -13,7 +13,8 @@
   }
 
   &.theme--primary {
-    background-color: $white;
+
+    background: $white !important;
 
     h1,
     h2,
@@ -25,7 +26,7 @@
 
   &.theme--primary-dark {
 
-    background-color: $primary-color;
+    background: $primary-color !important;
 
     h1,
     h2,
@@ -37,7 +38,7 @@
 
   &.theme--primary-light {
 
-    background-color: rgba($primary-color, .10);
+    background: rgba($primary-color, .10) !important;
 
     h1,
     h2,

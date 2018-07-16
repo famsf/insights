@@ -47,7 +47,7 @@ chapters:
       id: WmrP8JhWb2U
       poster: http://i3.ytimg.com/vi/WmrP8JhWb2U/maxresdefault.jpg
       youtube:
-        embed: WmrP8JhWb2U
+        embed: xt27-zrvHkk
 
 ################################################################################
 ## CHAPTER 1 ###################################################################
@@ -108,26 +108,28 @@ chapters:
           dropcap: true
 
   # c1p4
-  - components:
-    - template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
+  - classes: theme--dark
+    components:
+    - template: "@organisms/scroll-comparison/scroll-comparison.html.twig"
       left:
-        components:
+        visible:
         - template: "@molecules/Picture/PictureWithCaption.html.twig"
           caption:
-            id: caption3
-            text: 'Photo: Florence Henri, 1931. Martini & Ronchetti Gallery
-              and image source'
+            brief: 'Photo: Florence Henri, 1931. Martini & Ronchetti Gallery and image source'
           picture:
             srcset:
             - min-width: 0px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
+              src: /assets/images/delaunay.jpg
             - min-width: 350px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
+              src: /assets/images/delaunay.jpg
             - min-width: 800px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
-            url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
+              src: /assets/images/delaunay.jpg
+            url: /assets/images/delaunay.jpg
             alt: Photo of sonia delaunay-terk
             style: vertical
+        - template: "@atoms/h3/h3.html.twig"
+          text: "Sonia Delaunay-Terk"
+        hidden:
         - template: "@atoms/textarea/textarea.html.twig"
           text: "<p>Delaunay-Terk (1885-1979) was born in the Ukraine and raised
             in St. Petersburg. She moved to Paris in 1905. In 1910 she married
@@ -137,31 +139,33 @@ chapters:
             color. In addition to painting, Delaunay-Terk’s practice encompassed
             textile and fashion design, bookbinding, furniture design, and set
             design.</p>"
-          dropcap: true
+          dropcap: false
       right:
-        components:
+        visible:
         - template: "@molecules/Picture/PictureWithCaption.html.twig"
           caption:
-            id: caption4
-            text: Ca.1907. Wikimedia Commonse
+            brief: Ca.1907. Wikimedia Commons
           picture:
             srcset:
             - min-width: 0px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
+              src: /assets/images/cendrars.jpg
             - min-width: 350px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
+              src: /assets/images/cendrars.jpg
             - min-width: 800px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
-            url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
+              src: /assets/images/cendrars.jpg
+            url: /assets/images/cendrars.jpg
             alt: Photo of blaise cendrars
             style: vertical
+        - template: "@atoms/h3/h3.html.twig"
+          text: "Blaise Cendrars"
+        hidden:
         - template: "@atoms/textarea/textarea.html.twig"
           text: "<p>Cendrars (1887-1961) was born Frédéric-Louis Sauser in Neuchatel,
             Switzerland, and became a French citizen in 1916. One of the leading
             literary figures of 20th century France, he was a friend and collaborator
             with many artists, including Fernand Léger, Marc Chagall, and Amedeo
             Modigliani.</p>"
-          dropcap: true
+          dropcap: false
 
   # c1p5
   - components:
@@ -287,14 +291,14 @@ chapters:
             text: It was not the art dealers, nor the critics, nor the collectors who made these painters famous, it was the modern poets, and people forget it rather too easily, and so do all these painters who, today, are millionaires and are still indebted to us, the poor poets!     
 
   # c2p3
-  - components:
-    - template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
+  - classes: theme--dark
+    components:
+    - template: "@organisms/scroll-comparison/scroll-comparison.html.twig"
       left:
-        components:
+        visible:
         - template: "@molecules/Picture/PictureWithCaption.html.twig"
           caption:
-            id: c2p3-caption-1
-            text: 'Stéphane Mallarmé, ca. 1890. Nadar studio. © The New York Public Library'
+            brief: 'Stéphane Mallarmé, ca. 1890. Nadar studio. © The New York Public Library'
           picture:
             srcset:
             - min-width: 0px
@@ -308,20 +312,20 @@ chapters:
             style: vertical
         - template: "@atoms/h3/h3.html.twig"
           text: "Stephané Mallarmé"
+        hidden:
         - template: "@atoms/textarea/textarea.html.twig"
           text: "<p>Mallarmé (1842-1898) is widely credited with opening the field of modernist visual poetics with his poem Un coup de dés jamais n’abolira le hazard (A Throw of the Dice Will Never Abolish Chance). He was a major influence on many of the poets, and even visual artists, of the generation that followed, an influence that is still felt today.</p>"
-          dropcap: true
+          dropcap: false
         - template: "@molecules/inline-quote/inline-quote.html.twig"
           component_name: inline-quote
           name: R. Howard Bloch, One Toss of the Dice
           date: 2017
           text: One Toss of the Dice” was the birth certificate of modern poetry...
       right:
-        components:
+        visible:
         - template: "@molecules/Picture/PictureWithCaption.html.twig"
           caption:
-            id: c2p3-caption-2
-            text: Photograph of Guillaume Apollinaire with a shrapnel wound to the temple, spring 1916. Wikimedia
+            brief: Photograph of Guillaume Apollinaire with a shrapnel wound to the temple, spring 1916. Wikimedia
           picture:
             srcset:
             - min-width: 0px
@@ -335,9 +339,10 @@ chapters:
             style: vertical
         - template: "@atoms/h3/h3.html.twig"
           text: "Guillaume Apollinaire"
+        hidden:
         - template: "@atoms/textarea/textarea.html.twig"
           text: '<p>Apollinaire (1880-1918) was the quintessential poet of modernism. Immensely influential among his contemporaries, poets and artists alike, he helped define the avant-garde in both art and literature, and coined the terms "cubism" and "surrealism."</p>'
-          dropcap: true
+          dropcap: false
         - template: "@molecules/inline-quote/inline-quote.html.twig"
           component_name: inline-quote
           name: Jacques Vaché, letter to André Breton
