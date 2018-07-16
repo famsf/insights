@@ -4,6 +4,8 @@
   fds.pages = pages;
   fds.pages.hashes = {};
   fds.pages.byId = {};
+  fds.pages.oldScrollY = null;
+  fds.pages.snapThreshhold = 18;
 
   pages.initialize = function (containerSelector, pageSelector, clearElementSelector) {
     var locHash = window.location.hash.substr(1);
@@ -18,15 +20,15 @@
     pages.pages = doc.querySelectorAll(pageSelector);
 
     if (!pages.container || !pages.pages.length) {
-      console.log('Warning: Failed to initialize pages, check your selectors, but maybe you`re just prototyping isolated components');
+      console.log(':::::: Warning: Failed to initialize pages, check your selectors, but maybe you`re just prototyping isolated components');
       return;
     }
 
+    pages.populatePagesById();
+    pages.currentPage = pages.byId[pages.pages[0].id];
     pages.clearElement = doc.querySelector(clearElementSelector);
     pages.clearElementHeight = pages.clearElement.clientHeight;
     pages.calculateThreshholds(win.innerHeight);
-
-    pages.populatePagesById();
 
     if (locHash.length > 1) {
       params = locHash.split('&');
@@ -40,7 +42,7 @@
         }
       }
       else {
-        pages.hashes.currentPage = locHash;
+        pages.hashes.page = locHash;
       }
       if (pages.hashes.page) {
         startPage = pages.byId[pages.hashes.page];
@@ -48,7 +50,7 @@
       else {
         startPage = pages.currentPage;
       }
-      pages.snapScroll(startPage);
+      pages.snapScroll(pages.byId[startPage.id], 'down', win.innerHeight);
     }
   };
 
@@ -76,6 +78,7 @@
         el: pageEl,
         chapter: chapter,
         chapterIndex: chapter.dataset.chapterIndex,
+        chapterLength: chapter.dataset.chapterLength,
         chapterId: chapter.id,
         nextPage: pageEl.nextElementSibling,
         index: pageEl.dataset.pageIndex,
@@ -83,7 +86,9 @@
         embeddedVideoEl: embeddedVideo
       };
       pages.byId[pageEl.id] = page;
-      pages.triggerVideo(page);
+      if (ambientVideo || embeddedVideo) {
+        pages.triggerVideo(page);
+      }
     }
   };
 
@@ -91,14 +96,8 @@
     return pages.currentPage || pages.byId[pages.pages[0].id];
   };
 
-  pages.nextPage = function () {
-    var currentPage = pages.currentPage;
-    var nextPage = pages.byId[pages.byId[currentPage.id].nextPage.id];
-    if (!nextPage) {
-      console.log('NextPage called, but we were unable to figure out what element that is.');
-      return;
-    }
-    pages.snapScroll(nextPage, 'down', win.innerHeight);
+  pages.nextPage = function (nextPageEl) {
+    pages.snapScroll(pages.byId[nextPageEl.id], 'down', win.innerHeight);
   };
 
   pages.setCurrentPage = function (page) {
@@ -119,85 +118,88 @@
 
   pages.calculateThreshholds = function () {
     var wh = win.innerHeight;
-    fds.snapDownthreshhold = wh * 0.25;
-    fds.topBarDownthreshhold = wh * 0.4;
+    fds.snapDownthreshhold = wh * 0.55;
+    fds.topBarDownthreshhold = wh * 0.55;
     fds.edgeDownthreshhold = -1 * wh * 0.1;
-    fds.snapUpthreshhold = wh * 0.75;
-    fds.topBarUpthreshhold = wh * 0.6;
+    fds.snapUpthreshhold = wh * 0.45;
+    fds.topBarUpthreshhold = wh * 0.45;
     fds.edgeUpthreshhold = wh * 0.1;
   };
 
   pages.onScroll = function (scrollY, scrollDir, wh, didResize) {
     var currentPage = pages.getCurrentPage();
-    var shouldTriggerTopBar = false;
+    var scrollDiff;
     var count = pages.pages.length;
-    var pageNearEdge;
-    var pageTopAboveViewportBottom;
-    var pageTopBelowViewportBottom;
-    var pageBottomBelowViewportTop;
-    var pageBottomAboveViewportTop;
-    var pageTopAboveViewportTop;
-    var shouldAdvance;
-    var shouldStabilize;
     var page;
-    var pageRect;
-    var pageIterator;
-    var otherCondition;
     var pageEl;
-
+    var pageTop;
+    var pageMarginTop;
+    var pageIterator;
+    var pageRect;
+    var pageNearEdge;
+    var pageTopAboveViewportTop;
+    var shouldTrigger = false;
+    var shouldUntrigger = false;
+    var otherCondition = false;
+    var inView = false;
     // Loop through pages, we can eventually filter out doing stuff to pages that are offscreen.
-    for (pageIterator = 0; pageIterator < count; pageIterator++) {
-      pageEl = pages.pages[pageIterator];
-      page = pages.byId[pageEl.id];
-      pageRect = pageEl.getBoundingClientRect();
-      pageTopAboveViewportBottom = pageRect.top <= pageRect.height;
-      pageTopBelowViewportBottom = pageRect.top > pageRect.height;
-      pageBottomBelowViewportTop = pageRect.top + pageRect.height > 0;
-      pageBottomAboveViewportTop = pageRect.top + pageRect.height < 0;
-      pageTopAboveViewportTop = pageRect.top < 0;
-      shouldAdvance = false;
-      shouldStabilize = false;
-
-      if (didResize) {
-        pages.calculateThreshholds(wh, scrollDir);
+    if (currentPage.pinned === true && !fds.scrollLock) {
+      scrollDiff = Math.abs(scrollY - pages.oldScrollY || 0);
+      pages.oldScrollY = scrollY;
+      if (scrollDiff > pages.snapThreshhold) {
+        pages.unpinPage(currentPage);
       }
-
-      if (scrollDir === 'down') {
-        pageNearEdge = pageRect.top >= fds.edgeDownthreshhold;
-        otherCondition = pageRect.top <= fds.topBarDownthreshhold;
-        shouldTriggerTopBar = pageNearEdge && otherCondition;
-        shouldAdvance = pageNearEdge && pageRect.top <= fds.snapDownthreshhold;
-        if (!shouldAdvance && (pageRect.top >= wh || pageRect.bottom <= 0)) {
-          pageEl.classList.remove('triggered');
-          pages.untriggerVideo(pageEl);
+    }
+    else if (!fds.scrollLock) {
+      for (pageIterator = 0; pageIterator < count; pageIterator++) {
+        pageEl = pages.pages[pageIterator];
+        page = pages.byId[pageEl.id];
+        if (!page.pinned) {
+          pageRect = pageEl.getBoundingClientRect();
+          pageMarginTop = parseInt(pageEl.style.marginTop, 10);
+          if (pageMarginTop) {
+            pageTop = Number(pageRect.top) + pageMarginTop;
+          }
+          else {
+            pageTop = pageRect.top;
+          }
+          pageTopAboveViewportTop = pageTop < 0;
+          if (didResize) {
+            pages.calculateThreshholds(wh, scrollDir);
+          }
+          if (scrollDir === 'down') {
+            pageNearEdge = pageTop >= fds.edgeDownthreshhold;
+            otherCondition = pageTop <= fds.topBarDownthreshhold;
+            shouldTrigger = pageNearEdge && otherCondition;
+            shouldUntrigger = page.el.classList.contains('triggered') && !shouldTrigger && (pageTop >= wh || pageRect.bottom < 0);
+          }
+          else if (scrollDir === 'up') {
+            pageNearEdge = pageRect.bottom >= wh - fds.edgeUpthreshhold;
+            otherCondition = pageTop <= fds.topBarUpthreshhold && pageTop < wh;
+            shouldTrigger = pageNearEdge && otherCondition;
+            inView = (pageTop >= wh || pageRect.top < 0);
+            shouldUntrigger = (!shouldTrigger && !pageNearEdge && inView);
+          }
+          if (shouldTrigger && pages.lastPinned !== page) {
+            pages.triggerTopBarEvents(pageEl);
+            pages.snapScroll(page, scrollDir, wh);
+          }
+          else if (shouldUntrigger) {
+            pages.untriggerPage(page);
+          }
         }
-      }
-      else if (scrollDir === 'up') {
-        pageNearEdge = pageRect.bottom >= wh - fds.edgeUpthreshhold;
-        otherCondition = pageRect.top <= fds.topBarUpthreshhold && pageRect.top < wh;
-        shouldTriggerTopBar = pageNearEdge && otherCondition;
-        shouldAdvance =
-          pageRect.top < 0 &&
-          pageRect.bottom >= fds.snapUpthreshhold &&
-          pageRect.bottom > 0;
-        if (!shouldAdvance && (pageRect.top >= wh || pageRect.bottom <= 0)) {
-          pageEl.classList.remove('triggered');
-          pages.untriggerVideo(pageEl);
-        }
-      }
-      if (shouldTriggerTopBar) {
-        pages.triggerTopBarEvents(pageEl);
-        pages.snapScroll(page, scrollDir, wh);
       }
     }
   };
 
-  pages.snapScroll = function (page, scrollDir, wh) {
+  pages.snapScroll = function (page, scrollDir, wh, unpin) {
     var scrollTo;
     var pageEl = page.el;
     var chapter = page.chapter;
+    if (unpin) {
+      pages.unpinPage(pages.getCurrentPage());
+    }
     if (fds.scrollLock || page === pages.getCurrentPage() || !page) return;
-    fds.scrollLock = true;
     document.body.style.overflow = 'hidden';
     pages.setCurrentPage(page);
     if (scrollDir === 'down') {
@@ -206,18 +208,60 @@
     else {
       scrollTo = (chapter.offsetTop + pageEl.offsetTop + pageEl.clientHeight) - wh;
     }
+    fds.scrollLock = true;
+    pages.triggerPage(page);
     fds.performantScrollTo(scrollTo, function () {
-      pages.triggerPage(page);
+      pages.snapPoint = scrollTo;
       setTimeout(function () {
+        pages.oldScrollY = win.pageYOffset;
         fds.scrollLock = false;
+        pages.pinPage(page, scrollDir);
         document.body.style.overflow = 'auto';
-      }, 250);
-    }, 475);
+      }, 150);
+    }, 455);
+  };
+
+  pages.pinPage = function (page, scrollDir) {
+    var pageEl = page.el;
+    pages.lastPinned = null;
+    page.pinned = true;
+    if (scrollDir === 'down') {
+      pageEl.classList.add('pinnedTop');
+    }
+    else {
+      pageEl.classList.add('pinnedBottom');
+    }
+  };
+
+  pages.unpinPage = function (page) {
+    page.pinned = false;
+    pages.lastPinned = page;
+    if (page.nextPage) page.nextPage.style.marginTop = 0;
+    page.chapter.style.paddingBottom = 0;
+    if (page.snapPoint !== 0) {
+      win.scrollTo({
+        top: page.snapPoint
+      });
+    }
+    page.el.classList.remove('pinnedBottom');
+    page.el.classList.remove('pinnedTop');
+  };
+
+  pages.untriggerPage = function (page) {
+    var pageEl = page.el;
+    pageEl.classList.remove('triggered');
+    pages.untriggerVideo(pageEl);
   };
 
   pages.triggerPage = function (page) {
     var pageEl = page.el;
     pageEl.classList.add('triggered');
+    if (pageEl.classList.contains('hide-chapter-nav')) {
+      fds.chapterNav.hideNav();
+    }
+    else if (fds.chapterNav.isHidden) {
+      fds.chapterNav.showNav();
+    }
   };
 
   pages.triggerVideo = function (page) {
@@ -267,10 +311,15 @@
 
   pages.triggerTopBarEvents = function (pageEl) {
     if (pageEl.classList.contains('dark')) {
-      doc.body.classList.add('dark');
+      /*
+        We gain in performance if instead of this we target the elements that care
+        Which is why i liked the event model, but this site is so small, and
+        turns out dispatching events is computationally spensive.
+      */
+      doc.body.classList.add('theme--dark');
     }
     else {
-      doc.body.classList.remove('dark');
+      doc.body.classList.remove('theme--dark');
     }
     if (pageEl.classList.contains('invert-top-bar') && !fds.topBar.el.classList.contains('inverted-top-bar')) {
       pageEl.dispatchEvent(new CustomEvent('topBarEvent', {

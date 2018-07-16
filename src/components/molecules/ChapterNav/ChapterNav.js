@@ -1,6 +1,8 @@
 (function (fds, win, doc) {
   var chapterNav = {};
   fds.chapterNav = chapterNav;
+  fds.chapterNav.isHidden = false;
+
   chapterNav.initialize = function (navSelector, chapterSelector, clearElementSelector) {
     var lastId;
     var navItems;
@@ -9,6 +11,7 @@
     var i;
     var navItem;
     var a;
+    var footerOffset;
     chapterNav.nav = doc.getElementById(navSelector);
     navItems = chapterNav.nav.querySelectorAll('li');
     chapterNav.navItems = navItems;
@@ -18,14 +21,26 @@
     chapterNav.clearHeight = (clearElement) ? clearElement.clientHeight : 0;
     chapterNav.chapters = fds.rootElement.querySelectorAll(chapterSelector);
     chapterNav.scrollPercent = chapterNav.nav.querySelector('.scroll_percent');
+    footerOffset = document.getElementById('insights__footer').parentElement.offsetTop + document.getElementById('insights__footer').offsetTop;
     for (i = 0; i < count; i++) {
       navItem = chapterNav.navItems[i];
       a = navItem.querySelector('a');
-      if (chapterNav.chapters[i]) {
+      if (chapterNav.chapters[i] && navItem.id !== 'chapter_nav__footer_link') {
         a.setAttribute('data-top-target', chapterNav.chapters[i].offsetTop);
         a.addEventListener('click', function (e) {
           e.preventDefault();
           chapterNav.onNavItemClicked(e.currentTarget);
+        }, false);
+      }
+      else if (navItem.id === 'chapter_nav__footer_link') {
+        a.addEventListener('click', function (e) {
+          e.preventDefault();
+          fds.performantScrollTo(footerOffset, function () {
+            fds.scrollLock = true;
+            setTimeout(function () {
+              fds.scrollLock = false;
+            });
+          });
         });
       }
     }
@@ -51,6 +66,16 @@
     item.classList.add('active_item');
   };
 
+  chapterNav.showNav = function () {
+    chapterNav.nav.classList.remove('hidden');
+    chapterNav.isHidden = false;
+  };
+
+  chapterNav.hideNav = function () {
+    chapterNav.nav.classList.add('hidden');
+    chapterNav.isHidden = true;
+  };
+
   chapterNav.onNavItemClicked = function (clickTarget) {
     var page;
     var pageEl;
@@ -58,7 +83,7 @@
     chapter = fds.rootElement.querySelector(clickTarget.getAttribute('href'));
     pageEl = chapter.querySelector('.page');
     page = fds.pages.byId[pageEl.id];
-    fds.pages.snapScroll(page, null, win.innerHeight);
+    fds.pages.snapScroll(page, null, win.innerHeight, true);
   };
 
   chapterNav.onScroll = function () {
@@ -69,7 +94,7 @@
     var pageIndex = page.index ? page.index : 0;
     var pageCount = page.chapterLength;
     var chapterNavSegmentHeight = chapterNav.height / chapterNav.chapters.length;
-    var pageToChapterRatio = page.clientHeight / chapter.clientHeight;
+    var pageToChapterRatio = page.el.clientHeight / chapter.clientHeight;
     var id = page.id;
     var count;
     var i;
@@ -77,7 +102,7 @@
     var href;
     var scrollbarHeight;
     scrollbarHeight = (chapterIndex * chapterNavSegmentHeight);
-    scrollbarHeight += (pageIndex > 0) ? (chapterNavSegmentHeight * pageToChapterRatio) : 0;
+    scrollbarHeight += (pageIndex > 0) ? (chapterNavSegmentHeight / pageCount) * pageIndex : 0;
     chapterNav.scrollPercent.style.height = Math.round(scrollbarHeight) + 'px';
     if (chapterNav.lastId !== id) {
       chapterNav.lastId = id;

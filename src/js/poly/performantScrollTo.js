@@ -18,7 +18,7 @@
       change = to - start,
       currentTime = 0,
       increment = 20;
-    duration = (typeof(duration) === 'undefined') ? 380 : duration;
+    duration = (typeof(duration) === 'undefined') ? 430 : duration;
     var animateScroll = function() {
       // increment the time
       currentTime += increment;

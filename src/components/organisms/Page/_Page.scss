@@ -1,7 +1,6 @@
 %page {
 
   z-index: 1;
-  top: 0;
   padding: 0;
   margin: 0;
   min-height: 100vh;
@@ -12,6 +11,10 @@
 
   .frame {
     @extend %fill_screen;
+    /*
+      Need `width: 100vh` in order to fix horizontal slider`
+    */
+    width: 100vw;
     box-sizing: border-box;
   }
 
@@ -42,8 +45,24 @@
     }
   }
 
-  &.hide-chapter-nav {
-    z-index: 500;
+  &.pinnedTop,
+  &.pinnedBottom {
+    position: fixed;
+    z-index: 50;
+  }
+
+  &.pinnedTop {
+    top: 0;
+    bottom: auto;
+  }
+
+  &.pinnedBottom {
+    top: auto;
+    bottom: 0;
+  }
+
+  &.current_page {
+    z-index: 20;
   }
 }
 
