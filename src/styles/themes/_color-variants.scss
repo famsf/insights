@@ -1,7 +1,8 @@
 %color-variants {
 
   &.theme--dark {
-    background-color: $black;
+
+    background: $black !important;
 
     h1,
     h2,
@@ -12,7 +13,8 @@
   }
 
   &.theme--primary {
-    background: $white;
+
+    background: $white !important;
 
     h1,
     h2,
@@ -23,7 +25,8 @@
   }
 
   &.theme--primary-dark {
-    background: $primary-color;
+
+    background: $primary-color !important;
 
     h1,
     h2,
@@ -34,7 +37,8 @@
   }
 
   &.theme--primary-light {
-    background: rgba($primary-color, .10);
+
+    background: rgba($primary-color, .10) !important;
 
     h1,
     h2,

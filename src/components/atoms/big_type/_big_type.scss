@@ -40,7 +40,7 @@
   }
 
   .cell:first-of-type {
-    opacity: 0;
+    opacity: 0.2;
     transition-property: opacity, transform;
     transition-duration: .75s;
     transition-delay: 0.125s;
