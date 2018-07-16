@@ -35,13 +35,6 @@ Markup: video--embed.html.twig
     background-size: cover;
   }
 
-  .video--embed__wrapper {
-    opacity: 0;
-    transition-property: opacity;
-    transition-duration: 0.325s;
-    transition-timing-function: ease-out;
-  }
-
   .plyr--full-ui input[type=range] {
     height: 0.25rem;
     color: #fff !important;
@@ -56,21 +49,19 @@ Markup: video--embed.html.twig
 
   .plyr--video .plyr__controls {
     position: fixed;
-    bottom: 2em;
+    z-index: -1;
+    top: -1000px;
   }
 
   .triggered & {
-    .video--embed__wrapper {
-      opacity: 1;
-    }
     .plyr--video .plyr__controls {
-      opacity: 1;
-      background: none;
       padding-left: 16.6667%;
       padding-right: 16.6667%;
       top: auto;
       height: 3em;
       width: 100%;
+      bottom: 2em;
+      z-index: 3;
     }
   }
 

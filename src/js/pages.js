@@ -141,7 +141,7 @@
     var shouldTrigger = false;
     var shouldUntrigger = false;
     var otherCondition = false;
-    var inView = false;
+    var notInView = false;
     // Loop through pages, we can eventually filter out doing stuff to pages that are offscreen.
     if (currentPage.pinned === true && !fds.scrollLock) {
       scrollDiff = Math.abs(scrollY - pages.oldScrollY || 0);
@@ -171,20 +171,26 @@
             pageNearEdge = pageTop >= fds.edgeDownthreshhold;
             otherCondition = pageTop <= fds.topBarDownthreshhold;
             shouldTrigger = pageNearEdge && otherCondition;
-            shouldUntrigger = page.el.classList.contains('triggered') && !shouldTrigger && (pageTop >= wh || pageRect.bottom < 0);
+            notInView = (pageTop >= wh || pageRect.bottom < 0);
+            shouldUntrigger = page.el.classList.contains('triggered') && !shouldTrigger;
           }
           else if (scrollDir === 'up') {
             pageNearEdge = pageRect.bottom >= wh - fds.edgeUpthreshhold;
             otherCondition = pageTop <= fds.topBarUpthreshhold && pageTop < wh;
             shouldTrigger = pageNearEdge && otherCondition;
-            inView = (pageTop >= wh || pageRect.top < 0);
-            shouldUntrigger = (!shouldTrigger && !pageNearEdge && inView);
+            notInView = (pageTop >= wh || pageRect.top < 0);
+            shouldUntrigger = page.el.classList.contains('triggered') && !shouldTrigger && notInView;
           }
           if (shouldTrigger && pages.lastPinned !== page) {
             pages.triggerTopBarEvents(pageEl);
             pages.snapScroll(page, scrollDir, wh);
           }
+          else if (shouldTrigger) {
+            // Triggers lastpinned if it returns to view
+            pages.triggerPage(page);
+          }
           else if (shouldUntrigger) {
+            // Untriggers
             pages.untriggerPage(page);
           }
         }
@@ -250,7 +256,7 @@
   pages.untriggerPage = function (page) {
     var pageEl = page.el;
     pageEl.classList.remove('triggered');
-    pages.untriggerVideo(pageEl);
+    pages.untriggerVideo(page);
   };
 
   pages.triggerPage = function (page) {
@@ -298,13 +304,13 @@
     if (page.ambientVideo) {
       plyr = page.ambientVideo;
       if (plyr) {
-        plyr.stop();
+        plyr.pause();
       }
     }
     if (page.embeddedVideo) {
       plyr = page.embeddedVideo;
       if (plyr) {
-        plyr.stop();
+        plyr.pause();
       }
     }
   };
