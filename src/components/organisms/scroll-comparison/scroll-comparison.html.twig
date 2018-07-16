@@ -1,0 +1,15 @@
+{% import "@macros/inklude.html.twig" as inklude %}
+{% macro print(value, default) %}
+  {{- value is defined ? value : default -}}
+{% endmacro %}
+{% import _self as do %}
+<div class="scroll-comparison fluid {{ classes }}" id="{{ id }}">
+  <div class="wrapper grid-x grid-margin-x medium-9 medium-offset-1 large-10 large-offset-2">
+    <div id="{{ id }}_left" class="cell {{ do.print(left.cols, 'small-7 medium-5') }} {{ do.print(left.offset, '') }}" {{ left.attributes }}>
+      {{ inklude.components(left) }}
+    </div>
+    <div id="{{ id }}_right" class="cell {{ do.print(right.cols, 'small-2 medium-3 end') }} {{ do.print(right.offset, '') }}" {{ right.attributes }}>
+      {{ inklude.components(right) }}
+    </div>
+  </div>
+</div>

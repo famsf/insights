@@ -158,6 +158,7 @@ $plyr-color-heather: #b7c5cd !default;
 @import '../components/molecules/inline-quote/inline-quote';
 @import '../components/molecules/standalone-quote/standalone-quote';
 @import '../components/molecules/Picture/Picture';
+@import '../components/molecules/scroll-comparison__picture/scroll-comparison__picture';
 @import '../components/molecules/slide/slide';
 @import '../components/molecules/slide--in-depth__intro/slide--in-depth__intro';
 @import '../components/molecules/commentary/commentary';
@@ -178,5 +179,6 @@ $plyr-color-heather: #b7c5cd !default;
 // Import Organisms.
 @import '../components/organisms/Page/Page';
 @import '../components/organisms/horizontal-image-slider/horizontal-image-slider';
+@import '../components/organisms/scroll-comparison/scroll-comparison';
 @import '../components/organisms/in-depth/in-depth';
 @import '../components/organisms/Footer/Footer';

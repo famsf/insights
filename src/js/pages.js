@@ -22,7 +22,6 @@
       return;
     }
 
-    pages.currentPage = pages.pages[0];
     pages.clearElement = doc.querySelector(clearElementSelector);
     pages.clearElementHeight = pages.clearElement.clientHeight;
     pages.calculateThreshholds(win.innerHeight);
@@ -43,8 +42,8 @@
       else {
         pages.hashes.currentPage = locHash;
       }
-      if (pages.hashes.currentPage) {
-        startPage = doc.getElementById(pages.hashes.currentPage);
+      if (pages.hashes.page) {
+        startPage = pages.byId[pages.hashes.page];
       }
       else {
         startPage = pages.currentPage;
@@ -61,6 +60,7 @@
       If that happens, we'll be able to update relationships and re-cache.
     */
     var i;
+    var page;
     var pageEl;
     var chapter;
     var ambientVideo;
@@ -71,7 +71,7 @@
       chapter = pageEl.parentElement;
       ambientVideo = pageEl.querySelector('.ambient_video .plyr_target');
       embeddedVideo = pageEl.querySelector('.video--embed .plyr_target');
-      pages.byId[pageEl.id] = {
+      page = {
         id: pageEl.id,
         el: pageEl,
         chapter: chapter,
@@ -82,6 +82,11 @@
         ambientVideoEl: ambientVideo,
         embeddedVideoEl: embeddedVideo
       };
+      pages.byId[pageEl.id] = page;
+      pages.triggerVideo(page);
+      if (pageEl.querySelector('.scroll-comparison')) {
+        fds.scrollComparison.initialize(pageEl.querySelector('.scroll-comparison'));
+      }
     }
   };
 
@@ -106,7 +111,6 @@
       pages.oldCurrentPage.el.classList.remove('current');
     }
     pages.currentPage = page;
-    console.log('pages.setCurrentPage', page.id, page.chapter);
     fds.chapterNav.setActiveItem(page.chapter);
     fds.mobileNav.setActiveItem(page.chapter);
     pages.currentPage.el.classList.add('current');
@@ -217,7 +221,6 @@
   pages.triggerPage = function (page) {
     var pageEl = page.el;
     pageEl.classList.add('triggered');
-    pages.triggerVideo(page);
   };
 
   pages.triggerVideo = function (page) {

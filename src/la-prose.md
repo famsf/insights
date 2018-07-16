@@ -44,9 +44,9 @@ chapters:
   - classes: theme--dark
     components:
     - template: "@atoms/video--embed/video--embed.html.twig"
-      id: WmrP8JhWb2U
+      id: xt27-zrvHkk
       youtube:
-        embed: WmrP8JhWb2U
+        embed: xt27-zrvHkk
 
 ################################################################################
 ## CHAPTER 1 ###################################################################
@@ -108,25 +108,28 @@ chapters:
 
   # c1p4
   - components:
-    - template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
+    - template: "@organisms/scroll-comparison/scroll-comparison.html.twig"
+      id: laprosescrollcomparison
       left:
         components:
-        - template: "@molecules/Picture/PictureWithCaption.html.twig"
+        - template: "@molecules/scroll-comparison__picture/scroll-comparison__picture.html.twig"
           caption:
             id: caption3
-            text: 'Photo: Florence Henri, 1931. Martini & Ronchetti Gallery
+            brief: 'Photo: Florence Henri, 1931. Martini & Ronchetti Gallery
               and image source'
           picture:
             srcset:
             - min-width: 0px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
+              src: /assets/images/delaunay.jpg
             - min-width: 350px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
+              src: /assets/images/delaunay.jpg
             - min-width: 800px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
-            url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
+              src: /assets/images/delaunay.jpg
+            url: /assets/images/delaunay.jpg
             alt: Photo of sonia delaunay-terk
             style: vertical
+        - template: "@atoms/h3/h3.html.twig"
+          text: "Sonia Delaunay-Terk"
         - template: "@atoms/textarea/textarea.html.twig"
           text: "<p>Delaunay-Terk (1885-1979) was born in the Ukraine and raised
             in St. Petersburg. She moved to Paris in 1905. In 1910 she married
@@ -139,21 +142,23 @@ chapters:
           dropcap: true
       right:
         components:
-        - template: "@molecules/Picture/PictureWithCaption.html.twig"
+        - template: "@molecules/scroll-comparison__picture/scroll-comparison__picture.html.twig"
           caption:
             id: caption4
-            text: Ca.1907. Wikimedia Commonse
+            brief: Ca.1907. Wikimedia Commons
           picture:
             srcset:
             - min-width: 0px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
+              src: /assets/images/cendrars.jpg
             - min-width: 350px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
+              src: /assets/images/cendrars.jpg
             - min-width: 800px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
-            url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
+              src: /assets/images/cendrars.jpg
+            url: /assets/images/cendrars.jpg
             alt: Photo of blaise cendrars
             style: vertical
+        - template: "@atoms/h3/h3.html.twig"
+          text: "Blaise Cendrars"
         - template: "@atoms/textarea/textarea.html.twig"
           text: "<p>Cendrars (1887-1961) was born Frédéric-Louis Sauser in Neuchatel,
             Switzerland, and became a French citizen in 1916. One of the leading
@@ -1002,7 +1007,7 @@ footer:
           classes: margin-bottom-0
       right:
         offset: large-offset-2
-        cols: medium-6 large-6 
+        cols: medium-6 large-6
         components:
         - template: "@layouts/two_up--primary/two_up--primary.html.twig"
           classes: footer-feature
@@ -1047,7 +1052,7 @@ footer:
               classes: separator-left
               text: Legion of Honor
             - template: "@atoms/textarea/textarea.html.twig"
-              text: 
+              text:
                 <p class="show-for-large">
                 Lincoln Park<br/>
                 100 34th Avenue<br/>
