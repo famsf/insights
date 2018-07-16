@@ -32,7 +32,11 @@
       });
     }
     downArrow.addEventListener('click', function (e) {
-      fds.pages.nextPage(fds.coverPageElement.closest('.page').nextElementSibling);
+      e.preventDefault();
+      /*
+        Disable clicking for now
+        fds.pages.nextPage(fds.coverPageElement.closest('.page').nextElementSibling);
+      */
     });
   };
 
