@@ -1,39 +1,49 @@
 %big_type {
 
-  font-family: $header-font-family;
-  font-weight: bold;
-  font-size: 2rem;
-  line-height: 1.2;
-
   h2 {
+    @extend .h1;
+    opacity: .5;
     font-style: italic;
+    font-weight: bold;
+    margin-bottom: 2rem;
+
+    @include breakpoint(medium) {
+      margin-bottom: 4rem;
+    }
   }
 
-  @media (min-width: 500px) {
-    font-size: 2.5rem;
-  }
+  p {
+    font-family: $header-font-family;
+    font-weight: bold;
+    line-height: 1.3;
+    letter-spacing: -1px;
+    font-size: 2em;
 
-  @media (min-width: 800px) {
-    font-size: 3rem;
+    @include breakpoint(medium) {
+      font-size: 2.85em;
+    }
+
+    @include breakpoint(large) {
+      font-size: 3.75em;
+    }
   }
 
   &.theme--dark {
-
     .cell:first-of-type {
-      background-color: black;
+      background-color: $black;
     }
 
     p,
     h2 {
-      color: #fff;
+      color: $white;
     }
   }
 
   .cell:first-of-type {
     opacity: 0.2;
     transition-property: opacity, transform;
-    transition-duration: 0.675s;
-    transition-delay: 0.25s;
+    transition-duration: .75s;
+    transition-delay: 0.125s;
     transition-timing-function: ease-in-out;
     transform: translate3d(0, 4.5rem, 0)
   }
