@@ -41,6 +41,10 @@
       padding: 8rem 5rem 5rem 5rem;
     }
   }
+
+  &.hide-chapter-nav {
+    z-index: 500;
+  }
 }
 
 .page {

@@ -3,9 +3,12 @@
   var horizontalImageSlider;
   var horizontalImageSliderOptions = {
     margin: 32,
+    autoPlay: 1000,
+    slideSpeed: 1000,
+    smartSpeed: 1000,
     loop: false,
-    nav: false,
-    dots: false,
+    nav: true,
+    dots: true,
     items: 1,
     merge: true,
     mergeFit: true,
@@ -44,6 +47,10 @@
   horizontalImageSlider = $(':not(.in-depth-modal) > .horizontal-image-slider');
   horizontalImageSlider.owlCarousel(horizontalImageSliderOptions);
 
+  horizontalImageSlider.find('.slide__icon--next svg').click(function () {
+    horizontalImageSlider.trigger('next.owl.carousel');
+  });
+
   // Initialize In Depth Slider.
   inDepthSlider = $('.in-depth-modal > .horizontal-image-slider');
 
@@ -71,6 +78,13 @@
     }
   });
 
+  // Scroll Comparison JS.
+  if ($('.scroll-comparison .wrapper .cell').length) {
+    $('.scroll-comparison .wrapper .cell').click(function () {
+      $(this).siblings('.cell').toggleClass('active');
+      $(this).toggleClass('active');
+    });
+  }
 
   // In Depth Slider Modal Close Methods.
   $('.in-depth-modal .modal__close-button').click(function () {

@@ -107,26 +107,28 @@ chapters:
           dropcap: true
 
   # c1p4
-  - components:
-    - template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
+  - classes: theme--dark
+    components:
+    - template: "@organisms/scroll-comparison/scroll-comparison.html.twig"
       left:
-        components:
+        visible:
         - template: "@molecules/Picture/PictureWithCaption.html.twig"
           caption:
-            id: caption3
-            text: 'Photo: Florence Henri, 1931. Martini & Ronchetti Gallery
-              and image source'
+            brief: 'Photo: Florence Henri, 1931. Martini & Ronchetti Gallery and image source'
           picture:
             srcset:
             - min-width: 0px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
+              src: /assets/images/delaunay.jpg
             - min-width: 350px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
+              src: /assets/images/delaunay.jpg
             - min-width: 800px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
-            url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/3_sonia-delaunay.jpg
+              src: /assets/images/delaunay.jpg
+            url: /assets/images/delaunay.jpg
             alt: Photo of sonia delaunay-terk
             style: vertical
+        - template: "@atoms/h3/h3.html.twig"
+          text: "Sonia Delaunay-Terk"
+        hidden:
         - template: "@atoms/textarea/textarea.html.twig"
           text: "<p>Delaunay-Terk (1885-1979) was born in the Ukraine and raised
             in St. Petersburg. She moved to Paris in 1905. In 1910 she married
@@ -136,35 +138,38 @@ chapters:
             color. In addition to painting, Delaunay-Terk’s practice encompassed
             textile and fashion design, bookbinding, furniture design, and set
             design.</p>"
-          dropcap: true
+          dropcap: false
       right:
-        components:
+        visible:
         - template: "@molecules/Picture/PictureWithCaption.html.twig"
           caption:
-            id: caption4
-            text: Blaise Cendrars, ca.1907. Wikimedia Commons
+            brief: Blaise Cendrars, ca.1907. Wikimedia Commons
           picture:
             srcset:
             - min-width: 0px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
+              src: /assets/images/cendrars.jpg
             - min-width: 350px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
+              src: /assets/images/cendrars.jpg
             - min-width: 800px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
-            url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/4_blaise-cendrars.jpg
+              src: /assets/images/cendrars.jpg
+            url: /assets/images/cendrars.jpg
             alt: Photo of blaise cendrars
             style: vertical
+        - template: "@atoms/h3/h3.html.twig"
+          text: "Blaise Cendrars"
+        hidden:
         - template: "@atoms/textarea/textarea.html.twig"
           text: "<p>Cendrars (1887-1961) was born Frédéric-Louis Sauser in Neuchatel,
             Switzerland, and became a French citizen in 1916. One of the leading
             literary figures of 20th century France, he was a friend and collaborator
             with many artists, including Fernand Léger, Marc Chagall, and Amedeo
             Modigliani.</p>"
-          dropcap: true
+          dropcap: false
 
   # c1p5
   - components:
     - template: "@organisms/in-depth/in-depth.html.twig"
+      classes: theme--dark
       title: What is an Artist’s Book?
       picture:
         srcset:
@@ -204,7 +209,7 @@ chapters:
                 style: square
           - caption:
               id: ch1p5-slide-2-caption
-              brief: William Blake’s illustrations display a singular vision and deep interpenetration of text and image, a unified expression that has rarely been equaled. Many consider Blake the father of book art. William Blake, illustration for <em>Book of Job</em (1823)
+              brief: <p>William Blake’s illustrations display a singular vision and deep interpenetration of text and image, a unified expression that has rarely been equaled. Many consider Blake the father of book art.</p><small>William Blake, illustration for <em>Book of Job</em (1823)</small>
               text: 'William Blake, Plate 16: "Thou hast fulfilled the Judgment of the wicked" from the complete proof edition of Blake’s <em>Book of Job</em>, 1825. Engraving, 19.6 x 16.2 cm (image). FAMSF, museum purchase, William H. Noble Bequest Fund, 1979.1.11.17'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
@@ -220,7 +225,7 @@ chapters:
               style: vertical
           - caption:
               id: ch1p5-slide-3-caption
-              brief: <em>Livres d’artistes</em>, deluxe editions illustrated by contemporary artists, came of age in the new century with <em>Parallelement</em>, published by Ambroise Vollard (1866–1939). Vollard’s younger contemporary Daniel-Henry Kahnweiler (1884–1979) published adventurous works by Pablo Picasso, Georges Braque, and others, with literary texts by as-yet obscure writers such as Guillaume Apollinaire, Max Jacob, André Malraux, and Gertrude Stein. Pierre Bonnard/Paul Verlaine, Parallelement (1900)
+              brief: <p><em>Livres d’artistes</em>, deluxe editions illustrated by contemporary artists, came of age in the new century with <em>Parallelement</em>, published by Ambroise Vollard (1866–1939). Vollard’s younger contemporary Daniel-Henry Kahnweiler (1884–1979) published adventurous works by Pablo Picasso, Georges Braque, and others, with literary texts by as-yet obscure writers such as Guillaume Apollinaire, Max Jacob, André Malraux, and Gertrude Stein.</p><small>Pierre Bonnard/Paul Verlaine, Parallelement (1900)</small>
               text: 'Pierre Bonnard (artist), Tony  Beltrand, Ambroise Vollard (publisher), Paul Verlaine (author), René Kieffer (binder), Imprimerie Nationale de France (printer), Auguste Clot (printer), Untitled, page 4 in the book <em>Parallèlement</em> by Paul Verlaine (Paris: Ambroise Vollard, 1900)., 1887–1900. Lithograph (pink sanguine) on Holland wove paper watermarked "Parallèlement", sheet: 295 x 240 mm (11 5/8 x 9 7/16 in.); image: 93 x 179 mm (3 11/16 x 7 1/16 in.). FAMSF, The Reva and David Logan Collection of Illustrated Books, 2000.200.45.6'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
@@ -236,7 +241,7 @@ chapters:
               style: vertical
           - caption:
               id: ch1p5-slide-4-caption
-              brief: 'Russian Futurists further developed the notion of the book as art with non-luxurious but conceptually advanced editions. The deluxe <em>livre d’artiste</em> and its lower-cost counterpart, the artist-published "democratic multiple," have persisted to the present day. So has the third way taken by <em>La prose</em>, where self-publishing artists combine high craft values with a visionary approach to the form of the book. El Lissitsky/Vladimir Mayakovsky: <em>Dlia Golosa (For the Voice)</em>, 1923'
+              brief: '<p>Russian Futurists further developed the notion of the book as art with non-luxurious but conceptually advanced editions. The deluxe <em>livre d’artiste</em> and its lower-cost counterpart, the artist-published "democratic multiple," have persisted to the present day. So has the third way taken by <em>La prose</em>, where self-publishing artists combine high craft values with a visionary approach to the form of the book.</p><small>El Lissitsky/Vladimir Mayakovsky: <em>Dlia Golosa (For the Voice)</em>, 1923</small>'
               text: 'El Lissitzky (artist), Gosizdat (publisher), fourth chapter, page 17 in the book <em>Dlia Golosa (For the Voice)</em> by Vladimir Vladimirovich Mayakovsky (Berlin: Gosizdat, 1923), 1923. Lithograph (color) on cream wove paper, sheet: 187 x 124 mm (7 3/8 x 4 7/8 in.); image: 134 x 112 mm (5 1/4 x 4 7/16 in.). FAMSF, Gift of the Reva and David Logan Foundation, 1998.40.79.8'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
@@ -285,14 +290,14 @@ chapters:
             text: It was not the art dealers, nor the critics, nor the collectors who made these painters famous, it was the modern poets, and people forget it rather too easily, and so do all these painters who, today, are millionaires and are still indebted to us, the poor poets!     
 
   # c2p3
-  - components:
-    - template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
+  - classes: theme--dark
+    components:
+    - template: "@organisms/scroll-comparison/scroll-comparison.html.twig"
       left:
-        components:
+        visible:
         - template: "@molecules/Picture/PictureWithCaption.html.twig"
           caption:
-            id: c2p3-caption-1
-            text: 'Stéphane Mallarmé, ca. 1890. Nadar studio. © The New York Public Library'
+            brief: 'Stéphane Mallarmé, ca. 1890. Nadar studio. © The New York Public Library'
           picture:
             srcset:
             - min-width: 0px
@@ -306,20 +311,20 @@ chapters:
             style: vertical
         - template: "@atoms/h3/h3.html.twig"
           text: "Stephané Mallarmé"
+        hidden:
         - template: "@atoms/textarea/textarea.html.twig"
           text: "<p>Mallarmé (1842-1898) is widely credited with opening the field of modernist visual poetics with his poem <em>Un coup de dés jamais n’abolira le hazard (A Throw of the Dice Will Never Abolish Chance)</em>. He was a major influence on many of the poets, and even visual artists, of the generation that followed, an influence that is still felt today.</p>"
-          dropcap: true
+          dropcap: false
         - template: "@molecules/inline-quote/inline-quote.html.twig"
           component_name: inline-quote
           name: R. Howard Bloch, <em>One Toss of the Dice</em>
           date: 2017
           text: One Toss of the Dice” was the birth certificate of modern poetry...
       right:
-        components:
+        visible:
         - template: "@molecules/Picture/PictureWithCaption.html.twig"
           caption:
-            id: c2p3-caption-2
-            text: Photograph of Guillaume Apollinaire with a shrapnel wound to the temple, spring 1916. Wikimedia
+            brief: Photograph of Guillaume Apollinaire with a shrapnel wound to the temple, spring 1916. Wikimedia
           picture:
             srcset:
             - min-width: 0px
@@ -333,9 +338,10 @@ chapters:
             style: vertical
         - template: "@atoms/h3/h3.html.twig"
           text: "Guillaume Apollinaire"
+        hidden:
         - template: "@atoms/textarea/textarea.html.twig"
           text: '<p>Apollinaire (1880-1918) was the quintessential poet of modernism. Immensely influential among his contemporaries, poets and artists alike, he helped define the avant-garde in both art and literature, and coined the terms "cubism" and "surrealism."</p>'
-          dropcap: true
+          dropcap: false
         - template: "@molecules/inline-quote/inline-quote.html.twig"
           component_name: inline-quote
           name: Jacques Vaché, letter to André Breton
@@ -343,7 +349,8 @@ chapters:
           text: "[Apollinaire] marks an epoch. The beautiful things we can do now!"
 
   # c2p4
-  - components:
+  - classes: hide-chapter-nav invert-top-bar
+    components:
     - template: "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig"
       slides:
       - intro_slide: true
@@ -458,7 +465,8 @@ chapters:
             text: "A woman nearby, covered by diamonds, but the music of Stravinsky drove her crazy, tore out a brand new folding seat and smashed me over the head with it, so I had to spend the rest of the night drinking champagne in Montmartre with Stravinsky [and] Diaghilev . . . still wearing the folding chair like a horse collar..."
 
   # c2p7
-  - components:
+  - classes: hide-chapter-nav invert-top-bar
+    components:
     - template: "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig"
       slides:
       - intro_slide: true
@@ -974,7 +982,7 @@ footer:
           classes: margin-bottom-0
       right:
         offset: large-offset-2
-        cols: medium-6 large-6 
+        cols: medium-6 large-6
         components:
         - template: "@layouts/two_up--primary/two_up--primary.html.twig"
           classes: footer-feature
@@ -1019,7 +1027,7 @@ footer:
               classes: separator-left
               text: Legion of Honor
             - template: "@atoms/textarea/textarea.html.twig"
-              text: 
+              text:
                 <p class="show-for-large">
                 Lincoln Park<br/>
                 100 34th Avenue<br/>

@@ -1,7 +1,7 @@
 %slide__icon--next {
   margin: 3rem 0 0 0;
   position: relative;
-  
+
   &:before {
     height: 1px;
     width: 5rem;
@@ -24,6 +24,10 @@
       height: 1px;
       width: 10rem;
       content: "";
+    }
+
+    &:hover {
+      cursor: pointer;
     }
   }
 
