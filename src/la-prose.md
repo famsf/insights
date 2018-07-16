@@ -302,12 +302,12 @@ chapters:
           picture:
             srcset:
             - min-width: 0px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/10_mallarme.jpg
+              src: /assets/images/mallarme.jpg
             - min-width: 350px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/10_mallarme.jpg
+              src: /assets/images/mallarme.jpg
             - min-width: 800px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/10_mallarme.jpg
-            url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/10_mallarme.jpg
+              src: /assets/images/mallarme.jpg
+            url: /assets/images/mallarme.jpg
             alt: Photo of Stéphane Mallarmé
             style: vertical
         - template: "@atoms/h3/h3.html.twig"
@@ -329,12 +329,12 @@ chapters:
           picture:
             srcset:
             - min-width: 0px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/11_apollinaire.jpg
+              src: /assets/images/apollinaire.jpg
             - min-width: 350px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/11_apollinaire.jpg
+              src: /assets/images/apollinaire.jpg
             - min-width: 800px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/11_apollinaire.jpg
-            url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/11_apollinaire.jpg
+              src: /assets/images/apollinaire.jpg
+            url: /assets/images/apollinaire.jpg
             alt: Photo of Guillaume Apollinaire
             style: vertical
         - template: "@atoms/h3/h3.html.twig"
