@@ -821,7 +821,7 @@ chapters:
   # c5p2
   - classes: theme--dark
     components:
-    - template: "@atoms/video--embed/video--embed.html.twig"
+    - template: "@organisms/video--embed/video--embed.html.twig"
       id: tOg9IEvt154
       youtube:
         embed: tOg9IEvt154
