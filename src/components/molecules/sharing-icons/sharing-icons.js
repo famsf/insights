@@ -22,12 +22,13 @@
 
   function sharingIconsThrottle(fn, wait) {
     var time = Date.now();
-    return function() {
-      if ((time + wait - Date.now()) < 0) {
+
+    return function () {
+      if ((time + wait) - (Date.now()) < 0) {
         fn();
         time = Date.now();
       }
-    }
+    };
   }
 
   function sharingIconsCallback() {
@@ -45,8 +46,6 @@
   document.addEventListener('DOMContentLoaded', function () {
     sharingIconsCallback();
   });
-
-
 }(
   window.fds = window.fds || {},
   window.fds.sharingIcons = window.fds.sharingIcons || {},
