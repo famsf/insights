@@ -172,9 +172,9 @@
             pagePastSnapThreshhold = pageTop < fds.snapDownthreshhold;
           }
           else if (scrollDir === 'up') {
-            pagePastSnapThreshhold = pageBottom > fds.snapUpthreshhold;
+            pagePastSnapThreshhold = pageBottom < fds.snapUpthreshhold;
           }
-          inView = pageTop < wh && pageBottom > 0;
+          inView = pageTop <= wh && pageBottom > 0;
           shouldTrigger = pagePastSnapThreshhold && inView;
           shouldUntrigger = page.el.classList.contains('triggered') && !shouldTrigger && !inView;
           if (shouldTrigger) {
