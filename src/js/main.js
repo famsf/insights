@@ -154,7 +154,6 @@
     fds.scrollLock = true;
     doc.body.classList.add('scroll_lock');
     doc.body.classList.add('loading');
-    console.log('adding loading overlays, locking scroll');
     fds.coverPage.initialize();
     fds.fpsEl = doc.getElementById('fpsEl');
     fds.mobileNav.initialize('mobile_nav');
@@ -163,7 +162,6 @@
     fds.pages.initialize('.chapters_container', '.page', '.top-bar');
     fds.topBar.initialize('topBar');
     fds.footer = doc.getElementById('insights__footer');
-    fds.pages.onScroll(sy, 'down', 0, win.innerHeight, true);
     fds.chapterNav.onScroll(sy);
     fds.renderLoop();
     fds.then = win.performance.now();
@@ -177,11 +175,5 @@
     fds.FpsInterval = 1000 / fds.targetFps;
     fds.rootElement = doc.querySelector('.insights-app');
     fds.initialize();
-    // fds.initInterval = setInterval(function () {
-    //   if (fds.rootElement.classList.contains('initialized')) {
-    //     clearInterval(fds.initInterval);
-    //     fds.initInterval = null;
-    //   }
-    // });
   });
 }(window.fds = window.fds || {}, window, document, jQuery));

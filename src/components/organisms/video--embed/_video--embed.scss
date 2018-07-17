@@ -20,7 +20,7 @@ Markup: video--embed.html.twig
 
 .plyr__control:hover {
   background-color: #fff !important;
-  path {
+  svg {
     fill: $black !important;
   }
 }
@@ -48,36 +48,29 @@ Markup: video--embed.html.twig
 
   .plyr--video .plyr__controls {
     position: fixed;
+    padding-left: 16.6667%;
+    padding-right: 16.6667%;
+    height: 3em;
+    width: 100%;
     bottom: 2em;
     visibility: hidden;
-    z-index: -1;
   }
 
   .triggered & {
-    .video--embed__wrapper {
-      opacity: 1;
-    }
     .plyr--video .plyr__controls {
       visibility: visible;
       opacity: 1;
       background: none;
-      padding-left: 16.6667%;
-      padding-right: 16.6667%;
+      bottom: 2em;
       top: auto;
-      height: 3em;
-      width: 100%;
-      z-index: 3;
     }
   }
-
   .scroll_lock & {
     .plyr--video .plyr__controls {
-      visibility: hidden !important;
       opacity: 0;
       z-index: -1;
     }
   }
-
   .plyr__video-wrapper {
     background: $white;
     height: 100vh;
@@ -87,7 +80,6 @@ Markup: video--embed.html.twig
       }
     }
   }
-
   &.theme--dark .plyr__video-wrapper {
     background: $black;
     .icon--not-pressed {
@@ -99,8 +91,8 @@ Markup: video--embed.html.twig
   .plyr__poster {
     background-size: cover;
   }
-
 }
+
 .video--embed.file {
   .plyr__poster,
   .plyr--video .plyr--video,

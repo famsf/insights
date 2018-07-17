@@ -69,15 +69,20 @@
     .frame {
       &::after {
         position: absolute;
+        z-index: 25;
         top: 0;
         left: 0;
         width: 100vw;
         height: 100vh;
-        background: rgba(#fff, 0.85);
-        content: "loading";
-        text-align: centered;
+        background: rgba(#fff, 0.9);
+        content: "";
+        text-align: center;
         vertical-align: baseline;
         line-height: 100vh;
+        background-image: url('/assets/images/spinner.gif');
+        background-repeat: no-repeat;
+        background-size: 8rem 8rem;
+        background-position: 50% 50%;
       }
     }
   }
