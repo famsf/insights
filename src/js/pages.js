@@ -219,7 +219,6 @@
     if (!force && (fds.scrollLock || page === pages.getCurrentPage() || !page)) {
       return;
     }
-    console.log('«««««', page.id, '»»»»»');
     document.body.classList.add('scroll_lock');
     pages.setCurrentPage(page);
     if (scrollDir === 'down') {
