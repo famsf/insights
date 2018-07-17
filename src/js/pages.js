@@ -96,12 +96,18 @@
     return pages.currentPage || pages.byId[pages.pages[0].id];
   };
 
-  pages.nextPage = function (nextPageEl) {
-    pages.snapScroll(pages.byId[nextPageEl.id], 'down', win.innerHeight);
+  pages.nextPage = function (id) {
+    console.log('nextPage', id, pages.byId[id]);
+    pages.snapScroll(pages.byId[id], 'down', win.innerHeight, true);
   };
 
   pages.setCurrentPage = function (page) {
-    var pageEl = page.el;
+    var pageEl;
+    if (!page) {
+      pages.currentPage = null;
+      return;
+    }
+    pageEl = page.el;
     pages.oldCurrentPage = pages.currentPage;
     if (pages.oldCurrentPage && pages.oldCurrentPage.el) {
       pages.oldCurrentPage.el.classList.remove('current');
@@ -192,6 +198,21 @@
     }
   };
 
+
+  /* We wouldnt need this sillyness if footer was a chapter */
+  pages.scrollToFooter = function (footerOffset) {
+    if (!fds.scrollLock) {
+      pages.unpinPage(pages.getCurrentPage());
+      pages.setCurrentPage(null);
+      fds.scrollLock = true;
+      fds.performantScrollTo(footerOffset, function () {
+        setTimeout(function () {
+          fds.scrollLock = false;
+        });
+      });
+    }
+  };
+
   pages.snapScroll = function (page, scrollDir, wh, unpin) {
     var scrollTo;
     var pageEl = page.el;
@@ -200,7 +221,7 @@
       pages.unpinPage(pages.getCurrentPage());
     }
     if (fds.scrollLock || page === pages.getCurrentPage() || !page) return;
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('scroll_lock');
     pages.setCurrentPage(page);
     if (scrollDir === 'down') {
       scrollTo = chapter.offsetTop + pageEl.offsetTop;
@@ -216,7 +237,7 @@
         pages.oldScrollY = win.pageYOffset;
         fds.scrollLock = false;
         pages.pinPage(page, scrollDir);
-        document.body.style.overflow = 'auto';
+        document.body.classList.remove('scroll_lock');
       }, 150);
     }, 455);
   };
@@ -256,6 +277,7 @@
   pages.triggerPage = function (page) {
     var pageEl = page.el;
     pageEl.classList.add('triggered');
+    console.log('triggerPage', page.id);
     if (pageEl.classList.contains('hide-chapter-nav')) {
       fds.chapterNav.hideNav();
     }

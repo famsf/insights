@@ -64,6 +64,23 @@
   &.current_page {
     z-index: 20;
   }
+
+  .loading & {
+    .frame {
+      &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(#fff, 0.85);
+        content: "loading";
+        text-align: centered;
+        vertical-align: baseline;
+        line-height: 100vh;
+      }
+    }
+  }
 }
 
 .page {

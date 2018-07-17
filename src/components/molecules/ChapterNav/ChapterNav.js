@@ -33,17 +33,14 @@
         }, false);
       }
       else if (navItem.id === 'chapter_nav__footer_link') {
+        /* We wouldnt need this sillyness if footer was a chapter */
         a.addEventListener('click', function (e) {
           e.preventDefault();
-          fds.performantScrollTo(footerOffset, function () {
-            fds.scrollLock = true;
-            setTimeout(function () {
-              fds.scrollLock = false;
-            });
-          });
+          fds.pages.scrollToFooter(footerOffset);
         });
       }
     }
+    chapterNav.hideNav();
   };
 
   chapterNav.setActiveItem = function (targetChapter) {
@@ -80,10 +77,20 @@
     var page;
     var pageEl;
     var chapter;
+    var scrollDir;
     chapter = fds.rootElement.querySelector(clickTarget.getAttribute('href'));
     pageEl = chapter.querySelector('.page');
     page = fds.pages.byId[pageEl.id];
-    fds.pages.snapScroll(page, null, win.innerHeight, true);
+    console.log('currentPage', fds.pages.currentPage.id);
+    if(fds.pages.currentPage) {
+      if (page.index > fds.pages.currentPage.index) {
+        scrollDir = 'down';
+      }
+      else {
+        scrollDir = 'up';
+      }
+    }
+    fds.pages.snapScroll(page, scrollDir, win.innerHeight, true);
   };
 
   chapterNav.onScroll = function () {

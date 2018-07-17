@@ -151,9 +151,15 @@
       },
       y: sy
     };
+    fds.scrollLock = true;
+    doc.body.classList.add('scroll_lock');
+    doc.body.classList.add('loading');
+    console.log('adding loading overlays, locking scroll');
+    fds.coverPage.initialize();
     fds.fpsEl = doc.getElementById('fpsEl');
     fds.mobileNav.initialize('mobile_nav');
     fds.chapterNav.initialize('chapter_nav', '.chapter', '.top-bar');
+    fds.chapterNav.showNav();
     fds.pages.initialize('.chapters_container', '.page', '.top-bar');
     fds.topBar.initialize('topBar');
     fds.footer = doc.getElementById('insights__footer');
@@ -170,12 +176,12 @@
     fds.targetFps = 60;
     fds.FpsInterval = 1000 / fds.targetFps;
     fds.rootElement = doc.querySelector('.insights-app');
-    fds.initInterval = setInterval(function () {
-      if (fds.rootElement.classList.contains('initialized')) {
-        fds.initialize();
-        clearInterval(fds.initInterval);
-        fds.initInterval = null;
-      }
-    });
+    fds.initialize();
+    // fds.initInterval = setInterval(function () {
+    //   if (fds.rootElement.classList.contains('initialized')) {
+    //     clearInterval(fds.initInterval);
+    //     fds.initInterval = null;
+    //   }
+    // });
   });
 }(window.fds = window.fds || {}, window, document, jQuery));
