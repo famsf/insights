@@ -26,26 +26,48 @@
     picture {
       position: relative;
 
-      &:after {
+      &:before {
+        content: '+';
         transition: all .5s ease-in-out;
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        content: "\f067";
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: white;
+        z-index: 1;
+        width: 100%;
         text-align: center;
-        padding-top: calc(50% - .5rem);
-        color: $white;
+        font-size: 2rem;
+        height: 2rem;
+        line-height: 2rem;
+        padding-top: calc(50% - 1rem);
+
+        @include breakpoint(large) {
+          font-size: 4rem;
+          height: 4rem;
+          line-height: 4rem;
+          padding-top: calc(50% - 2rem);
+        }
+      }
+
+      &:after {
+        content: '';
+        transition: all .5s ease-in-out;
         position: absolute;
         height: 100%;
         width: 100%;
         top: 0;
         left: 0;
-        background: rgba($black, .5);
+        background: rgba($black, .65);
         opacity: 1;
         border: 2px solid $white;
       }
 
       &:hover {
         cursor: pointer;
+
+        &:after {
+          background: rgba($black, .45);
+        }
       }
 
       + .caption {
@@ -69,6 +91,7 @@
       @extend .small-8;
 
       picture {
+        &:before,
         &:after {
           opacity: 0;
         }
