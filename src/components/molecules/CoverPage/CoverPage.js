@@ -7,7 +7,6 @@
         patternURL: fds.coverPageElement.dataset.bgImage,
         class: 'headline'
       });
-      fds.coverPage.initialize();
     }
   });
 
@@ -33,10 +32,7 @@
     }
     downArrow.addEventListener('click', function (e) {
       e.preventDefault();
-      /*
-        Disable clicking for now
-        fds.pages.nextPage(fds.coverPageElement.closest('.page').nextElementSibling);
-      */
+      fds.pages.nextPage(fds.coverPageElement.closest('.page').nextElementSibling.id);
     });
   };
 
@@ -45,6 +41,9 @@
     setTimeout(function () {
       fds.coverPageElement.classList.add('post_loaded');
       fds.rootElement.querySelector('.page').classList.add('triggered');
+      win.document.body.classList.remove('loading');
+      win.document.body.classList.remove('scroll_lock');
+      fds.scrollLock = false;
       fds.rootElement.classList.add('initialized');
       setTimeout(function () {
         fds.coverPageElement.classList.add('initialized');

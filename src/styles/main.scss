@@ -119,6 +119,7 @@ $plyr-color-heather: #b7c5cd !default;
 @import 'themes/color-variants';
 
 // Import Environments.
+@import '../components/environments/Pages/Pages';
 @import '../components/environments/KlimtRodin/KlimtRodin';
 @import '../components/environments/LaProse/LaProse';
 

@@ -6,7 +6,7 @@
     {% for chapter in chapters %}
       {% set id = get.id(chapter|merge({index: loop.index0})) %}
       <li>
-        <a href="#{{ id }}">
+        <a href="#{{ id }}" data-chapter="{{ id }}" data-chapter-index="{{ loop.index }}">
           <span class="menu--mobile__numeral">{{ chapter.numeral }}</span>
           <span class="menu--mobile__title">{{ chapter.title }}</span>
         </a>

@@ -44,8 +44,9 @@ chapters:
   - classes: hide-chapter-nav theme--dark
     components:
     - template: "@organisms/video--embed/video--embed.html.twig"
-      id: WmrP8JhWb2U
-      poster: http://i3.ytimg.com/vi/WmrP8JhWb2U/maxresdefault.jpg
+      id: xt27-zrvHkk
+      # see https://stackoverflow.com/questions/2068344/how-do-i-get-a-youtube-video-thumbnail-from-the-youtube-api
+      poster: https://img.youtube.com/vi/xt27-zrvHkk/0.jpg
       youtube:
         embed: xt27-zrvHkk
 

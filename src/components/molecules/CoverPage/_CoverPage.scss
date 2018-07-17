@@ -61,6 +61,14 @@
     }
   }
 
+  .down_arrow {
+    transition-property: top, opacity;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.675s;
+    opacity: 0;
+    bottom: -5rem;
+  }
+
   .triggered & {
     .underlay {
       .content {
@@ -69,6 +77,10 @@
           top: 0;
         }
       }
+    }
+    .down_arrow {
+      opacity: 1;
+      bottom: 3rem;
     }
   }
 
@@ -148,7 +160,6 @@
   }
 
   .subtitle {
-    // transform: translateY(30%);
     position: absolute;
     color: #fff;
     width: 100%;
