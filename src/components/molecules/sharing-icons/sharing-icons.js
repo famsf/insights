@@ -5,15 +5,9 @@
     var shareFacebook;
     var shareTwitter;
     var url = window.location.origin;
-    /*
-    This was breaking on in depths slide, for some reason el.closest('.page')
-    was returning undefined).
-    I think we can just read the location hash, and dont need to rad the page id,
-    since the hash changes as the page scrolls in.
-    */
-    if (!el.closest('.page')) return;
-    hash = el.closest('.page').id;
-    shareUrl = url + '%23' + hash;
+
+    hash = encodeURIComponent(window.location.hash);
+    shareUrl = url + hash;
     shareFacebook = el.querySelector('.share--facebook');
     shareTwitter = el.querySelector('.share--twitter');
 
@@ -26,7 +20,18 @@
     }
   };
 
-  document.addEventListener('DOMContentLoaded', function () {
+  function sharingIconsThrottle(fn, wait) {
+    var time = Date.now();
+
+    return function () {
+      if ((time + wait) - (Date.now()) < 0) {
+        fn();
+        time = Date.now();
+      }
+    };
+  }
+
+  function sharingIconsCallback() {
     var sharingIconWrapper = document.querySelectorAll('.sharing-icons');
     var count = sharingIconWrapper.length;
     var i;
@@ -34,6 +39,12 @@
     for (i = 0; i < count; i++) {
       fds.initializeSharingIcons(sharingIconWrapper[i]);
     }
+  }
+
+  window.addEventListener('scroll', sharingIconsThrottle(sharingIconsCallback, 1000));
+
+  document.addEventListener('DOMContentLoaded', function () {
+    sharingIconsCallback();
   });
 }(
   window.fds = window.fds || {},
