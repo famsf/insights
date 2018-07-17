@@ -219,6 +219,7 @@
     if (!force && (fds.scrollLock || page === pages.getCurrentPage() || !page)) {
       return;
     }
+    console.log('«««««', page.id, '»»»»»');
     document.body.classList.add('scroll_lock');
     pages.setCurrentPage(page);
     if (scrollDir === 'down') {
@@ -242,8 +243,16 @@
 
   pages.pinPage = function (page, scrollDir) {
     var pageEl = page.el;
+    var nextChapter;
+    if (page.nextPage) {
+      page.nextPage.style.marginTop = page.el.clientHeight;
+    }
+    else {
+      page.nextPage.chapter.style.paddingBottom = page.el.clientHeight;
+    }
     pages.lastPinned = null;
     page.pinned = true;
+
     if (scrollDir === 'down') {
       pageEl.classList.add('pinnedTop');
     }
