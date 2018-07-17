@@ -31,8 +31,8 @@
         }
       }
 
-      &.active_item {
-        background: $primary-color;
+      &.active_item a {
+        background-color: $primary-color;
       }
     }
 

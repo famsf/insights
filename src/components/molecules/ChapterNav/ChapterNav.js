@@ -46,14 +46,16 @@
   chapterNav.setActiveItem = function (targetChapter) {
     var chapterIndex;
     var count = chapterNav.navItems.length;
-    var item = chapterNav.navItems[targetChapter.dataset.chapterIndex];
+    var item;
     var i;
+    chapterIndex = targetChapter.dataset.chapterIndex;
+    item = chapterNav.navItems[chapterIndex];
     for (i = 0; i < count; i++) {
       if (i <= chapterIndex) {
-        chapterNav.navItems[i].classList.add('past');
+        item.classList.add('past');
       }
       else {
-        chapterNav.navItems[i].classList.remove('past');
+        item.classList.remove('past');
       }
     }
     if (chapterNav.activeItem) {
@@ -81,7 +83,6 @@
     chapter = fds.rootElement.querySelector(clickTarget.getAttribute('href'));
     pageEl = chapter.querySelector('.page');
     page = fds.pages.byId[pageEl.id];
-    console.log('currentPage', fds.pages.currentPage.id);
     if (fds.pages.currentPage) {
       if (page.index > fds.pages.currentPage.index) {
         scrollDir = 'down';

@@ -50,7 +50,6 @@
       else {
         startPage = pages.currentPage;
       }
-      console.log('snapScroll on initialization');
       pages.snapScroll(pages.byId[startPage.id], 'down', win.innerHeight, false, true);
     }
   };
@@ -58,9 +57,8 @@
   pages.populatePagesById = function () {
     /*
       Both for performance in accessing data, and to possibly allow us
-      to pull the active page out of the chapter dom eleemnt for scroll-stikcyness
-      smooth solution.
-      If that happens, we'll be able to update relationships and re-cache.
+      to pull the active page out of it's parent without naving to juggle too many bits,
+      since the relationships/properties, are cached here.
     */
     var i;
     var page;
@@ -98,7 +96,6 @@
   };
 
   pages.nextPage = function (id) {
-    console.log('nextPage', id, pages.byId[id]);
     pages.snapScroll(pages.byId[id], 'down', win.innerHeight, true);
   };
 
@@ -139,9 +136,9 @@
     var page;
     var pageEl;
     var pageRect;
+    var pageMarginTop;
     var pageTop;
     var pageBottom;
-    var pageMarginTop;
     var pagePastSnapThreshhold;
     var shouldTrigger = false;
     var shouldUntrigger = false;
@@ -181,7 +178,7 @@
           shouldTrigger = pagePastSnapThreshhold && inView;
           shouldUntrigger = page.el.classList.contains('triggered') && !shouldTrigger && !inView;
           if (shouldTrigger) {
-            pages.triggerTopBarEvents(pageEl);
+            pages.triggerTopBarEvents(page);
             // Triggers lastpinned if it returns to view
             pages.triggerPage(page);
           }
@@ -219,7 +216,6 @@
     if (unpin) {
       pages.unpinPage(pages.getCurrentPage());
     }
-    console.log('snapScroll', page.id);
     if (!force && (fds.scrollLock || page === pages.getCurrentPage() || !page)) {
       return;
     }
@@ -280,7 +276,6 @@
   pages.triggerPage = function (page) {
     var pageEl = page.el;
     pageEl.classList.add('triggered');
-    console.log('triggerPage', page.id);
     if (pageEl.classList.contains('hide-chapter-nav')) {
       fds.chapterNav.hideNav();
     }
@@ -334,7 +329,8 @@
     }
   };
 
-  pages.triggerTopBarEvents = function (pageEl) {
+  pages.triggerTopBarEvents = function (page) {
+    var pageEl = page.el;
     if (pageEl.classList.contains('dark')) {
       /*
         We gain in performance if instead of this we target the elements that care
