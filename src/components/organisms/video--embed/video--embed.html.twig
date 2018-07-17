@@ -1,0 +1,13 @@
+<div class="video--embed" style="background-image: url({{ poster }});">
+  <div class="video--embed__wrapper">
+    {% if youtube %}
+      <div class="plyr_target video_player youtube" data-plyr-provider="youtube" id="{{ id }}_vid" data-plyr-embed-id="{{ youtube.embed }}" data-poster="{{ poster }}"></div>
+    {% else %}
+      <video class="plyr_target video_element video_player" id="{{ id }}_vid" poster="{{ poster }}" {{ controls }} {{ playsinline }} {{ autoplay }} {{ muted }} {{ loop}}>
+        {% for type, source in sources %}
+          <source src="{{ source }}" type="video/{{ type }}">
+        {% endfor %}
+      </video>
+    {% endif %}
+  </div>
+</div>

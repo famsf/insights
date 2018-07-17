@@ -99,14 +99,20 @@ Styleguide COMPONENTS.in-depth
       height: 100vh;
     }
 
+    .owl-stage-outer {
+      @include breakpoint(medium) {
+        padding: 0;
+      }
+    }
+
     .item__content {
       margin: 2rem;
 
       @include breakpoint(medium) {
         margin: 0;
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
+        display: flex !important;
+        flex-flow: row nowrap !important;;
+        align-items: center !important;;
 
         > * {
           flex-grow: 1;
@@ -144,6 +150,11 @@ Styleguide COMPONENTS.in-depth
             width: 100%;
             object-fit: initial !important;
             background-size: initial !important;
+          }
+
+          @include breakpoint(medium) {
+            max-height: 100vh;
+            min-height: 100vh;
           }
         }
       }

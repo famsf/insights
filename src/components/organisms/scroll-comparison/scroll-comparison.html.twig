@@ -1,0 +1,23 @@
+{% import "@macros/inklude.html.twig" as inklude %}
+{% macro print(value, default) %}
+  {{- value is defined ? value : default -}}
+{% endmacro %}
+{% import _self as do %}
+<div class="scroll-comparison grid-x fluid {{ classes }}" id="{{ id }}">
+  <div class="cell small-12 large-8 large-offset-2">
+    <div class="wrapper grid-x grid-margin-x">
+      <div class="cell active" {{ left.attributes }}>
+        {{ inklude.components(left.visible ) }}
+        <div class="content">
+          {{ inklude.components(left.hidden) }}
+        </div>
+      </div>
+      <div class="cell" {{ right.attributes }}>
+        {{ inklude.components(right.visible ) }}
+        <div class="content">
+          {{ inklude.components(right.hidden) }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

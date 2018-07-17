@@ -104,6 +104,7 @@ Styleguide COMPONENTS.commentary
   }
 
   .commentary__author-name {
+    font-family: $header-font-family;
     font-weight: bold;
     font-size: 3rem;
 
@@ -113,6 +114,7 @@ Styleguide COMPONENTS.commentary
   }
 
   .commentary__author-title {
+    font-family: $header-font-family;
     font-size: 1.75rem;
     font-style: italic;
   }
