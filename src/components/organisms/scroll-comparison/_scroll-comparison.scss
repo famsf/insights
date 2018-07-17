@@ -28,6 +28,7 @@
 
       &:before {
         content: '+';
+        transition: all .5s ease-in-out;
         position: absolute;
         top: 0;
         left: 0;
@@ -90,6 +91,7 @@
       @extend .small-8;
 
       picture {
+        &:before,
         &:after {
           opacity: 0;
         }
