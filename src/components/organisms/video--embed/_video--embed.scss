@@ -52,7 +52,7 @@ Markup: video--embed.html.twig
     padding-right: 16.6667%;
     height: 3em;
     width: 100%;
-    bottom: 2em;
+    bottom: 0;
     visibility: hidden;
   }
 
@@ -61,7 +61,8 @@ Markup: video--embed.html.twig
       visibility: visible;
       opacity: 1;
       background: none;
-      bottom: 2em;
+      bottom: 0;
+      padding-bottom: 2rem;
       top: auto;
     }
   }
