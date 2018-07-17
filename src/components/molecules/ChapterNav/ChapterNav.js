@@ -82,7 +82,7 @@
     pageEl = chapter.querySelector('.page');
     page = fds.pages.byId[pageEl.id];
     console.log('currentPage', fds.pages.currentPage.id);
-    if(fds.pages.currentPage) {
+    if (fds.pages.currentPage) {
       if (page.index > fds.pages.currentPage.index) {
         scrollDir = 'down';
       }
