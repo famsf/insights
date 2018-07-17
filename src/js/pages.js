@@ -247,7 +247,7 @@
       page.nextPage.style.marginTop = page.el.clientHeight;
     }
     else {
-      page.nextPage.chapter.style.paddingBottom = page.el.clientHeight;
+      page.chapter.style.paddingBottom = page.el.clientHeight;
     }
     pages.lastPinned = null;
     page.pinned = true;
