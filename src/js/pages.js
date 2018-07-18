@@ -5,7 +5,8 @@
   fds.pages.hashes = {};
   fds.pages.byId = {};
   fds.pages.oldScrollY = null;
-  fds.pages.snapThreshhold = 15;
+  fds.pages.snapThreshhold = 20;
+  fds.pages.snapScrollDuration = 450;
 
   pages.initialize = function (containerSelector, pageSelector, clearElementSelector) {
     var locHash = window.location.hash.substr(1);
@@ -28,7 +29,7 @@
     pages.currentPage = pages.byId[pages.pages[0].id];
     pages.clearElement = doc.querySelector(clearElementSelector);
     pages.clearElementHeight = pages.clearElement.clientHeight;
-    pages.calculateThreshholds(win.innerHeight);
+    pages.calculateThreshholds();
 
     if (locHash.length > 1) {
       params = locHash.split('&');
@@ -50,16 +51,15 @@
       else {
         startPage = pages.currentPage;
       }
-      pages.snapScroll(pages.byId[startPage.id], 'down', win.innerHeight, false, true);
+      pages.snapScroll(startPage, {
+        scrollDir: 'down',
+        instant: true,
+        force: true
+      });
     }
   };
 
   pages.populatePagesById = function () {
-    /*
-      Both for performance in accessing data, and to possibly allow us
-      to pull the active page out of it's parent without naving to juggle too many bits,
-      since the relationships/properties, are cached here.
-    */
     var i;
     var page;
     var pageEl;
@@ -82,7 +82,10 @@
         nextPage: pageEl.nextElementSibling,
         index: pageEl.dataset.pageIndex,
         ambientVideoEl: ambientVideo,
-        embeddedVideoEl: embeddedVideo
+        embeddedVideoEl: embeddedVideo,
+        isPinned: false,
+        isCurrent: false,
+        inView: false
       };
       pages.byId[pageEl.id] = page;
       if (ambientVideo || embeddedVideo) {
@@ -92,11 +95,16 @@
   };
 
   pages.getCurrentPage = function () {
-    return pages.currentPage || pages.byId[pages.pages[0].id];
+    var cp = pages.currentPage || pages.byId[pages.pages[0].id];
+    return cp;
   };
 
   pages.nextPage = function (id) {
-    pages.snapScroll(pages.byId[id], 'down', win.innerHeight, true);
+    pages.snapScroll(pages.byId[id], {
+      scrollDir: 'down',
+      unpin: true,
+      force: true
+    });
   };
 
   pages.setCurrentPage = function (page) {
@@ -108,15 +116,18 @@
     pageEl = page.el;
     pages.oldCurrentPage = pages.currentPage;
     if (pages.oldCurrentPage && pages.oldCurrentPage.el) {
-      pages.oldCurrentPage.el.classList.remove('current');
+      pages.oldCurrentPage.isCurrent = false;
+      pages.untriggerPage(pages.oldCurrentPage);
     }
     pages.currentPage = page;
+    page.isCurrent = true;
     fds.chapterNav.setActiveItem(page.chapter);
     fds.mobileNav.setActiveItem(page.chapter);
     pages.currentPage.el.classList.add('current');
     window.location.hash = '&chapter=' + page.chapterId + '&page=' + pageEl.id;
     pages.hashes.page = pageEl.id;
     pages.hashes.chapter = page.chapterId;
+    pages.triggerPage(page);
     return page;
   };
 
@@ -136,15 +147,14 @@
     var page;
     var pageEl;
     var pageRect;
-    var pageMarginTop;
+    var pageMarginTop = 0;
     var pageTop;
     var pageBottom;
-    var pagePastSnapThreshhold;
+    var pagePastSnapThreshhold = false;
     var shouldTrigger = false;
-    var shouldUntrigger = false;
     var inView = false;
     // Loop through pages, we can eventually filter out doing stuff to pages that are offscreen.
-    if (currentPage.pinned === true && !fds.scrollLock) {
+    if (currentPage.isPinned === true && !fds.scrollLock) {
       scrollDiff = Math.abs(scrollY - pages.oldScrollY || 0);
       pages.oldScrollY = scrollY;
       if (scrollDiff > pages.snapThreshhold) {
@@ -155,45 +165,32 @@
       for (pageIterator = 0; pageIterator < count; pageIterator++) {
         pageEl = pages.pages[pageIterator];
         page = pages.byId[pageEl.id];
-        if (!page.pinned) {
+        if (!page.isPinned) {
           pageRect = pageEl.getBoundingClientRect();
-          pageMarginTop = parseInt(pageEl.style.marginTop, 10);
-          if (pageMarginTop) {
-            pageTop = Number(pageRect.top) + pageMarginTop;
-          }
-          else {
-            pageTop = pageRect.top;
-          }
+          pageMarginTop = parseInt(win.getComputedStyle(pageEl).marginTop, 10);
+          pageTop = pageRect.top + pageMarginTop;
           pageBottom = pageRect.bottom;
           if (didResize) {
-            pages.calculateThreshholds(wh, scrollDir);
+            // Only recalc if the window dimensions have changed.
+            pages.calculateThreshholds();
           }
           if (scrollDir === 'down') {
             pagePastSnapThreshhold = pageTop < fds.snapDownthreshhold;
           }
           else if (scrollDir === 'up') {
-            pagePastSnapThreshhold = pageBottom < fds.snapUpthreshhold;
+            pagePastSnapThreshhold = pageBottom > fds.snapUpthreshhold;
           }
-          inView = pageTop <= wh && pageBottom > 0;
-          shouldTrigger = pagePastSnapThreshhold && inView;
-          shouldUntrigger = page.el.classList.contains('triggered') && !shouldTrigger && !inView;
-          if (shouldTrigger) {
-            pages.triggerTopBarEvents(page);
-            // Triggers lastpinned if it returns to view
-            pages.triggerPage(page);
-          }
-          else if (shouldUntrigger) {
-            // Untriggers
-            pages.untriggerPage(page);
-          }
+          page.inView = pageTop < wh && pageBottom > 0;
+          shouldTrigger = pagePastSnapThreshhold && page.inView;
           if (shouldTrigger && pages.lastPinned !== page) {
-            pages.snapScroll(page, scrollDir, wh);
+            pages.snapScroll(page, {
+              scrollDir: scrollDir
+            });
           }
         }
       }
     }
   };
-
 
   /* We wouldnt need this sillyness if footer was a chapter */
   pages.scrollToFooter = function (footerOffset) {
@@ -209,26 +206,33 @@
     }
   };
 
-  pages.snapScroll = function (page, scrollDir, wh, unpin, force) {
+  pages.snapScroll = function (page, options) {
     var scrollTo;
+    var scrollDir;
+    var wh = win.innerHeight;
     var pageEl = page.el;
     var chapter = page.chapter;
-    if (unpin) {
-      pages.unpinPage(pages.getCurrentPage());
+    var snapScrollDuration = fds.pages.snapScrollDuration;
+    if (options.unpin) {
+      pages.unpinPage(pages.currentPage);
     }
-    if (!force && (fds.scrollLock || page === pages.getCurrentPage() || !page)) {
+    if (!options.force && (fds.scrollLock || page === pages.getCurrentPage() || !page)) {
       return;
     }
     document.body.classList.add('scroll_lock');
     pages.setCurrentPage(page);
-    if (scrollDir === 'down') {
+    if (options.scrollDir === 'down') {
+      scrollDir = 'down';
       scrollTo = chapter.offsetTop + pageEl.offsetTop;
     }
     else {
-      scrollTo = (chapter.offsetTop + pageEl.offsetTop + pageEl.clientHeight) - wh;
+      scrollDir = 'up';
+      scrollTo = (page.chapter.offsetTop + pageEl.offsetTop + pageEl.clientHeight) - wh;
     }
     fds.scrollLock = true;
-    pages.triggerPage(page);
+    if (options.instant) {
+      snapScrollDuration = 0;
+    }
     fds.performantScrollTo(scrollTo, function () {
       pages.snapPoint = scrollTo;
       setTimeout(function () {
@@ -237,20 +241,20 @@
         pages.pinPage(page, scrollDir);
         document.body.classList.remove('scroll_lock');
       }, 150);
-    }, 455);
+    }, snapScrollDuration);
   };
 
   pages.pinPage = function (page, scrollDir) {
     var pageEl = page.el;
     var nextChapter;
     if (page.nextPage) {
-      page.nextPage.style.marginTop = page.el.clientHeight;
+      page.nextPage.style.marginTop = page.el.clientHeight + 'px';
     }
     else {
-      page.chapter.style.paddingBottom = page.el.clientHeight;
+      page.chapter.style.paddingBottom = page.el.clientHeight + 'px';
     }
     pages.lastPinned = null;
-    page.pinned = true;
+    page.isPinned = true;
 
     if (scrollDir === 'down') {
       pageEl.classList.add('pinnedTop');
@@ -261,8 +265,9 @@
   };
 
   pages.unpinPage = function (page) {
-    page.pinned = false;
+    page.isPinned = false;
     pages.lastPinned = page;
+
     if (page.nextPage) page.nextPage.style.marginTop = 0;
     page.chapter.style.paddingBottom = 0;
     if (page.snapPoint !== 0) {
@@ -276,13 +281,13 @@
   };
 
   pages.untriggerPage = function (page) {
-    var pageEl = page.el;
-    pageEl.classList.remove('triggered');
+    page.el.classList.remove('triggered');
     pages.untriggerVideo(page);
   };
 
   pages.triggerPage = function (page) {
     var pageEl = page.el;
+    pages.triggerTopBarEvents(page);
     pageEl.classList.add('triggered');
     if (pageEl.classList.contains('hide-chapter-nav')) {
       fds.chapterNav.hideNav();
@@ -301,8 +306,8 @@
           hideControls: 'true'
         });
         plyr.on('ready', function (e) {
-          e.detail.plyr.muted = true;
-          e.detail.plyr.play();
+          plyr.muted = true;
+          plyr.play();
         });
         page.ambientVideo = plyr;
       }
@@ -315,6 +320,8 @@
         });
         plyr.on('ready', function (e) {
           page.embeddedVideo = plyr;
+          plyr.play();
+          plyr.pause();
         });
       }
     }
@@ -340,11 +347,6 @@
   pages.triggerTopBarEvents = function (page) {
     var pageEl = page.el;
     if (pageEl.classList.contains('dark')) {
-      /*
-        We gain in performance if instead of this we target the elements that care
-        Which is why i liked the event model, but this site is so small, and
-        turns out dispatching events is computationally spensive.
-      */
       doc.body.classList.add('theme--dark');
     }
     else {

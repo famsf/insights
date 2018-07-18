@@ -124,6 +124,8 @@ $plyr-color-heather: #b7c5cd !default;
 @import '../components/environments/LaProse/LaProse';
 
 // Import Atoms.
+@import '../components/atoms/fps/fps';
+
 @import '../components/atoms/a/a';
 @import '../components/atoms/big_type/big_type';
 @import '../components/atoms/button/button';
