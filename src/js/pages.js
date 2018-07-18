@@ -154,6 +154,10 @@
     var shouldTrigger = false;
     var inView = false;
     // Loop through pages, we can eventually filter out doing stuff to pages that are offscreen.
+    if (didResize) {
+      // Only recalc if the window dimensions have changed.
+      pages.calculateThreshholds();
+    }
     if (currentPage.isPinned === true && !fds.scrollLock) {
       scrollDiff = Math.abs(scrollY - pages.oldScrollY || 0);
       pages.oldScrollY = scrollY;
@@ -170,10 +174,6 @@
           pageMarginTop = parseInt(win.getComputedStyle(pageEl).marginTop, 10);
           pageTop = pageRect.top + pageMarginTop;
           pageBottom = pageRect.bottom;
-          if (didResize) {
-            // Only recalc if the window dimensions have changed.
-            pages.calculateThreshholds();
-          }
           if (scrollDir === 'down') {
             pagePastSnapThreshhold = pageTop < fds.snapDownthreshhold;
           }

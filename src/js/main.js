@@ -136,7 +136,7 @@
         secondsSinceStart = sinceStart * 0.001;
         currentFps = fds.frameCount / secondsSinceStart;
         msPerFrame = sinceStart / fds.frameCount;
-        fds.infoBox = Math.round(currentFps) + 'fps<br>currentPage: ' + fds.pages.getCurrentPage().id;
+        fds.infoBox.innerHTML = Math.round(currentFps) + 'fps<br>currentPage: ' + fds.pages.getCurrentPage().id;
         // At roughtly <br> ' + Math.round(msPerFrame) + 'ms/frame<br>
       }
       fds.then = newtime - (elapsed % fds.FpsInterval);
