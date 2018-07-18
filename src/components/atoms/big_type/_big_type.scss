@@ -40,19 +40,20 @@
   }
 
   .cell:first-of-type {
-    opacity: 0.2;
-    transition-property: opacity, transform;
+    opacity: 0;
+    transition-property: opacity, top;
     transition-duration: .75s;
     transition-delay: 0.125s;
     transition-timing-function: ease-in-out;
-    transform: translate3d(0, 4.5rem, 0)
+    position: relative;
+    top: 5rem;
+    @extend %performy;
   }
 
   .triggered & {
     .cell:first-of-type {
       opacity: 1;
-      @extend %performy;
-      transform: translate3d(0, 0, 0)
+      top: 0;
     }
   }
 }

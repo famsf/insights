@@ -30,6 +30,11 @@
     items: 1
   };
 
+  /* This is not just for counting fps, fpsInterval is important to the renderloop */
+  fds.calcFps = false;
+  fds.targetFps = 60;
+  fds.FpsInterval = 1000 / fds.targetFps;
+
   // Initialize Foundation.
   $(doc).foundation();
 
@@ -123,12 +128,16 @@
         fds.chapterNav.onScroll(fds.scroll.y);
       }
       if (fds.calcFps) {
+        fds.infoBox = document.createElement('div');
+        fds.infoBox.id = 'infoBox';
+        fds.rootElement.appendChild(fds.infoBox);
         sinceStart = newtime - fds.startTime;
         fds.frameCount++;
         secondsSinceStart = sinceStart * 0.001;
         currentFps = fds.frameCount / secondsSinceStart;
         msPerFrame = sinceStart / fds.frameCount;
-        fds.fpsEl.innerHTML = Math.round(currentFps) + 'fps at roughtly <br> ' + Math.round(msPerFrame) + 'ms/frame<br>currentPage: ' + fds.pages.getCurrentPage().id + '<br>y:' + fds.scroll.y;
+        fds.infoBox.innerHTML = Math.round(currentFps) + 'fps<br>currentPage: ' + fds.pages.getCurrentPage().id;
+        // At roughtly <br> ' + Math.round(msPerFrame) + 'ms/frame<br>
       }
       fds.then = newtime - (elapsed % fds.FpsInterval);
       if (fds.footer.getBoundingClientRect().top < win.innerHeight * 0.25) {
@@ -151,31 +160,33 @@
       },
       y: sy
     };
+    doc.body.addEventListener('touchstart', function () {
+      fds.rootElement.style = '1px #f00 solid';
+      fds.isTouching = true;
+    });
+    doc.body.addEventListener('touchend', function () {
+      fds.rootElement.style = '1px #0af solid';
+      fds.isTouching = false;
+    });
+    fds.scrollLock = true;
+    doc.body.classList.add('scroll_lock');
+    doc.body.classList.add('loading');
+    fds.coverPage.initialize();
     fds.fpsEl = doc.getElementById('fpsEl');
     fds.mobileNav.initialize('mobile_nav');
     fds.chapterNav.initialize('chapter_nav', '.chapter', '.top-bar');
-    fds.pages.initialize('.chapters_container', '.page', '.top-bar');
+    fds.chapterNav.showNav();
     fds.topBar.initialize('topBar');
+    fds.pages.initialize('.chapters_container', '.page', '.top-bar');
     fds.footer = doc.getElementById('insights__footer');
-    fds.pages.onScroll(sy, 'down', 0, win.innerHeight, true);
     fds.chapterNav.onScroll(sy);
-    fds.renderLoop();
     fds.then = win.performance.now();
     fds.startTime = fds.then;
     requestAnimationFrame(fds.renderLoop);
   };
 
   doc.addEventListener('DOMContentLoaded', function () {
-    fds.calcFps = false;
-    fds.targetFps = 60;
-    fds.FpsInterval = 1000 / fds.targetFps;
     fds.rootElement = doc.querySelector('.insights-app');
-    fds.initInterval = setInterval(function () {
-      if (fds.rootElement.classList.contains('initialized')) {
-        fds.initialize();
-        clearInterval(fds.initInterval);
-        fds.initInterval = null;
-      }
-    });
+    fds.initialize();
   });
 }(window.fds = window.fds || {}, window, document, jQuery));

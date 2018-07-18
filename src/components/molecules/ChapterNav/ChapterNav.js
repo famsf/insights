@@ -33,30 +33,29 @@
         }, false);
       }
       else if (navItem.id === 'chapter_nav__footer_link') {
+        /* We wouldnt need this sillyness if footer was a chapter */
         a.addEventListener('click', function (e) {
           e.preventDefault();
-          fds.performantScrollTo(footerOffset, function () {
-            fds.scrollLock = true;
-            setTimeout(function () {
-              fds.scrollLock = false;
-            });
-          });
+          fds.pages.scrollToFooter(footerOffset);
         });
       }
     }
+    chapterNav.hideNav();
   };
 
   chapterNav.setActiveItem = function (targetChapter) {
     var chapterIndex;
     var count = chapterNav.navItems.length;
-    var item = chapterNav.navItems[targetChapter.dataset.chapterIndex];
+    var item;
     var i;
+    chapterIndex = targetChapter.dataset.chapterIndex;
+    item = chapterNav.navItems[chapterIndex];
     for (i = 0; i < count; i++) {
       if (i <= chapterIndex) {
-        chapterNav.navItems[i].classList.add('past');
+        item.classList.add('past');
       }
       else {
-        chapterNav.navItems[i].classList.remove('past');
+        item.classList.remove('past');
       }
     }
     if (chapterNav.activeItem) {
@@ -80,10 +79,22 @@
     var page;
     var pageEl;
     var chapter;
+    var scrollDir;
     chapter = fds.rootElement.querySelector(clickTarget.getAttribute('href'));
     pageEl = chapter.querySelector('.page');
     page = fds.pages.byId[pageEl.id];
-    fds.pages.snapScroll(page, null, win.innerHeight, true);
+    if (fds.pages.currentPage) {
+      if (page.index > fds.pages.currentPage.index) {
+        scrollDir = 'down';
+      }
+      else {
+        scrollDir = 'up';
+      }
+    }
+    fds.pages.snapScroll(page, {
+      scrollDir: scrollDir,
+      unpin: true
+    });
   };
 
   chapterNav.onScroll = function () {
