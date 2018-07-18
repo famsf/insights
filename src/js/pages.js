@@ -235,10 +235,10 @@
     }
     fds.performantScrollTo(scrollTo, function () {
       pages.snapPoint = scrollTo;
+      pages.pinPage(page, scrollDir);
       setTimeout(function () {
         pages.oldScrollY = win.pageYOffset;
         fds.scrollLock = false;
-        pages.pinPage(page, scrollDir);
         document.body.classList.remove('scroll_lock');
       }, 150);
     }, snapScrollDuration);
