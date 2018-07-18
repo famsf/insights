@@ -5,7 +5,6 @@
     {% include '@environments/Chapters/Chapters.html.twig' with { chapters: chapters, title: title } only %}
     {% include '@organisms/Footer/Footer.html.twig' with { sections: footer.sections, classes: footer.classes } only %}
   </div>
-  <div id="fpsEl" style="z-index: 1001; color: #fff; paddign: 0.25em 0.5em; position:fixed; bottom: 0; left:0; width: 10em; background-color: #000"></div>
 </div>
 
 {% include '@molecules/off-canvas/off-canvas.html.twig' with { chapters: chapters, title: title, tickets_url: tickets_url, sections: footer.sections, classes: footer.classes } only %}

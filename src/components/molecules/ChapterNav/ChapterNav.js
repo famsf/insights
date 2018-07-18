@@ -91,7 +91,10 @@
         scrollDir = 'up';
       }
     }
-    fds.pages.snapScroll(page, scrollDir, win.innerHeight, true);
+    fds.pages.snapScroll(page, {
+      scrollDir: scrollDir,
+      unpin: true
+    });
   };
 
   chapterNav.onScroll = function () {
