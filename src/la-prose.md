@@ -830,7 +830,20 @@ chapters:
       left:
         components:
           - template: "@atoms/cliff-note/cliff-note.html.twig"
-            text: The avant-garde, forward-looking nature of La prose has many parallels in our time.
+            text: The avant-garde, forward-looking nature of La prose has many parallels in our time.   
+
+      right:
+        components:
+          - template: "@atoms/h3/h3.html.twig"
+            text: "The 1950s: Cendrars and Kerouac"
+          - template: "@atoms/textarea/textarea.html.twig"
+            text: "<p>In some respects, the poem resembles Jack Kerouac’s <em>On the Road</em>. In composition, they share a common conceit: the illusion that they were composed, or narrated, in a single sitting, the intimate testimonial quality of a tale of alienation and transgression, drawing the listener or reader in. Both are road-trip stories, with socially marginalized traveling companions, that move across vast landscapes. Both are simultaneously life-changing inward journeys. And anyone who’s seen the Kerouac manuscript, the scroll, will immediately recognize the physical resemblance. With visual art, though, the two reading experiences diverge, and it is the hybrid nature of what we are looking at that distinguishes <em>La prose</em> as a unique and transcendent experience for the reader and viewer.</p>"
+            dropcap: false
+          - template: "@atoms/h3/h3.html.twig"
+            text: "The 1960s: Light, Color, Motion"
+          - template: "@atoms/textarea/textarea.html.twig"
+            text: "<p>The interplay of colors and the synesthetic illusion of movement in Delaunay’s pochoir has an uncanny parallel in the psychedelic light shows of the 1960’s, where bright, pulsating, liquid forms merged with an experience of rhythmic sound, as the rhythms of Cendrars’s lines – dedicated, as he says, “to the musicians” – seem to emerge from the artist’s abstract color-forms.</p>"
+            dropcap: false
           - template: "@molecules/Picture/PictureWithCaption.html.twig"
             caption:
               id: c5p1-caption-1
@@ -846,21 +859,7 @@ chapters:
                   src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/28_b-bill-ham-light-show.jpg
               url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/28_b-bill-ham-light-show.jpg
               alt: Bill Ham kinetic light painting
-              style: vertical
-   
-
-      right:
-        components:
-          - template: "@atoms/h3/h3.html.twig"
-            text: "The 1950s: Cendrars and Kerouac"
-          - template: "@atoms/textarea/textarea.html.twig"
-            text: "<p>In some respects, the poem resembles Jack Kerouac’s <em>On the Road</em>. In composition, they share a common conceit: the illusion that they were composed, or narrated, in a single sitting, the intimate testimonial quality of a tale of alienation and transgression, drawing the listener or reader in. Both are road-trip stories, with socially marginalized traveling companions, that move across vast landscapes. Both are simultaneously life-changing inward journeys. And anyone who’s seen the Kerouac manuscript, the scroll, will immediately recognize the physical resemblance. With visual art, though, the two reading experiences diverge, and it is the hybrid nature of what we are looking at that distinguishes <em>La prose</em> as a unique and transcendent experience for the reader and viewer.</p>"
-            dropcap: false
-          - template: "@atoms/h3/h3.html.twig"
-            text: "The 1960s: Light, Color, Motion"
-          - template: "@atoms/textarea/textarea.html.twig"
-            text: "<p>The interplay of colors and the synesthetic illusion of movement in Delaunay’s pochoir has an uncanny parallel in the psychedelic light shows of the 1960’s, where bright, pulsating, liquid forms merged with an experience of rhythmic sound, as the rhythms of Cendrars’s lines – dedicated, as he says, “to the musicians” – seem to emerge from the artist’s abstract color-forms.</p>"
-            dropcap: false
+              style: horizontal
           - template: "@atoms/h3/h3.html.twig"
             text: "Book Art Now"
           - template: "@atoms/textarea/textarea.html.twig"
