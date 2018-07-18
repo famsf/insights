@@ -31,7 +31,7 @@
   };
 
   /* This is not just for counting fps, fpsInterval is important to the renderloop */
-  fds.calcFps = true;
+  fds.calcFps = false;
   fds.targetFps = 60;
   fds.FpsInterval = 1000 / fds.targetFps;
 
