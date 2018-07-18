@@ -31,7 +31,7 @@
   };
 
   /* This is not just for counting fps, fpsInterval is important to the renderloop */
-  fds.calcFps = false;
+  fds.calcFps = true;
   fds.targetFps = 48;
   fds.FpsInterval = 1000 / fds.targetFps;
 
@@ -112,11 +112,12 @@
     var sinceStart;
     var scrollDir;
     var secondsSinceStart;
+    var wh = win.innerHeight;
     requestAnimationFrame(fds.renderLoop);
     didResize = false;
     elapsed = newtime - fds.then;
-    oldWindowDim = Object.assign({}, { w: win.innerWidth, h: win.innerHeight });
-    if (win.innerWidth !== oldWindowDim.w || win.innerHeight !== oldWindowDim.h) {
+    oldWindowDim = Object.assign({}, { w: win.innerWidth, h: wh });
+    if (win.innerWidth !== oldWindowDim.w || wh !== oldWindowDim.h) {
       didResize = true;
     }
     if (elapsed > fds.FpsInterval) {
@@ -124,7 +125,7 @@
       scrollDiff = fds.scroll.y - fds.scroll.last.y;
       if (scrollDiff !== 0 && fds.rootElement.classList.contains('initialized')) {
         scrollDir = (scrollDiff > 0) ? 'down' : 'up';
-        fds.pages.onScroll(fds.scroll.y, scrollDir, win.innerHeight, didResize);
+        fds.pages.onScroll(fds.scroll.y, scrollDir, wh, didResize);
         fds.chapterNav.onScroll(fds.scroll.y);
       }
       if (fds.calcFps) {
@@ -136,11 +137,10 @@
         secondsSinceStart = sinceStart * 0.001;
         currentFps = fds.frameCount / secondsSinceStart;
         msPerFrame = sinceStart / fds.frameCount;
-        fds.infoBox.innerHTML = Math.round(currentFps) + 'fps<br>currentPage: ' + fds.pages.getCurrentPage().id;
-        // At roughtly <br> ' + Math.round(msPerFrame) + 'ms/frame<br>
+        fds.infoBox.innerHTML = Math.round(currentFps) + 'fps<br>At roughtly' + Math.round(msPerFrame) + 'ms/frame<br>currentPage: ' + fds.pages.getCurrentPage().id;
       }
       fds.then = newtime - (elapsed % fds.FpsInterval);
-      if (fds.footer.getBoundingClientRect().top < win.innerHeight * 0.25) {
+      if (fds.scroll.y > fds.rootElement.clientHeight) {
         fds.chapterNav.hideNav();
       }
     }

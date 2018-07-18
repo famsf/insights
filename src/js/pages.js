@@ -5,7 +5,7 @@
   fds.pages.hashes = {};
   fds.pages.byId = {};
   fds.pages.oldScrollY = null;
-  fds.pages.snapThreshhold = 20;
+  fds.pages.snapThreshhold = 24;
   fds.pages.snapScrollDuration = 450;
 
   pages.initialize = function (containerSelector, pageSelector, clearElementSelector) {
@@ -236,17 +236,23 @@
     fds.performantScrollTo(scrollTo, function () {
       pages.snapPoint = scrollTo;
       pages.pinPage(page, scrollDir);
-      setTimeout(function () {
-        pages.oldScrollY = win.pageYOffset;
-        fds.scrollLock = false;
-        document.body.classList.remove('scroll_lock');
-      }, 150);
+      pages.oldScrollY = win.pageYOffset;
+      fds.scrollLock = false;
+      document.body.classList.remove('scroll_lock');
+      // setTimeout(function () {
+      //   pages.oldScrollY = win.pageYOffset;
+      //   fds.scrollLock = false;
+      //   document.body.classList.remove('scroll_lock');
+      // }, 150);
     }, snapScrollDuration);
   };
 
   pages.pinPage = function (page, scrollDir) {
     var pageEl = page.el;
     var nextChapter;
+    /*
+      This is where the most likely place for jump and jitter is
+    */
     if (page.nextPage) {
       page.nextPage.style.marginTop = page.el.clientHeight + 'px';
     }
