@@ -158,14 +158,14 @@
       // Only recalc if the window dimensions have changed.
       pages.calculateThreshholds();
     }
-    if (currentPage.isPinned === true && !fds.scrollLock) {
+    if ((currentPage.isPinned === true && !fds.scrollLock) || fds.isTouching) {
       scrollDiff = Math.abs(scrollY - pages.oldScrollY || 0);
       pages.oldScrollY = scrollY;
       if (scrollDiff > pages.snapThreshhold) {
         pages.unpinPage(currentPage);
       }
     }
-    else if (!fds.scrollLock) {
+    else if (!fds.scrollLock && !fds.inTouching) {
       for (pageIterator = 0; pageIterator < count; pageIterator++) {
         pageEl = pages.pages[pageIterator];
         page = pages.byId[pageEl.id];
