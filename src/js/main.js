@@ -119,7 +119,7 @@
     if (win.innerWidth !== oldWindowDim.w || win.innerHeight !== oldWindowDim.h) {
       didResize = true;
     }
-    if (elapsed > fds.FpsInterval) {
+    if (elapsed > fds.FpsInterval && fds.isTouching === false) {
       fds.scroll.y = win.pageYOffset;
       scrollDiff = fds.scroll.y - fds.scroll.last.y;
       if (scrollDiff !== 0 && fds.rootElement.classList.contains('initialized')) {
@@ -179,6 +179,13 @@
 
   doc.addEventListener('DOMContentLoaded', function () {
     fds.rootElement = doc.querySelector('.insights-app');
+    window.addEventListener('touchstart', function () {
+      fds.touchDevice = true;
+      fds.isTouching = true;
+    });
+    window.addEventListener('touchend', function () {
+      fds.isTouching = false;
+    });
     fds.initialize();
   });
 }(window.fds = window.fds || {}, window, document, jQuery));

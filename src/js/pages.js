@@ -161,7 +161,7 @@
     if (currentPage.isPinned === true && !fds.scrollLock) {
       scrollDiff = Math.abs(scrollY - pages.oldScrollY || 0);
       pages.oldScrollY = scrollY;
-      if (scrollDiff > pages.snapThreshhold) {
+      if (scrollDiff > pages.snapThreshhold || fds.isTouching === true) {
         pages.unpinPage(currentPage);
       }
     }

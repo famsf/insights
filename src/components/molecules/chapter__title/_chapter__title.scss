@@ -23,10 +23,14 @@ Markup: chapter__title.html.twig
     left: 50%;
     display: none;
     opacity: 0;
-    transform: translate3d(-50%, -40%, 0);
+    transform: translate3d(-50%, -50%, 0);
     transition-property: transform, opacity;
     transition-duration: 1.875s;
     transition-timing-function: ease-out;
+    @include breakpoint(medium) {
+      top: 50%;
+      transform: translate3d(-50%, -40%, 0);
+    }
   }
 
   .triggered & {
@@ -63,14 +67,22 @@ Markup: chapter__title.html.twig
     }
 
     .numeral {
-      font-size: 10rem;
+      font-size: 8rem;
       color: white;
       font-weight: 900;
     }
 
     .title {
-      font-size: 3.125rem;
+      font-size: 2.125rem;
       font-style: italic;
+    }
+    @include breakpoint(medium) {
+      .numeral {
+        font-size: 10rem;
+      }
+      .title {
+        font-size: 3.125rem;
+      }
     }
   }
 }
