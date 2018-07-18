@@ -160,14 +160,14 @@
       },
       y: sy
     };
-    doc.body.addEventListener('touchstart', function() {
+    doc.body.addEventListener('touchstart', function () {
       fds.rootElement.style = '1px #f00 solid';
       fds.isTouching = true;
-    })
-    doc.body.addEventListener('touchend', function() {
+    });
+    doc.body.addEventListener('touchend', function () {
       fds.rootElement.style = '1px #0af solid';
       fds.isTouching = false;
-    })
+    });
     fds.scrollLock = true;
     doc.body.classList.add('scroll_lock');
     doc.body.classList.add('loading');
