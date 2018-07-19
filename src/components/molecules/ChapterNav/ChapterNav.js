@@ -67,11 +67,13 @@
 
   chapterNav.showNav = function () {
     chapterNav.nav.classList.remove('hidden');
+    chapterNav.nav.classList.add('showy');
     chapterNav.isHidden = false;
   };
 
   chapterNav.hideNav = function () {
     chapterNav.nav.classList.add('hidden');
+    chapterNav.nav.classList.remove('showy');
     chapterNav.isHidden = true;
   };
 

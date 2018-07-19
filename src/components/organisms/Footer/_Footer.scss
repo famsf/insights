@@ -2,6 +2,8 @@ footer.footer {
   background: $white;
   display: flex;
   flex-flow: column;
+  position: relative;
+  z-index: 3;
 
   h1,
   h2,
