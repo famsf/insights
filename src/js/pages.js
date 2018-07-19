@@ -278,7 +278,7 @@
     pages.pinned = page;
     page.isPinned = true;
     pageEl.classList.add('pinnedTop');
-    if(page.pageArr[2]) {
+    if (page.pageArr[2]) {
       page.pageArr[2].el.style.marginTop = pages.pinnedOffset;
     }
     else {
