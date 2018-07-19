@@ -37,10 +37,12 @@
     background-color: transparent;
   }
 
-  * {
-    transition: all .5s ease-in-out;
-    color: $black;
-    background-color: transparent;
+  button {
+    transition: color .325s ease-in-out, background-color .325 ease-in-out;
+  }
+
+  .tagline {
+    transition: color .325s ease-in-out;
   }
 
   .button-group {
@@ -83,8 +85,6 @@
       fill: $white !important;
     }
   }
-
-
 
   .off-canvas-opened & {
     background-color: $black;
