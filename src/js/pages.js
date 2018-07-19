@@ -263,7 +263,7 @@
       setTimeout(function () {
         fds.scrollLock = false;
         doc.body.classList.remove('scroll_lock');
-        page.focus();
+        page.el.focus();
       }, 125);
     }, snapScrollDuration);
   };
