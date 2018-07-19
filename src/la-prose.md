@@ -106,7 +106,7 @@ chapters:
             format, the book unfurls to over six feet in length, then opens
             to reveal Delaunay’s abstract forms confronting a poem of more than
             400 lines splashed across the right-hand side of the opening.</p>"
-          dropcap: true
+          dropcap: false
 
   # c1p3
   - classes: theme--dark
@@ -209,8 +209,7 @@ chapters:
           - caption:
               id: ch1p5-slide-2-caption
               brief: <p>Book art has a long history. In the <em>Book of Kells</em>, the letterform is an expression of transcendance. Even beyond its overt religious significance, the book is truly, in the words of Stéphane Mallarmé, an “<em>instrument spirituel.</em>”</p><small>The <em>Book of Kells</em> (Ireland or Scotland, circa AD 800)</small>
-              text: '“Chi-Rho” page from <em>Book of Kells</em>. © Trinity College Dublin
-'
+              text: '“Chi-Rho” page from <em>Book of Kells</em>. © Trinity College Dublin'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
               srcset:
@@ -297,8 +296,8 @@ chapters:
       right:
         components:
           - template: "@atoms/textarea/textarea.html.twig"
-            text: "<p>L<em>a prose</em> was a product of its time and place, a period like no other before or since. Georges Braque and Pablo Picasso were creating the radical new artistic vision of Cubism, leading to the birth of abstraction, and Marcel Duchamp was brewing his own conceptual artistic revolution. In poetry, Guillaume Apollinaire was charging through the door that Stéphane Mallarmé (1842–1898) had opened with his sophisticated exploration of visual poetics. Russian emigrés were injecting energy and radical ideas into the mix, bringing with them the bold dynamics of Futurism. The modernist spirit that was centered in Paris extended to all of Europe and the world beyond, setting the stage for the advent of Dada and Surrealism.</p>"
-            dropcap: true
+            text: "<p><em>La prose</em> was a product of its time and place, a period like no other before or since. Georges Braque and Pablo Picasso were creating the radical new artistic vision of Cubism, leading to the birth of abstraction, and Marcel Duchamp was brewing his own conceptual artistic revolution. In poetry, Guillaume Apollinaire was charging through the door that Stéphane Mallarmé (1842–1898) had opened with his sophisticated exploration of visual poetics. Russian emigrés were injecting energy and radical ideas into the mix, bringing with them the bold dynamics of Futurism. The modernist spirit that was centered in Paris extended to all of Europe and the world beyond, setting the stage for the advent of Dada and Surrealism.</p>"
+            dropcap: false
           - template: "@molecules/inline-quote/inline-quote.html.twig"
             component_name: inline-quote
             name: Blaise Cendrars, <em>La lotissement du ciel (Sky)</em>
@@ -597,7 +596,7 @@ chapters:
         components:
           - template: "@atoms/textarea/textarea.html.twig"
             text: "<p>The book is a vortex of convergent and oppositional energies, an environment created for a remarkable reading experience. When folded it is roughly four by seven inches, and just over an inch thick. It can be read by unfolding the accordion-fold “pages” one segment at a time. Alternatively, one can unfold it to full length, more than six feet, on a long table. That way the entire design and text can be apprehended – not, as Apollinaire said, at a glance, but by following the poetic narrative as it weaves through splashes of color.</p>"
-            dropcap: true
+            dropcap: false
           - template: "@atoms/cta__button/cta__button.html.twig"
             text: Read an English translation of the Poem
             href: "http://poeticsresearch.com/article/cendrars-la-prose-du-transsiberien-trans-d-wellman/"
