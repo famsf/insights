@@ -626,6 +626,7 @@ chapters:
           - template: "@atoms/h3/h3.html.twig"
             text: Light and Color
           - template: "@atoms/textarea/textarea.html.twig"
+            classes: margin-bottom-1
             text: "Mary Ann Caws explains a source of Robert and Sonia Delaunay’s experimentation with chromatic simultaneity."
           - template: "@molecules/inline-quote/inline-quote.html.twig"
             component_name: inline-quote
@@ -656,6 +657,7 @@ chapters:
           - template: "@atoms/h3/h3.html.twig"
             text: "Painting Sunlight"
           - template: "@atoms/textarea/textarea.html.twig"
+            classes: margin-bottom-1
             text: "Blaise Cendrars describes the kind of experimentation Robert and Sonia Delaunay were undertaking at the beginnings of modernist abstraction in painting."
           - template: "@molecules/inline-quote/inline-quote.html.twig"
             component_name: inline-quote
@@ -688,7 +690,7 @@ chapters:
       author_image: ''
       components:
       - template: "@atoms/textarea/textarea.html.twig"
-        text: "<p>La prose du Transsibérien is a text full of contradictions. The title, for starters, is odd: it should be “le prose” and, even then, why call a lineated lyric “prose”? Cendrars declared that he used the word “prose” so as to open up the discourse; then, too, the poem is “dedicated to the musicians”—evidently those new musicians of the period, such as Eric Satie or Igor Stravinsky, who were avoiding all conventional rhythms. The long free-verse lines, with their paratactic structure and repetition, remind one of Walt Whitman, but the voice of this poem is hardly Whitman’s oracular one. Rather, Cendrars stresses immediacy, nervous energy, and excitement:</p>"
+        text: "<p><em>La prose du Transsibérien</em> is a text full of contradictions. The title, for starters, is odd: it should be “le prose” and, even then, why call a lineated lyric “prose”? Cendrars declared that he used the word “prose” so as to open up the discourse; then, too, the poem is “dedicated to the musicians”—evidently those new musicians of the period, such as Eric Satie or Igor Stravinsky, who were avoiding all conventional rhythms. The long free-verse lines, with their paratactic structure and repetition, remind one of Walt Whitman, but the voice of this poem is hardly Whitman’s oracular one. Rather, Cendrars stresses immediacy, nervous energy, and excitement:</p>"
         dropcap: false
       - template: "@atoms/cta__button/cta__button.html.twig"
         text: Read more from this essay by Marjorie Perloff
@@ -716,12 +718,13 @@ chapters:
       left:
         components:
           - template: "@atoms/cliff-note/cliff-note.html.twig"
-            text: In creating an authentic facsimile edition, artist and educator Kitty Maryatt has conducted exhaustive research into the production processes used for <em>La prose</em> in 1913.
+            text: In creating an authentic facsimile edition, artist and educator Kitty Maryatt has conducted exhaustive research into the production processes of 1913.
       right:
         components:
           - template: "@atoms/h3/h3.html.twig"
             text: "Typography"
           - template: "@atoms/textarea/textarea.html.twig"
+            classes: margin-bottom-2
             text: "<p>Maryatt has identified 30 separate typefaces used in the typographic composition for the poem. The book was printed at Imprimérie Crété, the largest printing facility in France. Cendrars provided detailed instructions for the compositors, most likely by consulting Crété’s type specimen catalogue. </p>"
             dropcap: false
           - template: "@molecules/Picture/PictureWithCaption.html.twig"
@@ -741,6 +744,7 @@ chapters:
               alt: Photo of type compositors at Crété
               style: horizontal
           - template: "@atoms/h3/h3.html.twig"
+            classes: margin-top-3
             text: "Art"
           - template: "@atoms/textarea/textarea.html.twig"
             text: "<p>Sonia Delaunay painted the image for <em>La prose</em> on mattress ticking first. The image was reproduced for the edition by <em>pochoir</em>, a stencil process, with color applied by hand using prescribed brush strokes, exacting manipulation of stencils, precise registration, and consistent color matching. It is likely that the pochoir was performed at Crété.</p>"
@@ -783,6 +787,7 @@ chapters:
           - template: "@atoms/h3/h3.html.twig"
             text: "Structure"
           - template: "@atoms/textarea/textarea.html.twig"
+            classes: margin-bottom-3
             text: "<p>The book appropriated the form of a folded map, and a map of the route of the Trans-Siberian Railroad was included at the top corner of the layout, with the poem unfolding to more than six feet vertically. It was designed to first unfold with only the blank back side showing so that it could then be dramatically opened to expose the contents all at once, in keeping with the precepts of <em>simultaneité</em>. It was enclosed in a hand-painted vellum cover, which is said to have been made for only 30 copies.</p>"
             dropcap: false
           - template: "@atoms/h3/h3.html.twig"
@@ -819,17 +824,19 @@ chapters:
           - template: "@atoms/h3/h3.html.twig"
             text: "The 1950s: Cendrars and Kerouac"
           - template: "@atoms/textarea/textarea.html.twig"
+            classes: margin-bottom-3
             text: "<p>In some respects, the poem resembles Jack Kerouac’s <em>On the Road</em>. In composition, they share a common conceit: the illusion that they were composed, or narrated, in a single sitting, the intimate testimonial quality of a tale of alienation and transgression, drawing the listener or reader in. Both are road-trip stories, with socially marginalized traveling companions, that move across vast landscapes. Both are simultaneously life-changing inward journeys. And anyone who’s seen the Kerouac manuscript, the scroll, will immediately recognize the physical resemblance. With visual art, though, the two reading experiences diverge, and it is the hybrid nature of what we are looking at that distinguishes <em>La prose</em> as a unique and transcendent experience for the reader and viewer.</p>"
             dropcap: false
           - template: "@atoms/h3/h3.html.twig"
             text: "The 1960s: Light, Color, Motion"
           - template: "@atoms/textarea/textarea.html.twig"
+            classes: margin-bottom-2
             text: "<p>The interplay of colors and the synesthetic illusion of movement in Delaunay’s pochoir has an uncanny parallel in the psychedelic light shows of the 1960’s, where bright, pulsating, liquid forms merged with an experience of rhythmic sound, as the rhythms of Cendrars’s lines – dedicated, as he says, “to the musicians” – seem to emerge from the artist’s abstract color-forms.</p>"
             dropcap: false
           - template: "@molecules/Picture/PictureWithCaption.html.twig"
             caption:
               id: c5p1-caption-1
-              brief: Bill Ham, Kinetic Light Painting, 2016-2017
+              brief: Bill Ham, <em>Kinetic Light Painting</em>, 2016-2017
               text: Courtesy of Bill Ham
             picture:
               srcset:
@@ -843,9 +850,10 @@ chapters:
               alt: Bill Ham kinetic light painting
               style: horizontal
           - template: "@atoms/h3/h3.html.twig"
+            classes: margin-top-3
             text: "Book Art Now"
           - template: "@atoms/textarea/textarea.html.twig"
-            text: "<p>The steady growth of the field of book art in recent decades finds an iconic predecessor in <em>La prose</em>. Its unique appropriation of structure, and its hybrid nature, have made it an influence on succeeding generations of artists and writers who take the book beyond the limits of conventional form. For his spectacular book <em>Nature Abhors</em>, Philip Zimmermann used a structure devised by influential book artist Hedi Kyle.</p>"
+            text: "<p>The steady growth of the field of book art in recent decades finds an iconic predecessor in <em>La prose</em>. Its unique appropriation of structure, and its hybrid nature, have made it an influence on succeeding generations of artists and writers who take the book beyond the limits of conventional form. For his spectacular book <em>Nature Abhors</em>, Philip Zimmermann used a structure devised by influential book artist Hedi Kyle &mdash; seen here in an animation by Radek Skrivanek.</p>"
             dropcap: false
 
   # c5p2
