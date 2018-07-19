@@ -209,7 +209,7 @@ chapters:
           - caption:
               id: ch1p5-slide-2-caption
               brief: <p>Book art has a long history. In the <em>Book of Kells</em>, the letterform is an expression of transcendance. Even beyond its overt religious significance, the book is truly, in the words of Stéphane Mallarmé, an “<em>instrument spirituel.</em>”</p><small>The <em>Book of Kells</em> (Ireland or Scotland, circa AD 800)</small>
-              text: '“Chi-Rho" page from <em>Book of Kells</em>. © Trinity College Dublin
+              text: '“Chi-Rho” page from <em>Book of Kells</em>. © Trinity College Dublin
 '
             components:
             - template: "@molecules/Picture/Picture.html.twig"
