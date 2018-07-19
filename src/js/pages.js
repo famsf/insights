@@ -156,10 +156,10 @@
 
   pages.calculateThreshholds = function () {
     var wh = win.innerHeight;
-    fds.snapDownthreshhold = wh * 0.47;
-    fds.topBarDownthreshhold = wh * 0.47;
-    fds.snapUpthreshhold = wh * 0.67;
-    fds.topBarUpthreshhold = wh * 0.67;
+    fds.snapDownthreshhold = wh * 0.32;
+    fds.topBarDownthreshhold = wh * 0.32;
+    fds.snapUpthreshhold = wh * 0.68;
+    fds.topBarUpthreshhold = wh * 0.68;
   };
 
   pages.onScroll = function (scrollY, wh, didResize) {
@@ -318,6 +318,7 @@
   pages.triggerVideo = function (page) {
     var plyr;
     var pageEl = page.el;
+    var poster;
     if (page.ambientVideoEl) {
       if (!page.embeddedVideo) {
         plyr = new Plyr(page.ambientVideoEl, {
@@ -337,6 +338,10 @@
           controls: ['play', 'progress', 'current-time', 'mute', 'captions', 'settings', 'pip', 'fullscreen']
         });
         plyr.on('ready', function (e) {
+          poster = page.embeddedVideoEl.dataset.poster;
+          if (poster) {
+            plyr.poster = poster;
+          }
           page.embeddedVideo = plyr;
           plyr.play();
           plyr.pause();
