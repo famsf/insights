@@ -187,7 +187,7 @@
         pages.unpinPage(currentPage);
       }
     }
-    else if (!fds.scrollLock && !fds.inTouching) {
+    else if (!fds.scrollLock && !fds.isTouching) {
       count = currentPage.pageArr.length;
       while (i < count) {
         page = currentPage.pageArr[i];
