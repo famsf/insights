@@ -45,12 +45,9 @@
         fds.infoBox.innerHTML = Math.round(currentFps) + 'fps<br>At roughtly' + Math.round(msPerFrame) + 'ms/frame<br>currentPage: ' + fds.pages.getCurrentPage().id;
       }
       fds.then = newtime - (elapsed % fds.FpsInterval);
+      /* This feels a little hacky, we should make the footer a chapter */
       if (fds.scroll.y > fds.rootElement.clientHeight) {
-        fds.rootElement.classList.add('hidevideocontrols');
         fds.chapterNav.hideNav();
-      }
-      else {
-        fds.rootElement.classList.remove('hidevideocontrols');
       }
     }
     fds.scroll.last.y = fds.scroll.y;

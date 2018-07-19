@@ -136,20 +136,22 @@
 
   pages.setCurrentPage = function (page) {
     var pageEl;
-    pageEl = page.el;
-    pages.oldCurrentPage = pages.currentPage;
-    if (pages.oldCurrentPage && pages.oldCurrentPage.el) {
-      pages.oldCurrentPage.isCurrent = false;
-      pages.untriggerPage(pages.oldCurrentPage);
+    if (page) {
+      pageEl = page.el;
+      pages.oldCurrentPage = pages.currentPage;
+      if (pages.oldCurrentPage && pages.oldCurrentPage.el) {
+        pages.oldCurrentPage.isCurrent = false;
+        pages.untriggerPage(pages.oldCurrentPage);
+      }
+      pages.currentPage = page;
+      page.isCurrent = true;
+      fds.chapterNav.setActiveItem(page.chapter);
+      fds.mobileNav.setActiveItem(page.chapter);
+      window.location.hash = '&chapter=' + page.chapterId + '&page=' + pageEl.id;
+      pages.hashes.page = pageEl.id;
+      pages.hashes.chapter = page.chapterId;
+      pages.triggerPage(page);
     }
-    pages.currentPage = page;
-    page.isCurrent = true;
-    fds.chapterNav.setActiveItem(page.chapter);
-    fds.mobileNav.setActiveItem(page.chapter);
-    window.location.hash = '&chapter=' + page.chapterId + '&page=' + pageEl.id;
-    pages.hashes.page = pageEl.id;
-    pages.hashes.chapter = page.chapterId;
-    pages.triggerPage(page);
   };
 
   pages.calculateThreshholds = function () {
