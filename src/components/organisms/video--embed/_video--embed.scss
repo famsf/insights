@@ -8,6 +8,12 @@ Markup: video--embed.html.twig
 
 */
 
+.hidevideocontrols {
+  .plyr__control {
+    visibility: hidden !important;
+  }
+}
+
 .plyr__control {
   path {
     fill: $white;
