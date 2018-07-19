@@ -33,7 +33,7 @@
   background-position: center center;
   background-size: 100% 100%;
   font-family: sans-serif;
-  transition-property: opacity, left;
+  transition-property: opacity;
   transition-duration: 0.625s;
   transition-timing-function: ease-in-out;
   @media (min-width: map-get($breakpoints, medium)) {
@@ -41,7 +41,6 @@
   }
   &.hidden {
     opacity: 0;
-    left: -15rem;
   }
   ul {
     list-style: none;
