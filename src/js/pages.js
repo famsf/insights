@@ -6,7 +6,7 @@
   fds.pages.byId = {};
   fds.pages.oldScrollY = null;
   fds.pages.pinnedOffset = 0;
-  fds.pages.snapThreshhold = 22;
+  fds.pages.snapThreshhold = 24;
   fds.pages.snapScrollDuration = 450;
 
   pages.initialize = function (containerSelector, pageSelector, clearElementSelector) {
@@ -173,7 +173,7 @@
     var inView = false;
     var count;
     var scrollDiff = scrollY - pages.oldScrollY || 0;
-    var scrollDir = (scrollDiff > 0) ? 'down' : 'up';
+    var scrollDir = (scrollDiff >= 0) ? 'down' : 'up';
     pages.oldScrollY = scrollY;
     if (didResize) {
       // Only recalc if the window dimensions have changed.
