@@ -849,7 +849,7 @@ chapters:
             dropcap: false
 
   # c5p2
-  - classes: theme--dark
+  - classes: hide-chapter-nav theme--dark
     components:
     - template: "@organisms/video--embed/video--embed.html.twig"
       id: tOg9IEvt154
