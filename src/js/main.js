@@ -1,18 +1,14 @@
 (function (fds, win, doc, $) {
-
   fds.frameCount = 0;
   /* This is not just for counting fps, fpsInterval is important to the renderloop */
   fds.calcFps = false;
   fds.targetFps = 55;
   fds.FpsInterval = 1000 / fds.targetFps;
-
   // Initialize Foundation.
   $(doc).foundation();
-
   fds.getHeight = function () {
     return doc.getElementById('insights-app').clientHeight;
   };
-
   fds.renderLoop = function (newtime) {
     var elapsed;
     var didResize;
@@ -95,10 +91,6 @@
   };
 
   $(document).ready(function () {
-
-    fds.rootElement = doc.querySelector('.insights-app');
-    fds.initialize();
-
     // Variable declarations.
     var horizontalImageSlider;
     var horizontalImageSliderOptions = {
@@ -188,5 +180,7 @@
       $(this).siblings('.owl-carousel').find('.owl-dots .owl-dot:first-of-type').trigger('click');
     });
 
+    fds.rootElement = doc.querySelector('.insights-app');
+    fds.initialize();
   });
 }(window.fds = window.fds || {}, window, document, jQuery));
