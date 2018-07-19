@@ -11,8 +11,9 @@
   "main": "build/index.html",
   "scripts": {
     "install": "napa TimPietrusky/background-clip-text-polyfill",
-    "test": "[ \"${CONTEXT}\" = production ] && run-s play || run-s play lint:js",
+    "test": "[ \"${CONTEXT}\" = production ] && run-s play redirect || run-s play lint:js",
     "play": "kalastatic build",
+    "redirect": "cp _redirects build/",
     "start": "run-s lint:js && kalastatic start",
     "start-no-lint": "kalastatic start",
     "lint:js": "node ./node_modules/eslint/bin/eslint.js --quiet .",
