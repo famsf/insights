@@ -36,17 +36,17 @@ pluginOpts:
           - src/components
       twig:
         namespaces:
-          kstat: src
-          atoms: src/components/atoms
-          molecules: src/components/molecules
-          organisms: src/components/organisms
-          ecosystems: src/components/ecosystems
-          environments: src/components/environments
-          layouts: src/components/layouts
-          images: src/images
-          assets: src/assets
-          templates: src/templates
-          macros: src/macros
+          kstat: .
+          atoms: components/atoms
+          molecules: components/molecules
+          organisms: components/organisms
+          ecosystems: components/ecosystems
+          environments: components/environments
+          layouts: components/layouts
+          images: images
+          assets: assets
+          templates: templates
+          macros: macros
         filters:
           clean_id: twig-drupal-filters/filters/clean_id
           bustcache: kalastatic-twig-filters/lib/filters/bustcache
