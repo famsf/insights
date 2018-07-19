@@ -278,12 +278,6 @@
     pages.pinned = page;
     page.isPinned = true;
     pageEl.classList.add('pinnedTop');
-    if(page.pageArr[2]) {
-      page.pageArr[2].el.style.marginTop = pages.pinnedOffset;
-    }
-    else {
-      pages.chapter.style.paddingBottom = pages.pinnedOffset;
-    }
   };
 
   pages.unpinPage = function (page) {
@@ -292,12 +286,6 @@
       page.isPinned = false;
       pages.pinned = false;
       pages.pinnedOffset = 0;
-      if(page.pageArr[2]) {
-        page.pageArr[2].el.style.marginTop = 0;
-      }
-      else {
-        pages.chapter.style.paddingBottom = 0;
-      }
       page.el.classList.remove('pinnedTop');
       if (page.snapPoint !== 0) {
         win.scrollTo({
