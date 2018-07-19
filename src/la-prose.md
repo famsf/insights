@@ -167,9 +167,6 @@ chapters:
             with many artists, including Fernand Léger, Marc Chagall, and Amedeo
             Modigliani.</p>"
           dropcap: false
-
-  # c1p4
-  - components:
     - template: "@organisms/in-depth/in-depth.html.twig"
       classes: theme--dark
       title: What is an Artist’s Book?
@@ -457,9 +454,6 @@ chapters:
         - template: "@atoms/textarea/textarea.html.twig"
           text: 'Rarely had there been a time when artists felt so emboldened to disregard rules and traditions. The disruptive clash between more orthodox expression and that of the avant-garde was the defining spirit of the time (the battlefields of modernism in their own way foreshadowed the battlefields of 1914, when many artists and poets – including Leger, Cendrars, and Apollinaire – eagerly enlisted for combat). Perhaps no event was more characteristic of the time than the explosive premiere of Sergei Diaghilev and Igor Stravinsky’s ballet, <em>The Rite of Spring</em>, vividly described by Mary Ann Caws and Blaise Cendrars in the texts that follow.'
           dropcap: false
-
-  # c2p5
-  - components:
     - template: "@molecules/commentary/commentary.html.twig"
       component_name: commentary
       author_name: Mary Ann Caws
@@ -470,9 +464,6 @@ chapters:
       - template: "@atoms/textarea/textarea.html.twig"
         text: "<p>The cacophonous <em>Rite of Spring</em> was the centerpiece of a simultaneity of sound, color, and movement. Nijinsky danced its May 29 premiere for Sergei Diaghilev’s Ballets Russes in Paris’s Théâtre des Champs-Élysées, and the spectacle provoked a celebrated pandemonium. Igor Stravinsky’s discordant music touched off outrage from the more conservative audience members, with others equally vehement in its defense. This riot against modernism, to put it bluntly, conferred on the piece more glory than anything positive could possibly have done—riots led to revelry in the long run.</p>"
         dropcap: false
-
-  # c2p6
-  - components:
     - template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
       left:
         components:
@@ -497,8 +488,8 @@ chapters:
             name: Blaise Cendrars, radio interview
             date: '1950'
             text: "A woman nearby, covered by diamonds, but the music of Stravinsky drove her crazy, tore out a brand new folding seat and smashed me over the head with it, so I had to spend the rest of the night drinking champagne in Montmartre with Stravinsky [and] Diaghilev . . . still wearing the folding chair like a horse collar..."
-
-  # c2p7
+ 
+  # c2p5
   - classes: hide-chapter-nav invert-top-bar
     components:
     - template: "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig"
@@ -510,7 +501,7 @@ chapters:
         - template: "@atoms/textarea/textarea.html.twig"
           text: Here are a few other landmarks of the tumultuous year of 1913.
       - caption:
-          id: c2p7-slide-2-caption
+          id: c2p5-slide-2-caption
           brief: 'Marcel Duchamp creates his first "ready-made," <em>Bicycle Wheel</em>'
           text: "Marcel Duchamp, <em>Bicycle Wheel</em>, third version, 1951. Museum of Modern Art, MOMA, New York, USA. © Album / Alamy Stock Photo"
         components:
@@ -526,7 +517,7 @@ chapters:
           alt: third version of Bicycle Wheel by Marcel Duchamp
           style: vertical
       - caption:
-          id: c2p7-slide-3-caption
+          id: c2p5-slide-3-caption
           brief: "Marcel Proust publishes <em>Swann’s Way</em> (manuscript notes shown here)"
           text: "Some of Marcel Proust’s notes for <em>Swann’s Way</em>, with doodles. © Bibliotheque nationale de France (BnF), Paris, France, Dist. RMN-Grand Palais/Art Resource, NY"
         components:
@@ -542,7 +533,7 @@ chapters:
           alt: pages of Marcel Proust’s notes for <em>Swann’s Way</em> with drawings
           style: vertical
       - caption:
-          id: c2p7-slide-4-caption
+          id: c2p5-slide-4-caption
           brief: "Maurice Ravel composes <em>Trois poèmes de Stéphane Mallarmé</em>"
           text: "Maurice Ravel. Bibliothèque nationale de France"
         components:
@@ -558,7 +549,7 @@ chapters:
           alt: photo of maurice ravel
           style: vertical
       - caption:
-          id: c2p7-slide-5-caption
+          id: c2p5-slide-5-caption
           brief: "Guillaume Apollinaire publishes <em>Alcools</em>, with a portrait by Picasso and etchings by Louis Marcoussis"
           text: "Guillaume Apollinaire: <em>Alcools</em>, with a portrait by Picasso and etchings by Louis Marcoussis (Paris: Mercure de France, 1913), 1913"
         components:
@@ -599,8 +590,7 @@ chapters:
         name: Blaise Cendrars
         text: A sad poem printed on sunlight.
         large_text: true
-
-  # c3p2
+  #c3p2
   - components:
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
       right:
@@ -630,9 +620,6 @@ chapters:
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/22_la-prose-detail-the-book.jpg
             alt: Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars
             style: horizontal
-
-  # c3p3
-  - components:
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
       right:
         components:
@@ -663,9 +650,6 @@ chapters:
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/23_chevreul-color-chart.jpg
             alt: Chevreul color wheel
             style: horizontal
-
-  # c3p4
-  - components:
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
       right:
         components:
@@ -696,9 +680,6 @@ chapters:
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/24_windows-open.jpg
             alt: Windows Open Simultaneously 1st Part, 3rd Motif by Robert Delaunay
             style: horizontal
-
-  # c3p5
-  - components:
     - template: "@molecules/commentary/commentary.html.twig"
       component_name: commentary
       author_name: Marjorie Perloff
