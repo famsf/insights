@@ -46,7 +46,7 @@ chapters:
     - template: "@organisms/video--embed/video--embed.html.twig"
       id: xt27-zrvHkk
       # see https://stackoverflow.com/questions/2068344/how-do-i-get-a-youtube-video-thumbnail-from-the-youtube-api
-      poster: https://img.youtube.com/vi/xt27-zrvHkk/0.jpg
+      poster: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/intro-book-unfolding_thumbnail.jpg
       youtube:
         embed: xt27-zrvHkk
 
@@ -699,7 +699,7 @@ chapters:
 ## CHAPTER 4 ###################################################################
 ################################################################################
 
-- title: The Making of La prose
+- title: The Making of the Book
   numeral: IV
   pages:
 
@@ -940,6 +940,7 @@ chapters:
     components:
     - template: "@organisms/video--embed/video--embed.html.twig"
       id: yTDiYSA_nQE
+      poster: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/chapter-6-book-flipping_thumbnail.jpg
       youtube:
         embed: yTDiYSA_nQE
 
