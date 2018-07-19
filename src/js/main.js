@@ -32,7 +32,7 @@
 
   /* This is not just for counting fps, fpsInterval is important to the renderloop */
   fds.calcFps = true;
-  fds.targetFps = 48;
+  fds.targetFps = 60;
   fds.FpsInterval = 1000 / fds.targetFps;
 
   // Initialize Foundation.
@@ -124,14 +124,10 @@
       fds.scroll.y = win.pageYOffset;
       scrollDiff = fds.scroll.y - fds.scroll.last.y;
       if (scrollDiff !== 0 && fds.rootElement.classList.contains('initialized')) {
-        scrollDir = (scrollDiff > 0) ? 'down' : 'up';
-        fds.pages.onScroll(fds.scroll.y, scrollDir, wh, didResize);
+        fds.pages.onScroll(fds.scroll.y, wh, didResize);
         fds.chapterNav.onScroll(fds.scroll.y);
       }
       if (fds.calcFps) {
-        fds.infoBox = document.createElement('div');
-        fds.infoBox.id = 'infoBox';
-        fds.rootElement.appendChild(fds.infoBox);
         sinceStart = newtime - fds.startTime;
         fds.frameCount++;
         secondsSinceStart = sinceStart * 0.001;
@@ -161,18 +157,15 @@
       y: sy
     };
     doc.body.addEventListener('touchstart', function () {
-      fds.rootElement.style = '1px #f00 solid';
       fds.isTouching = true;
     });
     doc.body.addEventListener('touchend', function () {
-      fds.rootElement.style = '1px #0af solid';
       fds.isTouching = false;
     });
     fds.scrollLock = true;
     doc.body.classList.add('scroll_lock');
     doc.body.classList.add('loading');
     fds.coverPage.initialize();
-    fds.fpsEl = doc.getElementById('fpsEl');
     fds.mobileNav.initialize('mobile_nav');
     fds.chapterNav.initialize('chapter_nav', '.chapter', '.top-bar');
     fds.chapterNav.showNav();
@@ -182,6 +175,11 @@
     fds.chapterNav.onScroll(sy);
     fds.then = win.performance.now();
     fds.startTime = fds.then;
+    if (fds.calcFps) {
+      fds.infoBox = document.createElement('div');
+      fds.infoBox.id = 'infoBox';
+      fds.rootElement.appendChild(fds.infoBox);
+    }
     requestAnimationFrame(fds.renderLoop);
   };
 

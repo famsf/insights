@@ -9,6 +9,12 @@
     return -c/2 * (t*(t-2) - 1) + b;
   };
 
+  fds.easeOutCubic = function (t, b, c, d) {
+    t /= d;
+    t--;
+    return c*(t*t*t + 1) + b;
+  };
+
   var requestAnimFrame = (function() {
     return  window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function( callback ) { window.setTimeout(callback, 1000 / 60); };
   })();
@@ -22,8 +28,7 @@
     var animateScroll = function() {
       // increment the time
       currentTime += increment;
-      // find the value with the quadratic in-out easing function
-      var val = fds.inOutQuad(currentTime, start, change, duration);
+      var val = fds.easeOutCubic(currentTime, start, change, duration);
       // scroll
       document.scrollingElement.scrollTop = val;
       // do the animation unless its over

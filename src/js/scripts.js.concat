@@ -1,5 +1,6 @@
 ---
 files:
+- js/poly/previousElementSibling.js
 - js/poly/nextElementSibling.js
 - js/poly/performantScrollTo.js
 - components/atoms/video--embed/video--embed.js
