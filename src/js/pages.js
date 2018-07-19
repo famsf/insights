@@ -182,7 +182,7 @@
       }
       pages.calculateThreshholds();
     }
-    if ((currentPage.isPinned === true && !fds.scrollLock) || fds.isTouching) {
+    if (currentPage.isPinned === true && (!fds.scrollLock || fds.isTouching)) {
       if (Math.abs(scrollDiff) > pages.snapThreshhold) {
         pages.unpinPage(currentPage);
       }
@@ -279,16 +279,18 @@
   };
 
   pages.unpinPage = function (page) {
-    pages.lastPinned = page;
-    page.isPinned = false;
-    pages.pinned = false;
-    pages.pinnedOffset = 0;
-    page.el.classList.remove('pinnedTop');
-    if (page.snapPoint !== 0) {
-      win.scrollTo({
-        top: page.chapter.offsetTop + page.el.offsetTop,
-        behavior: 'instant'
-      });
+    if (page.isPinned) {
+      pages.lastPinned = page;
+      page.isPinned = false;
+      pages.pinned = false;
+      pages.pinnedOffset = 0;
+      page.el.classList.remove('pinnedTop');
+      if (page.snapPoint !== 0) {
+        win.scrollTo({
+          top: page.chapter.offsetTop + page.el.offsetTop,
+          behavior: 'instant'
+        });
+      }
     }
   };
 

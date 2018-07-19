@@ -1,6 +1,8 @@
 (function (fds, win, doc, $) {
   fds.frameCount = 0;
-  /* This is not just for counting fps, fpsInterval is important to the renderloop */
+  /*
+  This is not just for counting fps, fpsInterval is important to the renderloop
+  */
   fds.calcFps = false;
   fds.targetFps = 55;
   fds.FpsInterval = 1000 / fds.targetFps;
@@ -68,6 +70,7 @@
     });
     doc.body.addEventListener('touchend', function () {
       fds.isTouching = false;
+      fds.pages.onScroll(window.pageYOffset, window.innerHeight, false);
     });
     fds.scrollLock = true;
     doc.body.classList.add('scroll_lock');
