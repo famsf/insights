@@ -167,22 +167,23 @@
     var pageEl;
     var pageRect;
     var pageTop;
-    var pageMarginTop = 0;
     var pageBottom;
     var pagePastSnapThreshhold = false;
     var shouldTrigger = false;
     var inView = false;
     var count;
-    // Loop through pages, we can eventually filter out doing stuff to pages that are offscreen.
+    var scrollDiff = scrollY - pages.oldScrollY || 0;
+    var scrollDir = (scrollY - pages.oldScrollY > 0) ? 'down' : 'up';
+    pages.oldScrollY = scrollY;
     if (didResize) {
       // Only recalc if the window dimensions have changed.
+      if (currentPage) {
+        pages.pinnedOffset = currentPage.clientHeight;
+      }
       pages.calculateThreshholds();
     }
     if ((currentPage.isPinned === true && !fds.scrollLock) || fds.isTouching) {
-      scrollDiff = Math.abs(scrollY - pages.oldScrollY || 0);
-      scrollDir = (scrollDiff > 0) ? 'down' : 'up';
-      pages.oldScrollY = scrollY;
-      if (scrollDiff > pages.snapThreshhold) {
+      if (Math.abs(scrollDiff) > pages.snapThreshhold) {
         pages.unpinPage(currentPage);
       }
     }
@@ -190,7 +191,7 @@
       count = currentPage.pageArr.length;
       while (i < count) {
         page = currentPage.pageArr[i];
-        i ++;
+        i++;
         if (page === 'self') page = currentPage;
         if (page) {
           pageEl = page.el;
@@ -220,7 +221,7 @@
   /* We wouldnt need this sillyness if footer was a chapter */
   pages.scrollToFooter = function (footerOffset) {
     if (!fds.scrollLock) {
-      pages.unpinPage(pages.getCurrentPage());
+      pages.unpinPage(pages.currentPage);
       pages.setCurrentPage(null);
       fds.scrollLock = true;
       fds.performantScrollTo(footerOffset, function () {
@@ -231,36 +232,33 @@
     }
   };
 
-  pages.snapScroll = function (page, options) {
+  pages.snapScroll = function (page, scrollOptions) {
     var scrollTo;
-    var scrollDir;
     var wh = win.innerHeight;
     var pageEl = page.el;
     var chapter = page.chapter;
     var snapScrollDuration = fds.pages.snapScrollDuration;
-    if (!options.force && (fds.scrollLock || page === pages.getCurrentPage() || !page)) {
+    if (!scrollOptions.force && (fds.scrollLock || page === pages.getCurrentPage() || !page)) {
       return;
     }
-    pages.setCurrentPage(page);
-    if (options.unpin) {
+    if (scrollOptions.unpin) {
       pages.unpinPage(pages.currentPage);
     }
+    pages.setCurrentPage(page);
     document.body.classList.add('scroll_lock');
-    if (options.scrollDir === 'down') {
-      scrollDir = 'down';
+    if (scrollOptions.scrollDir === 'down') {
       scrollTo = chapter.offsetTop + pageEl.offsetTop;
     }
     else {
-      scrollDir = 'up';
       scrollTo = (page.chapter.offsetTop + pageEl.offsetTop + pageEl.clientHeight) - wh;
     }
     fds.scrollLock = true;
-    if (options.instant) {
+    if (scrollOptions.instant) {
       snapScrollDuration = 0;
     }
     fds.performantScrollTo(scrollTo, function () {
       pages.snapPoint = scrollTo;
-      pages.pinPage(page, scrollDir);
+      pages.pinPage(page, scrollOptions.scrollDir);
       pages.oldScrollY = win.pageYOffset;
       setTimeout(function () {
         fds.scrollLock = false;
@@ -290,9 +288,10 @@
     page.isPinned = false;
     pages.pinned = false;
     pages.pinnedOffset = 0;
-    if (page.el.classList.contains('.pinnedBottom')) {
+    if (page.el.classList.contains('pinnedBottom')) {
       page.el.classList.remove('pinnedBottom');
-    } else {
+    }
+    else {
       page.el.classList.remove('pinnedTop');
     }
     if (page.snapPoint !== 0) {
