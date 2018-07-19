@@ -545,7 +545,7 @@ chapters:
           brief: "Maurice Ravel composes <em>Trois poèmes de Stéphane Mallarmé</em>"
           text: "Maurice Ravel. Bibliothèque nationale de France"
         components:
-          template: "@molecules/Picture/Picture.html.twig"
+        - template: "@molecules/Picture/Picture.html.twig"
           srcset:
           - min-width: 0px
             src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/19_maurice-ravel.jpg

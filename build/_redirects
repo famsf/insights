@@ -1,0 +1,5 @@
+# Redirect domain aliases to primary domain
+https://lhstories.org/* https://insights.famsf.org/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://famsf-insights.netlify.com/* https://insights.famsf.org/:splat 301!
