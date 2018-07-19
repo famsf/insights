@@ -6,7 +6,7 @@
   fds.pages.byId = {};
   fds.pages.oldScrollY = null;
   fds.pages.pinnedOffset = 0;
-  fds.pages.snapThreshhold = 24;
+  fds.pages.snapThreshhold = 22;
   fds.pages.snapScrollDuration = 450;
 
   pages.initialize = function (containerSelector, pageSelector, clearElementSelector) {
@@ -173,7 +173,7 @@
     var inView = false;
     var count;
     var scrollDiff = scrollY - pages.oldScrollY || 0;
-    var scrollDir = (scrollY - pages.oldScrollY > 0) ? 'down' : 'up';
+    var scrollDir = (scrollDiff > 0) ? 'down' : 'up';
     pages.oldScrollY = scrollY;
     if (didResize) {
       // Only recalc if the window dimensions have changed.
@@ -250,7 +250,7 @@
       scrollTo = chapter.offsetTop + pageEl.offsetTop;
     }
     else {
-      scrollTo = (page.chapter.offsetTop + pageEl.offsetTop + pageEl.clientHeight) - wh;
+      scrollTo = page.chapter.offsetTop + pageEl.offsetTop;
     }
     fds.scrollLock = true;
     if (scrollOptions.instant) {
@@ -275,12 +275,7 @@
     pages.lastPinned = null;
     pages.pinned = page;
     page.isPinned = true;
-    if (scrollDir === 'down') {
-      pageEl.classList.add('pinnedTop');
-    }
-    else {
-      pageEl.classList.add('pinnedBottom');
-    }
+    pageEl.classList.add('pinnedTop');
   };
 
   pages.unpinPage = function (page) {
@@ -288,12 +283,7 @@
     page.isPinned = false;
     pages.pinned = false;
     pages.pinnedOffset = 0;
-    if (page.el.classList.contains('pinnedBottom')) {
-      page.el.classList.remove('pinnedBottom');
-    }
-    else {
-      page.el.classList.remove('pinnedTop');
-    }
+    page.el.classList.remove('pinnedTop');
     if (page.snapPoint !== 0) {
       win.scrollTo({
         top: page.chapter.offsetTop + page.el.offsetTop,
