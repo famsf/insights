@@ -46,7 +46,11 @@
       }
       fds.then = newtime - (elapsed % fds.FpsInterval);
       if (fds.scroll.y > fds.rootElement.clientHeight) {
+        fds.rootElement.classList.add('hidevideocontrols');
         fds.chapterNav.hideNav();
+      }
+      else {
+        fds.rootElement.classList.remove('hidevideocontrols');
       }
     }
     fds.scroll.last.y = fds.scroll.y;

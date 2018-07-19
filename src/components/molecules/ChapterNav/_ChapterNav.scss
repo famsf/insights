@@ -40,7 +40,14 @@
     display: block;
   }
   &.hidden {
+    visibility: hidden;
     opacity: 0;
+    transition: visibility 0s ease-out 0.525s, opacity ease-out 0.525s;
+  }
+  &.showy {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s ease-out 0s, opacity ease-out 0.525s;
   }
   ul {
     list-style: none;
@@ -114,7 +121,6 @@
         transition-duration: 0.5s;
         transition-timing-function: ease-out;
         position: absolute;
-        // display: none;
         opacity: 0;
         left: 2.5rem;
         top: -0.75rem;
