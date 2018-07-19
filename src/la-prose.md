@@ -172,7 +172,7 @@ chapters:
   - components:
     - template: "@organisms/in-depth/in-depth.html.twig"
       classes: theme--dark
-      title: What Is an Artist’s Book?
+      title: What is an Artist’s Book?
       picture:
         srcset:
         - min-width: 0px
@@ -211,8 +211,9 @@ chapters:
                 style: square
           - caption:
               id: ch1p5-slide-2-caption
-              brief: <p>Book art has a long history. In the <em>Book of Kells</em> (circa AD 800), the letterform is an expression of transcendance. Even beyond its overt religious significance, the book is truly, in the words of Stéphane Mallarmé, an “<em>instrument spirituel.</em>”</p><small>The <em>Book of Kells</em> (Ireland or Scotland, circa AD 800)</small>
-              text: 'William Blake, Plate 16: "Thou hast fulfilled the Judgment of the wicked" from the complete proof edition of Blake’s <em>Book of Job</em>, 1825. Engraving, 19.6 x 16.2 cm (image). FAMSF, museum purchase, William H. Noble Bequest Fund, 1979.1.11.17'
+              brief: <p>Book art has a long history. In the <em>Book of Kells</em>, the letterform is an expression of transcendance. Even beyond its overt religious significance, the book is truly, in the words of Stéphane Mallarmé, an “<em>instrument spirituel.</em>”</p><small>The <em>Book of Kells</em> (Ireland or Scotland, circa AD 800)</small>
+              text: '“Chi-Rho" page from <em>Book of Kells</em>. © Trinity College Dublin
+'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
               srcset:
@@ -227,8 +228,8 @@ chapters:
               style: vertical
           - caption:
               id: ch1p5-slide-3-caption
-              brief: <p>William Blake’s illustrations display a singular vision and deep interpenetration of text and image, a unified expression that has rarely been equaled. Many consider Blake the father of book art.</p><small>William Blake, illustration for <em>Book of Job</em (1823)</em></small>
-              text: 'William Blake, Plate 16: "Thou hast fulfilled the Judgment of the wicked" from the complete proof edition of Blake’s <em>Book of Job</em>, 1825. Engraving, 19.6 x 16.2 cm (image). FAMSF, museum purchase, William H. Noble Bequest Fund, 1979.1.11.17'
+              brief: <p>William Blake’s illustrations display a singular vision and deep interpenetration of text and image, a unified expression that has rarely been equaled. Many consider Blake the father of book art.</p><small>William Blake, illustration for <em>Book of Job</em> (1826)</small>
+              text: 'William Blake, Plate 16: "Thou hast fulfilled the Judgment of the wicked" from the complete proof edition of Blake’s <em>Book of Job</em>, 1826. Engraving, 19.6 x 16.2 cm (image). FAMSF, museum purchase, William H. Noble Bequest Fund, 1979.1.11.17'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
               srcset:
@@ -243,7 +244,7 @@ chapters:
               style: vertical
           - caption:
               id: ch1p5-slide-4-caption
-              brief: <p><em>Livres d’artistes</em>, deluxe editions illustrated by contemporary artists, came of age in the new century with <em>Parallelement</em>, published by Ambroise Vollard (1866–1939). Vollard’s younger contemporary Daniel-Henry Kahnweiler (1884–1979) published adventurous works by Pablo Picasso, Georges Braque, and others, with literary texts by as-yet obscure writers such as Guillaume Apollinaire, Max Jacob, André Malraux, and Gertrude Stein.</p><small>Pierre Bonnard/Paul Verlaine, Parallelement (1900)</small>
+              brief: <p><em>Livres d’artistes</em>, deluxe editions illustrated by contemporary artists, came of age in the new century with <em>Parallelement</em>, published by Ambroise Vollard (1866–1939). Vollard’s younger contemporary Daniel-Henry Kahnweiler (1884–1979) published adventurous works by Pablo Picasso, Georges Braque, and others, with literary texts by as-yet obscure writers such as Guillaume Apollinaire, Max Jacob, André Malraux, and Gertrude Stein.</p><small>Pierre Bonnard/Paul Verlaine, <em>Parallelement</em> (1900)</small>
               text: 'Pierre Bonnard (artist), Tony  Beltrand, Ambroise Vollard (publisher), Paul Verlaine (author), René Kieffer (binder), Imprimerie Nationale de France (printer), Auguste Clot (printer), Untitled, page 4 in the book <em>Parallèlement</em> by Paul Verlaine (Paris: Ambroise Vollard, 1900)., 1887–1900. Lithograph (pink sanguine) on Holland wove paper watermarked "Parallèlement", sheet: 295 x 240 mm (11 5/8 x 9 7/16 in.); image: 93 x 179 mm (3 11/16 x 7 1/16 in.). FAMSF, The Reva and David Logan Collection of Illustrated Books, 2000.200.45.6'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
@@ -259,7 +260,7 @@ chapters:
               style: vertical
           - caption:
               id: ch1p5-slide-5-caption
-              brief: '<p>Russian Futurists further developed the notion of the book as art with non-luxurious but conceptually advanced editions. The deluxe <em>livre d’artiste</em> and its lower-cost counterpart, the artist-published "democratic multiple," have persisted to the present day. So has the third way taken by <em>La prose</em>, where self-publishing artists combine high craft values with a visionary approach to the form of the book.</p><small>El Lissitsky/Vladimir Mayakovsky: <em>Dlia Golosa (For the Voice)</em>, 1923</small>'
+              brief: '<p>Russian Futurists further developed the notion of the book as art with non-luxurious but conceptually advanced editions. The deluxe <em>livre d’artiste</em> and its lower-cost counterpart, the artist-published "democratic multiple," have persisted to the present day. So has the third way taken by <em>La prose</em>, where self-publishing artists combine high craft values with a visionary approach to the form of the book.</p><small>El Lissitsky/Vladimir Mayakovsky: <em>Dlia Golosa (For the Voice)</em> (1923)</small>'
               text: 'El Lissitzky (artist), Gosizdat (publisher), fourth chapter, page 17 in the book <em>Dlia Golosa (For the Voice)</em> by Vladimir Vladimirovich Mayakovsky (Berlin: Gosizdat, 1923), 1923. Lithograph (color) on cream wove paper, sheet: 187 x 124 mm (7 3/8 x 4 7/8 in.); image: 134 x 112 mm (5 1/4 x 4 7/16 in.). FAMSF, Gift of the Reva and David Logan Foundation, 1998.40.79.8'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
@@ -286,7 +287,7 @@ chapters:
   - components:
     - template: "@molecules/chapter__title/chapter__title.html.twig"
       img:
-        url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/9_paris-aerial-view.jpg"
+        url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/9_paris-aerial-view-overlay.jpg"
         alt: 'Aerial view of Paris, France, from a balloon, showing the River Seine, the Eiffel Tower and buildings of the Exposition Universelle of 1889'
 
   # c2p1
@@ -609,7 +610,7 @@ chapters:
             dropcap: true
           - template: "@atoms/cta__button/cta__button.html.twig"
             text: Read an English translation of the Poem
-            href: "https://lyricstranslate.com/en/prose-du-transsib%C3%A9rien-et-de-la-petite-jehanne-de-france-trans-siberian-prose-and-little-jeann.html"
+            href: "http://poeticsresearch.com/article/cendrars-la-prose-du-transsiberien-trans-d-wellman/"
             target: _blank
       left:
         components:
@@ -761,7 +762,7 @@ chapters:
           - template: "@atoms/h3/h3.html.twig"
             text: "Art"
           - template: "@atoms/textarea/textarea.html.twig"
-            text: "<p>Sonia Delaunay painted the image for La prose on mattress ticking first. The image was reproduced for the edition by <em>pochoir</em>, a stencil process, with color applied by hand using prescribed brush strokes, exacting manipulation of stencils, precise registration, and consistent color matching. It is likely that the pochoir was performed at Crété.</p>"
+            text: "<p>Sonia Delaunay painted the image for <em>La prose</em> on mattress ticking first. The image was reproduced for the edition by <em>pochoir</em>, a stencil process, with color applied by hand using prescribed brush strokes, exacting manipulation of stencils, precise registration, and consistent color matching. It is likely that the pochoir was performed at Crété.</p>"
             dropcap: false
 
   # c4p2
@@ -806,7 +807,7 @@ chapters:
           - template: "@atoms/h3/h3.html.twig"
             text: "Edition"
           - template: "@atoms/textarea/textarea.html.twig"
-            text: "<p>There were to be 150 copies in total, but it is likely that only about half that many were produced. A prospectus announced eight deluxe copies printed on vellum, 28 on <em>japon</em> (imported Japanese) paper, and for the standard trade copies simulated <em>japon</em> (<em>similé japon</em>). Maryatt has identified the Logan copy at the Legion of Honor, with its crisp letterpress printing, as one of the rare copies on japon.</p>"
+            text: "<p>There were to be 150 copies in total, but it is likely that only about half that many were produced. A prospectus announced eight deluxe copies printed on vellum, 28 on <em>Japon</em> (imported Japanese) paper, and for the standard trade copies simulated <em>Japon</em> (<em>similé Japon</em>). Maryatt has identified the Logan copy at the Legion of Honor, with its crisp letterpress printing, as one of the rare copies on Japon.</p>"
             dropcap: false
 
 ################################################################################
