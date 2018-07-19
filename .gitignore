@@ -40,3 +40,6 @@ bower_components
 .lock-wscript
 
 .DS_Store
+
+# GatherContent assets
+src/assets/images/gathercontent
