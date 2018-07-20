@@ -6,7 +6,7 @@
   fds.pages.byId = {};
   fds.pages.oldScrollY = null;
   fds.pages.pinnedOffset = 0;
-  fds.pages.snapThreshhold = 24;
+  fds.pages.snapThreshhold = 20;
   fds.pages.snapScrollDuration = 450;
 
   pages.initialize = function (containerSelector, pageSelector, clearElementSelector) {
@@ -174,9 +174,17 @@
     var shouldTrigger = false;
     var inView = false;
     var count;
-    var scrollDiff = scrollY - pages.oldScrollY || 0;
-    var scrollDir = (scrollDiff >= 0) ? 'down' : 'up';
+    var scrollDir;
+    var scrollDiff = (scrollY - pages.oldScrollY).toPrecision(4) || 0;
+    scrollY = Math.round(scrollY);
     pages.oldScrollY = scrollY;
+    if (scrollDiff > 0) {
+      scrollDir = 'down';
+    }
+    else if (scrollDiff < 0) {
+      scrollDir = 'up';
+    }
+    if (!scrollDiff) return;
     if (didResize) {
       // Only recalc if the window dimensions have changed.
       if (currentPage) {
@@ -199,8 +207,8 @@
           pageEl = page.el;
           if (!page.isPinned) {
             pageRect = pageEl.getBoundingClientRect();
-            pageTop = pageRect.top + pages.pinnedOffset;
-            pageBottom = pageRect.bottom + pages.pinnedOffset;
+            pageTop = pageRect.top;
+            pageBottom = pageRect.bottom;
             page.inView = pageTop < wh && pageBottom > 0;
             if (scrollDir === 'down') {
               pagePastSnapThreshhold = pageTop < fds.snapDownthreshhold;
@@ -210,6 +218,7 @@
             }
             shouldTrigger = pagePastSnapThreshhold && page.inView;
             if (shouldTrigger && pages.lastPinned !== page) {
+              scrollDir = page.index > currentPage.index ? 'down' : 'up';
               pages.snapScroll(page, {
                 scrollDir: scrollDir
               });
@@ -252,7 +261,7 @@
       scrollTo = chapter.offsetTop + pageEl.offsetTop;
     }
     else {
-      scrollTo = page.chapter.offsetTop + pageEl.offsetTop;
+      scrollTo = chapter.offsetTop + pageEl.offsetTop + (pageEl.clientHeight - wh);
     }
     fds.scrollLock = true;
     if (scrollOptions.instant) {
@@ -277,22 +286,40 @@
     pages.lastPinned = null;
     pages.pinned = page;
     page.isPinned = true;
-    pageEl.classList.add('pinnedTop');
+    if (scrollDir === 'down') {
+      pageEl.classList.add('pinnedTop');
+    }
+    else {
+      pageEl.classList.add('pinnedBottom');
+    }
   };
 
   pages.unpinPage = function (page) {
+    var pinning;
+    var scrollTo;
+    var pageEl;
+    var pageTop;
     if (page.isPinned) {
+      pageEl = page.el;
       pages.lastPinned = page;
       page.isPinned = false;
-      pages.pinned = false;
       pages.pinnedOffset = 0;
-      page.el.classList.remove('pinnedTop');
-      if (page.snapPoint !== 0) {
-        win.scrollTo({
-          top: page.chapter.offsetTop + page.el.offsetTop,
-          behavior: 'instant'
-        });
+      pages.pinned = false;
+      pinning = pageEl.classList.contains('pinnedTop') ? 'top' : 'bottom';
+      if (pinning === 'top') {
+        pageEl.classList.remove('pinnedTop');
+        pageTop = page.chapter.offsetTop + pageEl.offsetTop;
+        scrollTo = pageTop;
       }
+      else {
+        pageEl.classList.remove('pinnedBottom');
+        pageTop = page.chapter.offsetTop + pageEl.offsetTop;
+        scrollTo = pageTop + (pageEl.clientHeight - win.innerHeight);
+      }
+      win.scrollTo({
+        top: scrollTo,
+        behavior: 'instant'
+      });
     }
   };
 
