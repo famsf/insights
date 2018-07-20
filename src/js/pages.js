@@ -219,7 +219,6 @@
             shouldTrigger = pagePastSnapThreshhold && page.inView;
             if (shouldTrigger && pages.lastPinned !== page) {
               scrollDir = page.index > currentPage.index ? 'down' : 'up';
-              console.log('snap', page.id, scrollDir);
               pages.snapScroll(page, {
                 scrollDir: scrollDir
               });
@@ -287,7 +286,7 @@
     pages.lastPinned = null;
     pages.pinned = page;
     page.isPinned = true;
-    if (scrollDir == 'down') {
+    if (scrollDir === 'down') {
       pageEl.classList.add('pinnedTop');
     }
     else {
@@ -299,6 +298,7 @@
     var pinning;
     var scrollTo;
     var pageEl;
+    var pageTop;
     if (page.isPinned) {
       pageEl = page.el;
       pages.lastPinned = page;
@@ -306,13 +306,15 @@
       pages.pinnedOffset = 0;
       pages.pinned = false;
       pinning = pageEl.classList.contains('pinnedTop') ? 'top' : 'bottom';
-      if (pinning === 'top'){
+      if (pinning === 'top') {
         pageEl.classList.remove('pinnedTop');
-        scrollTo = page.chapter.offsetTop + pageEl.offsetTop;
+        pageTop = page.chapter.offsetTop + pageEl.offsetTop;
+        scrollTo = pageTop;
       }
       else {
         pageEl.classList.remove('pinnedBottom');
-        scrollTo = (page.chapter.offsetTop + pageEl.offsetTop) + (pageEl.clientHeight - win.innerHeight);
+        pageTop = page.chapter.offsetTop + pageEl.offsetTop;
+        scrollTo = pageTop + (pageEl.clientHeight - win.innerHeight);
       }
       win.scrollTo({
         top: scrollTo,
