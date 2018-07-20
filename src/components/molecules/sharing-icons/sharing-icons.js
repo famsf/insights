@@ -4,7 +4,7 @@
     var shareUrl;
     var shareFacebook;
     var shareTwitter;
-    var url = window.location.origin;
+    var url = window.location.origin + window.location.pathname;
 
     hash = encodeURIComponent(window.location.hash);
     shareUrl = url + hash;
