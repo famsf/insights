@@ -443,9 +443,22 @@ chapters:
     - template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
       left:
         components:
-        - template: "@atoms/textarea/textarea.html.twig"
-          text:
-          dropcap: false
+        - template: "@molecules/Picture/PictureWithCaption.html.twig"
+          caption:
+            id: c2p6-caption-1
+            brief: <em>The New York Times</em>, published June 8, 1913
+            text: Copyright &copy; The New York Times
+          picture:
+            srcset:
+            - min-width: 0px
+              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/Russian_Ballet_in_Paris_-_New_York_Times_1913-06-07.png
+            - min-width: 350px
+              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/Russian_Ballet_in_Paris_-_New_York_Times_1913-06-07.png
+            - min-width: 800px
+              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/Russian_Ballet_in_Paris_-_New_York_Times_1913-06-07.png
+            url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/Russian_Ballet_in_Paris_-_New_York_Times_1913-06-07.png
+            alt: New York Times June 7, 1913
+            style: vertical
       right:
         components:
         - template: "@atoms/h3/h3.html.twig"
@@ -468,7 +481,7 @@ chapters:
         components:
         - template: "@molecules/Picture/PictureWithCaption.html.twig"
           caption:
-            id: c2p6-caption-1
+            id: c2p6-caption-2
             brief: Sergei Diaghilev (left) with Igor Stravinsky
             text: 'Rite of Spring premiere, 1913. © Hulton Archive/Getty Images'
           picture:
