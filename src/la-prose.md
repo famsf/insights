@@ -46,7 +46,7 @@ chapters:
     - template: "@organisms/video--embed/video--embed.html.twig"
       id: xt27-zrvHkk
       # see https://stackoverflow.com/questions/2068344/how-do-i-get-a-youtube-video-thumbnail-from-the-youtube-api
-      poster: https://img.youtube.com/vi/xt27-zrvHkk/0.jpg
+      poster: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/intro-book-unfolding_thumbnail.jpg
       youtube:
         embed: xt27-zrvHkk
 
@@ -106,7 +106,7 @@ chapters:
             format, the book unfurls to over six feet in length, then opens
             to reveal Delaunay’s abstract forms confronting a poem of more than
             400 lines splashed across the right-hand side of the opening.</p>"
-          dropcap: true
+          dropcap: false
 
   # c1p3
   - classes: theme--dark
@@ -167,9 +167,6 @@ chapters:
             with many artists, including Fernand Léger, Marc Chagall, and Amedeo
             Modigliani.</p>"
           dropcap: false
-
-  # c1p4
-  - components:
     - template: "@organisms/in-depth/in-depth.html.twig"
       classes: theme--dark
       title: What is an Artist’s Book?
@@ -212,8 +209,7 @@ chapters:
           - caption:
               id: ch1p5-slide-2-caption
               brief: <p>Book art has a long history. In the <em>Book of Kells</em>, the letterform is an expression of transcendance. Even beyond its overt religious significance, the book is truly, in the words of Stéphane Mallarmé, an “<em>instrument spirituel.</em>”</p><small>The <em>Book of Kells</em> (Ireland or Scotland, circa AD 800)</small>
-              text: '“Chi-Rho” page from <em>Book of Kells</em>. © Trinity College Dublin
-'
+              text: '“Chi-Rho” page from <em>Book of Kells</em>. © Trinity College Dublin'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
               srcset:
@@ -300,8 +296,8 @@ chapters:
       right:
         components:
           - template: "@atoms/textarea/textarea.html.twig"
-            text: "<p>L<em>a prose</em> was a product of its time and place, a period like no other before or since. Georges Braque and Pablo Picasso were creating the radical new artistic vision of Cubism, leading to the birth of abstraction, and Marcel Duchamp was brewing his own conceptual artistic revolution. In poetry, Guillaume Apollinaire was charging through the door that Stéphane Mallarmé (1842–1898) had opened with his sophisticated exploration of visual poetics. Russian emigrés were injecting energy and radical ideas into the mix, bringing with them the bold dynamics of Futurism. The modernist spirit that was centered in Paris extended to all of Europe and the world beyond, setting the stage for the advent of Dada and Surrealism.</p>"
-            dropcap: true
+            text: "<p><em>La prose</em> was a product of its time and place, a period like no other before or since. Georges Braque and Pablo Picasso were creating the radical new artistic vision of Cubism, leading to the birth of abstraction, and Marcel Duchamp was brewing his own conceptual artistic revolution. In poetry, Guillaume Apollinaire was charging through the door that Stéphane Mallarmé (1842–1898) had opened with his sophisticated exploration of visual poetics. Russian emigrés were injecting energy and radical ideas into the mix, bringing with them the bold dynamics of Futurism. The modernist spirit that was centered in Paris extended to all of Europe and the world beyond, setting the stage for the advent of Dada and Surrealism.</p>"
+            dropcap: false
           - template: "@molecules/inline-quote/inline-quote.html.twig"
             component_name: inline-quote
             name: Blaise Cendrars, <em>La lotissement du ciel (Sky)</em>
@@ -447,9 +443,22 @@ chapters:
     - template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
       left:
         components:
-        - template: "@atoms/textarea/textarea.html.twig"
-          text:
-          dropcap: false
+        - template: "@molecules/Picture/PictureWithCaption.html.twig"
+          caption:
+            id: c2p6-caption-1
+            brief: <em>The New York Times</em>, published June 8, 1913
+            text: Copyright &copy; The New York Times
+          picture:
+            srcset:
+            - min-width: 0px
+              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/Russian_Ballet_in_Paris_-_New_York_Times_1913-06-07.png
+            - min-width: 350px
+              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/Russian_Ballet_in_Paris_-_New_York_Times_1913-06-07.png
+            - min-width: 800px
+              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/Russian_Ballet_in_Paris_-_New_York_Times_1913-06-07.png
+            url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/Russian_Ballet_in_Paris_-_New_York_Times_1913-06-07.png
+            alt: New York Times June 7, 1913
+            style: vertical
       right:
         components:
         - template: "@atoms/h3/h3.html.twig"
@@ -457,9 +466,6 @@ chapters:
         - template: "@atoms/textarea/textarea.html.twig"
           text: 'Rarely had there been a time when artists felt so emboldened to disregard rules and traditions. The disruptive clash between more orthodox expression and that of the avant-garde was the defining spirit of the time (the battlefields of modernism in their own way foreshadowed the battlefields of 1914, when many artists and poets – including Leger, Cendrars, and Apollinaire – eagerly enlisted for combat). Perhaps no event was more characteristic of the time than the explosive premiere of Sergei Diaghilev and Igor Stravinsky’s ballet, <em>The Rite of Spring</em>, vividly described by Mary Ann Caws and Blaise Cendrars in the texts that follow.'
           dropcap: false
-
-  # c2p5
-  - components:
     - template: "@molecules/commentary/commentary.html.twig"
       component_name: commentary
       author_name: Mary Ann Caws
@@ -470,15 +476,12 @@ chapters:
       - template: "@atoms/textarea/textarea.html.twig"
         text: "<p>The cacophonous <em>Rite of Spring</em> was the centerpiece of a simultaneity of sound, color, and movement. Nijinsky danced its May 29 premiere for Sergei Diaghilev’s Ballets Russes in Paris’s Théâtre des Champs-Élysées, and the spectacle provoked a celebrated pandemonium. Igor Stravinsky’s discordant music touched off outrage from the more conservative audience members, with others equally vehement in its defense. This riot against modernism, to put it bluntly, conferred on the piece more glory than anything positive could possibly have done—riots led to revelry in the long run.</p>"
         dropcap: false
-
-  # c2p6
-  - components:
     - template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
       left:
         components:
         - template: "@molecules/Picture/PictureWithCaption.html.twig"
           caption:
-            id: c2p6-caption-1
+            id: c2p6-caption-2
             brief: Sergei Diaghilev (left) with Igor Stravinsky
             text: 'Rite of Spring premiere, 1913. © Hulton Archive/Getty Images'
           picture:
@@ -497,8 +500,8 @@ chapters:
             name: Blaise Cendrars, radio interview
             date: '1950'
             text: "A woman nearby, covered by diamonds, but the music of Stravinsky drove her crazy, tore out a brand new folding seat and smashed me over the head with it, so I had to spend the rest of the night drinking champagne in Montmartre with Stravinsky [and] Diaghilev . . . still wearing the folding chair like a horse collar..."
-
-  # c2p7
+ 
+  # c2p5
   - classes: hide-chapter-nav invert-top-bar
     components:
     - template: "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig"
@@ -510,7 +513,7 @@ chapters:
         - template: "@atoms/textarea/textarea.html.twig"
           text: Here are a few other landmarks of the tumultuous year of 1913.
       - caption:
-          id: c2p7-slide-2-caption
+          id: c2p5-slide-2-caption
           brief: 'Marcel Duchamp creates his first "ready-made," <em>Bicycle Wheel</em>'
           text: "Marcel Duchamp, <em>Bicycle Wheel</em>, third version, 1951. Museum of Modern Art, MOMA, New York, USA. © Album / Alamy Stock Photo"
         components:
@@ -526,7 +529,7 @@ chapters:
           alt: third version of Bicycle Wheel by Marcel Duchamp
           style: vertical
       - caption:
-          id: c2p7-slide-3-caption
+          id: c2p5-slide-3-caption
           brief: "Marcel Proust publishes <em>Swann’s Way</em> (manuscript notes shown here)"
           text: "Some of Marcel Proust’s notes for <em>Swann’s Way</em>, with doodles. © Bibliotheque nationale de France (BnF), Paris, France, Dist. RMN-Grand Palais/Art Resource, NY"
         components:
@@ -542,7 +545,7 @@ chapters:
           alt: pages of Marcel Proust’s notes for <em>Swann’s Way</em> with drawings
           style: vertical
       - caption:
-          id: c2p7-slide-4-caption
+          id: c2p5-slide-4-caption
           brief: "Maurice Ravel composes <em>Trois poèmes de Stéphane Mallarmé</em>"
           text: "Maurice Ravel. Bibliothèque nationale de France"
         components:
@@ -558,7 +561,7 @@ chapters:
           alt: photo of maurice ravel
           style: vertical
       - caption:
-          id: c2p7-slide-5-caption
+          id: c2p5-slide-5-caption
           brief: "Guillaume Apollinaire publishes <em>Alcools</em>, with a portrait by Picasso and etchings by Louis Marcoussis"
           text: "Guillaume Apollinaire: <em>Alcools</em>, with a portrait by Picasso and etchings by Louis Marcoussis (Paris: Mercure de France, 1913), 1913"
         components:
@@ -599,15 +602,14 @@ chapters:
         name: Blaise Cendrars
         text: A sad poem printed on sunlight.
         large_text: true
-
-  # c3p2
+  #c3p2
   - components:
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
       right:
         components:
           - template: "@atoms/textarea/textarea.html.twig"
             text: "<p>The book is a vortex of convergent and oppositional energies, an environment created for a remarkable reading experience. When folded it is roughly four by seven inches, and just over an inch thick. It can be read by unfolding the accordion-fold “pages” one segment at a time. Alternatively, one can unfold it to full length, more than six feet, on a long table. That way the entire design and text can be apprehended – not, as Apollinaire said, at a glance, but by following the poetic narrative as it weaves through splashes of color.</p>"
-            dropcap: true
+            dropcap: false
           - template: "@atoms/cta__button/cta__button.html.twig"
             text: Read an English translation of the Poem
             href: "http://poeticsresearch.com/article/cendrars-la-prose-du-transsiberien-trans-d-wellman/"
@@ -630,15 +632,13 @@ chapters:
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/22_la-prose-detail-the-book.jpg
             alt: Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars
             style: horizontal
-
-  # c3p3
-  - components:
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
       right:
         components:
           - template: "@atoms/h3/h3.html.twig"
             text: Light and Color
           - template: "@atoms/textarea/textarea.html.twig"
+            classes: margin-bottom-1
             text: "Mary Ann Caws explains a source of Robert and Sonia Delaunay’s experimentation with chromatic simultaneity."
           - template: "@molecules/inline-quote/inline-quote.html.twig"
             component_name: inline-quote
@@ -663,15 +663,13 @@ chapters:
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/23_chevreul-color-chart.jpg
             alt: Chevreul color wheel
             style: horizontal
-
-  # c3p4
-  - components:
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
       right:
         components:
           - template: "@atoms/h3/h3.html.twig"
             text: "Painting Sunlight"
           - template: "@atoms/textarea/textarea.html.twig"
+            classes: margin-bottom-1
             text: "Blaise Cendrars describes the kind of experimentation Robert and Sonia Delaunay were undertaking at the beginnings of modernist abstraction in painting."
           - template: "@molecules/inline-quote/inline-quote.html.twig"
             component_name: inline-quote
@@ -696,9 +694,6 @@ chapters:
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/24_windows-open.jpg
             alt: Windows Open Simultaneously 1st Part, 3rd Motif by Robert Delaunay
             style: horizontal
-
-  # c3p5
-  - components:
     - template: "@molecules/commentary/commentary.html.twig"
       component_name: commentary
       author_name: Marjorie Perloff
@@ -707,7 +702,7 @@ chapters:
       author_image: ''
       components:
       - template: "@atoms/textarea/textarea.html.twig"
-        text: "<p>La prose du Transsibérien is a text full of contradictions. The title, for starters, is odd: it should be “le prose” and, even then, why call a lineated lyric “prose”? Cendrars declared that he used the word “prose” so as to open up the discourse; then, too, the poem is “dedicated to the musicians”—evidently those new musicians of the period, such as Eric Satie or Igor Stravinsky, who were avoiding all conventional rhythms. The long free-verse lines, with their paratactic structure and repetition, remind one of Walt Whitman, but the voice of this poem is hardly Whitman’s oracular one. Rather, Cendrars stresses immediacy, nervous energy, and excitement:</p>"
+        text: "<p><em>La prose du Transsibérien</em> is a text full of contradictions. The title, for starters, is odd: it should be “le prose” and, even then, why call a lineated lyric “prose”? Cendrars declared that he used the word “prose” so as to open up the discourse; then, too, the poem is “dedicated to the musicians”—evidently those new musicians of the period, such as Eric Satie or Igor Stravinsky, who were avoiding all conventional rhythms. The long free-verse lines, with their paratactic structure and repetition, remind one of Walt Whitman, but the voice of this poem is hardly Whitman’s oracular one. Rather, Cendrars stresses immediacy, nervous energy, and excitement:</p>"
         dropcap: false
       - template: "@atoms/cta__button/cta__button.html.twig"
         text: Read more from this essay by Marjorie Perloff
@@ -718,7 +713,7 @@ chapters:
 ## CHAPTER 4 ###################################################################
 ################################################################################
 
-- title: The Making of La prose
+- title: The Making of the Book
   numeral: IV
   pages:
 
@@ -735,12 +730,13 @@ chapters:
       left:
         components:
           - template: "@atoms/cliff-note/cliff-note.html.twig"
-            text: In creating an authentic facsimile edition, artist and educator Kitty Maryatt has conducted exhaustive research into the production processes used for <em>La prose</em> in 1913.
+            text: In creating an authentic facsimile edition, artist and educator Kitty Maryatt has conducted exhaustive research into the production processes of 1913.
       right:
         components:
           - template: "@atoms/h3/h3.html.twig"
             text: "Typography"
           - template: "@atoms/textarea/textarea.html.twig"
+            classes: margin-bottom-2
             text: "<p>Maryatt has identified 30 separate typefaces used in the typographic composition for the poem. The book was printed at Imprimérie Crété, the largest printing facility in France. Cendrars provided detailed instructions for the compositors, most likely by consulting Crété’s type specimen catalogue. </p>"
             dropcap: false
           - template: "@molecules/Picture/PictureWithCaption.html.twig"
@@ -760,6 +756,7 @@ chapters:
               alt: Photo of type compositors at Crété
               style: horizontal
           - template: "@atoms/h3/h3.html.twig"
+            classes: margin-top-3
             text: "Art"
           - template: "@atoms/textarea/textarea.html.twig"
             text: "<p>Sonia Delaunay painted the image for <em>La prose</em> on mattress ticking first. The image was reproduced for the edition by <em>pochoir</em>, a stencil process, with color applied by hand using prescribed brush strokes, exacting manipulation of stencils, precise registration, and consistent color matching. It is likely that the pochoir was performed at Crété.</p>"
@@ -802,6 +799,7 @@ chapters:
           - template: "@atoms/h3/h3.html.twig"
             text: "Structure"
           - template: "@atoms/textarea/textarea.html.twig"
+            classes: margin-bottom-3
             text: "<p>The book appropriated the form of a folded map, and a map of the route of the Trans-Siberian Railroad was included at the top corner of the layout, with the poem unfolding to more than six feet vertically. It was designed to first unfold with only the blank back side showing so that it could then be dramatically opened to expose the contents all at once, in keeping with the precepts of <em>simultaneité</em>. It was enclosed in a hand-painted vellum cover, which is said to have been made for only 30 copies.</p>"
             dropcap: false
           - template: "@atoms/h3/h3.html.twig"
@@ -838,17 +836,19 @@ chapters:
           - template: "@atoms/h3/h3.html.twig"
             text: "The 1950s: Cendrars and Kerouac"
           - template: "@atoms/textarea/textarea.html.twig"
+            classes: margin-bottom-3
             text: "<p>In some respects, the poem resembles Jack Kerouac’s <em>On the Road</em>. In composition, they share a common conceit: the illusion that they were composed, or narrated, in a single sitting, the intimate testimonial quality of a tale of alienation and transgression, drawing the listener or reader in. Both are road-trip stories, with socially marginalized traveling companions, that move across vast landscapes. Both are simultaneously life-changing inward journeys. And anyone who’s seen the Kerouac manuscript, the scroll, will immediately recognize the physical resemblance. With visual art, though, the two reading experiences diverge, and it is the hybrid nature of what we are looking at that distinguishes <em>La prose</em> as a unique and transcendent experience for the reader and viewer.</p>"
             dropcap: false
           - template: "@atoms/h3/h3.html.twig"
             text: "The 1960s: Light, Color, Motion"
           - template: "@atoms/textarea/textarea.html.twig"
+            classes: margin-bottom-2
             text: "<p>The interplay of colors and the synesthetic illusion of movement in Delaunay’s pochoir has an uncanny parallel in the psychedelic light shows of the 1960’s, where bright, pulsating, liquid forms merged with an experience of rhythmic sound, as the rhythms of Cendrars’s lines – dedicated, as he says, “to the musicians” – seem to emerge from the artist’s abstract color-forms.</p>"
             dropcap: false
           - template: "@molecules/Picture/PictureWithCaption.html.twig"
             caption:
               id: c5p1-caption-1
-              brief: Bill Ham, Kinetic Light Painting, 2016-2017
+              brief: Bill Ham, <em>Kinetic Light Painting</em>, 2016-2017
               text: Courtesy of Bill Ham
             picture:
               srcset:
@@ -862,13 +862,14 @@ chapters:
               alt: Bill Ham kinetic light painting
               style: horizontal
           - template: "@atoms/h3/h3.html.twig"
+            classes: margin-top-3
             text: "Book Art Now"
           - template: "@atoms/textarea/textarea.html.twig"
-            text: "<p>The steady growth of the field of book art in recent decades finds an iconic predecessor in <em>La prose</em>. Its unique appropriation of structure, and its hybrid nature, have made it an influence on succeeding generations of artists and writers who take the book beyond the limits of conventional form. For his spectacular book <em>Nature Abhors</em>, Philip Zimmermann used a structure devised by influential book artist Hedi Kyle.</p>"
+            text: "<p>The steady growth of the field of book art in recent decades finds an iconic predecessor in <em>La prose</em>. Its unique appropriation of structure, and its hybrid nature, have made it an influence on succeeding generations of artists and writers who take the book beyond the limits of conventional form. For his spectacular book <em>Nature Abhors</em>, Philip Zimmermann used a structure devised by influential book artist Hedi Kyle &mdash; seen here in an animation by Radek Skrivanek.</p>"
             dropcap: false
 
   # c5p2
-  - classes: theme--dark
+  - classes: hide-chapter-nav theme--dark
     components:
     - template: "@organisms/video--embed/video--embed.html.twig"
       id: tOg9IEvt154
@@ -959,6 +960,7 @@ chapters:
     components:
     - template: "@organisms/video--embed/video--embed.html.twig"
       id: yTDiYSA_nQE
+      poster: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/chapter-6-book-flipping_thumbnail.jpg
       youtube:
         embed: yTDiYSA_nQE
 
