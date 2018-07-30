@@ -4,9 +4,13 @@
   position: fixed;
   top: 0;
   width: 100%;
+  @extend %performy;
+  transform: translate3d(0,0,0);
 }
 
 %top-bar {
+  @extend %performy;
+  transform: translate3d(0,0,0);
   padding: 1rem 1.5rem;
   width: 100%;
   transition: background-color .325s ease-in-out;

@@ -2,9 +2,9 @@
   {% include '@molecules/TopBar/TopBar.html.twig' with { tagline: tagline, tickets_url: tickets_url, facebook_url: facebook_url, twitter_url: twitter_url } only %}
   {% include '@molecules/ChapterNav/ChapterNav.html.twig' with { chapters: chapters } only %}
   <div class="chapters_container off-canvas-content" id="app">
-    {% include '@environments/Chapters/Chapters.html.twig' with { chapters: chapters, title: title } only %}
+    {% include '@environments/Chapters/Chapters.html.twig' with { chapters: chapters, title: story_title } only %}
     {% include '@organisms/Footer/Footer.html.twig' with { sections: footer.sections, classes: footer.classes } only %}
   </div>
 </div>
 
-{% include '@molecules/off-canvas/off-canvas.html.twig' with { chapters: chapters, title: title, tickets_url: tickets_url, sections: footer.sections, classes: footer.classes } only %}
+{% include '@molecules/off-canvas/off-canvas.html.twig' with { chapters: chapters, title: story_title, tickets_url: tickets_url, sections: footer.sections, classes: footer.classes } only %}

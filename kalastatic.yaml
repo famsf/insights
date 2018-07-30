@@ -13,8 +13,76 @@ destination: "build"
 # What BrowserSync will consider the web root.
 bsWebroot: build
 
+
+plugins:
+  - 'metalsmith-gathercontent'
+  # Load information from the environment variables.
+  - 'metalsmith-env'
+  # Define any global variables.
+  - 'metalsmith-define'
+  # Add .json metadata to each file.
+  - 'metalsmith-metadata-files'
+  # Add base, dir, ext, name, and href info to each file.
+  - 'metalsmith-paths'
+  # Load metadata info the metalsmith metadata object.
+  - 'metalsmith-metadata-convention'
+  # Concatenate any needed files.
+  - 'metalsmith-concat-convention'
+  # Load all collections.
+  - 'metalsmith-collections-convention'
+  # Bring in static assets.
+  - 'metalsmith-assets-convention'
+  # Ignore all partials and layouts.
+  - 'metalsmith-ignore'
+  # Load all Partials.
+  - 'metalsmith-jstransformer-partials'
+  # Render all content with JSTransformers.
+  - 'metalsmith-jstransformer'
+  # Clean URLs.
+  - 'metalsmith-clean-urls'
+# Allows changing some of the plugin options.
+
 # Allows changing some of the plugin options.
 pluginOpts:
+  metalsmith-gathercontent:
+    verbose: true
+    authPath: _auth.json
+    filePath: src/assets/images/gathercontent
+    projectId: 187751
+    mappings:
+      id: id
+      slug: _name
+      name: _name
+      title: Content_Title
+      tier: tier
+      summary: Content_Summary
+      contents: Content_Content
+      image: Content_Image
+      type: _type,
+      # Insights Info
+      tagline: Content_Tagline
+      tickets_url: Content_Tickets-URL
+      # Story info
+      story_title: Content_Story-Title
+      story_subtitle: Content_Story-Subtitle
+      # Columned content
+      left_col__image: Left-Column_Image
+      left_col__image__alt: Left-Column_Image-Alt
+      left_col__image__caption: Left-Column_Image-Caption
+      left_col__image__brief: Left-Column_Caption-Brief
+      left_col__body: Left-Column_Body
+      right_col__image: Right-Column_Image
+      right_col__image__alt: Right-Column_Image-Alt
+      right_col__image__caption: Right-Column_Image-Caption
+      right_col__image__brief: Right-Column_Caption-Brief
+      right_col__body: Right-Column_Body
+      # Video Embed
+      videoEmbedId: Content_Video-Id,
+      posterImage: Content_Poster-Image
+      # Scroll Comparison
+      # Meta
+      template: Meta_Component
+
   # The layouts will live in the templates directory.
   metalsmith-jstransformer:
     pattern: "!components/**"
