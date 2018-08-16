@@ -10,8 +10,8 @@ stylesheets:
 scripts:
   header:
     all:
-      - https://cloudimage.io/plugin/cloudimage.io-responsive.js
-      - /js/cloudimage.js
+      - /js/cloudimage/cloudimage.io-responsive.js
+      - /js/cloudimage/cloudimage.custom.js
   footer:
     all:
       - /js/jquery/jquery.js

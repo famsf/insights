@@ -14,7 +14,6 @@
     var imgSrc = fds.coverPageElement.dataset.bgImage;
     var imgAlt = fds.coverPageElement.dataset.bgImageAlt;
     var downArrow = fds.coverPageElement.querySelector('.down_arrow');
-    var div = document.createElement('div');
     var img = new Image();
     img.setAttribute('alt', imgAlt);
     img.setAttribute('ci-responsive', true);
@@ -25,9 +24,9 @@
     // that of the img.html.twig template.
     img.setAttribute('ci-size', "{xs: '50x100', sm:'100x125', md: '150x150', lg:'200x175', xl:'300x200'}");
 
-    div.classList.add('bg-image');
-    div.appendChild(img);
-    fds.coverPageElement.querySelector('.underlay').appendChild(div);
+    img.classList.add('bg-image');
+    fds.coverPageElement.querySelector('.underlay').appendChild(img);
+    fds.cloudimage.responsify();
     if (img.complete) {
       fds.onCoverImageLoaded();
     }

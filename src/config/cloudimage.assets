@@ -1,0 +1,5 @@
+---
+source: node_modules/cloudimage
+destination: js/cloudimage
+---
+Bring in Cloudimage's responsive images javascript helper.
