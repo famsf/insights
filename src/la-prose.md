@@ -1044,7 +1044,7 @@ footer:
             cols: medium-7
             components:
             - template: "@atoms/img/img.html.twig"
-              url: ../assets/images/de-young-museum.jpg
+              url: /assets/images/de-young-museum.jpg
               alt: de Young Museum
           right:
             offset:
@@ -1070,7 +1070,7 @@ footer:
             cols: medium-7
             components:
             - template: "@atoms/img/img.html.twig"
-              url: ../assets/images/legion-of-honor.jpg
+              url: /assets/images/legion-of-honor.jpg
               alt: Legion of Honor
           right:
             offset:
