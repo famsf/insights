@@ -8,6 +8,10 @@ stylesheets:
   - https://use.fontawesome.com/releases/v5.0.13/css/all.css
 
 scripts:
+  header:
+    all:
+      - https://cloudimage.io/plugin/cloudimage.io-responsive.js
+      - /js/cloudimage.js
   footer:
     all:
       - /js/jquery/jquery.js

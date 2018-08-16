@@ -14,11 +14,20 @@
     var imgSrc = fds.coverPageElement.dataset.bgImage;
     var imgAlt = fds.coverPageElement.dataset.bgImageAlt;
     var downArrow = fds.coverPageElement.querySelector('.down_arrow');
+    var div = document.createElement('div');
     var img = new Image();
     img.setAttribute('alt', imgAlt);
-    img.setAttribute('src', imgSrc);
-    img.classList.add('bg-image');
-    fds.coverPageElement.querySelector('.underlay').appendChild(img);
+    img.setAttribute('ci-responsive', true);
+    img.setAttribute('ci-src', imgSrc);
+    img.setAttribute('ci-type', 'crop');
+    // @TODO: These sizes are hard-coded here; would be nice to pull them from
+    // a variable or some other canonical source that feeds both this use and
+    // that of the img.html.twig template.
+    img.setAttribute('ci-size', "{xs: '50x100', sm:'100x125', md: '150x150', lg:'200x175', xl:'300x200'}");
+
+    div.classList.add('bg-image');
+    div.appendChild(img);
+    fds.coverPageElement.querySelector('.underlay').appendChild(div);
     if (img.complete) {
       fds.onCoverImageLoaded();
     }

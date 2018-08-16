@@ -1,4 +1,4 @@
-<div class="video--embed" style="background-image: url({{ poster }});">
+<div class="video--embed" ci-responsive ci-img-background="{{ poster }}">
   <div class="video--embed__wrapper">
     {% if youtube %}
       <div class="plyr_target video_player youtube" data-plyr-provider="youtube" id="{{ id }}_vid" data-plyr-embed-id="{{ youtube.embed }}" data-poster="{{ poster }}"></div>
