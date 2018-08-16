@@ -18,12 +18,6 @@
     img.setAttribute('alt', imgAlt);
     img.setAttribute('ci-responsive', true);
     img.setAttribute('ci-src', imgSrc);
-    img.setAttribute('ci-type', 'crop');
-    // @TODO: These sizes are hard-coded here; would be nice to pull them from
-    // a variable or some other canonical source that feeds both this use and
-    // that of the img.html.twig template.
-    img.setAttribute('ci-size', "{xs: '50x100', sm:'100x125', md: '150x150', lg:'200x175', xl:'300x200'}");
-
     img.classList.add('bg-image');
     fds.coverPageElement.querySelector('.underlay').appendChild(img);
     fds.cloudimage.responsify();
