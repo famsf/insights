@@ -146,7 +146,7 @@ chapters:
         visible:
         - template: "@molecules/Picture/PictureWithCaption.html.twig"
           caption:
-            brief: Blaise Cendrars, ca.1907. Wikimedia Commons
+            brief: Blaise Cendrars, ca. 1907. Wikimedia Commons
           picture:
             srcset:
             - min-width: 0px
@@ -170,7 +170,7 @@ chapters:
           dropcap: false
     - template: "@organisms/in-depth/in-depth.html.twig"
       classes: theme--dark
-      title: What is an Artist’s Book?
+      title: What Is an Artist’s Book?
       picture:
         srcset:
         - min-width: 0px
@@ -194,7 +194,7 @@ chapters:
           - caption: ''
             components:
             - template: "@molecules/slide--in-depth__intro/slide--in-depth__intro.html.twig"
-              title: What is an Artist's Book?
+              title: What Is an Artist's Book?
               text: 'An artist’s book, like a painting or a sculpture, is created to be a work of art. It is a hybrid art form, both literary and visual in concept, and often collaborative.</em>'
               picture:
                 srcset:
@@ -209,8 +209,8 @@ chapters:
                 style: square
           - caption:
               id: ch1p5-slide-2-caption
-              brief: <p>Book art has a long history. In the <em>Book of Kells</em>, the letterform is an expression of transcendence. Even beyond its overt religious significance, the book is truly, in the words of Stéphane Mallarmé, an “<em>instrument spirituel.</em>”</p><small>The <em>Book of Kells</em> (Ireland or Scotland, ca. 800)</small>
-              text: 'Chi-Rho page from <em>Book of Kells</em>, Irish or Scottish, ca. 800. © Trinity College Dublin'
+              brief: <p>Book art has a long history. In the <em>Book of Kells</em> (ca. 800), the letterform is an expression of transcendence. Even beyond its overt religious significance, the book is truly, in the words of Stéphane Mallarmé, an “<em>instrument spirituel.</em>”</p><small>The <em>Book of Kells</em> (Ireland or Scotland, ca. 800)</small>
+              text: 'Chi-Rho page from <em>Book of Kells</em>, Irish or Scottish, ca. 800. Ink on vellum, 13 x 10 1/16 in. (33 x 25.5 cm). © Trinity College Dublin'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
               srcset:
@@ -225,8 +225,8 @@ chapters:
               style: vertical
           - caption:
               id: ch1p5-slide-3-caption
-              brief: <p>William Blake’s illustrations display a singular vision and deep interpenetration of text and image, a unified expression that has rarely been equaled. Many consider Blake the father of book art.</p><small>William Blake, illustration for <em>Book of Job</em> (1826)</small>
-              text: 'William Blake, "Thou hast fulfilled the Judgment of the wicked," plate 16 from the complete proof edition of Blake’s <em>Book of Job</em>, 1826. Engraving, image: 7 3/4 x 6 3/8 in. (19.6 x 16.2 cm). Fine Arts Museums of San Francisco, Museum purchase, William H. Noble Bequest Fund, 1979.1.11.17'
+              brief: <p>William Blake’s illustrations display a singular vision and deep interpenetration of text and image, a unified expression that has rarely been equaled. Many consider Blake the father of book art.</p><small>William Blake, illustration for <em>Book of Job</em> (1825)</small>
+              text: 'William Blake, "Thou hast fulfilled the Judgment of the wicked," plate 16 from the complete proof edition of Blake’s <em>Book of Job</em>, 1825. Engraving, image: 7 3/4 x 6 3/8 in. (19.6 x 16.2 cm). Fine Arts Museums of San Francisco, Museum purchase, William H. Noble Bequest Fund, 1979.1.11.17'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
               srcset:
@@ -242,7 +242,7 @@ chapters:
           - caption:
               id: ch1p5-slide-4-caption
               brief: <p><em>Livres d’artistes</em>, deluxe editions illustrated by contemporary artists, came of age with <em>Parallèlement</em>, published by Ambroise Vollard (1866–1939). His younger peer Daniel-Henry Kahnweiler (1884–1979) published avante-garde writers such as Guillaume Apollinaire, Gertrude Stein, and Max Jacob, illustrated by Derain, Gris, Picasso, Braque, and other.</p><small>Pierre Bonnard and Paul Verlaine, <em>Parallèlement,</em> 1900</small>
-              text: 'Pierre Bonnard, <em>Untitled,</em> page 4 of the book <em>Parallèlement</em> by Paul Verlaine (Paris: Ambroise Vollard, 1900), 1887–1900. Lithograph (pink sanguine) on Holland wove paper watermarked <em>Parallèlement,</em> 11 5/8 x 9 1/2 in.  (29.5 x 24 cm); image: 3 5/8 x 7 in. (9.3 x 17.9 cm). Printed by Auguste Clot, Paris (lithographs); and Imprimerie Nationale de France, Paris (text). Binding by René Kieffer. Woodcuts by Tony Beltrand. Fine Arts Museums of San Francisco, The Reva and David Logan Collection of Illustrated Books, 2000.200.45.6'
+              text: 'Pierre Bonnard, <em>Untitled,</em> page 4 of the book <em>Parallèlement</em> by Paul Verlaine (Paris: Ambroise Vollard, 1900), 1887–1900. Lithograph (pink sanguine) on Holland wove paper watermarked <em>Parallèlement,</em> sheet: 11 5/8 x 9 1/2 in. (29.5 x 24 cm); image: 3 5/8 x 7 in. (9.3 x 17.9 cm). Printed by Auguste Clot, Paris (lithographs); and Imprimerie Nationale de France, Paris (text). Binding by René Kieffer. Woodcuts by Tony Beltrand. Fine Arts Museums of San Francisco, The Reva and David Logan Collection of Illustrated Books, 2000.200.45.6'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
               srcset:
@@ -393,7 +393,7 @@ chapters:
           style: vertical
       - caption:
           id: c2p3-slide-3-caption
-          brief: "André Derain and Guillaume Apollinaire: <em>L'enchanteur pourrissant, </em>1909. This was a book of firsts: Apollinaire's first published book, illustrated with Derain's first book illustrations &mdash; and also the first book from the great publisher Daniel-Henry Kahnweiler, then age 25."
+          brief: "André Derain and Guillaume Apollinaire: <em>L'enchanteur pourrissant, </em>1909. This was a book of firsts: Apollinaire's first published book, illustrated with Derain's first book illustrations&mdash;and also the first book from the great publisher Daniel-Henry Kahnweiler, then age 25."
           text: "André Derain, <em>Untitled,</em> title page, publisher’s detail, in the book <em>L'enchanteur pourrissant</em> by Guillaume Apollinaire (Paris: Henry Kahnweiler, 1909), 1909. Woodcut on ivory Arches laid paper, sheet: 10 7/16 x 7 7/8 in. (26.5 x 20 cm); image: 2 1/2 x 2 7/8 in. (6.4 x 7.3 cm). Printed by Paul Birault, Paris. Fine Arts Museums of San Francisco, The Reva and David Logan Collection of Illustrated Books, 2000.200.49.1"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
@@ -465,7 +465,7 @@ chapters:
         - template: "@atoms/h3/h3.html.twig"
           text: 'The &ldquo;Riot&rdquo; of Spring'
         - template: "@atoms/textarea/textarea.html.twig"
-          text: 'Until 1913 there had rarely been a time when artists felt so emboldened to disregard rules and traditions. The disruptive clash between more orthodox expression and that of the avant-garde was the defining spirit of the time. (The battlefields of modernism in their own way foreshadowed the battlefields of 1914, when many artists and poets &mdash; including Léger, Cendrars, and Apollinaire &mdash; eagerly enlisted for combat.) Perhaps no event was more characteristic of the time than the explosive premiere of Sergei Diaghilev and Igor Stravinsky’s ballet <em>The Rite of Spring</em>, vividly described by Mary Ann Caws and Blaise Cendrars in the texts that follow.'
+          text: 'Until 1913, there had rarely been a time when artists felt so emboldened to disregard rules and traditions. The disruptive clash between more orthodox expression and that of the avant-garde was the defining spirit of the time. (The battlefields of modernism in their own way foreshadowed the battlefields of 1914, when many artists and poets&mdash;including Léger, Cendrars, and Apollinaire&mdash;eagerly enlisted for combat.) Perhaps no event was more characteristic of the time than the explosive premiere of Sergei Diaghilev and Igor Stravinsky’s ballet <em>The Rite of Spring</em>, vividly described by Mary Ann Caws and Blaise Cendrars in the texts that follow.'
           dropcap: false
     - template: "@molecules/commentary/commentary.html.twig"
       component_name: commentary
@@ -500,7 +500,7 @@ chapters:
             component_name: inline-quote
             name: Blaise Cendrars, radio interview
             date: '1950'
-            text: "A woman nearby, covered by diamonds, but the music of Stravinsky drove her crazy, tore out a brand new folding seat and smashed me over the head with it, so I had to spend the rest of the night drinking champagne in Montmartre with Stravinsky [and] Diaghilev ... still wearing the folding chair like a horse collar."
+            text: "A woman nearby, covered by diamonds, but the music of Stravinsky drove her crazy, tore out a brand-new folding seat and smashed me over the head with it, so I had to spend the rest of the night drinking champagne in Montmartre with Stravinsky [and] Diaghilev ... still wearing the folding chair like a horse collar."
  
   # c2p5
   - classes: hide-chapter-nav invert-top-bar
@@ -620,8 +620,8 @@ chapters:
         - template: "@molecules/Picture/PictureWithCaption.html.twig"
           caption:
             id: c3p3-caption-1
-            brief: Detail of <em>La prose du Transsibérien et de la petite Jehanne de France</em> by Sonia Delaunay-Terk and Blaise Cendrars
-            text: 'Sonia Delaunay-Terk, detail from <em>La Prose du Transsibérien et de la Petite Jehanne de France</em> by Blaise Cendrars, 1913. Illustrated book with pochoir, case: 80 x 17 in. (203.2 x 43.2 cm). Fine Arts Museums of San Francisco, Gift of the Reva and David Logan Foundation, 2016.15.4.1'
+            brief: Detail of <em>La prose du Transsibérien et de la Petite Jehanne de France</em> by Sonia Delaunay-Terk and Blaise Cendrars, 1913
+            text: 'Sonia Delaunay-Terk, detail from <em>La prose du Transsibérien et de la Petite Jehanne de France</em> by Blaise Cendrars, 1913. Illustrated book with pochoir, case: 80 x 17 in. (203.2 x 43.2 cm). Fine Arts Museums of San Francisco, Gift of the Reva and David Logan Foundation, 2016.15.4.1'
           picture:
             srcset:
               - min-width: 0px
@@ -783,7 +783,7 @@ chapters:
           - template: "@molecules/Picture/PictureWithCaption.html.twig"
             caption:
               id: c4p2-caption-1
-              brief: "Paper conservator Victoria Binder used a microscope to analyze the fiber composition of the copy of <em>La prose</em> in the Logan Collection at the Legion of Honor"
+              brief: "Paper conservator Victoria Binder used a microscope to analyze the fiber composition of the copy of <em>La prose</em> in the Logan Collection at the Legion of Honor."
               text: 'Sonia Delaunay-Terk, detail from <em>La prose du Transsibérien et de la Petite Jehanne de France</em> by Blaise Cendrars, 1913. Illustrated book with pochoir, case: 80 x 17 in. (203.2 x 43.2 cm). Fine Arts Museums of San Francisco, Gift of the Reva and David Logan Foundation, 2016.15.4.1'
             picture:
               srcset:
@@ -850,8 +850,8 @@ chapters:
           - template: "@molecules/Picture/PictureWithCaption.html.twig"
             caption:
               id: c5p1-caption-1
-              brief: Bill Ham, <em>Kinetic Light Painting</em>, 2016-2017
-              text: Courtesy of Bill Ham
+              brief: Still from <em>Kinetic Light Painting</em> by Bill Ham
+              text: Bill Ham, <em>Kinetic Light Painting,</em> 2016&ndash;2017. Courtesy of Bill Ham
             picture:
               srcset:
                 - min-width: 0px
@@ -861,7 +861,7 @@ chapters:
                 - min-width: 800px
                   src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/28_b-bill-ham-light-show.jpg
               url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/28_b-bill-ham-light-show.jpg
-              alt: Bill Ham kinetic light painting
+              alt: Still from Kinetic Light Painting by Bill Ham
               style: horizontal
           - template: "@atoms/h3/h3.html.twig"
             classes: margin-top-3
