@@ -20,7 +20,7 @@
     img.setAttribute('ci-src', imgSrc);
     img.classList.add('bg-image');
     fds.coverPageElement.querySelector('.underlay').appendChild(img);
-    fds.cloudimage.responsify();
+    jScaler.processImage(img);
     if (img.complete) {
       fds.onCoverImageLoaded();
     }
