@@ -1,16 +1,10 @@
 (function (fds, audioPlayer, window, document) {
   fds.initializeAudioPlayer = function (el) {
-    // do stuff=
-    console.log('audio_player.js fired');
-
     var plyr;
-
     plyr = new Plyr(el, {
       hideControls: 'false',
-      controls: ['play', 'progress', 'current-time']
+      controls: ['play', 'progress', 'current-time', 'mute', 'volume']
     });
-
-    // plyr.on('ready', function (e) {});
   };
 
   function audioPlayerCallback() {
