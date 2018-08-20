@@ -8,12 +8,12 @@
   };
 
   function audioPlayerCallback() {
-    var audioPlayer = document.querySelectorAll('audio');
-    var count = audioPlayer.length;
+    var player = document.querySelectorAll('audio');
+    var count = player.length;
     var i;
 
     for (i = 0; i < count; i++) {
-      fds.initializeAudioPlayer(audioPlayer[i]);
+      fds.initializeAudioPlayer(player[i]);
     }
   }
 
