@@ -1,0 +1,21 @@
+<div class="transcript">
+  {% if title %}
+    {% include "@atoms/h4/h4.html.twig" with { text: title, classes: "transcript__title" } only %}
+  {% endif %}
+
+  {% if brief %}
+    <div class="transcript__brief">
+      {{ brief }}
+    </div>
+  {% endif %}
+
+  {% if id %}
+    <a data-toggle="{{ id }}" class="button toggle-transcript">
+      {{ button_text }}
+    </a>
+
+    <div class="transcript__text" style="display: none;" id="{{ id }}" data-toggler data-animate="fade-in fade-out">
+      {{ text }}
+    </div>
+  {% endif %}
+</div>

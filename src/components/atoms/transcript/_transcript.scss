@@ -1,0 +1,25 @@
+%transcript {
+  margin-bottom: 1rem;
+
+  .transcript__brief {
+    margin-bottom: .5rem;
+  }
+
+  .transcript__text {}
+
+  .toggle-transcript {
+    @extend %cta__button;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .theme--dark & {
+    color: $white;
+  }
+}
+
+.transcript {
+  @extend %transcript;
+}
