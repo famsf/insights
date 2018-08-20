@@ -6,7 +6,11 @@
 {% endmacro %}
 {% import _self as do %}
 
-<div class="cover_page" id="CoverPage" data-bg-image="{{ image.url }}" data-bg-image-alt="{{ image.alt }}">
+<div class="cover_page" id="CoverPage"
+  data-bg-image="/{{ background__image.src }}"
+  data-bg-image-alt="{{ background__image.alt }}"
+  style="background-image: url(/{{ background__image.src }})"
+  >
   <div class="underlay">
     <div class="underlay_contents">
       <h1 class="headline exhibit_logo">

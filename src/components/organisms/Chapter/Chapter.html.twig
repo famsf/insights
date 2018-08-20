@@ -1,11 +1,11 @@
 {% macro id(chapter) %}
-  {{- chapter.id|default('chapter' ~ chapter.index) -}}
+  {{- chapter.id|default(chapter.index) -}}
 {% endmacro %}
 {% import _self as get %}
 {% set id = get.id(_context) %}
 {% set isFirstChapter = (index == 0) %}
 
-<section class="chapter {{ classes }}" id="{{ id }}" data-chapter-index="{{ index }}" data-chapter-length="{{ pages|length }}">
+<section class="chapter {{ classes }}" id="chapter_{{ id }}" data-chapter-index="{{ index }}" data-chapter-length="{{ pages|length }}">
   {% for page in pages %}
     {# Use "passthrough" to send chapter/story data to CoverPage + chapter__title. #}
     {# On CoverPage, use the story title instead of chapter title. #}

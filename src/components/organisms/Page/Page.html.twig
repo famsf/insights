@@ -1,6 +1,5 @@
-{% import "@macros/inklude.html.twig" as inklude %}
-<section class="page {{ classes }}" id="{{ id|default(chapter ~ "p" ~  index) }}" data-page-index="{{ index }}">
+<section class="page {{ classes }}" id="chapter_{{ id }}" data-page-index="{{ index }}">
   <div class="frame">
-    {{ inklude.components(_context) }}
+    {% include fullData['Meta_Component'] %}
   </div>
 </section>

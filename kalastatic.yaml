@@ -58,7 +58,9 @@ pluginOpts:
       summary: Content_Summary
       contents: Content_Content
       image: Content_Image
-      type: _type,
+      type: _type
+      # Cover Page
+      background__image: Content_Background-Image
       # Insights Info
       tagline: Content_Tagline
       tickets_url: Content_Tickets-URL
@@ -77,7 +79,7 @@ pluginOpts:
       right_col__image__brief: Right-Column_Caption-Brief
       right_col__body: Right-Column_Body
       # Video Embed
-      videoEmbedId: Content_Video-Id,
+      videoEmbedId: Content_Video-Id
       posterImage: Content_Poster-Image
       # Scroll Comparison
       # Meta

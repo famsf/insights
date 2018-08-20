@@ -1,12 +1,12 @@
 <div class="chapter__title">
 
-  <img src="{{ img.url }}" class="object-fit" alt="{{ img.alt }}">
+  <img src="{{ fullData['Content_Background-Image'] }}" class="object-fit" alt="{{ fullData['Content_Background-ImageAlt'] }}">
 
   <div class="overlay">
     <div class="overlay__contents">
       <h1 class="chapter__headline">
-        <span class="numeral">{{ numeral }}</span>
-        <span class="title">{{ title }}</span>
+        <span class="numeral">{{ fullData.Content_Numeral }}</span>
+        <span class="title">{{ fullData['Content_Chapter-Title'] }}</span>
       </h1>
     </div>
   </div>
