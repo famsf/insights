@@ -605,6 +605,7 @@ chapters:
   #c3p2
   - components:
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
+      classes: "height-auto"
       right:
         components:
           - template: "@atoms/textarea/textarea.html.twig"
@@ -633,6 +634,7 @@ chapters:
             alt: Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars
             style: horizontal
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
+      classes: "height-auto"
       right:
         components:
           - template: "@atoms/h3/h3.html.twig"
@@ -664,6 +666,7 @@ chapters:
             alt: Chevreul color wheel
             style: horizontal
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
+      classes: "height-auto"
       right:
         components:
           - template: "@atoms/h3/h3.html.twig"
