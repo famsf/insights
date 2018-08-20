@@ -20,7 +20,7 @@ chapters:
   - classes: invert-top-bar
     components:
     - template: "@molecules/CoverPage/CoverPage.html.twig"
-      subtitle: du Transsibérien et de<br>la petite Jehanne de France
+      subtitle: du Transsibérien et de<br>la Petite Jehanne de France
       info: "Reva and David Logan Collection of Illustrated Books<br />Legion of Honor Museum"
       image:
         url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/0_la-prose-title-card.jpg
@@ -609,7 +609,7 @@ chapters:
       right:
         components:
           - template: "@atoms/textarea/textarea.html.twig"
-            text: "<p>The book is a vortex of convergent and oppositional energies, an environment created for a remarkable reading experience. When folded it is roughly four by seven inches, and just over an inch thick. It can be read by unfolding the accordion-fold “pages” one segment at a time. Alternatively, one can unfold it to full length, more than six feet, on a long table. That way the entire design and text can be apprehended &mdash; not, as Apollinaire said, at a glance, but by following the poetic narrative as it weaves through splashes of color.</p>"
+            text: "<p>The book is a vortex of convergent and oppositional energies, an environment created for a remarkable reading experience. When folded it is roughly four by seven inches, and just over an inch thick. It can be read by unfolding the accordion-fold “pages” one segment at a time. Alternatively, one can unfold it to full length, more than six feet, on a long table. That way the entire design and text can be apprehended&mdash;not, as Apollinaire said, at a glance, but by following the poetic narrative as it weaves through splashes of color.</p>"
             dropcap: false
           - template: "@atoms/cta__button/cta__button.html.twig"
             text: Read an English translation of the Poem
@@ -845,7 +845,7 @@ chapters:
             text: "The 1960s: Light, Color, Motion"
           - template: "@atoms/textarea/textarea.html.twig"
             classes: margin-bottom-2
-            text: "<p>The interplay of colors and the synesthetic illusion of movement in Delaunay’s pochoir has an uncanny parallel in the psychedelic light shows of the 1960s, where bright, pulsating, liquid forms merged with an experience of rhythmic sound, as the rhythms of Cendrars’s lines &mdash; dedicated, as he said, “to the musicians” &mdash; seem to emerge from the artist’s abstract color-forms.</p>"
+            text: "<p>The interplay of colors and the synesthetic illusion of movement in Delaunay’s pochoir has an uncanny parallel in the psychedelic light shows of the 1960s, where bright, pulsating, liquid forms merged with an experience of rhythmic sound, as the rhythms of Cendrars’s lines&mdash;dedicated, as he said, “to the musicians”&mdash;seem to emerge from the artist’s abstract color-forms.</p>"
             dropcap: false
           - template: "@molecules/Picture/PictureWithCaption.html.twig"
             caption:
@@ -867,7 +867,7 @@ chapters:
             classes: margin-top-3
             text: "Book Art Now"
           - template: "@atoms/textarea/textarea.html.twig"
-            text: "<p>The steady growth of the field of book art in recent decades finds an iconic predecessor in <em>La prose</em>. Its unique appropriation of structure and its hybrid nature have made it an influence on succeeding generations of artists and writers who take the book beyond the limits of conventional form. For his spectacular <em>Nature Abhors</em>, Philip Zimmermann used a structure devised by influential book artist Hedi Kyle &mdash; seen here in an animation by Radek Skrivanek.</p>"
+            text: "<p>The steady growth of the field of book art in recent decades finds an iconic predecessor in <em>La prose</em>. Its unique appropriation of structure and its hybrid nature have made it an influence on succeeding generations of artists and writers who take the book beyond the limits of conventional form. For his spectacular <em>Nature Abhors</em>, Philip Zimmermann used a structure devised by influential book artist Hedi Kyle&mdash;seen here in an animation by Radek Skrivanek.</p>"
             dropcap: false
 
   # c5p2
