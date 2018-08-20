@@ -17,7 +17,7 @@
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
-// @include foundation-range-input;
+@include foundation-range-input;
 @include foundation-accordion;
 @include foundation-accordion-menu;
 @include foundation-badge;
@@ -149,6 +149,8 @@ $plyr-color-heather: #b7c5cd !default;
 @import '../components/atoms/h3/h3';
 @import '../components/atoms/h4/h4';
 @import '../components/atoms/copyright/copyright';
+@import '../components/atoms/audio_player/audio_player';
+@import '../components/atoms/transcript/transcript';
 
 // Import Molecules.
 @import '../components/molecules/TopBar/TopBar';
@@ -169,6 +171,7 @@ $plyr-color-heather: #b7c5cd !default;
 @import '../components/molecules/off-canvas/off-canvas';
 @import '../components/molecules/footer__cta/footer__cta';
 @import '../components/molecules/footer__navigation/footer__navigation';
+@import '../components/molecules/AudioWithTranscript/AudioWithTranscript';
 
 // Import Layouts.
 @import '../components/layouts/one_up--primary/one_up--primary';

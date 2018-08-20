@@ -1,0 +1,53 @@
+%audio {
+  .plyr__controls {
+    padding: 0;
+    margin-bottom: 1rem;
+    color: $black;
+  }
+
+  .plyr__control {
+    border-radius: 1000rem;
+    background: $primary-color;
+    padding: .75rem;
+    height: 2.5rem;
+    width: 2.5rem;
+
+    svg {
+      fill: $white !important;
+      height: .75rem;
+      width: .75rem;
+      transform: translateX(.125rem);
+    }
+
+    &:hover {
+      background: darken($primary-color, 15%) !important;
+
+      svg {
+        fill: $white !important;
+      }
+    }
+  }
+
+  .plyr__progress__buffer {
+    color: $primary-color;
+    display: none;
+  }
+
+  &.plyr--full-ui input[type='range'] {
+    color: $primary-color;
+  }
+
+  .theme--dark & {
+    .plyr__controls {
+      color: $white;
+    }
+  }
+}
+
+audio {
+  opacity: 0;
+}
+
+.plyr--audio {
+  @extend %audio;
+}
