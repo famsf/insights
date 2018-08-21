@@ -37,17 +37,6 @@
   };
 
   fds.onCoverImageLoaded = function () {
-    fds.coverPageElement.classList.add('loaded');
-    setTimeout(function () {
-      fds.coverPageElement.classList.add('post_loaded');
-      fds.rootElement.querySelector('.page').classList.add('triggered');
-      win.document.body.classList.remove('loading');
-      win.document.body.classList.remove('scroll_lock');
-      fds.scrollLock = false;
-      fds.rootElement.classList.add('initialized');
-      setTimeout(function () {
-        fds.coverPageElement.classList.add('initialized');
-      }, 700);
-    }, 1250);
+    console.log('a');
   };
 }(window.fds = window.fds || {}, window.fds.coverPage = window.fds.coverPage || {}, window));

@@ -20,6 +20,8 @@
     var startPage;
     pages.container = doc.querySelector(containerSelector);
     pages.pages = doc.querySelectorAll(pageSelector);
+    pages.preloadElements = pages.container.querySelectorAll('.video--embed, .scroll-comparison, in-depth, .horizontal-image-slider');
+    console.log('| » |', pages.preloadElements.length);
 
     if (!pages.container || !pages.pages.length) {
       console.log(':::::: Warning: Failed to initialize pages, check your selectors, but maybe you`re just prototyping isolated components');
@@ -31,6 +33,7 @@
     pages.clearElement = doc.querySelector(clearElementSelector);
     pages.clearElementHeight = pages.clearElement.clientHeight;
     pages.calculateThreshholds();
+
 
     if (locHash.length > 1) {
       params = locHash.split('&');

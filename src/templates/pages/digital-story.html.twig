@@ -1,10 +1,10 @@
 <div class="insights-app off-canvas-wrapper" id="insights-app">
   {% include '@molecules/TopBar/TopBar.html.twig' with { tagline: tagline, tickets_url: tickets_url, facebook_url: facebook_url, twitter_url: twitter_url } only %}
-  {% include '@molecules/ChapterNav/ChapterNav.html.twig' with { chapters: chapters } only %}
+  {% include '@molecules/ChapterNav/ChapterNav.html.twig' with { chapters: children } only %}
   <div class="chapters_container off-canvas-content" id="app">
-    {% include '@environments/Chapters/Chapters.html.twig' with { chapters: chapters, title: story_title } only %}
+    {% include '@environments/Chapters/Chapters.html.twig' with { chapters: children, story__title: story__title|trim, story__subtitle: story__subtitle|trim, exhibit__info: exhibit__info|trim } only %}
     {% include '@organisms/Footer/Footer.html.twig' with { sections: footer.sections, classes: footer.classes } only %}
   </div>
 </div>
 
-{% include '@molecules/off-canvas/off-canvas.html.twig' with { chapters: chapters, title: story_title, tickets_url: tickets_url, sections: footer.sections, classes: footer.classes } only %}
+{% include '@molecules/off-canvas/off-canvas.html.twig' with { chapters: children, title: story_title, tickets_url: tickets_url, sections: footer.sections, classes: footer.classes } only %}

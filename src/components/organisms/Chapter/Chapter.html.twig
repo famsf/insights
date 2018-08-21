@@ -5,18 +5,22 @@
 {% set id = get.id(_context) %}
 {% set isFirstChapter = (index == 0) %}
 
-<section class="chapter {{ classes }}" id="chapter_{{ id }}" data-chapter-index="{{ index }}" data-chapter-length="{{ pages|length }}">
-  {% for page in pages %}
+<section class="chapter {{ classes }}" id="chapter_{{ id }}" data-chapter-index="{{ index }}" data-chapter-length="{{ children|length }}">
+  {% for child in children %}
     {# Use "passthrough" to send chapter/story data to CoverPage + chapter__title. #}
     {# On CoverPage, use the story title instead of chapter title. #}
     {% set isFirstPageOfChapter = loop.first %}
     {%
-      include "@organisms/Page/Page.html.twig" with page|merge({
+      include "./src/components/organisms/Page/Page.html.twig" with child|merge({
         index: loop.index0,
         chapter: id,
+        story__title: story__title,
+        story__subtitle: story__subtitle,
         passthrough: isFirstPageOfChapter ? {
-          title: isFirstChapter ? story : title,
-          numeral: numeral,
+          title: isFirstChapter ? story__title : title,
+          numeral: child.chapter__numeral,
+          story__title: story__title,
+          story__subtitle: story__subtitle
         } : {},
       }) only
     %}
