@@ -5,6 +5,9 @@
   height="{{ height }}"
   ci-responsive
   ci-src="{{ url }}"
+  {% if type %}
+    ci-type="{{ type }}"
+  {% endif %}
   {% if sizes %}
     ci-size="{{ sizes }}"
   {% endif %}
