@@ -91,11 +91,6 @@ chapters:
               (203.2 x 43.2 cm). FAMSF, Gift of the Reva and David Logan Foundation,
               2016.15.4.1'
           picture:
-            srcset:
-            - min-width: 0px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg
-            - min-width: 800px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg
             alt: Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars
             style: vertical
@@ -118,16 +113,9 @@ chapters:
           caption:
             brief: 'Photo: Florence Henri, 1931. Martini & Ronchetti Gallery and image source'
           picture:
-            srcset:
-            - min-width: 0px
-              src: /assets/images/delaunay.jpg
-            - min-width: 350px
-              src: /assets/images/delaunay.jpg
-            - min-width: 800px
-              src: /assets/images/delaunay.jpg
             url: /assets/images/delaunay.jpg
             alt: Photo of sonia delaunay-terk
-            style: vertical
+            style: square
         - template: "@atoms/h3/h3.html.twig"
           text: "Sonia Delaunay-Terk"
         hidden:
@@ -147,16 +135,9 @@ chapters:
           caption:
             brief: Blaise Cendrars, ca.1907. Wikimedia Commons
           picture:
-            srcset:
-            - min-width: 0px
-              src: /assets/images/cendrars.jpg
-            - min-width: 350px
-              src: /assets/images/cendrars.jpg
-            - min-width: 800px
-              src: /assets/images/cendrars.jpg
             url: /assets/images/cendrars.jpg
             alt: Photo of blaise cendrars
-            style: vertical
+            style: square
         - template: "@atoms/h3/h3.html.twig"
           text: "Blaise Cendrars"
         hidden:
@@ -171,13 +152,6 @@ chapters:
       classes: theme--dark
       title: What is an Artist’s Book?
       picture:
-        srcset:
-        - min-width: 0px
-          src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_la-prose-detail-intro.jpg
-        - min-width: 768px
-          src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_la-prose-detail-intro.jpg
-        - min-width: 960px
-          src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_la-prose-detail-intro.jpg
         url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_la-prose-detail-intro.jpg
         alt: La Prose detail
         style: square
@@ -196,13 +170,6 @@ chapters:
               title: What is an Artist's Book?
               text: 'An artist’s book is created to be a work of art, as a painting or sculpture would be. It is a hybrid art form, both literary and visual in concept, and often collaborative.</em>'
               picture:
-                srcset:
-                - min-width: 0px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_la-prose-detail-intro.jpg
-                - min-width: 768px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_la-prose-detail-intro.jpg
-                - min-width: 960px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_la-prose-detail-intro.jpg
                 url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_la-prose-detail-intro.jpg
                 alt: La Prose detail
                 style: square
@@ -212,13 +179,6 @@ chapters:
               text: '“Chi-Rho” page from <em>Book of Kells</em>. © Trinity College Dublin'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
-              srcset:
-              - min-width: 0px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
-              - min-width: 350px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
-              - min-width: 800px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
               url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
               alt: untitled page from parallelement by paul verlaine and pierre bonnard
               style: vertical
@@ -228,13 +188,6 @@ chapters:
               text: 'William Blake, Plate 16: "Thou hast fulfilled the Judgment of the wicked" from the complete proof edition of Blake’s <em>Book of Job</em>, 1826. Engraving, 19.6 x 16.2 cm (image). FAMSF, museum purchase, William H. Noble Bequest Fund, 1979.1.11.17'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
-              srcset:
-              - min-width: 0px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
-              - min-width: 350px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
-              - min-width: 800px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
               url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
               alt: untitled page from parallelement by paul verlaine and pierre bonnard
               style: vertical
@@ -244,13 +197,6 @@ chapters:
               text: 'Pierre Bonnard (artist), Tony  Beltrand, Ambroise Vollard (publisher), Paul Verlaine (author), René Kieffer (binder), Imprimerie Nationale de France (printer), Auguste Clot (printer), Untitled, page 4 in the book <em>Parallèlement</em> by Paul Verlaine (Paris: Ambroise Vollard, 1900)., 1887–1900. Lithograph (pink sanguine) on Holland wove paper watermarked "Parallèlement", sheet: 295 x 240 mm (11 5/8 x 9 7/16 in.); image: 93 x 179 mm (3 11/16 x 7 1/16 in.). FAMSF, The Reva and David Logan Collection of Illustrated Books, 2000.200.45.6'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
-              srcset:
-              - min-width: 0px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
-              - min-width: 350px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
-              - min-width: 800px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
               url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
               alt: untitled page from parallelement by paul verlaine and pierre bonnard
               style: vertical
@@ -260,13 +206,6 @@ chapters:
               text: 'El Lissitzky (artist), Gosizdat (publisher), fourth chapter, page 17 in the book <em>Dlia Golosa (For the Voice)</em> by Vladimir Vladimirovich Mayakovsky (Berlin: Gosizdat, 1923), 1923. Lithograph (color) on cream wove paper, sheet: 187 x 124 mm (7 3/8 x 4 7/8 in.); image: 134 x 112 mm (5 1/4 x 4 7/16 in.). FAMSF, Gift of the Reva and David Logan Foundation, 1998.40.79.8'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
-              srcset:
-              - min-width: 0px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
-              - min-width: 350px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
-              - min-width: 800px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
               url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
               alt: untitled page from parallelement by paul verlaine and pierre bonnard
               style: vertical
@@ -314,16 +253,9 @@ chapters:
           caption:
             brief: 'Stéphane Mallarmé, ca. 1890. Nadar studio. © The New York Public Library'
           picture:
-            srcset:
-            - min-width: 0px
-              src: /assets/images/mallarme.jpg
-            - min-width: 350px
-              src: /assets/images/mallarme.jpg
-            - min-width: 800px
-              src: /assets/images/mallarme.jpg
             url: /assets/images/mallarme.jpg
             alt: Photo of Stéphane Mallarmé
-            style: vertical
+            style: square
         - template: "@atoms/h3/h3.html.twig"
           text: "Stéphane Mallarmé"
         hidden:
@@ -341,16 +273,9 @@ chapters:
           caption:
             brief: Photograph of Guillaume Apollinaire with a shrapnel wound to the temple, spring 1916. Wikimedia
           picture:
-            srcset:
-            - min-width: 0px
-              src: /assets/images/apollinaire.jpg
-            - min-width: 350px
-              src: /assets/images/apollinaire.jpg
-            - min-width: 800px
-              src: /assets/images/apollinaire.jpg
             url: /assets/images/apollinaire.jpg
             alt: Photo of Guillaume Apollinaire
-            style: vertical
+            style: square
         - template: "@atoms/h3/h3.html.twig"
           text: "Guillaume Apollinaire"
         hidden:
@@ -380,64 +305,32 @@ chapters:
           text: "Pablo Picasso (artist), Henry Kahnweiler (publisher), Max Jacob (author), Paul Birault (printer), Les Presses Eugène Delâtre (printer), <em>Saint Matorel</em> by Max Jacob (Paris: Henry Kahnweiler, 1911), 1911. 4 etchings (one with drypoint) on ivory laid Holland van Gelder paper; publisher's device on title page after a woodcut by Andre Derain; quarter leather with decorated Japanese paper covers, gold lettering on spine; decorated Japanese paper endpapers; original wrappers bound in, object: 267 x 200 mm (10 1/2 x 7 7/8 in.). FAMSF, The Reva and David Logan Collection of Illustrated Books, 2000.200.59.1-4"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
-          srcset:
-          - min-width: 0px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/12_picasso-jacob.jpg
-          - min-width: 350px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/12_picasso-jacob.jpg
-          - min-width: 800px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/12_picasso-jacob.jpg
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/12_picasso-jacob.jpg
           alt: the book saint matorel by max jacob and pablo picasso
-          style: vertical
       - caption:
           id: c2p3-slide-3-caption
           brief: "André Derain/Guillaume Apollinaire: <em>L'Enchanteur pourrissant</em> was a book of firsts: Apollinaire's first published book, illustrated with Derain's first book illustrations – also the first book from the great publisher Daniel-Henry Kahnweiler, then age 25."
           text: "André Derain (artist), Henry Kahnweiler (publisher), Guillaume Apollinaire (author), Paul Birault (printer), Untitled, title page, publisher’s detail, in the book L'Enchanteur pourrissant by Guillaume Apollinaire (Paris: Henry Kahnweiler, 1909)., 1909. Woodcut on Arches laid paper, sheet: 265 x 200 mm (10 7/16 x 7 7/8 in.); Image: 64 x 73 mm (2 1/2 x 2 7/8 in.). FAMSF, The Reva and David Logan Collection of Illustrated Books, 2000.200.49.1"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
-          srcset:
-          - min-width: 0px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/13_lenchanteur-pourrissant.jpg
-          - min-width: 350px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/13_lenchanteur-pourrissant.jpg
-          - min-width: 800px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/13_lenchanteur-pourrissant.jpg
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/13_lenchanteur-pourrissant.jpg
           alt:  title page from the book L'Enchanteur pourrissant by Guillaume Apollinaire
-          style: vertical
       - caption:
           id: c2p3-slide-4-caption
           brief: " Fernand Léger/Blaise Cendrars: Léger and Cendrars had both suffered serious injuries in the trenches in the First World War, and each felt a strong affinity with the other’s work. <em>La fin du monde</em> was conceived as a screenplay, begun in collaboration with Guillaume Apollinaire and Jean Cocteau, both of whom soon dropped out."
           text: "Fernand Léger (artist), Editions de la Sirène (publisher), Blaise Cendrars (author), Richard Marcelle (printer), Frazier-Soye (printer), 12th illustration in the book <em>La Fin du monde, filmée par l'ange N.D.</em> by Blaise Cendrars (Paris: Editions de la Sirène, 1919), 1919. Color pochoir on ivory wove, lafuma paper, sheet: 320 x 250 mm (12 5/8 x 9 13/16 in.); image: 320 x 79 mm (12 5/8 x 3 1/8 in.), FAMSF, Gift of the Reva and David Logan Foundation, 1998.40.77.12"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
-          srcset:
-          - min-width: 0px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/14_la-fin-du-monde.jpg
-          - min-width: 350px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/14_la-fin-du-monde.jpg
-          - min-width: 800px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/14_la-fin-du-monde.jpg
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/14_la-fin-du-monde.jpg
           alt: illustration in the book <em>La Fin du monde</em> by Blaise Cendrars and Fernand Léger
-          style: vertical
       - caption:
           id: c2p3-slide-5-caption
           brief: "Juan Gris/Raymond Radiguet: Radiguet, a charismatic prodigy, died in 1923 at age 20, leaving behind two brilliant and scandalous novels and a string of lovers, male and female, that seemed to include half of Paris bohemia. Gris met an untimely death at age 40, in the year following publication of <em>Denise</em>."
           text: "Juan Gris (artist), Galerie Simon (publisher), Imprimerie Pitault (printer), Raymond Radiguet (author), Leibovitz (printer), <em>Denise</em> by Raymond Radiguet (Paris: Éditions de la Galerie Simon, 1926), 1926. Book with five lithographs on japon ancien, including front cover; cream japon wrappers with lithograph on front, object: 264 x 195 x 4 mm (10 3/8 x 7 11/16 x 3/16 in.). FAMSF, Gift of the Reva and David Logan Foundation, 1998.40.55.1-5. © 2018 Artists Rights Society (ARS), New York / ADAGP, Paris"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
-          srcset:
-          - min-width: 0px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/15_denise.jpg
-          - min-width: 350px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/15_denise.jpg
-          - min-width: 800px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/15_denise.jpg
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/15_denise.jpg
           alt: title page from the book Denise by Raymond Radiguet and Juan Gris
-          style: vertical
   # c2p4
   - components:
     - template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
@@ -449,16 +342,8 @@ chapters:
             brief: <em>The New York Times</em>, published June 8, 1913
             text: Copyright &copy; The New York Times
           picture:
-            srcset:
-            - min-width: 0px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/Russian_Ballet_in_Paris_-_New_York_Times_1913-06-07.png
-            - min-width: 350px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/Russian_Ballet_in_Paris_-_New_York_Times_1913-06-07.png
-            - min-width: 800px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/Russian_Ballet_in_Paris_-_New_York_Times_1913-06-07.png
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/Russian_Ballet_in_Paris_-_New_York_Times_1913-06-07.png
             alt: New York Times June 7, 1913
-            style: vertical
       right:
         components:
         - template: "@atoms/h3/h3.html.twig"
@@ -485,11 +370,6 @@ chapters:
             brief: Sergei Diaghilev (left) with Igor Stravinsky
             text: 'Rite of Spring premiere, 1913. © Hulton Archive/Getty Images'
           picture:
-            srcset:
-            - min-width: 0px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/16_stravinsky-diaghilev.jpg
-            - min-width: 800px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/16_stravinsky-diaghilev.jpg
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/16_stravinsky-diaghilev.jpg
             alt: Sergei Diaghilev with Igor Stravinsky
             style: horizontal
@@ -518,64 +398,32 @@ chapters:
           text: "Marcel Duchamp, <em>Bicycle Wheel</em>, third version, 1951. Museum of Modern Art, MOMA, New York, USA. © Album / Alamy Stock Photo"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
-          srcset:
-          - min-width: 0px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/17_duchamp.jpg
-          - min-width: 350px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/17_duchamp.jpg
-          - min-width: 800px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/17_duchamp.jpg
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/17_duchamp.jpg
           alt: third version of Bicycle Wheel by Marcel Duchamp
-          style: vertical
       - caption:
           id: c2p5-slide-3-caption
           brief: "Marcel Proust publishes <em>Swann’s Way</em> (manuscript notes shown here)"
           text: "Some of Marcel Proust’s notes for <em>Swann’s Way</em>, with doodles. © Bibliotheque nationale de France (BnF), Paris, France, Dist. RMN-Grand Palais/Art Resource, NY"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
-          srcset:
-          - min-width: 0px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/18_proust.jpg
-          - min-width: 350px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/18_proust.jpg
-          - min-width: 800px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/18_proust.jpg
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/18_proust.jpg
           alt: pages of Marcel Proust’s notes for <em>Swann’s Way</em> with drawings
-          style: vertical
       - caption:
           id: c2p5-slide-4-caption
           brief: "Maurice Ravel composes <em>Trois poèmes de Stéphane Mallarmé</em>"
           text: "Maurice Ravel. Bibliothèque nationale de France"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
-          srcset:
-          - min-width: 0px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/19_maurice-ravel.jpg
-          - min-width: 350px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/19_maurice-ravel.jpg
-          - min-width: 800px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/19_maurice-ravel.jpg
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/19_maurice-ravel.jpg
           alt: photo of maurice ravel
-          style: vertical
       - caption:
           id: c2p5-slide-5-caption
           brief: "Guillaume Apollinaire publishes <em>Alcools</em>, with a portrait by Picasso and etchings by Louis Marcoussis"
           text: "Guillaume Apollinaire: <em>Alcools</em>, with a portrait by Picasso and etchings by Louis Marcoussis (Paris: Mercure de France, 1913), 1913"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
-          srcset:
-          - min-width: 0px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/20_alcools.jpg
-          - min-width: 350px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/20_alcools.jpg
-          - min-width: 800px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/20_alcools.jpg
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/20_alcools.jpg
           alt: title page for the book alcools by guillaume apollinaire with a portrait by Picasso and etchings by Louis Marcoussis
-          style: vertical
 
 ################################################################################
 ## CHAPTER 3 ###################################################################
@@ -622,16 +470,9 @@ chapters:
             brief: Detail of <em>La prose du Transsibérien et de la petite Jehanne de France</em> by Sonia Delaunay-Terk and Blaise Cendrars
             text: 'Sonia Delaunay-Terk (artist), Blaise Cendrars (author), <em>La Prose du Transsibérien et de la petite Jehanne de France</em> (detail), 1913. Illustrated book with pochoir, case: 80 x 17 in. (203.2 x 43.2 cm). FAMSF, Gift of the Reva and David Logan Foundation, 2016.15.4.1'
           picture:
-            srcset:
-              - min-width: 0px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/22_la-prose-detail-the-book.jpg
-              - min-width: 350px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/22_la-prose-detail-the-book.jpg
-              - min-width: 800px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/22_la-prose-detail-the-book.jpg
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/22_la-prose-detail-the-book.jpg
             alt: Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars
-            style: horizontal
+            style: none
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
       right:
         components:
@@ -653,16 +494,9 @@ chapters:
             brief: Chevreul color chart
             text: 'Chevreul color wheel, 1839. Wikimedia'
           picture:
-            srcset:
-              - min-width: 0px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/23_chevreul-color-chart.jpg
-              - min-width: 350px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/23_chevreul-color-chart.jpg
-              - min-width: 800px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/23_chevreul-color-chart.jpg
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/23_chevreul-color-chart.jpg
             alt: Chevreul color wheel
-            style: horizontal
+            style: none
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
       right:
         components:
@@ -684,16 +518,9 @@ chapters:
             brief: "Robert Delaunay’s shaped canvas <em>Windows Open Simultaneously</em>, 1912"
             text: 'Robert Delaunay, <em>Windows Open Simultaneously 1st Part, 3rd Motif (Fenetres ouvertes simultanément 1ère partie 3e motif)</em>, 1912. The Solomon R. Guggenheim Foundation Peggy Guggenheim Collection, Venice, 1976'
           picture:
-            srcset:
-              - min-width: 0px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/24_windows-open.jpg
-              - min-width: 350px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/24_windows-open.jpg
-              - min-width: 800px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/24_windows-open.jpg
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/24_windows-open.jpg
             alt: Windows Open Simultaneously 1st Part, 3rd Motif by Robert Delaunay
-            style: horizontal
+            style: none
     - template: "@molecules/commentary/commentary.html.twig"
       component_name: commentary
       author_name: Marjorie Perloff
@@ -745,16 +572,8 @@ chapters:
               brief: "Type compositors at Crété"
               text: '<em>Imprimerie Crété</em> by Société Anonyme (Paris: Corbeil, 1925). Courtesy of Kitty Maryatt'
             picture:
-              srcset:
-                - min-width: 0px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/26_type-compositors.jpg
-                - min-width: 350px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/26_type-compositors.jpg
-                - min-width: 800px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/26_type-compositors.jpg
               url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/26_type-compositors.jpg
               alt: Photo of type compositors at Crété
-              style: horizontal
           - template: "@atoms/h3/h3.html.twig"
             classes: margin-top-3
             text: "Art"
@@ -784,16 +603,8 @@ chapters:
               brief: "Paper conservator Victoria Binder used a microscope to analyze the fiber composition of the copy of <em>La prose</em> in the Logan Collection at the Legion of Honor"
               text: 'Sonia Delaunay-Terk (artist), Blaise Cendrars (author), <em>La Prose du Transsibérien et de la petite Jehanne de France</em> (detail), 1913. Illustrated book with pochoir, case: 80 x 17 in. (203.2 x 43.2 cm). FAMSF, Gift of the Reva and David Logan Foundation, 2016.15.4.1'
             picture:
-              srcset:
-                - min-width: 0px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/27_microscopic-view-la-prose.jpg
-                - min-width: 350px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/27_microscopic-view-la-prose.jpg
-                - min-width: 800px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/27_microscopic-view-la-prose.jpg
               url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/27_microscopic-view-la-prose.jpg
               alt: Microscopic view of La prose du Transsiberien used to analyze fiber composition
-              style: horizontal
       right:
         components:
           - template: "@atoms/h3/h3.html.twig"
@@ -851,13 +662,6 @@ chapters:
               brief: Bill Ham, <em>Kinetic Light Painting</em>, 2016-2017
               text: Courtesy of Bill Ham
             picture:
-              srcset:
-                - min-width: 0px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/28_b-bill-ham-light-show.jpg
-                - min-width: 350px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/28_b-bill-ham-light-show.jpg
-                - min-width: 800px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/28_b-bill-ham-light-show.jpg
               url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/28_b-bill-ham-light-show.jpg
               alt: Bill Ham kinetic light painting
               style: horizontal
@@ -912,16 +716,9 @@ chapters:
             brief: David and Reva Logan
             text: Courtesy of the Logan Foundation
           picture:
-            srcset:
-              - min-width: 0px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/30_the-logans.jpg
-              - min-width: 350px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/30_the-logans.jpg
-              - min-width: 800px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/30_the-logans.jpg
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/30_the-logans.jpg
             alt: Photo of David and Reva Logan
-            style: vertical
+            style: square
 
   # c6p2
   - components:
@@ -944,13 +741,6 @@ chapters:
             brief: The Reva and David Logan Gallery of Illustrated Books at the Legion of Honor
             text: ''
           picture:
-            srcset:
-              - min-width: 0px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/31_logan-gallery.jpg
-              - min-width: 350px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/31_logan-gallery.jpg
-              - min-width: 800px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/31_logan-gallery.jpg
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/31_logan-gallery.jpg
             alt: Photo of David and Reva Logan
             style: horizontal
