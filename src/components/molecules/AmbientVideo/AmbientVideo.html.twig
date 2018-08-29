@@ -8,7 +8,7 @@
   }"
 %}
 
-<div class="ambient_video two_up--primary fluid" ci-responsive ci-img-background="{{ background.uri }}" ci-size="{{ background_sizes|default(default_image_sizes) }}">
+<div class="ambient_video two_up--primary fluid" ci-responsive ci-img-background="{{ background.uri }}" ci-size="{{ background_sizes|default(default_image_sizes) }}" ci-type="crop">
   <div class="text_content grid-x grid-margin-x" id="{{ id }}">
     <div class="cell medium-4 medium-offset-7">
       {{ text }}

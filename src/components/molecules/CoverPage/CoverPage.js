@@ -20,6 +20,7 @@
     img.setAttribute('ci-responsive', true);
     img.setAttribute('ci-src', imgSrc);
     img.setAttribute('ci-size', imgSize);
+    img.setAttribute('ci-type', 'crop');
     img.classList.add('bg-image');
     fds.coverPageElement.querySelector('.underlay').appendChild(img);
     jScaler.processImage(img);
