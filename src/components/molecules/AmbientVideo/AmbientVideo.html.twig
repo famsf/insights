@@ -1,4 +1,14 @@
-<div class="ambient_video two_up--primary fluid" ci-responsive ci-img-background="{{ background.uri }}">
+{% set default_image_sizes =
+  "{
+    small: '375x667',
+    medium: '1024x768',
+    large: '1280x800',
+    xlarge: '1440x900',
+    xxlarge: '1920x1080'
+  }"
+%}
+
+<div class="ambient_video two_up--primary fluid" ci-responsive ci-img-background="{{ background.uri }}" ci-size="{{ background_sizes|default(default_image_sizes) }}">
   <div class="text_content grid-x grid-margin-x" id="{{ id }}">
     <div class="cell medium-4 medium-offset-7">
       {{ text }}

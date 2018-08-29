@@ -1,4 +1,14 @@
-<div class="video--embed" ci-responsive ci-img-background="{{ poster }}">
+{% set default_image_sizes =
+  "{
+    small: '375x667',
+    medium: '1024x768',
+    large: '1280x800',
+    xlarge: '1440x900',
+    xxlarge: '1920x1080'
+  }"
+%}
+
+<div class="video--embed" ci-responsive ci-img-background="{{ poster }}" ci-size="{{ poster_sizes|default(default_image_sizes) }}">
   <div class="video--embed__wrapper">
     {% if youtube %}
       <div class="plyr_target video_player youtube" data-plyr-provider="youtube" id="{{ id }}_vid" data-plyr-embed-id="{{ youtube.embed }}" data-poster="{{ poster }}"></div>
