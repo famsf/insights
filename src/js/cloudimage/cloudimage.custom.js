@@ -4,7 +4,14 @@
       TOKEN: 'a2coygopn',
       BASE_URL: 'https://insights.famsf.org',
 
-      // Set the responsive image breakpoints.
+      // See: _settings.scss for the Foundation breakpoint configuration.
+      //
+      // These responsive breakpoints match up with Foundation's breakpoint
+      // configuration to ensure images are used at the proper breakpoint.
+      //
+      // Note: Cloudimage.io uses max-width's for their media queries while
+      // Foundation uses min-width, otherwise these 2 configurations would
+      // match exactly.
       ORDER: ['xxlarge', 'xlarge', 'large', 'medium', 'small'],
       PRESETS: {
         small: 640,
