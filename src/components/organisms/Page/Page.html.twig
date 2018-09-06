@@ -1,7 +1,6 @@
-<section class="page {{ classes }}" id="chapter_{{ id }}" data-page-index="{{ index }}">
+{% import "@macros/inklude.html.twig" as inklude %}
+<section class="page {{ classes }}" id="{{ id|default(chapter ~ "p" ~  index) }}" data-page-index="{{ index }}">
   <div class="frame">
-      <!-- Component: {{ component }} -->
-      {# include component with _context only #}
-      <!-- End Component -->
+    {{ inklude.components(_context) }}
   </div>
 </section>
