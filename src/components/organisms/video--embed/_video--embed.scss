@@ -9,7 +9,7 @@ Markup: video--embed.html.twig
 */
 
 .plyr {
-  max-height: 100%;
+  max-height: 100vh;
 }
 
 .plyr__control {
@@ -140,15 +140,13 @@ Markup: video--embed.html.twig
       @extend .cell;
       @extend .medium-10;
       @extend .medium-offset-1;
-    }
-
-    .plyr {
-      //height: 100%;
+      position: relative;
     }
 
     .plyr__video-wrapper {
       height: 100%;
     }
+
     .plyr--video .plyr__controls {
       position: absolute;
     }

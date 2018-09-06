@@ -367,9 +367,6 @@
           controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'captions', 'settings', 'pip', 'fullscreen']
         });
 
-        videoId = plyr.media.id;
-        videoParent = document.getElementById(videoId).parentElement.parentElement.parentElement;
-
         plyr.on('ready', function (e) {
           poster = page.embeddedVideoEl.dataset.poster;
           if (poster) {
@@ -381,10 +378,14 @@
         });
 
         plyr.on('playing', function (e) {
+          videoId = plyr.media.id;
+          videoParent = document.getElementById(videoId).parentElement.parentElement.parentElement;
           videoParent.classList.add('playing');
         });
 
         plyr.on('pause', function (e) {
+          videoId = plyr.media.id;
+          videoParent = document.getElementById(videoId).parentElement.parentElement.parentElement;
           videoParent.classList.remove('playing');
         });
       }
