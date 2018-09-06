@@ -8,6 +8,10 @@ Markup: video--embed.html.twig
 
 */
 
+.plyr {
+  max-height: 100vh;
+}
+
 .plyr__control {
   path {
     fill: $white;
@@ -22,6 +26,36 @@ Markup: video--embed.html.twig
   background-color: #fff !important;
   svg {
     fill: $black !important;
+  }
+}
+
+.plyr__control--overlaid {
+  background: $primary-color;
+  padding: 1rem;
+
+  @include breakpoint(medium) {
+    padding: 1.5rem;
+  }
+
+  &:focus {
+    background: $primary-color;
+  }
+
+  svg {
+    transition: all .25s ease-in-out;
+    width: 1rem;
+    height: 1rem;
+
+    @include breakpoint(medium) {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .overlay & {
+    @include breakpoint(medium) {
+      margin-top: 3rem;
+    }
   }
 }
 

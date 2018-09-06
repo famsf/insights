@@ -49,6 +49,9 @@ chapters:
       poster: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/intro-book-unfolding_thumbnail.jpg
       youtube:
         embed: xt27-zrvHkk
+      overlay:
+        heading: Watch
+        text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 ################################################################################
 ## CHAPTER 1 ###################################################################

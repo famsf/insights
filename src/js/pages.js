@@ -362,8 +362,12 @@
       if (!page.embeddedVideo) {
         plyr = new Plyr(page.embeddedVideoEl, {
           hideControls: 'false',
-          controls: ['play', 'progress', 'current-time', 'mute', 'captions', 'settings', 'pip', 'fullscreen']
+          controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'captions', 'settings', 'pip', 'fullscreen']
         });
+
+        var video_id = plyr.media.id;
+        var parent = document.getElementById(video_id).parentElement.parentElement.parentElement;
+
         plyr.on('ready', function (e) {
           poster = page.embeddedVideoEl.dataset.poster;
           if (poster) {
@@ -372,6 +376,14 @@
           page.embeddedVideo = plyr;
           plyr.play();
           plyr.pause();
+        });
+
+        plyr.on('playing', function (e) {
+          parent.classList.add('playing');
+        });
+
+        plyr.on('pause', function (e) {
+          parent.classList.remove('playing');
         });
       }
     }
