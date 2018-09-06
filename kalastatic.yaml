@@ -44,7 +44,7 @@ pluginOpts:
     verbose: true
     authPath: _auth.json
     filePath: src/assets/images/gathercontent
-    projectId: 187751
+    projectId: 190265
     mappings:
       id: id
       slug: _name

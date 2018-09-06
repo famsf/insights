@@ -10,8 +10,7 @@
     {# Use "passthrough" to send chapter/story data to CoverPage + chapter__title. #}
     {# On CoverPage, use the story title instead of chapter title. #}
     {% set isFirstPageOfChapter = loop.first %}
-    {%
-      include "./src/components/organisms/Page/Page.html.twig" with child|merge({
+    {% include "@kstat/components/organisms/Page/Page.html.twig" with child|merge({
         index: loop.index0,
         chapter: id,
         story__title: story__title,
