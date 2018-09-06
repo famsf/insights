@@ -1,0 +1,15 @@
+{% import "@macros/inklude.html.twig" as inklude %}
+{% macro print(value, default) %}
+  {{- value is defined ? value : default -}}
+{% endmacro %}
+{% import _self as do %}
+<div class="two_up--primary fluid {{ classes }}">
+  <div class="wrapper grid-x grid-margin-x {{ grid }}" id="{{ id }}">
+    <div id="{{ left.id }}" class="cell {{ do.print(left.cols, 'medium-4') }} {{ do.print(left.offset, 'medium-offset-1') }}" {{ left.attributes }}>
+      {% include "@molecules/Picture/PictureWithCaption.html.twig" with { src: fullData['Content_Left-Column_Image'] } only %}
+    </div>
+    <div id="{{ right.id }}" class="cell {{ do.print(right.cols, 'medium-4') }} {{ do.print(right.offset, 'medium-offset-1') }}" {{ right.attributes }}>
+      {{ fullData['Content_Right-Column_Body'] }}
+    </div>
+  </div>
+</div>

@@ -20,6 +20,8 @@
     var startPage;
     pages.container = doc.querySelector(containerSelector);
     pages.pages = doc.querySelectorAll(pageSelector);
+    pages.preloadElements = pages.container.querySelectorAll('.video--embed, .scroll-comparison, in-depth, .horizontal-image-slider');
+    console.log('| » |', pages.preloadElements.length);
 
     if (!pages.container || !pages.pages.length) {
       console.log(':::::: Warning: Failed to initialize pages, check your selectors, but maybe you`re just prototyping isolated components');
@@ -31,6 +33,7 @@
     pages.clearElement = doc.querySelector(clearElementSelector);
     pages.clearElementHeight = pages.clearElement.clientHeight;
     pages.calculateThreshholds();
+
 
     if (locHash.length > 1) {
       params = locHash.split('&');
@@ -274,9 +277,15 @@
       setTimeout(function () {
         fds.scrollLock = false;
         doc.body.classList.remove('scroll_lock');
+        pages.postSnap(page);
         page.el.focus();
       }, 125);
     }, snapScrollDuration);
+  };
+
+  pages.postSnap = function (page) {
+    page.el.classList.add('snapped');
+    pages.triggerTopBarEvents(page);
   };
 
   pages.pinPage = function (page, scrollDir) {
@@ -306,24 +315,28 @@
       pages.pinnedOffset = 0;
       pages.pinned = false;
       pinning = pageEl.classList.contains('pinnedTop') ? 'top' : 'bottom';
+      pageEl.classList.remove('snapped');
       if (pinning === 'top') {
+        console.log('a');
         pageEl.classList.remove('pinnedTop');
-        pageTop = page.chapter.offsetTop + pageEl.offsetTop;
-        scrollTo = pageTop;
+        // pageTop = page.chapter.offsetTop + pageEl.offsetTop;
+        // scrollTo = pageTop;
       }
       else {
+        console.log('b');
         pageEl.classList.remove('pinnedBottom');
-        pageTop = page.chapter.offsetTop + pageEl.offsetTop;
-        scrollTo = pageTop + (pageEl.clientHeight - win.innerHeight);
+        // pageTop = page.chapter.offsetTop + pageEl.offsetTop;
+        // scrollTo = pageTop + (pageEl.clientHeight - win.innerHeight);
       }
       win.scrollTo({
-        top: scrollTo,
+        top: pages.snapPoint,
         behavior: 'instant'
       });
     }
   };
 
   pages.untriggerPage = function (page) {
+    console.log('untrigger', page.id);
     page.el.classList.remove('triggered');
     page.isTriggered = false;
     pages.untriggerVideo(page);
@@ -331,8 +344,8 @@
 
   pages.triggerPage = function (page) {
     var pageEl = page.el;
+    console.log('triggerTopBarEvents', page.id);
     page.istriggered = true;
-    pages.triggerTopBarEvents(page);
     pageEl.classList.add('triggered');
     if (pageEl.classList.contains('hide-chapter-nav')) {
       fds.chapterNav.hideNav();
@@ -370,7 +383,7 @@
             plyr.poster = poster;
           }
           page.embeddedVideo = plyr;
-          plyr.play();
+          // plyr.play();
           plyr.pause();
         });
       }

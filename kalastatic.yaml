@@ -13,8 +13,79 @@ destination: "build"
 # What BrowserSync will consider the web root.
 bsWebroot: build
 
+plugins:
+  - 'metalsmith-gathercontent'
+  # Load information from the environment variables.
+  - 'metalsmith-env'
+  # Define any global variables.
+  - 'metalsmith-define'
+  # Add .json metadata to each file.
+  - 'metalsmith-metadata-files'
+  # Add base, dir, ext, name, and href info to each file.
+  - 'metalsmith-paths'
+  # Load metadata info the metalsmith metadata object.
+  - 'metalsmith-metadata-convention'
+  # Concatenate any needed files.
+  - 'metalsmith-concat-convention'
+  # Load all collections.
+  - 'metalsmith-collections-convention'
+  # Bring in static assets.
+  - 'metalsmith-assets-convention'
+  # Ignore all partials and layouts.
+  - 'metalsmith-ignore'
+  # Render all content with JSTransformers.
+  - 'metalsmith-jstransformer'
+  # Clean URLs.
+  - 'metalsmith-clean-urls'
+
 # Allows changing some of the plugin options.
 pluginOpts:
+  metalsmith-gathercontent:
+    verbose: true
+    authPath: _auth.json
+    filePath: src/assets/images/gathercontent
+    projectId: 190265
+    mappings:
+      id: id
+      slug: _name
+      name: _name
+      component: Meta_Component
+      title: Content_Title
+      tier: tier
+      summary: Content_Summary
+      contents: Content_Content
+      image: Content_Image
+      type: _type
+      chapter__numeral: Content_Numeral
+      chapter__title: Content_Chapter-Title
+      # Cover Page
+      background__image: Content_Background-Image
+      # Insights Info
+      tagline: Content_Tagline
+      tickets_url: Content_Tickets-URL
+      # Story info
+      story__title: Content_Story-Title
+      story__subtitle: Content_Story-Subtitle
+      exhibit__info: Content_Exhibit-Info
+      exhibit__dates: Content_Exhibit-Dates
+      # Columned content
+      left_col__image: Left-Column_Image
+      left_col__image__alt: Left-Column_Image-Alt
+      left_col__image__caption: Left-Column_Image-Caption
+      left_col__image__brief: Left-Column_Caption-Brief
+      left_col__body: Left-Column_Body
+      right_col__image: Right-Column_Image
+      right_col__image__alt: Right-Column_Image-Alt
+      right_col__image__caption: Right-Column_Image-Caption
+      right_col__image__brief: Right-Column_Caption-Brief
+      right_col__body: Right-Column_Body
+      # Video Embed
+      video__id: Content_Video-Id
+      video__poster_image: Content_Poster-Image
+      # Scroll Comparison
+      # Meta
+      template: Meta_Component
+
   # The layouts will live in the templates directory.
   metalsmith-jstransformer:
     pattern: "!components/**"
@@ -36,17 +107,17 @@ pluginOpts:
           - src/components
       twig:
         namespaces:
-          kstat: src
-          atoms: src/components/atoms
-          molecules: src/components/molecules
-          organisms: src/components/organisms
-          ecosystems: src/components/ecosystems
-          environments: src/components/environments
-          layouts: src/components/layouts
-          images: src/images
-          assets: src/assets
-          templates: src/templates
-          macros: src/macros
+          kstat: .
+          atoms: components/atoms
+          molecules: components/molecules
+          organisms: components/organisms
+          ecosystems: components/ecosystems
+          environments: components/environments
+          layouts: components/layouts
+          images: images
+          assets: assets
+          templates: templates
+          macros: macros
         filters:
           clean_id: twig-drupal-filters/filters/clean_id
           bustcache: kalastatic-twig-filters/lib/filters/bustcache
