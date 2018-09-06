@@ -48,7 +48,6 @@
     "kalastatic": "4.1.0-alpha.2",
     "kalastatic-twig-filters": "^0.2.0",
     "kss-bootstrap": "^4.1.1",
-    "kstat-kss-builder": "~2.0.0",
     "metalsmith-gathercontent": "kalamuna/metalsmith-gathercontent#savefiles",
     "motion-ui": "~1.2.2",
     "napa": "^3.0.0",
