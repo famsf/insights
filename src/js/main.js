@@ -184,6 +184,11 @@
       $(this).siblings('.owl-carousel').find('.owl-dots .owl-dot:first-of-type').trigger('click');
     });
 
+    // Transcription toggle.
+    $('.transcript .transcript__toggle').click(function () {
+      $(this).siblings('.transcript__text').toggleClass('active');
+    });
+
     fds.rootElement = doc.querySelector('.insights-app');
     fds.initialize();
   });
