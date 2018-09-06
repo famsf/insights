@@ -1,5 +1,5 @@
-<div class="video--embed {{ overlay ? 'overlay' }}" style="background-image: url({{ poster }});">
-  <div class="video--embed__wrapper">
+<div class="video--embed {{ classes }} {{ overlay ? 'overlay' }}">
+  <div class="video--embed__wrapper" style="background-image: url({{ poster }});">
     {% if youtube %}
       <div class="plyr_target video_player youtube" data-plyr-provider="youtube" id="{{ id }}_vid" data-plyr-embed-id="{{ youtube.embed }}" data-poster="{{ poster }}"></div>
     {% else %}
