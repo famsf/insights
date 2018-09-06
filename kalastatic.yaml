@@ -1,7 +1,6 @@
 # KalaStatic
 # This file configures how KalaStatic operates.
 
-
 # The source directory.
 base: "./"
 

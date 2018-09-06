@@ -113,7 +113,7 @@ chapters:
           caption:
             brief: 'Photo: Florence Henri, 1931. Martini & Ronchetti Gallery and image source'
           picture:
-            url: /assets/images/delaunay.jpg
+            url: https://insights.famsf.org/assets/images/delaunay.jpg
             alt: Photo of sonia delaunay-terk
             style: square
         - template: "@atoms/h3/h3.html.twig"
@@ -135,7 +135,7 @@ chapters:
           caption:
             brief: Blaise Cendrars, ca.1907. Wikimedia Commons
           picture:
-            url: /assets/images/cendrars.jpg
+            url: https://insights.famsf.org/assets/images/cendrars.jpg
             alt: Photo of blaise cendrars
             style: square
         - template: "@atoms/h3/h3.html.twig"
@@ -253,7 +253,7 @@ chapters:
           caption:
             brief: 'Stéphane Mallarmé, ca. 1890. Nadar studio. © The New York Public Library'
           picture:
-            url: /assets/images/mallarme.jpg
+            url: https://insights.famsf.org/assets/images/mallarme.jpg
             alt: Photo of Stéphane Mallarmé
             style: square
         - template: "@atoms/h3/h3.html.twig"
@@ -273,7 +273,7 @@ chapters:
           caption:
             brief: Photograph of Guillaume Apollinaire with a shrapnel wound to the temple, spring 1916. Wikimedia
           picture:
-            url: /assets/images/apollinaire.jpg
+            url: https://insights.famsf.org/assets/images/apollinaire.jpg
             alt: Photo of Guillaume Apollinaire
             style: square
         - template: "@atoms/h3/h3.html.twig"
@@ -834,7 +834,7 @@ footer:
             cols: medium-7
             components:
             - template: "@atoms/img/img.html.twig"
-              url: /assets/images/de-young-museum.jpg
+              url: https://insights.famsf.org/assets/images/de-young-museum.jpg
               alt: de Young Museum
           right:
             offset:
@@ -860,7 +860,7 @@ footer:
             cols: medium-7
             components:
             - template: "@atoms/img/img.html.twig"
-              url: /assets/images/legion-of-honor.jpg
+              url: https://insights.famsf.org/assets/images/legion-of-honor.jpg
               alt: Legion of Honor
           right:
             offset:
