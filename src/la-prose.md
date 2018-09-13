@@ -981,7 +981,7 @@ chapters:
   pages:
 
   # c6p0
-    - classes: height-auto
+    - classes: height-auto hide-chapter-nav
       components:
       - template: "@organisms/Section/Section.html.twig"
         section_classes: theme--primary-light
