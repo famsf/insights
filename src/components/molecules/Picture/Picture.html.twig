@@ -1,3 +1,52 @@
+{% if style == 'horizontal' %}
+  {% set default_image_type = 'crop' %}
+  {% set default_image_sizes =
+    "{
+      small: '320x240',
+      medium: '512x384',
+      large: '640x480',
+      xlarge: '720x540',
+      xxlarge: '960x720'
+    }"
+  %}
+{% elseif style == 'vertical' %}
+  {% set default_image_type = 'crop' %}
+  {% set default_image_sizes =
+    "{
+      small: '320x427',
+      medium: '512x683',
+      large: '640x853',
+      xlarge: '720x960',
+      xxlarge: '960x1280'
+    }"
+  %}
+{% elseif style == 'square' %}
+  {% set default_image_type = 'crop' %}
+  {% set default_image_sizes =
+    "{
+      small: '320x320',
+      medium: '512x512',
+      large: '640x640',
+      xlarge: '720x720',
+      xxlarge: '960x960'
+    }"
+  %}
+{% else %}
+  {% set default_image_type = 'bound' %}
+  {% set default_image_sizes =
+    "{
+      small: '320x320',
+      medium: '512x512',
+      large: '640x640',
+      xlarge: '720x720',
+      xxlarge: '960x960'
+    }"
+  %}
+{% endif %}
+
+{% set sizes = default_image_sizes %}
+{% set type = default_image_type %}
+
 <div class="picture picture--{{ style ?: 'vertical' }}" {{ attributes }}>
   {% include "@atoms/img/img.html.twig" %}
 </div>

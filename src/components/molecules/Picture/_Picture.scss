@@ -11,18 +11,15 @@ Styleguide athing.anotherthign
 */
 
 %picture {
-  display: inline-block;
-  width: 100%;
-  height: auto;
-
-  &.horizontal {
-
+  picture {
+    display: inline-block;
+    width: 100%;
+    height: auto;
   }
 
-  &.vertical {
+  &.horizontal {}
 
-  }
-
+  &.vertical {}
 
   img {
     display: block;
