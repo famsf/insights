@@ -45,10 +45,6 @@
         fds.infoBox.innerHTML = Math.round(currentFps) + 'fps<br>At roughtly' + Math.round(msPerFrame) + 'ms/frame<br>currentPage: ' + fds.pages.getCurrentPage().id;
       }
       fds.then = newtime - (elapsed % fds.FpsInterval);
-      /* This feels a little hacky, we should make the footer a chapter */
-      if (fds.scroll.y > fds.rootElement.clientHeight) {
-        fds.chapterNav.hideNav();
-      }
     }
     fds.scroll.last.y = fds.scroll.y;
   };
@@ -82,7 +78,7 @@
     fds.chapterNav.showNav();
     fds.topBar.initialize('topBar');
     fds.pages.initialize('.chapters_container', '.page', '.top-bar');
-    fds.footer = doc.getElementById('insights__footer');
+
     fds.chapterNav.onScroll(sy);
     fds.then = win.performance.now();
     fds.startTime = fds.then;
