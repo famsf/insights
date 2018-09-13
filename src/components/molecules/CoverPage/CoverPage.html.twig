@@ -1,3 +1,13 @@
+{% set default_image_sizes =
+  "{
+    small: '375x667',
+    medium: '1024x768',
+    large: '1280x800',
+    xlarge: '1440x900',
+    xxlarge: '1920x1080'
+  }"
+%}
+
 {% macro print(title) %}
   <span class="solid">{{ title is iterable ? title.firstLine : title }}</span>
   {% if title.secondLine is not empty %}
@@ -6,7 +16,7 @@
 {% endmacro %}
 {% import _self as do %}
 
-<div class="cover_page" id="CoverPage" data-bg-image="{{ image.url }}" data-bg-image-alt="{{ image.alt }}">
+<div class="cover_page" id="CoverPage" data-bg-image="{{ image.url }}" data-bg-image-alt="{{ image.alt }}" data-bg-image-size="{{ image.sizes|default(default_image_sizes) }}">
   <div class="underlay">
     <div class="underlay_contents">
       <h1 class="headline exhibit_logo">
