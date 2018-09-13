@@ -12,12 +12,10 @@
     padding: .125rem;
     height: 1.25rem;
     width: 1.25rem;
-    font-size: .5rem;
-    line-height: 0.5rem;
-
-    svg {
-      margin: 0;
-      transform: translate(.25px, -1.5px);
+    font-size: 1.2em;
+    line-height: 1em;
+    .i-info {
+      text-transform: lowercase;
     }
   }
 
