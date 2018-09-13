@@ -1,0 +1,9 @@
+%AudioWithTranscript {
+  audio {
+    margin-bottom: 1rem;
+  }
+}
+
+.audio-with-transcript {
+  @extend %AudioWithTranscript;
+}
