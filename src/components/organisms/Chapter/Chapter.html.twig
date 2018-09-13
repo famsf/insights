@@ -10,18 +10,22 @@
     {# Use "passthrough" to send chapter/story data to CoverPage + chapter__title. #}
     {# On CoverPage, use the story title instead of chapter title. #}
     {% set isFirstPageOfChapter = loop.first %}
+    {% if child.component is not defined %}
+      {% set component = templateMap[child.template_id] %}
+    {% else %}
+      {% set component = child.component %}
+    {% endif %}
     {%
-      include "./src/components/organisms/Page/Page.html.twig" with child|merge({
+      include "@organisms/page/page.html.twig" with child|merge({
         index: loop.index0,
         chapter: id,
+        component: component,
+        numeral: numeral,
+        chapter__numeral: chapter__numeral,
+        chapter__title: chapter__title,
         story__title: story__title,
         story__subtitle: story__subtitle,
-        passthrough: isFirstPageOfChapter ? {
-          title: isFirstChapter ? story__title : title,
-          numeral: child.chapter__numeral,
-          story__title: story__title,
-          story__subtitle: story__subtitle
-        } : {},
+        templateMap: templateMap
       }) only
     %}
   {% endfor %}

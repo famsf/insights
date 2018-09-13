@@ -1,6 +1,6 @@
 {
   "content_left": {
-    "component": "../../molecules/Picture/Picture.html.twig",
+    "component": "../../molecules/picture/picture.html.twig",
     "contents": {
       "srcset": [
         {

@@ -2,6 +2,5 @@
   {% for src in srcset %}
     <source srcset="{{ src.url }}" media="(min-width: {{ src['min-width'] }})">
   {% endfor %}
-
   {% include "@atoms/img/img.html.twig" %}
 </picture>

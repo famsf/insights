@@ -1,7 +1,14 @@
 <div class="chapter__title">
-
-  <img src="{{ background__image.src }}" class="object-fit" alt="{{ background__image.alt }}">
-
+  {#
+    We have to do this because of a gathercontent bug where
+    file fields return arrays including even past (now deleted) files
+  #}
+  {% if background__image[0] is iterable and background__image[0] is not same as(background__image.src) %}
+    {% set img = background__image[0] %}
+  {% else %}
+    {% set img = background__image %}
+  {% endif %}
+  {% include "@atoms/img/img.html.twig" with img|merge({ classes: 'object-fit' }) only %}
   <div class="overlay">
     <div class="overlay__contents">
       <h1 class="chapter__headline">

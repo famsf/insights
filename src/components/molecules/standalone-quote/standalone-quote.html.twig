@@ -1,8 +1,8 @@
 <div class="{{ component_name ?: 'standalone-quote' }} {{ large_text ? 'size--large' }}">
   {% include "@atoms/standalone-quote__icon/standalone-quote__icon.html.twig" %}
 
-  <q>{{ text }}</q>
-  <cite>{{ name }}</cite>
+  <q>{{ quote__quote }}</q>
+  <cite>{{ quote__attribution }}</cite>
 
   <div class="standalone-quote__social-links">
     {% include "@molecules/sharing-icons/sharing-icons.html.twig" %}

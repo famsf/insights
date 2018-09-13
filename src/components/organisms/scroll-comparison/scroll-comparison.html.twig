@@ -1,4 +1,3 @@
-{% import "@macros/inklude.html.twig" as inklude %}
 {% macro print(value, default) %}
   {{- value is defined ? value : default -}}
 {% endmacro %}
@@ -7,15 +6,31 @@
   <div class="cell small-12 large-8 large-offset-2">
     <div class="wrapper grid-x grid-margin-x">
       <div class="cell active" {{ left.attributes }}>
-        {{ inklude.components(left.visible ) }}
+        {% include "@molecules/picture/picture--captioned.html.twig" with {
+          picture: left__image,
+          caption: {
+            id: slug ~ '__caption',
+            brief: left__caption_brief,
+            text: left__caption
+        } only %}
+        {{ left__title }}
         <div class="content">
-          {{ inklude.components(left.hidden) }}
+          {{ left__body }}
         </div>
       </div>
       <div class="cell" {{ right.attributes }}>
-        {{ inklude.components(right.visible ) }}
+        {% include "@molecules/picture/picture--captioned.html.twig" with {
+          picture: right__image,
+          caption: {
+            id: slug ~ '__caption',
+            brief: right__caption_brief,
+            text: right__caption
+        } only %}
+
+        {{ right__title }}
+
         <div class="content">
-          {{ inklude.components(right.hidden) }}
+        {{ right__body }}
         </div>
       </div>
     </div>

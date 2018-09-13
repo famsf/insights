@@ -1,4 +1,4 @@
-%big_type {
+%intro-text {
 
   h2 {
     @extend .h1;
@@ -58,6 +58,6 @@
   }
 }
 
-.big_type {
-  @extend %big_type;
+.intro-text {
+  @extend %intro-text;
 }

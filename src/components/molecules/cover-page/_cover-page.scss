@@ -1,4 +1,4 @@
-%CoverPage {
+%cover-page {
 
   $bgURL: $klimtRodinCoverBg;
   .la-prose & {
@@ -241,7 +241,7 @@
 }
 
 .cover_page {
-  @extend %CoverPage;
+  @extend %cover-page;
 }
 
 @keyframes stretch {

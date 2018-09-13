@@ -4,10 +4,10 @@ files:
 - js/poly/nextElementSibling.js
 - js/poly/performantScrollTo.js
 - components/atoms/video--embed/video--embed.js
-- components/molecules/TopBar/TopBar.js
-- components/molecules/CoverPage/CoverPage.js
+- components/molecules/top-bar/top-bar.js
+- components/molecules/cover-page/cover-page.js
 - js/pages.js
-- components/molecules/ChapterNav/ChapterNav.js
+- components/molecules/chapter-nav/chapter-nav.js
 - components/molecules/menu--mobile/menu--mobile.js
 - components/molecules/sharing-icons/sharing-icons.js
 - js/main.js

@@ -1,0 +1,7 @@
+{% import "@macros/inklude.html.twig" as inklude %}
+<div class="modal reveal full-screen {{ class }}" id="{{ id }}" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+  {% for slide in children %}
+    {% include "@molecules/slide/slide.html.twig" with slide only %}
+  {% endfor %}
+  {% include "@atoms/modal__close-button/modal__close-button.html.twig" %}
+</div>

@@ -11,7 +11,7 @@
       <!-- or, set /favicon.ico for IE10 win -->
       <meta name="msapplication-TileColor" content="#f00">
       <meta name="msapplication-TileImage" content="/images/tileicon.png">
-      
+
       <!-- Google Tag Manager -->
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -19,9 +19,9 @@
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-TPPZRZB');</script>
       <!-- End Google Tag Manager -->
-      
+
       <title>
-        {{ config.title }}
+        {{ story__title }}
       </title>
 
       <meta name="description" content="{{ config.description }}">
@@ -33,6 +33,16 @@
       {% for script in config.scripts.header.all %}
         <script src="{{ script }}?{{ 'now'|date('U') }}"></script>
       {% endfor %}
+      <style>
+        :root {
+          {% if color__primary is defined %}
+            --primary-color: {{ color__primary|trim }};
+          {% endif %}
+          {% if color__secondary is defined %}
+            --secondary-color: {{ color__secondary|trim|default('transparent') }};
+          {% endif %}
+        }
+      </style>
       {{ kstatic.styles }}
       {% for sheet in config.stylesheets %}
         <link rel="stylesheet" type="text/css" href="{{ sheet }}?{{ 'now'|date('U') }}">

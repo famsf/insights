@@ -1,5 +1,18 @@
 <section class="page {{ classes }}" id="chapter_{{ id }}" data-page-index="{{ index }}">
   <div class="frame">
-      {% include component with _context only %}
+    {% if component != '@organisms/page/page.html.twig' %}
+      {% set adenda = {} %}
+      {% if 'chapter__title' in gatherContent.templateMap[chapter.templateId] %}
+        {% set adenda = {
+          chapter__title: chapter__title,
+          chapter__numeral: chapter__numeral
+        } %}
+      {% endif %}
+      {% include component with _context|merge(adenda) only %}
+    {% else %}
+      {% for child in children %}
+        {% include templateMap[child.template_id] with child|merge({ templateMap: templateMap }) only %}
+      {% endfor %}
+    {% endif %}
   </div>
 </section>

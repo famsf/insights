@@ -15,7 +15,6 @@ bsWebroot: build
 
 
 plugins:
-  - 'metalsmith-gathercontent'
   # Load information from the environment variables.
   - 'metalsmith-env'
   # Define any global variables.
@@ -24,6 +23,7 @@ plugins:
   - 'metalsmith-metadata-files'
   # Add base, dir, ext, name, and href info to each file.
   - 'metalsmith-paths'
+  - 'metalsmith-gathercontent'
   # Load metadata info the metalsmith metadata object.
   - 'metalsmith-metadata-convention'
   # Concatenate any needed files.
@@ -45,25 +45,60 @@ plugins:
 # Allows changing some of the plugin options.
 pluginOpts:
   metalsmith-gathercontent:
-    verbose: true
+    verbose: 3
+    logMappings: 0
+    logFileContents: 0
     authPath: _auth.json
     filePath: src/assets/images/gathercontent
-    projectId: 187751
+    projectId: 190265
+    saveJSON: true
+    includeAsFile:
+      - 'la-prose.md'
+    # map template ids to components so we can handle defaults
+    # we're also removing Meta_Component from "atom" GatherContent templates
+    # Since they removed template defaults, and certain components —
+    # Particularly atoms — don't have different 'views'
+    # We will leave an option for Meta_Component to always override this,
+    # But it makes sense to let convention take charge of templates,
+    # and allow override in config.
+    # We can merge template mappings and mappings, under "components"... that will be rad.
+    templateMappings:
+      1370526: '@templates/pages/digital-story.html.twig'
+      1370621: '@atoms/cliff-note/cliff-note.html.twig'
+      1370543: '@atoms/intro-text/intro-text.html.twig'
+      1370528: '@molecules/chapter__title/chapter__title.html.twig'
+      1370148: '@molecules/cover-page/cover-page.html.twig'
+      1370623: '@molecules/inline-quote/inline-quote.html.twig'
+      1370541: '@molecules/picture/picture--captioned.html.twig'
+      1370128: '@molecules/slide/slide.html.twig'
+      1370544: '@molecules/standalone-quote/standalone-quote.html.twig'
+      1370592: '@molecules/video--embed/video--embed.html.twig'
+      # xxxxxxx: '@molecules/video--ambient/video--ambient.html.twig'
+      # 1370151: '@column'
+      1370626: '@organisms/chapter/chapter.html.twig'
+      1370624: '@organisms/commentary/commentary.html.twig'
+      1370542: '@organisms/content--simple/content--simple.html.twig'
+      1370139: '@organisms/horizontal-image-slider/horizontal-image-slider.html.twig'
+      1370655: '@organisms/in-depth/in-depth.html.twig'
+      1370527: '@organisms/page/page.html.twig'
+      1370588: '@organisms/scroll-comparison/scroll-comparison.html.twig'
+      1370604: '@organisms/section_wrapper/section_wrapper.html.twig'
     mappings:
       id: id
-      slug: _name
+      slug: slug
       name: _name
       component: Meta_Component
       title: Content_Title
       tier: tier
+      position: position
       summary: Content_Summary
       contents: Content_Content
-      image: Content_Image
       type: _type
-      chapter__numeral: Content_Numeral
-      chapter__title: Content_Chapter-Title
-      # Cover Page
+      template_id: _template_id
       background__image: Content_Background-Image
+      background__image-alt: Content_Background-Image-Alt
+      content__image: Content_Image
+      content__image-alt: Content_Image-Alt
       # Insights Info
       tagline: Content_Tagline
       tickets_url: Content_Tickets-URL
@@ -72,24 +107,54 @@ pluginOpts:
       story__subtitle: Content_Story-Subtitle
       exhibit__info: Content_Exhibit-Info
       exhibit__dates: Content_Exhibit-Dates
-      # Columned content
-      left_col__image: Left-Column_Image
-      left_col__image__alt: Left-Column_Image-Alt
-      left_col__image__caption: Left-Column_Image-Caption
-      left_col__image__brief: Left-Column_Caption-Brief
-      left_col__body: Left-Column_Body
-      right_col__image: Right-Column_Image
-      right_col__image__alt: Right-Column_Image-Alt
-      right_col__image__caption: Right-Column_Image-Caption
-      right_col__image__brief: Right-Column_Caption-Brief
-      right_col__body: Right-Column_Body
+      color__primary: Theme_Primary
+      color__secondary: Theme_Secondary
+      # intro
+      intro__title: Content_Intro-Title
+      intro__text: Content_Intro-Text
+      # Chapter Title
+      chapter__numeral: Content_Chapter-Numeral
+      chapter__title: Content_Chapter-Title
+      # Standalone Quote
+      quote__quote: Content_Quote
+      quote__attribution: Content_Attribution
+      # Scroll Comparison
+      left__image: Content-Left_Image
+      left__image-alt: Content-Left_Image-Alt
+      left__caption: Content-Left_Caption
+      left__caption_brief: Content-Left_Caption-Brief
+      left__title: Content-Left_Title
+      left__body: Content-Left_Body-Copy
+      right__image: Content-Right_Image
+      right__image-alt: Content-Right_Image-Alt
+      right__caption: Content-Right_Caption
+      right__caption_brief: Content-Right_Caption-Brief
+      right__title: Content-Right_Title
+      right__body: Content-Right_Body-Copy
       # Video Embed
       video__id: Content_Video-Id
       video__poster_image: Content_Poster-Image
-      # Scroll Comparison
       # Meta
       template: Meta_Component
-
+      # CTA button
+      button__text: Content_CTA-Button
+      # Slide
+      caption__brief: Content_Caption-Brief
+      caption__text: Content_Caption
+      slide__image: Content_Slide-Image
+      slide__image-alt: Content_Slide-Image-Alt
+      # In depth
+      slideshow__title: Content_Slideshow-Title
+      slideshow__description: Content_Slideshow-Description
+      slideshow__image: Content_Slideshow-Image
+      slideshow__image-alt: Content_Slideshow-Image-Alt
+      slideshow__cta: Content_Slideshow-Image-Alt
+      # Simple content
+      content__quote: Content_Quote
+      content__quote__attribution: Content_Quote-Attribution
+      content__title: Content_Title
+      content__body: Content_Body
+      content__cta__button: Content_CTA-Button
   # The layouts will live in the templates directory.
   metalsmith-jstransformer:
     pattern: "!components/**"

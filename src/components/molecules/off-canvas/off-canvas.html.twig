@@ -1,5 +1,5 @@
 <div class="off-canvas position-right" id="off-canvas" data-off-canvas data-transition="push">
-  {% include '@molecules/CoverPage/CoverPageForMenu.html.twig' with { title: title } only %}
+  {% include '@molecules/cover-page/cover-page--menu.html.twig' with { title: title } only %}
 
   {% if tickets_url %}
     <div class="off-canvas__buttons text-center">
@@ -8,5 +8,5 @@
   {% endif %}
 
   {% include '@molecules/menu--mobile/menu--mobile.html.twig' with { chapters: chapters } only %}
-  {% include '@organisms/Footer/Footer.html.twig' with { sections: sections, classes: classes } only %}
+  {% include '@organisms/footer/footer.html.twig' with { sections: sections, classes: classes } only %}
 </div>

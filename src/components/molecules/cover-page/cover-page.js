@@ -1,6 +1,7 @@
 (function (fds, coverPage, win) {
   win.document.addEventListener('DOMContentLoaded', function () {
     fds.coverPageElement = document.getElementById('CoverPage');
+    console.log('| » | »» |', fds.coverPageElement);
     if (fds.coverPageElement) {
       fds.coverPageElement.backgroundClipPolyfill({
         patternID: 'mypattern',
@@ -37,6 +38,17 @@
   };
 
   fds.onCoverImageLoaded = function () {
-    console.log('a');
+    fds.coverPageElement.classList.add('loaded');
+    setTimeout(function () {
+      fds.coverPageElement.classList.add('post_loaded');
+      fds.rootElement.querySelector('.page').classList.add('triggered');
+      win.document.body.classList.remove('loading');
+      win.document.body.classList.remove('scroll_lock');
+      fds.scrollLock = false;
+      fds.rootElement.classList.add('initialized');
+      setTimeout(function () {
+        fds.coverPageElement.classList.add('initialized');
+      }, 700);
+    }, 1250);
   };
 }(window.fds = window.fds || {}, window.fds.coverPage = window.fds.coverPage || {}, window));
