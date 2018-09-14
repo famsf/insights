@@ -11,8 +11,7 @@
   "main": "build/index.html",
   "scripts": {
     "dl:bg-clip": "napa TimPietrusky/background-clip-text-polyfill",
-    "dl:cloudimage": "DIR=node_modules/cloudimage; FILE=cloudimage.io-responsive.js; [ -f $DIR/$FILE ] || { mkdir -p $DIR && curl -o $DIR/$FILE https://cloudimage.io/plugin/$FILE ;}",
-    "install": "run-p dl:bg-clip dl:cloudimage",
+    "install": "run-p dl:bg-clip",
     "test": "[ \"${CONTEXT}\" = production ] && run-s play redirect || run-s play lint:js",
     "play": "kalastatic build",
     "redirect": "cp _redirects build/",
