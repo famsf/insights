@@ -1,19 +1,10 @@
-{% set default_image_sizes =
-  "{
-    small: '375x667',
-    medium: '1024x768',
-    large: '1280x800',
-    xlarge: '1440x900',
-    xxlarge: '1920x1080'
-  }"
-%}
+{% set style = 'full-screen' %}
+{% import "@macros/ci-size.html.twig" as ci %}
 
-<div class="video--embed" ci-responsive
+<div class="video--embed" ci-responsive ci-size="{{ ci.size(style) }}" ci-type="crop"
   {% if poster %}
      ci-img-background="{{ poster }}"
   {% endif %}
-     ci-size="{{ poster_sizes|default(default_image_sizes) }}"
-     ci-type="crop"
 >
   <div class="video--embed__wrapper">
     {% if youtube %}
