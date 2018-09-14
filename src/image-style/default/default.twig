@@ -1,0 +1,13 @@
+{# Default Image Style Defaults #}
+{% block ci_variables %}
+  {% set default_image_type = 'bound' %}
+  {% set default_image_sizes =
+    "{
+    small: '320x320',
+    medium: '512x512',
+    large: '640x640',
+    xlarge: '720x720',
+    xxlarge: '960x960'
+  }"
+  %}
+{% endblock %}

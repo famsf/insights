@@ -1,0 +1,13 @@
+{# Horizontal Image Style Defaults #}
+{% block ci_variables %}
+  {% set default_image_type = 'crop' %}
+  {% set default_image_sizes =
+    "{
+    small: '320x240',
+    medium: '512x384',
+    large: '640x480',
+    xlarge: '720x540',
+    xxlarge: '960x720'
+  }"
+  %}
+{% endblock %}
