@@ -91,11 +91,6 @@ chapters:
               (203.2 x 43.2 cm). Fine Arts Museums of San Francisco, Gift of the Reva and David Logan Foundation,
               2016.15.4.1'
           picture:
-            srcset:
-            - min-width: 0px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg
-            - min-width: 800px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg
             alt: Detail of La prose du Transsibérien et de la Petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars
             style: vertical
@@ -119,16 +114,9 @@ chapters:
           caption:
             brief: 'Photo: Sonia Delaunay-Terk, 1931. Photograph by Florence Henri. Martini & Ronchetti Gallery'
           picture:
-            srcset:
-            - min-width: 0px
-              src: /assets/images/delaunay.jpg
-            - min-width: 350px
-              src: /assets/images/delaunay.jpg
-            - min-width: 800px
-              src: /assets/images/delaunay.jpg
-            url: /assets/images/delaunay.jpg
+            url: https://insights.famsf.org/assets/images/delaunay.jpg
             alt: Photo of sonia delaunay-terk
-            style: vertical
+            style: square
         - template: "@atoms/h3/h3.html.twig"
           text: "Sonia Delaunay-Terk"
         hidden:
@@ -148,16 +136,9 @@ chapters:
           caption:
             brief: Blaise Cendrars, ca. 1907. Wikimedia Commons
           picture:
-            srcset:
-            - min-width: 0px
-              src: /assets/images/cendrars.jpg
-            - min-width: 350px
-              src: /assets/images/cendrars.jpg
-            - min-width: 800px
-              src: /assets/images/cendrars.jpg
-            url: /assets/images/cendrars.jpg
+            url: https://insights.famsf.org/assets/images/cendrars.jpg
             alt: Photo of blaise cendrars
-            style: vertical
+            style: square
         - template: "@atoms/h3/h3.html.twig"
           text: "Blaise Cendrars"
         hidden:
@@ -172,13 +153,6 @@ chapters:
       classes: theme--dark
       title: What Is an Artist’s Book?
       picture:
-        srcset:
-        - min-width: 0px
-          src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_la-prose-detail-intro.jpg
-        - min-width: 768px
-          src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_la-prose-detail-intro.jpg
-        - min-width: 960px
-          src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_la-prose-detail-intro.jpg
         url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_la-prose-detail-intro.jpg
         alt: La Prose detail
         style: square
@@ -197,13 +171,6 @@ chapters:
               title: What Is an Artist's Book?
               text: 'An artist’s book, like a painting or a sculpture, is created to be a work of art. It is a hybrid art form, both literary and visual in concept, and often collaborative.</em>'
               picture:
-                srcset:
-                - min-width: 0px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_la-prose-detail-intro.jpg
-                - min-width: 768px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_la-prose-detail-intro.jpg
-                - min-width: 960px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_la-prose-detail-intro.jpg
                 url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_la-prose-detail-intro.jpg
                 alt: La Prose detail
                 style: square
@@ -213,13 +180,6 @@ chapters:
               text: 'Chi-Rho page from <em>Book of Kells</em>, Irish or Scottish, ca. 800. Ink on vellum, 13 x 10 1/16 in. (33 x 25.5 cm). © Trinity College Dublin'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
-              srcset:
-              - min-width: 0px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
-              - min-width: 350px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
-              - min-width: 800px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
               url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
               alt: untitled page from parallelement by paul verlaine and pierre bonnard
               style: vertical
@@ -229,13 +189,6 @@ chapters:
               text: 'William Blake, "Thou hast fulfilled the Judgment of the wicked," plate 16 from the complete proof edition of Blake’s <em>Book of Job</em>, 1825. Engraving, image: 7 3/4 x 6 3/8 in. (19.6 x 16.2 cm). Fine Arts Museums of San Francisco, Museum purchase, William H. Noble Bequest Fund, 1979.1.11.17'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
-              srcset:
-              - min-width: 0px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
-              - min-width: 350px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
-              - min-width: 800px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
               url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
               alt: untitled page from parallelement by paul verlaine and pierre bonnard
               style: vertical
@@ -245,13 +198,6 @@ chapters:
               text: 'Pierre Bonnard, <em>Untitled,</em> page 4 of the book <em>Parallèlement</em> by Paul Verlaine (Paris: Ambroise Vollard, 1900), 1887–1900. Lithograph (pink sanguine) on Holland wove paper watermarked <em>Parallèlement,</em> sheet: 11 5/8 x 9 1/2 in. (29.5 x 24 cm); image: 3 5/8 x 7 in. (9.3 x 17.9 cm). Printed by Auguste Clot, Paris (lithographs); and Imprimerie Nationale de France, Paris (text). Binding by René Kieffer. Woodcuts by Tony Beltrand. Fine Arts Museums of San Francisco, The Reva and David Logan Collection of Illustrated Books, 2000.200.45.6'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
-              srcset:
-              - min-width: 0px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
-              - min-width: 350px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
-              - min-width: 800px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
               url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
               alt: untitled page from parallelement by paul verlaine and pierre bonnard
               style: vertical
@@ -261,13 +207,6 @@ chapters:
               text: 'El Lissitzky (Lazar Markovitch), fourth chapter, page 17 in the book <em>Dlia Golosa (For the Voice)</em> by Vladimir Vladimirovich Mayakovsky (Berlin: Gosizdat, 1923), 1923. Lithograph (color) on cream wove paper, sheet: 7 3/8 x 4 7/8 in. (18.7 x 12.4 cm); image: 5 1/4 x 4 3/8 in. (13.4 x 11.2 cm). Fine Arts Museums of San Francisco, Gift of the Reva and David Logan Foundation, 1998.40.79.8'
             components:
             - template: "@molecules/Picture/Picture.html.twig"
-              srcset:
-              - min-width: 0px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
-              - min-width: 350px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
-              - min-width: 800px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
               url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
               alt: untitled page from parallelement by paul verlaine and pierre bonnard
               style: vertical
@@ -315,16 +254,9 @@ chapters:
           caption:
             brief: 'Stéphane Mallarmé, ca. 1890. Photograph by Nadar studio. © The New York Public Library'
           picture:
-            srcset:
-            - min-width: 0px
-              src: /assets/images/mallarme.jpg
-            - min-width: 350px
-              src: /assets/images/mallarme.jpg
-            - min-width: 800px
-              src: /assets/images/mallarme.jpg
-            url: /assets/images/mallarme.jpg
+            url: https://insights.famsf.org/assets/images/mallarme.jpg
             alt: Photo of Stéphane Mallarmé
-            style: vertical
+            style: square
         - template: "@atoms/h3/h3.html.twig"
           text: "Stéphane Mallarmé"
         hidden:
@@ -342,16 +274,9 @@ chapters:
           caption:
             brief: Guillaume Apollinaire with a shrapnel wound at the temple, 1916. Wikimedia Commons
           picture:
-            srcset:
-            - min-width: 0px
-              src: /assets/images/apollinaire.jpg
-            - min-width: 350px
-              src: /assets/images/apollinaire.jpg
-            - min-width: 800px
-              src: /assets/images/apollinaire.jpg
-            url: /assets/images/apollinaire.jpg
+            url: https://insights.famsf.org/assets/images/apollinaire.jpg
             alt: Photo of Guillaume Apollinaire
-            style: vertical
+            style: square
         - template: "@atoms/h3/h3.html.twig"
           text: "Guillaume Apollinaire"
         hidden:
@@ -381,64 +306,32 @@ chapters:
           text: "Pablo Picasso, <em>Mademoiselle Léonie dans une chaise longue</em> in the book <em>Saint Matorel</em> by Max Jacob (Paris: Henry Kahnweiler Éditeur, 1911), 1911. Etching on ivory laid Holland van Gelder paper, 7 3/16 in. (19.8 x 14.2 cm). Printed by Eugène Delâtre, Paris (plates); and Paul Birault, Paris (text). Fine Arts Museums of San Francisco, The Reva and David Logan Collection of Illustrated Books, 2000.200.59.1-4"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
-          srcset:
-          - min-width: 0px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/12_picasso-jacob.jpg
-          - min-width: 350px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/12_picasso-jacob.jpg
-          - min-width: 800px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/12_picasso-jacob.jpg
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/12_picasso-jacob.jpg
           alt: the book saint matorel by max jacob and pablo picasso
-          style: vertical
       - caption:
           id: c2p3-slide-3-caption
           brief: "André Derain and Guillaume Apollinaire: <em>L'enchanteur pourrissant, </em>1909. This was a book of firsts: Apollinaire's first published book, illustrated with Derain's first book illustrations&mdash;and also the first book from the great publisher Daniel-Henry Kahnweiler, then age 25."
           text: "André Derain, <em>Untitled,</em> title page, publisher’s detail, in the book <em>L'enchanteur pourrissant</em> by Guillaume Apollinaire (Paris: Henry Kahnweiler, 1909), 1909. Woodcut on ivory Arches laid paper, sheet: 10 7/16 x 7 7/8 in. (26.5 x 20 cm); image: 2 1/2 x 2 7/8 in. (6.4 x 7.3 cm). Printed by Paul Birault, Paris. Fine Arts Museums of San Francisco, The Reva and David Logan Collection of Illustrated Books, 2000.200.49.1"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
-          srcset:
-          - min-width: 0px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/13_lenchanteur-pourrissant.jpg
-          - min-width: 350px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/13_lenchanteur-pourrissant.jpg
-          - min-width: 800px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/13_lenchanteur-pourrissant.jpg
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/13_lenchanteur-pourrissant.jpg
           alt:  title page from the book L'Enchanteur pourrissant by Guillaume Apollinaire
-          style: vertical
       - caption:
           id: c2p3-slide-4-caption
           brief: " Fernand Léger and Blaise Cendrars, <em>La fine du monde, filmée par l’ange N.-D.,</em> 1919. Both Léger and Cendrars had suffered serious injuries in the trenches in the First World War, and each felt a strong affinity with the other’s work. <em>La fin du monde</em> was conceived as a screenplay, begun in collaboration with Guillaume Apollinaire and Jean Cocteau, both of whom soon dropped out of the project."
           text: "Fernand Léger, twelfth illustration in the book <em>La fin du monde, filmée par l&rsquo;ange N.-D.</em> by Blaise Cendrars (Paris: Éditions de la Sirène, 1919), 1919. Color pochoir on ivory wove Lafuma paper, sheet: 12 5/8 x 9 13/16 in. (32 x 25 cm); image: 12 5/8 x 3 1/8 in. (32 x 7.9 cm), Fine Arts Museums of San Francisco, Gift of the Reva and David Logan Foundation, 1998.40.77.12"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
-          srcset:
-          - min-width: 0px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/14_la-fin-du-monde.jpg
-          - min-width: 350px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/14_la-fin-du-monde.jpg
-          - min-width: 800px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/14_la-fin-du-monde.jpg
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/14_la-fin-du-monde.jpg
-          alt: illustration in the book <em>La fin du monde</em> by Blaise Cendrars and Fernand Léger
-          style: vertical
+          alt: illustration in the book <em>La Fin du monde</em> by Blaise Cendrars and Fernand Léger
       - caption:
           id: c2p3-slide-5-caption
           brief: "Juan Gris and Raymond Radiguet, <em>Denise,</em> 1926. A charismatic prodigy, Radiguet died in 1923 at age 20, leaving behind two brilliant and scandalous novels and a string of lovers, male and female, from the bohemian circles of Paris. Gris met his own death at age 40, in the year following publication of <em>Denise</em>."
           text: "Juan Gris, cover of <em>Denise</em> by Raymond Radiguet (Paris: Éditions de la Galerie Simon, 1926), 1926. Lithograph on <em>japon ancien,</em> 10 3/8 x 7 11/16 in. (26.4 x 19.5 cm). Fine Arts Museums of San Francisco, Gift of the Reva and David Logan Foundation, 1998.40.55.1&ndash;5. © 2018 Artists Rights Society (ARS), New York / ADAGP, Paris"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
-          srcset:
-          - min-width: 0px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/15_denise.jpg
-          - min-width: 350px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/15_denise.jpg
-          - min-width: 800px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/15_denise.jpg
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/15_denise.jpg
           alt: title page from the book Denise by Raymond Radiguet and Juan Gris
-          style: vertical
   # c2p4
   - components:
     - template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
@@ -450,16 +343,8 @@ chapters:
             brief: <em>The New York Times</em>, published June 8, 1913
             text: Copyright &copy; The New York Times
           picture:
-            srcset:
-            - min-width: 0px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/Russian_Ballet_in_Paris_-_New_York_Times_1913-06-07.png
-            - min-width: 350px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/Russian_Ballet_in_Paris_-_New_York_Times_1913-06-07.png
-            - min-width: 800px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/Russian_Ballet_in_Paris_-_New_York_Times_1913-06-07.png
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/Russian_Ballet_in_Paris_-_New_York_Times_1913-06-07.png
             alt: New York Times June 7, 1913
-            style: vertical
       right:
         components:
         - template: "@atoms/h3/h3.html.twig"
@@ -486,11 +371,6 @@ chapters:
             brief: Sergei Diaghilev (left) with Igor Stravinsky
             text: '<em>Rite of Spring</em> collaborators Sergei Diaghilev and Igor Stravinsky, 1913. © Hulton Archive/Getty Images'
           picture:
-            srcset:
-            - min-width: 0px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/16_stravinsky-diaghilev.jpg
-            - min-width: 800px
-              src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/16_stravinsky-diaghilev.jpg
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/16_stravinsky-diaghilev.jpg
             alt: Sergei Diaghilev with Igor Stravinsky
             style: horizontal
@@ -519,64 +399,32 @@ chapters:
           text: "Marcel Duchamp, <em>Bicycle Wheel</em>, third version, 1951. Metal wheel mounted on painted wood stool, 51 x 25 x 16 1/2 in. (129.5 x 63.5 x 41.9 cm). The Museum of Modern Art, New York, The Sidney and Harriet Janis Collection, 595.1967.a–b. The Museum of Modern Art (MoMA), New York, USA. © Album / Alamy Stock Photo"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
-          srcset:
-          - min-width: 0px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/17_duchamp.jpg
-          - min-width: 350px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/17_duchamp.jpg
-          - min-width: 800px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/17_duchamp.jpg
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/17_duchamp.jpg
           alt: third version of Bicycle Wheel by Marcel Duchamp
-          style: vertical
       - caption:
           id: c2p5-slide-3-caption
           brief: "Marcel Proust publishes <em>Swann’s Way</em> (manuscript notes shown here)"
           text: "Some of Marcel Proust’s notes for <em>Swann’s Way</em>, with doodles. © Bibliothèque nationale de France (BnF), Paris, Dist. RMN-Grand Palais / Art Resource, NY"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
-          srcset:
-          - min-width: 0px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/18_proust.jpg
-          - min-width: 350px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/18_proust.jpg
-          - min-width: 800px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/18_proust.jpg
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/18_proust.jpg
           alt: pages of Marcel Proust’s notes for <em>Swann’s Way</em> with drawings
-          style: vertical
       - caption:
           id: c2p5-slide-4-caption
           brief: "Maurice Ravel composes <em>Trois poèmes de Stéphane Mallarmé</em>"
           text: "Maurice Ravel. Bibliothèque nationale de France"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
-          srcset:
-          - min-width: 0px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/19_maurice-ravel.jpg
-          - min-width: 350px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/19_maurice-ravel.jpg
-          - min-width: 800px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/19_maurice-ravel.jpg
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/19_maurice-ravel.jpg
           alt: photo of maurice ravel
-          style: vertical
       - caption:
           id: c2p5-slide-5-caption
           brief: "Guillaume Apollinaire publishes <em>Alcools</em>, with a portrait by Pablo Picasso and etchings by Louis Marcoussis"
           text: "Guillaume Apollinaire: <em>Alcools</em>, with a portrait by Pablo Picasso and etchings by Louis Marcoussis (Paris: Mercure de France, 1913), 1913"
         components:
         - template: "@molecules/Picture/Picture.html.twig"
-          srcset:
-          - min-width: 0px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/20_alcools.jpg
-          - min-width: 350px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/20_alcools.jpg
-          - min-width: 800px
-            src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/20_alcools.jpg
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/20_alcools.jpg
           alt: title page for the book alcools by guillaume apollinaire with a portrait by Picasso and etchings by Louis Marcoussis
-          style: vertical
 
 ################################################################################
 ## CHAPTER 3 ###################################################################
@@ -624,16 +472,9 @@ chapters:
             brief: Detail of <em>La prose du Transsibérien et de la Petite Jehanne de France</em> by Sonia Delaunay-Terk and Blaise Cendrars, 1913
             text: 'Sonia Delaunay-Terk, detail from <em>La prose du Transsibérien et de la Petite Jehanne de France</em> by Blaise Cendrars, 1913. Illustrated book with pochoir, case: 80 x 17 in. (203.2 x 43.2 cm). Fine Arts Museums of San Francisco, Gift of the Reva and David Logan Foundation, 2016.15.4.1'
           picture:
-            srcset:
-              - min-width: 0px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/22_la-prose-detail-the-book.jpg
-              - min-width: 350px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/22_la-prose-detail-the-book.jpg
-              - min-width: 800px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/22_la-prose-detail-the-book.jpg
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/22_la-prose-detail-the-book.jpg
             alt: Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars
-            style: horizontal
+            style: none
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
       classes: "height-auto"
       right:
@@ -656,16 +497,9 @@ chapters:
             brief: Color wheel by Michel-Eugène Chevreul, 1839
             text: 'Chevreul color wheel, 1839. Wikimedia Commons'
           picture:
-            srcset:
-              - min-width: 0px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/23_chevreul-color-chart.jpg
-              - min-width: 350px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/23_chevreul-color-chart.jpg
-              - min-width: 800px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/23_chevreul-color-chart.jpg
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/23_chevreul-color-chart.jpg
             alt: Chevreul color wheel
-            style: horizontal
+            style: none
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
       classes: "height-auto"
       right:
@@ -689,16 +523,9 @@ chapters:
             text: 'Robert Delaunay, <em>Windows Open Simultaneously 1st Part, 3rd Motif</em>, 1912. Oil on canvas, 22 3/8 x 48 in (57 x 123 cm). The Solomon R. Guggenheim Foundation Peggy Guggenheim Collection, Venice, 1976, 76.2553.36
 '
           picture:
-            srcset:
-              - min-width: 0px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/24_windows-open.jpg
-              - min-width: 350px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/24_windows-open.jpg
-              - min-width: 800px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/24_windows-open.jpg
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/24_windows-open.jpg
             alt: Windows Open Simultaneously 1st Part, 3rd Motif by Robert Delaunay
-            style: horizontal
+            style: none
     - template: "@molecules/commentary/commentary.html.twig"
       component_name: commentary
       author_name: Marjorie Perloff
@@ -750,16 +577,8 @@ chapters:
               brief: "Type compositors at Crété"
               text: '<em>Imprimerie Crété</em> by Société Anonyme (Paris: Corbeil, 1925). Courtesy of Kitty Maryatt'
             picture:
-              srcset:
-                - min-width: 0px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/26_type-compositors.jpg
-                - min-width: 350px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/26_type-compositors.jpg
-                - min-width: 800px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/26_type-compositors.jpg
               url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/26_type-compositors.jpg
               alt: Photo of type compositors at Crété
-              style: horizontal
           - template: "@atoms/h3/h3.html.twig"
             classes: margin-top-3
             text: "Art"
@@ -789,16 +608,8 @@ chapters:
               brief: "Paper conservator Victoria Binder used a microscope to analyze the fiber composition of the copy of <em>La prose</em> in the Logan Collection at the Legion of Honor."
               text: 'Sonia Delaunay-Terk, detail from <em>La prose du Transsibérien et de la Petite Jehanne de France</em> by Blaise Cendrars, 1913. Illustrated book with pochoir, case: 80 x 17 in. (203.2 x 43.2 cm). Fine Arts Museums of San Francisco, Gift of the Reva and David Logan Foundation, 2016.15.4.1'
             picture:
-              srcset:
-                - min-width: 0px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/27_microscopic-view-la-prose.jpg
-                - min-width: 350px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/27_microscopic-view-la-prose.jpg
-                - min-width: 800px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/27_microscopic-view-la-prose.jpg
               url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/27_microscopic-view-la-prose.jpg
               alt: Microscopic view of La prose du Transsiberien used to analyze fiber composition
-              style: horizontal
       right:
         components:
           - template: "@atoms/h3/h3.html.twig"
@@ -856,13 +667,6 @@ chapters:
               brief: Still from <em>Kinetic Light Painting</em> by Bill Ham
               text: Bill Ham, <em>Kinetic Light Painting,</em> 2016&ndash;2017. Courtesy of Bill Ham
             picture:
-              srcset:
-                - min-width: 0px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/28_b-bill-ham-light-show.jpg
-                - min-width: 350px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/28_b-bill-ham-light-show.jpg
-                - min-width: 800px
-                  src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/28_b-bill-ham-light-show.jpg
               url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/28_b-bill-ham-light-show.jpg
               alt: Still from Kinetic Light Painting by Bill Ham
               style: horizontal
@@ -917,16 +721,9 @@ chapters:
             brief: David and Reva Logan
             text: Courtesy of the Logan Foundation
           picture:
-            srcset:
-              - min-width: 0px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/30_the-logans.jpg
-              - min-width: 350px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/30_the-logans.jpg
-              - min-width: 800px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/30_the-logans.jpg
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/30_the-logans.jpg
             alt: Photo of David and Reva Logan
-            style: vertical
+            style: square
 
   # c6p2
   - components:
@@ -949,13 +746,6 @@ chapters:
             brief: The Reva and David Logan Gallery of Illustrated Books at the Legion of Honor
             text: ''
           picture:
-            srcset:
-              - min-width: 0px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/31_logan-gallery.jpg
-              - min-width: 350px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/31_logan-gallery.jpg
-              - min-width: 800px
-                src: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/31_logan-gallery.jpg
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/31_logan-gallery.jpg
             alt: Photo of David and Reva Logan
             style: horizontal
@@ -973,147 +763,155 @@ chapters:
 ## Footer ######################################################################
 ################################################################################
 
-footer:
-  sections:
-    - section_classes: theme--primary-light
-      template: "@molecules/footer__cta/footer__cta__wrapper.html.twig"
+- title: Footer
+  numeral: VII
+  classes: footer
+  id: insights__footer
+  tag: footer
+  pages:
+    - classes: height-auto hide-chapter-nav
       components:
-        - template: "@molecules/footer__cta/footer__cta.html.twig"
-          components:
-          - template: "@atoms/h4/h4.html.twig"
-            text: Plan your visit
-          - template: "@atoms/textarea/textarea.html.twig"
-            text: "<p>Purchase tickets, view hours, and get directions to prepare for your visit.</p>"
-          - template: "@atoms/cta__button/cta__button.html.twig"
-            text: Start planning
-            href: https://legionofhonor.famsf.org/visit-us
-            target: _blank
-        - template: "@molecules/footer__cta/footer__cta.html.twig"
-          components:
-          - template: "@atoms/h4/h4.html.twig"
-            text: Learn more about the Logan Collection
-          - template: "@atoms/textarea/textarea.html.twig"
-            text: "<p>Find out how the Logan Collection at the Legion of Honor began.</p>"
-          - template: "@atoms/cta__button/cta__button.html.twig"
-            text: Learn more
-            href: https://legionofhonor.famsf.org/legion/collections/reva-and-david-logan-collection-illustrated-books
-            target: _blank
-        - template: "@molecules/footer__cta/footer__cta.html.twig"
-          classes: theme--primary-dark
-          components:
-          - template: "@atoms/h4/h4.html.twig"
-            text: Subscribe for updates
-          - template: "@atoms/textarea/textarea.html.twig"
-            text: "<p>Be the first to hear about new exhibitions, events, and more.</p>"
-          - template: "@atoms/cta__button/cta__button.html.twig"
-            text: Subscribe
-            href: http://famsf.us4.list-manage1.com/subscribe?u=d7a49f337e55b897015517194&id=9757c5111b
-            target: _blank
-    - section_classes: grid-container grid-container-padded footer__content
-      template: "@layouts/two_up--primary/two_up--primary.html.twig"
-      left:
-        offset:
-        cols: medium-6 large-4
+      - template: "@organisms/Section/Section.html.twig"
+        section_classes: theme--primary-light
         components:
-        - template: "@atoms/h3/h3.html.twig"
-          text: "We Are The Fine Arts Museum of San Francisco"
-        - template: "@atoms/textarea/textarea.html.twig"
-          text: "<p class='margin-bottom-3'>Our organization oversees two unique museums—the de Young in Golden Gate Park and the Legion of Honor in Lincoln Park—and stands as one of the most visited arts institutions in the United States.</p>"
-        - template: "@atoms/cta__button--alt/cta__button--alt.html.twig"
-          text: Tickets
-          href: https://tickets.famsf.org/events/283/list
-          target: _blank
-          classes: margin-bottom-0
-        - template: "@atoms/textarea/textarea.html.twig"
-          text: </br>
-        - template: "@atoms/cta__button--alt/cta__button--alt.html.twig"
-          text: Become a member
-          href: http://www.famsf.org/join
-          target: _blank
-          classes: margin-bottom-0
-      right:
-        offset: large-offset-2
-        cols: medium-6 large-6
+          - template: "@molecules/footer__cta/footer__cta__wrapper.html.twig"
+            components:
+              - template: "@molecules/footer__cta/footer__cta.html.twig"
+                components:
+                - template: "@atoms/h4/h4.html.twig"
+                  text: Plan your visit
+                - template: "@atoms/textarea/textarea.html.twig"
+                  text: "<p>Purchase tickets, view hours, and get directions to prepare for your visit.</p>"
+                - template: "@atoms/cta__button/cta__button.html.twig"
+                  text: Start planning
+                  href: https://legionofhonor.famsf.org/visit-us
+                  target: _blank
+              - template: "@molecules/footer__cta/footer__cta.html.twig"
+                components:
+                - template: "@atoms/h4/h4.html.twig"
+                  text: Learn more about the Logan Collection
+                - template: "@atoms/textarea/textarea.html.twig"
+                  text: "<p>Find out how the Logan Collection at the Legion of Honor began.</p>"
+                - template: "@atoms/cta__button/cta__button.html.twig"
+                  text: Learn more
+                  href: https://legionofhonor.famsf.org/legion/collections/reva-and-david-logan-collection-illustrated-books
+                  target: _blank
+              - template: "@molecules/footer__cta/footer__cta.html.twig"
+                classes: theme--primary-dark
+                components:
+                - template: "@atoms/h4/h4.html.twig"
+                  text: Subscribe for updates
+                - template: "@atoms/textarea/textarea.html.twig"
+                  text: "<p>Be the first to hear about new exhibitions, events, and more.</p>"
+                - template: "@atoms/cta__button/cta__button.html.twig"
+                  text: Subscribe
+                  href: http://famsf.us4.list-manage1.com/subscribe?u=d7a49f337e55b897015517194&id=9757c5111b
+                  target: _blank
+      - template: "@organisms/Section/Section.html.twig"
+        section_classes: grid-container grid-container-padded footer__content
         components:
-        - template: "@layouts/two_up--primary/two_up--primary.html.twig"
-          classes: footer-feature
-          left:
-            offset:
-            cols: medium-7
-            components:
-            - template: "@atoms/img/img.html.twig"
-              url: ../assets/images/de-young-museum.jpg
-              alt: de Young Museum
-          right:
-            offset:
-            cols: medium-5
-            components:
-            - template: "@atoms/h4/h4.html.twig"
-              classes: separator-left
-              text: de Young Museum
-            - template: "@atoms/textarea/textarea.html.twig"
-              text:
-                <p class="show-for-large">
-                Golden Gate Park<br/>
-                50 Hagiwara Tea Garden Drive<br/>
-                San Francisco, CA 94118<br/>
-                Open 9:30 a.m.—5:15 p.m.<br/>
-                Tuesdays—Sundays<br/>
-                415 750-3600<br/>
-                </p>
-        - template: "@layouts/two_up--primary/two_up--primary.html.twig"
-          classes: footer-feature
-          left:
-            offset:
-            cols: medium-7
-            components:
-            - template: "@atoms/img/img.html.twig"
-              url: ../assets/images/legion-of-honor.jpg
-              alt: Legion of Honor
-          right:
-            offset:
-            cols: medium-5
-            components:
-            - template: "@atoms/h4/h4.html.twig"
-              classes: separator-left
-              text: Legion of Honor
-            - template: "@atoms/textarea/textarea.html.twig"
-              text:
-                <p class="show-for-large">
-                Lincoln Park<br/>
-                100 34th Avenue<br/>
-                San Franciso, CA 94121<br/>
-                Open 9:30 a.m.—5:15 p.m.<br/>
-                Tuesdays—Sundays<br/>
-                415 750-3600<br/>
-                </p>
-    - template: "@molecules/footer__navigation/footer__navigation.html.twig"
-      left:
-        components:
-        - template: "@molecules/ul/ul.html.twig"
-          classes: menu menu--footer
+          - template: "@layouts/two_up--primary/two_up--primary.html.twig"
+            left:
+              offset:
+              cols: medium-6 large-4
+              components:
+              - template: "@atoms/h3/h3.html.twig"
+                text: "We Are The Fine Arts Museum of San Francisco"
+              - template: "@atoms/textarea/textarea.html.twig"
+                text: "<p class='margin-bottom-3'>Our organization oversees two unique museums—the de Young in Golden Gate Park and the Legion of Honor in Lincoln Park—and stands as one of the most visited arts institutions in the United States.</p>"
+              - template: "@atoms/cta__button--alt/cta__button--alt.html.twig"
+                text: Tickets
+                href: https://tickets.famsf.org/events/283/list
+                target: _blank
+                classes: margin-bottom-0
+              - template: "@atoms/textarea/textarea.html.twig"
+                text: </br>
+              - template: "@atoms/cta__button--alt/cta__button--alt.html.twig"
+                text: Become a member
+                href: http://www.famsf.org/join
+                target: _blank
+                classes: margin-bottom-0
+            right:
+              offset: large-offset-2
+              cols: medium-6 large-6
+              components:
+              - template: "@layouts/two_up--primary/two_up--primary.html.twig"
+                classes: footer-feature
+                left:
+                  offset:
+                  cols: medium-7
+                  components:
+                  - template: "@atoms/img/img.html.twig"
+                    url: https://insights.famsf.org/assets/images/de-young-museum.jpg
+                    alt: de Young Museum
+                right:
+                  offset:
+                  cols: medium-5
+                  components:
+                  - template: "@atoms/h4/h4.html.twig"
+                    classes: separator-left
+                    text: de Young Museum
+                  - template: "@atoms/textarea/textarea.html.twig"
+                    text:
+                      <p class="show-for-large">
+                      Golden Gate Park<br/>
+                      50 Hagiwara Tea Garden Drive<br/>
+                      San Francisco, CA 94118<br/>
+                      Open 9:30 a.m.—5:15 p.m.<br/>
+                      Tuesdays—Sundays<br/>
+                      415 750-3600<br/>
+                      </p>
+              - template: "@layouts/two_up--primary/two_up--primary.html.twig"
+                classes: footer-feature
+                left:
+                  offset:
+                  cols: medium-7
+                  components:
+                  - template: "@atoms/img/img.html.twig"
+                    url: https://insights.famsf.org/assets/images/legion-of-honor.jpg
+                    alt: Legion of Honor
+                right:
+                  offset:
+                  cols: medium-5
+                  components:
+                  - template: "@atoms/h4/h4.html.twig"
+                    classes: separator-left
+                    text: Legion of Honor
+                  - template: "@atoms/textarea/textarea.html.twig"
+                    text:
+                      <p class="show-for-large">
+                      Lincoln Park<br/>
+                      100 34th Avenue<br/>
+                      San Franciso, CA 94121<br/>
+                      Open 9:30 a.m.—5:15 p.m.<br/>
+                      Tuesdays—Sundays<br/>
+                      415 750-3600<br/>
+                      </p>
+      - template: "@molecules/footer__navigation/footer__navigation.html.twig"
+        left:
           components:
-          - template: "@atoms/li/li.html.twig"
+          - template: "@molecules/ul/ul.html.twig"
+            classes: menu menu--footer
             components:
-            - template: "@atoms/a/a.html.twig"
-              url: http://www.famsf.org/contact
-              target: _blank
-              text: Contact
-          - template: "@atoms/li/li.html.twig"
-            components:
-            - template: "@atoms/a/a.html.twig"
-              url: http://www.famsf.org/privacy
-              target: _blank
-              text: Privacy
-          - template: "@atoms/li/li.html.twig"
-            components:
-            - template: "@atoms/a/a.html.twig"
-              url: http://www.famsf.org/terms
-              target: _blank
-              text: Terms & Conditions
-      right:
-        components:
-        - template: "@atoms/copyright/copyright.html.twig"
-          text: "2018 Fine Arts Museum of San Francisco"
-
----
+            - template: "@atoms/li/li.html.twig"
+              components:
+              - template: "@atoms/a/a.html.twig"
+                url: http://www.famsf.org/contact
+                target: _blank
+                text: Contact
+            - template: "@atoms/li/li.html.twig"
+              components:
+              - template: "@atoms/a/a.html.twig"
+                url: http://www.famsf.org/privacy
+                target: _blank
+                text: Privacy
+            - template: "@atoms/li/li.html.twig"
+              components:
+              - template: "@atoms/a/a.html.twig"
+                url: http://www.famsf.org/terms
+                target: _blank
+                text: Terms & Conditions
+        right:
+          components:
+          - template: "@atoms/copyright/copyright.html.twig"
+            text: "2018 Fine Arts Museum of San Francisco"
