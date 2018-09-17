@@ -1,0 +1,14 @@
+{# Set the default image style #}
+{% if (style is not defined or style == '') %}
+  {% set style = 'default' %}
+{% endif %}
+
+{% macro size(style) %}
+  {# Include the image style #}
+  {% extends "@image-style/" ~ style ~ "/" ~ style ~ ".twig" %}
+
+  {# Get the CloudImage sizes var as defined by the image style #}
+  {% block ci_variables %}
+    {{ default_image_sizes }}
+  {% endblock %}
+{% endmacro %}

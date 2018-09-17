@@ -1,6 +1,6 @@
 <div class="chapter__title">
 
-  <img src="{{ img.url }}" class="object-fit" alt="{{ img.alt }}">
+  {% include '@atoms/img/img.html.twig' with img|merge({ classes: img.classes ~ " object-fit", style: 'full-screen' }) %}
 
   <div class="overlay">
     <div class="overlay__contents">

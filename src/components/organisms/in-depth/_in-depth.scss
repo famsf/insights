@@ -119,7 +119,7 @@ Styleguide COMPONENTS.in-depth
         }
       }
 
-      > picture {
+      > .picture {
         width: 100% !important;
 
         @include breakpoint(medium) {

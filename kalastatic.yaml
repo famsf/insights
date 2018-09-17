@@ -1,6 +1,7 @@
 # KalaStatic
 # This file configures how KalaStatic operates.
 
+
 # The source directory.
 base: "./"
 
@@ -47,6 +48,7 @@ pluginOpts:
           assets: src/assets
           templates: src/templates
           macros: src/macros
+          image-style: src/image-style
         filters:
           clean_id: twig-drupal-filters/filters/clean_id
           bustcache: kalastatic-twig-filters/lib/filters/bustcache
