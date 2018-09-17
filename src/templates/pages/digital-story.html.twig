@@ -1,10 +1,10 @@
 <div class="insights-app off-canvas-wrapper" id="insights-app">
-  {% include '@molecules/top-bar/top-bar.html.twig' with { tagline: tagline, tickets_url: tickets_url, facebook_url: facebook_url, twitter_url: twitter_url } only %}
-  {% include '@molecules/chapter-nav/chapter-nav.html.twig' with { chapters: children } only %}
+  {% include '@kalastatic/components/molecules/top-bar/top-bar.html.twig' with { tagline: tagline, tickets_url: tickets_url, facebook_url: facebook_url, twitter_url: twitter_url } only %}
+  {% include '@kalastatic/components/molecules/chapter-nav/chapter-nav.html.twig' with { chapters: children } only %}
   <div class="chapters_container off-canvas-content" id="app">
   {% for chapter in children %}
       {%
-        include "@organisms/chapter/chapter.html.twig" with chapter|merge({
+        include "@kalastatic/components/organisms/chapter/chapter.html.twig" with chapter|merge({
           story__title: story__title|trim,
           story__subtitle: story__subtitle|trim,
           exhibit__info: exhibit__info|trim,
@@ -13,8 +13,8 @@
         }) only
       %}
     {% endfor %}
-    {% include '@organisms/footer/footer.html.twig' with { sections: footer.sections, classes: footer.classes } only %}
+    {% include '@kalastatic/components/organisms/footer/footer.html.twig' with { sections: footer.sections, classes: footer.classes } only %}
   </div>
 </div>
 
-{% include '@molecules/off-canvas/off-canvas.html.twig' with { chapters: children, title: story_title, tickets_url: tickets_url, sections: footer.sections, classes: footer.classes } only %}
+{% include '@kalastatic/components/molecules/off-canvas/off-canvas.html.twig' with { chapters: children, title: story_title, tickets_url: tickets_url, sections: footer.sections, classes: footer.classes } only %}

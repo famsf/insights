@@ -74,10 +74,10 @@ pluginOpts:
       1370542: '@organisms/content--simple/content--simple.html.twig'
       1370139: '@organisms/horizontal-image-slider/horizontal-image-slider.html.twig'
       1370655: '@organisms/in-depth/in-depth.html.twig'
-      1370527: '@kalastatic/components/organisms/page/page.html.twig'
+      1370527: '@organisms/page/page.html.twig'
       1370588: '@organisms/scroll-comparison/scroll-comparison.html.twig'
       1370604: '@organisms/section_wrapper/section_wrapper.html.twig'
-      7933024: '@organisms/footer__cta'
+      # 7933024: '@organisms/footer__cta'
     mappings:
       id: id
       slug: slug

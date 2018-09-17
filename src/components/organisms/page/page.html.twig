@@ -8,7 +8,10 @@
           chapter__numeral: chapter__numeral
         } %}
       {% endif %}
-      {% include component with _context|merge(adenda) only %}
+
+      {{ component }}
+      {# TODO: Fix this. #}
+      {# include component with _context|merge(adenda) only #}
     {% else %}
       {% for child in children %}
         {% include templateMap[child.template_id] with child|merge({ templateMap: templateMap }) only %}
