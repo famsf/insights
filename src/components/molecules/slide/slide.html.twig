@@ -1,11 +1,10 @@
-{% import "@macros/inklude.html.twig" as inklude %}
-<div class="item {{ intro_slide ? 'intro-slide' }}">
+<div class="item {{ loop.first ? 'intro-slide' }}">
   <div class="item__content">
-    {{ inklude.components(_context) }}
-    {% if caption %}
-      {% include "@atoms/caption/caption.html.twig" with caption only %}
+    {% include "@atoms/img/img.html.twig" with slide__image only %}
+    {% if caption__text %}
+      {% include "@atoms/caption/caption.html.twig" with { brief: caption__brief, text: caption__text } only %}
     {% endif %}
-    {% if intro_slide %}
+    {% if loop.first %}
       {% include "@atoms/slide__icon--next/slide__icon--next.html.twig" %}
     {% endif %}
   </div>

@@ -1,9 +1,19 @@
 <div class="insights-app off-canvas-wrapper" id="insights-app">
-  {% include '@molecules/TopBar/TopBar.html.twig' with { tagline: tagline, tickets_url: tickets_url, facebook_url: facebook_url, twitter_url: twitter_url } only %}
-  {% include '@molecules/ChapterNav/ChapterNav.html.twig' with { chapters: children } only %}
+  {% include '@molecules/top-bar/top-bar.html.twig' with { tagline: tagline, tickets_url: tickets_url, facebook_url: facebook_url, twitter_url: twitter_url } only %}
+  {% include '@molecules/chapter-nav/chapter-nav.html.twig' with { chapters: children } only %}
   <div class="chapters_container off-canvas-content" id="app">
-    {% include '@environments/Chapters/Chapters.html.twig' with { chapters: children, story__title: story__title|trim, story__subtitle: story__subtitle|trim, exhibit__info: exhibit__info|trim } only %}
-    {% include '@organisms/Footer/Footer.html.twig' with { sections: footer.sections, classes: footer.classes } only %}
+  {% for chapter in children %}
+      {%
+        include "@organisms/chapter/chapter.html.twig" with chapter|merge({
+          story__title: story__title|trim,
+          story__subtitle: story__subtitle|trim,
+          exhibit__info: exhibit__info|trim,
+          index: loop.index0,
+          templateMap: gatherContent.templateMap
+        }) only
+      %}
+    {% endfor %}
+    {% include '@organisms/footer/footer.html.twig' with { sections: footer.sections, classes: footer.classes } only %}
   </div>
 </div>
 

@@ -1,0 +1,36 @@
+<div class="grid-x">
+  <div class="cell large-10 large-offset-1 {{ component_name ?: 'commentary' }} {{ author_image ? 'has-img' : 'no-img' }}">
+    <div class="grid-x commentary__content">
+      <div class="cell large-5 commentary__layout-left">
+        {% if author__image %}
+          <div class="commentary__image">
+            {% include "@molecules/picture/picture.html.twig" with author__image only %}
+          </div>
+        {% endif %}
+        {% if author__name %}
+          <h3 class="commentary__author-name">{{ author__name }}</h3>
+        {% endif %}
+        {% if author__title %}
+          <h4 class="commentary__author-title">{{ author__title }}</h4>
+        {% endif %}
+        {% if author__bio %}
+          <p class="author-bio">
+            {{ author__bio }}
+          </p>
+        {% endif %}
+      </div>
+      <div class="cell large-7 commentary__layout-right">
+        {% include "@atoms/commentary__icon/commentary__icon.html.twig" %}
+        {% if commentary|striptags|length > 1 %}
+          <p class="commentary">
+            {{ commentary }}
+          </p>
+        {% endif %}
+        {% if cta__button|striptags|length > 1 %}
+          {% include "@atoms/cta__button/cta__button.html.twig" with { link: cta__button } only %}
+        {% endif %}
+        {% include "@molecules/sharing-icons/sharing-icons.html.twig" %}
+      </div>
+    </div>
+  </div>
+</div>

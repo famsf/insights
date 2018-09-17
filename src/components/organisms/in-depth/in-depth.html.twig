@@ -3,15 +3,15 @@
 
     <div class="cell medium-5 medium-offset-1 large-4 large-offset-3 xlarge-4 xlarge-offset-3 in-depth__left-col">
       <div class="in-depth__image">
-        {% include "@molecules/Picture/Picture.html.twig" with picture only %}
+        {% include "@molecules/picture/picture.html.twig" with image only %}
       </div>
     </div>
 
     <div class="cell medium-5 large-4 xxlarge-3 in-depth__right-col">
       <h3 class="in-depth__title">{{ title }}</h3>
-      {% include "@atoms/modal__open-button/modal__open-button.html.twig" with button only %}
+      {% include "@atoms/modal__open-button/modal__open-button.html.twig" with { id: slug, text: button__text } only %}
     </div>
 
   </div>
-  {% include "@molecules/modal/modal.html.twig" with modal|merge({id: button.id}) only %}
+  {% include "@organisms/in-depth__modal/in-depth__modal.html.twig" with _context|merge({id: slug, children: children }) only %}
 </div>

@@ -1,1 +1,3 @@
-<a href="{{ href }}" class="button cta {{ classes }}" id="{{ id }}" target="{{ target }}">{{ text }}</a>
+<div class="button cta {{ classes }}" id="{{ id }}">
+  {{ link|striptags('<a>') }}
+</div>

@@ -73,7 +73,7 @@ chapters:
       offset: 'medium-offset-4'
       grid: align-middle
       components:
-      - template: "@molecules/AudioWithTranscript/AudioWithTranscript.html.twig"
+      - template: "@molecules/audiowithtranscript/audiowithtranscript.html.twig"
         audio:
           src: "../assets/audio/music.ogg"
         transcript:

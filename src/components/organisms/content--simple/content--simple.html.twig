@@ -1,0 +1,18 @@
+
+{% if content__title %}
+  {% include "@atoms/h3/h3.html.twig" with { text: content__title } only %}
+{% endif %}
+{% if content__body %}
+  {% include "@atoms/textarea/textarea.html.twig" with { text: content__body } only %}
+{% endif %}
+{% if content__quote and content__quote|striptags|length > 1 %}
+  {% set quote = {
+    text: content__quote,
+    name: content__quote__attribution,
+    date: content__quote__date
+  } %}
+  {% include "@molecules/inline-quote/inline-quote.html.twig" with quote only %}
+{% endif %}
+{% if content__cta__button|striptags|length > 1 %}
+  {% include "@atoms/cta__button/cta__button.html.twig" with { link: content__cta__button } only %}
+{% endif %}

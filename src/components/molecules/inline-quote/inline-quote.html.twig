@@ -1,4 +1,4 @@
 <blockquote class="{{ component_name ?: 'inline-quote' }}">
-  <q>{{ text }}</q>
-  <cite>{{ name }}, {{ date }}</cite>
+  <q>{{ text|striptags }}</q>
+  <cite>{{ name }}{% if date is defined %}, {{ date }}{% endif %}</cite>
 </blockquote>

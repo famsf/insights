@@ -1,0 +1,44 @@
+  <div class="two_up--primary fluid ">
+  <div class="wrapper grid-x grid-margin-x " id="{{slug}}">
+    {% for column in children %}
+      <div id="" class="cell medium-4 {% if offset %}medium-offset-2{% elseif loop.first %} medium-offset-1{% endif %}">
+        {% for component in column.children %}
+        {{ component._offset }}
+          {% if 'picture--captioned' in templateMap[component.template_id] %}
+            {% set component = component|merge({
+              picture: {
+                src: component.content__image.src,
+                alt: component.content__image.alt
+              },
+              caption: {
+                id: component.slug ~ '_caption',
+                brief: component.caption__brief,
+                text: component.caption__text
+              }
+            }) %}
+          {% elseif 'content--simple' in templateMap[component.template_id] %}
+            {% set component = component|merge({
+              title: component.content__title,
+              body: component.content__body,
+              quote: component.content__quote,
+              attribution: content.content__attribution,
+              cta: content.content__cta__button
+            }) %}
+          {% elseif 'commentary' in templateMap[component.template_id] %}
+            {% set component = component|merge({
+              image: component.author__image,
+              author__title: component.author__title,
+              author__name: component.author__name,
+              author__commentary: component.commentary
+            }) %}
+          {% elseif 'cliff-note' in templateMap[component.template_id] %}
+            {% set component = component|merge({
+              text: component.content__cliff_note
+            }) %}
+          {% endif %}
+          {% include templateMap[component.template_id] with component only %}
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

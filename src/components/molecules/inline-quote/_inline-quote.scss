@@ -13,7 +13,6 @@ Styleguide COMPONENTS.inline-quote
   q {
     @extend %q;
     position: relative;
-
     &:before {
       position: absolute;
       display: inline-block;
