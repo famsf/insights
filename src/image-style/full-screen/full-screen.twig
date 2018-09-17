@@ -1,0 +1,13 @@
+{# Full Screen Image Style Defaults #}
+{% block ci_variables %}
+  {% set default_image_type = 'crop' %}
+  {% set default_image_sizes =
+    "{
+    small: '375x667',
+    medium: '1024x768',
+    large: '1280x800',
+    xlarge: '1440x900',
+    xxlarge: '1920x1080'
+  }"
+  %}
+{% endblock %}

@@ -474,7 +474,6 @@ chapters:
           picture:
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/22_la-prose-detail-the-book.jpg
             alt: Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars
-            style: none
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
       classes: "height-auto"
       right:
@@ -499,7 +498,6 @@ chapters:
           picture:
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/23_chevreul-color-chart.jpg
             alt: Chevreul color wheel
-            style: none
     - template: "@layouts/two_up--primary/two_up--primary.html.twig"
       classes: "height-auto"
       right:
@@ -525,7 +523,6 @@ chapters:
           picture:
             url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/24_windows-open.jpg
             alt: Windows Open Simultaneously 1st Part, 3rd Motif by Robert Delaunay
-            style: none
     - template: "@molecules/commentary/commentary.html.twig"
       component_name: commentary
       author_name: Marjorie Perloff

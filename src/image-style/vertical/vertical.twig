@@ -1,0 +1,13 @@
+{# Vertical Image Style Defaults #}
+{% block ci_variables %}
+  {% set default_image_type = 'crop' %}
+  {% set default_image_sizes =
+    "{
+    small: '320x427',
+    medium: '512x683',
+    large: '640x853',
+    xlarge: '720x960',
+    xxlarge: '960x1280'
+  }"
+  %}
+{% endblock %}
