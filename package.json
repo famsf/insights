@@ -48,7 +48,7 @@
     "kalastatic-twig-filters": "^0.2.0",
     "kss-bootstrap": "^4.1.1",
     "kstat-kss-builder": "^1.2.0",
-    "metalsmith-gathercontent": "^2.0.0",
+    "metalsmith-gathercontent": "git@github.com:kalamuna/metalsmith-gathercontent.git#feature/thiago/kcomcs",
     "motion-ui": "~1.2.2",
     "napa": "^3.0.0",
     "npm-run-all": "^4.1.3",

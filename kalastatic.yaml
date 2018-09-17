@@ -136,7 +136,8 @@ pluginOpts:
       video__poster_image: Content_Poster-Image
       # Meta
       template: Meta_Component
-      # CTA button
+      _offset: Content_Offset
+        # CTA button
       button__text: Content_CTA-Button
       # Slide
       caption__brief: Content_Caption-Brief
@@ -155,6 +156,14 @@ pluginOpts:
       content__title: Content_Title
       content__body: Content_Body
       content__cta__button: Content_CTA-Button
+      # Cliff Note
+      content__cliff_note: Content_Cliff-Note
+      # Commentary
+      commentary__image: Content_Image
+      commentary__author: Content_Author
+      commentary__author__title: Content_Author-Title
+      commentary__commentary: Content_Commentary
+
   # The layouts will live in the templates directory.
   metalsmith-jstransformer:
     pattern: "!components/**"

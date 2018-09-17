@@ -13,7 +13,7 @@
             brief: left__caption_brief,
             text: left__caption
         } only %}
-        {{ left__title }}
+        {% include "@atoms/h3/h3.html.twig" with { text: left__title } only %}
         <div class="content">
           {{ left__body }}
         </div>

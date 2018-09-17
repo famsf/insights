@@ -4,14 +4,14 @@
       <div class="cell large-5 commentary__layout-left">
         {% if author_image %}
           <div class="commentary__image">
-            {% include "@molecules/picture/picture.html.twig" with author_image only %}
+            {% include "@molecules/picture/picture.html.twig" with image only %}
           </div>
         {% endif %}
         {% if author_name %}
-          <h3 class="commentary__author-name">{{ author_name }}</h3>
+          <h3 class="commentary__author-name">{{ author__name }}</h3>
         {% endif %}
         {% if author_title %}
-          <h4 class="commentary__author-title">{{ author_title }}</h4>
+          <h4 class="commentary__author-title">{{ author__title }}</h4>
         {% endif %}
         {% if author_bio %}
           <p class="commentary__author-bio">
