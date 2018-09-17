@@ -229,20 +229,6 @@
     }
   };
 
-  /* We wouldnt need this sillyness if footer was a chapter */
-  pages.scrollToFooter = function (footerOffset) {
-    if (!fds.scrollLock) {
-      pages.unpinPage(pages.currentPage);
-      pages.setCurrentPage(null);
-      fds.scrollLock = true;
-      fds.performantScrollTo(footerOffset, function () {
-        setTimeout(function () {
-          fds.scrollLock = false;
-        });
-      });
-    }
-  };
-
   pages.snapScroll = function (page, scrollOptions) {
     var scrollTo;
     var wh = win.innerHeight;

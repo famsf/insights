@@ -1,19 +1,6 @@
 {
-  "srcset": [
-    {
-      "min-width": "0px",
-      "src": "https://www.fillmurray.com/300/500"
-    },
-    {
-      "min-width": "350px",
-      "src": "https://www.fillmurray.com/300/500"
-    },
-    {
-      "min-width": "800px",
-      "src": "https://www.fillmurray.com/350/500"
-    }
-  ],
   "src": "https://www.fillmurray.com/350/500",
   "alt": "A picture of Bill Murray",
-  "style": "vertical"
+  "style": "vertical",
+  "sizes": "{ small: '320x320', medium: '512x512', large: '600x600', xlarge: '720x720', xxlarge: '960x960' }"
 }

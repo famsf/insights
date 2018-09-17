@@ -5,9 +5,21 @@
     margin-bottom: .5rem;
   }
 
-  .transcript__text {}
+  .transcript__text {
+    transition: all .75s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
 
-  .toggle-transcript {
+    &.active {
+      visibility: visible !important;;
+      opacity: 1;
+      height: auto;
+      max-height: 600px
+    }
+  }
+
+  .transcript__toggle {
     @extend %cta__button;
 
     &:after {

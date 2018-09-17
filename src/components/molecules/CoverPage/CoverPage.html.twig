@@ -1,3 +1,6 @@
+{% set style = 'full-screen' %}
+{% import "@macros/ci-size.html.twig" as ci %}
+
 {% macro print(title) %}
   <span class="solid">{{ title is iterable ? title.firstLine : title }}</span>
   {% if title.secondLine is not empty %}
@@ -6,7 +9,7 @@
 {% endmacro %}
 {% import _self as do %}
 
-<div class="cover_page" id="CoverPage" data-bg-image="{{ image.url }}" data-bg-image-alt="{{ image.alt }}">
+<div class="cover_page" id="CoverPage" data-bg-image="{{ image.url }}" data-bg-image-alt="{{ image.alt }}" data-bg-image-size="{{ ci.size(style) }}">
   <div class="underlay">
     <div class="underlay_contents">
       <h1 class="headline exhibit_logo">
