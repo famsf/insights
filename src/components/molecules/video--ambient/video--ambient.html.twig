@@ -9,14 +9,10 @@
    WCAG general accessibility recommendation is that media such as background video play through only once.
    Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button
   #}
-  {% if youtube %}
-    <div class="plyr_target video_player" data-plyr-provider="youtube" id="{{ id }}_vid" data-plyr-embed-id="{{ youtube.embed }}" ></div>
-  {% else %}
-    <video class="video_element video_player" id="{{ id }}_vid" poster="{{ poster }}" playsinline autoplay muted loop>
-      {% for type, source in sources %}
-        <source src="{{ source }}" type="video/{{ type }}">
-      {% endfor %}
-    </video>
-  {% endif %}
+  <video class="video_element video_player" id="{{ id }}_vid" poster="{{ poster }}" playsinline autoplay muted loop>
+    {% for type, source in sources %}
+      <source src="{{ source }}" type="video/{{ type }}">
+    {% endfor %}
+  </video>
 
 </div>

@@ -22,6 +22,14 @@
     min-height: 100vh;
   }
 
+  &.height-auto,
+  .height-auto {
+    min-height: auto !important;
+    .fluid {
+      min-height: auto;
+    }
+  }
+
   h2 {
     margin-top: 0;
   }

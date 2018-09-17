@@ -35,8 +35,6 @@ plugins:
   # Ignore all partials and layouts.
   - 'metalsmith-ignore'
   # Load all Partials.
-  - 'metalsmith-jstransformer-partials'
-  # Render all content with JSTransformers.
   - 'metalsmith-jstransformer'
   # Clean URLs.
   - 'metalsmith-clean-urls'
@@ -45,11 +43,11 @@ plugins:
 # Allows changing some of the plugin options.
 pluginOpts:
   metalsmith-gathercontent:
-    verbose: 3
+    verbose: 0
     logMappings: 0
     logFileContents: 0
     authPath: _auth.json
-    filePath: src/assets/images/gathercontent
+    filePath: src/assets/gathercontent
     projectId: 190265
     saveJSON: true
     includeAsFile:
@@ -83,22 +81,26 @@ pluginOpts:
       1370527: '@organisms/page/page.html.twig'
       1370588: '@organisms/scroll-comparison/scroll-comparison.html.twig'
       1370604: '@organisms/section_wrapper/section_wrapper.html.twig'
+      7933024: '@organisms/footer__cta'
     mappings:
       id: id
       slug: slug
       name: _name
       component: Meta_Component
-      title: Content_Title
       tier: tier
       position: position
       summary: Content_Summary
       contents: Content_Content
       type: _type
       template_id: _template_id
+      # General
+      title: Content_Title
+      description: Content_Description
       background__image: Content_Background-Image
       background__image-alt: Content_Background-Image-Alt
       content__image: Content_Image
       content__image-alt: Content_Image-Alt
+      video__file: Content_Video-File
       # Insights Info
       tagline: Content_Tagline
       tickets_url: Content_Tickets-URL
@@ -159,11 +161,27 @@ pluginOpts:
       # Cliff Note
       content__cliff_note: Content_Cliff-Note
       # Commentary
-      commentary__image: Content_Image
-      commentary__author: Content_Author
-      commentary__author__title: Content_Author-Title
-      commentary__commentary: Content_Commentary
-
+      author__image: Content_Image
+      author__image-alt: Content_Image-Alt
+      author__name: Content_Author-Name
+      author__title: Content_Author-Title
+      author__bio: Content_Author-Bio
+      commentary: Content_Commentary
+      cta__button: Content_Commentary-CTA-Button
+      # Footer
+      footer__cta-left__title: Content-Left_Title
+      footer__cta-left__description: Content-Left_Description
+      footer__cta-left__cta: Content-Left_CTA-Button
+      footer__cta-middle__title: Content-Middle_Title
+      footer__cta-middle__description: Content-Middle_Description
+      footer__cta-middle__cta: Content-Middle_CTA-Button
+      footer__cta-right__title: Content-Right_Title
+      footer__cta-right__description: Content-Right_Description
+      footer__cta-right__cta: Content-Right_CTA-Button
+      footer__famsf__title: Content-FAMSF_Title
+      footer__famsf__description: Content-FAMSF_Description
+      footer__famsf__tickets: Content-FAMSF_Tickets-Link
+      footer__famsf__membership: Content-FAMSF_Membership-Link
   # The layouts will live in the templates directory.
   metalsmith-jstransformer:
     pattern: "!components/**"

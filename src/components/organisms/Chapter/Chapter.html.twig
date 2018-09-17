@@ -5,7 +5,12 @@
 {% set id = get.id(_context) %}
 {% set isFirstChapter = (index == 0) %}
 
-<section class="chapter {{ classes }}" id="chapter_{{ id }}" data-chapter-index="{{ index }}" data-chapter-length="{{ children|length }}">
+{# Set default chapter wrapper tag #}
+{% if tag is not defined  %}
+  {% set tag = 'section' %}
+{% endif %}
+
+<{{ tag }} class="chapter {{ classes }}" id="chapter_{{ id }}" data-chapter-index="{{ index }}" data-chapter-length="{{ children|length }}">
   {% for child in children %}
     {# Use "passthrough" to send chapter/story data to CoverPage + chapter__title. #}
     {# On CoverPage, use the story title instead of chapter title. #}
@@ -29,4 +34,4 @@
       }) only
     %}
   {% endfor %}
-</section>
+</{{ tag }}>

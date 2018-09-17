@@ -9,9 +9,10 @@
         {% include "@molecules/picture/picture--captioned.html.twig" with {
           picture: left__image,
           caption: {
-            id: slug ~ '__caption',
+            id: slug ~ '__left__caption',
             brief: left__caption_brief,
             text: left__caption
+          }
         } only %}
         {% include "@atoms/h3/h3.html.twig" with { text: left__title } only %}
         <div class="content">
@@ -19,16 +20,23 @@
         </div>
       </div>
       <div class="cell" {{ right.attributes }}>
+        {% set picture__left = {
+          picture: left__image,
+          caption: {
+            id: slug ~ '__left__caption',
+            brief: left__caption_brief,
+            text: left__caption
+          }
+        } %}
         {% include "@molecules/picture/picture--captioned.html.twig" with {
           picture: right__image,
           caption: {
             id: slug ~ '__caption',
             brief: right__caption_brief,
             text: right__caption
+          }
         } only %}
-
-        {{ right__title }}
-
+        {% include "@atoms/h3/h3.html.twig" with { text: right__title } only %}
         <div class="content">
         {{ right__body }}
         </div>
