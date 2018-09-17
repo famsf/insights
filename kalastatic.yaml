@@ -71,8 +71,7 @@ pluginOpts:
       1370128: '@molecules/slide/slide.html.twig'
       1370544: '@molecules/standalone-quote/standalone-quote.html.twig'
       1370592: '@molecules/video--embed/video--embed.html.twig'
-      # xxxxxxx: '@molecules/video--ambient/video--ambient.html.twig'
-      # 1370151: '@column'
+      1370593: '@molecules/video--ambient/video--ambient.html.twig'
       1370626: '@organisms/chapter/chapter.html.twig'
       1370624: '@organisms/commentary/commentary.html.twig'
       1370542: '@organisms/content--simple/content--simple.html.twig'
@@ -100,14 +99,13 @@ pluginOpts:
       background__image-alt: Content_Background-Image-Alt
       content__image: Content_Image
       content__image-alt: Content_Image-Alt
-      video__file: Content_Video-File
       # Insights Info
       tagline: Content_Tagline
       tickets_url: Content_Tickets-URL
       # Story info
       story__title: Content_Story-Title
       story__subtitle: Content_Story-Subtitle
-      exhibit__info: Content_Exhibit-Info
+      exhibit__info: Content_Exhibit-Description
       exhibit__dates: Content_Exhibit-Dates
       color__primary: Theme_Primary
       color__secondary: Theme_Secondary
@@ -135,7 +133,9 @@ pluginOpts:
       right__body: Content-Right_Body-Copy
       # Video Embed
       video__id: Content_Video-Id
+      video__file: Content_Video-File
       video__poster_image: Content_Poster-Image
+      video__body_copy: Content_Video-Body-Copy
       # Meta
       template: Meta_Component
       _offset: Content_Offset

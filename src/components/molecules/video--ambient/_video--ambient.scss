@@ -44,6 +44,11 @@ Styleguide COMPONENTS.AmbientVideo
     }
   }
 
+  .cell {
+    z-index: 2;
+    color: #fff;
+  }
+
   .plyr--video {
     @include breakpoint(medium) {
       @include performy;

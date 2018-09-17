@@ -1,7 +1,7 @@
-<div class="ambient_video two_up--primary fluid" style="background-image: url({{ background.uri }});">
-  <div class="text_content grid-x grid-margin-x" id="{{ id }}">
+<div class="ambient_video two_up--primary fluid" style="background-image: url({{ video__poster_image.src }});">
+  <div class=" grid-x grid-margin-x">
     <div class="cell medium-4 medium-offset-7">
-      {{ text }}
+      <p>{{ video__body_copy }}</p>
     </div>
   </div>
   {#
@@ -9,10 +9,8 @@
    WCAG general accessibility recommendation is that media such as background video play through only once.
    Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button
   #}
-  <video class="video_element video_player" id="{{ id }}_vid" poster="{{ poster }}" playsinline autoplay muted loop>
-    {% for type, source in sources %}
-      <source src="{{ source }}" type="video/{{ type }}">
-    {% endfor %}
+  <video class="video_element video_player" poster="{{ video__poster_image.src }}" playsinline autoplay muted loop>
+    <source src="{{ video__file.src }}.mp4" type="video/mp4">
   </video>
 
 </div>
