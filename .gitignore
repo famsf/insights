@@ -1,5 +1,8 @@
-# Secure things
+# GatherContent
 _auth.json
+/flat.json
+/origin.json
+/src/assets/gathercontent
 
 # Built things
 build

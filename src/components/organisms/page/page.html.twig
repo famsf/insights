@@ -1,6 +1,6 @@
 <section class="page {{ classes }}" id="chapter_{{ id }}" data-page-index="{{ index }}">
   <div class="frame">
-    {% if component != '@organisms/page/page.html.twig' %}
+    {% if component != '@kalastatic/components/organisms/page/page.html.twig' %}
       {% set adenda = {} %}
       {% if 'chapter__title' in gatherContent.templateMap[chapter.templateId] %}
         {% set adenda = {
