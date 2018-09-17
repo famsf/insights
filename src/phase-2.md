@@ -49,6 +49,23 @@ chapters:
       poster: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/intro-book-unfolding_thumbnail.jpg
       youtube:
         embed: xt27-zrvHkk
+      overlay:
+        heading: Full Width
+        text: Embedded video rendered in full width mode
+
+  # iv
+  - classes: hide-chapter-nav theme--dark
+    components:
+    - template: "@organisms/video--embed/video--embed.html.twig"
+      classes: boxed
+      id: xt27-zrvHkk
+      # see https://stackoverflow.com/questions/2068344/how-do-i-get-a-youtube-video-thumbnail-from-the-youtube-api
+      poster: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/intro-book-unfolding_thumbnail.jpg
+      youtube:
+        embed: xt27-zrvHkk
+      overlay:
+        heading: Boxed Width
+        text: Embedded video rendered in boxed width mode
 
 ################################################################################
 ## CHAPTER 1 ###################################################################

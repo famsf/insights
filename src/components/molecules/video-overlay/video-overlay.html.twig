@@ -1,0 +1,11 @@
+<div class="video-overlay">
+  {% if heading %}
+    {% include "@atoms/h4/h4.html.twig" with { text: heading, classes: "video-overlay__title" } only %}
+  {% endif %}
+
+  {% if text %}
+    <div class="video-overlay__text">
+      {{ text }}
+    </div>
+  {% endif %}
+</div>

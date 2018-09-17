@@ -332,6 +332,8 @@
     var plyr;
     var pageEl = page.el;
     var poster;
+    var videoId;
+    var videoParent;
     if (page.ambientVideoEl) {
       if (!page.embeddedVideo) {
         plyr = new Plyr(page.ambientVideoEl, {
@@ -348,8 +350,9 @@
       if (!page.embeddedVideo) {
         plyr = new Plyr(page.embeddedVideoEl, {
           hideControls: 'false',
-          controls: ['play', 'progress', 'current-time', 'mute', 'captions', 'settings', 'pip', 'fullscreen']
+          controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'captions', 'settings', 'pip', 'fullscreen']
         });
+
         plyr.on('ready', function (e) {
           poster = page.embeddedVideoEl.dataset.poster;
           if (poster) {
@@ -358,6 +361,18 @@
           page.embeddedVideo = plyr;
           plyr.play();
           plyr.pause();
+        });
+
+        plyr.on('playing', function (e) {
+          videoId = plyr.media.id;
+          videoParent = document.getElementById(videoId).parentElement.parentElement.parentElement;
+          videoParent.classList.add('playing');
+        });
+
+        plyr.on('pause', function (e) {
+          videoId = plyr.media.id;
+          videoParent = document.getElementById(videoId).parentElement.parentElement.parentElement;
+          videoParent.classList.remove('playing');
         });
       }
     }
