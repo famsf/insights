@@ -1,7 +1,15 @@
 {% set style = 'full-screen' %}
 {% import "@macros/ci-size.html.twig" as ci %}
+{% import "@macros/ci-quality.html.twig" as ci %}
 
-<div class="ambient_video two_up--primary fluid" ci-responsive ci-img-background="{{ background.uri }}" ci-size="{{ ci.size(style) }}" ci-type="crop">
+<div
+  class="ambient_video two_up--primary fluid"
+  ci-responsive
+  ci-img-background="{{ background.uri }}"
+  ci-size="{{ ci.size(style) }}"
+  ci-type="crop"
+  ci-params="{{ ci.quality(background.uri, background.quality) }}"
+  >
   <div class="text_content grid-x grid-margin-x" id="{{ id }}">
     <div class="cell medium-4 medium-offset-7">
       {{ text }}

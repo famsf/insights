@@ -29,6 +29,7 @@
       // would also need to get made to CoverPage.js and possibly the two
       // background image implementations (grep for `ci-responsive` to find all
       // usage).
+      DEFAULT_PARAMS: 'q70',
       DEFAULT_TYPE: 'bound',
       DEFAULT_WIDTH: "{small: '320x320', medium:'512x512', large: '600",
       DEFAULT_HEIGHT: "600', xlarge:'720x720', xxlarge:'960x960'}"
