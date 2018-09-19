@@ -18,6 +18,8 @@
     var param;
     var i;
     var startPage;
+    var commentary;
+    var commentaryStickListener;
     pages.container = doc.querySelector(containerSelector);
     pages.pages = doc.querySelectorAll(pageSelector);
 
@@ -57,6 +59,21 @@
         instant: true,
         force: true
       });
+
+      if (pages.hasOwnProperty('hashes') && pages.hashes.hasOwnProperty('commentary')) {
+        if (pages.hashes.commentary === 'true') {
+          commentary = startPage.el.querySelectorAll('[data-author]');
+          commentary[0].classList.add('stick-commentary');
+          // Set timeout is nasty, I know. But we need to wait for the initial scroll to finish.
+          setTimeout(function () {
+            commentaryStickListener = function (e) {
+              commentary[0].classList.remove('stick-commentary');
+              window.removeEventListener('scroll', commentaryStickListener);
+            };
+            window.addEventListener('scroll', commentaryStickListener);
+          }, 2000);
+        }
+      }
     }
   };
 
@@ -136,6 +153,7 @@
 
   pages.setCurrentPage = function (page) {
     var pageEl;
+    var pageHash;
     if (page) {
       pageEl = page.el;
       pages.oldCurrentPage = pages.currentPage;
@@ -147,7 +165,11 @@
       page.isCurrent = true;
       fds.chapterNav.setActiveItem(page.chapter);
       fds.mobileNav.setActiveItem(page.chapter);
-      window.location.hash = '&chapter=' + page.chapterId + '&page=' + pageEl.id;
+      pageHash = '&chapter=' + page.chapterId + '&page=' + pageEl.id;
+      if (pageEl.querySelectorAll('[data-author]').length > 0) {
+        pageHash += '&commentary=true';
+      }
+      window.location.hash = pageHash;
       pages.hashes.page = pageEl.id;
       pages.hashes.chapter = page.chapterId;
       pages.triggerPage(page);

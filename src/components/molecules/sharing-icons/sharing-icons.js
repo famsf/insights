@@ -8,6 +8,9 @@
 
     hash = encodeURIComponent(window.location.hash);
     shareUrl = url + hash;
+    if (el.closest('[data-author]') != null) {
+      shareUrl += encodeURIComponent('&commentary=true');
+    }
     shareFacebook = el.querySelector('.share--facebook');
     shareTwitter = el.querySelector('.share--twitter');
 
