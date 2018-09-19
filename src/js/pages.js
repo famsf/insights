@@ -166,9 +166,7 @@
       fds.chapterNav.setActiveItem(page.chapter);
       fds.mobileNav.setActiveItem(page.chapter);
       pageHash = '&chapter=' + page.chapterId + '&page=' + pageEl.id;
-      if (pageEl.querySelectorAll('[data-author]').length > 0) {
-        pageHash += '&commentary=true';
-      }
+      pageHash += (pageEl.querySelectorAll('[data-author]').length > 0) ? '&commentary=true' : '';
       window.location.hash = pageHash;
       pages.hashes.page = pageEl.id;
       pages.hashes.chapter = page.chapterId;

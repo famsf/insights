@@ -7,10 +7,8 @@
     var url = window.location.origin + window.location.pathname;
 
     hash = encodeURIComponent(window.location.hash);
+    hash += (el.closest('[data-author]') != null) ? encodeURIComponent('&commentary=true') : '';
     shareUrl = url + hash;
-    if (el.closest('[data-author]') != null) {
-      shareUrl += encodeURIComponent('&commentary=true');
-    }
     shareFacebook = el.querySelector('.share--facebook');
     shareTwitter = el.querySelector('.share--twitter');
 
