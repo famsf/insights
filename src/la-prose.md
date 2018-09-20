@@ -70,6 +70,7 @@ chapters:
     - template: "@layouts/one_up--primary/one_up--primary.html.twig"
       classes: theme--primary-dark
       grid: align-middle
+      snap_id: delaunay-quote
       components:
       - template: "@molecules/standalone-quote/standalone-quote.html.twig"
         component_name: standalone-quote
@@ -100,7 +101,7 @@ chapters:
           text: "<p>It was an audacious work of art: appropriating a map-fold
             format, the book unfurls to over six feet in length, then opens
             to reveal Delaunay’s abstract forms confronting a poem of more than
-            400 lines splashed across the right-hand side of the opening. Her preliminary painting was reproduced for the edition with pochoir, a laborious stenciling process. Planned in edition of 150, only slightly more than half were actually produced. 
+            400 lines splashed across the right-hand side of the opening. Her preliminary painting was reproduced for the edition with pochoir, a laborious stenciling process. Planned in edition of 150, only slightly more than half were actually produced.
 </p><p>The text is presented in a radical format, printed in several colors in more than two dozen typefaces. Sometimes tethered to the left margin, sometimes to the right, the poem wanders through fields of applied color. Though Cendrars denied it, he may have been influenced by the contemporary typographic experiments of the Italian Futurists—the poem’s layout seems to break all the rules of conventional formatting.</p>"
           dropcap: false
 
@@ -242,7 +243,7 @@ chapters:
             component_name: inline-quote
             name: Blaise Cendrars, <em>La lotissement du ciel (Sky)</em>
             date: '1949'
-            text: It was not the art dealers, nor the critics, nor the collectors who made these painters famous, it was the modern poets, and people forget it rather too easily, and so do all these painters who, today, are millionaires and are still indebted to us, the poor poets!     
+            text: It was not the art dealers, nor the critics, nor the collectors who made these painters famous, it was the modern poets, and people forget it rather too easily, and so do all these painters who, today, are millionaires and are still indebted to us, the poor poets!
 
   # c2p2
   - classes: theme--dark
@@ -358,6 +359,7 @@ chapters:
       author_title: "Distinguished Professor Emerita, Graduate School of the City University of New York"
       author_bio: "Mary Ann Caws is the author of more than 40 books, including <em>The Surrealist Look: An Erotics of Encounter</em> (1997), and <em>Picasso’s Weeping Woman: The Life and Art of Dora Maar</em> (2000)."
       author_image: ''
+      snap_id: mary-ann-caws
       components:
       - template: "@atoms/textarea/textarea.html.twig"
         text: "<p>The cacophonous <em>Rite of Spring</em> was the centerpiece of a simultaneity of sound, color, and movement. Nijinsky danced its May 29 premiere for Sergei Diaghilev’s Ballets Russes in Paris’s Théâtre des Champs-Élysées, and the spectacle provoked a celebrated pandemonium. Igor Stravinsky’s discordant music touched off outrage from the more conservative audience members, with others equally vehement in its defense. This riot against modernism, to put it bluntly, conferred on the piece more glory than anything positive could possibly have done—riots led to revelry in the long run.</p>"
@@ -381,7 +383,7 @@ chapters:
             name: Blaise Cendrars, radio interview
             date: '1950'
             text: "A woman nearby, covered by diamonds, but the music of Stravinsky drove her crazy, tore out a brand-new folding seat and smashed me over the head with it, so I had to spend the rest of the night drinking champagne in Montmartre with Stravinsky [and] Diaghilev ... still wearing the folding chair like a horse collar."
- 
+
   # c2p5
   - classes: hide-chapter-nav invert-top-bar
     components:
@@ -445,6 +447,7 @@ chapters:
   - components:
     - template: "@layouts/one_up--primary/one_up--primary.html.twig"
       grid: align-middle
+      snap_id: sad-poem
       components:
       - template: "@molecules/standalone-quote/standalone-quote.html.twig"
         component_name: standalone-quote
@@ -525,6 +528,7 @@ chapters:
             alt: Windows Open Simultaneously 1st Part, 3rd Motif by Robert Delaunay
     - template: "@molecules/commentary/commentary.html.twig"
       component_name: commentary
+      snap_id: marj-perloff
       author_name: Marjorie Perloff
       author_title: "Professor Emerita, Stanford University and the University of Southern California"
       author_bio: "Marjorie Perloff is the author of many books on poetry and poetics, including <em>The Futurist Moment: Avant-Garde, Avant-Guerre, and the Language of Rupture</em> (1986), which deals extensively with artists and poets in the years leading up to World War I."
@@ -642,7 +646,7 @@ chapters:
       left:
         components:
           - template: "@atoms/cliff-note/cliff-note.html.twig"
-            text: The forward-looking nature of La prose has many parallels in our time.   
+            text: The forward-looking nature of La prose has many parallels in our time.
 
       right:
         components:
