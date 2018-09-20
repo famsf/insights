@@ -39,11 +39,12 @@ chapters:
         text: Introduction
       - template: "@atoms/textarea/textarea.html.twig"
         text: "<p>By 1913, Paris had been for more than a decade the epicenter of artistic revolution in Europe. That year, artist Sonia Delaunay and poet Blaise Cendrars collaborated on <em>La prose du Transsibérien et de la Petite Jehanne de France (Prose of the Trans-Siberian and of Little Jehanne of France)</em>. Hailed as the first “simultaneous book,” the artwork was conceived as a unified experience of text and image, indivisible and apprehended concurrently.</p>"
-      - template: "@molecules/FullbleedZoomImage/FullbleedZoomImage.html.twig"
-        url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/16_stravinsky-diaghilev.jpg"
-        alt: Fubar
-        style: horizontal
-
+  # iia
+  - components:
+    - template: "@molecules/FullbleedZoomImage/FullbleedZoomImage.html.twig"
+      url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/16_stravinsky-diaghilev.jpg"
+      alt: Fubar
+      style: horizontal
   # iii
   - classes: hide-chapter-nav theme--dark
     components:
