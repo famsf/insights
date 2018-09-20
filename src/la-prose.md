@@ -39,6 +39,10 @@ chapters:
         text: Introduction
       - template: "@atoms/textarea/textarea.html.twig"
         text: "<p>By 1913, Paris had been for more than a decade the epicenter of artistic revolution in Europe. That year, artist Sonia Delaunay and poet Blaise Cendrars collaborated on <em>La prose du Transsibérien et de la Petite Jehanne de France (Prose of the Trans-Siberian and of Little Jehanne of France)</em>. Hailed as the first “simultaneous book,” the artwork was conceived as a unified experience of text and image, indivisible and apprehended concurrently.</p>"
+      - template: "@molecules/FullbleedZoomImage/FullbleedZoomImage.html.twig"
+        url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/16_stravinsky-diaghilev.jpg
+        alt: Fubar
+        style: horizontal
 
   # iii
   - classes: hide-chapter-nav theme--dark
@@ -100,7 +104,7 @@ chapters:
           text: "<p>It was an audacious work of art: appropriating a map-fold
             format, the book unfurls to over six feet in length, then opens
             to reveal Delaunay’s abstract forms confronting a poem of more than
-            400 lines splashed across the right-hand side of the opening. Her preliminary painting was reproduced for the edition with pochoir, a laborious stenciling process. Planned in edition of 150, only slightly more than half were actually produced. 
+            400 lines splashed across the right-hand side of the opening. Her preliminary painting was reproduced for the edition with pochoir, a laborious stenciling process. Planned in edition of 150, only slightly more than half were actually produced.
 </p><p>The text is presented in a radical format, printed in several colors in more than two dozen typefaces. Sometimes tethered to the left margin, sometimes to the right, the poem wanders through fields of applied color. Though Cendrars denied it, he may have been influenced by the contemporary typographic experiments of the Italian Futurists—the poem’s layout seems to break all the rules of conventional formatting.</p>"
           dropcap: false
 
@@ -242,7 +246,7 @@ chapters:
             component_name: inline-quote
             name: Blaise Cendrars, <em>La lotissement du ciel (Sky)</em>
             date: '1949'
-            text: It was not the art dealers, nor the critics, nor the collectors who made these painters famous, it was the modern poets, and people forget it rather too easily, and so do all these painters who, today, are millionaires and are still indebted to us, the poor poets!     
+            text: It was not the art dealers, nor the critics, nor the collectors who made these painters famous, it was the modern poets, and people forget it rather too easily, and so do all these painters who, today, are millionaires and are still indebted to us, the poor poets!
 
   # c2p2
   - classes: theme--dark
@@ -381,7 +385,7 @@ chapters:
             name: Blaise Cendrars, radio interview
             date: '1950'
             text: "A woman nearby, covered by diamonds, but the music of Stravinsky drove her crazy, tore out a brand-new folding seat and smashed me over the head with it, so I had to spend the rest of the night drinking champagne in Montmartre with Stravinsky [and] Diaghilev ... still wearing the folding chair like a horse collar."
- 
+
   # c2p5
   - classes: hide-chapter-nav invert-top-bar
     components:
@@ -642,7 +646,7 @@ chapters:
       left:
         components:
           - template: "@atoms/cliff-note/cliff-note.html.twig"
-            text: The forward-looking nature of La prose has many parallels in our time.   
+            text: The forward-looking nature of La prose has many parallels in our time.
 
       right:
         components:
