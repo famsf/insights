@@ -2,9 +2,10 @@
 {% if (style is not defined or style == '') %}
   {% set style = 'default' %}
 {% endif %}
-
 {# Include the image style #}
 {% extends "@image-style/" ~ style ~ "/" ~ style ~ ".twig" %}
+{# Calculate what quality should be used #}
+{% import "@macros/ci-quality.html.twig" as ci %}
 
 {# Set the CloudImage sizes and type as defined by the image style #}
 {% block ci_variables %}
@@ -20,6 +21,7 @@
     src="{{ src }}"
     ci-responsive
     ci-src="{{ url }}"
+    ci-params="{{ ci.quality(url, quality) }}"
     {% if type %}
       ci-type="{{ type }}"
     {% endif %}

@@ -1,10 +1,12 @@
 {% set style = 'full-screen' %}
 {% import "@macros/ci-size.html.twig" as ci %}
+{% import "@macros/ci-quality.html.twig" as ci %}
 
 <div class="video--embed {{ classes }} {{ overlay ? 'overlay' }}">
   <div class="video--embed__wrapper" ci-responsive ci-size="{{ ci.size(style) }}" ci-type="crop"
     {% if poster %}
-    ci-img-background="{{ poster }}"
+      ci-img-background="{{ poster }}"
+      ci-params="{{ ci.quality(poster, quality) }}"
     {% endif %}
   >
     {% if youtube %}
