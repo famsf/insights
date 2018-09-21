@@ -67,6 +67,16 @@ chapters:
         heading: Boxed Width
         text: Embedded video rendered in boxed width mode
 
+  # v
+  - classes: hide-chapter-nav theme--dark
+    components:
+    - template: "@organisms/video--embed/video--embed.html.twig"
+      id: xt27-zrvHkk
+      # see https://stackoverflow.com/questions/2068344/how-do-i-get-a-youtube-video-thumbnail-from-the-youtube-api
+      poster: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/intro-book-unfolding_thumbnail.jpg
+      youtube:
+        embed: xt27-zrvHkk
+
 ################################################################################
 ## CHAPTER 1 ###################################################################
 ################################################################################

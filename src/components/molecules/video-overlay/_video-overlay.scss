@@ -2,7 +2,8 @@
   display: none;
 
   @include breakpoint(medium) {
-    transition: opacity .25s ease-in-out;
+    background: rgba($black, .25);
+    transition: opacity .25s ease-in-out 0s, z-index 0s ease-in-out 5s;
     opacity: 1;
     display: block;
     position: absolute;
@@ -23,6 +24,7 @@
 
     .playing & {
       opacity: 0;
+      z-index: -1;
     }
   }
 }
