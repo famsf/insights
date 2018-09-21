@@ -6,6 +6,8 @@ files:
 - components/atoms/video--embed/video--embed.js
 - components/atoms/audio_player/audio_player.js
 - components/molecules/TopBar/TopBar.js
+- components/molecules/zoom-image--inline/zoom-image--inline.js
+- components/molecules/zoom-caption/zoom-caption.js
 - components/molecules/CoverPage/CoverPage.js
 - js/pages.js
 - components/molecules/ChapterNav/ChapterNav.js
