@@ -1,0 +1,15 @@
+%zoom-image--fullbleed {
+  background-color: $black;
+  overflow: hidden;
+  height: 100vh;
+  img {
+    max-width: none;
+    &:hover {
+      cursor: move;
+    }
+  }
+}
+
+.zoom-image--fullbleed {
+  @extend %zoom-image--fullbleed;
+}

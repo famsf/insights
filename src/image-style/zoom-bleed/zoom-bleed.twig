@@ -1,0 +1,13 @@
+{# Zoom Bleed Image Style Defaults #}
+{% block ci_variables %}
+  {% set default_image_type = 'crop' %}
+  {% set default_image_sizes =
+    "{
+    small: '563x1001',
+    medium: '1536x1152',
+    large: '1920x1200',
+    xlarge: '2160x1350',
+    xxlarge: '2880x1620'
+  }"
+  %}
+{% endblock %}

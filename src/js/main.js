@@ -187,5 +187,8 @@
 
     fds.rootElement = doc.querySelector('.insights-app');
     fds.initialize();
+
+    // Triggering zoom image dragging.
+    $('.img-zoom-drag').draggable();
   });
 }(window.fds = window.fds || {}, window, document, jQuery));

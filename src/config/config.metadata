@@ -10,11 +10,13 @@ stylesheets:
 scripts:
   header:
     all:
+      -
       - /js/cloudimage/cloudimage.responsive.min.js
       - /js/cloudimage/cloudimage.custom.js
   footer:
     all:
       - /js/jquery/jquery.js
+      - https://code.jquery.com/ui/1.12.1/jquery-ui.js
       - /js/foundation/foundation.min.js
       - /js/owl/owl.carousel.js
       - /js/object-fit-images/ofi.min.js
