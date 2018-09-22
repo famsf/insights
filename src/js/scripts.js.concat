@@ -9,6 +9,7 @@ files:
 - components/molecules/zoom-image--inline/zoom-image--inline.js
 - components/molecules/zoom-caption/zoom-caption.js
 - components/molecules/CoverPage/CoverPage.js
+- components/molecules/zoom-image--fullbleed/zoom-image--fullbleed.js
 - js/pages.js
 - components/molecules/ChapterNav/ChapterNav.js
 - components/molecules/menu--mobile/menu--mobile.js
