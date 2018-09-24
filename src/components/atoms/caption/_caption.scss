@@ -12,10 +12,15 @@
     padding: .125rem;
     height: 1.25rem;
     width: 1.25rem;
-    font-size: 1.2em;
-    line-height: 1em;
+    position: relative;
     .i-info {
       text-transform: lowercase;
+      font-size: 1.2em;
+      font-family: 'freight-text-pro';
+      font-weight: 700;
+      position: absolute;
+      top: 1px;
+      left: 5px;
     }
   }
 
