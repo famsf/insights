@@ -3,7 +3,7 @@
   min-width: 100vw;
 }
 
-@mixin  performy {
+@mixin performy {
   backface-visibility: hidden;
   transform: translateZ(0);
   perspective: 1000;
@@ -126,6 +126,43 @@
         top: -3px;
         left: -12px;
       }
+    }
+  }
+}
+
+// Responsive property mixin.
+@mixin responsive($property, $sm, $md: null, $l: null, $xl: null, $xxl: null) {
+
+  // Set property for small.
+  @if variable-exists(sm) and $sm != null {
+    #{$property}: $sm;
+  }
+
+  // Set property for medium and up.
+  @if variable-exists(md) and $md != null {
+    @include breakpoint(medium) {
+      #{$property}: $md;
+    }
+  }
+
+  // Set property for large and up.
+  @if variable-exists(l) and $l != null {
+    @include breakpoint(large) {
+      #{$property}: $l;
+    }
+  }
+
+  // Set property for xlarge and up.
+  @if variable-exists(xl) and $xl != null {
+    @include breakpoint(xlarge) {
+      #{$property}: $xl;
+    }
+  }
+
+  // Set font size for xxlarge and up.
+  @if variable-exists(xxl) and $xxl != null {
+    @include breakpoint(xxlarge) {
+      #{$property}: $xxl;
     }
   }
 }

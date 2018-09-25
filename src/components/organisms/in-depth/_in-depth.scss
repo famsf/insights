@@ -89,9 +89,19 @@ Styleguide COMPONENTS.in-depth
 }
 
 %in-depth-modal {
+  .in-depth__toggle {
+    @extend %modal__close-button;
+    transition: all .25s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+
+    @include breakpoint(large) {
+      margin-top: 6rem;
+    }
+  }
+
   .horizontal-image-slider {
     @extend %horizontal-image-slider;
-    position: absolute;
     height: auto;
     padding: 0;
 
@@ -183,6 +193,33 @@ Styleguide COMPONENTS.in-depth
         top: calc(50% - 1.25rem);
       }
     }
+
+    .owl-dots,
+    .owl-nav {
+      @include breakpoint(large) {
+        transition: all .25s ease-in-out;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  }
+
+  // Style overrides when the in depth slider is open.
+  @include breakpoint(large) {
+    &.open {
+      .in-depth__toggle {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .horizontal-image-slider {
+        .owl-dots,
+        .owl-nav {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
   }
 }
 
@@ -190,6 +227,7 @@ Styleguide COMPONENTS.in-depth
   @extend %in-depth;
 }
 
+.in-depth-slider,
 .in-depth-modal {
   @extend %in-depth-modal;
 }

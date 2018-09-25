@@ -8,6 +8,7 @@
 
       <div class="slide--in-depth__intro__content--top">
         <h3 class="slide--in-depth__intro__title">{{ title }}</h3>
+        <span class="slide--in-depth__intro__button">Learn More</span>
       </div>
 
       <div class="slide--in-depth__intro__content--bottom">
@@ -21,3 +22,23 @@
   {% include "@atoms/slide__icon--next/slide__icon--next.html.twig" %}
 
 </div>
+
+
+{# Legacy markup from old in-depth implemenation for reference. #}
+
+{#<div class="in-depth">#}
+  {#<div class="grid-x in-depth__intro">#}
+
+    {#<div class="cell medium-5 medium-offset-1 large-4 large-offset-3 xlarge-4 xlarge-offset-3 in-depth__left-col">#}
+      {#<div class="in-depth__image">#}
+        {#{% include "@molecules/Picture/Picture.html.twig" with picture only %}#}
+      {#</div>#}
+    {#</div>#}
+
+    {#<div class="cell medium-5 large-4 xxlarge-3 in-depth__right-col">#}
+      {#<h3 class="in-depth__title">{{ title }}</h3>#}
+      {#{% include "@atoms/modal__open-button/modal__open-button.html.twig" with button only %}#}
+    {#</div>#}
+
+  {#</div>#}
+{#</div>#}

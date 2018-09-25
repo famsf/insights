@@ -32,8 +32,11 @@
       align-items: center;
 
       &:before {
+        transition: all .5s ease-in-out;
+        transition-delay: 0s;
+        transform: translateX(-100%);
         position: absolute;
-        top: calc(50% + 5px);
+        top: calc(50% - 1.65rem);
         right: calc(6rem + 3px);
         left: auto;
         height: 1px;
@@ -45,8 +48,14 @@
       }
     }
 
+    @include breakpoint(large) {
+      height: calc(100% - 4rem);
+      top: 4rem;
+    }
+
     picture {
       width: 100% !important;
+      margin-bottom: 0;
 
       @include breakpoint(medium) {
         max-height: inherit;
@@ -67,8 +76,8 @@
       }
 
       @include breakpoint(large) {
-        height: 85vh;
-        width: 85vh !important;
+        transition: all .5s ease-in-out;
+        transform: translate(-15%, 0) scale(.7);
       }
     }
 
@@ -87,27 +96,24 @@
 
   .slide--in-depth__intro__title {
     @extend h1;
+    @include responsive(font-size, 2rem, 3rem, 4rem);
+    @include responsive(margin-bottom, inherit, 2rem, 4rem);
+    transition: all .25s ease-in-out;
+    transition-delay: .5s;
     font-family: $header-font-family !important;
-    font-size: 2rem;
     font-weight: bold;
+  }
 
-    @include breakpoint(medium) {
-      margin: 0;
-      font-size: 3rem;
-    }
+  .slide--in-depth__intro__button {
+    @extend %cta__button;
+    transition: all .25s ease-in-out;
+    transition-delay: .5s;
 
     @include breakpoint(large) {
-      font-size: 4rem;
-    }
-
-    @include breakpoint(xlarge) {
-      font-size: 5rem;
-    }
-
-    @include breakpoint(xxlarge) {
-      font-size: 6rem;
+      margin: 0 40% 0 auto;
     }
   }
+
 
   .slide--in-depth__intro__text {
     @include breakpoint(xlarge) {
@@ -132,16 +138,20 @@
   }
 
   .slide--in-depth__intro__content--top {
+    @include responsive(width, initial, 100%, 60%, 49%, 38%);
     @include breakpoint(medium) {
       position: absolute;
       bottom: calc(50% - 5px);
       margin-bottom: 3rem;
-      width: 100%;
     }
 
     @include breakpoint(large) {
+      display: flex;
+      flex-flow: column;
       margin-bottom: 5rem;
-      width: 60%;
+      transition: all .5s ease-in-out;
+      transition-delay: .5s;
+      transform: translate(125%, 85%);
     }
   }
 
@@ -155,6 +165,10 @@
     }
 
     @include breakpoint(large) {
+      transition: all .25s ease-in-out;
+      transition-delay: 0s;
+      visibility: hidden;
+      opacity: 0;
       margin-top: 5rem;
       width: 40%;
     }
@@ -190,6 +204,45 @@
 
     svg {
       transform: rotate(90deg);
+    }
+  }
+
+  // Modify styles if the in depth slider should be open.
+  @include breakpoint(large) {
+    .open & {
+      .slide--in-depth__intro__button {
+        transition-delay: 0s;
+        visibility: hidden;
+        opacity: 0;
+      }
+
+      .slide--in-depth__intro__title {
+        @include responsive(margin-bottom, inherit, 0);
+        transition-delay: 0s;
+        transform: scale(1.5);
+      }
+
+      .slide--in-depth__intro__image {
+        &:before {
+          transition-delay: .5s !important;
+          transform: translateX(0);
+        }
+
+        picture {
+          transform: translate(0, 0);
+        }
+      }
+
+      .slide--in-depth__intro__content--top {
+        transition-delay: 0s;
+        transform: translate(0, 0);
+      }
+
+      .slide--in-depth__intro__content--bottom {
+        transition-delay: .5s;
+        visibility: visible;
+        opacity: 1;
+      }
     }
   }
 }
