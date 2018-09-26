@@ -1,0 +1,16 @@
+{% set year_span_class = 'no-year-span' %}
+{% if is_year_span == true %}
+  {% set year_span_class = 'year-span' %}
+{% endif %}
+<div class="timeline {{ year_span_class }}">
+  <h2 class="timeline-title">{{ title }}</h2>
+  {% for year_item in years %}
+    {% include '@molecules/timeline/timeline--year.html.twig' with {
+      year: year_item.year,
+      year_title: year_item.year_title,
+      year_subtitle: year_item.year_subtitle,
+      description: year_item.description,
+      images: year_item.images
+    } only %}
+  {% endfor %}
+</div>

@@ -1,0 +1,28 @@
+{#
+  Provides individual timeline items.
+  To be used with the timeline.html.twig component.
+#}
+<div class="timeline--year">
+  <div class="timeline-images">
+    {% for image in images %}
+      <div class="timeline-item-image">
+        {% include "@atoms/img/img.html.twig" with {
+          style: image.style,
+          url: image.src,
+          alt: image.alt,
+        } only %}
+        {% include "@atoms/caption/caption.html.twig" with { brief: image.caption } only %}
+      </div>
+    {% endfor %}
+  </div>
+  <div class="timeline-item-text">
+    {% if year is defined %}
+      <span class="timeline-year">{{ year }}</span>
+    {% endif %}
+    <h3 class="timeline-item-title">{{ year_title }}</h3>
+    {% if year_subtitle is defined %}
+      <h4 class="timeline-item-subtitle">{{ year_subtitle }}</h4>
+    {% endif %}
+    <p class="timeline-item-description">{{ description }}</p>
+  </div>
+</div>
