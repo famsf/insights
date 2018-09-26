@@ -94,6 +94,11 @@ Styleguide COMPONENTS.in-depth
     transition: all .25s ease-in-out;
     visibility: hidden;
     opacity: 0;
+    margin-top: 5rem;
+
+    @include breakpoint(small only) {
+      position: absolute;
+    }
 
     @include breakpoint(medium) {
       margin-top: 5rem;

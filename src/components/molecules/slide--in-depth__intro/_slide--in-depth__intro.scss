@@ -151,6 +151,11 @@
   .slide--in-depth__intro__content--top {
     @include responsive(width, initial, 100%, 45%, 40%, 30%);
     @include responsive(margin, 0 2rem, 0 0 3rem auto, 10vh 10vw 3rem auto);
+    transition: all .5s ease-in-out;
+    transition-delay: .25s;
+    transform: translate(0, 1rem);
+    opacity: 0;
+    visibility: hidden;
 
     @include breakpoint(medium) {
       display: flex;
@@ -185,7 +190,7 @@
   
   .sharing-icons {
     position: absolute;
-    top: -1rem;
+    top: 3rem;
     left: 1rem;
     margin-top: 0;
 
@@ -301,6 +306,14 @@
       transition-delay: .5s;
       visibility: visible;
       opacity: 1;
+    }
+  }
+
+  .triggered & {
+    .slide--in-depth__intro__content--top {
+      transform: translate(0, 0);
+      opacity: 1;
+      visibility: visible;
     }
   }
 }
