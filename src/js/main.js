@@ -146,10 +146,18 @@
 
     $('.slide--in-depth__intro__button').click(function () {
       $(this).closest('.in-depth-slider').toggleClass('open');
+
+      if (Foundation.MediaQuery.is('small only')) {
+        $('.top-bar__wrapper').toggleClass('hide');
+      }
     });
 
     $('.in-depth__toggle').click(function () {
       $(this).closest('.in-depth-slider').toggleClass('open');
+
+      if (Foundation.MediaQuery.is('small only')) {
+        $('.top-bar__wrapper').toggleClass('hide');
+      }
 
       // Simulate a click on the first slide dot nav link.
       $(this).siblings('.owl-carousel').find('.owl-dots .owl-dot:first-of-type').trigger('click');

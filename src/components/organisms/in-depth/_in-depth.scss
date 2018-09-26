@@ -95,14 +95,16 @@ Styleguide COMPONENTS.in-depth
     visibility: hidden;
     opacity: 0;
 
-    @include breakpoint(large) {
-      margin-top: 6rem;
+    @include breakpoint(medium) {
+      margin-top: 5rem;
+      margin-right: 0;
     }
   }
 
   .horizontal-image-slider {
     @extend %horizontal-image-slider;
     height: auto;
+    min-height: 100vh;
     padding: 0;
 
     @include breakpoint(medium) {
@@ -113,6 +115,12 @@ Styleguide COMPONENTS.in-depth
       @include breakpoint(medium) {
         padding: 0;
       }
+    }
+
+    .item:not(:first-of-type) {
+      display: none;
+      opacity: 0;
+      visibility: hidden;
     }
 
     .item__content {
@@ -205,19 +213,23 @@ Styleguide COMPONENTS.in-depth
   }
 
   // Style overrides when the in depth slider is open.
-  @include breakpoint(large) {
-    &.open {
-      .in-depth__toggle {
+  &.open {
+    .in-depth__toggle {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .horizontal-image-slider {
+      .owl-dots,
+      .owl-nav {
         visibility: visible;
         opacity: 1;
       }
 
-      .horizontal-image-slider {
-        .owl-dots,
-        .owl-nav {
-          visibility: visible;
-          opacity: 1;
-        }
+      .item:not(first-of-type) {
+        display: block;
+        opacity: 1;
+        visibility: visible;
       }
     }
   }

@@ -1,4 +1,9 @@
 %slide--in-depth__intro {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  min-height: calc(100vh - 4rem);
+
   @include breakpoint(medium) {
     position: relative;
     width: 100vw;
@@ -6,26 +11,20 @@
   }
 
   .slide--in-depth__intro__image {
-    margin: -2rem -2rem -5rem -2rem;
-    position: relative;
-    z-index: -1;
-
-    &:before {
-      background: linear-gradient(0.5turn, transparent, $black);
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 15rem;
-      content: "";
-    }
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    height: calc(100% - 4rem);
+    width: calc(100% - 4rem);
+    display: flex;
+    align-items: center;
 
     @include breakpoint(medium) {
       margin: 0;
       position: absolute;
-      top: 0;
+      top: 4rem;
       left: 0;
-      height: 100%;
+      height: calc(100% - 4rem);
       width: 100%;
       display: flex;
       justify-content: center;
@@ -48,57 +47,55 @@
       }
     }
 
-    @include breakpoint(large) {
-      height: calc(100% - 4rem);
-      top: 4rem;
+    .picture {
+      @include responsive(width, 100%, auto);
+      @include responsive(margin-bottom, 20vh, 0);
     }
 
     picture {
       width: 100% !important;
       margin-bottom: 0;
 
+      &:after {
+        background: linear-gradient(0.375turn, transparent, rgba($black, .75));
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        z-index: 0;
+      }
+
       @include breakpoint(medium) {
         max-height: inherit;
-        height: 80vh;
-        width: 80vh !important;
+        height: 60vh;
+        width: 60vh !important;
         position: relative;
-
-        &:after {
-          background: linear-gradient(0.375turn, transparent, rgba($black, .75));
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          content: "";
-          z-index: 0;
-        }
+        transition: all .5s ease-in-out;
+        transform: translate(-15%, 0) scale(.7);
       }
 
       @include breakpoint(large) {
-        transition: all .5s ease-in-out;
-        transform: translate(-15%, 0) scale(.7);
+        height: 80vh;
+        width: 80vh !important;
       }
     }
 
     img {
       width: 100%;
       max-height: 100%;
-
-      @include breakpoint(medium) {
-        border-radius: 1000rem;
-        overflow: hidden;
-        height: auto;
-        max-height: 100%;
-      }
+      border-radius: 1000rem;
+      overflow: hidden;
+      height: auto;
     }
   }
 
   .slide--in-depth__intro__title {
     @extend h1;
     @include responsive(font-size, 2rem, 3rem, 4rem);
-    @include responsive(margin-bottom, inherit, 2rem, 4rem);
-    transition: all .25s ease-in-out;
+    @include responsive(margin-bottom, 1rem, 2rem, 4rem);
+    transition: all .5s ease-in-out;
     transition-delay: .5s;
     font-family: $header-font-family !important;
     font-weight: bold;
@@ -109,6 +106,10 @@
     transition: all .25s ease-in-out;
     transition-delay: .5s;
 
+    @include breakpoint(medium) {
+      margin: 0 40% 0 auto;
+    }
+
     @include breakpoint(large) {
       margin: 0 40% 0 auto;
     }
@@ -116,6 +117,13 @@
 
 
   .slide--in-depth__intro__text {
+    position: relative;
+    top: -2rem;
+
+    @include breakpoint(medium) {
+      top: 0;
+    }
+
     @include breakpoint(xlarge) {
       font-size: $lead-font-size;
       line-height: $lead-lineheight;
@@ -129,33 +137,34 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 
     > .cell {
       @include breakpoint(medium) {
         position: relative;
+        display: flex;
+        flex-flow: row;
       }
     }
   }
 
   .slide--in-depth__intro__content--top {
-    @include responsive(width, initial, 100%, 60%, 49%, 38%);
-    @include breakpoint(medium) {
-      position: absolute;
-      bottom: calc(50% - 5px);
-      margin-bottom: 3rem;
-    }
+    @include responsive(width, initial, 100%, 45%, 40%, 30%);
+    @include responsive(margin, 0 2rem, 0 0 3rem auto, 10vh 10vw 3rem auto);
 
-    @include breakpoint(large) {
+    @include breakpoint(medium) {
       display: flex;
       flex-flow: column;
-      margin-bottom: 5rem;
-      transition: all .5s ease-in-out;
-      transition-delay: .5s;
-      transform: translate(125%, 85%);
+      bottom: calc(50% - 5px);
     }
   }
 
   .slide--in-depth__intro__content--bottom {
+    transition: all .25s ease-in-out;
+    transition-delay: 0s;
+    visibility: hidden;
+    opacity: 0;
+
     @include breakpoint(medium) {
       position: absolute;
       top: calc(50% + 5px);
@@ -165,10 +174,6 @@
     }
 
     @include breakpoint(large) {
-      transition: all .25s ease-in-out;
-      transition-delay: 0s;
-      visibility: hidden;
-      opacity: 0;
       margin-top: 5rem;
       width: 40%;
     }
@@ -180,7 +185,7 @@
   
   .sharing-icons {
     position: absolute;
-    top: 1rem;
+    top: -1rem;
     left: 1rem;
     margin-top: 0;
 
@@ -193,10 +198,7 @@
   .slide__icon--next {
     margin-top: 2rem;
     text-align: center;
-
-    @include breakpoint(medium) {
-      display: none;
-    }
+    display: none;
 
     &:before {
       display: none;
@@ -208,41 +210,97 @@
   }
 
   // Modify styles if the in depth slider should be open.
-  @include breakpoint(large) {
-    .open & {
-      .slide--in-depth__intro__button {
-        transition-delay: 0s;
-        visibility: hidden;
-        opacity: 0;
+  .open & {
+    @include breakpoint(small only) {
+      justify-content: flex-start;
+      min-height: auto;
+    }
+
+    .slide--in-depth__intro__button {
+      transition-delay: 0s;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .slide--in-depth__intro__title {
+      @include responsive(margin-bottom, inherit, 0);
+      transition-delay: 0s;
+
+      @include breakpoint(medium) {
+        transform: translate(-25vw, -10vw) scale(1.25);
       }
 
-      .slide--in-depth__intro__title {
-        @include responsive(margin-bottom, inherit, 0);
-        transition-delay: 0s;
-        transform: scale(1.5);
+      @include breakpoint(large) {
+        transform: translate(-40vw, -10vw) scale(1.25);
       }
 
-      .slide--in-depth__intro__image {
+      @include breakpoint(xlarge) {
+        transform: translate(-32.5vw, -10vw) scale(1.5);
+      }
+
+      @include breakpoint(xxlarge) {
+        transform: translate(-25vw, -10vw) scale(1.5);
+      }
+    }
+
+    .slide__icon--next {
+      @include breakpoint(small only) {
+        display: block;
+      }
+    }
+
+    .slide--in-depth__intro__image {
+      @include breakpoint(small only) {
+        top: 0;
+        left: 0;
+        width: auto;
+        margin: -2rem -2rem -5rem -2rem;
+        position: relative;
+        z-index: -1;
+
         &:before {
-          transition-delay: .5s !important;
-          transform: translateX(0);
+          background: linear-gradient(0.5turn, transparent, $black);
+          position: absolute;
+          z-index: 1;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 15rem;
+          content: "";
         }
 
-        picture {
-          transform: translate(0, 0);
+        img {
+          border-radius: 0;
+        }
+
+        .picture {
+          margin-bottom: 0;
         }
       }
 
-      .slide--in-depth__intro__content--top {
-        transition-delay: 0s;
+      &:before {
+        transition-delay: .5s !important;
+        transform: translateX(0);
+      }
+
+      picture {
         transform: translate(0, 0);
       }
+    }
 
-      .slide--in-depth__intro__content--bottom {
-        transition-delay: .5s;
-        visibility: visible;
-        opacity: 1;
+    .slide--in-depth__intro__content--top {
+      transition-delay: 0s;
+      transform: translate(0, 0);
+
+      @include breakpoint(small only) {
+        margin: 0;
       }
+    }
+
+    .slide--in-depth__intro__content--bottom {
+      transition-delay: .5s;
+      visibility: visible;
+      opacity: 1;
     }
   }
 }
