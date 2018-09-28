@@ -95,6 +95,17 @@ Styleguide COMPONENTS.horizontal-image-slider
         display: inline-block;
       }
     }
+
+    .toggle-caption {
+      .i-info {
+        font-size: 0.75em;
+        line-height: 0;
+        top: 8px;
+        left: 5px;
+        font-weight: 700;
+        font-family: 'freight-text-pro';
+      }
+    }
   }
 
   .owl-dots {
