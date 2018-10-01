@@ -69,6 +69,7 @@ chapters:
     - template: "@layouts/one_up--primary/one_up--primary.html.twig"
       classes: theme--primary-dark
       grid: align-middle
+      snap_id: delaunay-quote
       components:
       - template: "@molecules/standalone-quote/standalone-quote.html.twig"
         component_name: standalone-quote
@@ -357,6 +358,7 @@ chapters:
       author_title: "Distinguished Professor Emerita, Graduate School of the City University of New York"
       author_bio: "Mary Ann Caws is the author of more than 40 books, including <em>The Surrealist Look: An Erotics of Encounter</em> (1997), and <em>Picasso’s Weeping Woman: The Life and Art of Dora Maar</em> (2000)."
       author_image: ''
+      snap_id: mary-ann-caws
       components:
       - template: "@atoms/textarea/textarea.html.twig"
         text: "<p>The cacophonous <em>Rite of Spring</em> was the centerpiece of a simultaneity of sound, color, and movement. Nijinsky danced its May 29 premiere for Sergei Diaghilev’s Ballets Russes in Paris’s Théâtre des Champs-Élysées, and the spectacle provoked a celebrated pandemonium. Igor Stravinsky’s discordant music touched off outrage from the more conservative audience members, with others equally vehement in its defense. This riot against modernism, to put it bluntly, conferred on the piece more glory than anything positive could possibly have done—riots led to revelry in the long run.</p>"
@@ -444,6 +446,7 @@ chapters:
   - components:
     - template: "@layouts/one_up--primary/one_up--primary.html.twig"
       grid: align-middle
+      snap_id: sad-poem
       components:
       - template: "@molecules/standalone-quote/standalone-quote.html.twig"
         component_name: standalone-quote
@@ -524,6 +527,7 @@ chapters:
             alt: Windows Open Simultaneously 1st Part, 3rd Motif by Robert Delaunay
     - template: "@molecules/commentary/commentary.html.twig"
       component_name: commentary
+      snap_id: marj-perloff
       author_name: Marjorie Perloff
       author_title: "Professor Emerita, Stanford University and the University of Southern California"
       author_bio: "Marjorie Perloff is the author of many books on poetry and poetics, including <em>The Futurist Moment: Avant-Garde, Avant-Guerre, and the Language of Rupture</em> (1986), which deals extensively with artists and poets in the years leading up to World War I."
