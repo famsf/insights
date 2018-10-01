@@ -3,7 +3,7 @@
   {{- value is defined ? value : default -}}
 {% endmacro %}
 {% import _self as do %}
-<div class="two_up--primary fluid {{ classes }}">
+<div class="two_up--primary fluid {{ classes }}" data-snap-id="{{ snap_id }}">
   <div class="wrapper grid-x grid-margin-x {{ grid }}" id="{{ id }}">
     <div id="{{ left.id }}" class="cell {{ do.print(left.cols, 'medium-4') }} {{ do.print(left.offset, 'medium-offset-1') }}" {{ left.attributes }}>
       {{ inklude.components(left) }}

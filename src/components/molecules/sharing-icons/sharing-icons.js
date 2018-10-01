@@ -7,6 +7,9 @@
     var url = window.location.origin + window.location.pathname;
 
     hash = encodeURIComponent(window.location.hash);
+    if (el.closest('[data-snap-id]') !== null && el.closest('[data-snap-id]').dataset.snapId !== '') {
+      hash += encodeURIComponent('&componentSnap=' + el.closest('[data-snap-id]').dataset.snapId);
+    }
     shareUrl = url + hash;
     shareFacebook = el.querySelector('.share--facebook');
     shareTwitter = el.querySelector('.share--twitter');
