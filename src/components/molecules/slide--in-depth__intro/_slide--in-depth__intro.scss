@@ -1,4 +1,9 @@
 %slide--in-depth__intro {
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  min-height: calc(100vh - 4rem);
+
   @include breakpoint(medium) {
     position: relative;
     width: 100vw;
@@ -6,110 +11,123 @@
   }
 
   .slide--in-depth__intro__image {
-    margin: -2rem -2rem -5rem -2rem;
-    position: relative;
-    z-index: -1;
-
-    &:before {
-      background: linear-gradient(0.5turn, transparent, $black);
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 15rem;
-      content: "";
-    }
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    height: calc(100% - 4rem);
+    width: calc(100% - 4rem);
+    display: flex;
+    align-items: center;
 
     @include breakpoint(medium) {
       margin: 0;
       position: absolute;
-      top: 0;
+      top: 4rem;
       left: 0;
-      height: 100%;
+      height: calc(100% - 4rem);
       width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
 
       &:before {
+        transition: all .5s ease-in-out;
+        transition-delay: 0s;
+        transform: translateX(-100%);
         position: absolute;
-        top: calc(50% + 5px);
+        top: calc(50% - 1.65rem);
         right: calc(6rem + 3px);
         left: auto;
         height: 1px;
         width: 100%;
-        background: $white;
+        background: $black;
         content: "";
         opacity: .5;
         z-index: 1;
       }
     }
 
+    .picture {
+      @include responsive(width, 100%, auto);
+      @include responsive(margin-bottom, 20vh, 0);
+    }
+
     picture {
       width: 100% !important;
+      margin-bottom: 0;
+
+      &:after {
+        background: linear-gradient(0.375turn, transparent, rgba($white, .75));
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: "";
+        z-index: 0;
+      }
 
       @include breakpoint(medium) {
+        border-radius: 1000rem;
+        overflow: hidden;
         max-height: inherit;
-        height: 80vh;
-        width: 80vh !important;
+        height: 60vh;
+        width: 60vh !important;
         position: relative;
-
-        &:after {
-          background: linear-gradient(0.375turn, transparent, rgba($black, .75));
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          content: "";
-          z-index: 0;
-        }
+        transition: all .5s ease-in-out;
+        transform: translate(-15%, 0) scale(.7);
       }
 
       @include breakpoint(large) {
-        height: 85vh;
-        width: 85vh !important;
+        height: 80vh;
+        width: 80vh !important;
       }
     }
 
     img {
       width: 100%;
       max-height: 100%;
-
-      @include breakpoint(medium) {
-        border-radius: 1000rem;
-        overflow: hidden;
-        height: auto;
-        max-height: 100%;
-      }
+      border-radius: 1000rem;
+      overflow: hidden;
+      height: auto;
     }
   }
 
   .slide--in-depth__intro__title {
     @extend h1;
+    @include responsive(font-size, 2rem, 3rem, 4rem);
+    @include responsive(margin-bottom, 1rem, 2rem, 4rem);
+    transition: all .5s ease-in-out;
+    transition-delay: .5s;
     font-family: $header-font-family !important;
-    font-size: 2rem;
     font-weight: bold;
+    color: $black;
+  }
+
+  .slide--in-depth__intro__button {
+    @extend %cta__button;
+    transition: all .25s ease-in-out;
+    transition-delay: .5s;
 
     @include breakpoint(medium) {
-      margin: 0;
-      font-size: 3rem;
+      margin: 0 40% 0 auto;
     }
 
     @include breakpoint(large) {
-      font-size: 4rem;
-    }
-
-    @include breakpoint(xlarge) {
-      font-size: 5rem;
-    }
-
-    @include breakpoint(xxlarge) {
-      font-size: 6rem;
+      margin: 0 40% 0 auto;
     }
   }
 
+
   .slide--in-depth__intro__text {
+    color: $black;
+    position: relative;
+    top: -2rem;
+
+    @include breakpoint(medium) {
+      top: 0;
+    }
+
     @include breakpoint(xlarge) {
       font-size: $lead-font-size;
       line-height: $lead-lineheight;
@@ -123,29 +141,38 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 
     > .cell {
       @include breakpoint(medium) {
         position: relative;
+        display: flex;
+        flex-flow: row;
       }
     }
   }
 
   .slide--in-depth__intro__content--top {
-    @include breakpoint(medium) {
-      position: absolute;
-      bottom: calc(50% - 5px);
-      margin-bottom: 3rem;
-      width: 100%;
-    }
+    @include responsive(width, initial, 100%, 45%, 40%, 30%);
+    @include responsive(margin, 0 2rem, 0 0 3rem auto, 10vh 10vw 3rem auto);
+    transition: all .5s ease-in-out;
+    transition-delay: .25s;
+    transform: translate(0, 1rem);
+    opacity: 0;
 
-    @include breakpoint(large) {
-      margin-bottom: 5rem;
-      width: 60%;
+    @include breakpoint(medium) {
+      display: flex;
+      flex-flow: column;
+      bottom: calc(50% - 5px);
     }
   }
 
   .slide--in-depth__intro__content--bottom {
+    transition: all .25s ease-in-out;
+    transition-delay: 0s;
+    visibility: hidden;
+    opacity: 0;
+
     @include breakpoint(medium) {
       position: absolute;
       top: calc(50% + 5px);
@@ -166,9 +193,14 @@
   
   .sharing-icons {
     position: absolute;
-    top: 1rem;
+    top: 3rem;
     left: 1rem;
     margin-top: 0;
+
+    .icon {
+      border-color: $black;
+      color: $black;
+    }
 
     @include breakpoint(medium) {
       position: initial;
@@ -179,10 +211,7 @@
   .slide__icon--next {
     margin-top: 2rem;
     text-align: center;
-
-    @include breakpoint(medium) {
-      display: none;
-    }
+    display: none;
 
     &:before {
       display: none;
@@ -190,6 +219,169 @@
 
     svg {
       transform: rotate(90deg);
+
+      * {
+        stroke: $black;
+        fill: $black;
+        color: $black;
+      }
+
+      #Oval-5-Copy {
+        stroke: transparent !important;
+      }
+
+      #Path-2-Copy-2 {
+        fill: transparent !important;
+      }
+    }
+  }
+
+  // Modify styles if the in depth slider should be open.
+  .open & {
+    @include breakpoint(small only) {
+      justify-content: flex-start;
+      min-height: auto;
+    }
+
+    .slide--in-depth__intro__button {
+      transition-delay: 0s;
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    .slide--in-depth__intro__title {
+      @include responsive(margin-bottom, inherit, 0);
+      transition-delay: 0s;
+
+      @include breakpoint(medium) {
+        transform: translate(-25vw, -10vw) scale(1.25);
+      }
+
+      @include breakpoint(large) {
+        transform: translate(-40vw, -10vw) scale(1.25);
+      }
+
+      @include breakpoint(xlarge) {
+        transform: translate(-32.5vw, -10vw) scale(1.5);
+      }
+
+      @include breakpoint(xxlarge) {
+        transform: translate(-25vw, -10vw) scale(1.5);
+      }
+    }
+
+    .slide__icon--next {
+      @include breakpoint(small only) {
+        display: block;
+      }
+    }
+
+    .slide--in-depth__intro__image {
+      @include breakpoint(small only) {
+        top: 0;
+        left: 0;
+        width: auto;
+        margin: -2rem -2rem -5rem -2rem;
+        position: relative;
+        z-index: -1;
+
+        &:before {
+          background: linear-gradient(0.5turn, transparent, $white);
+          position: absolute;
+          z-index: 1;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 15rem;
+          content: "";
+        }
+
+        img {
+          border-radius: 0;
+        }
+
+        .picture {
+          margin-bottom: 0;
+        }
+      }
+
+      &:before {
+        transition-delay: .5s !important;
+        transform: translateX(0);
+      }
+
+      picture {
+        transform: translate(0, 0);
+      }
+    }
+
+    .slide--in-depth__intro__content--top {
+      transition-delay: 0s;
+      transform: translate(0, 0);
+
+      @include breakpoint(small only) {
+        margin: 0;
+      }
+    }
+
+    .slide--in-depth__intro__content--bottom {
+      transition-delay: .5s;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  .triggered & {
+    .slide--in-depth__intro__content--top {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+
+  // Theme overrides.
+  .theme--dark &,
+  &.theme--dark {
+    .in-depth__title,
+    .slide--in-depth__intro__title,
+    .slide--in-depth__intro__text {
+      color: $white;
+    }
+
+    .slide--in-depth__intro__image {
+      @include breakpoint(small only) {
+        &:before {
+          background: linear-gradient(0.5turn, transparent, $black);
+        }
+      }
+
+      @include breakpoint(medium) {
+        &:before {
+          background: $white;
+        }
+      }
+
+      picture {
+        &:after {
+          background: linear-gradient(0.375turn, transparent, rgba($black, .75));
+        }
+      }
+    }
+
+    .sharing-icons {
+      .icon {
+        border-color: $white;
+        color: $white;
+      }
+    }
+
+    .slide__icon--next {
+      svg {
+        * {
+          stroke: $white;
+          fill: $white;
+          color: $white;
+        }
+      }
     }
   }
 }

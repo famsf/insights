@@ -3,7 +3,7 @@
   {{- value is defined ? value : default -}}
 {% endmacro %}
 {% import _self as do %}
-<div class="scroll-comparison grid-x fluid {{ classes }}" id="{{ id }}">
+<div class="scroll-comparison grid-x fluid {{ classes }}" id="{{ id }}" data-snap-id="{{ snap_id }}">
   <div class="cell small-12 large-8 large-offset-2">
     <div class="wrapper grid-x grid-margin-x">
       <div class="cell active" {{ left.attributes }}>

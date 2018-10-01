@@ -10,7 +10,7 @@
   {% set tag = 'section' %}
 {% endif %}
 
-<{{ tag }} class="chapter {{ classes }}" id="{{ id }}" data-chapter-index="{{ index }}" data-chapter-length="{{ pages|length }}">
+<{{ tag }} class="chapter {{ classes }}" id="{{ id }}" data-chapter-index="{{ index }}" data-chapter-length="{{ pages|length }}" data-snap-id="{{ snap_id }}">
   {% for page in pages %}
     {# Use "passthrough" to send chapter/story data to CoverPage + chapter__title. #}
     {# On CoverPage, use the story title instead of chapter title. #}
