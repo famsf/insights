@@ -1,0 +1,152 @@
+%timeline {
+  margin: 70px 35px 20px 30px;
+  @include breakpoint(medium) {
+    margin-left: 80px;
+  }
+  @include breakpoint(large) {
+    margin-left: 90px;
+  }
+  .timeline--year {
+    border-left: 1px solid $white;
+    padding-top: 80px;
+    @include breakpoint(large) {
+      border-left: none;
+      display: flex;
+      padding-top: 0;
+    }
+    &:first-of-type {
+      padding-top: 0;
+      /**
+
+          Commenting this out because it looks better, but lets see how the feedback is.
+
+          border-left: none;
+          .timeline-item-text {
+            border-left: 1px solid $white;
+          }
+      */
+    }
+  }
+  h2.timeline-title {
+    font-family: $alternate-header-font-family;
+    padding-bottom: 70px;
+    font-size: 1.8em;
+  }
+  .timeline-images {
+    @include breakpoint(large) {
+      display: inline-block;
+      width: 30%;
+    }
+  }
+  .timeline-item-image {
+    padding-bottom: 10px;
+    padding-left: 30px;
+    @include breakpoint(large) {
+      padding-left: 0;
+      &:first-of-type {
+        margin-top: 60px;
+      }
+    }
+    .caption__brief {
+      padding-top: 5px;
+    }
+  }
+  .timeline-item-text {
+    padding-left: 30px;
+    @include breakpoint(large) {
+      display: inline-block;
+      width: 70%;
+      vertical-align: top;
+      padding-left: 10%;
+      padding-bottom: 80px;
+      margin-left: 12%;
+      border-left: 1px solid $white;
+      position: relative;
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        -moz-border-radius: 7.5px;
+        -webkit-border-radius: 7.5px;
+        border-radius: 7.5px;
+        background-color: $white;
+        position: absolute;
+        left: -8px;
+        top: 55px;
+      }
+    }
+  }
+  .timeline-item-title {
+    font-family: $body-font-family;
+    font-size: 2.5em;
+    @include breakpoint(large) {
+      font-size: 5.75em;
+    }
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      -moz-border-radius: 7.5px;
+      -webkit-border-radius: 7.5px;
+      border-radius: 7.5px;
+      background-color: $white;
+      position: absolute;
+      left: 23px;
+      margin-top: 18px;;
+      @include breakpoint(medium) {
+        left: 73px;
+      }
+      @include breakpoint(large) {
+        height: 0;
+        width: 0;
+      }
+    }
+  }
+  .timeline-item-subtitle {
+    font-family: $header-font-family;
+    font-style: italic;
+    font-size: 1.8em;
+        @include breakpoint(large) {
+      width: 80%;
+    }
+  }
+  .timeline-item-description {
+    font-size: 1.2em;
+    padding-bottom: 1em;
+    margin-bottom: 0;
+    @include breakpoint(large) {
+      width: 80%;
+    }
+  }
+  .timeline-year {
+    color: $white;
+    position: absolute;
+    font-size: 1.5em;
+    left: -65px;
+    top: 43px;
+  }
+}
+%year-span-timeline {
+  .timeline-item-text {
+    @include breakpoint(large) {
+      border-left: 3px solid rgba(255, 255, 255, 0.15);
+      transition : border-color 0.75s ease-out;
+      &.year-scrolled-to {
+        border-color: rgba(255, 255, 255, 1);
+      }
+      &:before {
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+}
+
+.timeline {
+  @extend %timeline;
+  &.year-span {
+    @extend %year-span-timeline;
+  }
+}
