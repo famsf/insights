@@ -95,6 +95,8 @@ Styleguide COMPONENTS.in-depth
     visibility: hidden;
     opacity: 0;
     margin-top: 5rem;
+    border-color: $black !important;
+    color: $black !important;
 
     @include breakpoint(small only) {
       position: absolute;
@@ -111,6 +113,7 @@ Styleguide COMPONENTS.in-depth
     height: auto;
     min-height: 100vh;
     padding: 0;
+    background: transparent;
 
     @include breakpoint(medium) {
       height: 100vh;
@@ -159,7 +162,7 @@ Styleguide COMPONENTS.in-depth
             width: calc(100% / 3);
             height: 100%;
             content: '';
-            background: linear-gradient(to right, transparent, $black);
+            background: linear-gradient(to right, transparent, $white);
             z-index: 9;
           }
         }
@@ -184,12 +187,22 @@ Styleguide COMPONENTS.in-depth
     }
 
     .caption {
+      color: $black;
       position: relative;
 
       @include breakpoint(medium) {
         flex-basis: 25%;
         position: relative;
         margin: 4rem 12rem;
+      }
+
+      .toggle-caption {
+        border-color: $black;
+        color: $black;
+      }
+
+      figcaption {
+        color: $black;
       }
     }
 
@@ -204,6 +217,50 @@ Styleguide COMPONENTS.in-depth
     .owl-nav {
       button {
         top: calc(50% - 1.25rem);
+        color: transparent !important;
+        background-image: url("../assets/images/slide__icon--next.svg") !important;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+
+        @supports (mask-image: none) or (-webkit-mask-image: none) {
+          background: $black !important;
+          -webkit-mask-image: url('../assets/images/slide__icon--next.svg');
+          mask-image: url('../assets/images/slide__icon--next.svg');
+          -webkit-mask-position: center center;
+          mask-position: center center;
+          -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+          -webkit-mask-size: cover;
+          mask-size: cover;
+        }
+
+        &:hover {
+          background-color: transparent !important;
+          background-image: url("../assets/images/slide__icon--next.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          color: transparent;
+
+          @supports (mask-image: none) or (-webkit-mask-image: none) {
+            background: $black !important;
+            -webkit-mask-image: url('../assets/images/slide__icon--next.svg');
+            mask-image: url('../assets/images/slide__icon--next.svg');
+            -webkit-mask-position: center center;
+            mask-position: center center;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: cover;
+            mask-size: cover;
+          }
+        }
+      }
+    }
+
+    .owl-dot {
+      color: rgba($black, .5) !important;
+
+      &.active {
+        color: $black !important;
       }
     }
 
@@ -235,6 +292,60 @@ Styleguide COMPONENTS.in-depth
         display: block;
         opacity: 1;
         visibility: visible;
+      }
+    }
+  }
+
+  // Theme overrides.
+  .theme--dark &,
+  &.theme--dark {
+    .in-depth__toggle {
+      border-color: $white !important;
+      color: $white !important;
+    }
+
+    .owl-dot {
+      color: rgba($white, .5) !important;
+
+      &.active {
+        color: $white !important;
+      }
+    }
+
+    .owl-nav {
+      button {
+        @supports (mask-image: none) or (-webkit-mask-image: none) {
+          background: $white !important;
+        }
+
+        &:hover {
+          @supports (mask-image: none) or (-webkit-mask-image: none) {
+            background: $white !important;
+          }
+        }
+      }
+    }
+
+    .caption {
+      color: $white;
+
+      .toggle-caption {
+        border-color: $white;
+        color: $white;
+      }
+
+      figcaption {
+        color: $white;
+      }
+    }
+
+    .horizontal-image-slider {
+      .item__content {
+        > .picture {
+          @include breakpoint(medium) {
+            background: linear-gradient(to right, transparent, $white);
+          }
+        }
       }
     }
   }

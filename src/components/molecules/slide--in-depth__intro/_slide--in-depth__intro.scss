@@ -40,7 +40,7 @@
         left: auto;
         height: 1px;
         width: 100%;
-        background: $white;
+        background: $black;
         content: "";
         opacity: .5;
         z-index: 1;
@@ -57,7 +57,7 @@
       margin-bottom: 0;
 
       &:after {
-        background: linear-gradient(0.375turn, transparent, rgba($black, .75));
+        background: linear-gradient(0.375turn, transparent, rgba($white, .75));
         position: absolute;
         bottom: 0;
         left: 0;
@@ -68,6 +68,8 @@
       }
 
       @include breakpoint(medium) {
+        border-radius: 1000rem;
+        overflow: hidden;
         max-height: inherit;
         height: 60vh;
         width: 60vh !important;
@@ -99,6 +101,7 @@
     transition-delay: .5s;
     font-family: $header-font-family !important;
     font-weight: bold;
+    color: $black;
   }
 
   .slide--in-depth__intro__button {
@@ -117,6 +120,7 @@
 
 
   .slide--in-depth__intro__text {
+    color: $black;
     position: relative;
     top: -2rem;
 
@@ -194,6 +198,11 @@
     left: 1rem;
     margin-top: 0;
 
+    .icon {
+      border-color: $black;
+      color: $black;
+    }
+
     @include breakpoint(medium) {
       position: initial;
       margin-top: 2rem;
@@ -211,6 +220,20 @@
 
     svg {
       transform: rotate(90deg);
+
+      * {
+        stroke: $black;
+        fill: $black;
+        color: $black;
+      }
+
+      #Oval-5-Copy {
+        stroke: transparent !important;
+      }
+
+      #Path-2-Copy-2 {
+        fill: transparent !important;
+      }
     }
   }
 
@@ -264,7 +287,7 @@
         z-index: -1;
 
         &:before {
-          background: linear-gradient(0.5turn, transparent, $black);
+          background: linear-gradient(0.5turn, transparent, $white);
           position: absolute;
           z-index: 1;
           bottom: 0;
@@ -314,6 +337,56 @@
       transform: translate(0, 0);
       opacity: 1;
       visibility: visible;
+
+      transition: all .5s ease-in-out;
+      transition-delay: .25s;
+    }
+  }
+
+  // Theme overrides.
+  .theme--dark &,
+  &.theme--dark {
+    .in-depth__title,
+    .slide--in-depth__intro__title,
+    .slide--in-depth__intro__text {
+      color: $white;
+    }
+
+    .slide--in-depth__intro__image {
+      @include breakpoint(small only) {
+        &:before {
+          background: linear-gradient(0.5turn, transparent, $black);
+        }
+      }
+
+      @include breakpoint(medium) {
+        &:before {
+          background: $white;
+        }
+      }
+
+      picture {
+        &:after {
+          background: linear-gradient(0.375turn, transparent, rgba($black, .75));
+        }
+      }
+    }
+
+    .sharing-icons {
+      .icon {
+        border-color: $white;
+        color: $white;
+      }
+    }
+
+    .slide__icon--next {
+      svg {
+        * {
+          stroke: $white;
+          fill: $white;
+          color: $white;
+        }
+      }
     }
   }
 }
