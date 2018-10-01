@@ -129,3 +129,39 @@
     }
   }
 }
+
+// Responsive font sizing mixin.
+@mixin font-sizes($sm: null, $md: null, $l: null, $xl: null, $xxl: null) {
+  // Set base font size for small devices
+  @if variable-exists(sm) and $sm != null {
+    font-size: rem-calc($sm);
+  }
+
+  // Set font size for medium and up.
+  @if variable-exists(md) and $md != null {
+    @include breakpoint(medium) {
+      font-size: rem-calc($md);
+    }
+  }
+
+  // Set font size for large and up.
+  @if variable-exists(l) and $l != null {
+    @include breakpoint(large) {
+      font-size: rem-calc($l);
+    }
+  }
+
+  // Set font size for xlarge and up.
+  @if variable-exists(xl) and $xl != null {
+    @include breakpoint(xlarge) {
+      font-size: rem-calc($xl);
+    }
+  }
+
+  // Set font size for xxlarge and up.
+  @if variable-exists(xxl) and $xxl != null {
+    @include breakpoint(xlarge) {
+      font-size: rem-calc($xxl);
+    }
+  }
+}
