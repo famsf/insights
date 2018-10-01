@@ -18,6 +18,9 @@
     var param;
     var i;
     var startPage;
+    var snapElem;
+    var snapElemStickListener;
+    var scrollOptions;
     pages.container = doc.querySelector(containerSelector);
     pages.pages = doc.querySelectorAll(pageSelector);
 
@@ -52,11 +55,35 @@
       else {
         startPage = pages.currentPage;
       }
-      pages.snapScroll(startPage, {
+      scrollOptions = {
         scrollDir: 'down',
         instant: true,
         force: true
-      });
+      };
+      if (pages.hashes.hasOwnProperty('componentSnap')) {
+        Object.assign({ extraParams: '&componentSnap=' + pages.hashes.componentSnap }, scrollOptions);
+      }
+      pages.snapScroll(startPage, scrollOptions);
+
+      if (pages.hasOwnProperty('hashes') && pages.hashes.hasOwnProperty('componentSnap')) {
+        snapElem = startPage.el.querySelectorAll('[data-snap-id="' + pages.hashes.componentSnap + '"]');
+        if (snapElem.length > 0) {
+          if (snapElem[0].style['background-color'] === '' || snapElem[0].style['background-color'] === 'transparent') {
+            snapElem[0].style['background-color'] = 'white';
+          }
+          snapElem[0].classList.add('page-load-snap-sticky');
+          // Set timeout is nasty, I know. But we need to wait for the initial scroll to finish.
+          setTimeout(function () {
+            snapElemStickListener = function (e) {
+              snapElem[0].classList.remove('page-load-snap-sticky');
+              snapElem[0].style = '';
+              window.removeEventListener('scroll', snapElemStickListener);
+              window.scrollTo(0, 0);
+            };
+            window.addEventListener('scroll', snapElemStickListener);
+          }, 2000);
+        }
+      }
     }
   };
 
@@ -134,8 +161,9 @@
     });
   };
 
-  pages.setCurrentPage = function (page) {
+  pages.setCurrentPage = function (page, extraParams) {
     var pageEl;
+    var pageHash;
     if (page) {
       pageEl = page.el;
       pages.oldCurrentPage = pages.currentPage;
@@ -147,7 +175,9 @@
       page.isCurrent = true;
       fds.chapterNav.setActiveItem(page.chapter);
       fds.mobileNav.setActiveItem(page.chapter);
-      window.location.hash = '&chapter=' + page.chapterId + '&page=' + pageEl.id;
+      pageHash = '&chapter=' + page.chapterId + '&page=' + pageEl.id;
+      pageHash += (extraParams !== undefined) ? extraParams : '';
+      window.location.hash = pageHash;
       pages.hashes.page = pageEl.id;
       pages.hashes.chapter = page.chapterId;
       pages.triggerPage(page);
@@ -241,7 +271,12 @@
     if (scrollOptions.unpin) {
       pages.unpinPage(pages.currentPage);
     }
-    pages.setCurrentPage(page);
+    if (scrollOptions.extraUrlParams) {
+      pages.setCurrentPage(page, scrollOptions.extraUrlParams);
+    }
+    else {
+      pages.setCurrentPage(page);
+    }
     document.body.classList.add('scroll_lock');
     if (scrollOptions.scrollDir === 'down') {
       scrollTo = chapter.offsetTop + pageEl.offsetTop;
