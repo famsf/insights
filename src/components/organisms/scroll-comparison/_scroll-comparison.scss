@@ -129,7 +129,6 @@
       .content {
         margin-left: calc(calc(-100vw / 3) + 1rem);
 
-
         @include breakpoint(medium) {
           margin-left: 0;
         }

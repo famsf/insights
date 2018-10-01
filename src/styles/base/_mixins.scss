@@ -131,7 +131,7 @@
 }
 
 // Responsive font sizing mixin.
-@mixin font-sizes($sm: $base-font-size, $md: null, $l: null, $xl: null, $xxl: null) {
+@mixin font-sizes($sm: null, $md: null, $l: null, $xl: null, $xxl: null) {
   // Set base font size for small devices
   @if variable-exists(sm) and $sm != null {
     font-size: rem-calc($sm);
