@@ -159,7 +159,6 @@
     transition-delay: .25s;
     transform: translate(0, 1rem);
     opacity: 0;
-    visibility: hidden;
 
     @include breakpoint(medium) {
       display: flex;
@@ -336,10 +335,6 @@
     .slide--in-depth__intro__content--top {
       transform: translate(0, 0);
       opacity: 1;
-      visibility: visible;
-
-      transition: all .5s ease-in-out;
-      transition-delay: .25s;
     }
   }
 
