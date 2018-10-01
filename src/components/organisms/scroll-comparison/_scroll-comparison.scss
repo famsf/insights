@@ -1,7 +1,15 @@
 %scroll-comparison {
   background: transparent;
 
+  h3 {
+    @include font-sizes(22, 28, 34);
+    line-height: 1.32;
+    width: calc(100vw - 4rem);
+  }
+
   .content {
+    @include font-sizes(16);
+    line-height: 1.8;
     transition: all .5s ease-in-out;
     opacity: 0;
     width: calc(100vw - 4rem);
@@ -79,10 +87,15 @@
       }
     }
 
-   h3 {
+    h3 {
       display: none;
 
+      @include breakpoint(small only) {
+        margin-bottom: .5rem;
+      }
+
       @include breakpoint(medium) {
+        margin-top: 2rem;
         display: block;
       }
     }
