@@ -1,4 +1,5 @@
-{% if in theme == "Theme Default Light" or theme == "" %}
+{{ theme }}
+{% if theme == "Theme Default Light" or theme == "" %}
   {% set theme = "" %}
 {% elseif theme == "Theme Dark" %}
   {% set theme = "theme--dark" %}
