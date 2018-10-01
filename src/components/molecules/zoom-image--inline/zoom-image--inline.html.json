@@ -1,0 +1,29 @@
+{
+  "captions": [
+    {
+      "xcoord": "0",
+      "ycoord": "0",
+      "heading_text": "Lorem ipsum",
+      "body_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et felis ac arcu cursus imperdiet."
+    }
+  ],
+  "picture": {
+    "srcset": [
+      {
+        "min-width": "0px",
+        "src": "https://www.fillmurray.com/300/500"
+      },
+      {
+        "min-width": "350px",
+        "src": "https://www.fillmurray.com/300/500"
+      },
+      {
+        "min-width": "800px",
+        "src": "https://www.fillmurray.com/350/500"
+      }
+    ],
+    "src": "https://www.fillmurray.com/350/500",
+    "alt": "A picture of Bill Murray",
+    "style": "vertical"
+  }
+}
