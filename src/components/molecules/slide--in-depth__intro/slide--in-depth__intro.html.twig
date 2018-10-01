@@ -1,17 +1,17 @@
 <div class="slide--in-depth__intro">
   <div class="slide--in-depth__intro__image">
-    {% include "@molecules/picture/picture.html.twig" with picture only %}
+    {% include "@molecules/picture/picture.html.twig" with slide__image only %}
   </div>
 
   <div class="grid-x slide--in-depth__intro__content">
     <div class="cell medium-6 medium-offset-1 large-8">
 
       <div class="slide--in-depth__intro__content--top">
-        <h3 class="slide--in-depth__intro__title">{{ title }}</h3>
+        <h3 class="slide--in-depth__intro__title">{{ slide__title }}</h3>
       </div>
 
       <div class="slide--in-depth__intro__content--bottom">
-        <div class="slide--in-depth__intro__text">{{ text }}</div>
+        <div class="slide--in-depth__intro__text">{{ slide__description }}</div>
         {% include "@molecules/sharing-icons/sharing-icons.html.twig" %}
       </div>
 

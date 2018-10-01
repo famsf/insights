@@ -40,8 +40,8 @@ plugins:
 # Allows changing some of the plugin options.
 pluginOpts:
   metalsmith-gathercontent:
-    verbose: 0
-    logMappings: 0
+    verbose: 3
+    logMappings: 1
     logFileContents: 0
     authPath: _auth.json
     filePath: src/assets/gathercontent
@@ -49,6 +49,7 @@ pluginOpts:
     saveJSON: true
     includeAsFile:
       - 'la-prose.md'
+      - 'klimt-rodin.md'
     # map template ids to components so we can handle defaults
     # we're also removing Meta_Component from "atom" GatherContent templates
     # Since they removed template defaults, and certain components —
@@ -74,6 +75,7 @@ pluginOpts:
       1370542: '@kalastatic/components/organisms/content--simple/content--simple.html.twig'
       1370139: '@kalastatic/components/organisms/horizontal-image-slider/horizontal-image-slider.html.twig'
       1370655: '@kalastatic/components/organisms/in-depth/in-depth.html.twig'
+      1403545: '@kalastatic/components/molecules/slide--in-depth__intro/slide--in-depth__intro.html.twig'
       1370527: '@kalastatic/components/organisms/page/page.html.twig'
       1370588: '@kalastatic/components/organisms/scroll-comparison/scroll-comparison.html.twig'
       1370604: '@kalastatic/components/organisms/section_wrapper/section_wrapper.html.twig'
@@ -89,6 +91,8 @@ pluginOpts:
       contents: Content_Content
       type: _type
       template_id: _template_id
+      # Themes
+      theme: Colors_Theme
       # General
       title: Content_Title
       description: Content_Description
@@ -143,12 +147,14 @@ pluginOpts:
       caption__text: Content_Caption
       slide__image: Content_Slide-Image
       slide__image-alt: Content_Slide-Image-Alt
+      slide__title: Content_In-Depth-Title
+      slide__description: Content_In-Depth-Description
       # In depth
       slideshow__title: Content_Slideshow-Title
       slideshow__description: Content_Slideshow-Description
       slideshow__image: Content_Slideshow-Image
       slideshow__image-alt: Content_Slideshow-Image-Alt
-      slideshow__cta: Content_Slideshow-Image-Alt
+      slideshow__cta: Content_Slideshow-CTA
       # Simple content
       content__quote: Content_Quote
       content__quote__attribution: Content_Quote-Attribution
@@ -183,7 +189,6 @@ pluginOpts:
   metalsmith-jstransformer:
     pattern: "!components/**"
     layoutPattern: "templates/**"
-
     # Options that are applied to just specific engines.
     engineOptions:
       # SASS settings.

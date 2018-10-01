@@ -1,8 +1,20 @@
-<section class="page {{ classes }}" id="chapter_{{ id }}" data-page-index="{{ index }}">
+{% if in theme == "Theme Default Light" or theme == "" %}
+  {% set theme = "" %}
+{% elseif theme == "Theme Dark" %}
+  {% set theme = "theme--dark" %}
+{% elseif theme == "Theme Primary" %}
+  {% set theme = "theme--primary" %}
+{% elseif theme == "Theme Primary Light"  %}
+  {% set theme = "theme--primary-light" %}
+{% elseif theme == "Theme Primary Dark"  %}
+  {% set theme = "theme--primary-dark" %}
+{% endif %}
+
+<section class="page {{ classes }} {{ theme }}" id="chapter_{{ id }}" data-page-index="{{ index }}">
   <div class="frame">
     {% if component != '@organisms/page/page.html.twig' %}
       {% set adenda = {} %}
-      {% if 'chapter__title' in gatherContent.templateMap[chapter.templateId] %}
+      {% if 'chapter__title' in gatherContent.templateMap[chapter.template_id] %}
         {% set adenda = {
           chapter__title: chapter__title,
           chapter__numeral: chapter__numeral

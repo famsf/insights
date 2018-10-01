@@ -1,12 +1,8 @@
 /*
 Horizontal Image Slider
-
 This is used to show a set of related images as a group.
-
 Markup: horizontal-image-slider.html.twig
-
 Styleguide COMPONENTS.horizontal-image-slider
-
 */
 
 %horizontal-image-slider {
@@ -93,6 +89,17 @@ Styleguide COMPONENTS.horizontal-image-slider
 
       @include breakpoint(medium) {
         display: inline-block;
+      }
+    }
+
+    .toggle-caption {
+      .i-info {
+        font-size: 0.75em;
+        line-height: 0;
+        top: 8px;
+        left: 5px;
+        font-weight: 700;
+        font-family: 'freight-text-pro';
       }
     }
   }

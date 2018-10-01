@@ -1,7 +1,8 @@
 <div class="horizontal-image-slider owl-carousel owl-theme {{ classes }}">
   {% for slide in children %}
     {% if slide.slide__image.src is defined and slide.slide__image.src is not empty %}
-      {% include "@molecules/slide/slide.html.twig" with slide only %}
+      {% set template = templateMap[slide.template_id] %}
+      {% include template with slide only %}
     {% endif %}
   {% endfor %}
 </div>
