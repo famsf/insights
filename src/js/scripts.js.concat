@@ -14,6 +14,7 @@ files:
 - components/molecules/ChapterNav/ChapterNav.js
 - components/molecules/menu--mobile/menu--mobile.js
 - components/molecules/sharing-icons/sharing-icons.js
+- components/molecules/timeline/timeline.js
 - js/main.js
 insertNewLine: true
 ---
