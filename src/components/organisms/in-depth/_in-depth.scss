@@ -97,6 +97,7 @@ Styleguide COMPONENTS.in-depth
     margin-top: 5rem;
     border-color: $black !important;
     color: $black !important;
+    background-color: rgba($white, 0.25) !important;
 
     @include breakpoint(small only) {
       position: absolute;
@@ -302,6 +303,7 @@ Styleguide COMPONENTS.in-depth
     .in-depth__toggle {
       border-color: $white !important;
       color: $white !important;
+      background-color: rgba($black, 0.25) !important;
     }
 
     .owl-dot {
