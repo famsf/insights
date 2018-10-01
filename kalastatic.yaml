@@ -43,8 +43,8 @@ plugins:
 # Allows changing some of the plugin options.
 pluginOpts:
   metalsmith-gathercontent:
-    verbose: 0
-    logMappings: 0
+    verbose: 3
+    logMappings: 1
     logFileContents: 0
     authPath: _auth.json
     filePath: src/assets/gathercontent
@@ -52,6 +52,7 @@ pluginOpts:
     saveJSON: true
     includeAsFile:
       - 'la-prose.md'
+      - 'klimt-rodin.md'
     # map template ids to components so we can handle defaults
     # we're also removing Meta_Component from "atom" GatherContent templates
     # Since they removed template defaults, and certain components —
@@ -69,6 +70,7 @@ pluginOpts:
       1370623: '@molecules/inline-quote/inline-quote.html.twig'
       1370541: '@molecules/picture/picture--captioned.html.twig'
       1370128: '@molecules/slide/slide.html.twig'
+      1403545: '@molecules/slide--in-depth__intro/slide--in-depth__intro.html.twig'
       1370544: '@molecules/standalone-quote/standalone-quote.html.twig'
       1370592: '@molecules/video--embed/video--embed.html.twig'
       1370593: '@molecules/video--ambient/video--ambient.html.twig'
@@ -92,6 +94,8 @@ pluginOpts:
       contents: Content_Content
       type: _type
       template_id: _template_id
+      # Themes
+      theme: Colors_Theme
       # General
       title: Content_Title
       description: Content_Description
@@ -146,12 +150,14 @@ pluginOpts:
       caption__text: Content_Caption
       slide__image: Content_Slide-Image
       slide__image-alt: Content_Slide-Image-Alt
+      slide__title: Content_In-Depth-Title
+      slide__description: Content_In-Depth-Description
       # In depth
       slideshow__title: Content_Slideshow-Title
       slideshow__description: Content_Slideshow-Description
       slideshow__image: Content_Slideshow-Image
       slideshow__image-alt: Content_Slideshow-Image-Alt
-      slideshow__cta: Content_Slideshow-Image-Alt
+      slideshow__cta: Content_Slideshow-CTA
       # Simple content
       content__quote: Content_Quote
       content__quote__attribution: Content_Quote-Attribution
@@ -186,7 +192,6 @@ pluginOpts:
   metalsmith-jstransformer:
     pattern: "!components/**"
     layoutPattern: "templates/**"
-
     # Options that are applied to just specific engines.
     engineOptions:
       # SASS settings.
@@ -204,16 +209,16 @@ pluginOpts:
       twig:
         namespaces:
           kstat: src
-          atoms: src/components/atoms
-          molecules: src/components/molecules
-          organisms: src/components/organisms
-          ecosystems: src/components/ecosystems
-          environments: src/components/environments
-          layouts: src/components/layouts
-          images: src/images
-          assets: src/assets
-          templates: src/templates
-          macros: src/macros
+          atoms: /components/atoms
+          molecules: /components/molecules
+          organisms: /components/organisms
+          ecosystems: /components/ecosystems
+          environments: /components/environments
+          layouts: /components/layouts
+          images: /images
+          assets: /assets
+          templates: /templates
+          macros: /macros
         filters:
           clean_id: twig-drupal-filters/filters/clean_id
           bustcache: kalastatic-twig-filters/lib/filters/bustcache
