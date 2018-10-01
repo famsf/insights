@@ -341,9 +341,9 @@ Styleguide COMPONENTS.in-depth
 
     .horizontal-image-slider {
       .item__content {
-        > .picture {
+        > .picture:before {
           @include breakpoint(medium) {
-            background: linear-gradient(to right, transparent, $white);
+            background: linear-gradient(to right, transparent, $black);
           }
         }
       }
