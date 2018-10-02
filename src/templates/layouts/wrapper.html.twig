@@ -25,6 +25,11 @@
       </title>
 
       <meta name="description" content="{{ config.description }}">
+      {% include "@atoms/og_tag/og_tag.html.twig" with {property: "title", content: config.title} only %}
+      {% include "@atoms/og_tag/og_tag.html.twig" with {property: "description", content: config.description} only %}
+      {% include "@atoms/og_tag/og_tag.html.twig" with {property: "type", content: "website"} only %}
+      {% include "@atoms/og_tag/og_tag.html.twig" with {property: "url", content: "https://insights.famsf.org/la-prose/"} only %}
+      {% include "@atoms/og_tag/og_tag.html.twig" with {property: "image", content: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/0_la-prose-title-card.jpg"} only %}
 
       {{ kstatic.scripts }}
       {% for script in config.scripts.header.kalastatic %}

@@ -10,7 +10,8 @@
   },
   "main": "build/index.html",
   "scripts": {
-    "install": "napa TimPietrusky/background-clip-text-polyfill",
+    "dl:bg-clip": "napa TimPietrusky/background-clip-text-polyfill",
+    "install": "run-p dl:bg-clip",
     "test": "[ \"${CONTEXT}\" = production ] && run-s play redirect || run-s play lint:js",
     "play": "kalastatic build",
     "redirect": "cp _redirects build/",

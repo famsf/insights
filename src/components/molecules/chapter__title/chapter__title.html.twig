@@ -1,6 +1,6 @@
-<div class="chapter__title">
+<div class="chapter__title" data-snap-id={{ snap_id }}>
 
-  <img src="{{ img.url }}" class="object-fit" alt="{{ img.alt }}">
+  {% include '@atoms/img/img.html.twig' with img|merge({ classes: img.classes ~ " object-fit", style: 'full-screen' }) %}
 
   <div class="overlay">
     <div class="overlay__contents">

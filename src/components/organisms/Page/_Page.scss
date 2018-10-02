@@ -1,5 +1,4 @@
 %page {
-
   z-index: 1;
   padding: 0;
   margin: 0;
@@ -20,8 +19,13 @@
 
   .fluid {
     min-height: 100vh;
+  }
 
-    &.height-auto {
+  &.height-auto,
+  .height-auto {
+    min-height: auto !important;
+
+    .fluid {
       min-height: auto;
     }
   }
@@ -98,6 +102,14 @@
 
   &.current_page {
     z-index: 20;
+  }
+
+  .page-load-snap-sticky {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    z-index: 100;
+    background-color: $white;
   }
 }
 

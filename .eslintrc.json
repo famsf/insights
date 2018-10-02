@@ -10,7 +10,8 @@
     "jQuery": true,
     "Plyr": true,
     "matchMedia": true,
-    "Foundation": true
+    "Foundation": true,
+    "jScaler": true
   },
   "rules": {
     "consistent-return": [0],

@@ -1,0 +1,37 @@
+%transcript {
+  margin-bottom: 1rem;
+
+  .transcript__brief {
+    margin-bottom: .5rem;
+  }
+
+  .transcript__text {
+    transition: all .75s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+
+    &.active {
+      visibility: visible !important;;
+      opacity: 1;
+      height: auto;
+      max-height: 600px
+    }
+  }
+
+  .transcript__toggle {
+    @extend %cta__button;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .theme--dark & {
+    color: $white;
+  }
+}
+
+.transcript {
+  @extend %transcript;
+}

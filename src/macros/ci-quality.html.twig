@@ -1,0 +1,13 @@
+{# Processing and output for image quality #}
+{% macro quality(url, quality) %}
+{% spaceless %}
+  {% if (quality is not defined or quality == '') %}
+    {% set quality = '70' %}
+  {% endif %}
+  {% if url|slice(-4) == '.png' %}
+    {{ "png-lossy-" ~ quality }}
+  {% else %}
+    {{ "q" ~ quality }}
+  {% endif %}
+{% endspaceless %}
+{% endmacro %}
