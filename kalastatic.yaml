@@ -94,6 +94,7 @@ pluginOpts:
       contents: Content_Content
       type: _type
       template_id: _template_id
+      auto_height: Content_Height-Auto
       # Themes
       theme: Colors_Theme
       # General

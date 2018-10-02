@@ -1,4 +1,4 @@
-  <div class="two_up--primary fluid ">
+  <div class="two_up--primary fluid {{ auto_height ?: 'height-auto'}}">
   <div class="wrapper grid-x grid-margin-x " id="{{slug}}">
     {% for column in children %}
       <div id="" class="cell medium-4 {% if offset %}medium-offset-2{% elseif loop.first %} medium-offset-1{% endif %}">
