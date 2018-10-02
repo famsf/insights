@@ -61,7 +61,7 @@ chapters:
   - classes: hide-chapter-nav theme--dark
     components:
       - template: "@molecules/timeline/timeline.html.twig"
-        title: "The History of Art"
+        title: "Without timeline span"
         is_year_span: false
         years:
         - year: "1800"
@@ -85,7 +85,7 @@ chapters:
   - classes: hide-chapter-nav theme--dark
     components:
       - template: "@molecules/timeline/timeline.html.twig"
-        title: "The History of Art"
+        title: "With timeline span"
         is_year_span: true
         years:
         - year: "1800"
