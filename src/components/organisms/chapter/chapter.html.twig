@@ -17,7 +17,7 @@
       {% set component = child.component %}
     {% endif %}
     {%
-      include "@kalastatic/components/organisms/page/page.html.twig" with child|merge({
+      include "@organisms/page/page.html.twig" with child|merge({
         index: loop.index0,
         chapter: id,
         component: component,

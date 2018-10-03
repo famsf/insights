@@ -19,6 +19,10 @@
 
   .fluid {
     min-height: 100vh;
+
+    &.height-auto {
+      min-height: auto;
+    }
   }
 
   &.height-auto,
