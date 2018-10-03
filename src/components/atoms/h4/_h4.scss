@@ -1,4 +1,7 @@
 %h4 {
+  font-family: $alternate-header-font-family;
+  font-weight: 900;
+
   .theme--dark & {
     color: $white;
   }

@@ -13,7 +13,6 @@ destination: "build"
 # What BrowserSync will consider the web root.
 bsWebroot: build
 
-
 plugins:
   # Load information from the environment variables.
   - 'metalsmith-env'
@@ -34,11 +33,9 @@ plugins:
   - 'metalsmith-assets-convention'
   # Ignore all partials and layouts.
   - 'metalsmith-ignore'
-  # Load all Partials.
   - 'metalsmith-jstransformer'
   # Clean URLs.
   - 'metalsmith-clean-urls'
-# Allows changing some of the plugin options.
 
 # Allows changing some of the plugin options.
 pluginOpts:
@@ -62,27 +59,27 @@ pluginOpts:
     # and allow override in config.
     # We can merge template mappings and mappings, under "components"... that will be rad.
     templateMappings:
-      1370526: '@templates/pages/digital-story.html.twig'
-      1370621: '@atoms/cliff-note/cliff-note.html.twig'
-      1370543: '@atoms/intro-text/intro-text.html.twig'
-      1370528: '@molecules/chapter__title/chapter__title.html.twig'
-      1370148: '@molecules/cover-page/cover-page.html.twig'
-      1370623: '@molecules/inline-quote/inline-quote.html.twig'
-      1370541: '@molecules/picture/picture--captioned.html.twig'
-      1370128: '@molecules/slide/slide.html.twig'
-      1403545: '@molecules/slide--in-depth__intro/slide--in-depth__intro.html.twig'
-      1370544: '@molecules/standalone-quote/standalone-quote.html.twig'
-      1370592: '@molecules/video--embed/video--embed.html.twig'
-      1370593: '@molecules/video--ambient/video--ambient.html.twig'
-      1370626: '@organisms/chapter/chapter.html.twig'
-      1370624: '@organisms/commentary/commentary.html.twig'
-      1370542: '@organisms/content--simple/content--simple.html.twig'
-      1370139: '@organisms/horizontal-image-slider/horizontal-image-slider.html.twig'
-      1370655: '@organisms/in-depth/in-depth.html.twig'
+      1370526: '@kalastatic/templates/pages/digital-story.html.twig'
+      1370621: '@kalastatic/components/atoms/cliff-note/cliff-note.html.twig'
+      1370543: '@kalastatic/components/atoms/intro-text/intro-text.html.twig'
+      1370528: '@kalastatic/components/molecules/chapter__title/chapter__title.html.twig'
+      1370148: '@kalastatic/components/molecules/cover-page/cover-page.html.twig'
+      1370623: '@kalastatic/components/molecules/inline-quote/inline-quote.html.twig'
+      1370541: '@kalastatic/components/molecules/picture/picture--captioned.html.twig'
+      1370128: '@kalastatic/components/molecules/slide/slide.html.twig'
+      1370544: '@kalastatic/components/molecules/standalone-quote/standalone-quote.html.twig'
+      1370592: '@kalastatic/components/molecules/video--embed/video--embed.html.twig'
+      1370593: '@kalastatic/components/molecules/video--ambient/video--ambient.html.twig'
+      1370626: '@kalastatic/components/organisms/chapter/chapter.html.twig'
+      1370624: '@kalastatic/components/organisms/commentary/commentary.html.twig'
+      1370542: '@kalastatic/components/organisms/content--simple/content--simple.html.twig'
+      1370139: '@kalastatic/components/organisms/horizontal-image-slider/horizontal-image-slider.html.twig'
+      1370655: '@kalastatic/components/organisms/in-depth/in-depth.html.twig'
+      1403545: '@kalastatic/components/molecules/slide--in-depth__intro/slide--in-depth__intro.html.twig'
       1370527: '@kalastatic/components/organisms/page/page.html.twig'
-      1370588: '@organisms/scroll-comparison/scroll-comparison.html.twig'
-      1370604: '@organisms/section_wrapper/section_wrapper.html.twig'
-      7933024: '@organisms/footer__cta'
+      1370588: '@kalastatic/components/organisms/scroll-comparison/scroll-comparison.html.twig'
+      1370604: '@kalastatic/components/organisms/section_wrapper/section_wrapper.html.twig'
+      # 7933024: '@organisms/footer__cta'
     mappings:
       id: id
       slug: slug
@@ -208,17 +205,17 @@ pluginOpts:
           - src/components
       twig:
         namespaces:
-          kstat: src
-          atoms: /components/atoms
-          molecules: /components/molecules
-          organisms: /components/organisms
-          ecosystems: /components/ecosystems
-          environments: /components/environments
-          layouts: /components/layouts
-          images: /images
-          assets: /assets
-          templates: /templates
-          macros: /macros
+          kstat: .
+          atoms: components/atoms
+          molecules: components/molecules
+          organisms: components/organisms
+          ecosystems: components/ecosystems
+          environments: components/environments
+          layouts: components/layouts
+          images: images
+          assets: assets
+          templates: templates
+          macros: macros
         filters:
           clean_id: twig-drupal-filters/filters/clean_id
           bustcache: kalastatic-twig-filters/lib/filters/bustcache

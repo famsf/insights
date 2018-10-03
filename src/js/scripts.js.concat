@@ -4,6 +4,7 @@ files:
 - js/poly/nextElementSibling.js
 - js/poly/performantScrollTo.js
 - components/atoms/video--embed/video--embed.js
+- components/atoms/audio_player/audio_player.js
 - components/molecules/top-bar/top-bar.js
 - components/molecules/cover-page/cover-page.js
 - js/pages.js

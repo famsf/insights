@@ -12,7 +12,7 @@
 
 <section class="page {{ classes }} {{ theme }}" id="chapter_{{ id }}" data-page-index="{{ index }}">
   <div class="frame">
-    {% if component != '@kalastatic/components/organisms/page/page.html.twig' %}
+    {% if component != '@organisms/page/page.html.twig' %}
       {% set adenda = {} %}
       {% if 'chapter__title' in gatherContent.templateMap[chapter.template_id] %}
         {% set adenda = {
@@ -20,7 +20,9 @@
           chapter__numeral: chapter__numeral
         } %}
       {% endif %}
-      {% include component with _context|merge(adenda) only %}
+      {% if (component) %}
+        {% include component with _context|merge(adenda) only %}
+      {% endif %}
     {% else %}
       {% for child in children %}
         {% include templateMap[child.template_id] with child|merge({ templateMap: templateMap }) only %}
