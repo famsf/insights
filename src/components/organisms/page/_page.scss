@@ -19,8 +19,13 @@
 
   .fluid {
     min-height: 100vh;
+  }
 
-    &.height-auto {
+  &.height-auto,
+  .height-auto {
+    min-height: auto !important;
+
+    .fluid {
       min-height: auto;
     }
   }

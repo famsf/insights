@@ -78,7 +78,7 @@
     fds.chapterNav.showNav();
     fds.topBar.initialize('top-bar');
     fds.pages.initialize('.chapters_container', '.page', '.top-bar');
-    fds.footer = doc.getElementById('insights__footer');
+
     fds.chapterNav.onScroll(sy);
     fds.then = win.performance.now();
     fds.startTime = fds.then;
@@ -116,6 +116,7 @@
       autoPlay: 1000,
       slideSpeed: 1000,
       smartSpeed: 1000,
+      mouseDrag: false,
       loop: false,
       nav: true,
       dots: true,
@@ -133,7 +134,7 @@
     });
 
     // Initialize Horizontal Image Slider.
-    horizontalImageSlider = $(':not(.in-depth-modal) > .horizontal-image-slider');
+    horizontalImageSlider = $(':not(.in-depth-slider) > .horizontal-image-slider');
     horizontalImageSlider.owlCarousel(horizontalImageSliderOptions);
 
     horizontalImageSlider.find('.slide__icon--next svg').click(function () {
@@ -141,7 +142,18 @@
     });
 
     // Initialize In Depth Slider.
-    inDepthSlider = $('.in-depth-modal > .horizontal-image-slider');
+    inDepthSlider = $('.in-depth-slider > .horizontal-image-slider');
+
+    $('.slide--in-depth__intro__button').click(function () {
+      $(this).closest('.in-depth-slider').toggleClass('open');
+    });
+
+    $('.in-depth__toggle').click(function () {
+      $(this).closest('.in-depth-slider').toggleClass('open');
+
+      // Simulate a click on the first slide dot nav link.
+      $(this).siblings('.owl-carousel').find('.owl-dots .owl-dot:first-of-type').trigger('click');
+    });
 
     if (Foundation.MediaQuery.is('small only')) {
       inDepthSlider.addClass('off');
@@ -174,10 +186,9 @@
       });
     }
 
-    // In Depth Slider Modal Close Methods.
-    $('.in-depth-modal .modal__close-button').click(function () {
-      // Simulate a click on the first slide dot nav link.
-      $(this).siblings('.owl-carousel').find('.owl-dots .owl-dot:first-of-type').trigger('click');
+    // Transcription toggle.
+    $('.transcript .transcript__toggle').click(function () {
+      $(this).siblings('.transcript__text').toggleClass('active');
     });
 
     fds.rootElement = doc.querySelector('.insights-app');

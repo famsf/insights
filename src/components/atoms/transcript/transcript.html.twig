@@ -10,11 +10,11 @@
   {% endif %}
 
   {% if id %}
-    <a data-toggle="{{ id }}" class="button toggle-transcript">
+    <a class="transcript__toggle button">
       {{ button_text }}
     </a>
 
-    <div class="transcript__text" style="display: none;" id="{{ id }}" data-toggler data-animate="fade-in fade-out">
+    <div class="transcript__text" style="visibility: hidden;">
       {{ text }}
     </div>
   {% endif %}

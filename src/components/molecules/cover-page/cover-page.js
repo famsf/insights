@@ -13,13 +13,18 @@
 
   fds.coverPage.initialize = function () {
     var imgSrc = fds.coverPageElement.dataset.bgImage;
+    var imgSize = fds.coverPageElement.dataset.bgImageSize;
     var imgAlt = fds.coverPageElement.dataset.bgImageAlt;
     var downArrow = fds.coverPageElement.querySelector('.down_arrow');
     var img = new Image();
     img.setAttribute('alt', imgAlt);
-    img.setAttribute('src', imgSrc);
+    img.setAttribute('ci-responsive', true);
+    img.setAttribute('ci-src', imgSrc);
+    img.setAttribute('ci-size', imgSize);
+    img.setAttribute('ci-type', 'crop');
     img.classList.add('bg-image');
     fds.coverPageElement.querySelector('.underlay').appendChild(img);
+    jScaler.processImage(img);
     if (img.complete) {
       fds.onCoverImageLoaded();
     }
