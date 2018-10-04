@@ -50,6 +50,7 @@ pluginOpts:
     includeAsFile:
       - 'la-prose.md'
       - 'klimt-rodin.md'
+#     - 'gauguin.md'
     # map template ids to components so we can handle defaults
     # we're also removing Meta_Component from "atom" GatherContent templates
     # Since they removed template defaults, and certain components —
@@ -92,6 +93,8 @@ pluginOpts:
       type: _type
       template_id: _template_id
       auto_height: Content_Height-Auto
+      offset: Offset
+      column_offset: Content_Column-Offset
       # Themes
       theme: Colors_Theme
       # General
@@ -172,20 +175,30 @@ pluginOpts:
       author__bio: Content_Author-Bio
       commentary: Content_Commentary
       cta__button: Content_Commentary-CTA-Button
+      # Audio + Transcripts
+      audio__file: Content_Audio-File
+      audio__description: Content_Audio-Description
+      audio__transcript__toggle: Content_Transcript-Toggle-Label
+      audio__transcript: Content_Transcript
       # Footer
       footer__cta-left__title: Content-Left_Title
       footer__cta-left__description: Content-Left_Description
       footer__cta-left__cta: Content-Left_CTA-Button
+      footer__cta-left__theme: Content-Left_Theme
       footer__cta-middle__title: Content-Middle_Title
       footer__cta-middle__description: Content-Middle_Description
       footer__cta-middle__cta: Content-Middle_CTA-Button
+      footer__cta-middle__theme: Content-Middle_Theme
       footer__cta-right__title: Content-Right_Title
       footer__cta-right__description: Content-Right_Description
       footer__cta-right__cta: Content-Right_CTA-Button
+      footer__cta-right__theme: Content-Right_Theme
       footer__famsf__title: Content-FAMSF_Title
       footer__famsf__description: Content-FAMSF_Description
       footer__famsf__tickets: Content-FAMSF_Tickets-Link
       footer__famsf__membership: Content-FAMSF_Membership-Link
+      # Images with Marker
+      # Timeline
   # The layouts will live in the templates directory.
   metalsmith-jstransformer:
     pattern: "!components/**"

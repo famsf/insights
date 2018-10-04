@@ -12,16 +12,16 @@
 
       {% set tout = {
           title: footer__cta-middle__title,
-          blurb: footer__cta-left__description,
-          cta__buttom: footer__cta-left__cta
+          blurb: footer__cta-middle__description,
+          cta__buttom: footer__cta-middle__cta
         }
       %}
       {% include "@molecules/footer__cta/footer__cta.html.twig" with tout only %}
 
       {% set tout = {
           title: footer__cta-right__title,
-          blurb: footer__cta-left__description,
-          cta__buttom: footer__cta-left__cta,
+          blurb: footer__cta-right__description,
+          cta__buttom: footer__cta-right__cta,
           classes: 'theme--primary-dark  '
         }
       %}

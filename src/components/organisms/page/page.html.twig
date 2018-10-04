@@ -4,7 +4,7 @@
   {% set theme = "theme--dark" %}
 {% elseif theme == "Theme Primary" %}
   {% set theme = "theme--primary" %}
-{% elseif theme == "Theme Primary Light"  %}
+{% elseif theme == "Theme Primary Light" %}
   {% set theme = "theme--primary-light" %}
 {% elseif theme == "Theme Primary Dark"  %}
   {% set theme = "theme--primary-dark" %}
@@ -12,21 +12,22 @@
 
 <section class="page {{ classes }} {{ theme }}" id="chapter_{{ id }}" data-page-index="{{ index }}">
   <div class="frame">
-    {% if component != '@organisms/page/page.html.twig' %}
+    {% if '/page.html.twig' in component %}
+      {{ component }} {{ children|length }}
+      {% if children %}
+        {% for child in children %}
+          {% include templateMap[child.template_id] with child|merge({ templateMap: templateMap }) only %}
+        {% endfor %}
+      {% endif %}
+    {% elseif component %}
       {% set adenda = {} %}
-      {% if 'chapter__title' in gatherContent.templateMap[chapter.template_id] %}
+      {% if 'chapter__title' in component %}
         {% set adenda = {
           chapter__title: chapter__title,
           chapter__numeral: chapter__numeral
         } %}
       {% endif %}
-      {% if (component) %}
-        {% include component with _context|merge(adenda) only %}
-      {% endif %}
-    {% else %}
-      {% for child in children %}
-        {% include templateMap[child.template_id] with child|merge({ templateMap: templateMap }) only %}
-      {% endfor %}
+      {% include component with _context|merge(adenda) only %}
     {% endif %}
   </div>
 </section>
