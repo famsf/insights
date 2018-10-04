@@ -15,6 +15,7 @@ files:
 - components/molecules/menu--mobile/menu--mobile.js
 - components/molecules/sharing-icons/sharing-icons.js
 - components/molecules/timeline/timeline.js
+- components/molecules/image-comparison-slider/image-comparison-slider.js
 - js/main.js
 insertNewLine: true
 ---

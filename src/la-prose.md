@@ -137,6 +137,17 @@ chapters:
       poster: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/intro-book-unfolding_thumbnail.jpg
       youtube:
         embed: xt27-zrvHkk
+  # iv
+  - components:
+    - template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
+      classes: theme--dark
+      left:
+        components:
+        - template: "@molecules/image-comparison-slider/image-comparison-slider.html.twig"
+      right:
+        components:
+        - template: "@atoms/textarea/textarea.html.twig"
+          text: "<p>Trust fund health goth lomo, air plant gastropub pickled master cleanse small batch cornhole four dollar toast occupy food truck. Brunch neutra kickstarter yuccie. Cloud bread green juice intelligentsia asymmetrical, snackwave drinking vinegar venmo chia pour-over. Pabst locavore photo booth seitan. Meh tattooed irony PBR&B, pinterest artisan woke pug skateboard migas disrupt typewriter brunch blue bottle sartorial. Locavore 3 wolf moon iPhone, subway tile retro 90's hot chicken live-edge. Banh mi palo santo wayfarers, neutra forage polaroid 8-bit.</p><p>Unicorn helvetica swag distillery. Squid aesthetic selvage scenester cloud bread unicorn farm-to-table put a bird on it sartorial cred. Before they sold out bitters church-key, bushwick chia schlitz messenger bag hell of master cleanse. Vape tousled DIY, yr taiyaki subway tile small batch leggings venmo meh. Brunch semiotics bicycle rights DIY vegan, banjo squid af waistcoat portland intelligentsia lomo taxidermy neutra before they sold out. Vice next level vinyl tilde.</p>"
 
 ################################################################################
 ## CHAPTER 1 ###################################################################
