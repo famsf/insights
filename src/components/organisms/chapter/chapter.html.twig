@@ -10,7 +10,6 @@
 {% endif %}
 <{{ tag }} class="chapter {{ classes }}" id="chapter_{{ id }}" data-chapter-index="{{ index }}" data-chapter-length="{{ children|length }}">
   {% for child in children %}
-    {% set isFirstPageOfChapter = loop.first %}
     {% if child.component is not defined %}
       {% set component = templateMap[child.template_id] %}
     {% else %}
