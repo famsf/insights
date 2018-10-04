@@ -2,6 +2,7 @@
   {% include '@molecules/top-bar/top-bar.html.twig' with { tagline: tagline, tickets_url: tickets_url, facebook_url: facebook_url, twitter_url: twitter_url } only %}
   {% include '@molecules/chapter-nav/chapter-nav.html.twig' with { chapters: children } only %}
   <div class="chapters_container off-canvas-content" id="app">
+  <h1>{{ children|length }}</h1>
   {% for chapter in children %}
       {%
         include "@organisms/chapter/chapter.html.twig" with chapter|merge({
@@ -13,7 +14,6 @@
         }) only
       %}
     {% endfor %}
-    {% include '@organisms/footer/footer.html.twig' with { sections: footer.sections, classes: footer.classes } only %}
   </div>
 </div>
 
