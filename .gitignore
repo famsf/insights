@@ -37,3 +37,8 @@ bower_components
 .lock-wscript
 
 .DS_Store
+
+# Netbeans project files
+
+nbproject
+nbproject/*
