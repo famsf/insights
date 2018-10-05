@@ -3,7 +3,7 @@
 // See https://www.cssscript.com/simple-image-hover-zoom-javascript-library-imagezoom-js/
 (function (window, $, ImageZoom) {
   $(document).ready(function () {
-    var zoomedImages = new ImageZoom('img.img-zoom-drag', { maxZoom: 3, backgroundImageColor: '#000' });
+    var zoomedImages = new ImageZoom('img.img-zoom-drag', { maxZoom: 2, backgroundImageColor: '#000' });
     $('.img-zoom-drag').mousemove(function (e) {
       var offset = $(this).offset();
       var finderBox = $(this).closest('.zoom-image--fullbleed').find('.finder-box');
@@ -18,8 +18,8 @@
       finderBox.css({
         'top': percentThroughHeight + '%',
         'left': percentThroughWidth + '%',
-        'height': windowHeight / 12 + 'px',
-        'width': windowWidth / 12 + 'px'
+        'height': (windowHeight - 64) / 14 + 'px',
+        'width': windowWidth / 14 + 'px'
       })
     });
   });

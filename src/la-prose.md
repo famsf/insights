@@ -27,7 +27,7 @@ chapters:
         alt: "Detail of La prose du Transsibérien et de la Petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars"
   - components:
     - template: "@molecules/zoom-image--fullbleed/zoom-image--fullbleed.html.twig"
-      url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/16_stravinsky-diaghilev.jpg"
+      url: "https://insights.famsf.org/assets/images/delaunay.jpg"
       alt: Fubar
       style: horizontal
   - components:

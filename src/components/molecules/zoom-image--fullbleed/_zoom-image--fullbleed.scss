@@ -7,6 +7,14 @@ section.triggered {
         bottom: 20px;
     }
 }
+.zoom-image--fullbleed {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    padding-top: 90px;
+}
 .scroll-finder {
     transition: opacity 1.3s ease,
         bottom 0.75s ease;
