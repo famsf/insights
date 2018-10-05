@@ -180,6 +180,20 @@ Styleguide COMPONENTS.horizontal-image-slider
   }
 }
 
+// Animations.
+.page {
+  :not(.in-depth-slider) > .horizontal-image-slider > * {
+    transition: opacity .5s ease-in-out .25s;
+    opacity: 0;
+  }
+
+  &.triggered {
+    :not(.in-depth-slider) > .horizontal-image-slider > * {
+      opacity: 1;
+    }
+  }
+}
+
 .owl-carousel,
 .horizontal-image-slider.owl-carousel {
   @extend %horizontal-image-slider;
