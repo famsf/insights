@@ -72,6 +72,7 @@ Styleguide COMPONENTS.horizontal-image-slider
     }
 
     img {
+      min-width: 220px;
       max-height: 50vh;
       width: auto;
       margin: auto;
@@ -176,6 +177,20 @@ Styleguide COMPONENTS.horizontal-image-slider
       &.owl-next {
         right: 2rem;
       }
+    }
+  }
+}
+
+// Animations.
+.page {
+  :not(.in-depth-slider) > .horizontal-image-slider > * {
+    transition: opacity .5s ease-in-out .25s;
+    opacity: 0;
+  }
+
+  &.triggered {
+    :not(.in-depth-slider) > .horizontal-image-slider > * {
+      opacity: 1;
     }
   }
 }
