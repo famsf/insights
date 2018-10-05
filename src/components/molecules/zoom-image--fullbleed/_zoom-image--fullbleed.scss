@@ -1,11 +1,20 @@
 // Below is an import from the imagezoom library.
 .zoomable{position:relative;overflow:hidden;pointer-events:none}.zoomableInPlace{position:absolute}.zoomable > .zoomed{transition:opacity 0.5s;opacity:0!important;position:absolute!important;top:auto;left:auto;right:auto;bottom:auto;margin:0!important;pointer-events:none!important;max-height:none!important;max-width:none!important;background:#fff!important}.zoomable.active > .zoomed{opacity:1!important;transition:opacity 0.5s}
+section.triggered {
+    .scroll-finder {
+        z-index: 99999;
+        opacity: 1;
+        bottom: 20px;
+    }
+}
 .scroll-finder {
+    transition: opacity 1.3s ease,
+        bottom 0.75s ease;
+    opacity: 0;
     height: auto;
     width: 160px;
     position: fixed;
-    z-index: 99999;
-    bottom: 20px;
+    bottom: -160px;
     left: 65px;
     overflow: hidden;
 }
