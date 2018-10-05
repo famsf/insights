@@ -140,7 +140,7 @@
 
     // Bind to page.triggered event allowing us to initialize horizontal sliders
     // as they enter the viewport.
-    $(document).bind('on.page.triggered', function() {
+    $(document).bind('on.page.triggered', function () {
       // Only initialize the slider if the page is triggered
       // and the slider hasn't already been initialized
       if (horizontalImageSliderPage.hasClass('triggered') && !horizontalImageSlider.hasClass('owl-loaded')) {
