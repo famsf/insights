@@ -92,6 +92,7 @@
 
   $(document).ready(function () {
     // Variable declarations.
+    var horizontalImageSliderPage;
     var horizontalImageSlider;
     var horizontalImageSliderOptions = {
       margin: 32,
@@ -135,7 +136,15 @@
 
     // Initialize Horizontal Image Slider.
     horizontalImageSlider = $(':not(.in-depth-slider) > .horizontal-image-slider');
-    horizontalImageSlider.owlCarousel(horizontalImageSliderOptions);
+    horizontalImageSliderPage = horizontalImageSlider.parents('.page');
+
+    // Bind to page.triggered event allowing us to initialize horizontal sliders
+    // as they enter the viewport.
+    $(document).bind('on.page.triggered', function() {
+      if (horizontalImageSliderPage.hasClass('triggered')) {
+        horizontalImageSlider.owlCarousel(horizontalImageSliderOptions);
+      }
+    });
 
     horizontalImageSlider.find('.slide__icon--next svg').click(function () {
       horizontalImageSlider.trigger('next.owl.carousel');
