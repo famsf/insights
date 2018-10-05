@@ -139,6 +139,10 @@ chapters:
         embed: xt27-zrvHkk
   # iv
   - components:
+    -template: "@molecules/image-magnifier/image-magnifier.html.twig"
+
+  # v
+  - components:
     - template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
       imageOne: 
         src: "http://www.fillmurray.com/400/600"

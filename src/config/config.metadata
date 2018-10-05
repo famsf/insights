@@ -20,6 +20,7 @@ scripts:
       - /js/foundation/foundation.min.js
       - /js/owl/owl.carousel.js
       - /js/beerslider/beerslider.js
+      - /js/blowup/blowup.min.js
       - /js/object-fit-images/ofi.min.js
       - /js/clippath/background-clip-text-polyfill.js
       - /js/plyr/plyr.js
