@@ -61,55 +61,50 @@ chapters:
   - classes: hide-chapter-nav theme--dark
     components:
       - template: "@molecules/timeline/timeline.html.twig"
-        title: "Without timeline span"
-        is_year_span: false
-        years:
-        - year: "1800"
-          year_title: "1800"
-          year_subtitle: "Lorem Ipsum Dolor"
-          description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam."
-          images:
-          - src: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
-            alt: "fubar"
-            caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-            style: "square"
-        - year: "1900"
-          year_title: "1900"
-          year_subtitle: "Lorem Ipsum Dolor"
-          description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam."
-          images:
-          - src: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
-            alt: "fubar"
-            caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-            style: "square"
-  - classes: hide-chapter-nav theme--dark
-    components:
-      - template: "@molecules/timeline/timeline.html.twig"
         title: "With timeline span"
         is_year_span: true
         years:
         - year: "1800"
-          year_title: "1800 - 1900"
+          year_title: "1800 - 1804"
           year_subtitle: "Lorem Ipsum Dolor"
-          description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam."
+          description: "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
           images:
           - src: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
             alt: "fubar"
-            caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-            style: "square"
-          - src: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
-            alt: "fubar"
-            caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            caption: "Lorem ipsum dolor"
             style: "square"
         - year: "1900"
-          year_title: "1900 - 2000"
+          year_title: "1987 - 2045"
           year_subtitle: "Lorem Ipsum Dolor"
-          description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam."
+          description: "Lorem ipsum dolor sit a Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
           images:
           - src: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
             alt: "fubar"
             caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
             style: "square"
+        - year: "2010"
+          year_title: "2050 - 2099"
+          year_subtitle: "Lorem Ipsum Dolor"
+          description: "Lorem ipsum dolor sit a Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+          images:
+          - src: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
+            alt: "fubar"
+            caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            style: "square"
+        - year: "2110"
+          year_title: "2122"
+          year_subtitle: "Lorem Ipsum Dolor"
+          description: "Lorem ipsum dolor sit a Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+          images:
+          - src: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
+            alt: "fubar"
+            caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+            style: "square"
+        - year: "2210"
+          year_title: "2200 - 2250"
+          year_subtitle: "Lorem Ipsum Dolor"
+          description: "Lorem ipsum dolor sit a Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+          images:
           - src: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
             alt: "fubar"
             caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
