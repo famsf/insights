@@ -59,6 +59,7 @@
   }
   .timeline-item-text {
     padding-left: 30px;
+    color: white;
     @include breakpoint(large) {
       display: inline-block;
       width: 70%;
