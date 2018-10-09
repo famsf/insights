@@ -1,5 +1,5 @@
 (function (document, window, $) {
-  var $spanTimelines = $('.timeline.year-span');
+  var $spanTimelines = $('.timeline');
   $(document).foundation();
 
   function fadeSpanTimelineBorders($spanTimelinesElements) {
