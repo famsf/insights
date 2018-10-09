@@ -6,6 +6,21 @@
   @include breakpoint(large) {
     margin-left: 90px;
   }
+  .timeline-item-title,
+  .timeline-item-subtitle,
+  .timeline-item-description,
+  .timeline-images {
+    transition: opacity 0.5s linear;
+    opacity: 0;
+  }
+  .timeline--year.active {
+    .timeline-item-title,
+    .timeline-item-subtitle,
+    .timeline-item-description,
+    .timeline-images {
+      opacity: 1;
+    }
+  }
   .timeline--year {
     border-left: 1px solid $white;
     padding-top: 80px;
@@ -120,17 +135,6 @@
   }
 }
 %year-span-timeline {
-  .timeline--year {
-    @include breakpoint(large) {
-      transition: opacity 0.5s linear;
-      opacity: 0;
-      &.active {
-        opacity: 1;
-        height: auto;
-        width: auto;
-      }
-    }
-  }
   .timespan-scroller-inner,
   .timespan-scroller-pos {
     transition: all 0.5s ease-out;
