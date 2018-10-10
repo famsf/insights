@@ -13,8 +13,13 @@
         }) only
       %}
     {% endfor %}
-    {% include '@organisms/footer/footer.html.twig' with { sections: footer.sections, classes: footer.classes } only %}
   </div>
 </div>
 
-{% include '@molecules/off-canvas/off-canvas.html.twig' with { chapters: children, title: story_title, tickets_url: tickets_url, sections: footer.sections, classes: footer.classes } only %}
+{% include '@molecules/off-canvas/off-canvas.html.twig' with {
+  chapters: children,
+  title: story_title,
+  tickets_url: tickets_url,
+  sections: footer.sections,
+  classes: footer.classes
+} only %}

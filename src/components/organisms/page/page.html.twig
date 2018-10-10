@@ -10,10 +10,9 @@
   {% set theme = "theme--primary-dark" %}
 {% endif %}
 
-<section class="page {{ classes }} {{ theme }}" id="chapter_{{ id }}" data-page-index="{{ index }}">
+<section class="page {{ classes }} {{ theme }}" id="chapter_{{ id }}" data-component="{{ component }}" data-page-index="{{ index }}">
   <div class="frame">
     {% if '/page.html.twig' in component %}
-      {{ component }} {{ children|length }}
       {% if children %}
         {% for child in children %}
           {% include templateMap[child.template_id] with child|merge({ templateMap: templateMap }) only %}

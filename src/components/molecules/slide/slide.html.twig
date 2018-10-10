@@ -2,7 +2,10 @@
   <div class="item__content">
     {% include "@atoms/img/img.html.twig" with slide__image only %}
     {% if caption__text %}
-      {% include "@atoms/caption/caption.html.twig" with { brief: caption__brief, text: caption__text } only %}
+      {% include "@atoms/caption/caption.html.twig" with {
+        brief: caption__brief,
+        text: caption__text
+      } only %}
     {% endif %}
     {% if loop.first %}
       {% include "@atoms/slide__icon--next/slide__icon--next.html.twig" %}

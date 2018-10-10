@@ -2,7 +2,7 @@
   win.document.addEventListener('DOMContentLoaded', function () {
     jScaler.process({
       TOKEN: 'a2coygopn',
-      BASE_URL: 'https://insights.famsf.org',
+      BASE_URL: 'https://5bb6550de5cd160bb94d0bfb--famsf-insights.netlify.com',
 
       // See: _settings.scss for the Foundation breakpoint configuration.
       //
