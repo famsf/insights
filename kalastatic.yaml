@@ -49,6 +49,7 @@ pluginOpts:
     saveJSON: true
     includeAsFile:
       - 'la-prose.md'
+      - 'phase-2.md'
     # map template ids to components so we can handle defaults
     # we're also removing Meta_Component from "atom" GatherContent templates
     # Since they removed template defaults, and certain components —
@@ -104,6 +105,11 @@ pluginOpts:
       background__image-alt: Content_Background-Image-Alt
       content__image: Content_Image
       content__image-alt: Content_Image-Alt
+      # Social
+      og__title: Social_OpenGraph-Title
+      og__description: Social_OpenGraph-Description
+      og__image: Social_OpenGraph-Image
+      og__curl: Social_Cannonical-URL
       # Insights Info
       tagline: Content_Tagline
       tickets_url: Content_Tickets-URL
