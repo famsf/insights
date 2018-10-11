@@ -1,3 +1,5 @@
-<picture class="picture picture--{{ style ? style : 'vertical' }}" {{ attributes }}>
-  {% include "@atoms/img/img.html.twig" %}
-</picture>
+<div class="picture picture--{{ style ? style : 'vertical' }}" {{ attributes }}>
+  <picture>
+    {% include "@atoms/img/img.html.twig" %}
+  </picture>
+</div>

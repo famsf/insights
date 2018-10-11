@@ -1,14 +1,13 @@
 <div class="caption">
   <div class="caption__brief">
     {{ brief }}
-    {% if id %}
+    {% if id and caption|striptags|length > 2 %}
       <a data-toggle="{{ id }}" class="button icon hollow toggle-caption">
         <span class="i-info" aria-hidden="true">i</span>
         <span class="show-for-sr">Toggle Caption</span>
       </a>
     {% endif %}
   </div>
-
   {% if id %}
     <figcaption style="display: none;" id="{{ id }}" data-toggler data-animate="fade-in fade-out">
       {{ text }}
