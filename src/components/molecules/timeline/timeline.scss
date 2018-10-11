@@ -6,6 +6,21 @@
   @include breakpoint(large) {
     margin-left: 90px;
   }
+  .timeline-item-title,
+  .timeline-item-subtitle,
+  .timeline-item-description,
+  .timeline-images {
+    transition: opacity 0.5s linear;
+    opacity: 0;
+  }
+  .timeline--year.active {
+    .timeline-item-title,
+    .timeline-item-subtitle,
+    .timeline-item-description,
+    .timeline-images {
+      opacity: 1;
+    }
+  }
   .timeline--year {
     border-left: 1px solid $white;
     padding-top: 80px;
@@ -16,26 +31,22 @@
     }
     &:first-of-type {
       padding-top: 0;
-      /**
-
-          Commenting this out because it looks better, but lets see how the feedback is.
-
-          border-left: none;
-          .timeline-item-text {
-            border-left: 1px solid $white;
-          }
-      */
     }
   }
   h2.timeline-title {
     font-family: $alternate-header-font-family;
     padding-bottom: 70px;
     font-size: 1.8em;
+    @include breakpoint(large) {
+      position: relative;
+      top: 25px;
+    }
   }
   .timeline-images {
     @include breakpoint(large) {
       display: inline-block;
       width: 30%;
+      margin-left: 65px;
     }
   }
   .timeline-item-image {
@@ -53,35 +64,25 @@
   }
   .timeline-item-text {
     padding-left: 30px;
+    color: white;
     @include breakpoint(large) {
       display: inline-block;
-      width: 70%;
+      width: 60%;
       vertical-align: top;
       padding-left: 10%;
       padding-bottom: 80px;
       margin-left: 12%;
-      border-left: 1px solid $white;
+      border-left: none;
       position: relative;
-      &:before {
-        content: '';
-        display: inline-block;
-        width: 15px;
-        height: 15px;
-        -moz-border-radius: 7.5px;
-        -webkit-border-radius: 7.5px;
-        border-radius: 7.5px;
-        background-color: $white;
-        position: absolute;
-        left: -8px;
-        top: 55px;
-      }
     }
   }
   .timeline-item-title {
     font-family: $body-font-family;
     font-size: 2.5em;
     @include breakpoint(large) {
-      font-size: 5.75em;
+      font-size: 11.75em;
+      line-height: 1;
+      margin-top: -35px;
     }
     &::before {
       content: '';
@@ -127,14 +128,51 @@
     left: -65px;
     top: 43px;
   }
-}
-%year-span-timeline {
+  .timespan-scroller-inner,
+  .timespan-scroller-pos {
+    transition: all 0.5s ease-out;
+  }
+  .timespan-scroller {
+    @include breakpoint(large) {
+      display: none;
+      height: 500px;
+      width: 200px;
+      position: fixed;
+      top: 215px;
+      left: 40vw;
+      color: white;
+      overflow: hidden;
+    }
+  }
+  .timespan-scroller-inner {
+    @include breakpoint(large) {
+      z-index: 0;
+      background-color: white;
+      width: 1px;
+      margin: auto;
+      position: relative;
+    }
+  }
+  .span-year {
+    @include breakpoint(large) {
+      display: block;
+      padding-bottom: 250px;
+      margin-left: -55px;
+      font-size: 1.25em;
+    }
+  }
+  .timespan-scroller-pos {
+    width: 3px;
+    min-height: 10px;
+    background: white;
+    position: absolute;
+    margin-left: -1px;
+  }
   .timeline-item-text {
     @include breakpoint(large) {
-      border-left: 3px solid rgba(255, 255, 255, 0.15);
-      transition : border-color 0.75s ease-out;
-      &.year-scrolled-to {
-        border-color: rgba(255, 255, 255, 1);
+      border-left: 0;
+      .timeline-year {
+        display: none;
       }
       &:before {
         width: 0;
@@ -143,10 +181,40 @@
     }
   }
 }
+%year-span-timeline {
+  .timeline-item-title {
+    font-family: $body-font-family;
+    @include breakpoint(large) {
+      font-size: 5.50em;
+      line-height: 1.1;
+    }
+  }
+}
+%no-year-span-timeline {
+  .timespan-scroller-pos {
+    min-height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    margin-left: -7px;
+    margin-top: -5px;
+  }
+}
 
 .timeline {
   @extend %timeline;
   &.year-span {
     @extend %year-span-timeline;
+  }
+  &.no-year-span {
+    @extend %no-year-span-timeline;
+  }
+}
+.triggered {
+  .timeline {
+    .timespan-scroller {
+      @include breakpoint(large) {
+        display: block;
+      }
+    }
   }
 }
