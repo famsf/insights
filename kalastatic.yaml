@@ -40,8 +40,8 @@ plugins:
 # Allows changing some of the plugin options.
 pluginOpts:
   metalsmith-gathercontent:
-    verbose: 3
-    logMappings: 1
+    verbose: 0
+    logMappings: 0
     logFileContents: 0
     authPath: _auth.json
     filePath: src/assets/gathercontent
