@@ -13,10 +13,7 @@
         {% for component in column.children %}
           {% if 'picture--captioned' in templateMap[component.template_id] %}
             {% set component = component|merge({
-              picture: {
-                src: component.content__image.src,
-                alt: component.content__image.alt
-              },
+              picture: component.content__image,
               caption: {
                 id: component.slug ~ '_caption',
                 brief: component.caption__brief,

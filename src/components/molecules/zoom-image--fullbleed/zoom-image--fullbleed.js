@@ -3,9 +3,8 @@
 // See https://www.cssscript.com/simple-image-hover-zoom-javascript-library-imagezoom-js/
 (function (window, $, ImageZoom) {
   $(document).ready(function () {
-    console.log(':::::»»', document.querySelectorAll('.img-zoom-drag'));
     if( document.querySelectorAll('.img-zoom-drag').length > 0 ) {
-      var zoomedImages = new ImageZoom('img.img-zoom-drag', { maxZoom: 3, backgroundImageColor: '#000' });      
+      var zoomedImages = new ImageZoom('img.img-zoom-drag', { maxZoom: 3, backgroundImageColor: '#000' });
     }
   });
 }(window, jQuery, ImageZoom));

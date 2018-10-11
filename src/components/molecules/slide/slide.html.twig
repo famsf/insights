@@ -1,6 +1,6 @@
 <div class="item {{ loop.first ? 'intro-slide' }}">
   <div class="item__content">
-    {% include "@atoms/img/img.html.twig" with slide__image only %}
+    {% include "@molecules/picture/picture.html.twig" with slide__image only %}
     {% if caption__text %}
       {% include "@atoms/caption/caption.html.twig" with {
         brief: caption__brief,

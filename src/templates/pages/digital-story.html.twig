@@ -3,16 +3,16 @@
   {% include '@molecules/chapter-nav/chapter-nav.html.twig' with { chapters: children } only %}
   <div class="chapters_container off-canvas-content" id="app">
   {% for chapter in children %}
-      {%
-        include "@organisms/chapter/chapter.html.twig" with chapter|merge({
-          story__title: story__title|trim,
-          story__subtitle: story__subtitle|trim,
-          exhibit__info: exhibit__info|trim,
-          index: loop.index0,
-          templateMap: gatherContent.templateMap
-        }) only
-      %}
-    {% endfor %}
+    {%
+      include "@organisms/chapter/chapter.html.twig" with chapter|merge({
+        story__title: story__title|trim,
+        story__subtitle: story__subtitle|trim,
+        exhibit__info: exhibit__info|trim,
+        index: loop.index0,
+        templateMap: gatherContent.templateMap
+      }) only
+    %}
+  {% endfor %}
   </div>
 </div>
 

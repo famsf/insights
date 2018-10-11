@@ -4,11 +4,13 @@
     file fields return arrays including even past (now deleted) files
   #}
   {% if background__image[0] is iterable and background__image[0] is not same as(background__image.src) %}
-    {% set img = background__image[0]~'.jpg' %}
+    {% set img = background__image[0] %}
   {% else %}
-    {% set img = background__image~'.jpg' %}
+    {% set img = background__image %}
   {% endif %}
-  {% include "@atoms/img/img.html.twig" with img|merge({ classes: 'object-fit' }) only %}
+  {% if img.src %}
+    {% include "@atoms/img/img.html.twig" with img|merge({ classes: 'object-fit' }) only %}
+  {% endif %}
   <div class="overlay">
     <div class="overlay__contents">
       <h1 class="chapter__headline">
