@@ -1,4 +1,9 @@
 %zoom-caption {
+  .zoom-button-wrapper {
+    position: relative;
+    top: -20px;
+    left: -20px;
+  }
   .inline-caption-button {
     background-color: $white;
     color: $black;
@@ -22,8 +27,10 @@
   }
   .inline-caption-content {
     opacity: 0;
+    display: none;
     transition: opacity 0.4s ease-in;
     &.show {
+      display: block;
       opacity: 1;
     }
   }
