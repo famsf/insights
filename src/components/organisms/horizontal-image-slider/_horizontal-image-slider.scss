@@ -91,7 +91,7 @@ Styleguide COMPONENTS.horizontal-image-slider
 
     .toggle-caption {
       display: none;
-
+      font-size: 15px;
       @include breakpoint(medium) {
         display: inline-block;
       }
