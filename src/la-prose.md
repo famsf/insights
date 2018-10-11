@@ -62,10 +62,9 @@ chapters:
     components:
       - template: "@molecules/timeline/timeline.html.twig"
         title: "With timeline span"
-        is_year_span: true
+        is_year_span: false
         years:
-        - year: "1800"
-          year_title: "1800 - 1804"
+        - year_title: "1801"
           year_subtitle: "Lorem Ipsum Dolor"
           description: "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
           images:
@@ -73,8 +72,7 @@ chapters:
             alt: "fubar"
             caption: "Lorem ipsum dolor"
             style: "square"
-        - year: "1900"
-          year_title: "1987 - 2045"
+        - year_title: "1803"
           year_subtitle: "Lorem Ipsum Dolor"
           description: "Lorem ipsum dolor sit a Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
           images:
@@ -82,8 +80,7 @@ chapters:
             alt: "fubar"
             caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
             style: "square"
-        - year: "2010"
-          year_title: "2050 - 2099"
+        - year_title: "1818"
           year_subtitle: "Lorem Ipsum Dolor"
           description: "Lorem ipsum dolor sit a Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
           images:
@@ -91,8 +88,7 @@ chapters:
             alt: "fubar"
             caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
             style: "square"
-        - year: "2110"
-          year_title: "2122"
+        - year_title: "1830"
           year_subtitle: "Lorem Ipsum Dolor"
           description: "Lorem ipsum dolor sit a Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
           images:
@@ -100,8 +96,7 @@ chapters:
             alt: "fubar"
             caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
             style: "square"
-        - year: "2210"
-          year_title: "2200 - 2250"
+        - year_title: "1834"
           year_subtitle: "Lorem Ipsum Dolor"
           description: "Lorem ipsum dolor sit a Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
           images:

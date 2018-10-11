@@ -37,6 +37,10 @@
     font-family: $alternate-header-font-family;
     padding-bottom: 70px;
     font-size: 1.8em;
+    @include breakpoint(large) {
+      position: relative;
+      top: 25px;
+    }
   }
   .timeline-images {
     @include breakpoint(large) {
@@ -142,6 +146,7 @@
   }
   .timespan-scroller-inner {
     @include breakpoint(large) {
+      z-index: 0;
       background-color: white;
       width: 1px;
       margin: auto;
