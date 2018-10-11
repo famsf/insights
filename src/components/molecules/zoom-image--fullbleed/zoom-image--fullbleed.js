@@ -24,10 +24,12 @@
           'width': windowWidth / 20 + 'px'
         });
       });
-    }
-    else {
+    } else {
       // Can't show this section if we're on mobile devices.
-      $('img.img-zoom-drag').closest('section.page').css('display', 'none');
+      $('.img-zoom-drag').closest('section.page').css('display', 'none');
+    }
+    if( document.querySelectorAll('.img-zoom-drag').length > 0 ) {
+      var zoomedImages = new ImageZoom('.img-zoom-drag', { maxZoom: 3, backgroundImageColor: '#000' });
     }
   });
 }(document, window, jQuery, ImageZoom));

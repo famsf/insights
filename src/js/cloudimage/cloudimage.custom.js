@@ -2,8 +2,7 @@
   win.document.addEventListener('DOMContentLoaded', function () {
     jScaler.process({
       TOKEN: 'a2coygopn',
-      BASE_URL: 'https://5bb6550de5cd160bb94d0bfb--famsf-insights.netlify.com',
-
+      BASE_URL: 'https://deploy-preview-154--famsf-insights.netlify.com',
       // See: _settings.scss for the Foundation breakpoint configuration.
       //
       // These responsive breakpoints match up with Foundation's breakpoint
