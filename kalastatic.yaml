@@ -40,8 +40,8 @@ plugins:
 # Allows changing some of the plugin options.
 pluginOpts:
   metalsmith-gathercontent:
-    verbose: 3
-    logMappings: 1
+    verbose: 0
+    logMappings: 0
     logFileContents: 0
     authPath: _auth.json
     filePath: src/assets/gathercontent
@@ -81,6 +81,7 @@ pluginOpts:
       1370604: '@kalastatic/components/organisms/section_wrapper/section_wrapper.html.twig'
       7933023: '@kalastatic/components/organisms/footer/section_wrapper.html.twig'
       7933024: '@kalastatic/components/organisms/section_wrapper/section_wrapper.html.twig'
+      1413449: '@kalastatic/components/organisms/zoom-image--fullbleed/zoom-image--fullbleed.html.twig'
       # 7933024: '@organisms/footer__cta'
     mappings:
       id: id
