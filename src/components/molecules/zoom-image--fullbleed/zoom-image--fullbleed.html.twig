@@ -12,9 +12,17 @@
 {% set classes = "img-zoom-drag" %}
 {% set style = "zoom-bleed" %}
 <div class="zoom-image--fullbleed">
-  {% include "@atoms/img/img.html.twig" %}
+  {% include "@atoms/img/img.html.twig" with {
+    type: 'horizontal',
+    classes: '',
+    src: content__image.src
+  } %}
   <div class="scroll-finder">
     <div class="finder-box"></div>
-    {% include "@atoms/img/img.html.twig" with {type: 'small', classes: ''} %}
+    {% include "@atoms/img/img.html.twig" with {
+      type: 'small',
+      classes: '',
+      src: content__image.src
+    } %}
   </div>
 </div>

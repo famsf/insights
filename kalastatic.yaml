@@ -81,7 +81,7 @@ pluginOpts:
       1370604: '@kalastatic/components/organisms/section_wrapper/section_wrapper.html.twig'
       7933023: '@kalastatic/components/organisms/footer/section_wrapper.html.twig'
       7933024: '@kalastatic/components/organisms/section_wrapper/section_wrapper.html.twig'
-      1413449: '@kalastatic/components/organisms/zoom-image--fullbleed/zoom-image--fullbleed.html.twig'
+      1413449: '@kalastatic/components/molecules/zoom-image--fullbleed/zoom-image--fullbleed.html.twig'
       # 7933024: '@organisms/footer__cta'
     mappings:
       id: id
