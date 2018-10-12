@@ -15,13 +15,13 @@
         var imgHeight = $(this).height();
         var percentThroughWidth = (relX / imgWidth * 100) * .5;
         var percentThroughHeight = (relY / imgHeight * 100)  * .5;
-        var windowWidth = $(window).width();
-        var windowHeight = $(window).height();
+        var windowWidth = window.innerWidth;
+        var windowHeight = window.innerHeight;
         finderBox.css({
           'top': percentThroughHeight + '%',
           'left': percentThroughWidth + '%',
-          'height': (windowHeight - 64) / 20 + 'px',
-          'width': windowWidth / 20 + 'px'
+          'height': (windowHeight - 64) / 19 + 'px',
+          'width': windowWidth / 19 + 'px'
         });
       });
     } else {
