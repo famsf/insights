@@ -24,18 +24,18 @@
   <div class="inline-image-zoom-wrapper">
       {% if children|length > 0 %}
         {% for caption in children %}
-          {% if ',' in caption.marker__location and caption.marker_location|length > 2 %}
-            {% set x = caption.marker__location|split(',')[0] %}
-            {% set y = caption.marker__location|split(',')[1] %}
+          {% if ',' in caption.marker__location and caption.marker__location|length > 2 %}
+            {% set x = caption.marker__location|split(',')[0]|trim %}
+            {% set y = caption.marker__location|split(',')[1]|trim %}
             {% include '@molecules/zoom-caption/zoom-caption.html.twig' with {
               heading_text: caption.title,
-              body_text: caption.marker_description,
+              body_text: caption.marker__description,
               xcoord: x,
               ycoord: y
             } only %}
           {% endif %}
         {% endfor %}
       {% endif %}
-      {% include "@molecules/Picture/Picture.html.twig" with picture only %}
+      {% include "@molecules/Picture/Picture.html.twig" with content__image only %}
   </div>
 </div>

@@ -183,6 +183,10 @@ $plyr-color-heather: #b7c5cd !default;
 @import '../components/molecules/top-bar/top-bar';
 @import '../components/molecules/video--ambient/video--ambient';
 @import '../components/molecules/video--embed/video--embed';
+@import '../components/molecules/video--embed/video--embed';
+@import '../components/molecules/zoom-caption/zoom-caption';
+@import '../components/molecules/zoom-image--fullbleed/zoom-image--fullbleed';
+@import '../components/molecules/zoom-image--inline/zoom-image--inline';
 
 // Import Layouts.
 @import '../components/layouts/one_up--primary/one_up--primary';
