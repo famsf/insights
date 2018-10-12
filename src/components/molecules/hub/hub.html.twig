@@ -1,0 +1,53 @@
+<div class="hub">
+  <div class="featured-story">
+    {% include "@atoms/img/img.html.twig" with {
+      classes: 'featured-story-img',
+      style: 'vertical',
+      src: featured_img_src,
+      url: featured_img_src,
+      alt: featured_img_alt
+    } %}
+    <div class="overlay">
+      <div class="overlay__contents">
+        {% if is_on_view %}
+          <div class="on-view on-view-featured">On View</div>
+        {% endif %}
+        <h1>{{ featured_title }}</h1>
+        {% if featured_subtitle is defined %}
+          <h2>{{ featured_subtitle }}</h2>
+        {% endif %}
+        {% if (featured_read_cta_text is defined) and (featured_read_cta_link is defined) %}
+          {% include "@atoms/button/button.html.twig" with {
+            href: featured_read_cta_link,
+            text: featured_read_cta_text,
+            target: '_blank',
+            class: 'featured-story-read-more'
+          } only %}
+        {% endif %}
+        {% if (tickets_read_cta_text is defined) and (tickets_read_cta_link is defined) %}
+          {% include "@atoms/button/button.html.twig" with {
+            href: tickets_read_cta_link,
+            text: tickets_read_cta_text,
+            target: '_blank',
+            class: 'tickets-story-read-more'
+          } only %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  {% if stories is defined %}
+    <div class="stories">
+        {% for story in stories %}
+          {% include "@molecules/hub/hub--story.html.twig" with {
+            image_src: story.image_src,
+            image_alt: story.image_alt,
+            title: story.title,
+            subtitle: story.subtitle|default(''),
+            read_more_link: story.read_link|default(''),
+            is_on_view: story.is_on_view,
+            tags: story.tags|default('')
+          } only %}
+        {% endfor %}
+      </div>
+  {% endif %}
+</div>
