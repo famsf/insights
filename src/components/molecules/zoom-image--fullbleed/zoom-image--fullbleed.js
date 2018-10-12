@@ -5,7 +5,7 @@
   $(document).ready(function () {
     $(document).foundation();
     if (Foundation.MediaQuery.atLeast('large')) {
-      var zoomedImages = new ImageZoom('img.img-zoom-drag', { maxZoom: 2, backgroundImageColor: '#000' });
+      var zoomedImages = new ImageZoom('.img-zoom-drag', { maxZoom: 2, backgroundImageColor: '#000' });
       $('.img-zoom-drag').mousemove(function (e) {
         var offset = $(this).offset();
         var finderBox = $(this).closest('.zoom-image--fullbleed').find('.finder-box');

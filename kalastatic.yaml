@@ -82,6 +82,7 @@ pluginOpts:
       7933023: '@kalastatic/components/organisms/footer/section_wrapper.html.twig'
       7933024: '@kalastatic/components/organisms/section_wrapper/section_wrapper.html.twig'
       1413449: '@kalastatic/components/molecules/zoom-image--fullbleed/zoom-image--fullbleed.html.twig'
+      1398142: '@kalastatic/components/molecules/zoom-image--inline/zoom-image--inline.html.twig'
       # 7933024: '@organisms/footer__cta'
     mappings:
       id: id
@@ -205,6 +206,8 @@ pluginOpts:
       footer__famsf__tickets: Content-FAMSF_Tickets-Link
       footer__famsf__membership: Content-FAMSF_Membership-Link
       # Images with Marker
+      marker__location: Content_Location
+      marker__description: Content_Description
       # Timeline
   # The layouts will live in the templates directory.
   metalsmith-jstransformer:

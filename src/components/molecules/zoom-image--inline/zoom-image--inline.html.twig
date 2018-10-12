@@ -22,14 +22,20 @@
 #}
 <div class="zoom-image--inline">
   <div class="inline-image-zoom-wrapper">
-      {% for caption in captions %}
-        {% include '@molecules/zoom-caption/zoom-caption.html.twig' with {
-          heading_text: caption.heading_text,
-          body_text: caption.body_text,
-          xcoord: caption.xcoord,
-          ycoord: caption.ycoord
-        } only %}
-      {% endfor %}
+      {% if children|length > 0 %}
+        {% for caption in children %}
+          {% if ',' in caption.marker__location and caption.marker_location|length > 2 %}
+            {% set x = caption.marker__location|split(',')[0] %}
+            {% set y = caption.marker__location|split(',')[1] %}
+            {% include '@molecules/zoom-caption/zoom-caption.html.twig' with {
+              heading_text: caption.title,
+              body_text: caption.marker_description,
+              xcoord: x,
+              ycoord: y
+            } only %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
       {% include "@molecules/Picture/Picture.html.twig" with picture only %}
   </div>
 </div>

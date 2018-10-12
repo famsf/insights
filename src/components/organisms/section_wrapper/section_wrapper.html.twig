@@ -11,7 +11,9 @@
       {% endif %}
       <div id="" class="cell medium-4 {{ offset }}">
         {% for component in column.children %}
-          {% if 'picture--captioned' in templateMap[component.template_id] %}
+          {% if 'zoom-image--inline' in templateMap[component.template_id] %}
+            {{ component.name }}
+          {% elseif 'picture--captioned' in templateMap[component.template_id] %}
             {% set component = component|merge({
               picture: component.content__image,
               caption: {
