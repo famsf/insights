@@ -1,5 +1,5 @@
 (function (document, window, $) {
-  var $spanTimelines = $('.timeline');
+  var $spanTimelines = $('.timeline.year-span');
   $(document).foundation();
 
   function fadeSpanTimelineBorders($spanTimelinesElements) {
@@ -71,34 +71,10 @@
     });
   }
 
-  function createNonTimespanYears($spanTimelinesElements) {
-    $spanTimelinesElements.each(function (i, e) {
-      var $spanTimelineElement = $(e);
-      var years = [];
-      var j;
-      var firstYearText;
-      var secondLastYearText;
-      if ($spanTimelineElement.hasClass('no-year-span')) {
-        $spanTimelineElement.append('<div class="timespan-scroller"><div class="timespan-scroller-inner"><div class="timespan-scroller-pos"></div></div></div>');
-        firstYearText = Math.floor(parseInt($($spanTimelineElement.find('.timeline-item-title').get(0)).text(), 10) / 10) * 10;
-        secondLastYearText = Math.floor(parseInt($($spanTimelineElement.find('.timeline-item-title').get($spanTimelineElement.find('.timeline-item-title').length - 1)).text(), 10) / 10) * 10;
-        for (j = firstYearText; j < secondLastYearText + 10;) {
-          years.push(j);
-          j += 10;
-        }
-        years.push(j);
-        years.forEach(function (year) {
-          $spanTimelineElement.find('.timespan-scroller-inner').append('<span class="span-year">' + year + '</span>');
-        });
-      }
-    });
-  }
-
   function constructSpanTimelines($spanTimelinesElements) {
     var windowY;
     if (Foundation.MediaQuery.atLeast('large')) {
       createTimespanYears($spanTimelinesElements);
-      createNonTimespanYears($spanTimelinesElements);
       $(window).on('scroll.timelineScroll', function (e) {
         windowY = $(window).scrollTop();
         $('.timeline--year').each(function (index, ele) {
