@@ -40,8 +40,8 @@ plugins:
 # Allows changing some of the plugin options.
 pluginOpts:
   metalsmith-gathercontent:
-    verbose: 0
-    logMappings: 0
+    verbose: 3
+    logMappings: 1
     logFileContents: 0
     authPath: _auth.json
     filePath: src/assets/gathercontent
@@ -83,6 +83,7 @@ pluginOpts:
       7933024: '@kalastatic/components/organisms/section_wrapper/section_wrapper.html.twig'
       1413449: '@kalastatic/components/molecules/zoom-image--fullbleed/zoom-image--fullbleed.html.twig'
       1398142: '@kalastatic/components/molecules/zoom-image--inline/zoom-image--inline.html.twig'
+      1397424: '@kalastatic/components/molecules/timeline/timeline.html.twig'
       # 7933024: '@organisms/footer__cta'
     mappings:
       id: id
@@ -102,6 +103,7 @@ pluginOpts:
       theme: Colors_Theme
       # General
       title: Content_Title
+      subtitle: Content_Subtitle
       description: Content_Description
       background__image: Content_Background-Image
       background__image-alt: Content_Background-Image-Alt
@@ -209,6 +211,20 @@ pluginOpts:
       marker__location: Content_Location
       marker__description: Content_Description
       # Timeline
+      timeline__marker__description: Content_Description
+      timeline__year__subtitle: Content_Marker-Subtitle
+      a__image: Content_Image-A
+      a__image-alt: Content_Image-A-Alt
+      a__caption: Content_Image-A-Caption
+      a__caption__brief: Content_Image-A-Caption-Brief
+      b__image: Content_Image-B
+      b__image-alt: Content_Image-B-Alt
+      b__caption: Content_Image-B-Caption
+      b__caption__brief: Content_Image-B-Caption-Brief
+      c__image: Content_Image-C
+      c__image-alt: Content_Image-C-Alt
+      c__caption: Content_Image-C-Caption
+      c__caption__brief: Content_Image-C-Caption-Brief
   # The layouts will live in the templates directory.
   metalsmith-jstransformer:
     pattern: "!components/**"
