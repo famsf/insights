@@ -1,0 +1,16 @@
+<div id="slider" class="beer-slider">
+  {% include "@atoms/img/img.html.twig" with {
+    src: src,
+    url: src,
+    alt: alt,
+    style: 'default'
+  } %}
+  <div class="beer-reveal">
+    {% include "@atoms/img/img.html.twig" with {
+      src: src,
+      url: src,
+      alt: alt,
+      style: 'default'
+  } %}
+  </div>
+</div>

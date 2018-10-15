@@ -1,0 +1,10 @@
+{
+  "imageOne": {
+    "src": "http://www.fillmurray.com/400/600",
+    "alt": "A picture of Bill Murray"
+  },
+  "imageTwo": {
+    "src": "http://www.fillmurray.com/g/400/600",
+    "alt": "A photo of Bill Murray"
+  }
+}
