@@ -18,36 +18,27 @@
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-TPPZRZB');</script>
+
       <!-- End Google Tag Manager -->
-
-      <title>
-        {{ story__title }}
-      </title>
-
       <meta name="description" content="{{ config.description }}">
       {% include "@atoms/og_tag/og_tag.html.twig" with { property: "title", content: og__title } only %}
       {% include "@atoms/og_tag/og_tag.html.twig" with { property: "description", content: og__description } only %}
       {% include "@atoms/og_tag/og_tag.html.twig" with { property: "type", content: "website" } only %}
       {% include "@atoms/og_tag/og_tag.html.twig" with { property: "url", content: og__curl } only %}
-      {% include "@atoms/og_tag/og_tag.html.twig" with { property: "image", content: og__image.src }  only %}
+      {% include "@atoms/og_tag/og_tag.html.twig" with { property: "image", content: og__image.src ~ '.jpg' } only %}
+
+      <title>
+        {{ story__title }}
+      </title>
 
       {{ kstatic.scripts }}
+
       {% for script in config.scripts.header.kalastatic %}
         <script src="{{ script }}?{{ 'now'|date('U') }}"></script>
       {% endfor %}
       {% for script in config.scripts.header.all %}
         <script src="{{ script }}?{{ 'now'|date('U') }}"></script>
       {% endfor %}
-      <style>
-        :root {
-          {% if color__primary is defined %}
-            --primary-color: {{ color__primary|trim }};
-          {% endif %}
-          {% if color__secondary is defined %}
-            --secondary-color: {{ color__secondary|trim|default('transparent') }};
-          {% endif %}
-        }
-      </style>
       {{ kstatic.styles }}
       {% for sheet in config.stylesheets %}
         <link rel="stylesheet" type="text/css" href="{{ sheet }}?{{ 'now'|date('U') }}">

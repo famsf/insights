@@ -36,6 +36,10 @@
           {% endif %}
         {% endfor %}
       {% endif %}
-      {% include "@molecules/Picture/Picture.html.twig" with content__image only %}
+      {% if content__image.src %}
+        {% include "@molecules/picture/picture--captioned.html.twig" with content__image only %}
+      {% elseif content__image[0].src %}
+        {% include "@molecules/picture/picture--captioned.html.twig" with content__image[content__image|length - 1] only %}
+      {% endif %}
   </div>
 </div>
