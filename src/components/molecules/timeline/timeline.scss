@@ -11,7 +11,9 @@
   .timeline-item-description,
   .timeline-images {
     transition: opacity 0.5s linear;
-    opacity: 0;
+    @include breakpoint(large) {
+      opacity: 0;
+    }
   }
   .timeline--year.active {
     .timeline-item-title,
