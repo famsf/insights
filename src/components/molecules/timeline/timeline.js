@@ -98,7 +98,6 @@
     var windowY;
     if (Foundation.MediaQuery.atLeast('large')) {
       createTimespanYears($spanTimelinesElements);
-      createNonTimespanYears($spanTimelinesElements);
       $(window).on('scroll.timelineScroll', function (e) {
         windowY = $(window).scrollTop();
         $('.timeline--year').each(function (index, ele) {
@@ -118,5 +117,5 @@
   $(document).ready(function () {
     fadeSpanTimelineBorders($spanTimelines);
     constructSpanTimelines($spanTimelines);
-  });
+  }
 }(document, window, jQuery));
