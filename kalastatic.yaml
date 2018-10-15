@@ -84,7 +84,9 @@ pluginOpts:
       1413449: '@kalastatic/components/molecules/zoom-image--fullbleed/zoom-image--fullbleed.html.twig'
       1398142: '@kalastatic/components/molecules/zoom-image--inline/zoom-image--inline.html.twig'
       1397424: '@kalastatic/components/molecules/timeline/timeline.html.twig'
+      1397420: '@kalastatic/components/molecules/audiowithtranscript.html.twig'
       # 7933024: '@organisms/footer__cta'
+      # dummy commit
     mappings:
       id: id
       slug: slug
