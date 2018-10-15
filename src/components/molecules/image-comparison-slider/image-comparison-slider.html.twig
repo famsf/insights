@@ -1,6 +1,16 @@
 <div id="slider" class="beer-slider">
-  <img src="{{ imageOne.src }}" alt="{{ imageOne.alt }}" />
+  {% include "@atoms/img/img.html.twig" with {
+    src: src,
+    url: src,
+    alt: alt,
+    style: 'default'
+  } %}
   <div class="beer-reveal">
-    <img src="{{ imageTwo.src }}" alt="{{ imageTwo.alt }}" />
+    {% include "@atoms/img/img.html.twig" with {
+      src: src,
+      url: src,
+      alt: alt,
+      style: 'default'
+  } %}
   </div>
 </div>
