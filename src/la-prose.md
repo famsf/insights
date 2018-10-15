@@ -138,8 +138,13 @@ chapters:
       youtube:
         embed: xt27-zrvHkk
   # iv
+
   - components:
-    -template: "@molecules/image-magnifier/image-magnifier.html.twig"
+    - template: "@layouts/one_up--primary/one_up--primary.html.twig"
+      classes: theme--dark
+      grid: align-middle
+      components:
+        - template: "@molecules/image-magnifier/image-magnifier.html.twig"
 
   # v
   - components:
