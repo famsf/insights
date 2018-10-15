@@ -211,6 +211,7 @@ pluginOpts:
       marker__location: Content_Location
       marker__description: Content_Description
       # Timeline
+      timeline__span: Content_Timeline-Span
       timeline__marker__description: Content_Description
       timeline__year__subtitle: Content_Marker-Subtitle
       a__image: Content_Image-A

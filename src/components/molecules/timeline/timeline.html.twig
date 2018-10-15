@@ -33,11 +33,8 @@
           caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
           style: "square"
 #}
-{% set year_span_class = 'no-year-span' %}
-{% if is_year_span == true %}
-  {% set year_span_class = 'year-span' %}
-{% endif %}
-<div class="timeline {{ year_span_class }}">
+
+<div class="timeline {% if timeline__span|trim == "True" %}year-span {% else %}no-year-span{% endif %}">
   <h2 class="timeline-title">{{ title }}</h2>
   {% for year in children %}
     {% set yr = {
