@@ -140,16 +140,16 @@ chapters:
   # iv
   - components:
     - template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
-      imageOne: 
-        src: "http://www.fillmurray.com/400/600"
-        alt: "A picture of Bill Murray"
-      imageTwo: 
-        src: "http://www.fillmurray.com/g/400/600"
-        alt: "Another picture of Bill Murray"
       classes: theme--dark
       left:
         components:
         - template: "@molecules/image-comparison-slider/image-comparison-slider.html.twig"
+          imageOne: 
+            src: "http://www.fillmurray.com/400/600"
+            alt: "A picture of Bill Murray"
+          imageTwo: 
+            src: "http://www.fillmurray.com/g/400/600"
+            alt: "Another picture of Bill Murray"
       right:
         components:
         - template: "@atoms/textarea/textarea.html.twig"
