@@ -15,12 +15,14 @@
     <span class="story-subtitle">{{ subtitle }}</span>
   {% endif %}
   {% if read_link is not empty %}
-    {% include "@atoms/button/button.html.twig" with {
-      href: read_link,
-      text: 'Read',
-      target: '_blank',
-      class: 'tickets-story-read-more'
-    } only %}
+    <div class="read-link-wrapper">
+      {% include "@atoms/a/a.html.twig" with {
+        url: read_link,
+        text: 'Read',
+        target: '_blank',
+        classes: 'tickets-story-read-more'
+      } only %}
+    </div>
   {% endif %}
   {% if tags is not empty %}
     {% for tag in tags|split(',') %}

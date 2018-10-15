@@ -40,11 +40,7 @@
     </div>
   </div>
   {% if stories is defined %}
-    <div class="story-filter">
-      <a href="#" aria-role="button">something</a>
-      <a href="#" aria-role="button">something else</a>
-      <a href="#" aria-role="button">another filter</a>
-    </div>
+    <div class="story-filter"></div>
     <div class="stories">
         {% for story in stories %}
           {% include "@molecules/hub/hub--story.html.twig" with {
@@ -52,7 +48,7 @@
             image_alt: story.image_alt,
             title: story.title,
             subtitle: story.subtitle|default(''),
-            read_more_link: story.read_link|default(''),
+            read_link: story.read_link|default(''),
             is_on_view: story.is_on_view,
             tags: story.tags|default('')
           } only %}

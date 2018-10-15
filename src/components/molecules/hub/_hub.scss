@@ -1,6 +1,10 @@
 %hub {
   .featured-story {
     min-height: 100vh;
+    @include breakpoint(large) {
+      display: inline-block;
+      width: 50%;
+    }
     .featured-story-wrapper {
       .overlay {
         position: absolute;
@@ -9,12 +13,16 @@
         color: white;
         width: 75%;
         z-index: 200;
+        @include breakpoint(large) {
+          left: 60px;
+          width: 43%;
+        }
       }
     }
   }
   .on-view {
     position: absolute;
-    top: 30px;
+    top: 80px;
     right: 35px;
     background-color: #3130A3;
     padding: 5px 10px;
@@ -36,16 +44,17 @@
     font-size: 70px;
     text-align: center;
     @include breakpoint(medium) {
-      font-size: 122px;
+      font-size: 100px;
     }
     @include breakpoint(large) {
-      font-size: 150px;
+      font-size: 68px;
     }
   }
   h2 {
     font-family: $header-font-family;
     font-style: italic;
     font-size: 32px;
+    font-weight: 700;
     text-align: center;
     @include breakpoint(medium) {
       font-size: 42px;
@@ -58,6 +67,86 @@
       color: black;
       background-color: white;
       padding: 18px;
+      margin: 0 10px;
+      &::after {
+        margin-left: .5rem;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f061";
+      }
+    }
+  }
+  .story-filter {
+    margin: 16px 0 36px 0;
+    border-bottom: 1px solid $dark-gray;
+    padding: 0 10px 10px 10px;
+    &:focus {
+      outline: none;
+    }
+    a {
+      background-color: #1493A1;
+      padding: 10px 14px 10px 14px;
+      color: white;
+      border-radius: 30px;
+      margin: 0 4px;
+      font-family: $alternate-header-font-family;
+      width: 140px;
+      text-align: center;
+      &.blue {
+        background-color: #3130A3;
+      }
+      &.white {
+        background-color: white;
+        color: $dark-gray;
+        border: 1px solid $dark-gray;
+      }
+      &.black {
+        background-color: black;
+        color: white;
+      }
+    }
+  }
+  .hub-story {
+    margin: 25px;
+    @include breakpoint(medium) {
+      display: inline-block;
+      vertical-align: top;
+      width: 46%;
+      &:nth-child(1n) {
+        margin: 25px 0px 25px 2%;
+      }
+      &:nth-child(2n) {
+        margin: 25px 2% 25px 2%;
+      }
+    }
+    .story-title {
+      margin-top: 25px;
+      margin-bottom: 5px;
+      text-align: center;
+      font-size: 1.5em;
+    }
+    .story-subtitle {
+      font-family: $header-font-family;
+      font-style: italic;
+      text-align: center;
+      display: block;
+      font-size: 1.5em;
+      font-weight: 700;
+      color: $dark-gray;
+    }
+    .read-link-wrapper {
+      text-align: center;
+      margin-top: 12px;
+      a {
+        color: black;
+        font-family: $alternate-header-font-family;
+        &::after {
+          margin-left: .5rem;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f061";
+        }
+      }
     }
   }
 }
