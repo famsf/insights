@@ -117,5 +117,5 @@
   $(document).ready(function () {
     fadeSpanTimelineBorders($spanTimelines);
     constructSpanTimelines($spanTimelines);
-  }
+  });
 }(document, window, jQuery));
