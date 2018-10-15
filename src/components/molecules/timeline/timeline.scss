@@ -32,7 +32,7 @@
       padding-top: 0;
     }
     &:first-of-type {
-      padding-top: 0;
+      padding-top: 36px;
     }
   }
   h2.timeline-title {
@@ -116,7 +116,6 @@
   }
   .timeline-item-subtitle {
     font-family: $header-font-family;
-    font-style: italic;
     font-size: 1.8em;
         @include breakpoint(large) {
       width: 80%;
