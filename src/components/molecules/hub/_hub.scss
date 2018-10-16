@@ -82,8 +82,11 @@
     a {
       color: black;
       background-color: white;
-      padding: 18px;
+      padding: 13px 18px;
       margin: 0 10px;
+      display: inline-block;
+      border-radius: 30px;
+      font-family: $alternate-header-font-family;
       &::after {
         margin-left: .5rem;
         font-family: "Font Awesome 5 Free";

@@ -24,10 +24,8 @@ chapters:
       is_on_view: true
       featured_title: "This is a featured title"
       featured_subtitle: "This is a featured subtitle"
-      featured_read_cta_text: "Read More"
-      featured_read_cta_link: "http://google.ca"
-      tickets_read_cta_text: "Buy Tickets"
-      tickets_read_cta_link: "http://google.ca"
+      read_cta: <a href="http://google.ca" target="_blank">Read More</a>
+      tickets_cta: <a href="http://google.ca" target="_blank">Buy Tickets</a>
       stories:
       - template: "@molecules/hub/hub--story.html.twig"
         is_on_view: true
@@ -35,7 +33,7 @@ chapters:
         image_alt: "Fubar"
         title: "This is a story"
         subtitle: "This is a story subtitle"
-        read_link: "https://google.ca"
+        read_link: <a href="http://google.ca" target="_blank">Ready</a>
         tags: "hello,world,fubar"
       - template: "@molecules/hub/hub--story.html.twig"
         is_on_view: true
@@ -43,7 +41,7 @@ chapters:
         image_alt: "Fubar"
         title: "This is a story"
         subtitle: "This is a story subtitle"
-        read_link: "https://google.ca"
+        read_link: <a href="http://google.ca" target="_blank">Read</a>
         tags: "hello,world,flubber"
       - template: "@molecules/hub/hub--story.html.twig"
         is_on_view: true
@@ -51,7 +49,7 @@ chapters:
         image_alt: "Fubar"
         title: "This is a story"
         subtitle: "This is a story subtitle"
-        read_link: "https://google.ca"
+        read_link: <a href="http://google.ca" target="_blank">Read</a>
         tags: "hello,world,flubber"
       - template: "@molecules/hub/hub--story.html.twig"
         is_on_view: true
@@ -59,7 +57,7 @@ chapters:
         image_alt: "Fubar"
         title: "This is a story"
         subtitle: "This is a story subtitle"
-        read_link: "https://google.ca"
+        read_link: <a href="http://google.ca" target="_blank">Read</a>
         tags: "hello,world,flubber"
       - template: "@molecules/hub/hub--story.html.twig"
         is_on_view: true
@@ -67,5 +65,5 @@ chapters:
         image_alt: "Fubar"
         title: "This is a story"
         subtitle: "This is a story subtitle"
-        read_link: "https://google.ca"
+        read_link: <a href="http://google.ca" target="_blank">Read</a>
         tags: "hello,world,flubber"

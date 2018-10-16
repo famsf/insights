@@ -16,12 +16,7 @@
   {% endif %}
   {% if read_link is not empty %}
     <div class="read-link-wrapper">
-      {% include "@atoms/a/a.html.twig" with {
-        url: read_link,
-        text: 'Read',
-        target: '_blank',
-        classes: 'tickets-story-read-more'
-      } only %}
+      {{ read_link }}
     </div>
   {% endif %}
   {% if tags is not empty %}

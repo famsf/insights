@@ -18,21 +18,11 @@
             <h2>{{ featured_subtitle }}</h2>
           {% endif %}
           <div class="button-wrapper">
-            {% if (featured_read_cta_text is defined) and (featured_read_cta_link is defined) %}
-              {% include "@atoms/button/button.html.twig" with {
-                href: featured_read_cta_link,
-                text: featured_read_cta_text,
-                target: '_blank',
-                class: 'featured-story-read-more'
-              } only %}
+            {% if (read_cta is defined) %}
+              {{ read_cta }}
             {% endif %}
-            {% if (tickets_read_cta_text is defined) and (tickets_read_cta_link is defined) %}
-              {% include "@atoms/button/button.html.twig" with {
-                href: tickets_read_cta_link,
-                text: tickets_read_cta_text,
-                target: '_blank',
-                class: 'tickets-story-read-more'
-              } only %}
+            {% if (tickets_cta is defined) %}
+              {{ tickets_cta }}
             {% endif %}
           </div>
         </div>
