@@ -19,6 +19,13 @@
         color: white;
         width: 75%;
         z-index: 200;
+        animation-name: fadein;
+        animation-duration: 1.325s;
+        animation-timing-function: ease-out;
+        animation-direction: normal;
+        animation-delay: 0.25s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
       }
     }
   }
@@ -40,6 +47,13 @@
     position: static;
     height: 100vh;
     width: 100vw;
+    animation-name: kenburns;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
   }
   h1 {
     font-family: $alternate-header-font-family;
@@ -183,26 +197,4 @@
 }
 .hub {
   @extend %hub;
-}
-.triggered {
-  .hub {
-    .featured-story-img {
-      animation-name: kenburns;
-      animation-duration: 3s;
-      animation-timing-function: ease-in-out;
-      animation-direction: normal;
-      animation-delay: 0s;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
-    }
-    .overlay {
-      animation-name: fadein;
-      animation-duration: 1.325s;
-      animation-timing-function: ease-out;
-      animation-direction: normal;
-      animation-delay: 0.25s;
-      animation-iteration-count: 1;
-      animation-fill-mode: forwards;
-    }
-  }
 }
