@@ -145,10 +145,10 @@ chapters:
         components:
         - template: "@molecules/image-comparison-slider/image-comparison-slider.html.twig"
           imageOne: 
-            src: "http://www.fillmurray.com/400/600"
+            src: "http://www.fillmurray.com/768/1024"
             alt: "A picture of Bill Murray"
           imageTwo: 
-            src: "http://www.fillmurray.com/g/400/600"
+            src: "http://www.fillmurray.com/g/768/1024"
             alt: "Another picture of Bill Murray"
       right:
         components:
