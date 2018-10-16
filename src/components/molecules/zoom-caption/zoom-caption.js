@@ -8,6 +8,10 @@
       });
     }
     else {
+      $toggleButtons.parent().siblings('.inline-caption-content').removeClass('show');
+      $toggleButtons.fadeOut(200, function() {
+        $toggleButtons.text('＋').fadeIn(200);
+      });
       $(this).parent().siblings('.inline-caption-content').addClass('show');
       $(this).fadeOut(200, function () {
         $(this).text('✕').fadeIn(200);
