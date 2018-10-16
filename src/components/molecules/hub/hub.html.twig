@@ -40,8 +40,10 @@
     </div>
   </div>
   {% if stories is defined %}
-    <div class="story-filter"></div>
     <div class="stories">
+      <div class="story-filter">
+        <span class="filter-label">Filter:</span>
+      </div>
         {% for story in stories %}
           {% include "@molecules/hub/hub--story.html.twig" with {
             image_src: story.image_src,
@@ -52,7 +54,7 @@
             is_on_view: story.is_on_view,
             tags: story.tags|default('')
           } only %}
-        {% endfor %}
-      </div>
+      {% endfor %}
+    </div>
   {% endif %}
 </div>

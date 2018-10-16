@@ -2,21 +2,23 @@
   .featured-story {
     min-height: 100vh;
     @include breakpoint(large) {
+      vertical-align: top;
       display: inline-block;
       width: 50%;
     }
     .featured-story-wrapper {
+      overflow: hidden;
+      @include breakpoint(large) {
+        position: relative;
+      }
       .overlay {
         position: absolute;
-        top: 225px;
-        left: 12.5%;
+        opacity: 0;
+        top: 455px;
+        left: 50%;
         color: white;
         width: 75%;
         z-index: 200;
-        @include breakpoint(large) {
-          left: 60px;
-          width: 43%;
-        }
       }
     }
   }
@@ -25,7 +27,7 @@
     top: 80px;
     right: 35px;
     background-color: #3130A3;
-    padding: 5px 10px;
+    padding: 8px 20px;
     color: white;
     font-weight: 300;
     letter-spacing: 0.5px;
@@ -76,12 +78,37 @@
       }
     }
   }
+  .stories {
+    @include breakpoint(large) {
+      display: inline-block;
+      width: 49.5%;
+      vertical-align: top;
+      margin-top: 70px;
+      height: 90vh;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+  }
   .story-filter {
     margin: 16px 0 36px 0;
     border-bottom: 1px solid $dark-gray;
     padding: 0 10px 10px 10px;
+    @include breakpoint(large) {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 15px;
+    }
     &:focus {
       outline: none;
+    }
+    .filter-label {
+      display: none;
+      margin: 10px 10px 25px 0;
+      font-weight: 700;
+      font-family: $alternate-header-font-family;
+      @include breakpoint(large) {
+        display: inline-block;
+      }
     }
     a {
       background-color: #1493A1;
@@ -90,19 +117,20 @@
       border-radius: 30px;
       margin: 0 4px;
       font-family: $alternate-header-font-family;
-      width: 140px;
+      min-width: 140px;
       text-align: center;
+      transition: all 0.2s linear;
       &.blue {
         background-color: #3130A3;
-      }
-      &.white {
-        background-color: white;
-        color: $dark-gray;
-        border: 1px solid $dark-gray;
       }
       &.black {
         background-color: black;
         color: white;
+      }
+      &.filtered {
+        background-color: white;
+        color: $dark-gray;
+        border: 1px solid $dark-gray;
       }
     }
   }
@@ -112,12 +140,15 @@
       display: inline-block;
       vertical-align: top;
       width: 46%;
-      &:nth-child(1n) {
-        margin: 25px 0px 25px 2%;
-      }
-      &:nth-child(2n) {
-        margin: 25px 2% 25px 2%;
-      }
+      margin: 25px 1.5% 25px 1.5%;
+    }
+    .story-image {
+      position: relative;
+    }
+    .on-view-story {
+      right: 15px;
+      top: 15px;
+      background-color: #1493A1;
     }
     .story-title {
       margin-top: 25px;
@@ -152,4 +183,26 @@
 }
 .hub {
   @extend %hub;
+}
+.triggered {
+  .hub {
+    .featured-story-img {
+      animation-name: kenburns;
+      animation-duration: 3s;
+      animation-timing-function: ease-in-out;
+      animation-direction: normal;
+      animation-delay: 0s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+    .overlay {
+      animation-name: fadein;
+      animation-duration: 1.325s;
+      animation-timing-function: ease-out;
+      animation-direction: normal;
+      animation-delay: 0.25s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+    }
+  }
 }
