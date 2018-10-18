@@ -48,6 +48,12 @@
       background: rgba($white, .35);
     }
   }
+
+  p {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .button.cta,

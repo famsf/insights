@@ -1,0 +1,58 @@
+%intro-text {
+  h2 {
+    @extend .h1;
+    opacity: 0.5;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    @include breakpoint(medium) {
+      margin-bottom: 4rem;
+    }
+  }
+  .cell,
+  h2 {
+    color: $primary-color;
+  }
+  .text {
+    font-family: $header-font-family;
+    font-weight: bold;
+    line-height: 1.3;
+    letter-spacing: -1px;
+    font-size: 2em;
+    @include breakpoint(medium) {
+      font-size: 2.85em;
+    }
+    @include breakpoint(large) {
+      font-size: 3.75em;
+    }
+  }
+  &.theme--dark {
+    .cell{
+      background-color: $black;
+    }
+    .text,
+    h2 {
+      color: $white;
+    }
+  }
+  .cell {
+    opacity: 0;
+    transition-property: opacity, top;
+    transition-duration: .75s;
+    transition-delay: 0.125s;
+    transition-timing-function: ease-in-out;
+    position: relative;
+    top: 5rem;
+    @extend %performy;
+  }
+  .triggered & {
+    .cell {
+      opacity: 1;
+      top: 0;
+    }
+  }
+}
+
+.intro-text {
+  @extend %intro-text;
+}

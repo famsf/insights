@@ -1,7 +1,6 @@
 # KalaStatic
 # This file configures how KalaStatic operates.
 
-
 # The source directory.
 base: "./"
 
@@ -14,13 +13,225 @@ destination: "build"
 # What BrowserSync will consider the web root.
 bsWebroot: build
 
+plugins:
+  # Load information from the environment variables.
+  - 'metalsmith-env'
+  # Define any global variables.
+  - 'metalsmith-define'
+  # Add .json metadata to each file.
+  - 'metalsmith-metadata-files'
+  # Add base, dir, ext, name, and href info to each file.
+  - 'metalsmith-paths'
+  - 'metalsmith-gathercontent'
+  # Load metadata info the metalsmith metadata object.
+  - 'metalsmith-metadata-convention'
+  # Concatenate any needed files.
+  - 'metalsmith-concat-convention'
+  # Load all collections.
+  - 'metalsmith-collections-convention'
+  # Bring in static assets.
+  - 'metalsmith-assets-convention'
+  # Ignore all partials and layouts.
+  - 'metalsmith-ignore'
+  - 'metalsmith-jstransformer'
+  # Clean URLs.
+  - 'metalsmith-clean-urls'
+
 # Allows changing some of the plugin options.
 pluginOpts:
+  metalsmith-gathercontent:
+    verbose: 0
+    logMappings: 0
+    logFileContents: 0
+    authPath: _auth.json
+    filePath: src/assets/gathercontent
+    projectId: 190265
+    saveJSON: true
+    includeAsFile:
+      - 'la-prose.md'
+      - 'phase-2.md'
+    # map template ids to components so we can handle defaults
+    # we're also removing Meta_Component from "atom" GatherContent templates
+    # Since they removed template defaults, and certain components —
+    # Particularly atoms — don't have different 'views'
+    # We will leave an option for Meta_Component to always override this,
+    # But it makes sense to let convention take charge of templates,
+    # and allow override in config.
+    # We can merge template mappings and mappings, under "components"... that will be rad.
+    templateMappings:
+      1370526: '@kalastatic/templates/pages/digital-story.html.twig'
+      1370621: '@kalastatic/components/atoms/cliff-note/cliff-note.html.twig'
+      1370543: '@kalastatic/components/atoms/intro-text/intro-text.html.twig'
+      1370528: '@kalastatic/components/molecules/chapter__title/chapter__title.html.twig'
+      1370148: '@kalastatic/components/molecules/cover-page/cover-page.html.twig'
+      1370623: '@kalastatic/components/molecules/inline-quote/inline-quote.html.twig'
+      1370541: '@kalastatic/components/molecules/picture/picture--captioned.html.twig'
+      1370128: '@kalastatic/components/molecules/slide/slide.html.twig'
+      1370544: '@kalastatic/components/molecules/standalone-quote/standalone-quote.html.twig'
+      1370592: '@kalastatic/components/molecules/video--embed/video--embed.html.twig'
+      1370593: '@kalastatic/components/molecules/video--ambient/video--ambient.html.twig'
+      1370626: '@kalastatic/components/organisms/chapter/chapter.html.twig'
+      1370624: '@kalastatic/components/organisms/commentary/commentary.html.twig'
+      1370542: '@kalastatic/components/organisms/content--simple/content--simple.html.twig'
+      1370139: '@kalastatic/components/organisms/horizontal-image-slider/horizontal-image-slider.html.twig'
+      1370655: '@kalastatic/components/organisms/in-depth/in-depth.html.twig'
+      1403545: '@kalastatic/components/molecules/slide--in-depth__intro/slide--in-depth__intro.html.twig'
+      1370527: '@kalastatic/components/organisms/page/page.html.twig'
+      1370588: '@kalastatic/components/organisms/scroll-comparison/scroll-comparison.html.twig'
+      1370604: '@kalastatic/components/organisms/section_wrapper/section_wrapper.html.twig'
+      7933023: '@kalastatic/components/organisms/footer/section_wrapper.html.twig'
+      7933024: '@kalastatic/components/organisms/section_wrapper/section_wrapper.html.twig'
+      1413449: '@kalastatic/components/molecules/zoom-image--fullbleed/zoom-image--fullbleed.html.twig'
+      1398142: '@kalastatic/components/molecules/zoom-image--inline/zoom-image--inline.html.twig'
+      1397424: '@kalastatic/components/molecules/timeline/timeline.html.twig'
+      1397420: '@kalastatic/components/molecules/audiowithtranscript/audiowithtranscript.html.twig'
+      # 7933024: '@organisms/footer__cta'
+      # dummy commit
+    mappings:
+      id: id
+      slug: slug
+      name: _name
+      component: Meta_Component
+      tier: tier
+      position: position
+      summary: Content_Summary
+      contents: Content_Content
+      type: _type
+      template_id: _template_id
+      auto_height: Content_Height-Auto
+      offset: Offset
+      column_offset: Content_Column-Offset
+      # Themes
+      theme: Colors_Theme
+      # General
+      title: Content_Title
+      subtitle: Content_Subtitle
+      description: Content_Description
+      background__image: Content_Background-Image
+      background__image-alt: Content_Background-Image-Alt
+      content__image: Content_Image
+      content__image-alt: Content_Image-Alt
+      # Social
+      og__title: Social_OpenGraph-Title
+      og__description: Social_OpenGraph-Description
+      og__image: Social_OpenGraph-Image
+      og__curl: Social_Cannonical-URL
+      # Insights Info
+      tagline: Content_Tagline
+      tickets_url: Content_Tickets-URL
+      # Story info
+      story__title: Content_Story-Title
+      story__subtitle: Content_Story-Subtitle
+      exhibit__info: Content_Exhibit-Description
+      exhibit__dates: Content_Exhibit-Dates
+      color__primary: Theme_Primary
+      color__secondary: Theme_Secondary
+      # intro
+      intro__title: Content_Intro-Title
+      intro__text: Content_Intro-Text
+      # Chapter Title
+      chapter__numeral: Content_Chapter-Numeral
+      chapter__title: Content_Chapter-Title
+      # Standalone Quote
+      quote__quote: Content_Quote
+      quote__attribution: Content_Attribution
+      # Scroll Comparison
+      left__image: Content-Left_Image
+      left__image-alt: Content-Left_Image-Alt
+      left__caption: Content-Left_Caption
+      left__caption_brief: Content-Left_Caption-Brief
+      left__title: Content-Left_Title
+      left__body: Content-Left_Body-Copy
+      right__image: Content-Right_Image
+      right__image-alt: Content-Right_Image-Alt
+      right__caption: Content-Right_Caption
+      right__caption_brief: Content-Right_Caption-Brief
+      right__title: Content-Right_Title
+      right__body: Content-Right_Body-Copy
+      # Video Embed
+      video__id: Content_Video-Id
+      video__file: Content_Video-File
+      video__poster_image: Content_Poster-Image
+      video__body_copy: Content_Video-Body-Copy
+      # Meta
+      template: Meta_Component
+      _offset: Content_Offset
+        # CTA button
+      button__text: Content_CTA-Button
+      # Slide
+      caption__brief: Content_Caption-Brief
+      caption__text: Content_Caption
+      slide__image: Content_Slide-Image
+      slide__image-alt: Content_Slide-Image-Alt
+      slide__title: Content_In-Depth-Title
+      slide__description: Content_In-Depth-Description
+      # In depth
+      slideshow__title: Content_Slideshow-Title
+      slideshow__description: Content_Slideshow-Description
+      slideshow__image: Content_Slideshow-Image
+      slideshow__image-alt: Content_Slideshow-Image-Alt
+      slideshow__cta: Content_Slideshow-CTA
+      # Simple content
+      content__quote: Content_Quote
+      content__quote__attribution: Content_Quote-Attribution
+      content__title: Content_Title
+      content__body: Content_Body
+      content__cta__button: Content_CTA-Button
+      # Cliff Note
+      content__cliff_note: Content_Cliff-Note
+      # Commentary
+      author__image: Content_Image
+      author__image-alt: Content_Image-Alt
+      author__name: Content_Author-Name
+      author__title: Content_Author-Title
+      author__bio: Content_Author-Bio
+      commentary: Content_Commentary
+      cta__button: Content_Commentary-CTA-Button
+      # Audio + Transcripts
+      audio__file: Content_Audio-File
+      audio__description: Content_Audio-Description
+      audio__transcript__toggle: Content_Transcript-Toggle-Label
+      audio__transcript: Content_Transcript
+      # Footer
+      footer__cta-left__title: Content-Left_Title
+      footer__cta-left__description: Content-Left_Description
+      footer__cta-left__cta: Content-Left_CTA-Button
+      footer__cta-left__theme: Content-Left_Theme
+      footer__cta-middle__title: Content-Middle_Title
+      footer__cta-middle__description: Content-Middle_Description
+      footer__cta-middle__cta: Content-Middle_CTA-Button
+      footer__cta-middle__theme: Content-Middle_Theme
+      footer__cta-right__title: Content-Right_Title
+      footer__cta-right__description: Content-Right_Description
+      footer__cta-right__cta: Content-Right_CTA-Button
+      footer__cta-right__theme: Content-Right_Theme
+      footer__famsf__title: Content-FAMSF_Title
+      footer__famsf__description: Content-FAMSF_Description
+      footer__famsf__tickets: Content-FAMSF_Tickets-Link
+      footer__famsf__membership: Content-FAMSF_Membership-Link
+      # Images with Marker
+      marker__location: Content_Location
+      marker__description: Content_Description
+      # Timeline
+      timeline__span: Content_Timeline-Span
+      timeline__marker__description: Content_Description
+      timeline__year__subtitle: Content_Marker-Subtitle
+      a__image: Content_Image-A
+      a__image-alt: Content_Image-A-Alt
+      a__caption: Content_Image-A-Caption
+      a__caption__brief: Content_Image-A-Caption-Brief
+      b__image: Content_Image-B
+      b__image-alt: Content_Image-B-Alt
+      b__caption: Content_Image-B-Caption
+      b__caption__brief: Content_Image-B-Caption-Brief
+      c__image: Content_Image-C
+      c__image-alt: Content_Image-C-Alt
+      c__caption: Content_Image-C-Caption
+      c__caption__brief: Content_Image-C-Caption-Brief
   # The layouts will live in the templates directory.
   metalsmith-jstransformer:
     pattern: "!components/**"
     layoutPattern: "templates/**"
-
     # Options that are applied to just specific engines.
     engineOptions:
       # SASS settings.
@@ -37,18 +248,18 @@ pluginOpts:
           - src/components
       twig:
         namespaces:
-          kstat: src
-          atoms: src/components/atoms
-          molecules: src/components/molecules
-          organisms: src/components/organisms
-          ecosystems: src/components/ecosystems
-          environments: src/components/environments
-          layouts: src/components/layouts
-          images: src/images
-          assets: src/assets
-          templates: src/templates
-          macros: src/macros
-          image-style: src/image-style
+          kstat: .
+          atoms: components/atoms
+          molecules: components/molecules
+          organisms: components/organisms
+          ecosystems: components/ecosystems
+          environments: components/environments
+          layouts: components/layouts
+          images: images
+          assets: assets
+          templates: templates
+          macros: macros
+          image-style: image-style
         filters:
           clean_id: twig-drupal-filters/filters/clean_id
           bustcache: kalastatic-twig-filters/lib/filters/bustcache

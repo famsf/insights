@@ -11,7 +11,9 @@
   .timeline-item-description,
   .timeline-images {
     transition: opacity 0.5s linear;
-    opacity: 0;
+    @include breakpoint(large) {
+      opacity: 0;
+    }
   }
   .timeline--year.active {
     .timeline-item-title,
@@ -30,7 +32,7 @@
       padding-top: 0;
     }
     &:first-of-type {
-      padding-top: 0;
+      padding-top: 36px;
     }
   }
   h2.timeline-title {
@@ -38,8 +40,16 @@
     padding-bottom: 70px;
     font-size: 1.8em;
     @include breakpoint(large) {
-      position: relative;
-      top: 25px;
+      display: none;
+      position: fixed;
+      top: 64px;
+      background: #0a0a0a;
+      width: 100vw;
+      text-align: center;
+      z-index: 1;
+      left: 0;
+      padding-top: 40px;
+      padding-bottom: 40px;
     }
   }
   .timeline-images {
@@ -62,6 +72,13 @@
       padding-top: 5px;
     }
   }
+
+  .theme--dark & {
+    .timeline-item-text {
+      color: white;
+    }
+  }
+
   .timeline-item-text {
     padding-left: 30px;
     color: white;
@@ -107,7 +124,6 @@
   }
   .timeline-item-subtitle {
     font-family: $header-font-family;
-    font-style: italic;
     font-size: 1.8em;
         @include breakpoint(large) {
       width: 80%;
@@ -182,6 +198,9 @@
   }
 }
 %year-span-timeline {
+  @include breakpoint(large) {
+    margin: 220px 35px 20px 30px;
+  }
   .timeline-item-title {
     font-family: $body-font-family;
     @include breakpoint(large) {
@@ -191,12 +210,33 @@
   }
 }
 %no-year-span-timeline {
+  > div:first-of-type {
+    @include breakpoint(large) {
+      margin-top: 185px;
+    }
+  }
   .timespan-scroller-pos {
     min-height: 15px;
     width: 15px;
     border-radius: 15px;
     margin-left: -7px;
     margin-top: -5px;
+  }
+
+  .timeline-item-text {
+    @include breakpoint(large) {
+      border-left: 1px solid $white;
+    }
+  }
+  .timeline-item-title {
+    &::before {
+      @include breakpoint(large) {
+        width: 15px;
+        height: 15px;
+        top: 57px;
+        left: -8px;
+      }
+    }
   }
 }
 
@@ -212,6 +252,11 @@
 .triggered {
   .timeline {
     .timespan-scroller {
+      @include breakpoint(large) {
+        display: block;
+      }
+    }
+    h2 {
       @include breakpoint(large) {
         display: block;
       }

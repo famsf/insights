@@ -76,7 +76,7 @@
     fds.mobileNav.initialize('mobile_nav');
     fds.chapterNav.initialize('chapter_nav', '.chapter', '.top-bar');
     fds.chapterNav.showNav();
-    fds.topBar.initialize('topBar');
+    fds.topBar.initialize('top-bar');
     fds.pages.initialize('.chapters_container', '.page', '.top-bar');
 
     fds.chapterNav.onScroll(sy);

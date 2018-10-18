@@ -1,3 +1,9 @@
+# GatherContent
+_auth.json
+/flat.json
+/origin.json
+/src/assets/gathercontent
+
 # Built things
 build
 dist
@@ -37,3 +43,6 @@ bower_components
 .lock-wscript
 
 .DS_Store
+
+# GatherContent assets
+src/assets/images/gathercontent

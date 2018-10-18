@@ -1,0 +1,10 @@
+<div class="intro-text one_up--primary fluid {{ gridframe|default('grid-frame') }} {{ classes }}">
+  <div class="grid-x grid-margin-x {{ grid }}">
+    <div class="cell medium-8 medium-offset-2">
+      {% include '@atoms/h2/h2.html.twig' with { text: intro__title } %}
+      <div class="text">
+        {{ intro__text }}
+      </div>
+    </div>
+  </div>
+</div>

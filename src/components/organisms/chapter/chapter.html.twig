@@ -1,0 +1,33 @@
+{% macro id(chapter) %}
+  {{- chapter.id|default(chapter.index) -}}
+{% endmacro %}
+{% import _self as get %}
+{% set id = get.id(_context) %}
+{% set isFirstChapter = (index == 0) %}
+{# Set default chapter wrapper tag #}
+{% if tag is not defined  %}
+  {% set tag = 'section' %}
+{% endif %}
+<{{ tag }} class="chapter {{ classes }}" id="chapter_{{ id }}" data-chapter-slug="{{ slug }}" data-chapter-index="{{ index }}" data-chapter-length="{{ children|length }}">
+  {% for child in children %}
+    {% if child.component is not defined %}
+      {% set component = templateMap[child.template_id] %}
+    {% else %}
+      {% set component = child.component %}
+    {% endif %}
+    {%
+      include "@organisms/page/page.html.twig" with child|merge({
+        index: loop.index0,
+        chapter: id,
+        component: component,
+        numeral: numeral,
+        chapter__numeral: chapter__numeral,
+        chapter__title: chapter__title,
+        story__title: story__title,
+        exhibit__info: exhibit__info,
+        story__subtitle: story__subtitle,
+        templateMap: templateMap
+      }) only
+    %}
+  {% endfor %}
+</{{ tag }}>

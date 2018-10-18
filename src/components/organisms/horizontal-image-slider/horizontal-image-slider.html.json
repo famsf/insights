@@ -12,7 +12,7 @@
       ]
     },
     {
-      "component": "@molecules/Picture/Picture.html.twig",
+      "component": "@molecules/picture/picture.html.twig",
       "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis est sit amet leo feugiat, in pulvinar tellus efficitur. Sed a leo nunc. Vivamus quam neque, accumsan et mauris in, mattis efficitur lorem.",
       "contents": {
         "srcset": [
@@ -35,7 +35,7 @@
       }
     },
     {
-      "component": "@molecules/Picture/Picture.html.twig",
+      "component": "@molecules/picture/picture.html.twig",
       "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis est sit amet leo feugiat, in pulvinar tellus efficitur. Sed a leo nunc. Vivamus quam neque, accumsan et mauris in, mattis efficitur lorem.",
       "contents": {
         "srcset": [
@@ -58,7 +58,7 @@
       }
     },
     {
-      "component": "@molecules/Picture/Picture.html.twig",
+      "component": "@molecules/picture/picture.html.twig",
       "caption": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras convallis est sit amet leo feugiat, in pulvinar tellus efficitur. Sed a leo nunc. Vivamus quam neque, accumsan et mauris in, mattis efficitur lorem.",
       "contents": {
         "srcset": [

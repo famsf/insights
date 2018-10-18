@@ -120,23 +120,33 @@ $plyr-color-heather: #b7c5cd !default;
 @import 'themes/color-variants';
 
 // Import Environments.
-@import '../components/environments/Pages/Pages';
-@import '../components/environments/KlimtRodin/KlimtRodin';
-@import '../components/environments/LaProse/LaProse';
+@import '../components/environments/pages/pages';
+@import '../components/environments/klimt-rodin/klimt-rodin';
+@import '../components/environments/la-prose/la-prose';
 @import '../components/environments/Hub/Hub';
 
 // Import Atoms.
-@import '../components/atoms/fps/fps';
-
+// @import '../components/atoms/fps/fps';
 @import '../components/atoms/a/a';
-@import '../components/atoms/big_type/big_type';
+@import '../components/atoms/body/body';
 @import '../components/atoms/button/button';
-@import '../components/atoms/cliff-note/cliff-note';
-@import '../components/atoms/cite/cite';
 @import '../components/atoms/caption/caption';
+@import '../components/atoms/cite/cite';
+@import '../components/atoms/cliff-note/cliff-note';
+@import '../components/atoms/commentary__icon/commentary__icon';
+@import '../components/atoms/copyright/copyright';
+@import '../components/atoms/cta__button/cta__button';
+@import '../components/atoms/cta__button--alt/cta__button--alt';
 @import '../components/atoms/down_arrow/down_arrow';
+@import '../components/atoms/h3/h3';
+@import '../components/atoms/h4/h4';
+@import '../components/atoms/hamburger/hamburger';
+@import '../components/atoms/intro-text/intro-text';
 @import '../components/atoms/logo/logo';
+@import '../components/atoms/modal__close-button/modal__close-button';
+@import '../components/atoms/modal__open-button/modal__open-button';
 @import '../components/atoms/q/q';
+@import '../components/atoms/slide__icon--next/slide__icon--next';
 @import '../components/atoms/standalone-quote__icon/standalone-quote__icon';
 @import '../components/atoms/tagline/tagline';
 @import '../components/atoms/textarea/textarea';
@@ -155,29 +165,29 @@ $plyr-color-heather: #b7c5cd !default;
 @import '../components/atoms/transcript/transcript';
 
 // Import Molecules.
-@import '../components/molecules/TopBar/TopBar';
-@import '../components/molecules/ChapterNav/ChapterNav';
-@import '../components/molecules/CoverPage/CoverPage';
-@import '../components/molecules/inline-quote/inline-quote';
-@import '../components/molecules/standalone-quote/standalone-quote';
-@import '../components/molecules/Picture/Picture';
-@import '../components/molecules/slide/slide';
-@import '../components/molecules/slide--in-depth__intro/slide--in-depth__intro';
-@import '../components/molecules/commentary/commentary';
-@import '../components/molecules/sharing-icons/sharing-icons';
-@import '../components/molecules/AmbientVideo/AmbientVideo';
-@import '../components/molecules/modal/modal';
+@import '../components/molecules/chapter-nav/chapter-nav';
 @import '../components/molecules/chapter__title/chapter__title';
+@import '../components/molecules/cover-page/cover-page';
+@import '../components/molecules/footer__cta/footer__cta';
+@import '../components/molecules/footer__navigation/footer__navigation';
+@import '../components/molecules/inline-quote/inline-quote';
+@import '../components/molecules/modal/modal';
 @import '../components/molecules/menu--footer/menu--footer';
 @import '../components/molecules/menu--mobile/menu--mobile';
 @import '../components/molecules/off-canvas/off-canvas';
-@import '../components/molecules/footer__cta/footer__cta';
-@import '../components/molecules/footer__navigation/footer__navigation';
-@import '../components/molecules/AudioWithTranscript/AudioWithTranscript';
-@import '../components/molecules/video-overlay/video-overlay';
+@import '../components/molecules/audiowithtranscript/audiowithtranscript';
+@import '../components/molecules/picture/picture';
+@import '../components/molecules/sharing-icons/sharing-icons';
+@import '../components/molecules/slide/slide';
+@import '../components/molecules/slide--in-depth__intro/slide--in-depth__intro';
+@import '../components/molecules/standalone-quote/standalone-quote';
+@import '../components/molecules/top-bar/top-bar';
+@import '../components/molecules/video--ambient/video--ambient';
+@import '../components/molecules/video--embed/video--embed';
+@import '../components/molecules/video--embed/video--embed';
+@import '../components/molecules/zoom-caption/zoom-caption';
 @import '../components/molecules/zoom-image--fullbleed/zoom-image--fullbleed';
 @import '../components/molecules/zoom-image--inline/zoom-image--inline';
-@import '../components/molecules/zoom-caption/zoom-caption';
 @import '../components/molecules/timeline/timeline';
 @import '../components/molecules/hub/hub';
 
@@ -186,9 +196,9 @@ $plyr-color-heather: #b7c5cd !default;
 @import '../components/layouts/two_up--primary/two_up--primary';
 
 // Import Organisms.
-@import '../components/organisms/Page/Page';
+@import '../components/organisms/commentary/commentary';
+@import '../components/organisms/footer/footer';
 @import '../components/organisms/horizontal-image-slider/horizontal-image-slider';
-@import '../components/organisms/scroll-comparison/scroll-comparison';
 @import '../components/organisms/in-depth/in-depth';
-@import '../components/organisms/video--embed/video--embed';
-@import '../components/organisms/Footer/Footer';
+@import '../components/organisms/page/page';
+@import '../components/organisms/scroll-comparison/scroll-comparison';

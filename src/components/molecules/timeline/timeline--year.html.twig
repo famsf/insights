@@ -4,22 +4,47 @@
 #}
 <div class="timeline--year">
   <div class="timeline-images">
-    {% for image in images %}
+    {% if img_a %}
       <div class="timeline-item-image">
-        {% include "@atoms/img/img.html.twig" with {
-          style: image.style,
-          url: image.src,
-          alt: image.alt,
+        {% include "@atoms/img/img.html.twig" with img_a only %}
+        {% include "@atoms/caption/caption.html.twig" with {
+          text: caption_a,
+          brief: brief_a,
+          id: year ~ '__caption_a'
         } only %}
-        {% include "@atoms/caption/caption.html.twig" with { brief: image.caption } only %}
       </div>
-    {% endfor %}
+    {% endif %}
+    {% if img_b %}
+      <div class="timeline-item-image">
+        {% include "@atoms/img/img.html.twig" with img_b only %}
+        {% include "@atoms/caption/caption.html.twig" with {
+          text: caption_b,
+          brief: brief_b,
+          id: year ~ '__caption_b'
+        } only %}
+      </div>
+    {% endif %}
+    {% if img_c %}
+      <div class="timeline-item-image">
+        {% include "@atoms/img/img.html.twig" with img_c only %}
+        {% include "@atoms/caption/caption.html.twig" with {
+          text: caption_c,
+          brief: brief_c,
+          id: year ~ '__caption_c'
+        } only %}
+      </div>
+    {% endif %}
   </div>
   <div class="timeline-item-text">
-    <h3 class="timeline-item-title">{{ year_title }}</h3>
-    {% if year_subtitle is defined %}
-      <h4 class="timeline-item-subtitle">{{ year_subtitle }}</h4>
+    {% if name is defined %}
+      <span class="timeline-year">{{ year }}</span>
     {% endif %}
-    <div class="timeline-item-description">{{ description }}</div>
+    <h3 class="timeline-item-title" data-year="{{ year }}">{{ year }}</h3>
+    {% if subtitle is defined %}
+      <h4 class="timeline-item-subtitle">{{ subtitle }}</h4>
+    {% endif %}
+    {% if description is defined %}
+      <p class="timeline-item-description">{{ description }}</p>
+    {% endif %}
   </div>
 </div>

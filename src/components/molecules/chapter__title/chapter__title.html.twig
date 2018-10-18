@@ -1,12 +1,21 @@
-<div class="chapter__title" data-snap-id={{ snap_id }}>
-
-  {% include '@atoms/img/img.html.twig' with img|merge({ classes: img.classes ~ " object-fit", style: 'full-screen' }) %}
-
+<div class="chapter__title">
+  {#
+    We have to do this because of a gathercontent bug where
+    file fields return arrays including even past (now deleted) files
+  #}
+  {% if background__image[0] is iterable and background__image[0] is not same as(background__image.src) %}
+    {% set img = background__image[0] %}
+  {% else %}
+    {% set img = background__image %}
+  {% endif %}
+  {% if img.src %}
+    {% include "@atoms/img/img.html.twig" with img|merge({ classes: 'object-fit' }) only %}
+  {% endif %}
   <div class="overlay">
     <div class="overlay__contents">
       <h1 class="chapter__headline">
-        <span class="numeral">{{ numeral }}</span>
-        <span class="title">{{ title }}</span>
+        <span class="numeral">{{ chapter__numeral }}</span>
+        <span class="title">{{ chapter__title }}</span>
       </h1>
     </div>
   </div>

@@ -1,10 +1,16 @@
-<div class="{{ component_name ?: 'standalone-quote' }} {{ large_text ? 'size--large' }}">
-  {% include "@atoms/standalone-quote__icon/standalone-quote__icon.html.twig" %}
+<div class="one_up--primary fluid grid-frame {{ theme }}">
+  <div class="grid-x grid-margin-x align-middle">
+    <div class="cell medium-10 medium-offset-1">
+      <div class="{{ component_name ?: 'standalone-quote' }} {{ large_text ? 'size--large' }}">
+        {% include "@atoms/standalone-quote__icon/standalone-quote__icon.html.twig" %}
 
-  <q>{{ text }}</q>
-  <cite>{{ name }}</cite>
+        <q>{{ quote__quote }}</q>
+        <cite>{{ quote__attribution }}</cite>
 
-  <div class="standalone-quote__social-links">
-    {% include "@molecules/sharing-icons/sharing-icons.html.twig" %}
+        <div class="standalone-quote__social-links">
+          {% include "@molecules/sharing-icons/sharing-icons.html.twig" %}
+        </div>
+      </div>
+    </div>
   </div>
 </div>

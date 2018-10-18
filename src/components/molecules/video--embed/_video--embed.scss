@@ -1,0 +1,162 @@
+/*
+
+Video Embed
+
+Ten col, 'full width' video
+
+Markup: video--embed.html.twig
+
+*/
+
+.plyr {
+  max-height: 100vh;
+}
+
+.plyr__control {
+  path {
+    fill: $white;
+  }
+}
+
+.plyr__controls {
+  background: transparent !important;
+}
+
+.plyr__control:hover {
+  background-color: #fff !important;
+  svg {
+    fill: $black !important;
+  }
+}
+
+.plyr__control--overlaid {
+  background: $primary-color;
+  padding: 1rem;
+
+  @include breakpoint(medium) {
+    padding: 1.5rem;
+  }
+
+  &:focus {
+    background: $primary-color;
+  }
+
+  svg {
+    transition: all .25s ease-in-out;
+    width: 1rem;
+    height: 1rem;
+
+    @include breakpoint(medium) {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .overlay & {
+    @include breakpoint(medium) {
+      margin-top: 3rem;
+    }
+  }
+}
+
+.video--embed  {
+  position: relative;
+
+  @include breakpoint(medium) {
+    height: 100vh;
+    overflow: hidden;
+    background-size: cover;
+  }
+
+  .plyr--full-ui input[type=range] {
+    height: 0.25rem;
+    color: #fff !important;
+    .plyr__progress__buffer {
+      box-shadow: none;
+    }
+  }
+
+  .plyr-video {
+    max-height: 100vh;
+  }
+
+  .plyr--video .plyr__controls {
+    position: fixed;
+    padding-left: 16.6667%;
+    padding-right: 16.6667%;
+    height: 3em;
+    width: 100%;
+    bottom: 0;
+    visibility: hidden;
+    background: linear-gradient(rgba($black, 0), rgba($black, .5)) !important;
+  }
+
+  .snapped & {
+    .plyr--video .plyr__controls {
+      visibility: visible;
+      opacity: 1;
+      bottom: 0;
+      padding-bottom: 2rem;
+      top: auto;
+    }
+  }
+  
+  .scroll_lock & {
+    .plyr--video .plyr__controls {
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+
+  .plyr__video-wrapper {
+    background: $white;
+    height: 100vh;
+    .icon--not-pressed {
+      path {
+        fill: $black !important;
+      }
+    }
+  }
+
+  &.theme--dark .plyr__video-wrapper {
+    background: $black;
+    .icon--not-pressed {
+      path {
+        fill: $white;
+      }
+    }
+  }
+
+  .plyr__poster {
+    background-size: cover;
+  }
+
+  &.boxed {
+    @extend .grid-x;
+    @extend .align-middle;
+    position: relative;
+
+    > .video--embed__wrapper {
+      @extend .cell;
+      @extend .medium-10;
+      @extend .medium-offset-1;
+      position: relative;
+    }
+
+    .plyr__video-wrapper {
+      height: 100%;
+    }
+
+    .plyr--video .plyr__controls {
+      position: absolute;
+    }
+  }
+}
+
+.video--embed.file {
+  .plyr__poster,
+  .plyr--video .plyr--video,
+  .plyr--video video {
+    @include object-fit;
+  }
+}

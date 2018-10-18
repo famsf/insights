@@ -1,0 +1,131 @@
+%page {
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  background-color: #fff;
+  box-sizing: border-box;
+  @extend %performy;
+
+  .frame {
+    @extend %fill_screen;
+    /*
+      Need `width: 100vh` in order to fix horizontal slider`
+    */
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
+  .fluid {
+    min-height: 100vh;
+  }
+
+  &.height-auto,
+  .height-auto {
+    min-height: auto !important;
+
+    .fluid {
+      min-height: auto;
+    }
+  }
+
+  &.height-auto,
+  .height-auto {
+    min-height: auto !important;
+
+    .fluid {
+      min-height: auto;
+    }
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  .sub-title,
+  .page-title {
+    font-size: 1.25em;
+    color: #666;
+    font-weight: 600;
+    font-family: freight-display-pro;
+  }
+
+  .frame > *:not(.height-auto) > .grid-x,
+  .frame > .grid-x {
+    min-height: 100vh;
+    padding: 6rem 2rem 2rem 2rem;
+
+    @include breakpoint(medium) {
+      padding: 8rem 5rem 5rem 5rem;
+    }
+  }
+
+  .frame > *.height-auto {
+
+    &:first-child {
+      > .grid-x {
+        padding: 2rem 2rem 1rem 2rem;
+
+        @include breakpoint(medium) {
+          padding: 5rem 5rem 2.5rem 5rem;
+        }
+      }
+    }
+
+    &:last-child {
+      > .grid-x {
+        padding: 1rem 2rem 2rem 2rem;
+
+        @include breakpoint(medium) {
+          padding: 2.5rem 5rem 5rem 5rem;
+        }
+      }
+    }
+
+    > .grid-x {
+      padding: 1rem 2rem;
+
+      @include breakpoint(medium) {
+        padding: 2.5rem 5rem;
+      }
+    }
+  }
+
+  &.pinnedTop,
+  &.pinnedBottom {
+    position: fixed;
+    z-index: 50;
+  }
+
+  &.pinnedTop {
+    top: 0;
+    bottom: auto;
+  }
+
+  &.pinnedBottom {
+    top: auto;
+    bottom: 0;
+  }
+
+  &.current_page {
+    z-index: 20;
+  }
+
+  .page-load-snap-sticky {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    z-index: 100;
+    background-color: $white;
+  }
+}
+
+.page {
+  @extend %page;
+}
+
+.chapter,
+.page {
+  position: relative;
+}
