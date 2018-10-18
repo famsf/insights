@@ -11,7 +11,7 @@
       <!-- or, set /favicon.ico for IE10 win -->
       <meta name="msapplication-TileColor" content="#f00">
       <meta name="msapplication-TileImage" content="/images/tileicon.png">
-      
+
       <!-- Google Tag Manager -->
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -19,7 +19,7 @@
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-TPPZRZB');</script>
       <!-- End Google Tag Manager -->
-      
+
       <title>
         {{ config.title }}
       </title>
@@ -54,8 +54,14 @@
     {% for script in config.scripts.footer.kalastatic %}
       <script src="{{ script }}"></script>
     {% endfor %}
-    {% for script in config.scripts.footer.all %}
-      <script src="{{ script }}"></script>
-    {% endfor %}
+    {% if bodyId == 'hub' %}
+      {% for script in config.scripts.footer.hub %}
+        <script src="{{ script }}"></script>
+      {% endfor %}
+    {% else %}
+      {% for script in config.scripts.footer.all %}
+        <script src="{{ script }}"></script>
+      {% endfor %}
+    {% endif %}
   </body>
 </html>

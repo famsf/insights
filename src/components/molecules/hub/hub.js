@@ -24,6 +24,7 @@
       $hub.find('h1').html(newTitle);
     }
 
+    $('#topBar').removeClass('invert');
     $hubs.each(function (i, e) {
       var $hub = $(e);
       var $storyFilter = $(e).find('.story-filter');

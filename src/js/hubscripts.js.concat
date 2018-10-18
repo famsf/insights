@@ -1,0 +1,6 @@
+---
+files:
+- components/molecules/hub/hub.js
+insertNewLine: true
+---
+// Concatenate all the scripts!

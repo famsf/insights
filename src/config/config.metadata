@@ -19,10 +19,15 @@ scripts:
       - /js/jquery/jquery.js
       - /js/foundation/foundation.min.js
       - /js/owl/owl.carousel.js
-      - https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js
       - /js/object-fit-images/ofi.min.js
       - /js/clippath/background-clip-text-polyfill.js
       - /js/plyr/plyr.js
       - /js/scripts.js
+      - https://use.fontawesome.com/releases/v5.0.13/js/all.js
+    hub:
+      - /js/jquery/jquery.js
+      - /js/foundation/foundation.min.js
+      - https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js
+      - /js/hubscripts.js
       - https://use.fontawesome.com/releases/v5.0.13/js/all.js
 ---
