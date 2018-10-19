@@ -1,3 +1,9 @@
 <div class="image-magnifier">
-  <img style="with: 600px; height: 800px;" class="magnify" src="http://www.fillmurray.com/1200/1600/" alt="Bill Murray" />
+  {% include "@atoms/img/img.html.twig" with {
+    class: image.class,
+    src: image.src,
+    url: image.src,
+    alt: image.alt,
+    style: ''
+  } %}
 </div>
