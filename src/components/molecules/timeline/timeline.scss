@@ -35,12 +35,12 @@
       padding-top: 36px;
     }
   }
-  h2.timeline-title {
+  .timeline-title {
     font-family: $alternate-header-font-family;
     padding-bottom: 70px;
     font-size: 1.8em;
     @include breakpoint(large) {
-      display: none;
+      visibility: hidden;
       position: fixed;
       top: 64px;
       background: #0a0a0a;
@@ -146,11 +146,14 @@
   }
   .timespan-scroller-inner,
   .timespan-scroller-pos {
-    transition: all 0.5s ease-out;
+    transition-property: top, height, opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
   }
+
   .timespan-scroller {
     @include breakpoint(large) {
-      display: none;
+      visibility: hidden;
       height: 500px;
       width: 200px;
       position: fixed;
@@ -158,6 +161,10 @@
       left: 40vw;
       color: white;
       overflow: hidden;
+      transition-property: top, height, opacity;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-out;
+      opacity: 0;
     }
   }
   .timespan-scroller-inner {
@@ -212,7 +219,7 @@
 %no-year-span-timeline {
   > div:first-of-type {
     @include breakpoint(large) {
-      margin-top: 185px;
+      margin-top: 300px;
     }
   }
   .timespan-scroller-pos {
@@ -249,16 +256,17 @@
     @extend %no-year-span-timeline;
   }
 }
-.triggered {
+.inViewport {
   .timeline {
     .timespan-scroller {
       @include breakpoint(large) {
-        display: block;
+        visibility: visible;
+        opacity: 1;
       }
     }
     h2 {
       @include breakpoint(large) {
-        display: block;
+        visibility: visible;
       }
     }
   }

@@ -316,6 +316,7 @@
     pages.lastPinned = null;
     pages.pinned = page;
     page.isPinned = true;
+    pageEl.classList.add('inViewport');
     if (scrollDir === 'down') {
       pageEl.classList.add('pinnedTop');
     }
@@ -359,9 +360,9 @@
   pages.untriggerPage = function (page) {
     console.log('untrigger', page.id);
     page.el.classList.remove('triggered');
+    page.el.classList.remove('inViewport');
     page.isTriggered = false;
     pages.untriggerVideo(page);
-
     // Fire off.page.triggered event
     $(document).trigger('off.page.triggered');
   };
