@@ -20,30 +20,13 @@
     position: absolute;
     width: 100%;
     button {
-      background-image: none !important;
-      background: white;
-      height: 40px;
-      width: 40px;
-      border-radius: 40px;
-      &:hover {
-        background: white !important;
-      }
-      &::after {
-        color: black !important;
-        position: relative;
-        left: -2px;
-        top: 1px;
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        color: white;
-        content: "\f061";
-      }
+      background-image: url("../assets/images/right-arrow.svg") !important
     }
     button.owl-prev {
-      left: 0.5rem;
+      left: -0.5rem;
     }
     button.owl-next {
-      right: 0.5rem;
+      right: -0.5rem;
     }
   }
   .owl-dots {
