@@ -149,10 +149,10 @@ chapters:
             brief: 'Occupy tumblr chillwave'
             text: 'Occupy tumblr chillwave meggings snackwave street art selfies salvia, cold-pressed poutine gastropub. Knausgaard disrupt drinking vinegar portland tumblr, cliche letterpress succulents ugh vape sriracha keytar coloring book pabst.'
           imageOne: 
-            src: "http://www.fillmurray.com/768/1024"
+            src: "https://www.fillmurray.com/768/1024"
             alt: "A picture of Bill Murray"
           imageTwo: 
-            src: "http://www.fillmurray.com/g/768/1024"
+            src: "https://www.fillmurray.com/g/768/1024"
             alt: "Another picture of Bill Murray"
       right:
         components:
