@@ -47,10 +47,11 @@
     "foundation-sites": "~6.4.1",
     "jquery": "^3.3.1",
     "jquery-match-height": "^0.7.2",
-    "kalastatic": "git://github.com/kalamuna/kalastatic.git#env",
+    "kalastatic": "github:kalamuna/kalastatic#env",
     "kalastatic-twig-filters": "^0.2.0",
     "kss-bootstrap": "^4.1.1",
     "metalsmith-gathercontent": "^2.2.4",
+    "metalsmith-include": "thiagodemellobueno/metalsmith-include#includeWholeObject",
     "motion-ui": "~1.2.2",
     "napa": "^3.0.0",
     "npm": "^6.4.1",
@@ -59,9 +60,8 @@
     "owl.carousel": "^2.3.4",
     "plyr": "^3.3.21",
     "postcss-syntax": "^0.28.0",
-    "metalsmith-include": "thiagodemellobueno/metalsmith-include#includeWholeObject",
-    "twig-drupal-filters": "^2.0.0",
     "read-chunk": "^3.0.0",
+    "twig-drupal-filters": "^2.0.0",
     "what-input": "^4.1.3"
   },
   "resolutions": {
