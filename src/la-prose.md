@@ -36,6 +36,19 @@ chapters:
         components:
         - template: "@molecules/zoom-image--inline/zoom-image--inline.html.twig"
           id:
+          mobile_images:
+            - heading_text: "Lorem Ipsum"
+              body_text: "<p>Detail of La prose du Transsibérien et de la Petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars.</p>"
+              src: https://www.fillmurray.com/g/800/600
+              alt: "some alt"
+            - heading_text: "Lorem Ipsum"
+              body_text: "<p>Detail of La prose du Transsibérien et de la Petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars.</p>"
+              src: https://www.fillmurray.com/g/800/600
+              alt: "some alt"
+            - heading_text: "Lorem Ipsum"
+              body_text: "<p>Detail of La prose du Transsibérien et de la Petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars.</p>"
+              src: https://www.fillmurray.com/g/800/600
+              alt: "some alt"
           captions:
           - xcoord: "10"
             ycoord: "10"
