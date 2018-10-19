@@ -40,8 +40,16 @@
     padding-bottom: 70px;
     font-size: 1.8em;
     @include breakpoint(large) {
-      position: relative;
-      top: 25px;
+      display: none;
+      position: fixed;
+      top: 64px;
+      background: #0a0a0a;
+      width: 100vw;
+      text-align: center;
+      z-index: 1;
+      left: 0;
+      padding-top: 40px;
+      padding-bottom: 40px;
     }
   }
   .timeline-images {
@@ -190,6 +198,9 @@
   }
 }
 %year-span-timeline {
+  @include breakpoint(large) {
+    margin: 220px 35px 20px 30px;
+  }
   .timeline-item-title {
     font-family: $body-font-family;
     @include breakpoint(large) {
@@ -202,20 +213,6 @@
   > div:first-of-type {
     @include breakpoint(large) {
       margin-top: 185px;
-    }
-  }
-  .timeline-title {
-    @include breakpoint(large) {
-      display: none;
-      position: fixed;
-      top: 64px;
-      background: #0a0a0a;
-      width: 100vw;
-      text-align: center;
-      z-index: 1;
-      left: 0;
-      padding-top: 40px;
-      padding-bottom: 40px;
     }
   }
   .timespan-scroller-pos {
@@ -259,11 +256,9 @@
         display: block;
       }
     }
-    &.no-year-span {
-      h2 {
-        @include breakpoint(large) {
-          display: block;
-        }
+    h2 {
+      @include breakpoint(large) {
+        display: block;
       }
     }
   }
