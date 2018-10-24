@@ -1,5 +1,7 @@
 <div class="zoom-caption" data-x-coord="{{ xcoord }}" data-y-coord="{{ ycoord }}">
-  {% include "@atoms/button/button--element.html.twig" with { classes: "inline-caption-button", text: "＋" } only %}
+  <div class="zoom-button-wrapper">
+    {% include "@atoms/button/button--element.html.twig" with { classes: "inline-caption-button", text: "＋" } only %}
+  </div>
   <div class="inline-caption-content">
     <strong class="inline-caption-heading">{{ heading_text }}</strong>
     <span class="inline-caption-text">{{ body_text }}</span>
