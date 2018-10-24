@@ -1,6 +1,0 @@
-pluginOpts:
-  metalsmith-gathercontent:
-    # Drafting, Copy review + testing, Editing
-    status: [
-      1208748, 1208749, 1208750
-    ]
