@@ -52,6 +52,9 @@ chapters:
       overlay:
         heading: Full Width
         text: Embedded video rendered in full width mode
+        caption:
+          id: c0p3-video-caption
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac ipsum ipsum. Praesent volutpat id elit scelerisque maximus. Cras ullamcorper imperdiet urna, at egestas elit fermentum at. Fusce et fringilla orci. Duis sodales ante vitae vestibulum tempus. Etiam sem leo, posuere at egestas vel, faucibus ac odio.'
 
   # iv
   - classes: hide-chapter-nav theme--dark
