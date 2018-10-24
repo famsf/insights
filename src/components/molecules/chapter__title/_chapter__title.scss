@@ -73,6 +73,31 @@ Markup: chapter__title.html.twig
       font-style: italic;
     }
   }
+
+  .caption {
+    margin-bottom: 0;
+
+    figcaption {
+      @include responsive(max-width, calc(100% - 2rem), 500px);
+      position: absolute;
+      z-index: 50;
+      bottom: 3rem;
+      right: 1rem;
+    }
+  }
+
+  .caption__brief {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 50;
+  }
+
+  .toggle-caption,
+  .toggle-caption:hover {
+    color: $white;
+    border-color: $white;
+  }
 }
 
 .chapter__title {

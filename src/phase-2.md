@@ -91,6 +91,9 @@ chapters:
       img:
         url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
         alt: 'Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars'
+      caption:
+        id: c1p0-title-caption
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac ipsum ipsum. Praesent volutpat id elit scelerisque maximus. Cras ullamcorper imperdiet urna, at egestas elit fermentum at. Fusce et fringilla orci. Duis sodales ante vitae vestibulum tempus. Etiam sem leo, posuere at egestas vel, faucibus ac odio.'
 
   # c1p1
   - classes: ''
