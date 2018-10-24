@@ -49,7 +49,7 @@ pluginOpts:
     saveJSON: true
     includeAsFile:
       - 'la-prose.md'
-      - 'phase-2.md'
+      - 'gauguin.md'
     # map template ids to components so we can handle defaults
     # we're also removing Meta_Component from "atom" GatherContent templates
     # Since they removed template defaults, and certain components —
