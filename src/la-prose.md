@@ -134,11 +134,11 @@ chapters:
       classes: theme--dark
       grid: align-middle
       components:
-        - template: "@molecules/image-magnifier/image-magnifier.html.twig"
-          classes: magnify
+        - template: "@molecules/image-modal/image-modal.html.twig"
           image:
             src: "http://www.fillmurray.com/1200/1600"
             alt: "Bill Murray photo"
+            style: "vertical"
 
   # v
   - components:
