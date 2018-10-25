@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
 // Import Base Foundation Settings.
-@import 'base/settings';
+@import 'base/la-prose-settings';
 @import 'base/extends';
 @import 'base/mixins';
 
@@ -11,9 +11,7 @@
 @import 'base/motion-ui';
 
 @include foundation-global-styles;
-// @include foundation-grid;
-// @include foundation-flex-grid;
-//
+
 @include foundation-xy-grid-classes;
 @include foundation-typography;
 @include foundation-button;
