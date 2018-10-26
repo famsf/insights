@@ -888,8 +888,6 @@ chapters:
         tag_name: "klimtrodin"
         cta_href: "http://google.ca"
         cta_text: "See on Instagram"
-        cta_target: "_blank"
-        cta_classes: "cta__orange"
       - template: "@organisms/Section/Section.html.twig"
         section_classes: grid-container grid-container-padded footer__content
         components:
