@@ -1,7 +1,6 @@
 (function (fds, coverPage, win) {
   win.document.addEventListener('DOMContentLoaded', function () {
     fds.coverPageElement = document.getElementById('CoverPage');
-    console.log('| » | »» |', fds.coverPageElement);
     if (fds.coverPageElement) {
       fds.coverPageElement.backgroundClipPolyfill({
         patternID: 'mypattern',
@@ -18,13 +17,14 @@
     var downArrow = fds.coverPageElement.querySelector('.down_arrow');
     var img = new Image();
     img.setAttribute('alt', imgAlt);
-    img.setAttribute('ci-responsive', true);
-    img.setAttribute('ci-src', imgSrc);
-    img.setAttribute('ci-size', imgSize);
-    img.setAttribute('ci-type', 'crop');
+    // img.setAttribute('ci-responsive', true);
+    // img.setAttribute('ci-src', imgSrc);
+    // img.setAttribute('ci-size', imgSize);
+    // img.setAttribute('ci-type', 'crop');
+    img.setAttribute('src', imgSrc);
     img.classList.add('bg-image');
     fds.coverPageElement.querySelector('.underlay').appendChild(img);
-    jScaler.processImage(img);
+    // jScaler.processImage(img);
     if (img.complete) {
       fds.onCoverImageLoaded();
     }

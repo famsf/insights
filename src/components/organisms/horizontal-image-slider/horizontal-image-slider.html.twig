@@ -2,6 +2,7 @@
   {% for slide in children %}
     {% if slide.slide__image.src is defined and slide.slide__image.src is not empty %}
       {% set template = templateMap[slide.template_id] %}
+      -- {{ template }}
       {% include template with slide only %}
     {% endif %}
   {% endfor %}
