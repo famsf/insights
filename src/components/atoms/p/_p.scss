@@ -1,0 +1,7 @@
+%p {
+  @include font-sizes(16, 18);
+}
+
+p {
+  @extend %p;
+}
