@@ -30,6 +30,13 @@ chapters:
       url: "https://insights.famsf.org/assets/images/delaunay.jpg"
       alt: Fubar
       style: horizontal
+#  - components:
+#    - template: "@molecules/instagram-feed/instagram-feed.twig"
+#      tag_name: "klimtrodin"
+#      cta_href: "http://google.ca"
+#      cta_text: "See on Instagram"
+#      cta_target: "_blank"
+#      cta_classes: "cta__orange"
   - components:
     - template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
       left:
@@ -877,6 +884,12 @@ chapters:
                   text: Subscribe
                   href: http://famsf.us4.list-manage1.com/subscribe?u=d7a49f337e55b897015517194&id=9757c5111b
                   target: _blank
+      - template: "@molecules/instagram-feed/instagram-feed.twig"
+        tag_name: "klimtrodin"
+        cta_href: "http://google.ca"
+        cta_text: "See on Instagram"
+        cta_target: "_blank"
+        cta_classes: "cta__orange"
       - template: "@organisms/Section/Section.html.twig"
         section_classes: grid-container grid-container-padded footer__content
         components:
