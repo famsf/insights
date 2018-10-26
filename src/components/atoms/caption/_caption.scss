@@ -1,10 +1,10 @@
 %caption {
   margin-bottom: 1rem;
+  @include font-sizes(12);
+  @include responsive(line-height, 16px);
 
   .caption__brief {
     display: inline-block;
-    line-height: 1.25rem;
-    font-size: $small-font-size;
   }
 
   .toggle-caption {
@@ -13,6 +13,7 @@
     height: 1.25rem;
     width: 1.25rem;
     position: relative;
+
     .i-info {
       text-transform: lowercase;
       font-size: 15px;
@@ -47,8 +48,10 @@
     }
 
     figcaption {
-      padding: 0;
-      background: transparent;
+      margin-top: 1rem;
+      color: $white;
+      padding: 1rem;
+      background: rgba($white, .2);
     }
   }
 }
