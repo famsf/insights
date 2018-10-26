@@ -1,0 +1,36 @@
+<div class="instafeed-wrapper">
+  <div id="instafeed" class="instafeed-images">
+    <div class="instafeed-text">
+        <div class="instafeed-flex">
+          <div class="instafeed-text-inner">
+              <span class="tag-name">#{{ tag_name }}</span>
+              {% include '@atoms/cta__button/cta__button.html.twig' with {
+                href: cta_href,
+                text: cta_text,
+                target: cta_target,
+                classes: cta_classes
+              } only %}
+            </div>
+        </div>
+      </div>
+  </div>
+</div>
+<script type="text/javascript">
+  var feed = new Instafeed({
+    get: 'tagged',
+    userId: '2289514121',
+    tagName: '{{ tag_name }}',
+    clientId: '85bbd23074e84b77b0c450cf7f11a527',
+    accessToken: '2289514121.ba4c844.e6c5f75f791c498791f7421e626b1e8e',
+    limit: 4,
+    sortBy: 'most-recent',
+    resolution: 'standard_resolution',
+    after: function () {
+      // The after function on instafeed doesn't work 100% of the time.
+      setTimeout(function () {
+        toggleLastTile();
+      }, 1000);
+    }
+  });
+  feed.run();
+</script>
