@@ -48,8 +48,10 @@
     }
 
     figcaption {
-      padding: 0;
-      background: transparent;
+      margin-top: 1rem;
+      color: $white;
+      padding: 1rem;
+      background: rgba($white, .2);
     }
   }
 }
