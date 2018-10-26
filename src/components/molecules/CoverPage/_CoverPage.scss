@@ -47,7 +47,7 @@
       width: calc(100% - 4rem);
 
       .info {
-        @extend %p;
+        @include font-sizes(16, 18);
         transition-property: top, opacity;
         transition-timing-function: ease-in-out;
         transition-duration: 0.675s;
