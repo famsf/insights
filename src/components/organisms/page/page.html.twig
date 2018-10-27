@@ -12,12 +12,10 @@
 
 <section class="page {{ classes }} {{ theme }}" id="chapter_{{ id }}" data-page-index="{{ index }}">
   <div class="frame">
-    {% if '/page.html.twig' in component %}
-      {% if children %}
-        {% for child in children %}
-          {% include templateMap[child.template_id] with child|merge({ templateMap: templateMap }) only %}
-        {% endfor %}
-      {% endif %}
+    {% if 'page/page.html.twig' in component %}
+      {% for child in children %}
+        {% include templateMap[child.template_id] with child|merge({ templateMap: templateMap }) only %}
+      {% endfor %}
     {% elseif component %}
       {% set adenda = {} %}
       {% if 'chapter__title' in component %}

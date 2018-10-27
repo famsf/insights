@@ -130,7 +130,7 @@
 
     @include breakpoint(xlarge) {
       font-size: $lead-font-size;
-      line-height: $lead-lineheight;
+      line-height: 1.2;
     }
   }
 
