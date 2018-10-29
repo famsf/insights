@@ -154,10 +154,36 @@ chapters:
           imageTwo: 
             src: "https://www.fillmurray.com/g/768/1024"
             alt: "Another picture of Bill Murray"
+          sliderId: "slider1"
+          startPosition: 25
       right:
         components:
         - template: "@atoms/textarea/textarea.html.twig"
           text: "<p>Trust fund health goth lomo, air plant gastropub pickled master cleanse small batch cornhole four dollar toast occupy food truck. Brunch neutra kickstarter yuccie. Cloud bread green juice intelligentsia asymmetrical, snackwave drinking vinegar venmo chia pour-over. Pabst locavore photo booth seitan. Meh tattooed irony PBR&B, pinterest artisan woke pug skateboard migas disrupt typewriter brunch blue bottle sartorial. Locavore 3 wolf moon iPhone, subway tile retro 90's hot chicken live-edge. Banh mi palo santo wayfarers, neutra forage polaroid 8-bit.</p><p>Unicorn helvetica swag distillery. Squid aesthetic selvage scenester cloud bread unicorn farm-to-table put a bird on it sartorial cred. Before they sold out bitters church-key, bushwick chia schlitz messenger bag hell of master cleanse. Vape tousled DIY, yr taiyaki subway tile small batch leggings venmo meh. Brunch semiotics bicycle rights DIY vegan, banjo squid af waistcoat portland intelligentsia lomo taxidermy neutra before they sold out. Vice next level vinyl tilde.</p>"
+    # v
+    - components:
+      - template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
+        classes: theme--dark
+        left:
+          components:
+          - template: "@molecules/image-comparison-slider/image-comparison-slider.html.twig"
+            caption:
+              id: slider-caption
+              brief: 'Occupy tumblr chillwave'
+              text: 'Occupy tumblr chillwave meggings snackwave street art selfies salvia, cold-pressed poutine gastropub. Knausgaard disrupt drinking vinegar portland tumblr, cliche letterpress succulents ugh vape sriracha keytar coloring book pabst.'
+            imageOne: 
+              src: "https://www.fillmurray.com/g/768/1024"
+              alt: "A picture of Bill Murray"
+            imageTwo: 
+              src: "https://www.fillmurray.com/768/1024"
+              alt: "Another picture of Bill Murray"
+            sliderId: "slider2"
+            startPosition:
+        right:
+          components:
+          - template: "@atoms/textarea/textarea.html.twig"
+            text: "<p>Viral godard farm-to-table kale chips marfa drinking vinegar mlkshk celiac lumbersexual aesthetic wayfarers. Taxidermy photo booth snackwave 8-bit, messenger bag prism meh. Woke kombucha migas skateboard bushwick cronut single-origin coffee sriracha seitan bitters hexagon four loko. Offal skateboard raw denim salvia, gluten-free trust fund synth meh lo-fi raclette. Intelligentsia green juice cray aesthetic tousled.</p><p>Pop-up bushwick typewriter freegan, truffaut dreamcatcher godard yuccie. Organic letterpress lomo trust fund woke offal williamsburg. Synth cornhole mlkshk pug twee tofu. Plaid locavore lo-fi distillery semiotics.</p>"
+
 
 ################################################################################
 ## CHAPTER 1 ###################################################################

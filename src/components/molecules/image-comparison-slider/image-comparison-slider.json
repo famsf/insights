@@ -9,6 +9,8 @@
     "url": "http://www.fillmurray.com/g/768/1024",
     "alt": "A photo of Bill Murray"
   },
+  "sliderId": "slider1",
+  "startPosition": 50,
   
   "caption": {
     "id": "caption",
