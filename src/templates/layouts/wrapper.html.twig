@@ -41,6 +41,10 @@
       {% endfor %}
       {{ kstatic.styles }}
 
+      {% for sheet in config.stylesheets %}
+        <link rel="stylesheet" type="text/css" href="{{ sheet }}?{{ 'now'|date('U') }}">
+      {% endfor %}
+      
       <link rel="stylesheet" type="text/css" href="/styles/{{ slug }}.css?{{ 'now'|date('U') }}">
 
       {# % for sheet in config.stylesheets % #}
