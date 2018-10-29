@@ -46,7 +46,7 @@
     "foundation-sites": "~6.4.1",
     "jquery": "^3.3.1",
     "jquery-match-height": "^0.7.2",
-    "kalastatic": "github:kalamuna/kalastatic#env",
+    "kalastatic": "4.1.0-alpha.3",
     "kalastatic-twig-filters": "^0.2.0",
     "kss-bootstrap": "^4.1.1",
     "metalsmith-gathercontent": "^2.2.4",
