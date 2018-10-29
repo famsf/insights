@@ -1,7 +1,6 @@
 {% set style = 'full-screen' %}
 {% import "@macros/ci-size.html.twig" as ci %}
 
-
 {% macro print(title) %}
   <span class="solid">{{ story__title}}</span>
 {% endmacro %}
@@ -10,14 +9,12 @@
 {% set titleFirstLine = titleArray[0]|trim %}
 {% set titleSecondLine = titleArray[1]|trim %}
 
-<div class="cover_page" id="CoverPage"
-  data-bg-image="{{ background__image.src }}.jpg"
-  data-bg-image-alt="{{ background__image.alt }}">
+<div class="cover_page" id="CoverPage" data-bg-image="{{ background__image.src }}.jpg" data-bg-image-alt="{{ background__image.alt }}">
   <div class="underlay">
     <div class="underlay_contents">
       <h1 class="headline exhibit_logo"><span class="solid">{{ titleFirstLine }}</span>{% if titleArray|length > 1 %}<br><span class="outline">{{ titleSecondLine }}</span>{% endif %}</h1>
       <h2 class="subtitle">{{ story__subtitle|trim }}</h2>
-      <div class="content"><div class="info">{{ exhibit__info|trim }}{% if exhibit__dates == %}<span class="dates">{{ exhibit__dates|trim }}</span>{% endif %}</div></div>
+      <div class="content"><div class="info">{{ exhibit__info|trim }}{% if exhibit__dates %}<span class="dates">{{ exhibit__dates|trim }}</span>{% endif %}</div></div>
     </div>
   </div>
   <div class="cover_loader_container">
