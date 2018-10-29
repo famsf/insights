@@ -13,4 +13,8 @@
 {% set style = "zoom-bleed" %}
 <div class="zoom-image--fullbleed">
   {% include "@atoms/img/img.html.twig" %}
+
+  {% if caption %}
+    {% include "@atoms/caption/caption.html.twig" with caption only %}
+  {% endif %}
 </div>
