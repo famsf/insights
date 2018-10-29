@@ -1,6 +1,6 @@
 pluginOpts:
   metalsmith-gathercontent:
-    # Everything but Live on CMS
+    # Approval, Legal review, Publishing, Live on CMS
     status: [
-      1208747, 1208748, 1208749, 1208750, 1208751, 1208752, 1208753
+      1208751,1208752, 1208753, 1208754
     ]
