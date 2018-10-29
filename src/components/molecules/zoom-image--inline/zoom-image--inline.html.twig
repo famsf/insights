@@ -37,9 +37,23 @@
         {% endfor %}
       {% endif %}
       {% if content__image.src %}
-        {% include "@molecules/picture/picture--captioned.html.twig" with content__image only %}
-      {% elseif content__image[0].src %}
-        {% include "@molecules/picture/picture--captioned.html.twig" with content__image[content__image|length - 1] only %}
+        {% include "@molecules/picture/picture--captioned.html.twig" with {
+          picture: content__image,
+          caption: {
+            text: caption__text,
+            brief: caption__brief,
+            id: id
+          }
+        }  only %}
+      {% else %}
+        {% include "@molecules/picture/picture--captioned.html.twig" with {
+          picture: content__image[content__image|length - 1],
+          caption: {
+            text: caption__text,
+            brief: caption__brief,
+            id: id
+          }
+        } only %}
       {% endif %}
   </div>
 </div>
