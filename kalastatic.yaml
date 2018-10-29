@@ -85,7 +85,9 @@ pluginOpts:
       1398142: '@kalastatic/components/molecules/zoom-image--inline/zoom-image--inline.html.twig'
       1397424: '@kalastatic/components/molecules/timeline/timeline.html.twig'
       1397420: '@kalastatic/components/molecules/audiowithtranscript/audiowithtranscript.html.twig'
-      # 7933024: '@organisms/footer__cta'
+      1390484: '@kalastatic/components/organisms/footer-ctas/footer-ctas.html.twig'
+      1390659: '@kalastatic/components/organisms/footer-id/footer-id.html.twig'
+      1418654: '@kalastatic/components/molecules/image-comparison-slider/image-comparison-slider.html.twig'
       # dummy commit
     mappings:
       id: id
@@ -192,23 +194,33 @@ pluginOpts:
       audio__description: Content_Audio-Description
       audio__transcript__toggle: Content_Transcript-Toggle-Label
       audio__transcript: Content_Transcript
-      # Footer
-      footer__cta-left__title: Content-Left_Title
-      footer__cta-left__description: Content-Left_Description
-      footer__cta-left__cta: Content-Left_CTA-Button
-      footer__cta-left__theme: Content-Left_Theme
-      footer__cta-middle__title: Content-Middle_Title
-      footer__cta-middle__description: Content-Middle_Description
-      footer__cta-middle__cta: Content-Middle_CTA-Button
-      footer__cta-middle__theme: Content-Middle_Theme
-      footer__cta-right__title: Content-Right_Title
-      footer__cta-right__description: Content-Right_Description
-      footer__cta-right__cta: Content-Right_CTA-Button
-      footer__cta-right__theme: Content-Right_Theme
+      # Footer Touts
+      footer__cta__left__title: Content-Left_Title
+      footer__cta__left__description: Content-Left_Description
+      footer__cta__left__cta: Content-Left_CTA-Button
+      footer__cta__left__theme: Content-Left_Theme
+      footer__cta__middle__title: Content-Middle_Title
+      footer__cta__middle__description: Content-Middle_Description
+      footer__cta__middle__cta: Content-Middle_CTA-Button
+      footer__cta__middle__theme: Content-Middle_Theme
+      footer__cta__right__title: Content-Right_Title
+      footer__cta__right__description: Content-Right_Description
+      footer__cta__right__cta: Content-Right_CTA-Button
+      footer__cta__right__theme: Content-Right_Theme
+      # Footer Id
       footer__famsf__title: Content-FAMSF_Title
       footer__famsf__description: Content-FAMSF_Description
       footer__famsf__tickets: Content-FAMSF_Tickets-Link
       footer__famsf__membership: Content-FAMSF_Membership-Link
+      footer__deyoung__title: Content-de-Young_Title
+      footer__deyoung__description: Content-de-Young_Description
+      footer__deyoung__image: Content-de-Young_Image
+      footer__deyoung__image-alt: Content-de-Young_Image-Alt
+      footer__legion__title: Content-Legion_Title
+      footer__legion__description: Content-Legion_Description
+      footer__legion__image: Content-Legion_Image
+      footer__legion__image-alt: Content-Legion_Image-Alt
+
       # Images with Marker
       marker__location: Content_Location
       marker__description: Content_Description
@@ -228,6 +240,11 @@ pluginOpts:
       c__image-alt: Content_Image-C-Alt
       c__caption: Content_Image-C-Caption
       c__caption__brief: Content_Image-C-Caption-Brief
+      # Image Comparison slider
+      comp__1__image: Content_Comp-Image-1
+      comp__1__image-alt: Content_Comp-Image-1-Alt
+      comp__2__image: Content_Comp-Image-2
+      comp__2__image-alt: Content_Comp-Image-2-Alt
   # The layouts will live in the templates directory.
   metalsmith-jstransformer:
     pattern: "!components/**"
