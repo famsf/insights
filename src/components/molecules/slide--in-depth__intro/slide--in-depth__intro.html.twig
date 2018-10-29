@@ -5,7 +5,7 @@
   <div class="grid-x slide--in-depth__intro__content">
     <div class="cell medium-6 medium-offset-4 large-8 large-offset-0">
       <div class="slide--in-depth__intro__content--top">
-        <h3 class="slide--in-depth__intro__title">{{ slide__title }}</h3>
+        <h3 class="slide--in-depth__intro__title">{{ slide__title|striptags('a', 'i', 'em', 'b', 'strong') }}</h3>
         <button class="slide--in-depth__intro__button">Learn More</button>
       </div>
       <div class="slide--in-depth__intro__content--bottom">
