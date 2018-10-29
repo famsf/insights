@@ -40,7 +40,9 @@
               text: component.content__cliff_note
             }) %}
           {% endif %}
-          {% include templateMap[component.template_id] with component only %}
+          {% include templateMap[component.template_id] with component|merge({
+            templateMap: templateMap
+          }) only %}
         {% endfor %}
       </div>
     {% endfor %}

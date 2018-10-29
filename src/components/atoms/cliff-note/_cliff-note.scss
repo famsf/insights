@@ -12,10 +12,16 @@ Styleguide COMPONENTS.cliff-note
 %cliff-note {
   position: relative;
   font-family: $header-font-family;
-  font-size: 1.75em;
+  font-weight: bold;
+  font-style: italic;
   letter-spacing: -1px;
   max-width: 20rem;
   margin: auto;
+
+  &, & p {
+    @include font-sizes(30);
+    @include responsive(line-height, 42px);
+  }
 
   &:before {
     display: block;

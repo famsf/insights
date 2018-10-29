@@ -104,13 +104,10 @@ Styleguide COMPONENTS.commentary
   }
 
   .commentary__author-name {
+    @include font-sizes(38, 60);
+    @include responsive(line-height, 40px, 70px);
     font-family: $header-font-family;
     font-weight: bold;
-    font-size: 3rem;
-
-    @include breakpoint(xlarge) {
-      font-size: 4rem;
-    }
   }
 
   .commentary__author-title {

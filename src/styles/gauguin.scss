@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
 // Import Base Foundation Settings.
-@import 'base/settings';
+@import 'base/gauguin-settings';
 @import 'base/extends';
 @import 'base/mixins';
 
@@ -11,9 +11,7 @@
 @import 'base/motion-ui';
 
 @include foundation-global-styles;
-// @include foundation-grid;
-// @include foundation-flex-grid;
-//
+
 @include foundation-xy-grid-classes;
 @include foundation-typography;
 @include foundation-button;
@@ -145,6 +143,7 @@ $plyr-color-heather: #b7c5cd !default;
 @import '../components/atoms/logo/logo';
 @import '../components/atoms/modal__close-button/modal__close-button';
 @import '../components/atoms/modal__open-button/modal__open-button';
+@import '../components/atoms/p/p';
 @import '../components/atoms/q/q';
 @import '../components/atoms/slide__icon--next/slide__icon--next';
 @import '../components/atoms/standalone-quote__icon/standalone-quote__icon';
@@ -190,6 +189,7 @@ $plyr-color-heather: #b7c5cd !default;
 @import '../components/molecules/zoom-image--inline/zoom-image--inline';
 @import '../components/molecules/timeline/timeline';
 @import '../components/molecules/hub/hub';
+@import '../components/molecules/image-comparison-slider/image-comparison-slider';
 
 // Import Layouts.
 @import '../components/layouts/one_up--primary/one_up--primary';

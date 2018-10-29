@@ -1,9 +1,9 @@
 <div class="intro-text one_up--primary fluid {{ gridframe|default('grid-frame') }} {{ classes }}">
   <div class="grid-x grid-margin-x {{ grid }}">
     <div class="cell medium-8 medium-offset-2">
-      {% include '@atoms/h2/h2.html.twig' with { text: intro__title } %}
+      {% include '@atoms/h2/h2.html.twig' with { text: intro__title|striptags('a', 'i', 'em', 'b', 'strong') } %}
       <div class="text">
-        {{ intro__text }}
+        {{ intro__text|striptags('a', 'i', 'em', 'b', 'strong') }}
       </div>
     </div>
   </div>

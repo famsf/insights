@@ -1,0 +1,19 @@
+<div id="slider" class="beer-slider" data-id="{{ id }}">
+  {% include "@atoms/img/img.html.twig" with {
+    src: comp__1__image.src ~ '.jpg',
+    url: comp__1__image.src ~ '.jpg',
+    alt: comp__1__image.alt,
+    style: 'default'
+  } %}
+  <div class="beer-reveal">
+    {% include "@atoms/img/img.html.twig" with {
+      src: comp__2__image.src ~ '.jpg',
+      url: comp__2__image.src ~ '.jpg',
+      alt: comp__2__image.alt,
+      style: 'default'
+  } %}
+  </div>
+</div>
+{% if caption %}
+  {% include "@atoms/caption/caption.html.twig" with caption only %}
+{% endif %}

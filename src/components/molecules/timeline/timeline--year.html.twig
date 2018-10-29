@@ -10,7 +10,7 @@
         {% include "@atoms/caption/caption.html.twig" with {
           text: caption_a,
           brief: brief_a,
-          id: year ~ '__caption_a'
+          id: 'year__' ~ year ~ '__caption_a'
         } only %}
       </div>
     {% endif %}
@@ -20,7 +20,7 @@
         {% include "@atoms/caption/caption.html.twig" with {
           text: caption_b,
           brief: brief_b,
-          id: year ~ '__caption_b'
+          id: 'year__' ~ year ~ '__caption_b'
         } only %}
       </div>
     {% endif %}
@@ -30,7 +30,7 @@
         {% include "@atoms/caption/caption.html.twig" with {
           text: caption_c,
           brief: brief_c,
-          id: year ~ '__caption_c'
+          id: 'year__' ~ year ~ '__caption_c'
         } only %}
       </div>
     {% endif %}
@@ -44,7 +44,7 @@
       <h4 class="timeline-item-subtitle">{{ subtitle }}</h4>
     {% endif %}
     {% if description is defined %}
-      <p class="timeline-item-description">{{ description }}</p>
+      <p class="timeline-item-description">{{ description|striptags('a','i','em','b') }}</p>
     {% endif %}
   </div>
 </div>
