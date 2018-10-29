@@ -1,9 +1,11 @@
 %zoom-caption {
   .zoom-button-wrapper {
     position: relative;
+    z-index: 2;
     top: -20px;
     left: -20px;
   }
+
   .inline-caption-button {
     background-color: $white;
     color: $black;
@@ -25,14 +27,28 @@
       100% {box-shadow: 0 0 0 10px rgba(255,255,255,0.5);}
     }
   }
+
   .inline-caption-content {
     opacity: 0;
     display: none;
     transition: opacity 0.4s ease-in;
+
     &.show {
       display: block;
       opacity: 1;
     }
+  }
+
+  .inline-caption-heading {
+    @include font-sizes(18);
+    @include responsive(line-height, 30px);
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .inline-caption-text {
+    @include font-sizes(12);
+    @include responsive(line-height, 16px);
   }
 }
 
