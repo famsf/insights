@@ -80,6 +80,16 @@ chapters:
       youtube:
         embed: xt27-zrvHkk
 
+  # vi
+  - classes: ''
+    components:
+    - template: "@molecules/zoom-image--fullbleed/zoom-image--fullbleed.html.twig"
+      src: "https://www.fillmurray.com/1920/1020"
+      url: "https://www.fillmurray.com/1920/1020"
+      alt: "A picture of Bill Murray"
+      style: "default"
+      sizes: "{ small: '320x320', medium: '512x512', large: '600x600', xlarge: '720x720', xxlarge: '1920x1020' }"
+
 ################################################################################
 ## CHAPTER 1 ###################################################################
 ################################################################################
