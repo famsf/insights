@@ -27,9 +27,20 @@
     resolution: 'standard_resolution',
     after: function () {
       // The after function on instafeed doesn't work 100% of the time.
-      setTimeout(function () {
-        toggleLastTile();
-      }, 1000);
+      (function (window, $) {
+        $(document).ready(function () {
+          setTimeout(function () {
+            var $instaText = $('.instafeed-wrapper .instafeed-text').clone();
+            $('.instafeed-wrapper .instafeed-text').remove();
+            $('.instafeed-images').append($instaText);
+            $('.instafeed-images > a').each(function (i, e) {
+              if (i > 3) {
+                $(e).remove();
+              }
+            });
+          }, 1000);
+        });
+      }(window, jQuery));
     }
   });
   feed.run();
