@@ -1,0 +1,55 @@
+%inline-image-zoom-wrapper-mobile {
+  position: relative;
+	width: 100vw;
+  height: auto !important;
+  padding-bottom: 30px;
+  color: $black;
+  background: transparent;
+  @include breakpoint(medium) {
+    display: none;
+  }
+  h2 {
+    margin-top: 20px;
+    font-size: 1.1em;
+  }
+  .zoom-image-mobile-text {
+    margin: 0 40px;
+  }
+  .owl-nav {
+    display: block;
+    position: absolute;
+    width: 100%;
+    button {
+      background-image: url("../assets/images/right-arrow.svg") !important
+    }
+    button.owl-prev {
+      left: -0.5rem;
+    }
+    button.owl-next {
+      right: -0.5rem;
+    }
+  }
+  .owl-dots {
+    position: static;
+    button.owl-dot {
+      margin: 0 .2rem;
+      &.active {
+        span {
+          background-color: $black;
+        }
+      }
+      &:before {
+        content: '';
+      }
+      span {
+        display: inline-block !important;
+        height: 8.5px;
+        width: 8.5px;
+      }
+    }
+  }
+}
+
+.zoom-image--inline--mobile.owl-carousel {
+  @extend %inline-image-zoom-wrapper-mobile;
+}
