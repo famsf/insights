@@ -34,6 +34,7 @@
     }
   }
   .tag-name {
+    text-align: center;
     display: block;
     font-size: 2em;
     font-weight: 700;
@@ -44,6 +45,9 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+  }
+  .cta-wrapper {
+    text-align: center;
   }
 }
 
