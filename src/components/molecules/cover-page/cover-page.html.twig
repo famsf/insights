@@ -8,7 +8,9 @@
 {% set titleArray = story__title|split('<br>') %}
 {% set titleFirstLine = titleArray[0]|trim %}
 {% set titleSecondLine = titleArray[1]|trim %}
-
+{% if background__image[background__image|length - 1].src %}
+  {% set background__image = background__image[background__image|length - 1] %}
+{% endif %}
 <div class="cover_page" id="CoverPage" data-bg-image="{{ background__image.src }}.jpg" data-bg-image-alt="{{ background__image.alt }}">
   <div class="underlay">
     <div class="underlay_contents">
