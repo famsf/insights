@@ -92,6 +92,7 @@
 
   $(document).ready(function () {
     // Variable declarations.
+    var horizontalImageSliderPage;
     var horizontalImageSlider;
     var horizontalImageSliderOptions = {
       margin: 32,
@@ -99,7 +100,6 @@
       slideSpeed: 1000,
       smartSpeed: 1000,
       loop: false,
-      nav: true,
       dots: true,
       items: 1,
       merge: true,
@@ -135,7 +135,17 @@
 
     // Initialize Horizontal Image Slider.
     horizontalImageSlider = $(':not(.in-depth-slider) > .horizontal-image-slider');
-    horizontalImageSlider.owlCarousel(horizontalImageSliderOptions);
+    horizontalImageSliderPage = horizontalImageSlider.parents('.page');
+
+    // Bind to page.triggered event allowing us to initialize horizontal sliders
+    // as they enter the viewport.
+    $(document).bind('on.page.triggered', function () {
+      // Only initialize the slider if the page is triggered
+      // and the slider hasn't already been initialized
+      if (horizontalImageSliderPage.hasClass('triggered') && !horizontalImageSlider.hasClass('owl-loaded')) {
+        horizontalImageSlider.owlCarousel(horizontalImageSliderOptions);
+      }
+    });
 
     horizontalImageSlider.find('.slide__icon--next svg').click(function () {
       horizontalImageSlider.trigger('next.owl.carousel');

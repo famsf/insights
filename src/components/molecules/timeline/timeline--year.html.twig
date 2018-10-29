@@ -16,13 +16,10 @@
     {% endfor %}
   </div>
   <div class="timeline-item-text">
-    {% if year is defined %}
-      <span class="timeline-year">{{ year }}</span>
-    {% endif %}
     <h3 class="timeline-item-title">{{ year_title }}</h3>
     {% if year_subtitle is defined %}
       <h4 class="timeline-item-subtitle">{{ year_subtitle }}</h4>
     {% endif %}
-    <p class="timeline-item-description">{{ description }}</p>
+    <div class="timeline-item-description">{{ description }}</div>
   </div>
 </div>
