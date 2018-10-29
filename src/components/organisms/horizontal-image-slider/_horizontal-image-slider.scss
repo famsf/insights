@@ -49,6 +49,7 @@ Styleguide COMPONENTS.horizontal-image-slider
       height: 100%;
 
       .item__content {
+        @extend %p;
         margin: auto 0;
       }
 

@@ -94,13 +94,14 @@
     }
   }
   .timeline-item-title {
+    @include font-sizes(60, 160);
     font-family: $body-font-family;
-    font-size: 2.5em;
+    line-height: 1;
+
     @include breakpoint(large) {
-      font-size: 11.75em;
-      line-height: 1;
       margin-top: -35px;
     }
+
     &::before {
       content: '';
       display: inline-block;
