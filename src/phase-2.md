@@ -89,6 +89,9 @@ chapters:
       alt: "A picture of Bill Murray"
       style: "default"
       sizes: "{ small: '320x320', medium: '512x512', large: '600x600', xlarge: '720x720', xxlarge: '1920x1020' }"
+      caption:
+        id: c0p6-video-caption
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac ipsum ipsum. Praesent volutpat id elit scelerisque maximus. Cras ullamcorper imperdiet urna, at egestas elit fermentum at. Fusce et fringilla orci. Duis sodales ante vitae vestibulum tempus. Etiam sem leo, posuere at egestas vel, faucibus ac odio.'
 
 ################################################################################
 ## CHAPTER 1 ###################################################################
