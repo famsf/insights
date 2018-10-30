@@ -5,7 +5,9 @@
 
   {% if text %}
     <div class="video-overlay__text">
-      {{ text }}
+      {{ text }}{% if caption %}
+        {% include "@atoms/caption/caption.html.twig" with caption only %}
+      {% endif %}
     </div>
   {% endif %}
 </div>

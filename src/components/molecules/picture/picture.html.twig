@@ -1,5 +1,3 @@
-<div class="picture picture--{{ style ? style : 'vertical' }}" {{ attributes }}>
-  <picture>
-    {% include "@atoms/img/img.html.twig" %}
-  </picture>
+<div class="picture picture--{{ style ?: 'vertical' }}" data-snap-id="{{ snap_id }}" {{ attributes }}>
+  {% include "@atoms/img/img.html.twig" %}
 </div>
