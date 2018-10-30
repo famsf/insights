@@ -52,6 +52,9 @@ chapters:
       overlay:
         heading: Full Width
         text: Embedded video rendered in full width mode
+        caption:
+          id: c0p3-video-caption
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac ipsum ipsum. Praesent volutpat id elit scelerisque maximus. Cras ullamcorper imperdiet urna, at egestas elit fermentum at. Fusce et fringilla orci. Duis sodales ante vitae vestibulum tempus. Etiam sem leo, posuere at egestas vel, faucibus ac odio.'
 
   # iv
   - classes: hide-chapter-nav theme--dark
@@ -77,6 +80,19 @@ chapters:
       youtube:
         embed: xt27-zrvHkk
 
+  # vi
+  - classes: ''
+    components:
+    - template: "@molecules/zoom-image--fullbleed/zoom-image--fullbleed.html.twig"
+      src: "https://www.fillmurray.com/1920/1020"
+      url: "https://www.fillmurray.com/1920/1020"
+      alt: "A picture of Bill Murray"
+      style: "default"
+      sizes: "{ small: '320x320', medium: '512x512', large: '600x600', xlarge: '720x720', xxlarge: '1920x1020' }"
+      caption:
+        id: c0p6-video-caption
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac ipsum ipsum. Praesent volutpat id elit scelerisque maximus. Cras ullamcorper imperdiet urna, at egestas elit fermentum at. Fusce et fringilla orci. Duis sodales ante vitae vestibulum tempus. Etiam sem leo, posuere at egestas vel, faucibus ac odio.'
+
 ################################################################################
 ## CHAPTER 1 ###################################################################
 ################################################################################
@@ -91,6 +107,9 @@ chapters:
       img:
         url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
         alt: 'Detail of La prose du Transsibérien et de la petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars'
+      caption:
+        id: c1p0-title-caption
+        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent ac ipsum ipsum. Praesent volutpat id elit scelerisque maximus. Cras ullamcorper imperdiet urna, at egestas elit fermentum at. Fusce et fringilla orci. Duis sodales ante vitae vestibulum tempus. Etiam sem leo, posuere at egestas vel, faucibus ac odio.'
 
   # c1p1
   - classes: ''

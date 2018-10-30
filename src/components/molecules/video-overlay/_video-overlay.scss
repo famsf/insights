@@ -17,14 +17,35 @@
     text-align: center;
     color: $white;
 
+    &__title {
+      margin-top: 9rem;
+    }
+
     &__text {
       font-size: 1rem;
-      margin-bottom: 6em;
     }
 
     .playing & {
       opacity: 0;
       z-index: -1;
     }
+  }
+
+  .caption {
+    display: inline-block;
+    margin: 0;
+
+    figcaption {
+      position: absolute;
+      bottom: 5rem;
+      left: 25%;
+      right: 25%;
+      background: rgba($black, .5);
+      padding: 1rem;
+    }
+  }
+
+  .toggle-caption {
+    transform: translateY(-.25rem);
   }
 }
