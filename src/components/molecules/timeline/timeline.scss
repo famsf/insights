@@ -43,7 +43,6 @@
       visibility: hidden;
       position: fixed;
       top: 64px;
-      background: #0a0a0a;
       width: 100vw;
       text-align: center;
       z-index: 1;
@@ -113,13 +112,13 @@
       background-color: $white;
       position: absolute;
       left: 23px;
-      margin-top: 18px;;
       @include breakpoint(medium) {
         left: 73px;
       }
       @include breakpoint(large) {
         height: 0;
         width: 0;
+        margin-top: 0;
       }
     }
   }
@@ -220,7 +219,7 @@
 %no-year-span-timeline {
   > div:first-of-type {
     @include breakpoint(large) {
-      margin-top: 300px;
+      margin-top: 50px;
     }
   }
   .timespan-scroller-pos {
@@ -238,12 +237,33 @@
   }
   .timeline-item-title {
     &::before {
+      margin-top: 28px;
+      @include breakpoint(medium) {
+        margin-top: 90px;
+      }
       @include breakpoint(large) {
         width: 15px;
         height: 15px;
-        top: 57px;
+        top: 58px;
         left: -8px;
+        margin-top: 0;
       }
+    }
+  }
+}
+
+%primary-theme-timeline {
+  .timeline--year {
+    border-left-color: $primary-color;
+  }
+  .timeline-item-text {
+    @include breakpoint(large) {
+      border-left-color: $primary-color;
+    }
+  }
+  .timeline-item-title {
+    &::before {
+      background-color: $primary-color;
     }
   }
 }
@@ -270,5 +290,10 @@
         visibility: visible;
       }
     }
+  }
+}
+.theme--primary {
+  .timeline {
+    @extend %primary-theme-timeline;
   }
 }
