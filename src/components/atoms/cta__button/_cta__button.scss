@@ -1,7 +1,7 @@
 %cta__button {
   @extend .button;
+  @include font-sizes(14);
 
-  font-size: 1rem;
   text-transform: none;
   background: transparent;
   border: none;
@@ -50,7 +50,18 @@
   }
 }
 
+%cta__orange {
+  &:before {
+    background: rgba($splitpea, .35);
+  }
+}
+
 .button.cta,
 .cta__button {
   @extend %cta__button;
+}
+
+.button.cta.cta__orange,
+.cta__button.cta__orange {
+  @extend %cta__orange;
 }
