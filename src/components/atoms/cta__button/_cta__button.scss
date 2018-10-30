@@ -22,16 +22,15 @@
     z-index: -1;
   }
 
-  /*
-    // Font Awesome usage
-    &:after {
-      margin-left: .5rem;
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      content: "\f35d";
-    }
-  */
+  // When the link is not external, display a forward link.
+  &.not-external:after {
+    margin-left: .5rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f061";
+  }
 
+  // Limit the size of the SVG icon.
   svg {
     width: 0.9em;
     height: 0.9em;

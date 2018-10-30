@@ -1,4 +1,4 @@
-<a href="{{ href }}" class="button {{ ctaclass|default('cta') }} {{ classes }}" id="{{ id }}" target="{{ target }}">{{ text }}
+<a href="{{ href }}" class="button {{ ctaclass|default('cta') }} {% if target != '_blank' %}not-external{% endif %} {{ classes }}" id="{{ id }}" target="{{ target }}">{{ text }}
 
 {% if target == '_blank' %}
   <svg width="13px" height="13px" viewBox="0 0 13 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
