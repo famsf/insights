@@ -1,0 +1,56 @@
+%instagram-feed {
+  background-color: rgba($splitpea, .05);
+  .instafeed-images a img,
+  .instafeed-text {
+    width: 50vw;
+    display: inline-block;
+    height: 50vw;
+    object-fit: cover;
+    vertical-align: top;
+  }
+  .instafeed-images {
+    & > a {
+      &:nth-child(4) {
+        display: none;
+        @include breakpoint(large) {
+          display: inline-block;
+        }
+      }
+      @include breakpoint(large) {
+        display: inline-block;
+      }
+      img {
+        @include breakpoint(large) {
+          height: 20vw;
+          width: 20vw;
+        }
+      }
+    }
+  }
+  .instafeed-text {
+    @include breakpoint(large) {
+      height: 20vw;
+      width: 20vw;
+    }
+  }
+  .tag-name {
+    text-align: center;
+    display: block;
+    font-size: 2em;
+    font-weight: 700;
+    font-family: $alternate-header-font-family;
+  }
+  .instafeed-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .cta-wrapper {
+    text-align: center;
+  }
+}
+
+.instafeed-wrapper {
+  @extend %instagram-feed;
+}

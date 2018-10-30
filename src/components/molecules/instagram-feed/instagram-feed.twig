@@ -1,0 +1,47 @@
+<div class="instafeed-wrapper">
+  <div id="instafeed" class="instafeed-images">
+    <div class="instafeed-text">
+        <div class="instafeed-flex">
+          <div class="instafeed-text-inner">
+              <span class="tag-name">#{{ tag_name }}</span>
+              <div class="cta-wrapper">
+                {% include '@atoms/cta__button/cta__button.html.twig' with {
+                  href: cta_href,
+                  text: cta_text,
+                  classes: "cta__orange"
+                } only %}
+              </div>
+            </div>
+        </div>
+      </div>
+  </div>
+</div>
+<script type="text/javascript">
+  var feed = new Instafeed({
+    get: 'tagged',
+    userId: '2289514121',
+    tagName: '{{ tag_name }}',
+    clientId: '85bbd23074e84b77b0c450cf7f11a527',
+    accessToken: '2289514121.ba4c844.e6c5f75f791c498791f7421e626b1e8e',
+    sortBy: 'random', // Doesn't work with "limit" option.
+    resolution: 'standard_resolution',
+    after: function () {
+      // The after function on instafeed doesn't work 100% of the time.
+      (function (window, $) {
+        $(document).ready(function () {
+          setTimeout(function () {
+            var $instaText = $('.instafeed-wrapper .instafeed-text').clone();
+            $('.instafeed-wrapper .instafeed-text').remove();
+            $('.instafeed-images').append($instaText);
+            $('.instafeed-images > a').each(function (i, e) {
+              if (i > 3) {
+                $(e).remove();
+              }
+            });
+          }, 1000);
+        });
+      }(window, jQuery));
+    }
+  });
+  feed.run();
+</script>
