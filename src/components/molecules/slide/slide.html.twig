@@ -1,5 +1,14 @@
 <div class="item {{ loop.first ? 'intro-slide' }}">
   <div class="item__content">
+    {#
+      This conditional is a workaround for a GC bug where asset fields where
+      an asset was previously deleted, still return an array of assets including
+      previously deleted items rather than just the single asset currently
+      in the field.
+    #}
+    {% if slide__image[slide__image|length - 1].src %}
+      {% set slide__image = slide__image[0] %}
+    {% endif %}
     {% include "@molecules/picture/picture.html.twig" with slide__image only %}
     {% if caption__text %}
       {% include "@atoms/caption/caption.html.twig" with {

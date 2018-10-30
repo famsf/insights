@@ -10,15 +10,20 @@
   {% set theme = "theme--primary-dark" %}
 {% endif %}
 
-<section class="page {{ classes }} {{ theme }}" id="chapter_{{ id }}" data-page-index="{{ index }}">
+<section class="page {{ classes }} {{ theme }}" data-component="{{ templateMap[child.template_id] }}" id="chapter_{{ id }}" data-page-index="{{ index }}">
   <div class="frame">
     {% if 'page/page.html.twig' in component %}
       {% for child in children %}
+        <!-- {{ templateMap[child.template_id] }} -->
         {% include templateMap[child.template_id] with child|merge({ templateMap: templateMap }) only %}
       {% endfor %}
     {% elseif component %}
       {% set adenda = {} %}
-      {% if 'chapter__title' in component %}
+      {% if 'cover_page' in component %}
+        {% set adenda = {
+          exhibit__dates: exhibit__dates
+        } %}
+      {% elseif 'chapter__title' in component %}
         {% set adenda = {
           chapter__title: chapter__title,
           chapter__numeral: chapter__numeral

@@ -1,5 +1,6 @@
 <div class="horizontal-image-slider owl-carousel owl-theme {{ classes }}">
   {% for slide in children %}
+  <!-- {{ templateMap[slide.template_id] }} -->
     {% set template = templateMap[slide.template_id] %}
     {% include template with slide only %}
   {% endfor %}
