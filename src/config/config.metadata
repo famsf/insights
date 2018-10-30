@@ -13,6 +13,7 @@ scripts:
       - /js/cloudimage/cloudimage.responsive.min.js
       - /js/cloudimage/cloudimage.custom.js
       - /js/imagezoom/image_zoom.min.js
+      - https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js
   footer:
     all:
       - /js/jquery/jquery.js

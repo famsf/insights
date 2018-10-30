@@ -1,0 +1,23 @@
+{% extends "@layouts/two_up--primary/two_up--primary.html.twig" %}
+
+{% set left = {
+     cols: "medium-3",
+     offset: "medium-offset-2",
+     template: "picturewithcaption.html.twig",
+     data: {
+       caption: caption_1,
+       picture: picture_1,
+     },
+   }
+%}
+
+{% set right = {
+     cols: "medium-4",
+     offset: "medium-offset-1",
+     template: "picturewithcaption.html.twig",
+     data: {
+       caption: caption_2,
+       picture: picture_2,
+     },
+   }
+%}

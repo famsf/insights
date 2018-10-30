@@ -169,6 +169,9 @@ $plyr-color-heather: #b7c5cd !default;
 @import '../components/molecules/footer__cta/footer__cta';
 @import '../components/molecules/footer__navigation/footer__navigation';
 @import '../components/molecules/inline-quote/inline-quote';
+@import '../components/molecules/standalone-quote/standalone-quote';
+@import '../components/molecules/commentary/commentary';
+@import '../components/molecules/AmbientVideo/AmbientVideo';
 @import '../components/molecules/modal/modal';
 @import '../components/molecules/menu--footer/menu--footer';
 @import '../components/molecules/menu--mobile/menu--mobile';
@@ -186,8 +189,10 @@ $plyr-color-heather: #b7c5cd !default;
 @import '../components/molecules/zoom-caption/zoom-caption';
 @import '../components/molecules/zoom-image--fullbleed/zoom-image--fullbleed';
 @import '../components/molecules/zoom-image--inline/zoom-image--inline';
+@import '../components/molecules/zoom-image--inline/zoom-image--inline--mobile';
 @import '../components/molecules/timeline/timeline';
 @import '../components/molecules/image-comparison-slider/image-comparison-slider';
+@import '../components/molecules/instagram-feed/instagram-feed';
 
 // Import Layouts.
 @import '../components/layouts/one_up--primary/one_up--primary';
