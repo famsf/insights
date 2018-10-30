@@ -10,7 +10,7 @@
   {% set theme = "theme--primary-dark" %}
 {% endif %}
 
-<section class="page {{ classes }} {{ theme }}" id="chapter_{{ id }}" data-page-index="{{ index }}">
+<section class="page {{ classes }} {{ theme }}" data-component="templateMap[child.template_id]" id="chapter_{{ id }}" data-page-index="{{ index }}">
   <div class="frame">
     {% if 'page/page.html.twig' in component %}
       {% for child in children %}
