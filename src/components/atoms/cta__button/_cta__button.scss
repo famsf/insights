@@ -22,11 +22,19 @@
     z-index: -1;
   }
 
-  &:after {
-    margin-left: .5rem;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    content: "\f35d";
+  /*
+    // Font Awesome usage
+    &:after {
+      margin-left: .5rem;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f35d";
+    }
+  */
+
+  svg {
+    width: 0.9em;
+    height: 0.9em;
   }
 
   &:hover,
@@ -46,6 +54,13 @@
 
     &:before {
       background: rgba($white, .35);
+    }
+
+    // Switch the SVG icon color to white.
+    svg {
+      polygon, path {
+        fill: white;
+      }
     }
   }
 }
