@@ -43,7 +43,6 @@
       visibility: hidden;
       position: fixed;
       top: 64px;
-      background: #0a0a0a;
       width: 100vw;
       text-align: center;
       z-index: 1;
@@ -113,7 +112,6 @@
       background-color: $white;
       position: absolute;
       left: 23px;
-      margin-top: 18px;;
       @include breakpoint(medium) {
         left: 73px;
       }
@@ -220,7 +218,7 @@
 %no-year-span-timeline {
   > div:first-of-type {
     @include breakpoint(large) {
-      margin-top: 300px;
+      margin-top: 50px;
     }
   }
   .timespan-scroller-pos {
@@ -248,6 +246,22 @@
   }
 }
 
+%primary-theme-timeline {
+  .timeline--year {
+    border-left-color: $primary-color;
+  }
+  .timeline-item-text {
+    @include breakpoint(large) {
+      border-left-color: $primary-color;
+    }
+  }
+  .timeline-item-title {
+    &::before {
+      background-color: $primary-color;
+    }
+  }
+}
+
 .timeline {
   @extend %timeline;
   &.year-span {
@@ -270,5 +284,10 @@
         visibility: visible;
       }
     }
+  }
+}
+.theme--primary {
+  .timeline {
+    @extend %primary-theme-timeline;
   }
 }
