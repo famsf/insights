@@ -18,7 +18,11 @@
       {% endfor %}
     {% elseif component %}
       {% set adenda = {} %}
-      {% if 'chapter__title' in component %}
+      {% if 'cover_page' in component %}
+        {% set adenda = {
+          exhibit__dates: exhibit__dates
+        } %}
+      {% elseif 'chapter__title' in component %}
         {% set adenda = {
           chapter__title: chapter__title,
           chapter__numeral: chapter__numeral
