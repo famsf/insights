@@ -130,7 +130,7 @@ chapters:
           brief: <p>Book art has a long history. In the <em>Book of Kells</em> (ca. 800), the letterform is an expression of transcendence. Even beyond its overt religious significance, the book is truly, in the words of Stéphane Mallarmé, an “<em>instrument spirituel.</em>”</p><small>The <em>Book of Kells</em> (Ireland or Scotland, ca. 800)</small>
           text: 'Chi-Rho page from <em>Book of Kells</em>, Irish or Scottish, ca. 800. Ink on vellum, 13 x 10 1/16 in. (33 x 25.5 cm). © Trinity College Dublin'
         components:
-        - template: "@molecules/Picture/Picture.html.twig"
+        - template: "@molecules/picture/picture.html.twig"
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
           alt: untitled page from parallelement by paul verlaine and pierre bonnard
           style: vertical
@@ -139,7 +139,7 @@ chapters:
           brief: <p>William Blake’s illustrations display a singular vision and deep interpenetration of text and image, a unified expression that has rarely been equaled. Many consider Blake the father of book art.</p><small>William Blake, illustration for <em>Book of Job</em> (1825)</small>
           text: 'William Blake, "Thou hast fulfilled the Judgment of the wicked," plate 16 from the complete proof edition of Blake’s <em>Book of Job</em>, 1825. Engraving, image: 7 3/4 x 6 3/8 in. (19.6 x 16.2 cm). Fine Arts Museums of San Francisco, Museum purchase, William H. Noble Bequest Fund, 1979.1.11.17'
         components:
-        - template: "@molecules/Picture/Picture.html.twig"
+        - template: "@molecules/picture/picture.html.twig"
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
           alt: untitled page from parallelement by paul verlaine and pierre bonnard
           style: vertical
@@ -148,7 +148,7 @@ chapters:
           brief: <p><em>Livres d’artistes</em>, deluxe editions illustrated by contemporary artists, came of age with <em>Parallèlement</em>, published by Ambroise Vollard (1866–1939). His younger peer Daniel-Henry Kahnweiler (1884–1979) published avante-garde writers such as Guillaume Apollinaire, Gertrude Stein, and Max Jacob, illustrated by Derain, Gris, Picasso, Braque, and other.</p><small>Pierre Bonnard and Paul Verlaine, <em>Parallèlement,</em> 1900</small>
           text: 'Pierre Bonnard, <em>Untitled,</em> page 4 of the book <em>Parallèlement</em> by Paul Verlaine (Paris: Ambroise Vollard, 1900), 1887–1900. Lithograph (pink sanguine) on Holland wove paper watermarked <em>Parallèlement,</em> sheet: 11 5/8 x 9 1/2 in. (29.5 x 24 cm); image: 3 5/8 x 7 in. (9.3 x 17.9 cm). Printed by Auguste Clot, Paris (lithographs); and Imprimerie Nationale de France, Paris (text). Binding by René Kieffer. Woodcuts by Tony Beltrand. Fine Arts Museums of San Francisco, The Reva and David Logan Collection of Illustrated Books, 2000.200.45.6'
         components:
-        - template: "@molecules/Picture/Picture.html.twig"
+        - template: "@molecules/picture/picture.html.twig"
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
           alt: untitled page from parallelement by paul verlaine and pierre bonnard
           style: vertical
@@ -157,11 +157,11 @@ chapters:
           brief: '<p>Russian Futurists further developed the notion of the book as art with non-deluxe but conceptually advanced editions. Both the <em>livre d’artiste</em> and the artist-published "democratic multiple," have persisted to the present day, as has the third way taken by <em>La prose</em>, combining high craft with a visionary approach to the book&rsquo;s form.</p><small>El Lissitsky and Vladimir Mayakovsky: <em>Dlia Golosa (For the Voice)</em>, 1923</small>'
           text: 'El Lissitzky (Lazar Markovitch), fourth chapter, page 17 in the book <em>Dlia Golosa (For the Voice)</em> by Vladimir Vladimirovich Mayakovsky (Berlin: Gosizdat, 1923), 1923. Lithograph (color) on cream wove paper, sheet: 7 3/8 x 4 7/8 in. (18.7 x 12.4 cm); image: 5 1/4 x 4 3/8 in. (13.4 x 11.2 cm). Fine Arts Museums of San Francisco, Gift of the Reva and David Logan Foundation, 1998.40.79.8'
         components:
-        - template: "@molecules/Picture/Picture.html.twig"
+        - template: "@molecules/picture/picture.html.twig"
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
           alt: untitled page from parallelement by paul verlaine and pierre bonnard
           style: vertical
-          
+
   # c1p3
   - classes: hide-chapter-nav
     components:
@@ -182,7 +182,7 @@ chapters:
           brief: <p>Book art has a long history. In the <em>Book of Kells</em> (ca. 800), the letterform is an expression of transcendence. Even beyond its overt religious significance, the book is truly, in the words of Stéphane Mallarmé, an “<em>instrument spirituel.</em>”</p><small>The <em>Book of Kells</em> (Ireland or Scotland, ca. 800)</small>
           text: 'Chi-Rho page from <em>Book of Kells</em>, Irish or Scottish, ca. 800. Ink on vellum, 13 x 10 1/16 in. (33 x 25.5 cm). © Trinity College Dublin'
         components:
-        - template: "@molecules/Picture/Picture.html.twig"
+        - template: "@molecules/picture/picture.html.twig"
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
           alt: untitled page from parallelement by paul verlaine and pierre bonnard
           style: vertical
@@ -191,7 +191,7 @@ chapters:
           brief: <p>William Blake’s illustrations display a singular vision and deep interpenetration of text and image, a unified expression that has rarely been equaled. Many consider Blake the father of book art.</p><small>William Blake, illustration for <em>Book of Job</em> (1825)</small>
           text: 'William Blake, "Thou hast fulfilled the Judgment of the wicked," plate 16 from the complete proof edition of Blake’s <em>Book of Job</em>, 1825. Engraving, image: 7 3/4 x 6 3/8 in. (19.6 x 16.2 cm). Fine Arts Museums of San Francisco, Museum purchase, William H. Noble Bequest Fund, 1979.1.11.17'
         components:
-        - template: "@molecules/Picture/Picture.html.twig"
+        - template: "@molecules/picture/picture.html.twig"
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
           alt: untitled page from parallelement by paul verlaine and pierre bonnard
           style: vertical
@@ -200,7 +200,7 @@ chapters:
           brief: <p><em>Livres d’artistes</em>, deluxe editions illustrated by contemporary artists, came of age with <em>Parallèlement</em>, published by Ambroise Vollard (1866–1939). His younger peer Daniel-Henry Kahnweiler (1884–1979) published avante-garde writers such as Guillaume Apollinaire, Gertrude Stein, and Max Jacob, illustrated by Derain, Gris, Picasso, Braque, and other.</p><small>Pierre Bonnard and Paul Verlaine, <em>Parallèlement,</em> 1900</small>
           text: 'Pierre Bonnard, <em>Untitled,</em> page 4 of the book <em>Parallèlement</em> by Paul Verlaine (Paris: Ambroise Vollard, 1900), 1887–1900. Lithograph (pink sanguine) on Holland wove paper watermarked <em>Parallèlement,</em> sheet: 11 5/8 x 9 1/2 in. (29.5 x 24 cm); image: 3 5/8 x 7 in. (9.3 x 17.9 cm). Printed by Auguste Clot, Paris (lithographs); and Imprimerie Nationale de France, Paris (text). Binding by René Kieffer. Woodcuts by Tony Beltrand. Fine Arts Museums of San Francisco, The Reva and David Logan Collection of Illustrated Books, 2000.200.45.6'
         components:
-        - template: "@molecules/Picture/Picture.html.twig"
+        - template: "@molecules/picture/picture.html.twig"
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
           alt: untitled page from parallelement by paul verlaine and pierre bonnard
           style: vertical
@@ -209,11 +209,11 @@ chapters:
           brief: '<p>Russian Futurists further developed the notion of the book as art with non-deluxe but conceptually advanced editions. Both the <em>livre d’artiste</em> and the artist-published "democratic multiple," have persisted to the present day, as has the third way taken by <em>La prose</em>, combining high craft with a visionary approach to the book&rsquo;s form.</p><small>El Lissitsky and Vladimir Mayakovsky: <em>Dlia Golosa (For the Voice)</em>, 1923</small>'
           text: 'El Lissitzky (Lazar Markovitch), fourth chapter, page 17 in the book <em>Dlia Golosa (For the Voice)</em> by Vladimir Vladimirovich Mayakovsky (Berlin: Gosizdat, 1923), 1923. Lithograph (color) on cream wove paper, sheet: 7 3/8 x 4 7/8 in. (18.7 x 12.4 cm); image: 5 1/4 x 4 3/8 in. (13.4 x 11.2 cm). Fine Arts Museums of San Francisco, Gift of the Reva and David Logan Foundation, 1998.40.79.8'
         components:
-        - template: "@molecules/Picture/Picture.html.twig"
+        - template: "@molecules/picture/picture.html.twig"
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
           alt: untitled page from parallelement by paul verlaine and pierre bonnard
           style: vertical
-          
+
 ################################################################################
 ## Footer ######################################################################
 ################################################################################
