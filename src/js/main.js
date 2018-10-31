@@ -52,7 +52,7 @@
   fds.initialize = function () {
     var sy;
     if (!doc.querySelector('.insights-app')) {
-      console.log('Bypassing main js loop in current context to allow for easier single component prototyping');
+      console.log('Bypassing stories javascript');
       return;
     }
     sy = window.pageYOffset;

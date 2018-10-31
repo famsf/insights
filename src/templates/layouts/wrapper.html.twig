@@ -44,14 +44,11 @@
       {% for sheet in config.stylesheets %}
         <link rel="stylesheet" type="text/css" href="{{ sheet }}?{{ 'now'|date('U') }}">
       {% endfor %}
-      
+
       <link rel="stylesheet" type="text/css" href="/styles/{{ slug }}.css?{{ 'now'|date('U') }}">
 
-      {# % for sheet in config.stylesheets % #}
-        {# % if slug is "la-prose" % #}
-      {# % endfor % #}
   </head>
-  <body class="{{bodyClass|clean_id}} {{classes}} {{bodyId|clean_id}} {{ slug }}">
+  <body class="{{bodyClass|clean_id}} {{classes}} {{ slug }}">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPPZRZB"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -62,7 +59,7 @@
     {% for script in config.scripts.footer.kalastatic %}
       <script src="{{ script }}"></script>
     {% endfor %}
-    {% if bodyId == 'hub' %}
+    {% if slug == 'hub' %}
       {% for script in config.scripts.footer.hub %}
         <script src="{{ script }}"></script>
       {% endfor %}

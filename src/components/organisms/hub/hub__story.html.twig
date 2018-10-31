@@ -5,9 +5,9 @@
     {% endif %}
     {% include "@atoms/img/img.html.twig" with {
       style: 'horizontal',
-      src: image_src,
-      url: image_src,
-      alt: image_alt
+      src: image.src,
+      url: image.src,
+      alt: image.alt
     } only %}
   </div>
   <h3 class="story-title">{{ title }}</h3>
@@ -21,7 +21,7 @@
   {% endif %}
   {% if tags is not empty %}
     {% for tag in tags|split(',') %}
-      <div data-tag-value="{{ tag }}"></div>
+      <div data-tag-value="{{ tag|trim }}"></div>
     {% endfor %}
   {% endif %}
 </div>

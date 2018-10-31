@@ -1,9 +1,5 @@
 @charset 'utf-8';
 
-// Import Base Foundation Settings.
-@import 'base/gauguin-settings';
-@import 'base/extends';
-@import 'base/mixins';
 
 // Import Foundation and Motion UI.
 @import 'foundation';
@@ -109,8 +105,12 @@ $plyr-color-heather: #b7c5cd !default;
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+// Import Base Foundation Settings.
+@import 'base/gauguin-settings';
+@import 'base/extends';
+@import 'base/mixins';
+
 // Import Base Styles.
-@import 'base/typography';
 @import 'base/extends';
 @import 'base/styles';
 
@@ -121,7 +121,6 @@ $plyr-color-heather: #b7c5cd !default;
 @import '../components/environments/pages/pages';
 @import '../components/environments/klimt-rodin/klimt-rodin';
 @import '../components/environments/la-prose/la-prose';
-@import '../components/environments/hub/hub';
 
 // Import Atoms.
 // @import '../components/atoms/fps/fps';
@@ -187,9 +186,7 @@ $plyr-color-heather: #b7c5cd !default;
 @import '../components/molecules/zoom-caption/zoom-caption';
 @import '../components/molecules/zoom-image--fullbleed/zoom-image--fullbleed';
 @import '../components/molecules/zoom-image--inline/zoom-image--inline';
-@import '../components/molecules/zoom-image--inline/zoom-image--inline--mobile';
 @import '../components/molecules/timeline/timeline';
-@import '../components/molecules/hub/hub';
 @import '../components/molecules/image-comparison-slider/image-comparison-slider';
 
 // Import Layouts.
