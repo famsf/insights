@@ -1,0 +1,20 @@
+{
+  "imageOne": {
+    "src": "http://www.fillmurray.com/768/1024",
+    "url": "http://www.fillmurray.com/768/1024",
+    "alt": "A picture of Bill Murray"
+  },
+  "imageTwo": {
+    "src": "http://www.fillmurray.com/g/768/1024",
+    "url": "http://www.fillmurray.com/g/768/1024",
+    "alt": "A photo of Bill Murray"
+  },
+  "sliderId": "slider1",
+  "startPosition": 50,
+  
+  "caption": {
+    "id": "caption",
+    "brief": "Lorem ipsum",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam et felis ac arcu cursus imperdiet. Mauris volutpat, ligula sit amet semper egestas, nunc velit pretium sem, id ornare nisl nisl nec erat."
+  }
+}

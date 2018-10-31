@@ -41,8 +41,11 @@ bower_components
 
 # Users Environment Variables
 .lock-wscript
-
 .DS_Store
 
 # GatherContent assets
 src/assets/images/gathercontent
+
+# Netbeans project files
+nbproject
+nbproject/*
