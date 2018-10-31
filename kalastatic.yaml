@@ -90,8 +90,8 @@ pluginOpts:
       1390484: '@kalastatic/components/organisms/footer-ctas/footer-ctas.html.twig'
       1390659: '@kalastatic/components/organisms/footer-id/footer-id.html.twig'
       1418654: '@kalastatic/components/molecules/image-comparison-slider/image-comparison-slider.html.twig'
-      1422907: '@kalastatic/components/organisms/hug/hub.html.twig'
-      1422908: '@kalastatic/components/organisms/hug/hub__story.html.twig'
+      1422907: '@kalastatic/components/organisms/hub/hub.html.twig'
+      1422908: '@kalastatic/components/organisms/hub/hub__story.html.twig'
       # dummy commit
     mappings:
       id: id
