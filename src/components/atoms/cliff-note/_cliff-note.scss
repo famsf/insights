@@ -10,6 +10,8 @@ Styleguide COMPONENTS.cliff-note
 */
 
 %cliff-note {
+  @include font-sizes(30);
+  @include responsive(line-height, 42px);
   position: relative;
   font-family: $header-font-family;
   font-weight: bold;
@@ -18,9 +20,9 @@ Styleguide COMPONENTS.cliff-note
   max-width: 20rem;
   margin: auto;
 
-  &, & p {
-    @include font-sizes(30);
-    @include responsive(line-height, 42px);
+  p {
+    font-size: inherit;
+    line-height: inherit;
   }
 
   &:before {

@@ -100,6 +100,7 @@
       slideSpeed: 1000,
       smartSpeed: 1000,
       loop: false,
+      nav: false,
       dots: true,
       items: 1,
       merge: true,
