@@ -1,4 +1,6 @@
 /* eslint-disable */
+(function ($) {
+
 $.fn.BeerSlider = function( options ) {
   options = options || {};
   return this.each( function () {
@@ -8,3 +10,4 @@ $.fn.BeerSlider = function( options ) {
 $( ".beer-slider" ).each( function( index, el ) {
   $( el ).BeerSlider( {start: $( el ).data( "start" ) } )
 });
+}(jQuery));
