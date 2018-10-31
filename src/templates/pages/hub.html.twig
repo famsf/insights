@@ -6,19 +6,17 @@
     twitter_url: twitter_url
   } only %}
   <div id="app" class="chapters_container off-canvas-content" >
-    {%
-      include "@organisms/hub/hub.html.twig" with {
+    {% include "@organisms/hub/hub.html.twig" with {
         index: loop.index0,
         templateMap: gatherContent.templateMap,
         stories: children
-      } only
-    %}
+    } only %}
   </div>
 </div>
-{# % include '@molecules/off-canvas/off-canvas.html.twig' with {
+{% include '@molecules/off-canvas/off-canvas.html.twig' with {
   chapters: children,
   title: story_title,
   tickets_url: tickets_url,
   sections: footer.sections,
   classes: footer.classes
-} only % #}
+} only %}
