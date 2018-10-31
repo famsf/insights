@@ -52,8 +52,10 @@
       @include responsive(margin-bottom, 20vh, 0);
     }
 
-    picture {
+    picture,
+    .picture {
       width: 100% !important;
+
       margin-bottom: 0;
 
       &:after {
@@ -85,8 +87,8 @@
     }
 
     img {
-      width: 100%;
-      max-height: 100%;
+      width: 100% !important;
+      max-height: 100% !important;
       border-radius: 1000rem;
       overflow: hidden;
       height: auto;
@@ -310,7 +312,8 @@
         transform: translateX(0);
       }
 
-      picture {
+      picture,
+      .picture {
         transform: translate(0, 0);
       }
     }
@@ -360,7 +363,8 @@
         }
       }
 
-      picture {
+      picture,
+      .picture {
         &:after {
           background: linear-gradient(0.375turn, transparent, rgba($black, .75));
         }
