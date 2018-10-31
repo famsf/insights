@@ -2,6 +2,9 @@
   {% for slide in children %}
   <!-- {{ templateMap[slide.template_id] }} -->
     {% set template = templateMap[slide.template_id] %}
-    {% include template with slide only %}
+    {# TODO: Figure out which template is missing. #}
+    {# if template #}
+      {% include template with slide only %}
+    {# endif #}
   {% endfor %}
 </div>
