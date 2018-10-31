@@ -110,7 +110,6 @@ $plyr-color-heather: #b7c5cd !default;
 @include motion-ui-animations;
 
 // Import Base Styles.
-@import 'base/typography';
 @import 'base/extends';
 @import 'base/styles';
 

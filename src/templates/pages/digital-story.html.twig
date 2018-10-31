@@ -1,8 +1,14 @@
 <div id="insights-app" class="insights-app off-canvas-wrapper {{ slug }}">
-  {% include '@molecules/top-bar/top-bar.html.twig' with { tagline: tagline, tickets_url: tickets_url, facebook_url: facebook_url, twitter_url: twitter_url } only %}
+  {% include '@molecules/top-bar/top-bar.html.twig' with {
+    tagline: tagline,
+    tickets_url: tickets_url,
+    facebook_url: facebook_url,
+    twitter_url: twitter_url
+  } only %}
   {% include '@molecules/chapter-nav/chapter-nav.html.twig' with { chapters: children } only %}
   <div id="app" class="chapters_container off-canvas-content" >
   {% for chapter in children %}
+    {{ chapter.template }}
     {%
       include "@organisms/chapter/chapter.html.twig" with chapter|merge({
         story__title: story__title|trim,

@@ -1,0 +1,27 @@
+<div class="hub-story">
+  <div class="story-image">
+    {% if is_on_view %}
+      <div class="on-view on-view-story">On View</div>
+    {% endif %}
+    {% include "@atoms/img/img.html.twig" with {
+      style: 'horizontal',
+      src: image.src,
+      url: image.src,
+      alt: image.alt
+    } only %}
+  </div>
+  <h3 class="story-title">{{ title }}</h3>
+  {% if subtitle is not empty %}
+    <span class="story-subtitle">{{ subtitle }}</span>
+  {% endif %}
+  {% if read_link is not empty %}
+    <div class="read-link-wrapper">
+      {{ read_link }}
+    </div>
+  {% endif %}
+  {% if tags is not empty %}
+    {% for tag in tags|split(',') %}
+      <div data-tag-value="{{ tag|trim }}"></div>
+    {% endfor %}
+  {% endif %}
+</div>
