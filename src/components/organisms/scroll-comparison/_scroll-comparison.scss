@@ -19,7 +19,8 @@
     }
   }
 
-  picture {
+  picture,
+  .picture {
     margin-bottom: 1rem;
 
     @include breakpoint(medium) {
@@ -31,7 +32,8 @@
     @extend .small-4;
     transition: all .5s ease-in-out;
 
-    picture {
+    picture,
+    .picture {
       position: relative;
 
       &:before {
@@ -103,7 +105,8 @@
     &.active {
       @extend .small-8;
 
-      picture {
+      picture,
+      .picture {
         &:before,
         &:after {
           opacity: 0;
