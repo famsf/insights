@@ -245,10 +245,12 @@ pluginOpts:
       c__caption: Content_Image-C-Caption
       c__caption__brief: Content_Image-C-Caption-Brief
       # Image Comparison slider
-      comp__1__image: Content_Comp-Image-1
-      comp__1__image-alt: Content_Comp-Image-1-Alt
-      comp__2__image: Content_Comp-Image-2
-      comp__2__image-alt: Content_Comp-Image-2-Alt
+      comp__1__image: Content_Image-1
+      comp__1__image_alt: Content_Image-1-Alt
+      comp__2__image: Content_Image-2
+      comp__2__image_alt: Content_Image-2-Alt
+      startPosition: Content_Slider_Start_Position
+
       # Hub
       # Hub Story
       location: Content_Museum-Location
