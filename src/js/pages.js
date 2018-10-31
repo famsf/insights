@@ -348,6 +348,9 @@
     page.el.classList.remove('triggered');
     page.isTriggered = false;
     pages.untriggerVideo(page);
+
+    // Fire off.page.triggered event
+    $(document).trigger('off.page.triggered');
   };
 
   pages.triggerPage = function (page) {
@@ -355,6 +358,10 @@
     page.istriggered = true;
     pages.triggerTopBarEvents(page);
     pageEl.classList.add('triggered');
+
+    // Fire on.page.triggered event
+    $(document).trigger('on.page.triggered');
+
     if (pageEl.classList.contains('hide-chapter-nav')) {
       fds.chapterNav.hideNav();
     }

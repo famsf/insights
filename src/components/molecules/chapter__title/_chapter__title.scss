@@ -63,15 +63,42 @@ Markup: chapter__title.html.twig
     }
 
     .numeral {
-      font-size: 10rem;
+      @include font-sizes(140, 220);
+      @include responsive(line-height, 165px, 200px);
       color: white;
       font-weight: 900;
     }
 
     .title {
-      font-size: 3.125rem;
+      @include font-sizes(30, 50);
+      @include responsive(line-height, 40px, 75px);
       font-style: italic;
     }
+  }
+
+  .caption {
+    margin-bottom: 0;
+
+    figcaption {
+      @include responsive(max-width, calc(100% - 2rem), 500px);
+      position: absolute;
+      z-index: 50;
+      bottom: 3rem;
+      right: 1rem;
+    }
+  }
+
+  .caption__brief {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 50;
+  }
+
+  .toggle-caption,
+  .toggle-caption:hover {
+    color: $white;
+    border-color: $white;
   }
 }
 

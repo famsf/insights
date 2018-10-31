@@ -11,4 +11,8 @@
     </div>
   </div>
 
+  {% if caption %}
+    {% include "@atoms/caption/caption.html.twig" with caption only %}
+  {% endif %}
+
 </div>

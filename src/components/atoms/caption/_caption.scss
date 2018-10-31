@@ -1,10 +1,10 @@
 %caption {
   margin-bottom: 1rem;
+  @include font-sizes(12);
+  @include responsive(line-height, 16px);
 
   .caption__brief {
     display: inline-block;
-    line-height: 1.25rem;
-    font-size: $small-font-size;
   }
 
   .toggle-caption {
@@ -13,14 +13,16 @@
     height: 1.25rem;
     width: 1.25rem;
     position: relative;
+
     .i-info {
       text-transform: lowercase;
-      font-size: 1.2em;
+      font-size: 15px;
       font-family: 'freight-text-pro';
       font-weight: 700;
-      position: absolute;
-      top: 1px;
-      left: 5px;
+      display: inline-block;
+      margin-left: 0.5px;
+      height: 12px;
+      width: 5px;
     }
   }
 
@@ -46,8 +48,10 @@
     }
 
     figcaption {
-      padding: 0;
-      background: transparent;
+      margin-top: 1rem;
+      color: $white;
+      padding: 1rem;
+      background: rgba($white, .2);
     }
   }
 }

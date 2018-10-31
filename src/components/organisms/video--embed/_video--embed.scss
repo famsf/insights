@@ -54,7 +54,7 @@ Markup: video--embed.html.twig
 
   .overlay & {
     @include breakpoint(medium) {
-      margin-top: 3rem;
+      margin-top: -2rem;
     }
   }
 }

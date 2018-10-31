@@ -1,26 +1,7 @@
-{#
-  Usage Example:
-  - components:
-  - template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
-    left:
-      components:
-      - template: "@molecules/zoom-image--inline/zoom-image--inline.html.twig"
-        id:
-        captions:
-        - xcoord: "10"
-          ycoord: "10"
-          heading_text: "Lorem Ipsum"
-          body_text: "Detail of La prose du Transsibérien et de la Petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars."
-        - xcoord: "50"
-          ycoord: "50"
-          heading_text: "DJ Khaled"
-          body_text: "Detail of La prose du Transsibérien et de la Petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars."
-        picture:
-          url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/2_la-prose-book-closed.jpg
-          alt: Detail of La prose du Transsibérien et de la Petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars
-          style: vertical
-#}
 <div class="zoom-image--inline">
+  {% include '@molecules/zoom-image--inline/zoom-image--inline--mobile.html.twig' with {
+    mobile_images: mobile_images
+  } only %}
   <div class="inline-image-zoom-wrapper">
       {% for caption in captions %}
         {% include '@molecules/zoom-caption/zoom-caption.html.twig' with {
@@ -30,6 +11,6 @@
           ycoord: caption.ycoord
         } only %}
       {% endfor %}
-      {% include "@molecules/Picture/Picture.html.twig" with picture only %}
+      {% include "@molecules/picture/picture.html.twig" with picture only %}
   </div>
 </div>

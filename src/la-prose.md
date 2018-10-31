@@ -27,7 +27,7 @@ chapters:
         alt: "Detail of La prose du Transsibérien et de la Petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars"
   - components:
     - template: "@molecules/zoom-image--fullbleed/zoom-image--fullbleed.html.twig"
-      url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/16_stravinsky-diaghilev.jpg"
+      url: "https://insights.famsf.org/assets/images/delaunay.jpg"
       alt: Fubar
       style: horizontal
   - components:
@@ -36,6 +36,19 @@ chapters:
         components:
         - template: "@molecules/zoom-image--inline/zoom-image--inline.html.twig"
           id:
+          mobile_images:
+            - heading_text: "Lorem Ipsum"
+              body_text: "<p>Detail of La prose du Transsibérien et de la Petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars.</p>"
+              src: https://www.fillmurray.com/g/800/600
+              alt: "some alt"
+            - heading_text: "Lorem Ipsum"
+              body_text: "<p>Detail of La prose du Transsibérien et de la Petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars.</p>"
+              src: https://www.fillmurray.com/g/800/600
+              alt: "some alt"
+            - heading_text: "Lorem Ipsum"
+              body_text: "<p>Detail of La prose du Transsibérien et de la Petite Jehanne de France by Sonia Delaunay-Terk and Blaise Cendrars.</p>"
+              src: https://www.fillmurray.com/g/800/600
+              alt: "some alt"
           captions:
           - xcoord: "10"
             ycoord: "10"
@@ -61,55 +74,45 @@ chapters:
   - classes: hide-chapter-nav theme--dark
     components:
       - template: "@molecules/timeline/timeline.html.twig"
-        title: "Without timeline span"
+        title: "With timeline span"
         is_year_span: false
         years:
-        - year: "1800"
-          year_title: "1800"
+        - year_title: "1801"
           year_subtitle: "Lorem Ipsum Dolor"
-          description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam."
+          description: "Lorem ipsum dolor sit amet, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+          images:
+          - src: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
+            alt: "fubar"
+            caption: "Lorem ipsum dolor"
+            style: "square"
+        - year_title: "1803"
+          year_subtitle: "Lorem Ipsum Dolor"
+          description: "Lorem ipsum dolor sit a Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
           images:
           - src: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
             alt: "fubar"
             caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
             style: "square"
-        - year: "1900"
-          year_title: "1900"
+        - year_title: "1818"
           year_subtitle: "Lorem Ipsum Dolor"
-          description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam."
+          description: "Lorem ipsum dolor sit a Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
           images:
           - src: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
             alt: "fubar"
             caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
             style: "square"
-  - classes: hide-chapter-nav theme--dark
-    components:
-      - template: "@molecules/timeline/timeline.html.twig"
-        title: "With timeline span"
-        is_year_span: true
-        years:
-        - year: "1800"
-          year_title: "1800 - 1900"
+        - year_title: "1830"
           year_subtitle: "Lorem Ipsum Dolor"
-          description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam."
+          description: "Lorem ipsum dolor sit a Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
           images:
           - src: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
             alt: "fubar"
             caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
             style: "square"
-          - src: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
-            alt: "fubar"
-            caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-            style: "square"
-        - year: "1900"
-          year_title: "1900 - 2000"
+        - year_title: "1834"
           year_subtitle: "Lorem Ipsum Dolor"
-          description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam."
+          description: "Lorem ipsum dolor sit a Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
           images:
-          - src: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
-            alt: "fubar"
-            caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-            style: "square"
           - src: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
             alt: "fubar"
             caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
@@ -218,7 +221,7 @@ chapters:
     - template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
       left:
         components:
-        - template: "@molecules/Picture/PictureWithCaption.html.twig"
+        - template: "@molecules/picture/picturewithcaption.html.twig"
           caption:
             id: c1p3-caption-1
             text: 'Sonia Delaunay-Terk, detail of <em>La
@@ -246,7 +249,7 @@ chapters:
     - template: "@organisms/scroll-comparison/scroll-comparison.html.twig"
       left:
         visible:
-        - template: "@molecules/Picture/PictureWithCaption.html.twig"
+        - template: "@molecules/picture/picturewithcaption.html.twig"
           caption:
             brief: 'Photo: Sonia Delaunay-Terk, 1931. Photograph by Florence Henri. Martini & Ronchetti Gallery'
           picture:
@@ -268,7 +271,7 @@ chapters:
           dropcap: false
       right:
         visible:
-        - template: "@molecules/Picture/PictureWithCaption.html.twig"
+        - template: "@molecules/picture/picturewithcaption.html.twig"
           caption:
             brief: Blaise Cendrars, ca. 1907. Wikimedia Commons
           picture:
@@ -306,7 +309,7 @@ chapters:
           brief: <p>Book art has a long history. In the <em>Book of Kells</em> (ca. 800), the letterform is an expression of transcendence. Even beyond its overt religious significance, the book is truly, in the words of Stéphane Mallarmé, an “<em>instrument spirituel.</em>”</p><small>The <em>Book of Kells</em> (Ireland or Scotland, ca. 800)</small>
           text: 'Chi-Rho page from <em>Book of Kells</em>, Irish or Scottish, ca. 800. Ink on vellum, 13 x 10 1/16 in. (33 x 25.5 cm). © Trinity College Dublin'
         components:
-        - template: "@molecules/Picture/Picture.html.twig"
+        - template: "@molecules/picture/picture.html.twig"
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/5_book-of-kells.jpg
           alt: untitled page from parallelement by paul verlaine and pierre bonnard
           style: vertical
@@ -315,7 +318,7 @@ chapters:
           brief: <p>William Blake’s illustrations display a singular vision and deep interpenetration of text and image, a unified expression that has rarely been equaled. Many consider Blake the father of book art.</p><small>William Blake, illustration for <em>Book of Job</em> (1825)</small>
           text: 'William Blake, "Thou hast fulfilled the Judgment of the wicked," plate 16 from the complete proof edition of Blake’s <em>Book of Job</em>, 1825. Engraving, image: 7 3/4 x 6 3/8 in. (19.6 x 16.2 cm). Fine Arts Museums of San Francisco, Museum purchase, William H. Noble Bequest Fund, 1979.1.11.17'
         components:
-        - template: "@molecules/Picture/Picture.html.twig"
+        - template: "@molecules/picture/picture.html.twig"
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/6_book-of-job.jpg
           alt: untitled page from parallelement by paul verlaine and pierre bonnard
           style: vertical
@@ -324,7 +327,7 @@ chapters:
           brief: <p><em>Livres d’artistes</em>, deluxe editions illustrated by contemporary artists, came of age with <em>Parallèlement</em>, published by Ambroise Vollard (1866–1939). His younger peer Daniel-Henry Kahnweiler (1884–1979) published avante-garde writers such as Guillaume Apollinaire, Gertrude Stein, and Max Jacob, illustrated by Derain, Gris, Picasso, Braque, and other.</p><small>Pierre Bonnard and Paul Verlaine, <em>Parallèlement,</em> 1900</small>
           text: 'Pierre Bonnard, <em>Untitled,</em> page 4 of the book <em>Parallèlement</em> by Paul Verlaine (Paris: Ambroise Vollard, 1900), 1887–1900. Lithograph (pink sanguine) on Holland wove paper watermarked <em>Parallèlement,</em> sheet: 11 5/8 x 9 1/2 in. (29.5 x 24 cm); image: 3 5/8 x 7 in. (9.3 x 17.9 cm). Printed by Auguste Clot, Paris (lithographs); and Imprimerie Nationale de France, Paris (text). Binding by René Kieffer. Woodcuts by Tony Beltrand. Fine Arts Museums of San Francisco, The Reva and David Logan Collection of Illustrated Books, 2000.200.45.6'
         components:
-        - template: "@molecules/Picture/Picture.html.twig"
+        - template: "@molecules/picture/picture.html.twig"
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/7_parallelement.jpg
           alt: untitled page from parallelement by paul verlaine and pierre bonnard
           style: vertical
@@ -333,7 +336,7 @@ chapters:
           brief: '<p>Russian Futurists further developed the notion of the book as art with non-deluxe but conceptually advanced editions. Both the <em>livre d’artiste</em> and the artist-published "democratic multiple," have persisted to the present day, as has the third way taken by <em>La prose</em>, combining high craft with a visionary approach to the book&rsquo;s form.</p><small>El Lissitsky and Vladimir Mayakovsky: <em>Dlia Golosa (For the Voice)</em>, 1923</small>'
           text: 'El Lissitzky (Lazar Markovitch), fourth chapter, page 17 in the book <em>Dlia Golosa (For the Voice)</em> by Vladimir Vladimirovich Mayakovsky (Berlin: Gosizdat, 1923), 1923. Lithograph (color) on cream wove paper, sheet: 7 3/8 x 4 7/8 in. (18.7 x 12.4 cm); image: 5 1/4 x 4 3/8 in. (13.4 x 11.2 cm). Fine Arts Museums of San Francisco, Gift of the Reva and David Logan Foundation, 1998.40.79.8'
         components:
-        - template: "@molecules/Picture/Picture.html.twig"
+        - template: "@molecules/picture/picture.html.twig"
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/8_lissitzky.jpg
           alt: untitled page from parallelement by paul verlaine and pierre bonnard
           style: vertical
@@ -377,7 +380,7 @@ chapters:
     - template: "@organisms/scroll-comparison/scroll-comparison.html.twig"
       left:
         visible:
-        - template: "@molecules/Picture/PictureWithCaption.html.twig"
+        - template: "@molecules/picture/picturewithcaption.html.twig"
           caption:
             brief: 'Stéphane Mallarmé, ca. 1890. Photograph by Nadar studio. © The New York Public Library'
           picture:
@@ -397,7 +400,7 @@ chapters:
           text: '&lsquo;One Toss of the Dice&rsquo; was the birth certificate of modern poetry.'
       right:
         visible:
-        - template: "@molecules/Picture/PictureWithCaption.html.twig"
+        - template: "@molecules/picture/picturewithcaption.html.twig"
           caption:
             brief: Guillaume Apollinaire with a shrapnel wound at the temple, 1916. Wikimedia Commons
           picture:
@@ -432,7 +435,7 @@ chapters:
           brief: 'Pablo Picasso and Max Jacob, <em>Saint Matorel,</em> 1911. The avant-garde writer Jacob was one of Picasso’s earliest friends in Paris. Picasso spent the summer of 1910 in Cadaqués, Spain, where he made a series of etchings for Jacob’s <em>Saint Matorel</em> that are among his greatest Cubist prints.'
           text: "Pablo Picasso, <em>Mademoiselle Léonie dans une chaise longue</em> in the book <em>Saint Matorel</em> by Max Jacob (Paris: Henry Kahnweiler Éditeur, 1911), 1911. Etching on ivory laid Holland van Gelder paper, 7 3/16 in. (19.8 x 14.2 cm). Printed by Eugène Delâtre, Paris (plates); and Paul Birault, Paris (text). Fine Arts Museums of San Francisco, The Reva and David Logan Collection of Illustrated Books, 2000.200.59.1-4"
         components:
-        - template: "@molecules/Picture/Picture.html.twig"
+        - template: "@molecules/picture/picture.html.twig"
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/12_picasso-jacob.jpg
           alt: the book saint matorel by max jacob and pablo picasso
       - caption:
@@ -440,7 +443,7 @@ chapters:
           brief: "André Derain and Guillaume Apollinaire: <em>L'enchanteur pourrissant, </em>1909. This was a book of firsts: Apollinaire's first published book, illustrated with Derain's first book illustrations&mdash;and also the first book from the great publisher Daniel-Henry Kahnweiler, then age 25."
           text: "André Derain, <em>Untitled,</em> title page, publisher’s detail, in the book <em>L'enchanteur pourrissant</em> by Guillaume Apollinaire (Paris: Henry Kahnweiler, 1909), 1909. Woodcut on ivory Arches laid paper, sheet: 10 7/16 x 7 7/8 in. (26.5 x 20 cm); image: 2 1/2 x 2 7/8 in. (6.4 x 7.3 cm). Printed by Paul Birault, Paris. Fine Arts Museums of San Francisco, The Reva and David Logan Collection of Illustrated Books, 2000.200.49.1"
         components:
-        - template: "@molecules/Picture/Picture.html.twig"
+        - template: "@molecules/picture/picture.html.twig"
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/13_lenchanteur-pourrissant.jpg
           alt:  title page from the book L'Enchanteur pourrissant by Guillaume Apollinaire
       - caption:
@@ -448,7 +451,7 @@ chapters:
           brief: " Fernand Léger and Blaise Cendrars, <em>La fine du monde, filmée par l’ange N.-D.,</em> 1919. Both Léger and Cendrars had suffered serious injuries in the trenches in the First World War, and each felt a strong affinity with the other’s work. <em>La fin du monde</em> was conceived as a screenplay, begun in collaboration with Guillaume Apollinaire and Jean Cocteau, both of whom soon dropped out of the project."
           text: "Fernand Léger, twelfth illustration in the book <em>La fin du monde, filmée par l&rsquo;ange N.-D.</em> by Blaise Cendrars (Paris: Éditions de la Sirène, 1919), 1919. Color pochoir on ivory wove Lafuma paper, sheet: 12 5/8 x 9 13/16 in. (32 x 25 cm); image: 12 5/8 x 3 1/8 in. (32 x 7.9 cm), Fine Arts Museums of San Francisco, Gift of the Reva and David Logan Foundation, 1998.40.77.12"
         components:
-        - template: "@molecules/Picture/Picture.html.twig"
+        - template: "@molecules/picture/picture.html.twig"
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/14_la-fin-du-monde.jpg
           alt: illustration in the book <em>La Fin du monde</em> by Blaise Cendrars and Fernand Léger
       - caption:
@@ -456,7 +459,7 @@ chapters:
           brief: "Juan Gris and Raymond Radiguet, <em>Denise,</em> 1926. A charismatic prodigy, Radiguet died in 1923 at age 20, leaving behind two brilliant and scandalous novels and a string of lovers, male and female, from the bohemian circles of Paris. Gris met his own death at age 40, in the year following publication of <em>Denise</em>."
           text: "Juan Gris, cover of <em>Denise</em> by Raymond Radiguet (Paris: Éditions de la Galerie Simon, 1926), 1926. Lithograph on <em>japon ancien,</em> 10 3/8 x 7 11/16 in. (26.4 x 19.5 cm). Fine Arts Museums of San Francisco, Gift of the Reva and David Logan Foundation, 1998.40.55.1&ndash;5. © 2018 Artists Rights Society (ARS), New York / ADAGP, Paris"
         components:
-        - template: "@molecules/Picture/Picture.html.twig"
+        - template: "@molecules/picture/picture.html.twig"
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/15_denise.jpg
           alt: title page from the book Denise by Raymond Radiguet and Juan Gris
   # c2p4
@@ -464,7 +467,7 @@ chapters:
     - template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
       left:
         components:
-        - template: "@molecules/Picture/PictureWithCaption.html.twig"
+        - template: "@molecules/picture/picturewithcaption.html.twig"
           caption:
             id: c2p6-caption-1
             brief: <em>The New York Times</em>, published June 8, 1913
@@ -493,7 +496,7 @@ chapters:
     - template: "@layouts/two_up--even_cols/two_up--even_cols.html.twig"
       left:
         components:
-        - template: "@molecules/Picture/PictureWithCaption.html.twig"
+        - template: "@molecules/picture/picturewithcaption.html.twig"
           caption:
             id: c2p6-caption-2
             brief: Sergei Diaghilev (left) with Igor Stravinsky
@@ -526,7 +529,7 @@ chapters:
           brief: 'Marcel Duchamp creates his first "ready-made," <em>Bicycle Wheel</em>'
           text: "Marcel Duchamp, <em>Bicycle Wheel</em>, third version, 1951. Metal wheel mounted on painted wood stool, 51 x 25 x 16 1/2 in. (129.5 x 63.5 x 41.9 cm). The Museum of Modern Art, New York, The Sidney and Harriet Janis Collection, 595.1967.a–b. The Museum of Modern Art (MoMA), New York, USA. © Album / Alamy Stock Photo"
         components:
-        - template: "@molecules/Picture/Picture.html.twig"
+        - template: "@molecules/picture/picture.html.twig"
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/17_duchamp.jpg
           alt: third version of Bicycle Wheel by Marcel Duchamp
       - caption:
@@ -534,7 +537,7 @@ chapters:
           brief: "Marcel Proust publishes <em>Swann’s Way</em> (manuscript notes shown here)"
           text: "Some of Marcel Proust’s notes for <em>Swann’s Way</em>, with doodles. © Bibliothèque nationale de France (BnF), Paris, Dist. RMN-Grand Palais / Art Resource, NY"
         components:
-        - template: "@molecules/Picture/Picture.html.twig"
+        - template: "@molecules/picture/picture.html.twig"
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/18_proust.jpg
           alt: pages of Marcel Proust’s notes for <em>Swann’s Way</em> with drawings
       - caption:
@@ -542,7 +545,7 @@ chapters:
           brief: "Maurice Ravel composes <em>Trois poèmes de Stéphane Mallarmé</em>"
           text: "Maurice Ravel. Bibliothèque nationale de France"
         components:
-        - template: "@molecules/Picture/Picture.html.twig"
+        - template: "@molecules/picture/picture.html.twig"
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/19_maurice-ravel.jpg
           alt: photo of maurice ravel
       - caption:
@@ -550,7 +553,7 @@ chapters:
           brief: "Guillaume Apollinaire publishes <em>Alcools</em>, with a portrait by Pablo Picasso and etchings by Louis Marcoussis"
           text: "Guillaume Apollinaire: <em>Alcools</em>, with a portrait by Pablo Picasso and etchings by Louis Marcoussis (Paris: Mercure de France, 1913), 1913"
         components:
-        - template: "@molecules/Picture/Picture.html.twig"
+        - template: "@molecules/picture/picture.html.twig"
           url: https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/20_alcools.jpg
           alt: title page for the book alcools by guillaume apollinaire with a portrait by Picasso and etchings by Louis Marcoussis
 
@@ -595,7 +598,7 @@ chapters:
             target: _blank
       left:
         components:
-        - template: "@molecules/Picture/PictureWithCaption.html.twig"
+        - template: "@molecules/picture/picturewithcaption.html.twig"
           caption:
             id: c3p3-caption-1
             brief: Detail of <em>La prose du Transsibérien et de la Petite Jehanne de France</em> by Sonia Delaunay-Terk and Blaise Cendrars, 1913
@@ -619,7 +622,7 @@ chapters:
             text: "<em>La prose</em> is at once a simultaneous riot of colors, as both painter and poet intended, according to the authors' acquaintance with the theories of Michel-Eugène Chevreul, author of <em>De la loi du contraste simultané des couleurs</em> (<em>The Laws of Contrast of Color</em>), 1839. Chevreul experimented with a color wheel, and his discoveries had a great influence on the Impressionists and the Post-Impressionists, and, in turn, on the whirling colors of this brightly-lit scroll of a poem."
       left:
         components:
-        - template: "@molecules/Picture/PictureWithCaption.html.twig"
+        - template: "@molecules/picture/picturewithcaption.html.twig"
           caption:
             id: c3p4-caption-1
             brief: Color wheel by Michel-Eugène Chevreul, 1839
@@ -643,7 +646,7 @@ chapters:
             text: "[Robert Delaunay] closed the shutters and shut himself up in his dark room... He made a little hole in the shutter with a brace and bit. A thin ray of sunlight filtered into the [room] and he began to paint it... to analyze all its elements of form and color. Without knowing it, he was doing spectrum analysis. He worked for months like this... reaching the sources of emotion without any subject matter whatever."
       left:
         components:
-        - template: "@molecules/Picture/PictureWithCaption.html.twig"
+        - template: "@molecules/picture/picturewithcaption.html.twig"
           caption:
             id: c3p5-caption-1
             brief: "Robert Delaunay’s shaped canvas <em>Windows Open Simultaneously</em>, 1912"
@@ -698,7 +701,7 @@ chapters:
             classes: margin-bottom-2
             text: "<p>Kitty Maryatt has identified 30 separate typefaces used in the typographic composition for the poem. The book was printed at Imprimerie Crété, then the largest printing facility in France. Cendrars provided detailed instructions for the compositors, most likely by consulting Crété’s type-specimen catalogue. </p>"
             dropcap: false
-          - template: "@molecules/Picture/PictureWithCaption.html.twig"
+          - template: "@molecules/picture/picturewithcaption.html.twig"
             caption:
               id: c4p2-caption-2
               brief: "Type compositors at Crété"
@@ -729,7 +732,7 @@ chapters:
           - template: "@atoms/textarea/textarea.html.twig"
             text: ""
             dropcap: false
-          - template: "@molecules/Picture/PictureWithCaption.html.twig"
+          - template: "@molecules/picture/picturewithcaption.html.twig"
             caption:
               id: c4p2-caption-1
               brief: "Paper conservator Victoria Binder used a microscope to analyze the fiber composition of the copy of <em>La prose</em> in the Logan Collection at the Legion of Honor."
@@ -788,7 +791,7 @@ chapters:
             classes: margin-bottom-2
             text: "<p>The interplay of colors and the synesthetic illusion of movement in Delaunay’s pochoir has an uncanny parallel in the psychedelic light shows of the 1960s, where bright, pulsating, liquid forms merged with an experience of rhythmic sound, as the rhythms of Cendrars’s lines&mdash;dedicated, as he said, “to the musicians”&mdash;seem to emerge from the artist’s abstract color-forms.</p>"
             dropcap: false
-          - template: "@molecules/Picture/PictureWithCaption.html.twig"
+          - template: "@molecules/picture/picturewithcaption.html.twig"
             caption:
               id: c5p1-caption-1
               brief: Still from <em>Kinetic Light Painting</em> by Bill Ham
@@ -842,7 +845,7 @@ chapters:
             dropcap: false
       left:
         components:
-        - template: "@molecules/Picture/PictureWithCaption.html.twig"
+        - template: "@molecules/picture/picturewithcaption.html.twig"
           caption:
             id: c6p2-caption-1
             brief: David and Reva Logan
@@ -868,7 +871,7 @@ chapters:
             target: _blank
       left:
         components:
-        - template: "@molecules/Picture/PictureWithCaption.html.twig"
+        - template: "@molecules/picture/picturewithcaption.html.twig"
           caption:
             brief: The Reva and David Logan Gallery of Illustrated Books at the Legion of Honor
             text: ''
@@ -934,6 +937,10 @@ chapters:
                   text: Subscribe
                   href: http://famsf.us4.list-manage1.com/subscribe?u=d7a49f337e55b897015517194&id=9757c5111b
                   target: _blank
+      - template: "@molecules/instagram-feed/instagram-feed.twig"
+        tag_name: "klimtrodin"
+        cta_href: "https://www.instagram.com/explore/tags/klimtrodin/"
+        cta_text: "See on Instagram"
       - template: "@organisms/Section/Section.html.twig"
         section_classes: grid-container grid-container-padded footer__content
         components:
