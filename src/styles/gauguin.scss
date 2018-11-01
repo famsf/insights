@@ -1,5 +1,9 @@
 @charset 'utf-8';
 
+// Import Base Foundation Settings.
+@import 'base/gauguin-settings';
+@import 'base/extends';
+@import 'base/mixins';
 
 // Import Foundation and Motion UI.
 @import 'foundation';
@@ -105,11 +109,6 @@ $plyr-color-heather: #b7c5cd !default;
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-// Import Base Foundation Settings.
-@import 'base/gauguin-settings';
-@import 'base/extends';
-@import 'base/mixins';
-
 // Import Base Styles.
 @import 'base/extends';
 @import 'base/styles';
@@ -169,18 +168,16 @@ $plyr-color-heather: #b7c5cd !default;
 @import '../components/molecules/footer__cta/footer__cta';
 @import '../components/molecules/footer__navigation/footer__navigation';
 @import '../components/molecules/inline-quote/inline-quote';
-@import '../components/molecules/standalone-quote/standalone-quote';
-@import '../components/molecules/picture/picture';
-@import '../components/molecules/slide/slide';
-@import '../components/molecules/slide--in-depth__intro/slide--in-depth__intro';
-// TODO: Need AmbientVideo?
-//@import '../components/molecules/AmbientVideo/AmbientVideo';
 @import '../components/molecules/modal/modal';
 @import '../components/molecules/menu--footer/menu--footer';
 @import '../components/molecules/menu--mobile/menu--mobile';
 @import '../components/molecules/off-canvas/off-canvas';
 @import '../components/molecules/audiowithtranscript/audiowithtranscript';
+@import '../components/molecules/picture/picture';
 @import '../components/molecules/sharing-icons/sharing-icons';
+@import '../components/molecules/slide/slide';
+@import '../components/molecules/slide--in-depth__intro/slide--in-depth__intro';
+@import '../components/molecules/standalone-quote/standalone-quote';
 @import '../components/molecules/top-bar/top-bar';
 @import '../components/molecules/video--ambient/video--ambient';
 @import '../components/molecules/video--embed/video--embed';
@@ -189,8 +186,8 @@ $plyr-color-heather: #b7c5cd !default;
 @import '../components/molecules/zoom-image--fullbleed/zoom-image--fullbleed';
 @import '../components/molecules/zoom-image--inline/zoom-image--inline';
 @import '../components/molecules/timeline/timeline';
-@import '../components/molecules/image-comparison-slider/image-comparison-slider';
 @import '../components/molecules/instagram-feed/instagram-feed';
+@import '../components/molecules/image-comparison-slider/image-comparison-slider';
 
 // Import Layouts.
 @import '../components/layouts/one_up--primary/one_up--primary';
