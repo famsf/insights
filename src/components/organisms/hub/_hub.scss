@@ -169,9 +169,12 @@
     }
     .story-title {
       margin-top: 25px;
-      margin-bottom: 5px;
+      margin-bottom: 0;
       text-align: center;
       font-size: 1.5em;
+      p {
+        margin-bottom: 0;
+      }
     }
     .story-subtitle {
       font-family: $header-font-family;

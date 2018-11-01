@@ -251,6 +251,8 @@ pluginOpts:
       comp__2__image-alt: Content_Comp-Image-2-Alt
       # Hub
       # Hub Story
+      hub_story_title: Content_Story-Title
+      hub_story_subtitle: Content_Story-Sub-Title
       location: Content_Museum-Location
       read_link: Content_Read-Link
       tickets_link: Content_Tickets-Link

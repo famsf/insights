@@ -39,10 +39,10 @@
         {% for story in stories %}
           {% include "@organisms/hub/hub__story.html.twig" with {
             image: story.content__image,
-            title: story.title,
-            subtitle: story.subtitle|default(''),
+            title: story.hub_story_title,
+            subtitle: story.hub_story_subtitle|default(''),
             read_link: story.read_link|default(''),
-            is_on_view: story.is_on_view,
+            is_on_view: story.on_view.0|default('False'),
             tags: story.tags|default('')
           } only %}
       {% endfor %}
