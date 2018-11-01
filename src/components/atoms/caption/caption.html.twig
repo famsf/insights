@@ -1,4 +1,4 @@
-{% set unique = random() %}
+{% set unique = 'uq' ~ random() %}
 <div class="caption">
   <div class="caption__brief">
     {{ brief|striptags('a','i','b','strong','em') }}
