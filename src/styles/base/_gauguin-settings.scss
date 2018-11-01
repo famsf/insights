@@ -69,6 +69,7 @@ $global-font-size: 100%;
 $global-width: rem-calc(1440);
 $global-lineheight: 1.5;
 
+
 $foundation-palette: (
   primary: #a299a6,
   secondary: #e2e0e3,
@@ -76,7 +77,6 @@ $foundation-palette: (
   warning: #ffae00,
   alert: #cc4b37
 );
-$splitpea: #927a0c;
 
 $light-gray: #e6e6e6;
 $dark-gray: #8a8a8a;
@@ -139,13 +139,13 @@ $header-font-weight: $global-weight-normal;
 $header-font-style: normal;
 $font-family-monospace: Consolas, 'Liberation Mono', Courier, monospace;
 $header-color: inherit;
-$header-lineheight: 1.3;
+$header-lineheight: 1.1;
 $header-margin-bottom: 1rem;
 $header-styles: (
   small: (
     'h1': ('font-size': 24),
-    'h2': ('font-size': 22),
-    'h3': ('font-size': 20),
+    'h2': ('font-size': 20),
+    'h3': ('font-size': 19),
     'h4': ('font-size': 18),
     'h5': ('font-size': 17),
     'h6': ('font-size': 16),
@@ -153,8 +153,8 @@ $header-styles: (
   medium: (
     'h1': ('font-size': 48),
     'h2': ('font-size': 40),
-    'h3': ('font-size': 34),
-    'h4': ('font-size': 22),
+    'h3': ('font-size': 31),
+    'h4': ('font-size': 25),
     'h5': ('font-size': 20),
     'h6': ('font-size': 16),
   ),
@@ -188,7 +188,7 @@ $defnlist-margin-bottom: 1rem;
 $defnlist-term-weight: $global-weight-bold;
 $defnlist-term-margin-bottom: 0.3rem;
 $blockquote-color: $body-font-color;
-$blockquote-padding: rem-calc(10 20 0 20);
+$blockquote-padding: rem-calc(9 20 0 19);
 $blockquote-border: none;
 $cite-font-size: $global-font-size;
 $cite-color: $body-font-color;
