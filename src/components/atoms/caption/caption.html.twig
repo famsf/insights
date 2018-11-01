@@ -1,7 +1,7 @@
 {% set unique = 'uq' ~ random() %}
 <div class="caption">
   <div class="caption__brief">
-    {{ brief|striptags('a','i','b','strong','em') }}
+    {{ brief|striptags('<a><i><em><b><strong>') }}
     {% if id and text|striptags|length > 2 %}
       <a data-toggle="{{ id ~ unique }}" class="button icon hollow toggle-caption">
         <span class="i-info" aria-hidden="true">i</span>

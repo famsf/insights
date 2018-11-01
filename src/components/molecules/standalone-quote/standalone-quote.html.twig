@@ -3,8 +3,8 @@
     <div class="cell medium-10 medium-offset-1">
       <div class="{{ component_name ?: 'standalone-quote' }} {{ large_text ? 'size--large' }}">
         {% include "@atoms/standalone-quote__icon/standalone-quote__icon.html.twig" %}
-        <q>{{ quote__quote|striptags('a', 'i', 'em', 'b', 'strong') }}</q>
-        <cite>{{ quote__attribution|striptags('a', 'i', 'em', 'b', 'strong') }}</cite>
+        <q>{{ quote__quote|striptags('<a><i><em><b><strong>') }}</q>
+        <cite>{{ quote__attribution|striptags('<a><i><em><b><strong>') }}</cite>
         <div class="standalone-quote__social-links">
           {% include "@molecules/sharing-icons/sharing-icons.html.twig" %}
         </div>
