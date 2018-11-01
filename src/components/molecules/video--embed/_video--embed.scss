@@ -54,7 +54,7 @@ Markup: video--embed.html.twig
 
   .overlay & {
     @include breakpoint(medium) {
-      margin-top: -2rem;
+      margin-top: 3rem;
     }
   }
 }
@@ -91,7 +91,7 @@ Markup: video--embed.html.twig
     background: linear-gradient(rgba($black, 0), rgba($black, .5)) !important;
   }
 
-  .snapped & {
+  .triggered & {
     .plyr--video .plyr__controls {
       visibility: visible;
       opacity: 1;
@@ -100,7 +100,7 @@ Markup: video--embed.html.twig
       top: auto;
     }
   }
-  
+
   .scroll_lock & {
     .plyr--video .plyr__controls {
       opacity: 0;
