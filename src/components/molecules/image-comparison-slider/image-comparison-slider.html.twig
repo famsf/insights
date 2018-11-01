@@ -20,12 +20,8 @@
     style: 'default'
   } %}
   <div class="beer-reveal">
-    {% include "@atoms/img/img.html.twig" with {
-      src: imageTwo.src,
-      url: imageTwo.src,
-      alt: imageTwo.alt,
-      style: 'default'
-    } %}
+    {# We don't use the Twig img component here as the responsive functionality breaks the slider. #}
+    <img src="{{ imageTwo.src }}" alt="{{ imageTwo.alt }}">
   </div>
 </div>
 
