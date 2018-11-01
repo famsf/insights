@@ -191,9 +191,9 @@
 
     // Scroll Comparison JS.
     if ($('.scroll-comparison .wrapper .cell').length) {
-      $('.scroll-comparison .wrapper .cell').click(function () {
-        $(this).siblings('.cell').toggleClass('active');
-        $(this).toggleClass('active');
+      $('.scroll-comparison .wrapper .cell .picture').click(function () {
+        $(this).closest('.cell').siblings('.cell').toggleClass('active');
+        $(this).closest('.cell').toggleClass('active');
       });
     }
 
