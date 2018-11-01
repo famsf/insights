@@ -1,10 +1,32 @@
-<div class="insights-app off-canvas-wrapper" id="insights-app">
-  {% include '@molecules/TopBar/TopBar.html.twig' with { tagline: tagline, tickets_url: tickets_url, facebook_url: facebook_url, twitter_url: twitter_url } only %}
-  {% include '@molecules/ChapterNav/ChapterNav.html.twig' with { chapters: chapters } only %}
-  <div class="chapters_container off-canvas-content" id="app">
-    {% include '@environments/Chapters/Chapters.html.twig' with { chapters: chapters, title: title } only %}
-    {% include '@organisms/Footer/Footer.html.twig' with { sections: footer.sections, classes: footer.classes } only %}
+<div id="insights-app" class="insights-app off-canvas-wrapper {{ slug }}">
+  {% include '@molecules/top-bar/top-bar.html.twig' with {
+    tagline: tagline,
+    tickets_url: tickets_url,
+    facebook_url: facebook_url,
+    twitter_url: twitter_url
+  } only %}
+  {% include '@molecules/chapter-nav/chapter-nav.html.twig' with { chapters: children } only %}
+  <div id="app" class="chapters_container off-canvas-content" >
+  {% for chapter in children %}
+    {{ chapter.template }}
+    {%
+      include "@organisms/chapter/chapter.html.twig" with chapter|merge({
+        story__title: story__title|trim,
+        story__subtitle: story__subtitle|trim,
+        exhibit__info: exhibit__info|trim,
+        exhibit__dates: exhibit__dates|trim,
+        index: loop.index0,
+        templateMap: gatherContent.templateMap
+      }) only
+    %}
+  {% endfor %}
   </div>
 </div>
 
-{% include '@molecules/off-canvas/off-canvas.html.twig' with { chapters: chapters, title: title, tickets_url: tickets_url, sections: footer.sections, classes: footer.classes } only %}
+{% include '@molecules/off-canvas/off-canvas.html.twig' with {
+  chapters: children,
+  title: story_title,
+  tickets_url: tickets_url,
+  sections: footer.sections,
+  classes: footer.classes
+} only %}

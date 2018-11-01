@@ -1,0 +1,6 @@
+<div class="modal reveal full-screen in-depth-modal {{ class }}" id="{{ slug }}" data-reveal data-animation-in="fade-in" data-animation-out="fade-out">
+  {% include "@organisms/horizontal-image-slider/horizontal-image-slider.html.twig" with {
+    templateMap: templateMap,
+    children: children } %}
+  {% include "@atoms/modal__close-button/modal__close-button.html.twig" %}
+</div>

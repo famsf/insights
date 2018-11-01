@@ -1,0 +1,35 @@
+{% if theme == "Theme Default Light" or theme == "" %}
+  {% set theme = "" %}
+{% elseif theme == "Theme Dark" %}
+  {% set theme = "theme--dark" %}
+{% elseif theme == "Theme Primary" %}
+  {% set theme = "theme--primary" %}
+{% elseif theme == "Theme Primary Light" %}
+  {% set theme = "theme--primary-light" %}
+{% elseif theme == "Theme Primary Dark"  %}
+  {% set theme = "theme--primary-dark" %}
+{% endif %}
+
+<section class="page {{ classes }} {{ theme }}" data-component="{{ templateMap[child.template_id] }}" id="chapter_{{ id }}" data-page-index="{{ index }}">
+  <div class="frame">
+    {% if 'page/page.html.twig' in component %}
+      {% for child in children %}
+        <!-- {{ templateMap[child.template_id] }} -->
+        {% include templateMap[child.template_id] with child|merge({ templateMap: templateMap }) only %}
+      {% endfor %}
+    {% elseif component %}
+      {% set adenda = {} %}
+      {% if 'cover_page' in component %}
+        {% set adenda = {
+          exhibit__dates: exhibit__dates
+        } %}
+      {% elseif 'chapter__title' in component %}
+        {% set adenda = {
+          chapter__title: chapter__title,
+          chapter__numeral: chapter__numeral
+        } %}
+      {% endif %}
+      {% include component with _context|merge(adenda) only %}
+    {% endif %}
+  </div>
+</section>

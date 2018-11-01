@@ -1,0 +1,10 @@
+<div class="audio-with-transcript">
+  {% include "@atoms/audio_player/audio_player.html.twig" with { src: audio__file } only %}
+  {% include "@atoms/transcript/transcript.html.twig" with {
+    title: name,
+    button_text: audio__transcript__toggle,
+    id: slug,
+    brief: audio__description,
+    text: audio__transcript
+  } only %}
+</div>

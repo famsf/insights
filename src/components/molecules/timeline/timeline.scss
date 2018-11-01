@@ -11,7 +11,9 @@
   .timeline-item-description,
   .timeline-images {
     transition: opacity 0.5s linear;
-    opacity: 0;
+    @include breakpoint(large) {
+      opacity: 0;
+    }
   }
   .timeline--year.active {
     .timeline-item-title,
@@ -30,16 +32,23 @@
       padding-top: 0;
     }
     &:first-of-type {
-      padding-top: 0;
+      padding-top: 36px;
     }
   }
-  h2.timeline-title {
+  .timeline-title {
     font-family: $alternate-header-font-family;
     padding-bottom: 70px;
     font-size: 1.8em;
     @include breakpoint(large) {
-      position: relative;
-      top: 25px;
+      visibility: hidden;
+      position: fixed;
+      top: 64px;
+      width: 100vw;
+      text-align: center;
+      z-index: 1;
+      left: 0;
+      padding-top: 40px;
+      padding-bottom: 40px;
     }
   }
   .timeline-images {
@@ -62,6 +71,13 @@
       padding-top: 5px;
     }
   }
+
+  .theme--dark & {
+    .timeline-item-text {
+      color: white;
+    }
+  }
+
   .timeline-item-text {
     padding-left: 30px;
     color: white;
@@ -96,19 +112,18 @@
       background-color: $white;
       position: absolute;
       left: 23px;
-      margin-top: 18px;;
       @include breakpoint(medium) {
         left: 73px;
       }
       @include breakpoint(large) {
         height: 0;
         width: 0;
+        margin-top: 0;
       }
     }
   }
   .timeline-item-subtitle {
     font-family: $header-font-family;
-    font-style: italic;
     font-size: 1.8em;
         @include breakpoint(large) {
       width: 80%;
@@ -131,11 +146,14 @@
   }
   .timespan-scroller-inner,
   .timespan-scroller-pos {
-    transition: all 0.5s ease-out;
+    transition-property: top, height, opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
   }
+
   .timespan-scroller {
     @include breakpoint(large) {
-      display: none;
+      visibility: hidden;
       height: 500px;
       width: 200px;
       position: fixed;
@@ -143,6 +161,10 @@
       left: 40vw;
       color: white;
       overflow: hidden;
+      transition-property: top, height, opacity;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-out;
+      opacity: 0;
     }
   }
   .timespan-scroller-inner {
@@ -183,6 +205,9 @@
   }
 }
 %year-span-timeline {
+  @include breakpoint(large) {
+    margin: 220px 35px 20px 30px;
+  }
   .timeline-item-title {
     font-family: $body-font-family;
     @include breakpoint(large) {
@@ -192,12 +217,54 @@
   }
 }
 %no-year-span-timeline {
+  > div:first-of-type {
+    @include breakpoint(large) {
+      margin-top: 50px;
+    }
+  }
   .timespan-scroller-pos {
     min-height: 15px;
     width: 15px;
     border-radius: 15px;
     margin-left: -7px;
     margin-top: -5px;
+  }
+
+  .timeline-item-text {
+    @include breakpoint(large) {
+      border-left: 1px solid $white;
+    }
+  }
+  .timeline-item-title {
+    &::before {
+      margin-top: 28px;
+      @include breakpoint(medium) {
+        margin-top: 90px;
+      }
+      @include breakpoint(large) {
+        width: 15px;
+        height: 15px;
+        top: 58px;
+        left: -8px;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+%primary-theme-timeline {
+  .timeline--year {
+    border-left-color: $primary-color;
+  }
+  .timeline-item-text {
+    @include breakpoint(large) {
+      border-left-color: $primary-color;
+    }
+  }
+  .timeline-item-title {
+    &::before {
+      background-color: $primary-color;
+    }
   }
 }
 
@@ -210,12 +277,23 @@
     @extend %no-year-span-timeline;
   }
 }
-.triggered {
+.inViewport {
   .timeline {
     .timespan-scroller {
       @include breakpoint(large) {
-        display: block;
+        visibility: visible;
+        opacity: 1;
       }
     }
+    h2 {
+      @include breakpoint(large) {
+        visibility: visible;
+      }
+    }
+  }
+}
+.theme--primary {
+  .timeline {
+    @extend %primary-theme-timeline;
   }
 }

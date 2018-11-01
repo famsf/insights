@@ -1,21 +1,56 @@
-{% import "@macros/inklude.html.twig" as inklude %}
 {% macro print(value, default) %}
   {{- value is defined ? value : default -}}
 {% endmacro %}
-{% import _self as do %}
+
 <div class="scroll-comparison grid-x fluid {{ classes }}" id="{{ id }}" data-snap-id="{{ snap_id }}">
   <div class="cell small-12 large-8 large-offset-2">
     <div class="wrapper grid-x grid-margin-x">
       <div class="cell active" {{ left.attributes }}>
-        {{ inklude.components(left.visible ) }}
+        {% set length = left__image|length - 1 %}
+        {% if left__image[length].src %}
+          {% set img = left__image[length] %}
+        {% else %}
+          {% set img = left__image %}
+        {% endif %}
+        {% include "@molecules/picture/picture--captioned.html.twig" with {
+          picture: {
+            src: img.src,
+            style: 'square',
+            alt: img.alt
+          },
+          caption: {
+            id: slug ~ '__left__caption',
+            brief: left__caption_brief,
+            text: left__caption
+          }
+        } only %}
+        {% include "@atoms/h3/h3.html.twig" with { text: left__title } only %}
         <div class="content">
-          {{ inklude.components(left.hidden) }}
+          {{ left__body }}
         </div>
       </div>
       <div class="cell" {{ right.attributes }}>
-        {{ inklude.components(right.visible ) }}
+        {% set length = right__image|length - 1 %}
+        {% if right__image[length].src %}
+          {% set img = right__image[length] %}
+        {% else %}
+          {% set img = right__image %}
+        {% endif %}
+        {% include "@molecules/picture/picture--captioned.html.twig" with {
+          picture: {
+            src: img.src,
+            style: 'square',
+            alt: img.alt
+          },
+          caption: {
+            id: slug ~ '__right__caption',
+            brief: right__caption_brief,
+            text: right__caption
+          }
+        } only %}
+        {% include "@atoms/h3/h3.html.twig" with { text: right__title } only %}
         <div class="content">
-          {{ inklude.components(right.hidden) }}
+        {{ right__body }}
         </div>
       </div>
     </div>

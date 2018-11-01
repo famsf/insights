@@ -52,7 +52,7 @@
   fds.initialize = function () {
     var sy;
     if (!doc.querySelector('.insights-app')) {
-      console.log('Bypassing main js loop in current context to allow for easier single component prototyping');
+      console.log('Bypassing stories javascript');
       return;
     }
     sy = window.pageYOffset;
@@ -76,7 +76,7 @@
     fds.mobileNav.initialize('mobile_nav');
     fds.chapterNav.initialize('chapter_nav', '.chapter', '.top-bar');
     fds.chapterNav.showNav();
-    fds.topBar.initialize('topBar');
+    fds.topBar.initialize('top-bar');
     fds.pages.initialize('.chapters_container', '.page', '.top-bar');
 
     fds.chapterNav.onScroll(sy);
@@ -100,6 +100,7 @@
       slideSpeed: 1000,
       smartSpeed: 1000,
       loop: false,
+      nav: false,
       dots: true,
       items: 1,
       merge: true,
@@ -190,9 +191,9 @@
 
     // Scroll Comparison JS.
     if ($('.scroll-comparison .wrapper .cell').length) {
-      $('.scroll-comparison .wrapper .cell').click(function () {
-        $(this).siblings('.cell').toggleClass('active');
-        $(this).toggleClass('active');
+      $('.scroll-comparison .wrapper .cell .picture').click(function () {
+        $(this).closest('.cell').siblings('.cell').toggleClass('active');
+        $(this).closest('.cell').toggleClass('active');
       });
     }
 

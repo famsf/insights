@@ -1,11 +1,22 @@
-{% import "@macros/inklude.html.twig" as inklude %}
-<div class="item {{ intro_slide ? 'intro-slide' }}">
+<div class="item {{ loop.first ? 'intro-slide' }}">
   <div class="item__content">
-    {{ inklude.components(_context) }}
-    {% if caption %}
-      {% include "@atoms/caption/caption.html.twig" with caption only %}
+    {#
+      This conditional is a workaround for a GC bug where asset fields where
+      an asset was previously deleted, still return an array of assets including
+      previously deleted items rather than just the single asset currently
+      in the field.
+    #}
+    {% if slide__image[slide__image|length - 1].src %}
+      {% set slide__image = slide__image[0] %}
     {% endif %}
-    {% if intro_slide %}
+    {% include "@molecules/picture/picture.html.twig" with slide__image only %}
+    {% if caption__text %}
+      {% include "@atoms/caption/caption.html.twig" with {
+        brief: caption__brief,
+        text: caption__text
+      } only %}
+    {% endif %}
+    {% if loop.first %}
       {% include "@atoms/slide__icon--next/slide__icon--next.html.twig" %}
     {% endif %}
   </div>

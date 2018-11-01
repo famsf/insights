@@ -5,7 +5,7 @@
   $(document).ready(function () {
     $(document).foundation();
     if (Foundation.MediaQuery.atLeast('large')) {
-      var zoomedImages = new ImageZoom('img.img-zoom-drag', { maxZoom: 2, backgroundImageColor: '#000' });
+      var zoomedImages = new ImageZoom('.img-zoom-drag', { maxZoom: 2, backgroundImageColor: '#000' });
       $('.img-zoom-drag').mousemove(function (e) {
         var offset = $(this).offset();
         var finderBox = $(this).closest('.zoom-image--fullbleed').find('.finder-box');
@@ -15,19 +15,21 @@
         var imgHeight = $(this).height();
         var percentThroughWidth = (relX / imgWidth * 100) * .5;
         var percentThroughHeight = (relY / imgHeight * 100)  * .5;
-        var windowWidth = $(window).width();
-        var windowHeight = $(window).height();
+        var windowWidth = window.innerWidth;
+        var windowHeight = window.innerHeight;
         finderBox.css({
           'top': percentThroughHeight + '%',
           'left': percentThroughWidth + '%',
-          'height': (windowHeight - 64) / 20 + 'px',
-          'width': windowWidth / 20 + 'px'
+          'height': (windowHeight - 64) / 19 + 'px',
+          'width': windowWidth / 19 + 'px'
         });
       });
-    }
-    else {
+    } else {
       // Can't show this section if we're on mobile devices.
-      $('img.img-zoom-drag').closest('section.page').css('display', 'none');
+      $('.img-zoom-drag').closest('section.page').css('display', 'none');
+    }
+    if( document.querySelectorAll('.img-zoom-drag').length > 0 ) {
+      var zoomedImages = new ImageZoom('.img-zoom-drag', { maxZoom: 3, backgroundImageColor: '#000' });
     }
   });
 }(document, window, jQuery, ImageZoom));

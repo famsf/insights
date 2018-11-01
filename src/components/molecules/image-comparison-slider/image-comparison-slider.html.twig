@@ -1,0 +1,34 @@
+<div id="slider-{{ id }}" class="beer-slider" data-id="{{ id }}" data-start="{{ startPosition|default(50) }}">
+  {#
+    This conditional is a workaround for a GC bug where asset fields where
+    an asset was previously deleted, still return an array of assets including
+    previously deleted items rather than just the single asset currently
+    in the field.
+  #}
+
+  {% if imageOne is empty %}
+    {% set imageOne = {'src': comp__1__image|last, 'alt': comp__1__image_alt } %}
+  {% endif %}
+  {% if imageTwo is empty %}
+    {% set imageTwo = {'src': comp__2__image|last, 'alt': comp__2__image_alt } %}
+  {% endif %}
+
+  {% include "@atoms/img/img.html.twig" with {
+    src: imageOne.src,
+    url: imageOne.src,
+    alt: imageOne.alt,
+    style: 'default'
+  } %}
+  <div class="beer-reveal">
+    {% include "@atoms/img/img.html.twig" with {
+      src: imageTwo.src,
+      url: imageTwo.src,
+      alt: imageTwo.alt,
+      style: 'default'
+    } %}
+  </div>
+</div>
+
+{% if caption %}
+  {% include "@atoms/caption/caption.html.twig" with caption only %}
+{% endif %}

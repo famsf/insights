@@ -1,0 +1,6 @@
+---
+files:
+- components/organisms/hub/hub.js
+insertNewLine: true
+---
+// Concatenate all the scripts!

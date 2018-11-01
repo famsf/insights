@@ -5,13 +5,19 @@
     position: absolute;
 
     .inline-caption-content {
-      z-index: 1;
+      z-index: 100;
       position: relative;
       top: -39px;
       width: 330px;
       background-color: rgba($white, .8);
       padding: 2rem;
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .50);
+    }
+  }
+  .caption {
+    figcaption {
+      position: absolute;
+      width: 100%;
     }
   }
 }

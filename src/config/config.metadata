@@ -4,7 +4,6 @@ description: "Insights are a series of free, in-depth looks into our exhibitions
 
 stylesheets:
   - https://use.typekit.net/bmv1rht.css
-  - /styles/main.css
   - https://use.fontawesome.com/releases/v5.0.13/css/all.css
 
 scripts:
@@ -20,9 +19,16 @@ scripts:
       - /js/jquery/jquery.js
       - /js/foundation/foundation.min.js
       - /js/owl/owl.carousel.js
+      - /js/beerslider/beerslider.js
       - /js/object-fit-images/ofi.min.js
       - /js/clippath/background-clip-text-polyfill.js
       - /js/plyr/plyr.js
       - /js/scripts.js
+      - https://use.fontawesome.com/releases/v5.0.13/js/all.js
+    hub:
+      - /js/jquery/jquery.js
+      - /js/foundation/foundation.min.js
+      - https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js
+      - /js/hubscripts.js
       - https://use.fontawesome.com/releases/v5.0.13/js/all.js
 ---

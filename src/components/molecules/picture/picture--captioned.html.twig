@@ -1,0 +1,7 @@
+{% if picture.0 is defined %}
+  {% set picture = picture|last %}
+{% endif %}
+<figure class="picture-with-caption" {{ attributes }}>
+  {% include "@molecules/picture/picture.html.twig" with picture only %}
+  {% include "@atoms/caption/caption.html.twig" with caption only %}
+</figure>

@@ -1,0 +1,104 @@
+// Primary Nav Proof of concept
+%top-bar__wrapper {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  @extend %performy;
+  transform: translate3d(0,0,0);
+}
+
+%top-bar {
+  @extend %performy;
+  transform: translate3d(0,0,0);
+  padding: 1rem 1.5rem;
+  width: 100%;
+  transition: background-color .325s ease-in-out;
+  font-family: $body-font-family;
+  background-color: $white;
+  display: flex;
+  flex-flow: row nowrap;
+
+  @include breakpoint(medium) {
+    padding: 1rem
+  }
+
+  .top-bar-left,
+  .top-bar-right {
+    flex-basis: auto;
+  }
+
+  svg polygon,
+  svg path {
+    fill: $black !important;
+  }
+
+  .menu-text {
+    padding: 0;
+  }
+
+  ul {
+    background-color: transparent;
+  }
+
+  button {
+    transition: color .325s ease-in-out, background-color .325 ease-in-out;
+  }
+
+  .tagline {
+    transition: color .325s ease-in-out;
+  }
+
+  .button-group {
+    margin-bottom: 0;
+  }
+
+  .button {
+    margin-bottom: 0;
+    background: $black;
+    color: $white;
+
+    &.hollow {
+      color: $black;
+      background: transparent;
+      border: 2px solid $black;
+    }
+  }
+
+  &.invert,
+  .off-canvas-opened & {
+    background-color: transparent;
+
+    * {
+      color: $white;
+      background-color: transparent;
+    }
+
+    .button {
+      background: $white;
+      color: $black;
+
+      &.hollow {
+        background: transparent;
+        border: 2px solid $white;
+      }
+    }
+
+    svg polygon,
+    svg path {
+      fill: $white !important;
+    }
+  }
+
+  .off-canvas-opened & {
+    background-color: $black;
+  }
+}
+
+.top-bar__wrapper {
+  @extend %top-bar__wrapper;
+}
+
+.top-bar {
+  @extend %top-bar;
+}

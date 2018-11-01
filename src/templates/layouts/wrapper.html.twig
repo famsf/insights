@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<! doctype html>
 <html lang="en">
   <head>
       <meta charset="utf-8">
@@ -11,27 +11,28 @@
       <!-- or, set /favicon.ico for IE10 win -->
       <meta name="msapplication-TileColor" content="#f00">
       <meta name="msapplication-TileImage" content="/images/tileicon.png">
-      
+
       <!-- Google Tag Manager -->
       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-TPPZRZB');</script>
+
       <!-- End Google Tag Manager -->
-      
+      <meta name="description" content="{{ config.description }}">
+      {% include "@atoms/og_tag/og_tag.html.twig" with { property: "title", content: og__title } only %}
+      {% include "@atoms/og_tag/og_tag.html.twig" with { property: "description", content: og__description } only %}
+      {% include "@atoms/og_tag/og_tag.html.twig" with { property: "type", content: "website" } only %}
+      {% include "@atoms/og_tag/og_tag.html.twig" with { property: "url", content: og__curl } only %}
+      {% include "@atoms/og_tag/og_tag.html.twig" with { property: "image", content: og__image.src ~ '.jpg' } only %}
+
       <title>
-        {{ config.title }}
+        {{ story__title }}
       </title>
 
-      <meta name="description" content="{{ config.description }}">
-      {% include "@atoms/og_tag/og_tag.html.twig" with {property: "title", content: config.title} only %}
-      {% include "@atoms/og_tag/og_tag.html.twig" with {property: "description", content: config.description} only %}
-      {% include "@atoms/og_tag/og_tag.html.twig" with {property: "type", content: "website"} only %}
-      {% include "@atoms/og_tag/og_tag.html.twig" with {property: "url", content: "https://insights.famsf.org/la-prose/"} only %}
-      {% include "@atoms/og_tag/og_tag.html.twig" with {property: "image", content: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/0_la-prose-title-card.jpg"} only %}
-
       {{ kstatic.scripts }}
+
       {% for script in config.scripts.header.kalastatic %}
         <script src="{{ script }}?{{ 'now'|date('U') }}"></script>
       {% endfor %}
@@ -39,11 +40,15 @@
         <script src="{{ script }}?{{ 'now'|date('U') }}"></script>
       {% endfor %}
       {{ kstatic.styles }}
+
       {% for sheet in config.stylesheets %}
         <link rel="stylesheet" type="text/css" href="{{ sheet }}?{{ 'now'|date('U') }}">
       {% endfor %}
+
+      <link rel="stylesheet" type="text/css" href="/styles/{{ slug }}.css?{{ 'now'|date('U') }}">
+
   </head>
-  <body class="{{bodyClass|clean_id}} {{classes}} {{bodyId|clean_id}}">
+  <body class="{{bodyClass|clean_id}} {{classes}} {{ slug }}">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPPZRZB"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -54,8 +59,14 @@
     {% for script in config.scripts.footer.kalastatic %}
       <script src="{{ script }}"></script>
     {% endfor %}
-    {% for script in config.scripts.footer.all %}
-      <script src="{{ script }}"></script>
-    {% endfor %}
+    {% if slug == 'hub' %}
+      {% for script in config.scripts.footer.hub %}
+        <script src="{{ script }}"></script>
+      {% endfor %}
+    {% else %}
+      {% for script in config.scripts.footer.all %}
+        <script src="{{ script }}"></script>
+      {% endfor %}
+    {% endif %}
   </body>
 </html>

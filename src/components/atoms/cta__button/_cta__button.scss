@@ -62,11 +62,17 @@
       }
     }
   }
+
+  p {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 %cta__orange {
   &:before {
-    background: rgba($splitpea, .35);
+    background: rgba($secondary-color, .35);
   }
 }
 

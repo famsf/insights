@@ -3,14 +3,38 @@
     mobile_images: mobile_images
   } only %}
   <div class="inline-image-zoom-wrapper">
-      {% for caption in captions %}
-        {% include '@molecules/zoom-caption/zoom-caption.html.twig' with {
-          heading_text: caption.heading_text,
-          body_text: caption.body_text,
-          xcoord: caption.xcoord,
-          ycoord: caption.ycoord
+      {% if children|length > 0 %}
+        {% for caption in children %}
+          {% if ',' in caption.marker__location and caption.marker__location|length > 2 %}
+            {% set x = caption.marker__location|split(',')[0]|trim %}
+            {% set y = caption.marker__location|split(',')[1]|trim %}
+            {% include '@molecules/zoom-caption/zoom-caption.html.twig' with {
+              heading_text: caption.title,
+              body_text: caption.marker__description,
+              xcoord: x,
+              ycoord: y
+            } only %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      {% if content__image.src %}
+        {% include "@molecules/picture/picture--captioned.html.twig" with {
+          picture: content__image,
+          caption: {
+            text: caption__text,
+            brief: caption__brief,
+            id: id
+          }
+        }  only %}
+      {% else %}
+        {% include "@molecules/picture/picture--captioned.html.twig" with {
+          picture: content__image[content__image|length - 1],
+          caption: {
+            text: caption__text,
+            brief: caption__brief,
+            id: id
+          }
         } only %}
-      {% endfor %}
-      {% include "@molecules/picture/picture.html.twig" with picture only %}
+      {% endif %}
   </div>
 </div>

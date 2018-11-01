@@ -27,6 +27,9 @@ Styleguide COMPONENTS.standalone-quote
     font-family: $header-font-family;
     margin: 3rem 0;
     line-height: 1.125em;
+    p {
+      line-height: 1.125em;
+    }
 
     &:before,
     &:after {

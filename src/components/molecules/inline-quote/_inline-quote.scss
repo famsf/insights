@@ -15,7 +15,6 @@ Styleguide COMPONENTS.inline-quote
     @include font-sizes(18);
     @include responsive(line-height, 30px);
     position: relative;
-
     &:before {
       position: absolute;
       display: inline-block;
