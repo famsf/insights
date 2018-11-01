@@ -262,9 +262,11 @@ pluginOpts:
 
       # Hub
       # Hub Story
+      hub_story_title: Content_Story-Title
+      hub_story_subtitle: Content_Story-Sub-Title
       location: Content_Museum-Location
       read_link: Content_Read-Link
-      tickets_link: Content_Tickets-Link
+      tickets_link: Content_Buy-Tickets-Link
       on_view: Content_Is-on-View
       tags: Content_Tags
 

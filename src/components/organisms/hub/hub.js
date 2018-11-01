@@ -1,6 +1,6 @@
 (function (document, window, $) {
   $(document).ready(function () {
-    var $hubs = $('.frame > .hub');
+    var $hubs = $('#insights-hub');
     $(document).foundation();
     function createFilters($hub) {
       var tagMap = {};
@@ -24,7 +24,7 @@
       $hub.find('h1').html(newTitle);
     }
 
-    $('#topBar').removeClass('invert');
+    $('#top-bar').removeClass('invert');
     $hubs.each(function (i, e) {
       var $hub = $(e);
       var $storyFilter = $(e).find('.story-filter');

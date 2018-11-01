@@ -1,0 +1,6 @@
+pluginOpts:
+  metalsmith-gathercontent:
+    # Live on CMS
+    status: [
+      1208754
+    ]

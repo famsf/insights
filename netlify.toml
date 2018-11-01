@@ -1,0 +1,13 @@
+# Netlify Configuration
+# https://www.netlify.com/docs/netlify-toml-reference/
+
+# Context Overriding
+# The following provides different GatherContent content filtering on specific environments.
+
+# kalastatic.staging.yaml
+[context.staging]
+  command = "CONTEXT=staging npm it"
+
+# kalastatic.production.yaml
+[context.master]
+  command = "CONTEXT=production npm it"
