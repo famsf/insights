@@ -3,11 +3,13 @@
     <div class="wrapper grid-x grid-margin-x " id="">
       <div id="" class="cell medium-6 large-4 ">
         <h3 class="">{{ footer__famsf__title }}</h3>
-        <div class="textarea  ">
-          <p class="margin-bottom-3">{{ footer__famsf__description }}</p>
+        <div class="textarea">
+          <p class="margin-bottom-3">{{ footer__famsf__description|striptags('<a><br><em><i><strong>') }}</p>
         </div>
-        {% include "@atoms/cta__button/cta__button.html.twig" with { link: footer__famsf__tickets } only %}
-        {% include "@atoms/cta__button/cta__button.html.twig" with { link: footer__famsf__membership } only %}
+        <p></p>
+        {% include "@atoms/cta__button--alt/cta__button--alt.html.twig" with { link: footer__famsf__tickets } only %}
+        <p></p>
+        {% include "@atoms/cta__button--alt/cta__button--alt.html.twig" with { link: footer__famsf__membership } only %}
       </div>
       <div id="" class="cell medium-6 large-6 large-offset-2">
         <div class="two_up--primary fluid footer-feature" data-snap-id="">
@@ -16,7 +18,7 @@
               {% include "@molecules/picture/picture.html.twig" with footer__deyoung__image only %}
             </div>
             <div id="" class="cell medium-5 ">
-              <h4 class="separator-left">{{ footer__deyoung__title }}</h4>
+              <h4 class="separator-left">{{ footer__deyoung__title|striptags }}</h4>
               <div class="textarea  ">
                 <p class="show-for-large">
                   {{ footer__deyoung__description }}
@@ -31,7 +33,7 @@
               {% include "@molecules/picture/picture.html.twig" with footer__legion__image only %}
             </div>
             <div id="" class="cell medium-5 ">
-              <h4 class="separator-left">{{ footer__legion__title }}</h4>
+              <h4 class="separator-left">{{ footer__legion__title|striptags }}</h4>
               <div class="textarea  ">
                 <p class="show-for-large">
                   {{ footer__legion__description }}
