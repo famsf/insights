@@ -7,10 +7,10 @@
   #}
 
   {% if imageOne is empty %}
-    {% set imageOne = {'src': comp__1__image.src, 'alt': comp__1__image_alt } %}
+    {% set imageOne = {'src': comp__1__image|last, 'alt': comp__1__image_alt } %}
   {% endif %}
   {% if imageTwo is empty %}
-    {% set imageTwo = {'src': comp__2__image.src, 'alt': comp__2__image_alt } %}
+    {% set imageTwo = {'src': comp__2__image|last, 'alt': comp__2__image_alt } %}
   {% endif %}
 
   {% include "@atoms/img/img.html.twig" with {
