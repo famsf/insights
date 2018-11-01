@@ -92,6 +92,7 @@ pluginOpts:
       1418654: '@kalastatic/components/molecules/image-comparison-slider/image-comparison-slider.html.twig'
       1422907: '@kalastatic/components/organisms/hub/hub.html.twig'
       1422908: '@kalastatic/components/organisms/hub/hub__story.html.twig'
+      1390661: '@kalastatic/components/molecules/footer__navigation/footer__navigation.html.twig'
       # dummy commit
     mappings:
       id: id
@@ -198,6 +199,7 @@ pluginOpts:
       audio__description: Content_Audio-Description
       audio__transcript__toggle: Content_Transcript-Toggle-Label
       audio__transcript: Content_Transcript
+
       # Footer Touts
       footer__cta__left__title: Content-Left_Title
       footer__cta__left__description: Content-Left_Description
@@ -211,6 +213,7 @@ pluginOpts:
       footer__cta__right__description: Content-Right_Description
       footer__cta__right__cta: Content-Right_CTA-Button
       footer__cta__right__theme: Content-Right_Theme
+
       # Footer Id
       footer__famsf__title: Content-FAMSF_Title
       footer__famsf__description: Content-FAMSF_Description
@@ -224,6 +227,12 @@ pluginOpts:
       footer__legion__description: Content-Legion_Description
       footer__legion__image: Content-Legion_Image
       footer__legion__image-alt: Content-Legion_Image-Alt
+
+      # Footer Copyright / Nav
+      footer__copyright__link_1: Content-Links_Link-1
+      footer__copyright__link_2: Content-Links_Link-2
+      footer__copyright__link_3: Content-Links_Link-3
+      footer__copyright__text: Content-Copyright_Copyright
 
       # Images with Marker
       marker__location: Content_Location
