@@ -27,7 +27,7 @@
     } %}
   </div>
 
-  {% if caption %}
-    {% include "@atoms/caption/caption.html.twig" with caption only %}
+  {% if credit %}
+    {% include "@atoms/caption/caption.html.twig" with { text: credit } only %}
   {% endif %}
 </div>
