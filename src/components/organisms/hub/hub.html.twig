@@ -1,4 +1,4 @@
-<div class="hub">
+<div class="hub-section">
   <div class="featured-story">
     <div>
     </div>
@@ -6,31 +6,32 @@
       {% include "@atoms/img/img.html.twig" with {
         classes: 'featured-story-img',
         style: 'vertical',
-        src: content__image.src,
-        url: content__image.src,
-        alt: content__image.alt
+        src: stories.0.content__image.src,
+        url: stories.0.content__image.src,
+        alt: stories.0.content__image.alt
       } %}
-      {% if is_on_view %}
+      {% if stories.0.on_view.0|default('False') == 'True' %}
         <div class="on-view on-view-featured">On View</div>
       {% endif %}
       <div class="overlay">
         <div class="overlay__contents">
-          <h1>{{ title }}</h1>
-          {% if subtitle is defined %}
-            <h2>{{ subtitle }}</h2>
+          <h1>{{ stories.0.hub_story_title }}</h1>
+          {% if stories.0.hub_story_title|default('') != '' %}
+            <h2>{{ stories.0.hub_story_title }}</h2>
           {% endif %}
           <div class="button-wrapper">
-            {% if (read_cta is defined) %}
-              {{ read_link }}
+            {% if (stories.0.read_link|default('') != '') %}
+              {{ stories.0.read_link }}
             {% endif %}
-            {% if (tickets_link is defined) %}
-              {{ tickets_link }}
+            {% if (stories.0.tickets_link|default('') != '') %}
+              {{ stories.0.tickets_link }}
             {% endif %}
           </div>
         </div>
       </div>
     </div>
   </div>
+  {% set stories = stories|slice(1) %}
   {% if stories is defined %}
     <div class="stories">
       <div class="story-filter">
@@ -39,10 +40,10 @@
         {% for story in stories %}
           {% include "@organisms/hub/hub__story.html.twig" with {
             image: story.content__image,
-            title: story.title,
-            subtitle: story.subtitle|default(''),
+            title: story.hub_story_title,
+            subtitle: story.hub_story_subtitle|default(''),
             read_link: story.read_link|default(''),
-            is_on_view: story.is_on_view,
+            is_on_view: story.on_view.0|default('False'),
             tags: story.tags|default('')
           } only %}
       {% endfor %}

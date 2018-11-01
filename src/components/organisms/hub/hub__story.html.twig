@@ -1,6 +1,6 @@
 <div class="hub-story">
   <div class="story-image">
-    {% if is_on_view %}
+    {% if is_on_view == 'True' %}
       <div class="on-view on-view-story">On View</div>
     {% endif %}
     {% include "@atoms/img/img.html.twig" with {
