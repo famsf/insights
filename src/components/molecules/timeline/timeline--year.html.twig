@@ -44,7 +44,7 @@
       <h4 class="timeline-item-subtitle">{{ subtitle }}</h4>
     {% endif %}
     {% if description is defined %}
-      <p class="timeline-item-description">{{ description|striptags('a','i','em','b') }}</p>
+      <p class="timeline-item-description">{{ description|striptags('<a><i><em><b><strong>') }}</p>
     {% endif %}
   </div>
 </div>
