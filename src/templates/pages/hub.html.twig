@@ -9,7 +9,12 @@
     {% include "@organisms/hub/hub.html.twig" with {
         index: loop.index0,
         templateMap: gatherContent.templateMap,
-        stories: children
+        stories: children,
+        image: content__image,
+        title: title,
+        subtitle: subtitle,
+        read_link: read_link,
+        tickets_link: tickets_link
     } only %}
   </div>
 </div>

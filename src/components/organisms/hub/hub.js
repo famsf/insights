@@ -1,6 +1,6 @@
 (function (document, window, $) {
   $(document).ready(function () {
-    var $hubs = $('.frame > .hub');
+    var $hubs = $('#insights-hub');
     $(document).foundation();
     function createFilters($hub) {
       var tagMap = {};
