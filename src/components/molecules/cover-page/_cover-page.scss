@@ -235,6 +235,26 @@
       }
     }
   }
+
+
+  .caption {
+    margin-bottom: 0;
+
+    figcaption {
+      @include responsive(max-width, calc(100% - 2rem), 500px);
+      position: absolute;
+      z-index: 50;
+      bottom: 5rem;
+      right: 1rem;
+    }
+  }
+
+  .caption__brief {
+    position: absolute;
+    bottom: 2.5rem;
+    right: 1rem;
+    z-index: 150;
+  }
 }
 
 .cover_page {
