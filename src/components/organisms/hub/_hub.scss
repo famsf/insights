@@ -207,6 +207,21 @@
     }
   }
 }
+%top-bar {
+  .button-group {
+    a.button {
+      border-radius: 25px;
+      margin-right: .75rem;
+      font-family: $alternate-header-font-family;
+      &:last-child {
+        padding: $button-padding;
+      }
+    }
+  }
+}
 .hub {
   @extend %hub;
+}
+#top-bar {
+  @extend %top-bar;
 }
