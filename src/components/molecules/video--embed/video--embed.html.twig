@@ -1,16 +1,15 @@
 {% set style = 'full-screen' %}
 {% import "@macros/ci-size.html.twig" as ci %}
 {% import "@macros/ci-quality.html.twig" as ci %}
-{{ dump(_context) }}
 
 <div class="video--embed {{ classes }} video-overlay">
   <div class="video--embed__wrapper" data-embed-id="{{ video__id|trim }}" ci-responsive ci-size="{{ ci.size('default') }}" ci-type="crop"
     {% if poster %}
-      ci-img-background="{{ video__poster_image }}"
-      ci-params="{{ ci.quality(video__poster_image, 'default') }}"
+      ci-img-background="{{ video__poster__image }}"
+      ci-params="{{ ci.quality(video__poster__image, 'default') }}"
     {% endif %}
   >
-    <div class="plyr_target video_player youtube" data-plyr-provider="youtube" id="{{ id }}_vid" data-plyr-embed-id="{{ video__id }}" data-poster="{{ video__poster_image }}"></div>
+    <div class="plyr_target video_player youtube" data-plyr-provider="youtube" id="{{ id }}_vid" data-plyr-embed-id="{{ video__id }}" data-poster="{{ video__poster__image }}"></div>
       {% include "@molecules/video-overlay/video-overlay.html.twig" with {
         caption: {
           text: credits,

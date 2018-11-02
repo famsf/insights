@@ -45,12 +45,12 @@ pluginOpts:
     logFileContents: 0
 
     # Local data
-    # saveJSON: true
+    # saveJSON: false
     # useLocalData: true
     # saveRemoteAssets: false
 
     # Remote or initialize local data
-    saveJSON: true
+    # saveJSON: true
     useLocalData: false
     saveRemoteAssets: true
 
@@ -178,7 +178,7 @@ pluginOpts:
       # Video Embed
       video__id: Content_Video-Id
       video__file: Content_Video-File
-      video__poster_image: Content_Poster-Image
+      video__poster__image: Content_Poster-Image
       video__body_copy: Content_Video-Body-Copy
 
       # Video Overlay
