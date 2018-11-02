@@ -14,10 +14,28 @@
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .50);
     }
   }
+
   .caption {
     figcaption {
       position: absolute;
       width: 100%;
+    }
+  }
+
+
+}
+
+.zoom-image--inline {
+  .frame > & {
+    .caption {
+      position: absolute;
+      bottom: 4rem;
+      right: 1rem;
+    }
+    figcaption {
+      position: absolute;
+      bottom: 2rem;
+      right: 1rem;
     }
   }
 }

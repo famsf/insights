@@ -46,7 +46,8 @@ pluginOpts:
     authPath: _auth.json
     filePath: src/assets/gathercontent
     projectId: 190265
-    saveJSON: true
+    saveJSON: false
+    saveRemoteAssets: true
     includeAsFile:
       - 'hub.md'
       - 'la-prose.md'
