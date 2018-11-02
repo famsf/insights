@@ -1,9 +1,12 @@
 <div class="audio-with-transcript">
+  {% if audio__file|last %}
+    {% set audio__file = audio__file|last %}
+  {% endif %}
   {% include "@atoms/audio_player/audio_player.html.twig" with { src: audio__file } only %}
   {% include "@atoms/transcript/transcript.html.twig" with {
     title: name,
     button_text: audio__transcript__toggle,
-    id: slug,
+    id: 'audio-with-transcript__' ~ id,
     brief: audio__description,
     text: audio__transcript
   } only %}
