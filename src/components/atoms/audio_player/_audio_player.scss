@@ -14,9 +14,7 @@
 
     svg {
       fill: $white !important;
-      height: .75rem;
-      width: .75rem;
-      transform: translateX(.125rem);
+      transform: translate(0, -0.125rem);
     }
 
     &:hover {

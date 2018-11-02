@@ -42,11 +42,12 @@ pluginOpts:
   metalsmith-gathercontent:
     verbose: 0
     logMappings: 0
+    saveRemoteAssets: true,
     logFileContents: 0
     authPath: _auth.json
     filePath: src/assets/gathercontent
     projectId: 190265
-    saveJSON: true
+    saveJSON: false
     includeAsFile:
       - 'hub.md'
       - 'la-prose.md'
@@ -134,7 +135,7 @@ pluginOpts:
       tickets_url: Content_Tickets-URL
       twitter_url: Content_Twitter-URL
       facebook_url: Content_Facebook-URL
-      
+
       # Story info
       story__title: Content_Story-Title
       story__subtitle: Content_Story-Subtitle
