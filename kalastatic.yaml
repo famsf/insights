@@ -134,7 +134,7 @@ pluginOpts:
       tickets_url: Content_Tickets-URL
       twitter_url: Content_Twitter-URL
       facebook_url: Content_Facebook-URL
-      
+
       # Story info
       story__title: Content_Story-Title
       story__subtitle: Content_Story-Subtitle
@@ -289,6 +289,9 @@ pluginOpts:
       comp__2__image: Content_Image-2
       comp__2__image_alt: Content_Image-2-Alt
       startPosition: Content_Slider_Start_Position
+
+      # Full screen media credits
+      credits: Content_Credits
 
       # Hub
       # Hub Story
