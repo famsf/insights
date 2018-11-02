@@ -42,9 +42,8 @@ pluginOpts:
   metalsmith-gathercontent:
     verbose: 0
     logMappings: 0
-    saveRemoteAssets: true,
-    logFileContents: 0
     saveRemoteAssets: true
+    logFileContents: 0
     authPath: _auth.json
     filePath: src/assets/gathercontent
     projectId: 190265
