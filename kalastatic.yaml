@@ -43,10 +43,11 @@ pluginOpts:
     verbose: 0
     logMappings: 0
     logFileContents: 0
+    saveRemoteAssets: true
     authPath: _auth.json
     filePath: src/assets/gathercontent
     projectId: 190265
-    saveJSON: true
+    saveJSON: false
     includeAsFile:
       - 'hub.md'
       - 'la-prose.md'
@@ -172,8 +173,12 @@ pluginOpts:
       # Video Embed
       video__id: Content_Video-Id
       video__file: Content_Video-File
-      video__poster_image: Content_Poster-Image
+      video__poster__image: Content_Poster-Image
       video__body_copy: Content_Video-Body-Copy
+
+      # Video Overlay
+      overlay__title: Content_Overlay-Title
+      overlay__text: Content_Overlay-Text
 
       # Meta
       template: Meta_Component
@@ -302,6 +307,8 @@ pluginOpts:
       tickets_link: Content_Buy-Tickets-Link
       on_view: Content_Is-on-View
       tags: Content_Tags
+      # Full Screen Media Credits
+      credits: Content_Credits
 
   # The layouts will live in the templates directory.
   metalsmith-jstransformer:

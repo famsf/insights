@@ -43,18 +43,12 @@ Markup: video--embed.html.twig
 
   svg {
     transition: all .25s ease-in-out;
-    width: 1rem;
-    height: 1rem;
+    width: 1.25rem;
+    height: 1.25rem;
 
     @include breakpoint(medium) {
       width: 1.5rem;
       height: 1.5rem;
-    }
-  }
-
-  .overlay & {
-    @include breakpoint(medium) {
-      margin-top: 3rem;
     }
   }
 }
