@@ -5,6 +5,7 @@
       hideControls: 'false',
       controls: ['play', 'progress', 'current-time', 'mute', 'volume']
     });
+    plyr.volume = 7;
   };
 
   function audioPlayerCallback() {

@@ -49,7 +49,7 @@
     "kalastatic": "4.1.0-alpha.4",
     "kalastatic-twig-filters": "^0.2.0",
     "kss-bootstrap": "^4.1.1",
-    "metalsmith-gathercontent": "^2.3.2",
+    "metalsmith-gathercontent": "^2.4.0",
     "metalsmith-include": "thiagodemellobueno/metalsmith-include#includeWholeObject",
     "motion-ui": "~1.2.2",
     "napa": "^3.0.0",
