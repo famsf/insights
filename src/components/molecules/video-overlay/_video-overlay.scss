@@ -1,5 +1,18 @@
 .video-overlay {
+
   display: none;
+
+  .plyr__control--overlaid {
+    top: 40% !important;
+    svg {
+      left: 5px;
+      top: 2px;
+    }
+  }
+
+  .plyr__control--overlaid {
+    margin-top: 0;
+  }
 
   @include breakpoint(medium) {
     background: rgba($black, .25);

@@ -51,12 +51,6 @@ Markup: video--embed.html.twig
       height: 1.5rem;
     }
   }
-
-  .overlay & {
-    @include breakpoint(medium) {
-      margin-top: 3rem;
-    }
-  }
 }
 
 .video--embed  {

@@ -2,29 +2,29 @@
 {% import "@macros/ci-size.html.twig" as ci %}
 {% import "@macros/ci-quality.html.twig" as ci %}
 
-<div class="video--embed {{ classes }} overlay">
-  <div class="video--embed__wrapper" ci-responsive ci-size="{{ ci.size('default') }}" ci-type="crop"
+<div class="video--embed {{ classes }} video-overlay">
+  <div class="video--embed__wrapper" data-embed-id="{{ video__id|trim }}" ci-responsive ci-size="{{ ci.size('default') }}" ci-type="crop"
     {% if poster %}
       ci-img-background="{{ video__poster_image }}"
       ci-params="{{ ci.quality(video__poster_image, 'default') }}"
     {% endif %}
   >
     {% if youtube %}
-      <div class="plyr_target video_player youtube" data-plyr-provider="youtube" id="{{ id }}_vid" data-plyr-embed-id="{{ video__id }}" data-poster="{{ video__poster_image }}"></div>
-    {% else %}
-      <video class="plyr_target video_element video_player" id="{{ id }}_vid" poster="{{ poster }}" {{ controls }} {{ playsinline }} {{ autoplay }} {{ muted }} {{ loop}}>
-        {% for type, source in sources %}
-          <source src="{{ source }}" type="video/{{ type }}">
-        {% endfor %}
-      </video>
-    {% endif %}
-    {% include "@molecules/video-overlay/video-overlay.html.twig" with {
-      caption: {
-        text: credits,
-        id: 'video--embeded__caption' ~ id
-      },
-      overlay__title: overlay__title,
-      overlay__text: overlay__text
-    } only %}
+        <div class="plyr_target video_player youtube" data-plyr-provider="youtube" id="{{ id }}_vid" data-plyr-embed-id="{{ video__id }}" data-poster="{{ video__poster_image }}"></div>
+      {% else %}
+        <video class="plyr_target video_element video_player" id="{{ id }}_vid" poster="{{ video__poster_image }}" {{ controls }} {{ playsinline }} {{ autoplay }} {{ muted }} {{ loop}}>
+          {% for type, source in sources %}
+            <source src="{{ source }}" type="video/{{ type }}">
+          {% endfor %}
+        </video>
+      {% endif %}
+      {% include "@molecules/video-overlay/video-overlay.html.twig" with {
+        caption: {
+          text: credits,
+          id: 'video--embeded__caption' ~ id
+        },
+        overlay__title: overlay__title,
+        overlay__text: overlay__text
+      } only %}
   </div>
 </div>
