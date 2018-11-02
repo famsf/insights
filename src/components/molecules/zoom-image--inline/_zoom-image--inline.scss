@@ -14,6 +14,7 @@
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .50);
     }
   }
+
   .caption {
     figcaption {
       position: absolute;
@@ -21,6 +22,27 @@
     }
   }
 }
+
+.zoom-image--inline {
+  .frame > & {
+    .caption {
+      position: absolute;
+      bottom: 2rem;
+      right: 1rem;
+      margin-bottom: 0
+    }
+    figcaption {
+      @include responsive(max-width, calc(100% - 2rem), 500px);
+      position: absolute;
+      z-index: 50;
+      max-width: auto;
+      width: 500px !important;
+      bottom: 3rem;
+      right: 1rem;
+    }
+  }
+}
+
 
 .inline-image-zoom-wrapper {
   @extend %inline-image-zoom-wrapper;
