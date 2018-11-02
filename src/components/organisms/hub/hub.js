@@ -42,7 +42,7 @@
         event.preventDefault();
       });
       flickityCarousel.on('staticClick.flickity', function (event, pointer, cellElement, cellIndex) {
-        var tagText = $(cellElement).text();
+        var tagText = $(cellElement).find('.filter-text').text();
         var $stories = $hub.find('.hub-story');
         if ($(cellElement).hasClass('filtered')) {
           $(cellElement).removeClass('filtered');
