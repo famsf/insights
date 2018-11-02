@@ -135,7 +135,7 @@
     }
     a {
       background-color: #1493A1;
-      padding: 10px 14px 10px 14px;
+      padding: 10px 20px 10px 20px;
       color: white;
       border-radius: 30px;
       margin: 0 4px;
@@ -154,6 +154,21 @@
         background-color: white;
         color: $dark-gray;
         border: 1px solid $dark-gray;
+      }
+      .tax-txt-wrapper {
+        margin-right: 9px;
+      }
+      .filter-text {
+        display: inline-block;
+        margin-right: 6px;
+      }
+      .close-icon {
+        font-size: 0.9em;
+        font-weight: 100;
+        position: relative;
+        left: 7px;
+        width: 0;
+        display: inline-block;
       }
     }
   }
