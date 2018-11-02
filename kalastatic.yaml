@@ -295,6 +295,9 @@ pluginOpts:
       comp__2__image_alt: Content_Image-2-Alt
       startPosition: Content_Slider_Start_Position
 
+      # Full screen media credits
+      credits: Content_Credits
+
       # Hub
       # Hub Story
       hub_story_title: Content_Story-Title
@@ -304,8 +307,6 @@ pluginOpts:
       tickets_link: Content_Buy-Tickets-Link
       on_view: Content_Is-on-View
       tags: Content_Tags
-      # Full Screen Media Credits
-      credits: Content_Credits
 
   # The layouts will live in the templates directory.
   metalsmith-jstransformer:
