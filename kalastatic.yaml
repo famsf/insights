@@ -126,6 +126,8 @@ pluginOpts:
       # Insights Info
       tagline: Content_Tagline
       tickets_url: Content_Tickets-URL
+      twitter_url: Content_Twitter-URL
+      facebook_url: Content_Facebook-URL
       # Story info
       story__title: Content_Story-Title
       story__subtitle: Content_Story-Subtitle
