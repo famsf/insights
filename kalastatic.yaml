@@ -43,6 +43,7 @@ pluginOpts:
     verbose: 0
     logMappings: 0
     logFileContents: 0
+    saveRemoteAssets: true
     authPath: _auth.json
     filePath: src/assets/gathercontent
     projectId: 190265
