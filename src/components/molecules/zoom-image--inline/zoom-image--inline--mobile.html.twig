@@ -1,18 +1,18 @@
 <div class="zoom-image--inline--mobile owl-theme owl-carousel">
   {% for image in mobile_images %}
     <div class="zoom-image-mobile">
-        <div class="zoom-img-mobile-wrapper">
-            {% include "@atoms/img/img.html.twig" with {
-              style: 'full-screen',
-              url: image.src,
-              src: image.src,
-              alt: image.alt
-            } only %}
-        </div>
-        <div class="zoom-image-mobile-text">
-          <h2>{{ image.heading_text }}</h2>
-          {{ image.body_text }}
-        </div>
+      <div class="zoom-img-mobile-wrapper">
+        {% include "@atoms/img/img.html.twig" with {
+          style: 'full-screen',
+          url: image.marker_mobile__image.origin,
+          src: image.marker_mobile__image.origin,
+         alt: image.marker_mobile__image-alt
+       } only %}
+      </div>
+      <div class="zoom-image-mobile-text">
+        <h2>{{ image.marker_mobile__heading|striptags }}</h2>
+        <p>{{ image.marker_mobile__description|striptags }}</p>
+      </div>
     </div>
   {% endfor %}
 </div>
