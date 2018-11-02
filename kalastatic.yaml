@@ -95,8 +95,6 @@ pluginOpts:
       7933024: '@kalastatic/components/organisms/section_wrapper/section_wrapper.html.twig'
       1413449: '@kalastatic/components/molecules/zoom-image--fullbleed/zoom-image--fullbleed.html.twig'
       1398142: '@kalastatic/components/molecules/zoom-image--inline/zoom-image--inline.html.twig'
-      1413649: '@kalastatic/components/molecules/zoom-caption/zoom-caption.html.twig'
-      1430496: '@kalastatic/components/molecules/zoom-image--inline/zoom-image--inline--mobile.html.twig'
       1397424: '@kalastatic/components/molecules/timeline/timeline.html.twig'
       1397420: '@kalastatic/components/molecules/audiowithtranscript/audiowithtranscript.html.twig'
       1390484: '@kalastatic/components/organisms/footer-ctas/footer-ctas.html.twig'
@@ -121,7 +119,6 @@ pluginOpts:
       offset: Offset
 
       column_offset: Content_Column-Offset
-
       # Themes
       theme: Colors_Theme
 
@@ -143,9 +140,7 @@ pluginOpts:
       # Insights Info
       tagline: Content_Tagline
       tickets_url: Content_Tickets-URL
-      twitter_url: Content_Twitter-URL
-      facebook_url: Content_Facebook-URL
-      
+
       # Story info
       story__title: Content_Story-Title
       story__subtitle: Content_Story-Subtitle
@@ -271,16 +266,9 @@ pluginOpts:
       footer__copyright__link_3: Content-Links_Link-3
       footer__copyright__text: Content-Copyright_Copyright
 
-      # Images with Zoom Marker
+      # Images with Marker
       marker__location: Content_Location
       marker__description: Content_Description
-
-      # Images with Zoom Marker (mobile)
-      marker_mobile__image: Content_Image
-      marker_mobile__image-alt: Content_Image-Alt
-      marker_mobile__heading: Content_Heading
-      marker_mobile__description: Content_Description
-
       # Timeline
       timeline__span: Content_Timeline-Span
       timeline__marker__description: Content_Description
@@ -297,7 +285,6 @@ pluginOpts:
       c__image-alt: Content_Image-C-Alt
       c__caption: Content_Image-C-Caption
       c__caption__brief: Content_Image-C-Caption-Brief
-
       # Image Comparison slider
       comp__1__image: Content_Image-1
       comp__1__image_alt: Content_Image-1-Alt
