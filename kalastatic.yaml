@@ -43,10 +43,20 @@ pluginOpts:
     verbose: 0
     logMappings: 0
     logFileContents: 0
+
+    # Local data
+    # saveJSON: true
+    # useLocalData: true
+    # saveRemoteAssets: false
+
+    # Remote or initialize local data
+    saveJSON: true
+    useLocalData: false
+    saveRemoteAssets: true
+
     authPath: _auth.json
     filePath: src/assets/gathercontent
     projectId: 190265
-    saveJSON: true
     includeAsFile:
       - 'hub.md'
       - 'la-prose.md'
@@ -107,9 +117,11 @@ pluginOpts:
       template_id: _template_id
       auto_height: Content_Height-Auto
       offset: Offset
+
       column_offset: Content_Column-Offset
       # Themes
       theme: Colors_Theme
+
       # General
       title: Content_Title
       subtitle: Content_Subtitle
@@ -118,14 +130,17 @@ pluginOpts:
       background__image-alt: Content_Background-Image-Alt
       content__image: Content_Image
       content__image-alt: Content_Image-Alt
+
       # Social
       og__title: Social_OpenGraph-Title
       og__description: Social_OpenGraph-Description
       og__image: Social_OpenGraph-Image
       og__curl: Social_Cannonical-URL
+
       # Insights Info
       tagline: Content_Tagline
       tickets_url: Content_Tickets-URL
+
       # Story info
       story__title: Content_Story-Title
       story__subtitle: Content_Story-Subtitle
@@ -133,15 +148,19 @@ pluginOpts:
       exhibit__dates: Content_Exhibit-Dates
       color__primary: Theme_Primary
       color__secondary: Theme_Secondary
+
       # intro
       intro__title: Content_Intro-Title
       intro__text: Content_Intro-Text
+
       # Chapter Title
       chapter__numeral: Content_Chapter-Numeral
       chapter__title: Content_Chapter-Title
+
       # Standalone Quote
       quote__quote: Content_Quote
       quote__attribution: Content_Attribution
+
       # Scroll Comparison
       left__image: Content-Left_Image
       left__image-alt: Content-Left_Image-Alt
@@ -155,16 +174,24 @@ pluginOpts:
       right__caption_brief: Content-Right_Caption-Brief
       right__title: Content-Right_Title
       right__body: Content-Right_Body-Copy
+
       # Video Embed
       video__id: Content_Video-Id
       video__file: Content_Video-File
       video__poster_image: Content_Poster-Image
       video__body_copy: Content_Video-Body-Copy
+
+      # Video Overlay
+      overlay__title: Content_Overlay-Title
+      overlay__text: Content_Overlay-Text
+
       # Meta
       template: Meta_Component
       _offset: Content_Offset
-        # CTA button
+
+      # CTA button
       button__text: Content_CTA-Button
+
       # Slide
       caption__brief: Content_Caption-Brief
       caption__text: Content_Caption
@@ -172,20 +199,24 @@ pluginOpts:
       slide__image-alt: Content_Slide-Image-Alt
       slide__title: Content_In-Depth-Title
       slide__description: Content_In-Depth-Description
+
       # In depth
       slideshow__title: Content_Slideshow-Title
       slideshow__description: Content_Slideshow-Description
       slideshow__image: Content_Slideshow-Image
       slideshow__image-alt: Content_Slideshow-Image-Alt
       slideshow__cta: Content_Slideshow-CTA
+
       # Simple content
       content__quote: Content_Quote
       content__quote__attribution: Content_Quote-Attribution
       content__title: Content_Title
       content__body: Content_Body
       content__cta__button: Content_CTA-Button
+
       # Cliff Note
       content__cliff_note: Content_Cliff-Note
+
       # Commentary
       author__image: Content_Image
       author__image-alt: Content_Image-Alt
@@ -194,6 +225,7 @@ pluginOpts:
       author__bio: Content_Author-Bio
       commentary: Content_Commentary
       cta__button: Content_Commentary-CTA-Button
+
       # Audio + Transcripts
       audio__file: Content_Audio-File
       audio__description: Content_Audio-Description
@@ -259,7 +291,6 @@ pluginOpts:
       comp__2__image: Content_Image-2
       comp__2__image_alt: Content_Image-2-Alt
       startPosition: Content_Slider_Start_Position
-
       # Hub
       # Hub Story
       hub_story_title: Content_Story-Title
@@ -269,6 +300,8 @@ pluginOpts:
       tickets_link: Content_Buy-Tickets-Link
       on_view: Content_Is-on-View
       tags: Content_Tags
+      # Full Screen Media Credits
+      credits: Content_Credits
 
   # The layouts will live in the templates directory.
   metalsmith-jstransformer:
