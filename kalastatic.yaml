@@ -307,8 +307,6 @@ pluginOpts:
       tickets_link: Content_Buy-Tickets-Link
       on_view: Content_Is-on-View
       tags: Content_Tags
-      # Full Screen Media Credits
-      credits: Content_Credits
 
   # The layouts will live in the templates directory.
   metalsmith-jstransformer:
