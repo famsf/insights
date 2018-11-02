@@ -21,24 +21,28 @@
       width: 100%;
     }
   }
-
-
 }
 
 .zoom-image--inline {
   .frame > & {
     .caption {
       position: absolute;
-      bottom: 4rem;
+      bottom: 2rem;
       right: 1rem;
+      margin-bottom: 0
     }
     figcaption {
+      @include responsive(max-width, calc(100% - 2rem), 500px);
       position: absolute;
-      bottom: 2rem;
+      z-index: 50;
+      max-width: auto;
+      width: 500px !important;
+      bottom: 3rem;
       right: 1rem;
     }
   }
 }
+
 
 .inline-image-zoom-wrapper {
   @extend %inline-image-zoom-wrapper;

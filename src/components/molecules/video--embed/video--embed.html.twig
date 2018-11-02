@@ -5,7 +5,7 @@
 {% if video__poster__image|last %}
   {% set video__poster__image = video__poster__image|last %}
 {% endif %}
-<div class="video--embed {{ classes }} video-overlay">
+<div class="video--embed {{ classes }} video">
   <div class="video--embed__wrapper"
     data-embed-id="{{ video__id|trim }}"
     ci-responsive ci-size="{{ ci.size('default') }}" ci-type="crop"

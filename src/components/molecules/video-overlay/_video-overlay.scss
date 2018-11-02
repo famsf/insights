@@ -4,11 +4,6 @@
 
   .plyr__control--overlaid {
     top: 50% !important;
-    padding: 1.75rem;
-    svg {
-      left: 5px;
-      top: 2px;
-    }
   }
 
   @include breakpoint(medium) {
@@ -34,6 +29,16 @@
     &__text {
       font-size: 1rem;
     }
+
+    .plyr__control--overlaid {
+      top: 50% !important;
+      padding: 1.75rem;
+      svg {
+        left: 5px;
+        top: 2px;
+      }
+    }
+
 
     .playing & {
       opacity: 0;
