@@ -47,7 +47,6 @@ pluginOpts:
     filePath: src/assets/gathercontent
     projectId: 190265
     saveJSON: false
-    saveRemoteAssets: true
     includeAsFile:
       - 'hub.md'
       - 'la-prose.md'
