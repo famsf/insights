@@ -10,8 +10,8 @@
        } only %}
       </div>
       <div class="zoom-image-mobile-text">
-        <h2>{{ image.marker_mobile__heading|striptags }}</h2>
-        <p>{{ image.marker_mobile__description|striptags }}</p>
+        <h2>{{ image.marker_mobile__heading|striptags('<a><i><em><b><strong>') }}</h2>
+        <p>{{ image.marker_mobile__description|striptags('<a><i><em><b><strong>') }}</p>
       </div>
     </div>
   {% endfor %}
