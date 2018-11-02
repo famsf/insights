@@ -10,7 +10,7 @@
         tagMap[$(e).attr('data-tag-value')] = true;
       });
       Object.keys(tagMap).forEach(function (tag) {
-        $hub.find('.story-filter').append('<a href="#" aria-role="button" data-showing="true" class="' + colorScheme + '">' + tag + '</a>');
+        $hub.find('.story-filter').append('<a href="#" aria-role="button" data-showing="true" class="' + colorScheme + '"><div class="tag-txt-wrapper"><span class="filter-text">' + tag + '</span><span class="close-icon">✕</span></div></a>');
         if (colorScheme === 'teal') colorScheme = 'blue';
         else if (colorScheme === 'blue') colorScheme = 'black';
         else colorScheme = 'teal';
@@ -42,13 +42,15 @@
         event.preventDefault();
       });
       flickityCarousel.on('staticClick.flickity', function (event, pointer, cellElement, cellIndex) {
-        var tagText = $(cellElement).text();
+        var tagText = $(cellElement).find('.filter-text').text();
         var $stories = $hub.find('.hub-story');
         if ($(cellElement).hasClass('filtered')) {
           $(cellElement).removeClass('filtered');
+          $(cellElement).find('.close-icon').fadeIn();
         }
         else {
           $(cellElement).addClass('filtered');
+          $(cellElement).find('.close-icon').fadeOut();
         }
         $stories.each(function (index, element) {
           $(element).find('div[data-tag-value="' + tagText + '"]').css('display', 'none');
