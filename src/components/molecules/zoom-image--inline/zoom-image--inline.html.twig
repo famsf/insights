@@ -1,19 +1,42 @@
+{# Create arrays of mobile and desktop items #}
+{% set mobile_items = [] %}
+{% set desktop_items = [] %}
+
+{% for child in children %}
+  {% set template = templateMap[child.template_id] %}
+  {% if template == '@kalastatic/components/molecules/zoom-caption/zoom-caption.html.twig' %}
+
+    {# Add desktop items to array #}
+    {% set desktop_items = desktop_items|merge([child]) %}
+
+  {% elseif template == '@kalastatic/components/molecules/zoom-image--inline/zoom-image--inline--mobile.html.twig' %}
+
+    {# Add mobile items to array #}
+    {% set mobile_items = mobile_items|merge([child]) %}
+
+  {% endif %}
+{% endfor %}
+
 <div class="zoom-image--inline">
+
   {% include '@molecules/zoom-image--inline/zoom-image--inline--mobile.html.twig' with {
-    mobile_images: mobile_images
+    mobile_images: mobile_items
   } only %}
+
   <div class="inline-image-zoom-wrapper">
-      {% if children|length > 0 %}
-        {% for caption in children %}
+      {% if desktop_items|length > 0 %}
+        {% for caption in desktop_items %}
           {% if ',' in caption.marker__location and caption.marker__location|length > 2 %}
             {% set x = caption.marker__location|split(',')[0]|trim %}
             {% set y = caption.marker__location|split(',')[1]|trim %}
+
             {% include '@molecules/zoom-caption/zoom-caption.html.twig' with {
               heading_text: caption.title,
               body_text: caption.marker__description,
               xcoord: x,
               ycoord: y
             } only %}
+
           {% endif %}
         {% endfor %}
       {% endif %}

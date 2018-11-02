@@ -4,9 +4,9 @@
       {% include "@atoms/img/img.html.twig" with {
         classes: 'featured-story-img',
         style: 'vertical',
-        src: image.src,
-        url: image.src,
-        alt: image.alt
+        src: stories.0.content__image.src,
+        url: stories.0.content__image.src,
+        alt: stories.0.content__image.alt
       } %}
       {% if stories.0.on_view.0|default('False') == 'True' %}
         <div class="on-view on-view-featured">On View</div>
@@ -29,6 +29,7 @@
       </div>
     </div>
   </div>
+  {% set stories = stories|slice(1) %}
   {% if stories is defined %}
     <div class="stories">
       <div class="story-filter">

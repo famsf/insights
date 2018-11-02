@@ -1,9 +1,12 @@
 <div id="insights-hub" class="off-canvas-wrapper {{ slug }}">
+  {{ tickets_url }}
+  {{ facebook_url }}
+  {{ twitter_url }}
   {% include '@molecules/top-bar/top-bar.html.twig' with {
-    tagline: '',
-    tickets_url: 'https://tickets.famsf.org/events/283/list',
-    facebook_url: 'https://www.facebook.com/LegionofHonor/',
-    twitter_url: 'https://twitter.com/legionofhonor'
+    tagline: tagline,
+    tickets_url: tickets_url,
+    facebook_url: facebook_url,
+    twitter_url: twitter_url
   } only %}
   <div id="app" class="chapters_container off-canvas-content" >
     {% include "@organisms/hub/hub.html.twig" with {
