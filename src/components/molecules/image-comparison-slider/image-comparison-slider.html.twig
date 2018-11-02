@@ -29,6 +29,9 @@
   </div>
 </div>
 
-{% if caption %}
-  {% include "@atoms/caption/caption.html.twig" with caption only %}
+{% if credits %}
+  {% include "@atoms/caption/caption.html.twig" with {
+    id: 'image-comparison-credits' ~ id,
+    text: credits
+  } only %}
 {% endif %}

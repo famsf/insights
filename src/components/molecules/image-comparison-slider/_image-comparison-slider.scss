@@ -17,6 +17,23 @@
 }
 
 .image-comparison-slider {
+
+  .frame > & {
+    .caption {
+      position: absolute;
+      bottom: 4rem;
+      right: 1rem;
+      margin-bottom: 0;
+    }
+    figcaption {
+      @include responsive(max-width, calc(100% - 2rem), 500px);
+      position: absolute;
+      z-index: 50;
+      bottom: 3rem;
+      right: 1rem;
+    }
+  }
+
   .beer-slider {
     left: 50%;
     transform: translateX(-50%);
