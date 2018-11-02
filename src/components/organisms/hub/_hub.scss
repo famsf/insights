@@ -33,7 +33,7 @@
     position: absolute;
     top: 80px;
     right: 35px;
-    background-color: #3130A3;
+    background-color: #5b5279;
     padding: 8px 20px;
     color: white;
     font-weight: 300;
@@ -134,7 +134,7 @@
       }
     }
     a {
-      background-color: #1493A1;
+      background-color: #0090a0;
       padding: 10px 20px 10px 20px;
       color: white;
       border-radius: 30px;
@@ -144,7 +144,7 @@
       text-align: center;
       transition: all 0.2s linear;
       &.blue {
-        background-color: #3130A3;
+        background-color: #5b5279;
       }
       &.black {
         background-color: black;
@@ -186,7 +186,7 @@
     .on-view-story {
       right: 15px;
       top: 15px;
-      background-color: #1493A1;
+      background-color: #0090a0;
     }
     .story-title {
       margin-top: 25px;
