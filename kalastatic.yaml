@@ -299,6 +299,7 @@ pluginOpts:
       tickets_link: Content_Buy-Tickets-Link
       on_view: Content_Is-on-View
       tags: Content_Tags
+      dates: Content_Dates
 
   # The layouts will live in the templates directory.
   metalsmith-jstransformer:
