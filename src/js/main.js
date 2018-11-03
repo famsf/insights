@@ -198,7 +198,8 @@
     }
 
     // Transcription toggle.
-    $('.transcript .transcript__toggle').click(function () {
+    $('.transcript .transcript__toggle').click(function (e) {
+      e.preventDefault();
       $(this).siblings('.transcript__text').toggleClass('active');
     });
 
