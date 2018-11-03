@@ -5,6 +5,7 @@
       vertical-align: top;
       display: inline-block;
       width: 50%;
+      padding-right: 30px;
     }
     .featured-story-wrapper {
       overflow: hidden;
@@ -17,7 +18,7 @@
         top: 455px;
         left: 50%;
         color: white;
-        width: 75%;
+        width: 85%;
         z-index: 200;
         animation-name: fadein;
         animation-duration: 1.325s;
@@ -39,7 +40,7 @@
     font-weight: 300;
     letter-spacing: 0.5px;
     font-family: $alternate-header-font-family;
-    font-size: 0.9em;
+    font-size: 0.8em;
     line-height: 1.6em;
   }
   img.featured-story-img {
@@ -58,13 +59,13 @@
   h1 {
     font-family: $alternate-header-font-family;
     font-size: 70px;
-    text-align: center;
+    text-align: left;
     line-height: normal;
     @include breakpoint(medium) {
       font-size: 100px;
     }
     @include breakpoint(large) {
-      font-size: 68px;
+      font-size: 105px;
     }
   }
   h2 {
@@ -73,23 +74,23 @@
       font-style: italic;
       font-size: 32px;
       font-weight: 700;
-      text-align: center;
+      text-align: left;
       @include breakpoint(medium) {
         font-size: 42px;
       }
     }
   }
   .button-wrapper {
-    text-align: center;
+    text-align: left;
     margin-top: 55px;
     p {
       display: inline-block;
-      font-size: 1em;
+      font-size: .82em;
       a {
         color: black;
         background-color: white;
         padding: 15px 18px;
-        margin: 0 10px;
+        margin: 0 10px 0 0;
         border-radius: 30px;
         font-family: $alternate-header-font-family;
         &::after {
@@ -128,6 +129,7 @@
       display: none;
       margin: 10px 10px 25px 0;
       font-weight: 700;
+      font-size: .8em;
       font-family: $alternate-header-font-family;
       @include breakpoint(large) {
         display: inline-block;
@@ -140,15 +142,25 @@
       border-radius: 30px;
       margin: 0 4px;
       font-family: $alternate-header-font-family;
+      font-size: .8em;
       min-width: 140px;
       text-align: center;
       transition: all 0.2s linear;
+      &:hover {
+        background-color: #02727e;
+      }
       &.blue {
         background-color: #5b5279;
+        &:hover {
+          background-color: #443c61;
+        }
       }
       &.black {
         background-color: black;
         color: white;
+        &:hover {
+          background-color: #4b5659;
+        }
       }
       &.filtered {
         background-color: white;
@@ -231,6 +243,11 @@
       font-family: $alternate-header-font-family;
       &:last-child {
         padding: $button-padding;
+        font-size: .7em;
+        letter-spacing: 1.5px;
+      }
+      &:last-child:hover {
+        background-color: #4b5659;
       }
     }
   }
