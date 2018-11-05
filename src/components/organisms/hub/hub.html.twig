@@ -14,8 +14,15 @@
       <div class="overlay">
         <div class="overlay__contents">
           <h1>{{ stories.0.hub_story_title }}</h1>
-          {% if stories.0.hub_story_title|default('') != '' %}
-            <h2>{{ stories.0.hub_story_title }}</h2>
+          {% if stories.0.hub_story_subtitle|default('') != '' %}
+            <h2>{{ stories.0.hub_story_subtitle }}</h2>
+          {% endif %}
+          {% if stories.0.location|default('') !='' %}
+            <h3 class="datelocation">{{ stories.0.location }}
+            {% if stories.0.dates|default('') !='' %}
+              <br />{{ stories.0.dates }}
+            {% endif %}
+            </h3>
           {% endif %}
           <div class="button-wrapper">
             {% if (stories.0.read_link|default('') != '') %}

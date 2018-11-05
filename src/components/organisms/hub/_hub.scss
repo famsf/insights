@@ -32,6 +32,8 @@
   }
   .on-view {
     position: absolute;
+    // Firefox needs a z-index value
+    z-index: 1;
     top: 100px;
     right: 35px;
     background-color: #5b5279;
@@ -61,6 +63,7 @@
     font-size: 70px;
     text-align: left;
     line-height: normal;
+    margin-bottom: 0;
     @include breakpoint(medium) {
       font-size: 100px;
     }
@@ -77,9 +80,17 @@
       text-align: left;
       @include breakpoint(medium) {
         font-size: 42px;
+        line-height: 50px;
       }
     }
   }
+  h3.datelocation {
+    font-family: $header-font-family;
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-top: 3em;
+  }
+  
   .button-wrapper {
     text-align: left;
     margin-top: 55px;
