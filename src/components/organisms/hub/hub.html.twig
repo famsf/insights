@@ -18,7 +18,7 @@
             <h2>{{ stories.0.hub_story_subtitle }}</h2>
           {% endif %}
           {% if stories.0.location|default('') !='' %}
-            <h3 class="datelocation">{{ stories.0.location }} museum
+            <h3 class="datelocation">{{ stories.0.location }}
             {% if stories.0.dates|default('') !='' %}
               <br />{{ stories.0.dates }}
             {% endif %}
