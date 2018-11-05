@@ -10,8 +10,8 @@
   {% endif %}
 
   {% if id %}
-    <a class="transcript__toggle button">
-      {{ button_text }}
+    <a href="#" class="transcript__toggle button">
+      <span style="display:block;">{{ button_text|striptags }}</span>
     </a>
 
     <div class="transcript__text" style="visibility: hidden;">
