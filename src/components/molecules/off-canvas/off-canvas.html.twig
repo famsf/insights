@@ -1,5 +1,13 @@
 <div class="off-canvas position-right" id="off-canvas" data-off-canvas data-transition="push">
-  {% include '@molecules/cover-page/cover-page--menu.html.twig' with { title: title } only %}
+<div class="cover_page">
+    <div class="underlay">
+      <div class="underlay_contents">
+        <h1 class="headline exhibit_logo">
+          {{ title }}
+        </h1>
+      </div>
+    </div>
+  </div>
 
   {% if tickets_url %}
     <div class="off-canvas__buttons text-center">
