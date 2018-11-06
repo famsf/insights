@@ -3,7 +3,7 @@
     <div class="top-bar-left">
       <div class="menu-text">
         {% include '@atoms/logo/logo.html.twig' %}
-        {% include '@atoms/tagline/tagline.html.twig' with { text: tagline } only %}
+        {% include '@atoms/tagline/tagline.html.twig' with { text: tagline|striptags } only %}
       </div>
     </div>
     <div class="top-bar-right">
