@@ -2,6 +2,7 @@
 <nav id="chapter_nav" class="hidden">
   <ul>
     {% for chapter in chapters %}
+      {# Only render items with the status 1208754 which is "Published" #}
       {% if chapter['_status'].data.id == '1208754' %}
         {% set id = get.id(chapter|merge({index: loop.index0})) %}
         <li>
