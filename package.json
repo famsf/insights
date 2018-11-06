@@ -64,7 +64,7 @@
     "what-input": "^4.1.3"
   },
   "napa": {
-     "background-clip-text-polyfill": "TimPietrusky/background-clip-text-polyfill"
+    "background-clip-text-polyfill": "TimPietrusky/background-clip-text-polyfill"
   },
   "resolutions": {
     "twig": "RobLoach/twig.js#compile"
