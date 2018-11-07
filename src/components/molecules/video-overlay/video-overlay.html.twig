@@ -5,7 +5,7 @@
 
   {% if overlay__text %}
     <div class="video-overlay__text">
-      {{ overlay__text }}
+      {{ overlay__text|striptags }}
       {% if caption %}
         {% include "@atoms/caption/caption.html.twig" with caption only %}
       {% endif %}

@@ -12,6 +12,16 @@
       color: $black;
     }
   }
+
+  .cover_page {
+    .underlay {
+      .underlay_contents {
+        h1.headline {
+          color: #fff;
+        }
+      }
+    }
+  }
 }
 
 .off-canvas {

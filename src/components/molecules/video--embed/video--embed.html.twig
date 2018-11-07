@@ -2,7 +2,7 @@
 {% import "@macros/ci-size.html.twig" as ci %}
 {% import "@macros/ci-quality.html.twig" as ci %}
 
-{% if video__poster__image|last %}
+{% if video__poster__image.0 %}
   {% set video__poster__image = video__poster__image|last %}
 {% endif %}
 <div class="video--embed {{ classes }} video">

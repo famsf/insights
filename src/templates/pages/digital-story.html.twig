@@ -25,7 +25,7 @@
 
 {% include '@molecules/off-canvas/off-canvas.html.twig' with {
   chapters: children,
-  title: story_title,
+  title: story__title|trim,
   tickets_url: tickets_url,
   sections: footer.sections,
   classes: footer.classes
