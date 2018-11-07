@@ -2,7 +2,19 @@
   {{- value is defined ? value : default -}}
 {% endmacro %}
 
-<div class="scroll-comparison grid-x fluid {{ classes }}" id="{{ id }}" data-snap-id="{{ snap_id }}">
+{% if theme == "Theme Default Light" or theme == "" %}
+  {% set theme = "" %}
+{% elseif theme == "Theme Dark" %}
+  {% set theme = "theme--dark" %}
+{% elseif theme == "Theme Primary" %}
+  {% set theme = "theme--primary" %}
+{% elseif theme == "Theme Primary Light" %}
+  {% set theme = "theme--primary-light" %}
+{% elseif theme == "Theme Primary Dark"  %}
+  {% set theme = "theme--primary-dark" %}
+{% endif %}
+
+<div class="scroll-comparison grid-x fluid {{ classes }} {{ theme }}" id="{{ id }}" data-snap-id="{{ snap_id }}">
   <div class="cell small-12 large-8 large-offset-2 xlarge-6 xlarge-offset-3">
     <div class="wrapper grid-x grid-margin-x">
       <div class="cell active" {{ left.attributes }}>
