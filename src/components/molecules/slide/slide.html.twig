@@ -13,7 +13,8 @@
     {% if caption__text %}
       {% include "@atoms/caption/caption.html.twig" with {
         brief: caption__brief,
-        text: caption__text
+        text: caption__text,
+        id: id
       } only %}
     {% endif %}
     {% if loop.first %}
