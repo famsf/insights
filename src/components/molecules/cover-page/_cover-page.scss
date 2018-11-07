@@ -49,6 +49,11 @@
         opacity: 0;
         position: relative;
         top: 4em;
+        
+        p {
+          margin-bottom: 0;
+        }
+        
       }
       @include breakpoint(medium) {
         bottom: 5rem;
