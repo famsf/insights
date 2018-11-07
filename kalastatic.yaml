@@ -194,6 +194,7 @@ pluginOpts:
       slide__image-alt: Content_Slide-Image-Alt
       slide__title: Content_In-Depth-Title
       slide__description: Content_In-Depth-Description
+      slide__body: Content_Slide-Body
 
       # In depth
       slideshow__title: Content_Slideshow-Title
