@@ -115,6 +115,9 @@ pluginOpts:
       # Themes
       theme: Colors_Theme
 
+      # Page Settings
+      page__classes: Options_Page-Classes
+
       # General
       title: Content_Title
       subtitle: Content_Subtitle

@@ -1,3 +1,4 @@
+{# Theme Classes #}
 {% if theme == "Theme Default Light" or theme == "" %}
   {% set theme = "" %}
 {% elseif theme == "Theme Dark" %}
@@ -8,6 +9,14 @@
   {% set theme = "theme--primary-light" %}
 {% elseif theme == "Theme Primary Dark"  %}
   {% set theme = "theme--primary-dark" %}
+{% endif %}
+
+{# Page Classes #}
+{% if page__classes %}
+  {% set classes = '' %}
+  {% for class in page__classes %}
+    {% set classes = classes ~ ' ' ~ class %}
+  {% endfor %}
 {% endif %}
 
 {# Override classes for the footer #}
