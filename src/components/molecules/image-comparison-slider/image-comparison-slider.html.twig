@@ -29,9 +29,10 @@
   </div>
 </div>
 
-{% if credits %}
+{% if caption__text %}
   {% include "@atoms/caption/caption.html.twig" with {
-    id: 'image-comparison-credits' ~ id,
-    text: credits
+  id: 'image-comparison-caption' ~ id,
+  text: caption__text,
+  brief: caption__brief
   } only %}
 {% endif %}
