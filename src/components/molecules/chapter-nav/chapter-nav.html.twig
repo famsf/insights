@@ -2,19 +2,16 @@
 <nav id="chapter_nav" class="hidden">
   <ul>
     {% for chapter in chapters %}
-      {# Only render items with the status 1208754 which is "Published" #}
-      {% if chapter['_status'].data.id == '1208754' %}
-        {% set id = get.id(chapter|merge({index: loop.index0})) %}
-        <li>
-          <a href="#chapter_{{ id }}" data-template-classes="chapter_nav__tip" data-position="right" data-fade-in-duration="625" data-fade-out-duration="525" data-alignment="center" data-tooltip title="{{ chapter.chapter__numeral }}&nbsp;&nbsp;&nbsp;{{ chapter.chapter__title }}" data-chapter="{{ id }}">
-            <div class="dot_wrapper">
-              <div class="dot">
-                <span class="show-for-sr">{{ chapter.chapter__title }}</span>
-              </div>
+      {% set id = get.id(chapter|merge({index: loop.index0})) %}
+      <li>
+        <a href="#chapter_{{ id }}" data-template-classes="chapter_nav__tip" data-position="right" data-fade-in-duration="625" data-fade-out-duration="525" data-alignment="center" data-tooltip title="{{ chapter.chapter__numeral }}&nbsp;&nbsp;&nbsp;{{ chapter.chapter__title }}" data-chapter="{{ id }}">
+          <div class="dot_wrapper">
+            <div class="dot">
+              <span class="show-for-sr">{{ chapter.chapter__title }}</span>
             </div>
-          </a>
-        </li>
-      {% endif %}
+          </div>
+        </a>
+      </li>
     {% endfor %}
   </ul>
   <div class="scroll_percent" aria-hidden="true"></div>
