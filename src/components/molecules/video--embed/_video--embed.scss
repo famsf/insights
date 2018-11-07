@@ -49,6 +49,8 @@ Markup: video--embed.html.twig
     @include breakpoint(medium) {
       width: 1.5rem;
       height: 1.5rem;
+      left: 5px;
+      top: 2px;
     }
   }
 }
