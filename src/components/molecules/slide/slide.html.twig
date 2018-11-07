@@ -12,6 +12,7 @@
     {% include "@molecules/picture/picture.html.twig" with slide__image only %}
     {% if caption__text %}
       {% include "@atoms/caption/caption.html.twig" with {
+        in_depth__body: slide__body,
         brief: caption__brief,
         text: caption__text,
         id: id
