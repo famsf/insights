@@ -45,11 +45,22 @@ footer.footer {
       margin-right: 1rem;
     }
   }
+  .footer-feature-wrapper {
+    display: flex;
+    @include breakpoint(medium) {
+      display: block;
+    }
+  }
 
   .footer-feature {
-
+    width: 45%;
+    display: inline-block;
+    margin-right: 5%;
     @include breakpoint(medium) {
       margin-bottom: 4rem;
+      width: auto;
+      display: block;
+      margin-right: 0;
     }
 
     @include breakpoint(large) {
@@ -79,6 +90,13 @@ footer.footer {
       @include responsive(line-height, 16px);
     }
 
+    .footer-description {
+      display: none;
+      @include breakpoint(medium) {
+        display: block;
+      }
+    }
+
     img {
       margin: 1rem 0;
 
@@ -90,8 +108,6 @@ footer.footer {
 
   // Overrides for footer in mobile menu
   & {
-    display: none;
-
     @include breakpoint(medium) {
       display: block;
     }
