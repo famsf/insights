@@ -2,6 +2,18 @@
   {% set auto_height = "height-auto" %}
 {% endif %}
 
+{% if theme == "Theme Default Light" or theme == "" %}
+  {% set theme = "" %}
+{% elseif theme == "Theme Dark" %}
+  {% set theme = "theme--dark" %}
+{% elseif theme == "Theme Primary" %}
+  {% set theme = "theme--primary" %}
+{% elseif theme == "Theme Primary Light" %}
+  {% set theme = "theme--primary-light" %}
+{% elseif theme == "Theme Primary Dark"  %}
+  {% set theme = "theme--primary-dark" %}
+{% endif %}
+
 {# Don't assume that the section should be columns for the footer #}
 {% if 'footer' in slug %}
 
@@ -13,7 +25,7 @@
 
 {% else %}
 
-  <div class="two_up--primary fluid {{ auto_height }}">
+  <div class="two_up--primary fluid {{ auto_height }} {{ theme }}">
     <div class="wrapper grid-x grid-margin-x " id="{{slug}}">
       {% for column in children %}
         {% if column.column_offset == "Offset 1" %}
