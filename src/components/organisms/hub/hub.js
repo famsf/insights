@@ -10,7 +10,7 @@
         tagMap[$(e).attr('data-tag-value')] = true;
       });
       Object.keys(tagMap).forEach(function (tag) {
-        $hub.find('.story-filter').append('<a href="#" aria-role="button" data-showing="true" class="' + colorScheme + '"><div class="tag-txt-wrapper"><span class="filter-text">' + tag + '</span><span class="close-icon">✕</span></div></a>');
+        $hub.find('.story-filter').append('<a href="#" aria-role="button" data-showing="true" class="' + tag + '"><div class="tag-txt-wrapper"><span class="filter-text">' + tag + '</span><span class="close-icon">✕</span></div></a>');
         if (colorScheme === 'teal') colorScheme = 'blue';
         else if (colorScheme === 'blue') colorScheme = 'black';
         else colorScheme = 'teal';
