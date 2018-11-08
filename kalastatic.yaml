@@ -115,6 +115,9 @@ pluginOpts:
       # Themes
       theme: Colors_Theme
 
+      # Page Settings
+      page__classes: Options_Page-Classes
+
       # General
       title: Content_Title
       subtitle: Content_Subtitle
@@ -194,6 +197,7 @@ pluginOpts:
       slide__image-alt: Content_Slide-Image-Alt
       slide__title: Content_In-Depth-Title
       slide__description: Content_In-Depth-Description
+      slide__body: Content_Slide-Body
 
       # In depth
       slideshow__title: Content_Slideshow-Title
