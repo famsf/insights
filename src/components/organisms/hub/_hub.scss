@@ -163,17 +163,25 @@
       &:hover {
         background-color: #02727e;
       }
-      &.blue {
+      &.blue,
+      &.Legion {
         background-color: #5b5279;
         &:hover {
           background-color: #443c61;
         }
       }
-      &.black {
+      &.black,
+      &.Collections {
         background-color: black;
         color: white;
         &:hover {
           background-color: #4b5659;
+        }
+      }
+      &.Exhibitions {
+        background-color: #8a9994;
+        &:hover {
+          background-color: #bcc5c3;
         }
       }
       &.filtered {
