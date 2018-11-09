@@ -131,6 +131,7 @@ Markup: video--embed.html.twig
 
   .plyr__poster {
     background-size: cover;
+    max-height: 100vh;
   }
 
   &.boxed {
