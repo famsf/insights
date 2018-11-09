@@ -101,6 +101,14 @@
       margin-top: -35px;
     }
 
+    &.smaller-text {
+      font-size: 5.50em;
+      line-height: 1.1;
+      @include breakpoint(large) {
+        margin-top: 5px;
+      }
+    }
+
     &::before {
       content: '';
       display: inline-block;
@@ -210,10 +218,6 @@
   }
   .timeline-item-title {
     font-family: $body-font-family;
-    @include breakpoint(large) {
-      font-size: 5.50em;
-      line-height: 1.1;
-    }
   }
 }
 %no-year-span-timeline {
@@ -236,6 +240,14 @@
     }
   }
   .timeline-item-title {
+    &.smaller-text {
+      &::before {
+        margin-top: 50px;
+        @include breakpoint(large) {
+          margin-top: 0;
+        }
+      }
+    }
     &::before {
       margin-top: 28px;
       @include breakpoint(medium) {

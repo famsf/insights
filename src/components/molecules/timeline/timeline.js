@@ -20,6 +20,15 @@
     }
   }
 
+  function alterTimelineTitleSizes() {
+    var $yearTitles = $('.timeline-item-title');
+    $yearTitles.each(function (i, e) {
+      if ($(e).text().includes('–')) {
+        $(e).addClass('smaller-text');
+      }
+    });
+  }
+
   function calculateActiveTimelinePos($spanTimelinesElements) {
     $spanTimelinesElements.each(function (i, e) {
       var yearSpan = $(e).find('.timeline--year.active .timeline-item-title').text();
@@ -96,6 +105,7 @@
 
   function constructSpanTimelines($spanTimelinesElements) {
     var windowY;
+    alterTimelineTitleSizes();
     if (Foundation.MediaQuery.atLeast('large')) {
       createTimespanYears($spanTimelinesElements);
       $(window).on('scroll.timelineScroll', function (e) {
