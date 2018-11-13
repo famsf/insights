@@ -142,7 +142,7 @@
     display: block;
     position: absolute;
     width: 100vw;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
     margin: 0;
@@ -169,7 +169,7 @@
     text-align: center;
     font-style: italic;
     font-size: 32px;
-    top: 40%;
+    top: 50%;
     @include breakpoint(medium) {
       top: 52%;
       font-size: 42px;
