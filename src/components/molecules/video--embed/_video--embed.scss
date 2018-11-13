@@ -107,10 +107,16 @@ Markup: video--embed.html.twig
   .plyr__video-wrapper {
     background: $white;
     height: 100vh;
+
     .icon--not-pressed {
       path {
         fill: $black !important;
       }
+    }
+
+    iframe {
+      @include object-fit;
+      max-height: 100vh;
     }
   }
 
@@ -125,6 +131,7 @@ Markup: video--embed.html.twig
 
   .plyr__poster {
     background-size: cover;
+    max-height: 100vh;
   }
 
   &.boxed {
