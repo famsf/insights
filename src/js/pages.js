@@ -24,7 +24,6 @@
     pages.container = doc.querySelector(containerSelector);
     pages.pages = doc.querySelectorAll(pageSelector);
     pages.preloadElements = pages.container.querySelectorAll('.video--embed, .scroll-comparison, in-depth, .horizontal-image-slider');
-    console.log('| » |', pages.preloadElements.length);
 
     if (!pages.container || !pages.pages.length) {
       console.log(':::::: Warning: Failed to initialize pages, check your selectors, but maybe you`re just prototyping isolated components');
@@ -339,16 +338,10 @@
       pinning = pageEl.classList.contains('pinnedTop') ? 'top' : 'bottom';
       pageEl.classList.remove('snapped');
       if (pinning === 'top') {
-        console.log('a');
         pageEl.classList.remove('pinnedTop');
-        // pageTop = page.chapter.offsetTop + pageEl.offsetTop;
-        // scrollTo = pageTop;
       }
       else {
-        console.log('b');
         pageEl.classList.remove('pinnedBottom');
-        // pageTop = page.chapter.offsetTop + pageEl.offsetTop;
-        // scrollTo = pageTop + (pageEl.clientHeight - win.innerHeight);
       }
       win.scrollTo({
         top: pages.snapPoint,
@@ -358,7 +351,7 @@
   };
 
   pages.untriggerPage = function (page) {
-    console.log('untrigger', page.id);
+    // console.log('untrigger', page.id);
     page.el.classList.remove('triggered');
     page.el.classList.remove('inViewport');
     page.isTriggered = false;
@@ -369,7 +362,7 @@
 
   pages.triggerPage = function (page) {
     var pageEl = page.el;
-    console.log('triggerTopBarEvents', page.id);
+    // console.log('triggerTopBarEvents', page.id);
     page.istriggered = true;
     pageEl.classList.add('triggered');
 

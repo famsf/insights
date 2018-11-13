@@ -7,6 +7,7 @@
     var lastId;
     var navItems;
     var clearElement;
+    var currentChapterIndex;
     var count;
     var i;
     var navItem;
@@ -40,6 +41,7 @@
     var item;
     var i;
     chapterIndex = targetChapter.dataset.chapterIndex;
+    chapterNav.currentChapterIndex = chapterIndex;
     item = chapterNav.navItems[chapterIndex];
     for (i = 0; i < count; i++) {
       if (i <= chapterIndex) {
@@ -77,7 +79,7 @@
     pageEl = chapter.querySelector('.page');
     page = fds.pages.byId[pageEl.id];
     if (fds.pages.currentPage) {
-      if (page.index > fds.pages.currentPage.index) {
+      if (chapter.dataset.chapterIndex > chapterNav.currentChapterIndex) {
         scrollDir = 'down';
       }
       else {
