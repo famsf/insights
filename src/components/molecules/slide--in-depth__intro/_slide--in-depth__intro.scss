@@ -55,8 +55,10 @@
     picture,
     .picture {
       width: 100% !important;
-
+      position: relative;
+      overflow: hidden;
       margin-bottom: 0;
+      border-radius: 1000rem;
 
       &:after {
         background: linear-gradient(0.375turn, transparent, rgba($white, .75));
