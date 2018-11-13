@@ -1,8 +1,21 @@
 (function (win) {
   win.document.addEventListener('DOMContentLoaded', function () {
+    var host = window.location.host;
+    var localHosts = [
+      'localhost',
+      '0.0.0.0',
+      '127.0.0.1',
+      'localhost:3000',
+      '0.0.0.0:3000',
+      '127.0.0.1:3000'
+    ];
+    if (localHosts.indexOf(host) > -1) {
+      // Lets use staging images for local development.
+      host = 'staging--famsf-insights.netlify.com';
+    }
     jScaler.process({
       TOKEN: 'a2coygopn',
-      BASE_URL: 'https://develop--famsf-insights.netlify.com',
+      BASE_URL: 'https://' + host,
       // See: _settings.scss for the Foundation breakpoint configuration.
       //
       // These responsive breakpoints match up with Foundation's breakpoint
