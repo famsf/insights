@@ -96,10 +96,18 @@ Styleguide COMPONENTS.horizontal-image-slider
     }
 
     .toggle-caption {
-      display: none;
       font-size: 15px;
       @include breakpoint(medium) {
         display: inline-block;
+      }
+    }
+
+    figcaption {
+      @include breakpoint(medium) {
+        max-width: 83%;
+      }
+      @include breakpoint(large) {
+        max-width: none;
       }
     }
   }
