@@ -29,7 +29,8 @@
 
 ### Build
 
-1. Build the site using the following command:
+1. Make sure [`_auth.json` is set up correctly](https://github.com/famsf/insights/wiki#gathercontent) for GatherContent integration
+2. Build the site using the following command:
 
   ```
   npm test
@@ -38,15 +39,16 @@
 
 ### Development
 
-1. Start the server by running the following command:
+1. Make sure [`_auth.json` is set up correctly](https://github.com/famsf/insights/wiki#gathercontent) for GatherContent integration
+2. Start the server by running the following command:
 
   ```
   npm start
   ```
 
-2. Visit the site at `http://localhost:3000`
+3. Visit the site at `http://localhost:3000`
 
-3. Visit the styleguide at `http://localhost:8000/styleguide/section-1.html`
+4. Visit the styleguide at `http://localhost:8000/styleguide/section-1.html`
 
 
 ## Collaboration
