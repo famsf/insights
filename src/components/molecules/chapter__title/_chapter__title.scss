@@ -83,16 +83,22 @@ Markup: chapter__title.html.twig
       @include responsive(max-width, calc(100% - 2rem), 500px);
       position: absolute;
       z-index: 50;
-      bottom: 3rem;
+      bottom: 5rem;
       right: 1rem;
+      @include breakpoint(medium) {
+        bottom: 3rem;
+      }
     }
   }
 
   .caption__brief {
     position: absolute;
-    bottom: 1rem;
+    bottom: 3rem;
     right: 1rem;
     z-index: 50;
+    @include breakpoint(medium) {
+      bottom: 1rem;
+    }
   }
 
   .toggle-caption,
