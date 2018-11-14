@@ -33,6 +33,7 @@
     pages.currentPage = pages.byId[pages.pages[0].id];
     pages.clearElement = doc.querySelector(clearElementSelector);
     pages.clearElementHeight = pages.clearElement.clientHeight;
+    pages.chapters = doc.querySelectorAll('.chapter');
     pages.calculateThreshholds();
     if (locHash.length > 1) {
       params = locHash.split('&');
@@ -284,7 +285,8 @@
       pages.setCurrentPage(page);
     }
     document.body.classList.add('scroll_lock');
-    if (scrollOptions.scrollDir === 'down') {
+    console.log('::::::', chapter.id, pages.isLastChapter(chapter.id));
+    if (scrollOptions.scrollDir === 'down' || pages.isLastChapter(chapter.id)) {
       scrollTo = chapter.offsetTop + pageEl.offsetTop;
     }
     else {
@@ -312,6 +314,10 @@
     pages.triggerTopBarEvents(page);
   };
 
+  pages.isLastChapter = function (chapterId) {
+    return pages.chapters[pages.chapters.length - 1].id === chapterId;
+  };
+
   pages.pinPage = function (page, scrollDir) {
     var pageEl = page.el;
     var nextChapter;
@@ -320,7 +326,7 @@
     pages.pinned = page;
     page.isPinned = true;
     pageEl.classList.add('inViewport');
-    if (scrollDir === 'down') {
+    if (scrollDir === 'down' || pages.isLastChapter(page.chapter.id)) {
       pageEl.classList.add('pinnedTop');
     }
     else {
@@ -339,14 +345,9 @@
       page.isPinned = false;
       pages.pinnedOffset = 0;
       pages.pinned = false;
-      pinning = pageEl.classList.contains('pinnedTop') ? 'top' : 'bottom';
       pageEl.classList.remove('snapped');
-      if (pinning === 'top') {
-        pageEl.classList.remove('pinnedTop');
-      }
-      else {
-        pageEl.classList.remove('pinnedBottom');
-      }
+      pageEl.classList.remove('pinnedTop');
+      pageEl.classList.remove('pinnedBottom');
       win.scrollTo({
         top: pages.snapPoint,
         behavior: 'instant'
