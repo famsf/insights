@@ -19,6 +19,11 @@
   {% endfor %}
 {% endif %}
 
+    {# Override classes for the footer #}
+    {% if 'footer' in slug %}
+      {% set classes = 'height-auto' %}
+    {% endif %}
+
 <section class="page {{ classes }} {{ theme }}" id="chapter_{{ id }}" data-page-index="{{ index }}">
   <div class="frame">
     {% set adenda = {} %}
