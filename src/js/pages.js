@@ -21,22 +21,19 @@
     var snapElem;
     var snapElemStickListener;
     var scrollOptions;
+    var initialChapter;
     pages.container = doc.querySelector(containerSelector);
     pages.pages = doc.querySelectorAll(pageSelector);
     pages.preloadElements = pages.container.querySelectorAll('.video--embed, .scroll-comparison, in-depth, .horizontal-image-slider');
-
     if (!pages.container || !pages.pages.length) {
       console.log(':::::: Warning: Failed to initialize pages, check your selectors, but maybe you`re just prototyping isolated components');
       return;
     }
-
     pages.populatePagesById();
     pages.currentPage = pages.byId[pages.pages[0].id];
     pages.clearElement = doc.querySelector(clearElementSelector);
     pages.clearElementHeight = pages.clearElement.clientHeight;
     pages.calculateThreshholds();
-
-
     if (locHash.length > 1) {
       params = locHash.split('&');
       if (Array.isArray(params) && locHash.indexOf('=') > -1) {
@@ -57,6 +54,9 @@
       else {
         startPage = pages.currentPage;
       }
+      if (pages.hashes.chapter) {
+        initialChapter = document.getElementById(pages.hashes.chapter);
+      }
       scrollOptions = {
         scrollDir: 'down',
         instant: true,
@@ -66,7 +66,6 @@
         Object.assign({ extraParams: '&componentSnap=' + pages.hashes.componentSnap }, scrollOptions);
       }
       pages.snapScroll(startPage, scrollOptions);
-
       if (pages.hasOwnProperty('hashes') && pages.hashes.hasOwnProperty('componentSnap')) {
         snapElem = startPage.el.querySelectorAll('[data-snap-id="' + pages.hashes.componentSnap + '"]');
         if (snapElem.length > 0) {
@@ -87,6 +86,11 @@
         }
       }
     }
+    else {
+      initialChapter = document.querySelector('.chapter');
+    }
+    fds.chapterNav.setActiveItem(initialChapter);
+    fds.mobileNav.setActiveItem(initialChapter);
   };
 
   pages.populatePagesById = function () {

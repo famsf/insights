@@ -43,6 +43,7 @@
     chapterIndex = targetChapter.dataset.chapterIndex;
     chapterNav.currentChapterIndex = chapterIndex;
     item = chapterNav.navItems[chapterIndex];
+    // console.log('setActiveItem', targetChapter, chapterIndex);
     for (i = 0; i < count; i++) {
       if (i <= chapterIndex) {
         item.classList.add('past');
@@ -78,6 +79,7 @@
     chapter = fds.rootElement.querySelector(clickTarget.getAttribute('href'));
     pageEl = chapter.querySelector('.page');
     page = fds.pages.byId[pageEl.id];
+    // console.log(':::', chapter.dataset.chapterIndex, chapterNav.currentChapterIndex);
     if (fds.pages.currentPage) {
       if (chapter.dataset.chapterIndex > chapterNav.currentChapterIndex) {
         scrollDir = 'down';
