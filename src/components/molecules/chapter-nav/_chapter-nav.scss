@@ -32,7 +32,7 @@
   background-repeat: repeat-y;
   background-position: center center;
   background-size: 100% 100%;
-  font-family: sans-serif;
+  font-family: $body-font-family;
   transition-property: opacity;
   transition-duration: 0.625s;
   transition-timing-function: ease-in-out;
@@ -83,6 +83,7 @@
       width: 0.425rem;
       height: 0.425rem;
       text-align: center;
+      font-size: 1.125em;
     }
     li:nth-child(1) {
       counter-reset: chapters;
