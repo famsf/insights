@@ -90,7 +90,7 @@
     font-weight: 500;
     margin-top: 3em;
   }
-  
+
   .button-wrapper {
     text-align: left;
     margin-top: 55px;
@@ -272,6 +272,9 @@
         background-color: #4b5659;
       }
     }
+  }
+  .top-bar-hamburger {
+    display: none;
   }
 }
 .hub {
