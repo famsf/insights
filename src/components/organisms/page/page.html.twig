@@ -11,12 +11,21 @@
   {% set theme = "theme--primary-dark" %}
 {% endif %}
 
+{# Create classes sting if it doesn't exist #}
+{% if not classes %}
+  {% set classes = '' %}
+{% endif %}
+
 {# Page Classes #}
 {% if page__classes %}
-  {% set classes = '' %}
   {% for class in page__classes %}
     {% set classes = classes ~ ' ' ~ class %}
   {% endfor %}
+{% endif %}
+
+{# Hide Chapter Nav Class #}
+{% if content__hide_chapter_nav %}
+  {% set classes = classes ~ ' ' ~ 'hide-chapter-nav' %}
 {% endif %}
 
 {# Override classes for the footer #}

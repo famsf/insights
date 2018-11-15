@@ -126,6 +126,7 @@ pluginOpts:
       background__image-alt: Content_Background-Image-Alt
       content__image: Content_Image
       content__image-alt: Content_Image-Alt
+      content__hide_chapter_nav: Content_Hide-Chapter-Nav
 
       # Social
       og__title: Social_OpenGraph-Title
