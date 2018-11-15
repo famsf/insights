@@ -49,6 +49,9 @@ Markup: chapter__title.html.twig
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
     }
+    .toggle-caption {
+      opacity: 1;
+    }
   }
 
 
@@ -76,9 +79,16 @@ Markup: chapter__title.html.twig
     }
   }
 
+  .toggle-caption {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.725s;
+    transition-delay: 1s;
+    transition-timing-function: ease-out;
+  }
+
   .caption {
     margin-bottom: 0;
-
     figcaption {
       @include responsive(max-width, calc(100% - 2rem), 500px);
       position: absolute;
