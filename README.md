@@ -48,8 +48,6 @@
 
 3. Visit the site at `http://localhost:3000`
 
-4. Visit the styleguide at `http://localhost:3000/styleguide/section-1.html`
-
 
 ## Collaboration
 
