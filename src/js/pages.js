@@ -7,7 +7,7 @@
   fds.pages.oldScrollY = null;
   fds.pages.pinnedOffset = 0;
   fds.pages.snapThreshhold = 20;
-  fds.pages.snapScrollDuration = 450;
+  fds.pages.snapScrollDuration = 150;
 
   pages.initialize = function (containerSelector, pageSelector, clearElementSelector) {
     var locHash = window.location.hash.substr(1);
