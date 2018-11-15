@@ -6,7 +6,7 @@
   {% if overlay__text %}
     <div class="video-overlay__text">
       {{ overlay__text|striptags('<i><em><b><strong><u>') }}
-      {% if caption %}
+      {% if caption.text is not empty %}
         {% include "@atoms/caption/caption.html.twig" with caption only %}
       {% endif %}
     </div>

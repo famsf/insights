@@ -29,7 +29,7 @@
   </div>
 </div>
 
-{% if caption__text %}
+{% if caption__text is not empty %}
   {% include "@atoms/caption/caption.html.twig" with {
   id: 'image-comparison-caption' ~ id,
   text: caption__text,
