@@ -285,7 +285,6 @@
       pages.setCurrentPage(page);
     }
     document.body.classList.add('scroll_lock');
-    console.log('::::::', chapter.id, pages.isLastChapter(chapter.id));
     if (scrollOptions.scrollDir === 'down' || pages.isLastChapter(chapter.id)) {
       scrollTo = chapter.offsetTop + pageEl.offsetTop;
     }
@@ -305,6 +304,7 @@
         doc.body.classList.remove('scroll_lock');
         pages.postSnap(page);
         page.el.focus();
+        fds.chapterNav.updateIndicator();
       }, 125);
     }, snapScrollDuration);
   };
@@ -321,12 +321,16 @@
   pages.pinPage = function (page, scrollDir) {
     var pageEl = page.el;
     var nextChapter;
+    // pinning on the footer is a no go.
+    if (pages.isLastChapter(page.chapter.id)) {
+      return;
+    }
     pages.pinnedOffset = page.el.clientHeight;
     pages.lastPinned = null;
     pages.pinned = page;
     page.isPinned = true;
     pageEl.classList.add('inViewport');
-    if (scrollDir === 'down' || pages.isLastChapter(page.chapter.id)) {
+    if (scrollDir === 'down') {
       pageEl.classList.add('pinnedTop');
     }
     else {

@@ -43,7 +43,6 @@
     chapterIndex = targetChapter.dataset.chapterIndex;
     chapterNav.currentChapterIndex = chapterIndex;
     item = chapterNav.navItems[chapterIndex];
-    // console.log('setActiveItem', targetChapter, chapterIndex);
     for (i = 0; i < count; i++) {
       if (i <= chapterIndex) {
         item.classList.add('past');
@@ -57,6 +56,7 @@
     }
     chapterNav.activeItem = item;
     item.classList.add('active_item');
+    chapterNav.updateIndicator();
   };
 
   chapterNav.showNav = function () {
@@ -94,14 +94,14 @@
     });
   };
 
-  chapterNav.onScroll = function () {
+  chapterNav.updateIndicator = function () {
     var scrollY = win.pageYOffset;
     var page = fds.pages.getCurrentPage();
     var chapter = page.chapter;
     var chapterIndex = page.chapterIndex;
     var pageIndex = page.index ? page.index : 0;
     var pageCount = page.chapterLength;
-    var chapterNavSegmentHeight = chapterNav.height / chapterNav.chapters.length;
+    var chapterNavSegmentHeight = Math.round(chapterNav.height / (chapterNav.chapters.length - 1));
     var pageToChapterRatio = page.el.clientHeight / chapter.clientHeight;
     var id = page.id;
     var count;
@@ -109,8 +109,10 @@
     var item;
     var href;
     var scrollbarHeight;
+    var pageSegmentHeight = chapterNavSegmentHeight / pageCount;
+    // console.log('updatingIndicator number of pages in the chapter is', pageCount, ' the current page index is', page.index, 'and a page segment is', pageSegmentHeight, 'pixels tall');
     scrollbarHeight = (chapterIndex * chapterNavSegmentHeight);
-    scrollbarHeight += (pageIndex > 0) ? (chapterNavSegmentHeight / pageCount) * pageIndex : 0;
+    scrollbarHeight += pageSegmentHeight * pageIndex;
     chapterNav.scrollPercent.style.height = Math.round(scrollbarHeight) + 'px';
     if (chapterNav.lastId !== id) {
       chapterNav.lastId = id;
