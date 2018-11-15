@@ -110,7 +110,6 @@
     var href;
     var scrollbarHeight;
     var pageSegmentHeight = chapterNavSegmentHeight / pageCount;
-    // console.log('updatingIndicator number of pages in the chapter is', pageCount, ' the current page index is', page.index, 'and a page segment is', pageSegmentHeight, 'pixels tall');
     scrollbarHeight = (chapterIndex * chapterNavSegmentHeight);
     scrollbarHeight += pageSegmentHeight * pageIndex;
     chapterNav.scrollPercent.style.height = Math.round(scrollbarHeight) + 'px';
