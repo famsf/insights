@@ -1,22 +1,32 @@
 (function (document, window, $) {
   function toggleDisplays($zoomCarousels) {
-    if (Foundation.MediaQuery.atLeast('medium')) {
-      $zoomCarousels.each(function (i, e) {
-        $(e).css('display', 'none');
-        $(e).siblings('.inline-image-zoom-wrapper').css('display', 'block');
-      });
-    }
-    else {
-      $zoomCarousels.each(function (i, e) {
-        $(e).css('display', 'block');
-        $(e).siblings('.inline-image-zoom-wrapper').css('display', 'none');
-      });
+    if ($zoomCarousels.length > 0) {
+      if (Foundation.MediaQuery.atLeast('medium')) {
+        $zoomCarousels.each(function (i, e) {
+          $(e).css('display', 'none');
+          $(e).siblings('.inline-image-zoom-wrapper').css('display', 'block');
+        });
+      }
+      else {
+        $zoomCarousels.each(function (i, e) {
+          $(e).css('display', 'block');
+          $(e).siblings('.inline-image-zoom-wrapper').css('display', 'none');
+        });
+      }
     }
   }
   function adjustNav($zoomCarousels) {
-    var $nav = $zoomCarousels.find('.owl-nav');
-    var $firstImg = $($zoomCarousels.find('.zoom-img-mobile-wrapper').get(0));
-    $nav.css('top', ($firstImg.outerHeight() * 0.55) + 'px');
+    var $nav;
+    var $firstImg;
+    if ($zoomCarousels.length > 0) {
+      $nav = $zoomCarousels.find('.owl-nav');
+      if ($nav.length > 0) {
+        $firstImg = $($zoomCarousels.find('.zoom-img-mobile-wrapper').get(0));
+        if ($firstImg.length > 0) {
+          $nav.css('top', ($firstImg.outerHeight() * 0.55) + 'px');
+        }
+      }
+    }
   }
   function adjustNavPageInit() {
     // Because onInitialized isn't perfect.
