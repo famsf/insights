@@ -20,7 +20,7 @@
     </div>
   </div>
 
-  {% if credits %}
+  {% if credits is not empty %}
     {% include "@atoms/caption/caption.html.twig" with {
       text: credits,
       id: 'credits_' ~ id

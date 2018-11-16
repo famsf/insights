@@ -29,8 +29,8 @@
   </div>
   {% include "@atoms/down_arrow/down_arrow.html.twig" with only %}
 
-  {% if credits %}
-    {% include "@atoms/caption/caption.html.twig" with { 
+  {% if credits is not empty %}
+    {% include "@atoms/caption/caption.html.twig" with {
       text: credits,
       id: 'credits_' ~ id
     } only %}

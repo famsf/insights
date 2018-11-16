@@ -1,4 +1,6 @@
 <figure class="picture-with-caption" data-snap-id="{{ snap_id }}" {{ attributes }}>
   {% include "@molecules/picture/picture.html.twig" with picture only %}
-  {% include "@atoms/caption/caption.html.twig" with caption only %}
+  {% if caption.text is not empty %}
+    {% include "@atoms/caption/caption.html.twig" with caption only %}
+  {% endif %}
 </figure>

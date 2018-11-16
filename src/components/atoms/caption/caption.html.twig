@@ -1,8 +1,12 @@
 {% set unique = 'uq' ~ random() %}
 <div class="caption">
   <div class="caption__brief">
-    {{ in_depth__body }}
-    {# brief|striptags('<a><i><em><b><strong><u>') #}
+    {% if in_depth__body is not empty %}
+      {{ in_depth__body }}
+    {% endif %}
+    {% if brief is not empty %}
+      {{ brief|striptags('<a><i><em><b><strong><u>') }}
+    {% endif %}
     {% if id and text|striptags|length > 2 %}
       <a data-toggle="{{ id ~ unique }}" class="button icon hollow toggle-caption">
         <span class="i-info" aria-hidden="true">i</span>
@@ -10,7 +14,7 @@
       </a>
     {% endif %}
   </div>
-  {% if id %}
+  {% if id and text is not empty %}
     <figcaption style="display: none;" id="{{ id ~ unique }}" data-toggler data-animate="fade-in fade-out">
       {{ text|striptags('<a><i><em><b><strong><u>') }}
     </figcaption>
