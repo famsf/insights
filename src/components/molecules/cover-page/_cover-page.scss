@@ -206,6 +206,10 @@
     .cover_loader_container {
       opacity: 0;
     }
+
+    .toggle-caption {
+      opacity: 1;
+    }
   }
 
   &.initialized {
@@ -241,6 +245,14 @@
     }
   }
 
+
+  .toggle-caption {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.725s;
+    transition-delay: 1s;
+    transition-timing-function: ease-out;
+  }
 
   .caption {
     margin-bottom: 0;

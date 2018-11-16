@@ -46,6 +46,16 @@ Styleguide COMPONENTS.AmbientVideo
   .cell {
     z-index: 2;
     color: #fff;
+    p {
+      color: #fff !important;
+    }
+  }
+
+  .centerv {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 32rem;
   }
 
   .plyr--video {
@@ -93,7 +103,7 @@ Styleguide COMPONENTS.AmbientVideo
           pointer-events: none;
           cursor: auto;
       }
-    }    
+    }
   }
 }
 
