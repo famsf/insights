@@ -57,15 +57,15 @@
       {{ contents }}
     </div>
     {% for script in config.scripts.footer.kalastatic %}
-      <script src="{{ script }}"></script>
+      <script src="{{ script }}?{{ 'now'|date('U') }}"></script>
     {% endfor %}
     {% if slug == 'hub' %}
       {% for script in config.scripts.footer.hub %}
-        <script src="{{ script }}"></script>
+        <script src="{{ script }}?{{ 'now'|date('U') }}"></script>
       {% endfor %}
     {% else %}
       {% for script in config.scripts.footer.all %}
-        <script src="{{ script }}"></script>
+        <script src="{{ script }}?{{ 'now'|date('U') }}"></script>
       {% endfor %}
     {% endif %}
   </body>
