@@ -34,7 +34,7 @@
       scrollDiff = fds.scroll.y - fds.scroll.last.y;
       if (scrollDiff !== 0 && fds.rootElement.classList.contains('initialized')) {
         fds.pages.onScroll(fds.scroll.y, wh, didResize);
-        fds.chapterNav.onScroll(fds.scroll.y);
+        // fds.chapterNav.onScroll();
       }
       if (fds.calcFps) {
         sinceStart = newtime - fds.startTime;
@@ -79,7 +79,7 @@
     fds.topBar.initialize('top-bar');
     fds.pages.initialize('.chapters_container', '.page', '.top-bar');
 
-    fds.chapterNav.onScroll(sy);
+    fds.chapterNav.updateIndicator();
     fds.then = win.performance.now();
     fds.startTime = fds.then;
     if (fds.calcFps) {
