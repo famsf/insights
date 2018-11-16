@@ -1,17 +1,14 @@
 (function (window, $) {
   var $toggleButtons = $('.inline-caption-button');
   $toggleButtons.on('click', function () {
-    if ($(this).siblings('.inline-caption-content').hasClass('show')) {
-      $(this).siblings('.inline-caption-content').removeClass('show');
-      $(this).fadeOut(200, function () {
-        $(this).text('＋').fadeIn(200);
-      });
+    $toggleButtons.removeClass('close');
+    if ($(this).parent().siblings('.inline-caption-content').hasClass('show')) {
+      $(this).parent().siblings('.inline-caption-content').removeClass('show');
     }
     else {
-      $(this).siblings('.inline-caption-content').addClass('show');
-      $(this).fadeOut(200, function () {
-        $(this).text('✕').fadeIn(200);
-      });
+      $toggleButtons.parent().siblings('.inline-caption-content').removeClass('show');
+      $(this).parent().siblings('.inline-caption-content').addClass('show');
+      $(this).addClass('close');
     }
   });
 }(window, jQuery));

@@ -49,6 +49,9 @@ Markup: chapter__title.html.twig
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
     }
+    .toggle-caption {
+      opacity: 1;
+    }
   }
 
 
@@ -63,15 +66,55 @@ Markup: chapter__title.html.twig
     }
 
     .numeral {
-      font-size: 10rem;
+      @include font-sizes(140, 220);
+      @include responsive(line-height, 165px, 200px);
       color: white;
       font-weight: 900;
     }
 
     .title {
-      font-size: 3.125rem;
+      @include font-sizes(30, 50);
+      @include responsive(line-height, 40px, 75px);
       font-style: italic;
     }
+  }
+
+  .toggle-caption {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.725s;
+    transition-delay: 1s;
+    transition-timing-function: ease-out;
+  }
+
+  .caption {
+    margin-bottom: 0;
+    figcaption {
+      @include responsive(max-width, calc(100% - 2rem), 500px);
+      position: absolute;
+      z-index: 50;
+      bottom: 5rem;
+      right: 1rem;
+      @include breakpoint(medium) {
+        bottom: 3rem;
+      }
+    }
+  }
+
+  .caption__brief {
+    position: absolute;
+    bottom: 3rem;
+    right: 1rem;
+    z-index: 50;
+    @include breakpoint(medium) {
+      bottom: 1rem;
+    }
+  }
+
+  .toggle-caption,
+  .toggle-caption:hover {
+    color: $white;
+    border-color: $white;
   }
 }
 

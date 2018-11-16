@@ -52,9 +52,13 @@
       @include responsive(margin-bottom, 20vh, 0);
     }
 
-    picture {
+    picture,
+    .picture {
       width: 100% !important;
+      position: relative;
+      overflow: hidden;
       margin-bottom: 0;
+      border-radius: 1000rem;
 
       &:after {
         background: linear-gradient(0.375turn, transparent, rgba($white, .75));
@@ -85,8 +89,8 @@
     }
 
     img {
-      width: 100%;
-      max-height: 100%;
+      width: 100% !important;
+      max-height: 100% !important;
       border-radius: 1000rem;
       overflow: hidden;
       height: auto;
@@ -130,7 +134,7 @@
 
     @include breakpoint(xlarge) {
       font-size: $lead-font-size;
-      line-height: $lead-lineheight;
+      line-height: 1.2;
     }
   }
 
@@ -142,6 +146,10 @@
     justify-content: center;
     align-items: center;
     z-index: 1;
+
+    @include breakpoint(small only) {
+      padding: 0 2rem;
+    }
 
     > .cell {
       @include breakpoint(medium) {
@@ -190,10 +198,10 @@
       right: 5rem;
     }
   }
-  
+
   .sharing-icons {
     position: absolute;
-    top: 3rem;
+    top: 5rem;
     left: 1rem;
     margin-top: 0;
 
@@ -310,7 +318,8 @@
         transform: translateX(0);
       }
 
-      picture {
+      picture,
+      .picture {
         transform: translate(0, 0);
       }
     }
@@ -360,7 +369,8 @@
         }
       }
 
-      picture {
+      picture,
+      .picture {
         &:after {
           background: linear-gradient(0.375turn, transparent, rgba($black, .75));
         }

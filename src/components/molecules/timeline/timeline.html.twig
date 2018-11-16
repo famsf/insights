@@ -33,19 +33,46 @@
           caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
           style: "square"
 #}
-{% set year_span_class = 'no-year-span' %}
-{% if is_year_span == true %}
-  {% set year_span_class = 'year-span' %}
-{% endif %}
-<div class="timeline {{ year_span_class }}">
+
+<div class="timeline {% if timeline__span|trim == "True" %}year-span {% else %}no-year-span{% endif %}">
   <h2 class="timeline-title">{{ title }}</h2>
-  {% for year_item in years %}
-    {% include '@molecules/timeline/timeline--year.html.twig' with {
-      year: year_item.year,
-      year_title: year_item.year_title,
-      year_subtitle: year_item.year_subtitle,
-      description: year_item.description,
-      images: year_item.images
-    } only %}
+  {% for year in children %}
+    {% set yr = {
+      year: year.name,
+      title: year.title,
+      subtitle: year.timeline__year__subtitle,
+      description: year.timeline__marker__description
+    } %}
+    {% if year.a__image.src %}
+    {% set yr = yr|merge({
+      img_a: {
+        src: year.a__image.src,
+        alt: year.a__image.alt
+      },
+      caption_a: year.a__caption,
+      brief_a: year.a__caption__brief
+    }) %}
+    {% endif %}
+    {% if year.b__image.src %}
+      {% set yr = yr|merge({
+        img_b: {
+          src: year.b__image.src,
+          alt: year.b__image.alt
+        },
+        caption_b: year.b__caption,
+        brief_b: year.b__caption__brief
+      }) %}
+    {% endif %}
+    {% if year.c__image.src %}
+      {% set yr = yr|merge({
+        img_c: {
+          src: year.c__image.src,
+          alt: year.c__image.alt
+        },
+        caption_c: year.c__caption,
+        brief_c: year.c__caption__brief
+      }) %}
+    {% endif %}
+    {% include '@molecules/timeline/timeline--year.html.twig' with yr only %}
   {% endfor %}
 </div>

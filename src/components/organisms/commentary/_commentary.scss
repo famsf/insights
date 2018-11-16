@@ -1,0 +1,149 @@
+/*
+Commentary
+
+The commentary component is used when wanting to display long form historical, contemporary, or expert commentary related to the story.
+
+Markup: commentary.html.twig
+
+Styleguide COMPONENTS.commentary
+
+*/
+
+%commentary {
+  $commentary-margin-default: 5rem;
+  $commentary-padding-default: 4vw;
+  margin-top: 4rem;
+
+  @include breakpoint(medium) {
+    margin-top: 0;
+  }
+
+  .commentary__content {
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+    border: 2px solid $medium-gray;
+  }
+
+  .commentary__layout-left,
+  .commentary__layout-right {
+    transform: translateY(-25vw);
+
+    @include breakpoint(medium) {
+      transform: translateY(0);
+    }
+  }
+
+  .commentary__layout-left {
+    padding: 0 $commentary-padding-default $commentary-padding-default $commentary-padding-default;
+    position: relative;
+    border-bottom: 2px solid $medium-gray;
+
+    @include breakpoint(large) {
+      padding: 0 $commentary-padding-default*1.25 $commentary-padding-default $commentary-padding-default*1.5;
+      border-bottom: none;
+      border-right: 2px solid $medium-gray;
+    }
+  }
+
+  .commentary__layout-right {
+    padding: $commentary-padding-default*3 $commentary-padding-default $commentary-padding-default $commentary-padding-default;
+    position: relative;
+    margin-bottom: -25vw;
+
+    @include breakpoint(medium) {
+      margin-bottom: 0;
+    }
+
+    @include breakpoint(large) {
+      padding: $commentary-padding-default*1.25 $commentary-padding-default*1.5 $commentary-padding-default $commentary-padding-default;
+      margin-bottom: 0;
+    }
+  }
+
+  &.no-img {
+    margin-top: 0;
+
+    .commentary__layout-left {
+      padding-top: $commentary-padding-default*1.25;
+      transform: translateY(0);
+    }
+
+    .commentary__layout-right {
+      margin-bottom: 0;
+      padding-bottom: $commentary-padding-default;
+      transform: translateY(0);
+    }
+  }
+
+  .commentary__image {
+    position: relative;
+    text-align: center;
+    width: 50vw;
+    margin: 0 auto 2rem auto;
+
+    @include breakpoint(medium) {
+      margin: 0 auto;
+      width: auto;
+      top: -2rem;
+    }
+
+    @include breakpoint(large) {
+      left: -1vw;
+      max-width: 20vw;
+    }
+
+    img {
+      max-width: 30rem;
+      border-radius: 1000rem;
+      border: 2px solid $medium-gray;
+      overflow: hidden;
+      margin-right: $commentary-padding-default/2;
+      display: inline-block;
+    }
+  }
+
+  .commentary__author-name {
+    @include font-sizes(38, 60);
+    @include responsive(line-height, 40px, 70px);
+    font-family: $header-font-family;
+    font-weight: bold;
+  }
+
+  .commentary__author-title {
+    font-family: $header-font-family;
+    font-size: 1.75rem;
+    font-style: italic;
+  }
+
+  .commentary__author-bio {
+    color: $dark-gray;
+  }
+
+  .commentary__icon {
+    text-align: left;
+    position: absolute;
+    top: -1.25rem;
+    left: $commentary-padding-default;
+
+    @include breakpoint(medium) {
+      top: -2rem;
+    }
+
+    svg {
+      @include breakpoint(medium) {
+        width: 5rem;
+      }
+    }
+  }
+
+  .sharing-icons {
+    margin-top: 2rem;
+    margin-bottom: 0;
+  }
+
+}
+
+.commentary {
+  @extend %commentary;
+}

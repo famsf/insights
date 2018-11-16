@@ -4,25 +4,53 @@
 #}
 <div class="timeline--year">
   <div class="timeline-images">
-    {% for image in images %}
+    {% if img_a %}
       <div class="timeline-item-image">
-        {% include "@atoms/img/img.html.twig" with {
-          style: image.style,
-          url: image.src,
-          alt: image.alt,
-        } only %}
-        {% include "@atoms/caption/caption.html.twig" with { brief: image.caption } only %}
+        {% include "@atoms/img/img.html.twig" with img_a only %}
+        {% if caption_a is not empty %}
+          {% include "@atoms/caption/caption.html.twig" with {
+            text: caption_a,
+            brief: brief_a,
+            id: 'year__' ~ year ~ '__caption_a'
+          } only %}
+        {% endif %}
       </div>
-    {% endfor %}
+    {% endif %}
+    {% if img_b %}
+      <div class="timeline-item-image">
+        {% include "@atoms/img/img.html.twig" with img_b only %}
+        {% if caption_b is not empty %}
+          {% include "@atoms/caption/caption.html.twig" with {
+            text: caption_b,
+            brief: brief_b,
+            id: 'year__' ~ year ~ '__caption_b'
+          } only %}
+        {% endif %}
+      </div>
+    {% endif %}
+    {% if img_c %}
+      <div class="timeline-item-image">
+        {% include "@atoms/img/img.html.twig" with img_c only %}
+        {% if caption_c is not empty %}
+          {% include "@atoms/caption/caption.html.twig" with {
+            text: caption_c,
+            brief: brief_c,
+            id: 'year__' ~ year ~ '__caption_c'
+          } only %}
+        {% endif %}
+      </div>
+    {% endif %}
   </div>
   <div class="timeline-item-text">
-    {% if year is defined %}
+    {% if name is defined %}
       <span class="timeline-year">{{ year }}</span>
     {% endif %}
-    <h3 class="timeline-item-title">{{ year_title }}</h3>
-    {% if year_subtitle is defined %}
-      <h4 class="timeline-item-subtitle">{{ year_subtitle }}</h4>
+    <h3 class="timeline-item-title" data-year="{{ year }}">{{ year }}</h3>
+    {% if subtitle is defined %}
+      <h4 class="timeline-item-subtitle">{{ subtitle }}</h4>
     {% endif %}
-    <p class="timeline-item-description">{{ description }}</p>
+    {% if description is defined %}
+      <p class="timeline-item-description">{{ description|striptags('<a><i><em><b><strong>') }}</p>
+    {% endif %}
   </div>
 </div>

@@ -1,23 +1,48 @@
 %inline-image-zoom-wrapper {
   position: relative;
+
   .zoom-caption {
     position: absolute;
+
     .inline-caption-content {
-      z-index: 1;
+      z-index: 100;
       position: relative;
-      top: -35px;
-      left: 60px;
+      top: -39px;
       width: 330px;
-      background-color: $white;
-      padding: 25px;
-      box-shadow: 0px 0px 5px 1px rgba(204,204,204,1);
+      background-color: rgba($white, .8);
+      padding: 2rem;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .50);
     }
-    .inline-caption-heading {
-      font-size: 1.5em;
-      display: block;
+  }
+
+  .caption {
+    figcaption {
+      position: absolute;
+      width: 100%;
     }
   }
 }
+
+.zoom-image--inline {
+  .frame > & {
+    .caption {
+      position: absolute;
+      bottom: 2rem;
+      right: 1rem;
+      margin-bottom: 0
+    }
+    figcaption {
+      @include responsive(max-width, calc(100% - 2rem), 500px);
+      position: absolute;
+      z-index: 50;
+      max-width: auto;
+      width: 500px !important;
+      bottom: 3rem;
+      right: 1rem;
+    }
+  }
+}
+
 
 .inline-image-zoom-wrapper {
   @extend %inline-image-zoom-wrapper;

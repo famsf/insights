@@ -1,0 +1,6 @@
+pluginOpts:
+  metalsmith-gathercontent:
+    # Legal Review
+    status: [
+      1208752
+    ]

@@ -20,15 +20,15 @@ Styleguide COMPONENTS.standalone-quote
 
   q {
     @extend %q;
+    @include font-sizes(30, 60);
+    @include responsive(line-height, 40px, 70px);
     color: $primary-color;
     display: block;
     font-family: $header-font-family;
     margin: 3rem 0;
-    font-size: 2em;
     line-height: 1.125em;
-
-    @include breakpoint(medium) {
-      font-size: 3.75em;
+    p {
+      line-height: 1.125em;
     }
 
     &:before,
@@ -39,12 +39,8 @@ Styleguide COMPONENTS.standalone-quote
 
   cite {
     @extend %cite;
+    @include font-sizes(18);
     color: $black;
-    font-size: 1.5em;
-
-    @include breakpoint(medium) {
-      font-size: 1.75em;
-    }
   }
 
   .standalone-quote__social-links > .sharing-icons {
@@ -54,11 +50,8 @@ Styleguide COMPONENTS.standalone-quote
 
   &.size--large {
     q {
-      font-size: 3em;
-
-      @include breakpoint(medium) {
-        font-size: 6em;
-      }
+      @include font-sizes(45, 85);
+      @include responsive(line-height, 50px, 90px);
     }
   }
 

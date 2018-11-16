@@ -34,7 +34,7 @@
       scrollDiff = fds.scroll.y - fds.scroll.last.y;
       if (scrollDiff !== 0 && fds.rootElement.classList.contains('initialized')) {
         fds.pages.onScroll(fds.scroll.y, wh, didResize);
-        fds.chapterNav.onScroll(fds.scroll.y);
+        // fds.chapterNav.onScroll();
       }
       if (fds.calcFps) {
         sinceStart = newtime - fds.startTime;
@@ -52,7 +52,7 @@
   fds.initialize = function () {
     var sy;
     if (!doc.querySelector('.insights-app')) {
-      console.log('Bypassing main js loop in current context to allow for easier single component prototyping');
+      console.log('Bypassing stories javascript');
       return;
     }
     sy = window.pageYOffset;
@@ -76,10 +76,10 @@
     fds.mobileNav.initialize('mobile_nav');
     fds.chapterNav.initialize('chapter_nav', '.chapter', '.top-bar');
     fds.chapterNav.showNav();
-    fds.topBar.initialize('topBar');
+    fds.topBar.initialize('top-bar');
     fds.pages.initialize('.chapters_container', '.page', '.top-bar');
 
-    fds.chapterNav.onScroll(sy);
+    fds.chapterNav.updateIndicator();
     fds.then = win.performance.now();
     fds.startTime = fds.then;
     if (fds.calcFps) {
@@ -92,6 +92,7 @@
 
   $(document).ready(function () {
     // Variable declarations.
+    var horizontalImageSliderPage;
     var horizontalImageSlider;
     var horizontalImageSliderOptions = {
       margin: 32,
@@ -99,7 +100,7 @@
       slideSpeed: 1000,
       smartSpeed: 1000,
       loop: false,
-      nav: true,
+      nav: false,
       dots: true,
       items: 1,
       merge: true,
@@ -135,7 +136,17 @@
 
     // Initialize Horizontal Image Slider.
     horizontalImageSlider = $(':not(.in-depth-slider) > .horizontal-image-slider');
-    horizontalImageSlider.owlCarousel(horizontalImageSliderOptions);
+    horizontalImageSliderPage = horizontalImageSlider.parents('.page');
+
+    // Bind to page.triggered event allowing us to initialize horizontal sliders
+    // as they enter the viewport.
+    $(document).bind('on.page.triggered', function () {
+      // Only initialize the slider if the page is triggered
+      // and the slider hasn't already been initialized
+      if (horizontalImageSliderPage.hasClass('triggered') && !horizontalImageSlider.hasClass('owl-loaded')) {
+        horizontalImageSlider.owlCarousel(horizontalImageSliderOptions);
+      }
+    });
 
     horizontalImageSlider.find('.slide__icon--next svg').click(function () {
       horizontalImageSlider.trigger('next.owl.carousel');
@@ -180,14 +191,15 @@
 
     // Scroll Comparison JS.
     if ($('.scroll-comparison .wrapper .cell').length) {
-      $('.scroll-comparison .wrapper .cell').click(function () {
-        $(this).siblings('.cell').toggleClass('active');
-        $(this).toggleClass('active');
+      $('.scroll-comparison .wrapper .cell .picture').click(function () {
+        $(this).closest('.cell').siblings('.cell').toggleClass('active');
+        $(this).closest('.cell').toggleClass('active');
       });
     }
 
     // Transcription toggle.
-    $('.transcript .transcript__toggle').click(function () {
+    $('.transcript .transcript__toggle').click(function (e) {
+      e.preventDefault();
       $(this).siblings('.transcript__text').toggleClass('active');
     });
 

@@ -1,0 +1,285 @@
+%hub {
+  .featured-story {
+    min-height: 100vh;
+    @include breakpoint(large) {
+      vertical-align: top;
+      display: inline-block;
+      width: 50%;
+      padding-right: 30px;
+    }
+    .featured-story-wrapper {
+      overflow: hidden;
+      @include breakpoint(large) {
+        position: relative;
+      }
+      .overlay {
+        position: absolute;
+        opacity: 0;
+        top: 455px;
+        left: 50%;
+        color: white;
+        width: 85%;
+        z-index: 200;
+        animation-name: fadein;
+        animation-duration: 1.325s;
+        animation-timing-function: ease-out;
+        animation-direction: normal;
+        animation-delay: 0.25s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+  .on-view {
+    position: absolute;
+    // Firefox needs a z-index value
+    z-index: 1;
+    top: 100px;
+    right: 35px;
+    background-color: #5b5279;
+    padding: 8px 20px;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    font-family: $alternate-header-font-family;
+    font-size: 0.8em;
+    line-height: 1.6em;
+  }
+  img.featured-story-img {
+    @include object-fit;
+    position: static;
+    height: 100vh;
+    width: 100vw;
+    animation-name: kenburns;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  h1 {
+    font-family: $alternate-header-font-family;
+    font-size: 70px;
+    text-align: left;
+    line-height: normal;
+    margin-bottom: 0;
+    @include breakpoint(medium) {
+      font-size: 100px;
+    }
+    @include breakpoint(large) {
+      font-size: 105px;
+    }
+  }
+  h2 {
+    p {
+      font-family: $header-font-family;
+      font-style: italic;
+      font-size: 32px;
+      font-weight: 700;
+      text-align: left;
+      @include breakpoint(medium) {
+        font-size: 42px;
+        line-height: 50px;
+      }
+    }
+  }
+  h3.datelocation {
+    font-family: $header-font-family;
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-top: 3em;
+  }
+
+  .button-wrapper {
+    text-align: left;
+    margin-top: 55px;
+    p {
+      display: inline-block;
+      font-size: .82em;
+      a {
+        color: black;
+        background-color: white;
+        padding: 15px 18px;
+        margin: 0 10px 0 0;
+        border-radius: 30px;
+        font-family: $alternate-header-font-family;
+        &::after {
+          margin-left: .5rem;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f061";
+        }
+        &:hover {
+          color: #4b5659;
+        }
+      }
+    }
+  }
+  .stories {
+    @include breakpoint(large) {
+      display: inline-block;
+      width: 49.5%;
+      vertical-align: top;
+      margin-top: 70px;
+      height: 90vh;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+  }
+  .story-filter {
+    margin: 16px 0 36px 0;
+    border-bottom: 1px solid $dark-gray;
+    padding: 0 10px 10px 10px;
+    @include breakpoint(large) {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 15px;
+    }
+    &:focus {
+      outline: none;
+    }
+    .filter-label {
+      display: none;
+      margin: 10px 10px 25px 0;
+      font-weight: 700;
+      font-size: .8em;
+      font-family: $alternate-header-font-family;
+      @include breakpoint(large) {
+        display: inline-block;
+      }
+    }
+    a {
+      background-color: #0090a0;
+      padding: 10px 20px 10px 20px;
+      color: white;
+      border-radius: 30px;
+      margin: 0 4px;
+      font-family: $alternate-header-font-family;
+      font-size: .8em;
+      min-width: 140px;
+      text-align: center;
+      transition: all 0.2s linear;
+      &:hover {
+        background-color: #02727e;
+      }
+      &.blue,
+      &.Legion {
+        background-color: #5b5279;
+        &:hover {
+          background-color: #443c61;
+        }
+      }
+      &.black,
+      &.Collections {
+        background-color: black;
+        color: white;
+        &:hover {
+          background-color: #4b5659;
+        }
+      }
+      &.Exhibitions {
+        background-color: #8a9994;
+        &:hover {
+          background-color: #bcc5c3;
+        }
+      }
+      &.filtered {
+        background-color: white;
+        color: $dark-gray;
+        border: 1px solid $dark-gray;
+      }
+      .tax-txt-wrapper {
+        margin-right: 9px;
+      }
+      .filter-text {
+        display: inline-block;
+        margin-right: 6px;
+      }
+      .close-icon {
+        font-size: 0.9em;
+        font-weight: 100;
+        position: relative;
+        margin-right: 10px;
+        left: 7px;
+        width: 0;
+        display: inline-block;
+      }
+    }
+  }
+  .hub-story {
+    margin: 25px;
+    @include breakpoint(medium) {
+      display: inline-block;
+      vertical-align: top;
+      width: 46%;
+      margin: 25px 1.5% 25px 1.5%;
+    }
+    .story-image {
+      position: relative;
+    }
+    .on-view-story {
+      right: 15px;
+      top: 15px;
+      background-color: #0090a0;
+    }
+    .story-title {
+      margin-top: 25px;
+      margin-bottom: 0;
+      text-align: center;
+      font-size: 1.5em;
+      p {
+        margin-bottom: 0;
+      }
+    }
+    .story-subtitle {
+      font-family: $header-font-family;
+      font-style: italic;
+      text-align: center;
+      display: block;
+      font-size: 1.5em;
+      font-weight: 700;
+      color: $dark-gray;
+    }
+    .read-link-wrapper {
+      text-align: center;
+      margin-top: 12px;
+      a {
+        color: black;
+        font-family: $alternate-header-font-family;
+        &::after {
+          margin-left: .5rem;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f061";
+        }
+      }
+    }
+  }
+}
+%top-bar {
+  .button-group {
+    a.button {
+      border-radius: 25px;
+      margin-right: .75rem;
+      font-family: $alternate-header-font-family;
+      &:last-child {
+        padding: $button-padding;
+        font-size: .7em;
+        letter-spacing: 1.5px;
+      }
+      &:last-child:hover {
+        background-color: #4b5659;
+      }
+    }
+  }
+  .top-bar-hamburger {
+    display: none;
+  }
+}
+.hub {
+  @extend %hub;
+}
+#top-bar {
+  @extend %top-bar;
+}

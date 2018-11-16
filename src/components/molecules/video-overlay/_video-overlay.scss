@@ -1,5 +1,10 @@
 .video-overlay {
+
   display: none;
+
+  .plyr__control--overlaid {
+    top: 50% !important;
+  }
 
   @include breakpoint(medium) {
     background: rgba($black, .25);
@@ -17,14 +22,56 @@
     text-align: center;
     color: $white;
 
+    &__title {
+      margin-top: 15rem;
+    }
+
     &__text {
       font-size: 1rem;
-      margin-bottom: 6em;
+      max-width: 55rem;
+      margin-left: auto;
+      margin-right: auto;
     }
+
+    .plyr__control--overlaid {
+      top: 50% !important;
+      padding: 1.75rem;
+
+      svg {
+        left: 5px;
+        top: 2px;
+      }
+    }
+
 
     .playing & {
       opacity: 0;
       z-index: -1;
+    }
+  }
+
+  .caption {
+    display: inline-block;
+    margin: 0;
+
+    figcaption {
+      position: absolute;
+      bottom: 5rem;
+      left: 25%;
+      right: 25%;
+      background: rgba($black, .5);
+      padding: 1rem;
+    }
+  }
+
+  .toggle-caption {
+    transform: translateY(-.125rem);
+    border-color: $white;
+    color: $white;
+
+    &:hover {
+      border-color: $white;
+      color: $white;
     }
   }
 }

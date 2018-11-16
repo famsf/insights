@@ -25,12 +25,17 @@ Styleguide COMPONENTS.horizontal-image-slider
 
   .owl-stage-outer {
     @include breakpoint(medium) {
-      padding: 8rem 2rem 4rem 2rem;
+      padding: 8rem 6rem 4rem 6rem;
     }
   }
 
   .item {
     height: 100%;
+    padding: 0 2rem;
+
+    @include breakpoint(large) {
+      padding: 0;
+    }
 
     .item__content {
       height: 100%;
@@ -49,11 +54,12 @@ Styleguide COMPONENTS.horizontal-image-slider
       height: 100%;
 
       .item__content {
+        @extend %p;
         margin: auto 0;
       }
 
       @include breakpoint(large) {
-        padding: 2rem 2rem 2rem 4rem;
+        padding: 2rem 2rem 2rem 0;
         max-width: 25rem;
       }
     }
@@ -63,8 +69,8 @@ Styleguide COMPONENTS.horizontal-image-slider
     font-family: $alternate-header-font-family;
   }
 
-  picture {
-    margin-bottom: .5rem;
+  picture,
+  .picture {
     width: 100%;
 
     @include breakpoint(medium) {
@@ -72,6 +78,7 @@ Styleguide COMPONENTS.horizontal-image-slider
     }
 
     img {
+      min-width: 220px;
       max-height: 50vh;
       width: auto;
       margin: auto;
@@ -89,21 +96,18 @@ Styleguide COMPONENTS.horizontal-image-slider
     }
 
     .toggle-caption {
-      display: none;
-
+      font-size: 15px;
       @include breakpoint(medium) {
         display: inline-block;
       }
     }
 
-    .toggle-caption {
-      .i-info {
-        font-size: 14px;
-        line-height: 0;
-        top: 8px;
-        left: 5px;
-        font-weight: 700;
-        font-family: 'freight-text-pro';
+    figcaption {
+      @include breakpoint(medium) {
+        max-width: 83%;
+      }
+      @include breakpoint(large) {
+        max-width: none;
       }
     }
   }
@@ -143,6 +147,12 @@ Styleguide COMPONENTS.horizontal-image-slider
       display: block;
     }
 
+    &.disabled {
+      display: none !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+
     button {
       @include remove-outline();
       transition: all .25s ease-in-out;
@@ -176,6 +186,20 @@ Styleguide COMPONENTS.horizontal-image-slider
       &.owl-next {
         right: 2rem;
       }
+    }
+  }
+}
+
+// Animations.
+.page {
+  :not(.in-depth-slider) > .horizontal-image-slider > * {
+    transition: opacity .5s ease-in-out .25s;
+    opacity: 0;
+  }
+
+  &.triggered {
+    :not(.in-depth-slider) > .horizontal-image-slider > * {
+      opacity: 1;
     }
   }
 }

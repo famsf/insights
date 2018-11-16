@@ -5,16 +5,18 @@ files:
 - js/poly/performantScrollTo.js
 - components/atoms/video--embed/video--embed.js
 - components/atoms/audio_player/audio_player.js
-- components/molecules/TopBar/TopBar.js
 - components/molecules/zoom-image--inline/zoom-image--inline.js
+- components/molecules/zoom-image--inline/zoom-image--inline--mobile.js
 - components/molecules/zoom-caption/zoom-caption.js
-- components/molecules/CoverPage/CoverPage.js
 - components/molecules/zoom-image--fullbleed/zoom-image--fullbleed.js
+- components/molecules/top-bar/top-bar.js
+- components/molecules/cover-page/cover-page.js
 - js/pages.js
-- components/molecules/ChapterNav/ChapterNav.js
+- components/molecules/chapter-nav/chapter-nav.js
 - components/molecules/menu--mobile/menu--mobile.js
 - components/molecules/sharing-icons/sharing-icons.js
 - components/molecules/timeline/timeline.js
+- components/molecules/image-comparison-slider/image-comparison-slider.js
 - js/main.js
 insertNewLine: true
 ---

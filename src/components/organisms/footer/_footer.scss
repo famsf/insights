@@ -1,0 +1,137 @@
+footer.footer {
+  background: $white;
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  z-index: 3;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  label {
+    font-family: $alternate-header-font-family;
+  }
+
+  .footer__content {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+
+    @include breakpoint(medium) {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
+  }
+
+  form {
+    margin: 1rem 0;
+
+    @include breakpoint(medium) {
+      margin: 2rem 0;
+    }
+  }
+
+  .footer__social {
+    margin: 3rem 0 1rem 0;
+
+    @include breakpoint(medium) {
+      margin: 5rem 0 2rem 0;
+    }
+
+    > a {
+      color: $dark-gray;
+      margin-right: 1rem;
+    }
+  }
+  .footer-feature-wrapper {
+    display: flex;
+    @include breakpoint(medium) {
+      display: block;
+    }
+  }
+
+  .footer-feature {
+    width: 45%;
+    display: inline-block;
+    margin-right: 5%;
+    @include breakpoint(medium) {
+      margin-bottom: 4rem;
+      width: auto;
+      display: block;
+      margin-right: 0;
+    }
+
+    @include breakpoint(large) {
+      margin-bottom: 4rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    h3,
+    h4 {
+      margin-bottom: 1rem;
+
+      @include breakpoint(small down) {
+        font-family: $body-font-family;
+        font-weight: 100;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    p {
+      @include font-sizes(12);
+      @include responsive(line-height, 16px);
+    }
+
+    .footer-description {
+      display: none;
+      @include breakpoint(medium) {
+        display: block;
+      }
+    }
+
+    img {
+      margin: 1rem 0;
+
+      @include breakpoint(medium) {
+        margin: 0;
+      }
+    }
+  }
+
+  // Overrides for footer in mobile menu
+  & {
+    @include breakpoint(medium) {
+      display: block;
+    }
+  }
+
+  .off-canvas & {
+    padding: 0 2rem;
+    display: block;
+
+    .footer-feature {
+      h3 {
+        @extend p;
+        font-family: $base-font-family;
+        margin: .5rem 0 0 0;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    .footer__navigation {
+      display: none;
+    }
+  }
+
+}

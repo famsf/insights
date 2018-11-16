@@ -1,0 +1,27 @@
+<div id="insights-hub" class="off-canvas-wrapper {{ slug }}">
+  {% include '@molecules/top-bar/top-bar.html.twig' with {
+    tagline: tagline,
+    tickets_url: tickets_url,
+    facebook_url: facebook_url,
+    twitter_url: twitter_url
+  } only %}
+  <div id="app" class="chapters_container off-canvas-content" >
+    {% include "@organisms/hub/hub.html.twig" with {
+        index: loop.index0,
+        templateMap: gatherContent.templateMap,
+        stories: children,
+        image: content__image,
+        title: title,
+        subtitle: subtitle,
+        read_link: read_link,
+        tickets_link: tickets_link
+    } only %}
+  </div>
+</div>
+{% include '@molecules/off-canvas/off-canvas.html.twig' with {
+  chapters: children,
+  title: story_title,
+  tickets_url: tickets_url,
+  sections: footer.sections,
+  classes: footer.classes
+} only %}

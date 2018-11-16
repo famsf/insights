@@ -12,16 +12,15 @@
 
   {% set sizes = default_image_sizes %}
   {% set type = default_image_type %}
-
   <img
     class="{{ classes }}"
     alt="{{ alt }}"
     width="{{ width }}"
     height="{{ height }}"
-    src="{{ src }}"
+    src="{{ src }}.jpg"
     ci-responsive
-    ci-src="{{ url }}"
-    ci-params="{{ ci.quality(url, quality) }}"
+    ci-src="{{ src }}.jpg"
+    ci-params="{{ ci.quality(src, quality) }}"
     {% if type %}
       ci-type="{{ type }}"
     {% endif %}
