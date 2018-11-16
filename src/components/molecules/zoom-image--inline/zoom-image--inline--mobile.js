@@ -31,7 +31,9 @@
   function adjustNavPageInit() {
     // Because onInitialized isn't perfect.
     var $zoomCarousels = $('.zoom-image--inline--mobile');
-    setTimeout(adjustNav, 500);
+    setTimeout( function () {
+      adjustNav($zoomCarousels)
+    }, 500);
   }
   $(document).ready(function () {
     var $zoomCarousels = $('.zoom-image--inline--mobile');
