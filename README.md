@@ -59,9 +59,9 @@ FAMSF Insights uses a modified [github flow](https://guides.github.com/introduct
 4. In order for Pull Requests to be merged, they need to get code reviewed and approved.
 5. The Pull Request is than merged by someone other than the original branch author.
 
-## Test, build and deploy
+## Test, build and deploy!
 
-TBD
+Forthcoming.
 
 
 ### Deployment
