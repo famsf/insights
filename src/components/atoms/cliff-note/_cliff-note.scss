@@ -14,8 +14,6 @@ Styleguide COMPONENTS.cliff-note
   @include responsive(line-height, 42px);
   position: relative;
   font-family: $header-font-family;
-  font-weight: bold;
-  font-style: italic;
   letter-spacing: -1px;
   max-width: 20rem;
   margin: auto;
