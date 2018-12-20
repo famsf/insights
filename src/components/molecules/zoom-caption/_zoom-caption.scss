@@ -19,7 +19,9 @@
     width: 40px;
     box-shadow: 0 0 0 10px rgba(255,255,255,0.5);
     animation: border-pulsate 4s ease-out infinite;
-    transition: transform 0.2s ease-in;
+    transition-property: transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in;
     @keyframes border-pulsate {
       0%   {box-shadow: 0 0 0 10px rgba(255,255,255,0.5);}
       25%   {box-shadow: 0 0 0 5px rgba(255,255,255,0.5);}
