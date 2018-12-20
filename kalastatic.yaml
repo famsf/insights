@@ -224,7 +224,7 @@ pluginOpts:
       author__title: Content_Author-Title
       author__bio: Content_Author-Bio
       commentary: Content_Commentary
-      cta__button: Content_Commentary-CTA-Button
+      cta__button: Content_CTA-Button
 
       # Audio + Transcripts
       audio__file: Content_Audio-File
