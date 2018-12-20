@@ -40,3 +40,10 @@
 %kenburns {
   animation: kenburns 4s ease-out 0.75s 1 forwards running;
 }
+
+%floating-caption {
+  position: absolute;
+  bottom: 4rem;
+  right: 1rem;
+  margin-bottom: 0;
+}
