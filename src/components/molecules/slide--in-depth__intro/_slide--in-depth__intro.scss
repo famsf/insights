@@ -244,6 +244,15 @@
     }
   }
 
+  .caption {
+    margin: 0 !important;
+
+    figcaption {
+      background: $black;
+      color: $white !important;
+    }
+  }
+
   // Modify styles if the in depth slider should be open.
   .open & {
     @include breakpoint(small only) {
@@ -374,6 +383,13 @@
         &:after {
           background: linear-gradient(0.375turn, transparent, rgba($black, .75));
         }
+      }
+    }
+
+    .caption {
+      figcaption {
+        background: $white;
+        color: $black !important;
       }
     }
 

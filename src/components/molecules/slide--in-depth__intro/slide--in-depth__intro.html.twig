@@ -21,6 +21,14 @@
       </div>
       <div class="slide--in-depth__intro__content--bottom">
         <div class="slide--in-depth__intro__text">{{ slide__description }}</div>
+        {% if caption__text %}
+          {% include "@atoms/caption/caption.html.twig" with {
+            in_depth__body: slide__body,
+            brief: caption__brief,
+            text: caption__text,
+            id: id
+          } only %}
+        {% endif %}
         {% include "@molecules/sharing-icons/sharing-icons.html.twig" %}
       </div>
     </div>
