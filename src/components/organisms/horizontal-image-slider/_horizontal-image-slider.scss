@@ -155,7 +155,9 @@ Styleguide COMPONENTS.horizontal-image-slider
 
     button {
       @include remove-outline();
-      transition: all .25s ease-in-out;
+      transition-property: all;
+      transition-duration: .25s;
+      transition-timing-function: ease-in-out;
       position: absolute;
       top: calc(50% - 4rem);
       color: transparent !important;
@@ -193,7 +195,10 @@ Styleguide COMPONENTS.horizontal-image-slider
 // Animations.
 .page {
   :not(.in-depth-slider) > .horizontal-image-slider > * {
-    transition: opacity .5s ease-in-out .25s;
+    transition-property: opacity;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: .25s;
     opacity: 0;
   }
 

@@ -87,7 +87,9 @@ Styleguide COMPONENTS.in-depth
 %in-depth-modal {
   .in-depth__toggle {
     @extend %modal__close-button;
-    transition: all .25s ease-in-out;
+    transition-property: all;
+    transition-duration: .25s;
+    transition-timing-function: ease-in-out;
     visibility: hidden;
     opacity: 0;
     margin-top: 5rem;
@@ -264,7 +266,9 @@ Styleguide COMPONENTS.in-depth
     .owl-dots,
     .owl-nav {
       @include breakpoint(large) {
-        transition: all .25s ease-in-out;
+        transition-property: all;
+        transition-duration: .25s;
+        transition-timing-function: ease-in-out;
         opacity: 0;
         visibility: hidden;
       }

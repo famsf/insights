@@ -304,7 +304,6 @@ $button-palette: $foundation-palette;
 $button-opacity-disabled: 0.25;
 $button-background-hover-lightness: -20%;
 $button-hollow-hover-lightness: -50%;
-$button-transition: background-color 0.25s ease-out, color 0.25s ease-out;
 
 // 12. Button Group
 // ----------------
@@ -363,7 +362,6 @@ $closebutton-color-hover: $white;
 // 16. Drilldown
 // -------------
 
-$drilldown-transition: transform 0.15s linear;
 $drilldown-arrows: true;
 $drilldown-padding: $global-menu-padding;
 $drilldown-nested-margin: 0;
@@ -448,7 +446,6 @@ $input-padding: $form-spacing / 2;
 $input-shadow: inset 0 1px 2px rgba($black, 0.1);
 $input-shadow-focus: 0 0 5px $medium-gray;
 $input-cursor-disabled: not-allowed;
-$input-transition: box-shadow 0.5s, border-color 0.25s ease-in-out;
 $input-number-spinners: true;
 $input-radius: $global-radius;
 $form-button-radius: $global-radius;
@@ -747,7 +744,6 @@ $reveal-overlay-background: rgba($black, 0.9);
 // ----------
 
 $slider-width-vertical: 0.5rem;
-$slider-transition: all 0.2s ease-in-out;
 $slider-height: 0.5rem;
 $slider-background: $light-gray;
 $slider-fill-background: $primary-color;
@@ -771,7 +767,6 @@ $switch-margin: $global-margin;
 $switch-paddle-background: $white;
 $switch-paddle-offset: 0.25rem;
 $switch-paddle-radius: $global-radius;
-$switch-paddle-transition: all 0.25s ease-out;
 
 // 50. Table
 // ---------
@@ -819,7 +814,6 @@ $thumbnail-border: solid 4px $white;
 $thumbnail-margin-bottom: $global-margin;
 $thumbnail-shadow: 0 0 0 1px rgba($black, 0.2);
 $thumbnail-shadow-hover: 0 0 6px 1px rgba($primary-color, 0.5);
-$thumbnail-transition: box-shadow 200ms ease-out;
 $thumbnail-radius: $global-radius;
 
 // 53. Title Bar

@@ -6,7 +6,9 @@
   }
 
   .transcript__text {
-    transition: all .75s ease-in-out;
+    transition-property: all;
+    transition-duration: .75s;
+    transition-timing-function: ease-in-out;
     overflow: hidden;
     max-height: 0;
     opacity: 0;

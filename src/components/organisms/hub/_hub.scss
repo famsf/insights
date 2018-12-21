@@ -159,7 +159,9 @@
       font-size: .8em;
       min-width: 140px;
       text-align: center;
-      transition: all 0.2s linear;
+      transition-property: all;
+      transition-duration: 0.2s;
+      transition-timing-function: linear;
       &:hover {
         background-color: #02727e;
       }
