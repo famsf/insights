@@ -18,7 +18,13 @@
           {% include templateMap[component.template_id] with component only %}
         {% endfor %}
       </div>
-  </div>
+      {% if credits is not empty %}
+        {% include "@atoms/caption/caption.html.twig" with {
+          text: credits,
+          id: 'credits_' ~ id
+        } only %}
+      {% endif %}
+    </div>
   {#
    Video needs to be muted, since Chrome 66+ will not autoplay video with sound.
    WCAG general accessibility recommendation is that media such as background video play through only once.
@@ -27,5 +33,4 @@
   <video class="video_element video_player" poster="{{ video__poster__image.src }}" playsinline autoplay muted loop>
     <source src="{{ video__file.src }}.mp4" type="video/mp4">
   </video>
-
 </div>
