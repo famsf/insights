@@ -1,9 +1,7 @@
 <div id="insights-hub" class="off-canvas-wrapper {{ slug }}">
   {% include '@molecules/top-bar/top-bar.html.twig' with {
     tagline: tagline,
-    tickets_url: tickets_url,
-    facebook_url: facebook_url,
-    twitter_url: twitter_url
+    tickets_url: tickets_url
   } only %}
   <div id="app" class="chapters_container off-canvas-content" >
     {% include "@organisms/hub/hub.html.twig" with {
