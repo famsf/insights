@@ -81,6 +81,31 @@ Styleguide COMPONENTS.AmbientVideo
     transition-timing-function: ease-out;
   }
 
+  .caption {
+    margin-bottom: 0;
+
+    figcaption {
+      @include responsive(max-width, calc(100% - 2rem), 500px);
+      position: absolute;
+      z-index: 50;
+      bottom: 3rem;
+      right: 1rem;
+    }
+  }
+
+  .caption__brief {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 50;
+  }
+
+  .toggle-caption,
+  .toggle-caption:hover {
+    color: $white;
+    border-color: $white;
+  }
+
   .triggered & {
     display: block;
     opacity: 1em;

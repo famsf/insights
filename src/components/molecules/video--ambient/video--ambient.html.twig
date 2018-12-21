@@ -28,4 +28,11 @@
     <source src="{{ video__file.src }}.mp4" type="video/mp4">
   </video>
 
+  {% if credits is not empty %}
+    {% include "@atoms/caption/caption.html.twig" with {
+      text: credits,
+      id: 'video--ambient_' ~ id
+    } only %}
+  {% endif %}
+
 </div>
