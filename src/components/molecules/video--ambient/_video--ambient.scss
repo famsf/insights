@@ -12,6 +12,8 @@ Styleguide COMPONENTS.AmbientVideo
 
 %ambient_video {
 
+  @extend %fullscreen-credits;
+
   @include breakpoint(medium) {
     @include fill_screen;
     position: relative;
@@ -49,11 +51,6 @@ Styleguide COMPONENTS.AmbientVideo
     p {
       color: #fff !important;
     }
-  }
-
-  .caption {
-    @extend %floating-caption;
-    z-index: 2;
   }
 
   .centerv {

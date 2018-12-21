@@ -41,9 +41,54 @@
   animation: kenburns 4s ease-out 0.75s 1 forwards running;
 }
 
-%floating-caption {
-  position: absolute;
-  bottom: 4rem;
-  right: 1rem;
-  margin-bottom: 0;
+%fullscreen-credits {
+
+  .toggle-caption {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.725s;
+    transition-delay: 1s;
+    transition-timing-function: ease-out;
+  }
+
+  .caption {
+    margin-bottom: 0;
+    figcaption {
+      @include responsive(max-width, calc(100% - 2rem), 500px);
+      position: absolute;
+      z-index: 50;
+      bottom: 5rem;
+      right: 1rem;
+      @include breakpoint(medium) {
+        bottom: 3rem;
+      }
+    }
+  }
+
+  .caption__brief {
+    position: absolute;
+    bottom: 3rem;
+    right: 1rem;
+    z-index: 50;
+    @include breakpoint(medium) {
+      bottom: 1rem;
+    }
+  }
+
+  .toggle-caption,
+  .toggle-caption:hover {
+    .theme--primary-dark &,
+    .theme--primary &,
+    .theme--dark & {
+      color: $white;
+      border-color: $white;
+    }
+    .theme--primary-light & {
+      color: $black;
+      border-color: $black;
+    }
+    .triggered & {
+      opacity: 1;
+    }
+  }
 }
