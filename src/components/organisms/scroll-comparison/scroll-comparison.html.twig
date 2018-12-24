@@ -41,9 +41,9 @@
           {{ left__body }}
           {% if left__inline_quote__text %}
             {% include "@molecules/inline-quote/inline-quote.html.twig" with {
-              text: left__inline_quote__text,
-              name: left__inline_quote__name,
-              date: left__inline_quote__date
+              text: left__inline_quote__text|striptags('<a><b><i><em><strong>'),
+              name: left__inline_quote__name|striptags('<a><b><i><em><strong>'),
+              date: left__inline_quote__date|striptags('<a><b><i><em><strong>')
             } %}
           {% endif %}
         </div>
@@ -72,9 +72,9 @@
         {{ right__body }}
         {% if right__inline_quote__text %}
           {% include "@molecules/inline-quote/inline-quote.html.twig" with {
-            text: right__inline_quote__text,
-            name: right__inline_quote__name,
-            date: right__inline_quote__date
+            text: right__inline_quote__text|striptags('<a><b><i><em><strong>'),
+            name: right__inline_quote__name|striptags('<a><b><i><em><strong>'),
+            date: right__inline_quote__date|striptags('<a><b><i><em><strong>')
           } %}
         {% endif %}
         </div>

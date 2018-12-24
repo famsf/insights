@@ -52,6 +52,7 @@ pluginOpts:
       - 'hub.md'
       - 'la-prose.md'
       - 'gauguin.md'
+      - 'for-testing.md'
     # map template ids to components so we can handle defaults
     # we're also removing Meta_Component from "atom" GatherContent templates
     # Since they removed template defaults, and certain components —
@@ -168,7 +169,7 @@ pluginOpts:
       left__title: Content-Left_Title
       left__body: Content-Left_Body-Copy
       left__inline_quote__text: Content-Left_Quote-Text
-      left__inline_quote__name: Content-Left_Quote-Attribution
+      left__inline_quote__name: Content-Left_Quote-Name
       left__inline_quote__date: Content-Left_Quote-Date
       right__image: Content-Right_Image
       right__image-alt: Content-Right_Image-Alt
@@ -177,7 +178,7 @@ pluginOpts:
       right__title: Content-Right_Title
       right__body: Content-Right_Body-Copy
       right__inline_quote__text: Content-Right_Quote-Text
-      right__inline_quote__name: Content-Right_Quote-Attribution
+      right__inline_quote__name: Content-Right_Quote-Name
       right__inline_quote__date: Content-Right_Quote-Date
 
       # Video Embed
