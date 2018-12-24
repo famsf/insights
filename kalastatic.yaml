@@ -47,11 +47,12 @@ pluginOpts:
     authPath: _auth.json
     filePath: src/assets/gathercontent
     projectId: 190265
-    saveJSON: false
+    saveJSON: true
     includeAsFile:
       - 'hub.md'
       - 'la-prose.md'
       - 'gauguin.md'
+      - 'for-testing.md'
     # map template ids to components so we can handle defaults
     # we're also removing Meta_Component from "atom" GatherContent templates
     # Since they removed template defaults, and certain components —
@@ -152,6 +153,9 @@ pluginOpts:
       intro__title: Content_Intro-Title
       intro__text: Content_Intro-Text
 
+      # Cover Page
+      video_bg__file: Video_Background-Video
+      video_bg__poster__image: Video_Video-Poster-Image
       # Chapter Title
       chapter__numeral: Content_Chapter-Numeral
       chapter__title: Content_Chapter-Title

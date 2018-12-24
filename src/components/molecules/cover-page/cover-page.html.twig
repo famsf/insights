@@ -11,7 +11,17 @@
 {% if background__image[background__image|length - 1].src %}
   {% set background__image = background__image[background__image|length - 1] %}
 {% endif %}
-<div class="cover_page" id="CoverPage" data-bg-image="{{ background__image.src }}.jpg" data-bg-image-alt="{{ background__image.alt }}">
+<div class="cover_page" id="CoverPage" data-bg-image="{% if video_bg__file is empty %}{{ background__image.src }}{% else %}{{ video_bg__poster__image.src }}{% endif %}.jpg" data-bg-image-alt="{{ background__image.alt }}">
+  {% if video_bg__file is not empty %}
+    {#
+     Video needs to be muted, since Chrome 66+ will not autoplay video with sound.
+     WCAG general accessibility recommendation is that media such as background video play through only once.
+     Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button
+    #}
+    <video class="video_element video_player" poster="{{ video_bg__poster__image.src }}" playsinline autoplay muted loop>
+      <source src="{{ video_bg__file.src }}.mp4" type="video/mp4">
+    </video>
+  {% endif %}
   <div class="underlay">
     <div class="underlay_contents">
       <h1 class="headline exhibit_logo"><span class="solid">{{ titleFirstLine }}</span>{% if titleArray|length > 1 %}<br><span class="outline">{{ titleSecondLine }}</span>{% endif %}</h1>
@@ -21,19 +31,17 @@
   </div>
   <div class="cover_loader_container">
     <div class="top loaderpane">
-      <div class="headline mask" style="background-image: url({{ background__image.src }}.jpg)"><span class="text">{{ titleFirstLine }}{% if titleArray|length > 1 %}<br>{{ titleSecondLine }}{% endif %}</span></div>
+      <div class="headline mask" style="background-image: url({% if video_bg__file is empty %}{{ background__image.src }}{% else %}{{ video_bg__poster__image.src }}{% endif %}.jpg)"><span class="text">{{ titleFirstLine }}{% if titleArray|length > 1 %}<br>{{ titleSecondLine }}{% endif %}</span></div>
     </div >
     <div id="mask_loader" class="mask_loader loader loaderpane">
       <div class="headline"><span class="text">{{ titleFirstLine }}{% if titleArray|length > 1 %}</span><br><span>{{ titleSecondLine }}{% endif %}</span></div>
     </div>
   </div>
   {% include "@atoms/down_arrow/down_arrow.html.twig" with only %}
-
   {% if credits is not empty %}
     {% include "@atoms/caption/caption.html.twig" with {
       text: credits,
       id: 'credits_' ~ id
     } only %}
   {% endif %}
-
 </div>
