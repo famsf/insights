@@ -155,7 +155,7 @@ Styleguide COMPONENTS.horizontal-image-slider
 
     button {
       @include remove-outline();
-      transition-property: all;
+      transition-property: opacity;
       transition-duration: .25s;
       transition-timing-function: ease-in-out;
       position: absolute;

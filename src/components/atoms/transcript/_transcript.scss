@@ -6,7 +6,7 @@
   }
 
   .transcript__text {
-    transition-property: all;
+    transition-property: visible, opacity, height, max-height;
     transition-duration: .75s;
     transition-timing-function: ease-in-out;
     overflow: hidden;

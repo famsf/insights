@@ -31,7 +31,7 @@
       align-items: center;
 
       &:before {
-        transition-property: all;
+        transition-property: transform, top, right, left, height, width, background-color, opacity, z-index;
         transition-duration: .5s;
         transition-timing-function: ease-in-out;
         transition-delay: 0s;
@@ -80,7 +80,7 @@
         height: 60vh;
         width: 60vh !important;
         position: relative;
-        transition-property: all;
+        transition-property: height, max-height, width, transform;
         transition-duration: .5s;
         transition-timing-function: ease-in-out;
         transform: translate(-15%, 0) scale(.7);
@@ -105,7 +105,7 @@
     @extend h1;
     @include responsive(font-size, 2rem, 3rem, 4rem);
     @include responsive(margin-bottom, 1rem, 2rem, 4rem);
-    transition-property: all;
+    transition-property: color, margin, top, left, right, bottom, transform;
     transition-duration: .5s;
     transition-timing-function: ease-in-out;
     transition-delay: .5s;
@@ -116,7 +116,7 @@
 
   .slide--in-depth__intro__button {
     @extend %cta__button;
-    transition-property: all;
+    transition-property: opacity, top, left, right, bottom, margin, transform, visibility;
     transition-duration: .25s;
     transition-timing-function: ease-in-out;
     transition-delay: .5s;
@@ -171,7 +171,7 @@
   .slide--in-depth__intro__content--top {
     @include responsive(width, initial, 100%, 45%, 40%, 30%);
     @include responsive(margin, 0 2rem, 0 0 3rem auto, 10vh 10vw 3rem auto);
-    transition-property: all;
+    transition-property: transform, opacity, bottom;
     transition-duration: .5s;
     transition-timing-function: ease-in-out;
     transition-delay: .25s;
@@ -186,7 +186,7 @@
   }
 
   .slide--in-depth__intro__content--bottom {
-    transition-property: all;
+    transition-property: transform, opacity, top, right, margin-top, width, opacity, visibility;
     transition-duration: .25s;
     transition-timing-function: ease-in-out;
     transition-delay: 0s;

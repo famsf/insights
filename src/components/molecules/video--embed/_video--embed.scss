@@ -42,7 +42,7 @@ Markup: video--embed.html.twig
   }
 
   svg {
-    transition-property: all;
+    transition-property: background-color;
     transition-duration: .25s;
     transition-timing-function: ease-in-out;
     width: 1.25rem;
