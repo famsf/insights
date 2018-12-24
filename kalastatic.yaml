@@ -154,7 +154,8 @@ pluginOpts:
       intro__text: Content_Intro-Text
 
       # Cover Page
-      video_bg__file: Video_Background-Video
+      use_video_hero: Video_Use-Hero-Video
+      video_bg__file: Video_Video-Cover
       video_bg__poster__image: Video_Video-Poster-Image
       # Chapter Title
       chapter__numeral: Content_Chapter-Numeral

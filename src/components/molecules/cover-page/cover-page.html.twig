@@ -11,8 +11,8 @@
 {% if background__image[background__image|length - 1].src %}
   {% set background__image = background__image[background__image|length - 1] %}
 {% endif %}
-<div class="cover_page" id="CoverPage" data-bg-image="{% if video_bg__file is empty %}{{ background__image.src }}{% else %}{{ video_bg__poster__image.src }}{% endif %}.jpg" data-bg-image-alt="{{ background__image.alt }}">
-  {% if video_bg__file is not empty %}
+<div class="cover_page" id="CoverPage" data-bg-image="{% if use_video_hero|trim == "True" %}{{ video_bg__poster__image.src }}{% else %}{{ background__image.src }}{% endif %}.jpg" data-bg-image-alt="{{ background__image.alt }}">
+  {% if use_video_hero|trim == "True" %}
     {#
      Video needs to be muted, since Chrome 66+ will not autoplay video with sound.
      WCAG general accessibility recommendation is that media such as background video play through only once.
@@ -31,7 +31,7 @@
   </div>
   <div class="cover_loader_container">
     <div class="top loaderpane">
-      <div class="headline mask" style="background-image: url({% if video_bg__file is empty %}{{ background__image.src }}{% else %}{{ video_bg__poster__image.src }}{% endif %}.jpg)"><span class="text">{{ titleFirstLine }}{% if titleArray|length > 1 %}<br>{{ titleSecondLine }}{% endif %}</span></div>
+      <div class="headline mask" style="background-image: url({% if use_video_hero|trim == "True" %}{{ video_bg__poster__image.src }}{% else %}{{ background__image.src }}{% endif %}.jpg)"><span class="text">{{ titleFirstLine }}{% if titleArray|length > 1 %}<br>{{ titleSecondLine }}{% endif %}</span></div>
     </div >
     <div id="mask_loader" class="mask_loader loader loaderpane">
       <div class="headline"><span class="text">{{ titleFirstLine }}{% if titleArray|length > 1 %}</span><br><span>{{ titleSecondLine }}{% endif %}</span></div>
