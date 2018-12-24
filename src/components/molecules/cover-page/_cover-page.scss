@@ -46,7 +46,6 @@
         transition-property: top, opacity;
         transition-timing-function: ease-in-out;
         transition-duration: 0.675s;
-        opacity: 0;
         position: relative;
         top: 4em;
 
@@ -245,89 +244,17 @@
     }
   }
 
-  //
-  // .toggle-caption {
-  //   opacity: 0;
-  //   transition-property: opacity;
-  //   transition-duration: 0.725s;
-  //   transition-delay: 1s;
-  //   transition-timing-function: ease-out;
-  // }
-  //
-  // .caption {
-  //   margin-bottom: 0;
-  //
-  //   figcaption {
-  //     @include responsive(max-width, calc(100% - 2rem), 500px);
-  //     position: absolute;
-  //     z-index: 50;
-  //     bottom: 5rem;
-  //     right: 1rem;
-  //   }
-  // }
-  //
-  // .caption__brief {
-  //   position: absolute;
-  //   bottom: 3.5rem;
-  //   right: 1rem;
-  //   z-index: 1000;
-  //   @include breakpoint(medium) {
-  //     bottom: 2.5rem;
-  //   }
-  // }
-
   @extend %fullscreen-credits;
-  .video_element {
-    @include breakpoint(medium) {
-      @include performy;
-      @include object-fit;
-    }
-    opacity: 0;
-    transition-property: opacity;
-    transition-duration: 0.25s;
-    transition-timing-function: ease-out;
-    &.stopfade {
-      opacity: 0.5;
-    }
-  }
-  .plyr--video {
-    @include breakpoint(medium) {
-      @include performy;
-      @include object-fit;
-    }
-    opacity: 0;
-    transition-property: opacity;
-    transition-duration: 0.25s;
-    transition-timing-function: ease-out;
-  }
-  .triggered & {
-    display: block;
-    opacity: 1em;
-    .video_element,
-    .plyr--video,
-    .plyr--audio {
-      opacity: 1 !important;
-    }
-    .text_content {
-      top: 0;
-      opacity: 1;
-    }
-  }
-  .video_element {
-    .plyr__controls,
-    .plyr__control {
-      display: none;
-      opacity: 0;
-      & > * {
-          pointer-events: none;
-          cursor: auto;
-      }
-    }
-  }
+  @extend %background__video;
 }
 
 .cover_page {
   @extend %cover-page;
+  &.video_cover {
+    .bg-image {
+      visibility: hidden;
+    }
+  }
 }
 
 @keyframes stretch {

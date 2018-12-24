@@ -11,7 +11,7 @@
 {% if background__image[background__image|length - 1].src %}
   {% set background__image = background__image[background__image|length - 1] %}
 {% endif %}
-<div class="cover_page" id="CoverPage" data-bg-image="{% if use_video_hero|trim == "True" %}{{ video_bg__poster__image.src }}{% else %}{{ background__image.src }}{% endif %}.jpg" data-bg-image-alt="{{ background__image.alt }}">
+<div class="cover_page {% if use_video_hero|trim == "True" %}video_cover{% endif %}" id="CoverPage" data-bg-image="{% if use_video_hero|trim == "True" %}{{ video_bg__poster__image.src }}{% else %}{{ background__image.src }}{% endif %}.jpg" data-bg-image-alt="{{ background__image.alt }}">
   {% if use_video_hero|trim == "True" %}
     {#
      Video needs to be muted, since Chrome 66+ will not autoplay video with sound.
