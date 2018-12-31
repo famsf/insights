@@ -3,7 +3,5 @@
 {% endif %}
 <figure class="picture-with-caption" {{ attributes }}>
   {% include "@molecules/picture/picture.html.twig" with picture only %}
-  {% if caption.text is not empty %}
-    {% include "@atoms/caption/caption.html.twig" with caption only %}
-  {% endif %}
+  {% include "@atoms/caption/caption.html.twig" with caption only %}
 </figure>
