@@ -42,12 +42,18 @@
   &.hidden {
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s ease-out 0.525s, opacity ease-out 0.525s;
+    transition-property: visibility, opacity;
+    transition-duration: 0s;
+    transition-timing-function: ease-out;
+    transition-delay: 0.525s;
   }
   &.showy {
     visibility: visible;
     opacity: 1;
-    transition: visibility 0s ease-out 0s, opacity ease-out 0.525s;
+    transition-property: visibility, opacity;
+    transition-duration: 0s;
+    transition-timing-function: ease-out;
+    transition-delay: 0.525s;
   }
   ul {
     list-style: none;
