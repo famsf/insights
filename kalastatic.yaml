@@ -47,7 +47,7 @@ pluginOpts:
     authPath: _auth.json
     filePath: src/assets/gathercontent
     projectId: 190265
-    saveJSON: true
+    saveJSON: false
     includeAsFile:
       - 'hub.md'
       - 'la-prose.md'
@@ -177,12 +177,18 @@ pluginOpts:
       left__caption_brief: Content-Left_Caption-Brief
       left__title: Content-Left_Title
       left__body: Content-Left_Body-Copy
+      left__inline_quote__text: Content-Left_Quote-Text
+      left__inline_quote__name: Content-Left_Quote-Name
+      left__inline_quote__date: Content-Left_Quote-Date
       right__image: Content-Right_Image
       right__image-alt: Content-Right_Image-Alt
       right__caption: Content-Right_Caption
       right__caption_brief: Content-Right_Caption-Brief
       right__title: Content-Right_Title
       right__body: Content-Right_Body-Copy
+      right__inline_quote__text: Content-Right_Quote-Text
+      right__inline_quote__name: Content-Right_Quote-Name
+      right__inline_quote__date: Content-Right_Quote-Date
 
       # Video Embed
       video__id: Content_Video-Id
