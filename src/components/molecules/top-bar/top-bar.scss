@@ -13,7 +13,9 @@
   transform: translate3d(0,0,0);
   padding: 1rem 1.5rem;
   width: 100%;
-  transition: background-color .325s ease-in-out;
+  transition-property: background-color;
+  transition-duration: .325s;
+  transition-timing-function: ease-in-out;
   font-family: $body-font-family;
   background-color: $white;
   display: flex;
@@ -42,11 +44,15 @@
   }
 
   button {
-    transition: color .325s ease-in-out, background-color .325 ease-in-out;
+    transition-property: color, background-color;
+    transition-duration: .325s, .325s;
+    transition-timing-function: ease-in-out, ease-in-out;
   }
 
   .tagline {
-    transition: color .325s ease-in-out;
+    transition-property: color;
+    transition-timing-function: .325s;
+    transition-timing-function: ease-in-out;
   }
 
   .button-group {

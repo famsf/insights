@@ -31,7 +31,9 @@
       align-items: center;
 
       &:before {
-        transition: all .5s ease-in-out;
+        transition-property: transform, top, right, left, height, width, background-color, opacity, z-index;
+        transition-duration: .5s;
+        transition-timing-function: ease-in-out;
         transition-delay: 0s;
         transform: translateX(-100%);
         position: absolute;
@@ -78,7 +80,9 @@
         height: 60vh;
         width: 60vh !important;
         position: relative;
-        transition: all .5s ease-in-out;
+        transition-property: height, max-height, width, transform;
+        transition-duration: .5s;
+        transition-timing-function: ease-in-out;
         transform: translate(-15%, 0) scale(.7);
       }
 
@@ -101,7 +105,9 @@
     @extend h1;
     @include responsive(font-size, 2rem, 3rem, 4rem);
     @include responsive(margin-bottom, 1rem, 2rem, 4rem);
-    transition: all .5s ease-in-out;
+    transition-property: color, margin, top, left, right, bottom, transform;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
     transition-delay: .5s;
     font-family: $header-font-family !important;
     font-weight: bold;
@@ -110,7 +116,9 @@
 
   .slide--in-depth__intro__button {
     @extend %cta__button;
-    transition: all .25s ease-in-out;
+    transition-property: opacity, top, left, right, bottom, margin, transform, visibility;
+    transition-duration: .25s;
+    transition-timing-function: ease-in-out;
     transition-delay: .5s;
 
     @include breakpoint(medium) {
@@ -163,7 +171,9 @@
   .slide--in-depth__intro__content--top {
     @include responsive(width, initial, 100%, 45%, 40%, 30%);
     @include responsive(margin, 0 2rem, 0 0 3rem auto, 10vh 10vw 3rem auto);
-    transition: all .5s ease-in-out;
+    transition-property: transform, opacity, bottom;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
     transition-delay: .25s;
     transform: translate(0, 1rem);
     opacity: 0;
@@ -176,7 +186,9 @@
   }
 
   .slide--in-depth__intro__content--bottom {
-    transition: all .25s ease-in-out;
+    transition-property: transform, opacity, top, right, margin-top, width, opacity, visibility;
+    transition-duration: .25s;
+    transition-timing-function: ease-in-out;
     transition-delay: 0s;
     visibility: hidden;
     opacity: 0;

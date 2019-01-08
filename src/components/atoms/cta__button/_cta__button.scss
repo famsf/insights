@@ -11,7 +11,9 @@
   padding-right: .5rem;
 
   &:before {
-    transition: background .25s ease-in-out;
+    transition-property: background;
+    transition-duration: .25s;
+    transition-timing-function: ease-in-out;
     content: "";
     position: absolute;
     width: 100%;
