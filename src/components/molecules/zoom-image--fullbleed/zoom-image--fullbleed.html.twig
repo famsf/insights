@@ -29,7 +29,7 @@
 
   {% if credit is not empty %}
     {% include "@atoms/caption/caption.html.twig" with {
-      text: credit
+      text: credit,
       id: 'zoom-image-caption__' ~ id
     } only %}
   {% endif %}

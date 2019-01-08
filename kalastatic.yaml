@@ -47,11 +47,12 @@ pluginOpts:
     authPath: _auth.json
     filePath: src/assets/gathercontent
     projectId: 190265
-    saveJSON: false
+    saveJSON: true
     includeAsFile:
       - 'hub.md'
       - 'la-prose.md'
       - 'gauguin.md'
+      - 'for-testing.md'
     # map template ids to components so we can handle defaults
     # we're also removing Meta_Component from "atom" GatherContent templates
     # Since they removed template defaults, and certain components —
@@ -127,6 +128,8 @@ pluginOpts:
       content__image: Content_Image
       content__image-alt: Content_Image-Alt
       content__hide_chapter_nav: Content_Hide-Chapter-Nav
+      credits: Content_Credits
+      video_credits: Video_Credits
 
       # Social
       og__title: Social_OpenGraph-Title
@@ -148,10 +151,17 @@ pluginOpts:
       color__primary: Theme_Primary
       color__secondary: Theme_Secondary
 
+      # Cover Page
+      use_video_hero: Video_Use-Hero-Video
+      video_bg__file: Video_Video-Cover
+      video_bg__poster__image: Video_Video-Poster-Image
+
       # intro
       intro__title: Content_Intro-Title
       intro__text: Content_Intro-Text
-
+      intro__has_video_background: Video_Use-Video-Background
+      intro__video_bg__file: Video_Video
+      intro__video_bg__poster__image: Video_Video-Poster-Image
       # Chapter Title
       chapter__numeral: Content_Chapter-Numeral
       chapter__title: Content_Chapter-Title
@@ -299,9 +309,6 @@ pluginOpts:
       comp__2__image: Content_Image-2
       comp__2__image_alt: Content_Image-2-Alt
       startPosition: Content_Slider_Start_Position
-
-      # Full screen media credits
-      credits: Content_Credits
 
       # Hub
       # Hub Story
