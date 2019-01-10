@@ -1,6 +1,8 @@
 %sharing-icons {
   .icon {
-    transition: opacity .25s ease-in-out;
+    transition-property: opacity;
+    transition-duration: .25s;
+    transition-timing-function: ease-in-out;
     opacity: .25;
 
     &:hover {

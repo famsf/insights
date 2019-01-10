@@ -10,7 +10,9 @@
   .content {
     @include font-sizes(16);
     line-height: 1.8;
-    transition: all .5s ease-in-out;
+    transition-property: opacity;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
     opacity: 0;
     width: calc(100vw - 4rem);
 
@@ -30,7 +32,9 @@
 
   .wrapper > .cell {
     @extend .small-4;
-    transition: all .5s ease-in-out;
+    transition-property: width;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
 
     picture,
     .picture {
@@ -38,7 +42,9 @@
 
       &:before {
         content: '+';
-        transition: all .5s ease-in-out;
+        transition-property: background, border;
+        transition-duration: .5s;
+        transition-timing-function: ease-in-out;
         position: absolute;
         top: 0;
         left: 0;
@@ -61,7 +67,11 @@
 
       &:after {
         content: '';
-        transition: all .5s ease-in-out;
+        // Needs to be "all" as border transitions and background transitions aren't working when
+        // individually specified.
+        transition-property: all;
+        transition-duration: .5s;
+        transition-timing-function: ease-in-out;
         position: absolute;
         height: 100%;
         width: 100%;

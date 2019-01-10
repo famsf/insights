@@ -1,4 +1,9 @@
 %intro-text {
+
+  @extend %background__video;
+  @extend %fullscreen-credits;
+  overflow: auto;
+
   h2 {
     @extend .h1;
     opacity: 0.5;
@@ -12,6 +17,12 @@
   .cell,
   h2 {
     color: $primary-color;
+    .theme--dark & {
+      color: $white;
+    }
+    .theme--primary--light & {
+      color: $black;
+    }
   }
   .text {
     font-family: $header-font-family;
@@ -55,4 +66,34 @@
 
 .intro-text {
   @extend %intro-text;
+
+  &.video-intro {
+    height: 100vh;
+    .grid-x {
+      height: 100vh;
+      padding: 0 !important;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    .cell {
+      height: 100vh;
+      width: 100vw;
+      overflow: auto;
+      margin-left: 0;
+      margin-right: 0;
+      padding-top: 8rem;
+      @include breakpoint(small) {
+        padding: 8rem 5rem 5rem 5rem;
+      }
+    }
+    .wrapper {
+      @include breakpoint(medium) {
+        padding-left: calc(16.66667% + 0.9375rem);
+        padding-right: calc(16.66667% + 0.9375rem);
+      }
+    }
+    .video_element {
+      z-index: -1;
+    }
+  }
 }
