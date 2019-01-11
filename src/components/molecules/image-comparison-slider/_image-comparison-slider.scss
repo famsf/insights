@@ -15,10 +15,6 @@
   transition-property: opacity;
   transition-duration: .35s;
   z-index:1;
-
-    &.pre-load {
-    width: 100% !important;
-  }
 }
 .beer-reveal>:first-child{height:100%;max-width:none;width:200%}
 .beer-reveal>img:first-child{height:auto}
@@ -84,6 +80,10 @@
   }
 
   .beer-reveal {
+    &.pre-load {
+      width: 100% !important;
+    }
+
     img {
       max-width: none;
       width: auto;
