@@ -9,8 +9,9 @@
     };
     setTimeout(function(){
       $('.beer-slider').each(function (index, el) {
-        $(el).removeClass('pre-load');
-        $(el).BeerSlider();
+        $(el).BeerSlider(
+          $(this).find('.beer-reveal').removeClass('pre-load')
+        );
       });
     }, 5000);
   });
