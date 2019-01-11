@@ -8,6 +8,7 @@
       });
     };
     $('.beer-slider').each(function (index, el) {
+      $(el).removeClass('pre-load');
       $(el).BeerSlider();
     });
   });
