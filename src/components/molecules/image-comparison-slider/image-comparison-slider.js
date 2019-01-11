@@ -13,6 +13,6 @@
           $(this).find('.beer-reveal').removeClass('pre-load')
         );
       });
-    }, 5000);
+    }, 1000);
   });
 }(jQuery));
