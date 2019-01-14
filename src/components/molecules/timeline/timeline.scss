@@ -10,7 +10,9 @@
   .timeline-item-subtitle,
   .timeline-item-description,
   .timeline-images {
-    transition: opacity 0.5s linear;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
     @include breakpoint(large) {
       opacity: 0;
     }

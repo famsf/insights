@@ -8,7 +8,10 @@
 
   @include breakpoint(medium) {
     background: rgba($black, .25);
-    transition: opacity .25s ease-in-out 0s, z-index 0s ease-in-out 5s;
+    transition-property: opacity, z-index;
+    transition-duration: .25s, 0s;
+    transition-timing-function: ease-in-out, ease-in-out;
+    transition-delay: 0s, 5s;
     opacity: 1;
     display: block;
     position: absolute;

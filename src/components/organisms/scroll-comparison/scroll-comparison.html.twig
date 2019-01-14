@@ -39,6 +39,13 @@
         {% include "@atoms/h3/h3.html.twig" with { text: left__title } only %}
         <div class="content">
           {{ left__body }}
+          {% if left__inline_quote__text %}
+            {% include "@molecules/inline-quote/inline-quote.html.twig" with {
+              text: left__inline_quote__text|striptags('<a><b><i><em><strong>'),
+              name: left__inline_quote__name|striptags('<a><b><i><em><strong>'),
+              date: left__inline_quote__date|striptags('<a><b><i><em><strong>')
+            } %}
+          {% endif %}
         </div>
       </div>
       <div class="cell" {{ right.attributes }}>
@@ -63,6 +70,13 @@
         {% include "@atoms/h3/h3.html.twig" with { text: right__title } only %}
         <div class="content">
         {{ right__body }}
+        {% if right__inline_quote__text %}
+          {% include "@molecules/inline-quote/inline-quote.html.twig" with {
+            text: right__inline_quote__text|striptags('<a><b><i><em><strong>'),
+            name: right__inline_quote__name|striptags('<a><b><i><em><strong>'),
+            date: right__inline_quote__date|striptags('<a><b><i><em><strong>')
+          } %}
+        {% endif %}
         </div>
       </div>
     </div>
