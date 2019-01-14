@@ -52,6 +52,8 @@ pluginOpts:
       - 'hub.md'
       - 'la-prose.md'
       - 'gauguin.md'
+      - 'for-testing.md'
+      - 'late-monet.md'
     # map template ids to components so we can handle defaults
     # we're also removing Meta_Component from "atom" GatherContent templates
     # Since they removed template defaults, and certain components —
@@ -127,6 +129,8 @@ pluginOpts:
       content__image: Content_Image
       content__image-alt: Content_Image-Alt
       content__hide_chapter_nav: Content_Hide-Chapter-Nav
+      credits: Content_Credits
+      video_credits: Video_Credits
 
       # Social
       og__title: Social_OpenGraph-Title
@@ -148,10 +152,17 @@ pluginOpts:
       color__primary: Theme_Primary
       color__secondary: Theme_Secondary
 
+      # Cover Page
+      use_video_hero: Video_Use-Hero-Video
+      video_bg__file: Video_Video-Cover
+      video_bg__poster__image: Video_Video-Poster-Image
+
       # intro
       intro__title: Content_Intro-Title
       intro__text: Content_Intro-Text
-
+      intro__has_video_background: Video_Use-Video-Background
+      intro__video_bg__file: Video_Video
+      intro__video_bg__poster__image: Video_Video-Poster-Image
       # Chapter Title
       chapter__numeral: Content_Chapter-Numeral
       chapter__title: Content_Chapter-Title
@@ -167,12 +178,18 @@ pluginOpts:
       left__caption_brief: Content-Left_Caption-Brief
       left__title: Content-Left_Title
       left__body: Content-Left_Body-Copy
+      left__inline_quote__text: Content-Left_Quote-Text
+      left__inline_quote__name: Content-Left_Quote-Name
+      left__inline_quote__date: Content-Left_Quote-Date
       right__image: Content-Right_Image
       right__image-alt: Content-Right_Image-Alt
       right__caption: Content-Right_Caption
       right__caption_brief: Content-Right_Caption-Brief
       right__title: Content-Right_Title
       right__body: Content-Right_Body-Copy
+      right__inline_quote__text: Content-Right_Quote-Text
+      right__inline_quote__name: Content-Right_Quote-Name
+      right__inline_quote__date: Content-Right_Quote-Date
 
       # Video Embed
       video__id: Content_Video-Id
@@ -224,7 +241,7 @@ pluginOpts:
       author__title: Content_Author-Title
       author__bio: Content_Author-Bio
       commentary: Content_Commentary
-      cta__button: Content_Commentary-CTA-Button
+      cta__button: Content_CTA-Button
 
       # Audio + Transcripts
       audio__file: Content_Audio-File
@@ -299,9 +316,6 @@ pluginOpts:
       comp__2__image: Content_Image-2
       comp__2__image_alt: Content_Image-2-Alt
       startPosition: Content_Slider_Start_Position
-
-      # Full screen media credits
-      credits: Content_Credits
 
       # Hub
       # Hub Story

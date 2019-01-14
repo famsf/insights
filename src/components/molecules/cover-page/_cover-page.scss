@@ -46,7 +46,6 @@
         transition-property: top, opacity;
         transition-timing-function: ease-in-out;
         transition-duration: 0.675s;
-        opacity: 0;
         position: relative;
         top: 4em;
 
@@ -206,6 +205,10 @@
     .cover_loader_container {
       opacity: 0;
     }
+
+    .toggle-caption {
+      opacity: 1;
+    }
   }
 
   &.initialized {
@@ -241,32 +244,17 @@
     }
   }
 
-
-  .caption {
-    margin-bottom: 0;
-
-    figcaption {
-      @include responsive(max-width, calc(100% - 2rem), 500px);
-      position: absolute;
-      z-index: 50;
-      bottom: 5rem;
-      right: 1rem;
-    }
-  }
-
-  .caption__brief {
-    position: absolute;
-    bottom: 3.5rem;
-    right: 1rem;
-    z-index: 1000;
-    @include breakpoint(medium) {
-      bottom: 2.5rem;
-    }
-  }
+  @extend %fullscreen-credits;
+  @extend %background__video;
 }
 
 .cover_page {
   @extend %cover-page;
+  &.video_cover {
+    .bg-image {
+      visibility: hidden;
+    }
+  }
 }
 
 @keyframes stretch {

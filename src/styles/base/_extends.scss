@@ -40,3 +40,105 @@
 %kenburns {
   animation: kenburns 4s ease-out 0.75s 1 forwards running;
 }
+
+%fullscreen-credits {
+
+  .toggle-caption {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.725s;
+    transition-delay: 1s;
+    transition-timing-function: ease-out;
+  }
+
+  .caption {
+    margin-bottom: 0;
+    figcaption {
+      @include responsive(max-width, calc(100% - 2rem), 500px);
+      position: absolute;
+      z-index: 50;
+      bottom: 5rem;
+      right: 1rem;
+      @include breakpoint(medium) {
+        bottom: 3rem;
+      }
+    }
+  }
+
+  .caption__brief {
+    position: absolute;
+    bottom: 3rem;
+    right: 1rem;
+    z-index: 50;
+    @include breakpoint(medium) {
+      bottom: 1rem;
+    }
+  }
+
+  .toggle-caption,
+  .toggle-caption:hover {
+    .theme--primary-dark &,
+    .theme--primary &,
+    .theme--dark & {
+      color: $white;
+      border-color: $white;
+    }
+    .theme--primary-light & {
+      color: $black;
+      border-color: $black;
+    }
+    .triggered & {
+      opacity: 1;
+    }
+  }
+}
+
+%background__video {
+  .video_element {
+    @include breakpoint(medium) {
+      @include performy;
+      @include object-fit;
+      width: 100%;
+      height: 100%;
+    }
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-out;
+    &.stopfade {
+      opacity: 0.5;
+    }
+    .plyr__controls,
+    .plyr__control {
+      display: none;
+      opacity: 0;
+      & > * {
+          pointer-events: none;
+          cursor: auto;
+      }
+    }
+  }
+  .plyr--video {
+    @include breakpoint(medium) {
+      @include performy;
+      @include object-fit;
+    }
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-out;
+  }
+  .triggered & {
+    display: block;
+    opacity: 1em;
+    .video_element,
+    .plyr--video,
+    .plyr--audio {
+      opacity: 1 !important;
+    }
+    .text_content {
+      top: 0;
+      opacity: 1;
+    }
+  }
+}

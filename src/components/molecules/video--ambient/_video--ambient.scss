@@ -12,6 +12,8 @@ Styleguide COMPONENTS.AmbientVideo
 
 %ambient_video {
 
+  @extend %fullscreen-credits;
+
   @include breakpoint(medium) {
     @include fill_screen;
     position: relative;
@@ -25,7 +27,7 @@ Styleguide COMPONENTS.AmbientVideo
       @include abs;
       @include fill_screen;
       z-index: 2;
-      background: linear-gradient(90deg, rgba($black,0) 0, rgba($black, 0.5) 30%, rgba($black, 1) 95%);
+      background: linear-gradient(90deg, rgba($black,0) 0, rgba($black, 0.75) 30%, rgba($black, 1) 95%);
     }
   }
 
@@ -46,6 +48,16 @@ Styleguide COMPONENTS.AmbientVideo
   .cell {
     z-index: 2;
     color: #fff;
+    p {
+      color: #fff !important;
+    }
+  }
+
+  .centerv {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 32rem;
   }
 
   .plyr--video {
@@ -93,7 +105,7 @@ Styleguide COMPONENTS.AmbientVideo
           pointer-events: none;
           cursor: auto;
       }
-    }    
+    }
   }
 }
 

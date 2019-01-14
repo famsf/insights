@@ -7,31 +7,37 @@
     {% if img_a %}
       <div class="timeline-item-image">
         {% include "@atoms/img/img.html.twig" with img_a only %}
-        {% include "@atoms/caption/caption.html.twig" with {
-          text: caption_a,
-          brief: brief_a,
-          id: 'year__' ~ year ~ '__caption_a'
-        } only %}
+        {% if caption_a is not empty %}
+          {% include "@atoms/caption/caption.html.twig" with {
+            text: caption_a,
+            brief: brief_a,
+            id: 'year__' ~ year ~ '__caption_a'
+          } only %}
+        {% endif %}
       </div>
     {% endif %}
     {% if img_b %}
       <div class="timeline-item-image">
         {% include "@atoms/img/img.html.twig" with img_b only %}
-        {% include "@atoms/caption/caption.html.twig" with {
-          text: caption_b,
-          brief: brief_b,
-          id: 'year__' ~ year ~ '__caption_b'
-        } only %}
+        {% if caption_b is not empty %}
+          {% include "@atoms/caption/caption.html.twig" with {
+            text: caption_b,
+            brief: brief_b,
+            id: 'year__' ~ year ~ '__caption_b'
+          } only %}
+        {% endif %}
       </div>
     {% endif %}
     {% if img_c %}
       <div class="timeline-item-image">
         {% include "@atoms/img/img.html.twig" with img_c only %}
-        {% include "@atoms/caption/caption.html.twig" with {
-          text: caption_c,
-          brief: brief_c,
-          id: 'year__' ~ year ~ '__caption_c'
-        } only %}
+        {% if caption_c is not empty %}
+          {% include "@atoms/caption/caption.html.twig" with {
+            text: caption_c,
+            brief: brief_c,
+            id: 'year__' ~ year ~ '__caption_c'
+          } only %}
+        {% endif %}
       </div>
     {% endif %}
   </div>

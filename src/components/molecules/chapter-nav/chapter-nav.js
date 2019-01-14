@@ -7,6 +7,7 @@
     var lastId;
     var navItems;
     var clearElement;
+    var currentChapterIndex;
     var count;
     var i;
     var navItem;
@@ -40,6 +41,7 @@
     var item;
     var i;
     chapterIndex = targetChapter.dataset.chapterIndex;
+    chapterNav.currentChapterIndex = chapterIndex;
     item = chapterNav.navItems[chapterIndex];
     for (i = 0; i < count; i++) {
       if (i <= chapterIndex) {
@@ -54,6 +56,7 @@
     }
     chapterNav.activeItem = item;
     item.classList.add('active_item');
+    chapterNav.updateIndicator();
   };
 
   chapterNav.showNav = function () {
@@ -76,8 +79,9 @@
     chapter = fds.rootElement.querySelector(clickTarget.getAttribute('href'));
     pageEl = chapter.querySelector('.page');
     page = fds.pages.byId[pageEl.id];
+    // console.log(':::', chapter.dataset.chapterIndex, chapterNav.currentChapterIndex);
     if (fds.pages.currentPage) {
-      if (page.index > fds.pages.currentPage.index) {
+      if (chapter.dataset.chapterIndex > chapterNav.currentChapterIndex) {
         scrollDir = 'down';
       }
       else {
@@ -90,14 +94,14 @@
     });
   };
 
-  chapterNav.onScroll = function () {
+  chapterNav.updateIndicator = function () {
     var scrollY = win.pageYOffset;
     var page = fds.pages.getCurrentPage();
     var chapter = page.chapter;
     var chapterIndex = page.chapterIndex;
     var pageIndex = page.index ? page.index : 0;
     var pageCount = page.chapterLength;
-    var chapterNavSegmentHeight = chapterNav.height / chapterNav.chapters.length;
+    var chapterNavSegmentHeight = Math.round(chapterNav.height / (chapterNav.chapters.length - 1));
     var pageToChapterRatio = page.el.clientHeight / chapter.clientHeight;
     var id = page.id;
     var count;
@@ -105,8 +109,9 @@
     var item;
     var href;
     var scrollbarHeight;
+    var pageSegmentHeight = chapterNavSegmentHeight / pageCount;
     scrollbarHeight = (chapterIndex * chapterNavSegmentHeight);
-    scrollbarHeight += (pageIndex > 0) ? (chapterNavSegmentHeight / pageCount) * pageIndex : 0;
+    scrollbarHeight += pageSegmentHeight * pageIndex;
     chapterNav.scrollPercent.style.height = Math.round(scrollbarHeight) + 'px';
     if (chapterNav.lastId !== id) {
       chapterNav.lastId = id;

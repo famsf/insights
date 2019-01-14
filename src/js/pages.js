@@ -21,23 +21,20 @@
     var snapElem;
     var snapElemStickListener;
     var scrollOptions;
+    var initialChapter;
     pages.container = doc.querySelector(containerSelector);
     pages.pages = doc.querySelectorAll(pageSelector);
     pages.preloadElements = pages.container.querySelectorAll('.video--embed, .scroll-comparison, in-depth, .horizontal-image-slider');
-    console.log('| » |', pages.preloadElements.length);
-
     if (!pages.container || !pages.pages.length) {
       console.log(':::::: Warning: Failed to initialize pages, check your selectors, but maybe you`re just prototyping isolated components');
       return;
     }
-
     pages.populatePagesById();
     pages.currentPage = pages.byId[pages.pages[0].id];
     pages.clearElement = doc.querySelector(clearElementSelector);
     pages.clearElementHeight = pages.clearElement.clientHeight;
+    pages.chapters = doc.querySelectorAll('.chapter');
     pages.calculateThreshholds();
-
-
     if (locHash.length > 1) {
       params = locHash.split('&');
       if (Array.isArray(params) && locHash.indexOf('=') > -1) {
@@ -58,6 +55,9 @@
       else {
         startPage = pages.currentPage;
       }
+      if (pages.hashes.chapter) {
+        initialChapter = document.getElementById(pages.hashes.chapter);
+      }
       scrollOptions = {
         scrollDir: 'down',
         instant: true,
@@ -67,7 +67,6 @@
         Object.assign({ extraParams: '&componentSnap=' + pages.hashes.componentSnap }, scrollOptions);
       }
       pages.snapScroll(startPage, scrollOptions);
-
       if (pages.hasOwnProperty('hashes') && pages.hashes.hasOwnProperty('componentSnap')) {
         snapElem = startPage.el.querySelectorAll('[data-snap-id="' + pages.hashes.componentSnap + '"]');
         if (snapElem.length > 0) {
@@ -88,6 +87,11 @@
         }
       }
     }
+    else {
+      initialChapter = document.querySelector('.chapter');
+    }
+    fds.chapterNav.setActiveItem(initialChapter);
+    fds.mobileNav.setActiveItem(initialChapter);
   };
 
   pages.populatePagesById = function () {
@@ -281,7 +285,7 @@
       pages.setCurrentPage(page);
     }
     document.body.classList.add('scroll_lock');
-    if (scrollOptions.scrollDir === 'down') {
+    if (scrollOptions.scrollDir === 'down' || pages.isLastChapter(chapter.id)) {
       scrollTo = chapter.offsetTop + pageEl.offsetTop;
     }
     else {
@@ -300,6 +304,7 @@
         doc.body.classList.remove('scroll_lock');
         pages.postSnap(page);
         page.el.focus();
+        fds.chapterNav.updateIndicator();
       }, 125);
     }, snapScrollDuration);
   };
@@ -309,9 +314,17 @@
     pages.triggerTopBarEvents(page);
   };
 
+  pages.isLastChapter = function (chapterId) {
+    return pages.chapters[pages.chapters.length - 1].id === chapterId;
+  };
+
   pages.pinPage = function (page, scrollDir) {
     var pageEl = page.el;
     var nextChapter;
+    // pinning on the footer is a no go.
+    if (pages.isLastChapter(page.chapter.id)) {
+      return;
+    }
     pages.pinnedOffset = page.el.clientHeight;
     pages.lastPinned = null;
     pages.pinned = page;
@@ -336,20 +349,9 @@
       page.isPinned = false;
       pages.pinnedOffset = 0;
       pages.pinned = false;
-      pinning = pageEl.classList.contains('pinnedTop') ? 'top' : 'bottom';
       pageEl.classList.remove('snapped');
-      if (pinning === 'top') {
-        console.log('a');
-        pageEl.classList.remove('pinnedTop');
-        // pageTop = page.chapter.offsetTop + pageEl.offsetTop;
-        // scrollTo = pageTop;
-      }
-      else {
-        console.log('b');
-        pageEl.classList.remove('pinnedBottom');
-        // pageTop = page.chapter.offsetTop + pageEl.offsetTop;
-        // scrollTo = pageTop + (pageEl.clientHeight - win.innerHeight);
-      }
+      pageEl.classList.remove('pinnedTop');
+      pageEl.classList.remove('pinnedBottom');
       win.scrollTo({
         top: pages.snapPoint,
         behavior: 'instant'
@@ -358,7 +360,7 @@
   };
 
   pages.untriggerPage = function (page) {
-    console.log('untrigger', page.id);
+    // console.log('untrigger', page.id);
     page.el.classList.remove('triggered');
     page.el.classList.remove('inViewport');
     page.isTriggered = false;
@@ -369,7 +371,7 @@
 
   pages.triggerPage = function (page) {
     var pageEl = page.el;
-    console.log('triggerTopBarEvents', page.id);
+    // console.log('triggerTopBarEvents', page.id);
     page.istriggered = true;
     pageEl.classList.add('triggered');
 
