@@ -169,7 +169,7 @@ pluginOpts:
 
       # Standalone Quote
       quote__quote: Content_Quote
-      quote__large_text: Content_Large_Text
+      quote__large_text: Content_Large-Text
       quote__attribution: Content_Attribution
 
       # Scroll Comparison
