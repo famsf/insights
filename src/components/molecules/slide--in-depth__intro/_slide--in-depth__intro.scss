@@ -61,10 +61,7 @@
       position: relative;
       overflow: hidden;
       margin-bottom: 0;
-
-      @include breakpoint(medium) {
-        border-radius: 1000rem;
-      }
+      border-radius: 1000rem;
 
       &:after {
         background: linear-gradient(0.375turn, transparent, rgba($white, .75));
@@ -333,6 +330,7 @@
 
         .picture {
           margin-bottom: 0;
+          border-radius: 0;
         }
       }
 
