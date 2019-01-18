@@ -1,10 +1,11 @@
 %slide--in-depth__intro {
   display: flex;
   flex-flow: column;
-  justify-content: flex-end;
+  justify-content: center;
   min-height: 100vh;
 
   @include breakpoint(medium) {
+    justify-content: flex-end;
     min-height: calc(100vh - 4rem);
     position: relative;
     width: 100vw;
