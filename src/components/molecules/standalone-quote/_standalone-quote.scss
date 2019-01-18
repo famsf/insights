@@ -30,6 +30,11 @@ Styleguide COMPONENTS.standalone-quote
     p {
       line-height: 1.125em;
     }
+    
+    h2 {
+      @include font-sizes(45, 85);
+      @include responsive(line-height, 50px 90px);
+    }
 
     &:before,
     &:after {
