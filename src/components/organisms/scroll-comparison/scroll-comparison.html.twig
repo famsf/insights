@@ -36,7 +36,7 @@
             text: left__caption
           }
         } only %}
-        {% include "@atoms/h3/h3.html.twig" with { text: left__title } only %}
+        {% include "@atoms/h3/h3.html.twig" with { text: left__title|striptags('<em><i><u><strong>') } only %}
         <div class="content">
           {{ left__body }}
           {% if left__inline_quote__text %}
@@ -67,7 +67,7 @@
             text: right__caption
           }
         } only %}
-        {% include "@atoms/h3/h3.html.twig" with { text: right__title } only %}
+        {% include "@atoms/h3/h3.html.twig" with { text: right__title|striptags('<em><i><u><strong>') } only %}
         <div class="content">
         {{ right__body }}
         {% if right__inline_quote__text %}

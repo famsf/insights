@@ -7,8 +7,12 @@
         new BeerSlider(this, options);
       });
     };
-    $('.beer-slider').each(function (index, el) {
-      $(el).BeerSlider();
-    });
+    setTimeout(function(){
+      $('.beer-slider').each(function (index, el) {
+        $(el).BeerSlider(
+          $(this).find('.beer-reveal').removeClass('pre-load')
+        );
+      });
+    }, 1000);
   });
 }(jQuery));

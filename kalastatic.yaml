@@ -98,6 +98,7 @@ pluginOpts:
       1422907: '@kalastatic/components/organisms/hub/hub.html.twig'
       1422908: '@kalastatic/components/organisms/hub/hub__story.html.twig'
       1390661: '@kalastatic/components/molecules/footer__navigation/footer__navigation.html.twig'
+      1468595: '@kalastatic/components/molecules/html-embed/html-embed.html.twig'
       # dummy commit
     mappings:
       id: id
@@ -169,6 +170,7 @@ pluginOpts:
 
       # Standalone Quote
       quote__quote: Content_Quote
+      quote__large_text: Content_Large-Text
       quote__attribution: Content_Attribution
 
       # Scroll Comparison
@@ -216,6 +218,9 @@ pluginOpts:
       slide__title: Content_In-Depth-Title
       slide__description: Content_In-Depth-Description
       slide__body: Content_Slide-Body
+
+      # HTML Embed
+      html_embed: Content_HTML-Code
 
       # In depth
       slideshow__title: Content_Slideshow-Title
