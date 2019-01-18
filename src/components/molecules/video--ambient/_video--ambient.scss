@@ -13,12 +13,23 @@ Styleguide COMPONENTS.AmbientVideo
 %ambient_video {
 
   @extend %fullscreen-credits;
+  .caption {
+    figcaption {
+      background: rgba(40, 40, 40, 1);
+    }
+  }
 
   @include breakpoint(medium) {
     @include fill_screen;
     position: relative;
     overflow: hidden;
     background-color: black;
+  }
+
+  @include breakpoint(small only) {
+    .grid-x {
+      min-height: auto !important;
+    }
   }
 
   &::before {
