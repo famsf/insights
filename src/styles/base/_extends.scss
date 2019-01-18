@@ -58,7 +58,7 @@
       position: absolute;
       z-index: 50;
       bottom: 5rem;
-      right: 1rem;
+      right: 1.7rem;
       @include breakpoint(medium) {
         bottom: 3rem;
       }
@@ -68,7 +68,7 @@
   .caption__brief {
     position: absolute;
     bottom: 3rem;
-    right: 1rem;
+    right: 1.7rem;
     z-index: 50;
     @include breakpoint(medium) {
       bottom: 1rem;
