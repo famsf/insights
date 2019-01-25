@@ -2,7 +2,8 @@
 
   @extend %background__video;
   @extend %fullscreen-credits;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   h2 {
     @extend .h1;
