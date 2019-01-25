@@ -37,12 +37,13 @@ section.triggered {
   background-color: #000;
   align-items: center;
   padding-top: 90px;
+  @extend %fullscreen-credits;
 
   @include breakpoint(large) {
     display: flex;
   }
 
-  .caption {
+  /* .caption {
     margin-bottom: 0;
 
     figcaption {
@@ -65,7 +66,7 @@ section.triggered {
   .toggle-caption:hover {
     color: $white;
     border-color: $white;
-  }
+  }*/
 }
 .scroll-finder {
   transition-property: opacity, bottom;
