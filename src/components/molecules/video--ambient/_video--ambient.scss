@@ -13,12 +13,23 @@ Styleguide COMPONENTS.AmbientVideo
 %ambient_video {
 
   @extend %fullscreen-credits;
+  .caption {
+    figcaption {
+      background: rgba(40, 40, 40, 1);
+    }
+  }
 
   @include breakpoint(medium) {
     @include fill_screen;
     position: relative;
     overflow: hidden;
     background-color: black;
+  }
+
+  @include breakpoint(small only) {
+    .grid-x {
+      min-height: auto !important;
+    }
   }
 
   &::before {
@@ -54,10 +65,12 @@ Styleguide COMPONENTS.AmbientVideo
   }
 
   .centerv {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    max-width: 32rem;
+    @include breakpoint(medium) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      max-width: 32rem;
+    }
   }
 
   .plyr--video {
@@ -97,6 +110,12 @@ Styleguide COMPONENTS.AmbientVideo
     }
   }
   .video_element {
+    @include breakpoint(small only) {
+      width: 100%;
+      padding-top: 6rem;
+      padding-right: 2rem;
+      padding-left: 2rem;
+    }
     .plyr__controls,
     .plyr__control {
       display: none;
@@ -105,6 +124,12 @@ Styleguide COMPONENTS.AmbientVideo
           pointer-events: none;
           cursor: auto;
       }
+    }
+  }
+
+  .grid-x {
+    @include breakpoint(small only) {
+      padding-top: 2rem !important;
     }
   }
 }
