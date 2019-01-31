@@ -103,6 +103,7 @@ Styleguide COMPONENTS.horizontal-image-slider
     }
 
     figcaption {
+      color: $black;
       @include breakpoint(medium) {
         max-width: 83%;
       }
@@ -194,6 +195,10 @@ Styleguide COMPONENTS.horizontal-image-slider
   // Theme overrides.
   .theme--dark &,
   &.theme--dark {
+      
+    .figcaption {
+      color: $white;     
+    }
       
     .owl-dot {
       color: rgba($white, .5) !important;
