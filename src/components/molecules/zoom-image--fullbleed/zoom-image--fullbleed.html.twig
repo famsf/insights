@@ -24,4 +24,10 @@
       src: content__image.src
     } %}
   </div>
+  {% if credits is not empty %}
+    {% include "@atoms/caption/caption.html.twig" with {
+      text: credits,
+      id: 'zoom-img__credits_' ~ id
+    } only %}
+  {% endif %}
 </div>

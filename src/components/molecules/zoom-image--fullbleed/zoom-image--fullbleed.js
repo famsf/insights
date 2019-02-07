@@ -2,35 +2,45 @@
 // Disabling the linter because it can't detect ImageZoom's existence.
 // See https://www.cssscript.com/simple-image-hover-zoom-javascript-library-imagezoom-js/
 (function (document, window, $, ImageZoom) {
+
+  function instantiateZoomImage ($el) {
+      var finderBoxScaleFactor = 0.05;
+      var zoomedImages = new ImageZoom($el, {
+        maxZoom: 2,
+        backgroundImageColor: '#000'
+      });
+      $el.mousemove(function (e) {
+        var offset = $(this).offset();
+        var finderBox = $el.closest('.zoom-image--fullbleed').find('.finder-box');
+        var relX = e.pageX - offset.left;
+        var relY = e.pageY - offset.top;
+        var imgWidth = $el.width();
+        var imgHeight = $el.height();
+        var windowWidth = window.innerWidth;
+        var windowHeight = window.innerHeight;
+        var percentThroughWidth = (relX / windowWidth) * 100;
+        var percentThroughHeight = (relY / (windowHeight - $('.top-bar__wrapper').height())) * 100;
+        finderBox.css({
+          'top': Math.ceil(percentThroughHeight * 0.5)+ '%',
+          'left': Math.ceil(percentThroughWidth * 0.5) + '%',
+          'width': (windowWidth * finderBoxScaleFactor) + 'px',
+          'height': (windowHeight * finderBoxScaleFactor) + 'px'
+        });
+      });
+
+  }
+
   $(document).ready(function () {
     $(document).foundation();
-    if ($('.img-zoom-drag').length > 0) {
-      if (Foundation.MediaQuery.atLeast('large')) {
-        var zoomedImages = new ImageZoom('.img-zoom-drag', { maxZoom: 2, backgroundImageColor: '#000' });
-        $('.img-zoom-drag').mousemove(function (e) {
-          var offset = $(this).offset();
-          var finderBox = $(this).closest('.zoom-image--fullbleed').find('.finder-box');
-          var relX = e.pageX - offset.left;
-          var relY = e.pageY - offset.top;
-          var imgWidth = $(this).width();
-          var imgHeight = $(this).height();
-          var percentThroughWidth = (relX / imgWidth * 100) * .5;
-          var percentThroughHeight = (relY / imgHeight * 100)  * .5;
-          var windowWidth = window.innerWidth;
-          var windowHeight = window.innerHeight;
-          finderBox.css({
-            'top': percentThroughHeight + '%',
-            'left': percentThroughWidth + '%',
-            'height': (windowHeight - 64) / 19 + 'px',
-            'width': windowWidth / 19 + 'px'
-          });
-        });
-      }
-      else {
-        // Can't show this section if we're on mobile devices.
-        $('.img-zoom-drag').closest('section.page').css('display', 'none');
-      }
-      var zoomedImages = new ImageZoom('.img-zoom-drag', { maxZoom: 3, backgroundImageColor: '#000' });
+    var zoomImages = $('.img-zoom-drag');
+    if (Foundation.MediaQuery.atLeast('large')) {
+      zoomImages.each( function(el) {
+        instantiateZoomImage($(this));
+      });
+    } else {
+      // Can't show this section if we're on mobile devices.
+      $('.img-zoom-drag').closest('section.page').css('display', 'none');
     }
+    // var zoomedImages = new ImageZoom('.img-zoom-drag', { maxZoom: 3, backgroundImageColor: '#000' });
   });
 }(document, window, jQuery, ImageZoom));
