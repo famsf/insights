@@ -8,7 +8,7 @@
     width: 5rem;
     content: "";
     position: relative;
-    background: $white;
+    background: $black;
     right: -5px;
     top: calc(-1rem + 1px);
     display: inline-block;
@@ -30,12 +30,21 @@
     &:hover {
       cursor: pointer;
     }
+    
+    circle.slider {
+      fill: $black;
+    }
+    
+    polyline.slider {
+      stroke: $black;
+    }
   }
 
   path {
-    fill: $white;
-    stroke: $white;
+    fill: $black;
+    stroke: $black;
   }
+  
 }
 
 .slide__icon--next {
