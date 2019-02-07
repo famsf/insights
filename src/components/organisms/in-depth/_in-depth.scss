@@ -113,6 +113,7 @@ Styleguide COMPONENTS.in-depth
     min-height: 100vh;
     padding: 0;
     background: transparent;
+    cursor: default;
 
     @include breakpoint(medium) {
       height: 100vh;
