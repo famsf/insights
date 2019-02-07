@@ -4,7 +4,7 @@
 (function (document, window, $, ImageZoom) {
   $(document).ready(function () {
     $(document).foundation();
-    if (document.querySelectorAll('.img-zoom-drag') > 0) {
+    if ($('.img-zoom-drag').length > 0) {
       if (Foundation.MediaQuery.atLeast('large')) {
         var zoomedImages = new ImageZoom('.img-zoom-drag', { maxZoom: 2, backgroundImageColor: '#000' });
         $('.img-zoom-drag').mousemove(function (e) {
