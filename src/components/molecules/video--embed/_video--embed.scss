@@ -101,8 +101,8 @@ Markup: video--embed.html.twig
 
   .scroll_lock & {
     .plyr--video .plyr__controls {
-      opacity: 0;
-      z-index: -1;
+      // opacity: 0;
+      // z-index: -1;
     }
   }
 
@@ -117,7 +117,9 @@ Markup: video--embed.html.twig
     }
 
     iframe {
-      @include object-fit;
+      @include breakpoint(medium) {
+        @include object-fit;
+      }
       max-height: 100vh;
     }
   }
@@ -132,7 +134,9 @@ Markup: video--embed.html.twig
   }
 
   .plyr__poster {
-    background-size: cover;
+    @supports (object-fit: cover) {
+      background-size: cover;
+    }
     max-height: 100vh;
   }
 
@@ -162,6 +166,10 @@ Markup: video--embed.html.twig
   .plyr__poster,
   .plyr--video .plyr--video,
   .plyr--video video {
-    @include object-fit;
+    @supports (object-fit: cover) {
+      @include breakpoint(small) {
+        @include object-fit;
+      }
+    }
   }
 }
