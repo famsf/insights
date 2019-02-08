@@ -408,7 +408,7 @@
       if (!page.embeddedVideo) {
         plyr = new Plyr(page.embeddedVideoEl, {
           hideControls: 'false',
-          controls: ['play-large', 'play', 'progress', 'current-time', 'mute', 'captions', 'settings', 'pip', 'fullscreen']
+          controls: ['play-large', 'play', 'progress', 'current-time', 'captions', 'settings', 'pip', 'fullscreen']
         });
 
         plyr.on('ready', function (e) {
@@ -417,7 +417,6 @@
             plyr.poster = poster;
           }
           page.embeddedVideo = plyr;
-          // plyr.play();
           plyr.pause();
         });
 
