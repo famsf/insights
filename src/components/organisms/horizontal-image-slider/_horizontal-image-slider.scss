@@ -11,12 +11,11 @@ Styleguide COMPONENTS.horizontal-image-slider
 
 %horizontal-image-slider {
   padding: 0;
-  background: $black;
+  //background: $black;
   height: 100vh;
   display: block;
   color: $white;
-
-
+  cursor: url(../../../assets/images/horizontal_scrub_cursor.svg), auto;
   .owl-stage-outer,
   .owl-stage,
   .owl-item {
@@ -103,6 +102,7 @@ Styleguide COMPONENTS.horizontal-image-slider
     }
 
     figcaption {
+      color: $black;
       @include breakpoint(medium) {
         max-width: 83%;
       }
@@ -122,10 +122,10 @@ Styleguide COMPONENTS.horizontal-image-slider
   .owl-dot {
     @include remove-outline();
     margin: 0 .5rem;
-    color: rgba($white, .5) !important;
+    color: rgba($black, .5) !important;
 
     &.active {
-      color: $white !important;
+      color: $black !important;
     }
 
     span {
@@ -187,6 +187,40 @@ Styleguide COMPONENTS.horizontal-image-slider
 
       &.owl-next {
         right: 2rem;
+      }
+    }
+  }
+  
+  // Theme overrides.
+  .theme--dark &,
+  &.theme--dark {
+      
+    .figcaption {
+      color: $white;     
+    }
+      
+    .owl-dot {
+      color: rgba($white, .5) !important;
+
+      &.active {
+      color: $white !important;
+      }
+    }
+      
+    .slide__icon--next {
+        
+      &:before {
+        background: $white;
+      }
+      
+      svg {
+        circle.slider {
+          fill: $white;
+        }
+      
+        polyline.slider {
+          stroke: $white;
+        }
       }
     }
   }
