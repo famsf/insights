@@ -33,7 +33,7 @@
         {% elseif column.column_offset == "Offset 2" %}
           {% set offset = "medium-offset-2" %}
         {% endif %}
-        <div id="" class="cell medium-4 {{ offset }}">
+        <div id="" class="cell medium-4 {{ offset }}" {% if "Left" in column._name  %} style="order: 1;{% else %} style="order: 2;{% endif %}">
           {% for component in column.children %}
             {% if 'picture--captioned' in templateMap[component.template_id] %}
               {% set component = component|merge({
