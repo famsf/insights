@@ -29,7 +29,7 @@
       console.log(':::::: Warning: Failed to initialize pages, check your selectors, but maybe you`re just prototyping isolated components');
       return;
     }
-    pages.populatePagesById();
+    pages.instantiatePages();
     pages.currentPage = pages.byId[pages.pages[0].id];
     pages.clearElement = doc.querySelector(clearElementSelector);
     pages.clearElementHeight = pages.clearElement.clientHeight;
@@ -94,7 +94,7 @@
     fds.mobileNav.setActiveItem(initialChapter);
   };
 
-  pages.populatePagesById = function () {
+  pages.instantiatePages = function () {
     var i;
     var page;
     var pageEl;
@@ -102,6 +102,8 @@
     var chapterIndex;
     var ambientVideo;
     var embeddedVideo;
+    var timeline;
+    var zoomImageInline;
     var count = pages.pages.length;
     var nextPage;
     var previousPage;
@@ -110,8 +112,6 @@
     for (i = 0; i < count; i++) {
       pageEl = pages.pages[i];
       chapter = pageEl.parentElement;
-      ambientVideo = pageEl.querySelector('.ambient_video .plyr_target');
-      embeddedVideo = pageEl.querySelector('.video--embed .plyr_target');
       if (pageEl.nextElementSibling) {
         nextPage = pageEl.nextElementSibling;
       }
@@ -134,16 +134,12 @@
         previousPage: previousPage,
         nextPage: nextPage,
         index: pageEl.dataset.pageIndex,
-        ambientVideoEl: ambientVideo,
-        embeddedVideoEl: embeddedVideo,
         isPinned: false,
         isCurrent: false,
         inView: false
       };
       pages.byId[pageEl.id] = page;
-      if (ambientVideo || embeddedVideo) {
-        pages.triggerVideo(page);
-      }
+      pages.instantiateComponents(page);
     }
     Object.keys(pages.byId).forEach(function (key) {
       pageArr = [];
@@ -152,6 +148,57 @@
       pageArr[1] = 'self';
       pageArr[2] = (pageRef.nextPage) ? pages.byId[pageRef.nextPage.id] : null;
       pages.byId[key].pageArr = pageArr;
+    });
+  };
+
+  pages.instantiateComponents = function (page) {
+    // Get components into vars
+    var pageEl = page.el;
+    var timeline = pageEl.querySelector('.timeline');
+    var ambientVideo = pageEl.querySelector('.ambient_video .plyr_target');
+    var embeddedVideo = pageEl.querySelector('.video--embed .plyr_target');
+    var zoomImageInline = pageEl.querySelector('.inline-image-zoom-wrapper');
+    // Populate the page object
+    page.components = {
+      ambientVideo: {
+        el: ambientVideo
+      },
+      embeddedVideo: {
+        el: embeddedVideo
+      },
+      timeline: {
+        el: timeline
+      },
+      zoomImageInline: {
+        el: zoomImageInline
+      }
+    };
+    // Loop through them and instantiate them
+    Object.entries(page.components).forEach(function (key) {
+      if (key[1].el) {
+        // console.log('instantiate', key[0]);
+        fds.components[key[0]].instantiate(page);
+      }
+    });
+  };
+
+  pages.triggerComponents = function (page) {
+    // Stuff
+    Object.entries(page.components).forEach(function (key) {
+      if (key[1].el) {
+        // console.log('trigger', key[0]);
+        fds.components[key[0]].trigger(page);
+      }
+    });
+  };
+
+  pages.untriggerComponents = function (page) {
+    // Stuff
+    Object.entries(page.components).forEach(function (key) {
+      if (key[1].el) {
+        // console.log('untrigger', key[0]);
+        fds.components[key[0]].untrigger(page);
+      }
     });
   };
 
@@ -171,6 +218,7 @@
   pages.setCurrentPage = function (page, extraParams) {
     var pageEl;
     var pageHash;
+    // console.log('setCurrentPage', page.id);
     if (page) {
       pageEl = page.el;
       pages.oldCurrentPage = pages.currentPage;
@@ -272,6 +320,7 @@
     var pageEl = page.el;
     var chapter = page.chapter;
     var snapScrollDuration = fds.pages.snapScrollDuration;
+    // console.log('snapScroll', page.id);
     if (!scrollOptions.force && (fds.scrollLock || page === pages.getCurrentPage() || !page)) {
       return;
     }
@@ -364,9 +413,10 @@
     page.el.classList.remove('triggered');
     page.el.classList.remove('inViewport');
     page.isTriggered = false;
-    pages.untriggerVideo(page);
+    // pages.untriggerVideo(page);
     // Fire off.page.triggered event
     $(document).trigger('off.page.triggered');
+    pages.untriggerComponents(page);
   };
 
   pages.triggerPage = function (page) {
@@ -374,82 +424,15 @@
     // console.log('triggerTopBarEvents', page.id);
     page.istriggered = true;
     pageEl.classList.add('triggered');
-
     // Fire on.page.triggered event
     $(document).trigger('on.page.triggered');
-
     if (pageEl.classList.contains('hide-chapter-nav')) {
       fds.chapterNav.hideNav();
     }
     else if (fds.chapterNav.isHidden) {
       fds.chapterNav.showNav();
     }
-  };
-
-  pages.triggerVideo = function (page) {
-    var plyr;
-    var pageEl = page.el;
-    var poster;
-    var videoId;
-    var videoParent;
-    if (page.ambientVideoEl) {
-      if (!page.embeddedVideo) {
-        plyr = new Plyr(page.ambientVideoEl, {
-          hideControls: 'true'
-        });
-        plyr.on('ready', function (e) {
-          plyr.muted = true;
-          plyr.play();
-        });
-        page.ambientVideo = plyr;
-      }
-    }
-    if (page.embeddedVideoEl) {
-      if (!page.embeddedVideo) {
-        plyr = new Plyr(page.embeddedVideoEl, {
-          hideControls: 'false',
-          controls: ['play-large', 'play', 'progress', 'current-time', 'captions', 'settings', 'pip', 'fullscreen']
-        });
-
-        plyr.on('ready', function (e) {
-          poster = page.embeddedVideoEl.dataset.poster;
-          if (poster) {
-            plyr.poster = poster;
-          }
-          page.embeddedVideo = plyr;
-          plyr.pause();
-        });
-
-        plyr.on('playing', function (e) {
-          videoId = plyr.media.id;
-          videoParent = document.getElementById(videoId).parentElement.parentElement.parentElement;
-          videoParent.classList.add('playing');
-        });
-
-        plyr.on('pause', function (e) {
-          videoId = plyr.media.id;
-          videoParent = document.getElementById(videoId).parentElement.parentElement.parentElement;
-          videoParent.classList.remove('playing');
-        });
-      }
-    }
-  };
-
-  pages.untriggerVideo = function (page) {
-    var plyr;
-    var pageEl = page.el;
-    if (page.ambientVideo) {
-      plyr = page.ambientVideo;
-      if (plyr) {
-        plyr.pause();
-      }
-    }
-    if (page.embeddedVideo) {
-      plyr = page.embeddedVideo;
-      if (plyr) {
-        plyr.pause();
-      }
-    }
+    pages.triggerComponents(page);
   };
 
   pages.triggerTopBarEvents = function (page) {

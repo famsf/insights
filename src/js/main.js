@@ -34,7 +34,6 @@
       scrollDiff = fds.scroll.y - fds.scroll.last.y;
       if (scrollDiff !== 0 && fds.rootElement.classList.contains('initialized')) {
         fds.pages.onScroll(fds.scroll.y, wh, didResize);
-        // fds.chapterNav.onScroll();
       }
       if (fds.calcFps) {
         sinceStart = newtime - fds.startTime;
@@ -51,10 +50,6 @@
 
   fds.initialize = function () {
     var sy;
-    if (!doc.querySelector('.insights-app')) {
-      console.log('Bypassing stories javascript');
-      return;
-    }
     sy = window.pageYOffset;
     fds.scroll = {
       last: {

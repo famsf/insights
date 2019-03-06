@@ -1,24 +1,6 @@
-(function (document, window, $) {
-  var $spanTimelines = $('.timeline');
+(function (components, document, window, $) {
+  components.timeline = {};
   $(document).foundation();
-
-  function fadeSpanTimelineBorders($spanTimelinesElements) {
-    var $spanYears;
-    var windowTopPos;
-    var elemTopPos;
-    if (Foundation.MediaQuery.atLeast('large')) {
-      $spanYears = $spanTimelinesElements.find('.timeline--year');
-      $(window).on('scroll', function () {
-        windowTopPos = $(window).scrollTop();
-        $spanYears.each(function (i, elem) {
-          elemTopPos = $(elem).offset().top;
-          if (windowTopPos + 200 >= elemTopPos) {
-            $(elem).find('.timeline-item-text').addClass('year-scrolled-to');
-          }
-        });
-      });
-    }
-  }
 
   function alterTimelineTitleSizes() {
     var $yearTitles = $('.timeline-item-title');
@@ -56,6 +38,40 @@
     });
   }
 
+  function constructSpanTimelines(pageEl) {
+    var $el = $(pageEl);
+    var windowY;
+    var $years = $el.find('.timeline .timeline--year');
+    $(window).on('scroll.timelineSpanScroll', function (e) {
+      windowY = $(window).scrollTop();
+      $years.each(function (index, yearEl) {
+        if (windowY + 500 >= $(yearEl).offset().top) {
+          $('.timeline--year').removeClass('active');
+          $(yearEl).addClass('active');
+        }
+      });
+      calculateActiveTimelinePos($el.find('.timeline'));
+    });
+  }
+
+
+  function fadeSpanTimelineBorders(pageEl) {
+    var $spanYears = $(pageEl).find('.timeline--year');
+    var windowTopPos;
+    var elemTopPos;
+    if (Foundation.MediaQuery.atLeast('large')) {
+      $(window).on('scroll', function () {
+        windowTopPos = $(window).scrollTop();
+        $spanYears.each(function (i, elem) {
+          elemTopPos = $(elem).offset().top;
+          if (windowTopPos + 200 >= elemTopPos) {
+            $(elem).find('.timeline-item-text').addClass('year-scrolled-to');
+          }
+        });
+      });
+    }
+  }
+
   function createTimespanYears($spanTimelinesElements) {
     $spanTimelinesElements.each(function (i, e) {
       var $spanTimelineElement = $(e);
@@ -80,52 +96,28 @@
     });
   }
 
-  function createNonTimespanYears($spanTimelinesElements) {
-    $spanTimelinesElements.each(function (i, e) {
-      var $spanTimelineElement = $(e);
-      var years = [];
-      var j;
-      var firstYearText;
-      var secondLastYearText;
-      if ($spanTimelineElement.hasClass('no-year-span')) {
-        $spanTimelineElement.append('<div class="timespan-scroller"><div class="timespan-scroller-inner"><div class="timespan-scroller-pos"></div></div></div>');
-        firstYearText = Math.floor(parseInt($($spanTimelineElement.find('.timeline-item-title').get(0)).text(), 10) / 10) * 10;
-        secondLastYearText = Math.floor(parseInt($($spanTimelineElement.find('.timeline-item-title').get($spanTimelineElement.find('.timeline-item-title').length - 1)).text(), 10) / 10) * 10;
-        for (j = firstYearText; j < secondLastYearText + 10;) {
-          years.push(j);
-          j += 10;
-        }
-        years.push(j);
-        years.forEach(function (year) {
-          $spanTimelineElement.find('.timespan-scroller-inner').append('<span class="span-year">' + year + '</span>');
-        });
-      }
-    });
-  }
-
-  function constructSpanTimelines($spanTimelinesElements) {
-    var windowY;
+  function buildTimeline(page) {
+    var $els = $(page.el).find('.timeline');
     alterTimelineTitleSizes();
     if (Foundation.MediaQuery.atLeast('large')) {
-      createTimespanYears($spanTimelinesElements);
-      $(window).on('scroll.timelineScroll', function (e) {
-        windowY = $(window).scrollTop();
-        $('.timeline--year').each(function (index, ele) {
-          if (windowY + 500 >= $(ele).offset().top) {
-            $('.timeline--year').removeClass('active');
-            $(ele).addClass('active');
-          }
-        });
-        calculateActiveTimelinePos($spanTimelinesElements);
-      });
+      createTimespanYears($els);
     }
     else {
-      $(window).off('scroll.timelineScroll');
+      components.timeline.untrigger();
     }
   }
 
-  $(document).ready(function () {
-    fadeSpanTimelineBorders($spanTimelines);
-    constructSpanTimelines($spanTimelines);
-  });
-}(document, window, jQuery));
+  components.timeline.trigger = function (page) {
+    fadeSpanTimelineBorders(page.el);
+    constructSpanTimelines(page.el);
+  };
+
+  components.timeline.untrigger = function (page) {
+    $(window).off('scroll.timelineScroll');
+    $(window).off('scroll.timelineSpanScroll');
+  };
+
+  components.timeline.instantiate = function (page) {
+    buildTimeline(page);
+  };
+}(window.fds.components = window.fds.components || {}, document, window, jQuery));
