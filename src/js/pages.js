@@ -67,7 +67,9 @@
         Object.assign({ extraParams: '&componentSnap=' + pages.hashes.componentSnap }, scrollOptions);
       }
       pages.snapScroll(startPage, scrollOptions);
+      // console.log('snapScroll', startPage.id);
       if (pages.hasOwnProperty('hashes') && pages.hashes.hasOwnProperty('componentSnap')) {
+        // console.log('has componentSnap', startPage);
         snapElem = startPage.el.querySelectorAll('[data-snap-id="' + pages.hashes.componentSnap + '"]');
         if (snapElem.length > 0) {
           if (snapElem[0].style['background-color'] === '' || snapElem[0].style['background-color'] === 'transparent') {
@@ -218,8 +220,8 @@
   pages.setCurrentPage = function (page, extraParams) {
     var pageEl;
     var pageHash;
-    // console.log('setCurrentPage', page.id);
     if (page) {
+      // console.log('setCurrentPage', page.id);
       pageEl = page.el;
       pages.oldCurrentPage = pages.currentPage;
       if (pages.oldCurrentPage && pages.oldCurrentPage.el) {
@@ -270,6 +272,7 @@
       scrollDir = 'up';
     }
     if (!scrollDiff) return;
+    // console.log('onScroll', scrollDiff);
     if (didResize) {
       // Only recalc if the window dimensions have changed.
       if (currentPage) {
