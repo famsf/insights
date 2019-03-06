@@ -51,7 +51,7 @@
   width: 160px;
   position: absolute;
   bottom: -900px;
-  left: 65px;
+  left: -400rem;
   overflow: hidden;
   visibility: hidden;
   display: none;
@@ -64,9 +64,9 @@
   }
   .snapped.triggered & {
     display: block;
-    position: fixed;
-    bottom: -160px;
-    z-index: 99999;
+    // position: fixed;
+    left: 4rem;
+    z-index: 50;
     opacity: 1;
     visibility: visible;
     bottom: 20px;

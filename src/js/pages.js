@@ -102,10 +102,6 @@
     var pageEl;
     var chapter;
     var chapterIndex;
-    var ambientVideo;
-    var embeddedVideo;
-    var timeline;
-    var zoomImageInline;
     var count = pages.pages.length;
     var nextPage;
     var previousPage;
@@ -160,6 +156,7 @@
     var ambientVideo = pageEl.querySelector('.ambient_video .plyr_target');
     var embeddedVideo = pageEl.querySelector('.video--embed .plyr_target');
     var zoomImageInline = pageEl.querySelector('.inline-image-zoom-wrapper');
+    var zoomImageFullbleed = pageEl.querySelector('.zoom-image--fullbleed');
     // Populate the page object
     page.components = {
       ambientVideo: {
@@ -173,12 +170,15 @@
       },
       zoomImageInline: {
         el: zoomImageInline
+      },
+      zoomImageFullbleed: {
+        el: zoomImageFullbleed
       }
     };
     // Loop through them and instantiate them
     Object.entries(page.components).forEach(function (key) {
       if (key[1].el) {
-        // console.log('instantiate', key[0]);
+        console.log('instantiate', key[0]);
         fds.components[key[0]].instantiate(page);
       }
     });
@@ -188,7 +188,7 @@
     // Stuff
     Object.entries(page.components).forEach(function (key) {
       if (key[1].el) {
-        // console.log('trigger', key[0]);
+        console.log('trigger', key[0]);
         fds.components[key[0]].trigger(page);
       }
     });
@@ -198,7 +198,7 @@
     // Stuff
     Object.entries(page.components).forEach(function (key) {
       if (key[1].el) {
-        // console.log('untrigger', key[0]);
+        console.log('untrigger', key[0]);
         fds.components[key[0]].untrigger(page);
       }
     });
