@@ -6,6 +6,7 @@
           $(e).css('display', 'none');
           $(e).siblings('.inline-image-zoom-wrapper').css('display', 'block');
         });
+        $(window).trigger('resize');
       }
       else {
         $zoomCarousels.each(function (i, e) {
@@ -40,7 +41,7 @@
     $(document).foundation();
     if ($zoomCarousels.length > 0) {
       toggleDisplays($zoomCarousels);
-      $(window).on('resize orientationChange', function () {
+      $(window).on('resize', function () {
         toggleDisplays($zoomCarousels);
         adjustNav($zoomCarousels);
       });
