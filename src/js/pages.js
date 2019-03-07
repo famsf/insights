@@ -274,7 +274,7 @@
       scrollDir = 'up';
     }
     if (!scrollDiff) return;
-    console.log('onScroll', scrollDiff);
+    // console.log('onScroll', scrollDiff);
     if (didResize) {
       // Only recalc if the window dimensions have changed.
       if (currentPage) {
