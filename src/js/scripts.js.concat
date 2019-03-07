@@ -18,6 +18,7 @@ files:
 - components/molecules/video--ambient/video--ambient.js
 - components/molecules/timeline/timeline.js
 - components/molecules/image-comparison-slider/image-comparison-slider.js
+- components/organisms/in-depth/in-depth.js
 - js/main.js
 insertNewLine: true
 ---

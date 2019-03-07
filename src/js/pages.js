@@ -158,6 +158,8 @@
     var embeddedVideo = pageEl.querySelector('.video--embed .plyr_target');
     var zoomImageInline = pageEl.querySelector('.inline-image-zoom-wrapper');
     var zoomImageFullbleed = pageEl.querySelector('.zoom-image--fullbleed');
+    var inDepthSlider = pageEl.querySelector('.in-depth-slider > .horizontal-image-slider');
+    console.log('::::::', inDepthSlider, page.id);
     // Populate the page object
     page.components = {
       ambientVideo: {
@@ -174,13 +176,18 @@
       },
       zoomImageFullbleed: {
         el: zoomImageFullbleed
+      },
+      inDepthSlider: {
+        el: inDepthSlider
       }
     };
     // Loop through them and instantiate them
     Object.entries(page.components).forEach(function (key) {
       if (key[1].el) {
-        console.log('instantiate', key[0]);
-        fds.components[key[0]].instantiate(page);
+        console.log('»»»» instantiate', key[0], key[1].el, fds.components[key[0]]);
+        if (fds.components[key[0]]) {
+          fds.components[key[0]].instantiate(page);
+        }
       }
     });
   };
