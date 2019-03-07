@@ -19,7 +19,7 @@
   components.zoomImageFullbleed.trigger = function (page) {
     var $el = $(page.components.zoomImageFullbleed.el);
     var $imgZoomDrag = $($el.find('.img-zoom-drag'));
-    if (Foundation.MediaQuery.atLeast('large')) {
+    // if (Foundation.MediaQuery.atLeast('large')) {
       $imgZoomDrag.on('mousemove.zoomImageFullbleed', function (e) {
         var offset = $(this).offset();
         var finderBox = $($el.find('.finder-box'));
@@ -39,10 +39,11 @@
         });
         // $el.find('.scroll-finder').show();
       });
-    }
-    else {
-      $('.img-zoom-drag').closest('section.page').css('display', 'none');
-    }
+    // }
+        // This was causing terrible terrible problems in mobile.
+        // else {
+        //   $('.img-zoom-drag').closest('section.page').css('display', 'none');
+        // }
   };
 
   components.zoomImageFullbleed.untrigger = function (page) {

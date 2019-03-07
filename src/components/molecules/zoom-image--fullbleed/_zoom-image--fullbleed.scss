@@ -10,37 +10,36 @@
   left:auto;
   right:auto;
   bottom:auto;
-  margin:0!important;
+  margin:0 !important;
   pointer-events:none!important;
   max-height:none!important;
   max-width:none!important;
   background:#fff!important;
 }
 .zoomable.active > .zoomed{
-  opacity:1!important;
+  opacity: 1!important;
   transition-property: opacity;
   transition-duration: 0.5s;
 }
 
 .zoom-image--fullbleed {
-
-  .credits-wrapper {
-    max-width: 100vw;
-    max-height: 100vh;
-    position: absolute;
-  }
   @extend %fullscreen-credits;
-
   width: 100vw;
   height: 100vh;
-  background-color: #000;
+  background-color: #f00;
   align-items: center;
   padding-top: 90px;
   @include breakpoint(large) {
     display: flex;
     visibility: visible;
   }
+  .credits-wrapper {
+    max-width: 100vw;
+    max-height: 100vh;
+    position: absolute;
+  }
 }
+
 .scroll-finder {
   transition-property: opacity, bottom;
   transition-duration: 1.3s, 0.75s;
