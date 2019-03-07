@@ -54,6 +54,7 @@
       }
       else {
         startPage = pages.currentPage;
+        pages.oldCurrentPage = startPage;
       }
       if (pages.hashes.chapter) {
         initialChapter = document.getElementById(pages.hashes.chapter);
@@ -66,8 +67,8 @@
       if (pages.hashes.hasOwnProperty('componentSnap')) {
         Object.assign({ extraParams: '&componentSnap=' + pages.hashes.componentSnap }, scrollOptions);
       }
+      // console.log('deepLink', startPage.id);
       pages.snapScroll(startPage, scrollOptions);
-      // console.log('snapScroll', startPage.id);
       if (pages.hasOwnProperty('hashes') && pages.hashes.hasOwnProperty('componentSnap')) {
         // console.log('has componentSnap', startPage);
         snapElem = startPage.el.querySelectorAll('[data-snap-id="' + pages.hashes.componentSnap + '"]');
@@ -178,7 +179,7 @@
     // Loop through them and instantiate them
     Object.entries(page.components).forEach(function (key) {
       if (key[1].el) {
-        console.log('instantiate', key[0]);
+        // console.log('instantiate', key[0]);
         fds.components[key[0]].instantiate(page);
       }
     });
@@ -188,7 +189,7 @@
     // Stuff
     Object.entries(page.components).forEach(function (key) {
       if (key[1].el) {
-        console.log('trigger', key[0]);
+        // console.log('trigger', key[0]);
         fds.components[key[0]].trigger(page);
       }
     });
@@ -198,7 +199,7 @@
     // Stuff
     Object.entries(page.components).forEach(function (key) {
       if (key[1].el) {
-        console.log('untrigger', key[0]);
+        // console.log('untrigger', key[0]);
         fds.components[key[0]].untrigger(page);
       }
     });
@@ -221,7 +222,8 @@
     var pageEl;
     var pageHash;
     if (page) {
-      // console.log('setCurrentPage', page.id);
+      // console.log('setCurrentPage to', page.id);
+      // console.log('oldCurrentPage is', pages.oldCurrentPage);
       pageEl = page.el;
       pages.oldCurrentPage = pages.currentPage;
       if (pages.oldCurrentPage && pages.oldCurrentPage.el) {
@@ -325,9 +327,11 @@
     var snapScrollDuration = fds.pages.snapScrollDuration;
     // console.log('snapScroll', page.id);
     if (!scrollOptions.force && (fds.scrollLock || page === pages.getCurrentPage() || !page)) {
+      // console.log('skipping most of snapscroll');
       return;
     }
     if (scrollOptions.unpin) {
+      // console.log('unpin currentpage', pages.currentPage.el.id);
       pages.unpinPage(pages.currentPage);
     }
     if (scrollOptions.extraUrlParams) {
@@ -336,6 +340,7 @@
     else {
       pages.setCurrentPage(page);
     }
+    // console.log('currentPage', pages.currentPage.el.id);
     document.body.classList.add('scroll_lock');
     if (scrollOptions.scrollDir === 'down' || pages.isLastChapter(chapter.id)) {
       scrollTo = chapter.offsetTop + pageEl.offsetTop;
@@ -343,15 +348,18 @@
     else {
       scrollTo = chapter.offsetTop + pageEl.offsetTop + (pageEl.clientHeight - wh);
     }
+    // console.log('About to scroll', scrollOptions.scrollDir, 'to', scrollTo);
     fds.scrollLock = true;
     if (scrollOptions.instant) {
       snapScrollDuration = 0;
     }
     fds.performantScrollTo(scrollTo, function () {
+      // console.log('performantScrollTo to', scrollTo, page.id);
       pages.snapPoint = scrollTo;
       pages.pinPage(page, scrollOptions.scrollDir);
       pages.oldScrollY = win.pageYOffset;
       setTimeout(function () {
+        // console.log('removing scrollLock, and …');
         fds.scrollLock = false;
         doc.body.classList.remove('scroll_lock');
         pages.postSnap(page);
@@ -375,8 +383,10 @@
     var nextChapter;
     // pinning on the footer is a no go.
     if (pages.isLastChapter(page.chapter.id)) {
+      //console.log('pinPage', page.el.id);
       return;
     }
+    // console.log('pinPage', page.el.id);
     pages.pinnedOffset = page.el.clientHeight;
     pages.lastPinned = null;
     pages.pinned = page;
@@ -395,6 +405,7 @@
     var scrollTo;
     var pageEl;
     var pageTop;
+    // console.log('unpinPage', page.el.id);
     if (page.isPinned) {
       pageEl = page.el;
       pages.lastPinned = page;
@@ -424,7 +435,7 @@
 
   pages.triggerPage = function (page) {
     var pageEl = page.el;
-    // console.log('triggerTopBarEvents', page.id);
+    // console.log('triggerPage', page.id);
     page.istriggered = true;
     pageEl.classList.add('triggered');
     // Fire on.page.triggered event
