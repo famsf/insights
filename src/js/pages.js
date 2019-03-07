@@ -67,10 +67,10 @@
       if (pages.hashes.hasOwnProperty('componentSnap')) {
         Object.assign({ extraParams: '&componentSnap=' + pages.hashes.componentSnap }, scrollOptions);
       }
-      // console.log('deepLink', startPage.id);
+      console.log('deepLink', startPage.id);
       pages.snapScroll(startPage, scrollOptions);
       if (pages.hasOwnProperty('hashes') && pages.hashes.hasOwnProperty('componentSnap')) {
-        // console.log('has componentSnap', startPage);
+        console.log('has componentSnap', startPage);
         snapElem = startPage.el.querySelectorAll('[data-snap-id="' + pages.hashes.componentSnap + '"]');
         if (snapElem.length > 0) {
           if (snapElem[0].style['background-color'] === '' || snapElem[0].style['background-color'] === 'transparent') {
@@ -179,7 +179,7 @@
     // Loop through them and instantiate them
     Object.entries(page.components).forEach(function (key) {
       if (key[1].el) {
-        // console.log('instantiate', key[0]);
+        console.log('instantiate', key[0]);
         fds.components[key[0]].instantiate(page);
       }
     });
@@ -189,7 +189,7 @@
     // Stuff
     Object.entries(page.components).forEach(function (key) {
       if (key[1].el) {
-        // console.log('trigger', key[0]);
+        console.log('trigger', key[0]);
         fds.components[key[0]].trigger(page);
       }
     });
@@ -199,7 +199,7 @@
     // Stuff
     Object.entries(page.components).forEach(function (key) {
       if (key[1].el) {
-        // console.log('untrigger', key[0]);
+        console.log('untrigger', key[0]);
         fds.components[key[0]].untrigger(page);
       }
     });
@@ -222,8 +222,8 @@
     var pageEl;
     var pageHash;
     if (page) {
-      // console.log('setCurrentPage to', page.id);
-      // console.log('oldCurrentPage is', pages.oldCurrentPage);
+      console.log('setCurrentPage to', page.id);
+      console.log('oldCurrentPage is', pages.oldCurrentPage);
       pageEl = page.el;
       pages.oldCurrentPage = pages.currentPage;
       if (pages.oldCurrentPage && pages.oldCurrentPage.el) {
@@ -274,7 +274,7 @@
       scrollDir = 'up';
     }
     if (!scrollDiff) return;
-    // console.log('onScroll', scrollDiff);
+    console.log('onScroll', scrollDiff);
     if (didResize) {
       // Only recalc if the window dimensions have changed.
       if (currentPage) {
@@ -325,13 +325,13 @@
     var pageEl = page.el;
     var chapter = page.chapter;
     var snapScrollDuration = fds.pages.snapScrollDuration;
-    // console.log('snapScroll', page.id);
+    console.log('snapScroll', page.id);
     if (!scrollOptions.force && (fds.scrollLock || page === pages.getCurrentPage() || !page)) {
-      // console.log('skipping most of snapscroll');
+      console.log('skipping most of snapscroll');
       return;
     }
     if (scrollOptions.unpin) {
-      // console.log('unpin currentpage', pages.currentPage.el.id);
+      console.log('unpin currentpage', pages.currentPage.el.id);
       pages.unpinPage(pages.currentPage);
     }
     if (scrollOptions.extraUrlParams) {
@@ -340,7 +340,7 @@
     else {
       pages.setCurrentPage(page);
     }
-    // console.log('currentPage', pages.currentPage.el.id);
+    console.log('currentPage', pages.currentPage.el.id);
     document.body.classList.add('scroll_lock');
     if (scrollOptions.scrollDir === 'down' || pages.isLastChapter(chapter.id)) {
       scrollTo = chapter.offsetTop + pageEl.offsetTop;
@@ -348,18 +348,18 @@
     else {
       scrollTo = chapter.offsetTop + pageEl.offsetTop + (pageEl.clientHeight - wh);
     }
-    // console.log('About to scroll', scrollOptions.scrollDir, 'to', scrollTo);
+    console.log('About to scroll', scrollOptions.scrollDir, 'to', scrollTo);
     fds.scrollLock = true;
     if (scrollOptions.instant) {
       snapScrollDuration = 0;
     }
     fds.performantScrollTo(scrollTo, function () {
-      // console.log('performantScrollTo to', scrollTo, page.id);
+      console.log('performantScrollTo to', scrollTo, page.id);
       pages.snapPoint = scrollTo;
       pages.pinPage(page, scrollOptions.scrollDir);
       pages.oldScrollY = win.pageYOffset;
       setTimeout(function () {
-        // console.log('removing scrollLock, and …');
+        console.log('removing scrollLock, and …');
         fds.scrollLock = false;
         doc.body.classList.remove('scroll_lock');
         pages.postSnap(page);
@@ -385,7 +385,7 @@
     if (pages.isLastChapter(page.chapter.id)) {
       return;
     }
-    // console.log('pinPage', page.el.id);
+    console.log('pinPage', page.el.id);
     pages.pinnedOffset = page.el.clientHeight;
     pages.lastPinned = null;
     pages.pinned = page;
@@ -404,7 +404,7 @@
     var scrollTo;
     var pageEl;
     var pageTop;
-    // console.log('unpinPage', page.el.id);
+    console.log('unpinPage', page.el.id);
     if (page.isPinned) {
       pageEl = page.el;
       pages.lastPinned = page;
@@ -422,7 +422,7 @@
   };
 
   pages.untriggerPage = function (page) {
-    // console.log('untrigger', page.id);
+    console.log('untrigger', page.id);
     page.el.classList.remove('triggered');
     page.el.classList.remove('inViewport');
     page.isTriggered = false;
@@ -434,7 +434,7 @@
 
   pages.triggerPage = function (page) {
     var pageEl = page.el;
-    // console.log('triggerPage', page.id);
+    console.log('triggerPage', page.id);
     page.istriggered = true;
     pageEl.classList.add('triggered');
     // Fire on.page.triggered event
