@@ -383,7 +383,6 @@
     var nextChapter;
     // pinning on the footer is a no go.
     if (pages.isLastChapter(page.chapter.id)) {
-      //console.log('pinPage', page.el.id);
       return;
     }
     // console.log('pinPage', page.el.id);
