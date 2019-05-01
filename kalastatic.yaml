@@ -99,7 +99,7 @@ pluginOpts:
       1422908: '@kalastatic/components/organisms/hub/hub__story.html.twig'
       1390661: '@kalastatic/components/molecules/footer__navigation/footer__navigation.html.twig'
       1468595: '@kalastatic/components/molecules/html-embed/html-embed.html.twig'
-      1705853: '@kalastatic/components/organisms/footer-otherstories.html.twig'
+      1705853: '@kalastatic/components/organisms/footer-otherstories/footer-otherstories.html.twig'
       # dummy commit
     mappings:
       id: id
