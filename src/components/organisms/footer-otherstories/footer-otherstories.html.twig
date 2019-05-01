@@ -1,24 +1,24 @@
 <section class="theme--primary-light">
-  <div class="footer__cta__wrapper">
+  <div class="footer__cta__wrapper other-stories">
     <h3>{{ otherstories_heading }}</h3>
     <div class="grid-container grid-container-padded">
       <div class="grid-x grid-margin-x grid-margin-y grid-padding-x grid-padding-y small-up-1 medium-up-2 large-up-2">
-
-        {% if stories is defined %}
-          <div class="stories">
-          {% for story in stories %}
-            {% include "@organisms/hub/hub__story.html.twig" with {
-              image: story.content__image,
-              title: story.hub_story_title,
-              subtitle: story.hub_story_subtitle|default(''),
-              read_link: story.read_link|default(''),
-              is_on_view: story.on_view.0|default('False'),
-              tags: story.tags|default('')
-            } only %}
-          {% endfor %}
-        </div>
-      {% endif %}
-      
+         {% include "@organisms/hub/hub__story.html.twig" with {
+           image: story1_image,
+           title: story1_title,
+           subtitle: story1_subtitle|default(''),
+           read_link: story.read_link|default(''),
+           is_on_view: story.on_view.0|default('False'),
+           tags: story.tags|default('')
+          } only %}
+          {% include "@organisms/hub/hub__story.html.twig" with {
+           image: story2_image,
+           title: story2_title,
+           subtitle: story2_subtitle|default(''),
+           read_link: story.read_link|default(''),
+           is_on_view: story.on_view.0|default('False'),
+           tags: story.tags|default('')
+          } only %}      
       </div>
     </div>
   </div>
