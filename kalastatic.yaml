@@ -336,12 +336,12 @@ pluginOpts:
       
       # Other Stories
       otherstories_heading: Content_Other-Stories-Title
-      otherstories_button_text: Content_Other-Stories-Button-Text
-      otherstories_button_url: Content_Other-Stories-URL
       story1_title: Content-Story-One_Title
       story1_subtitle: Content-Story-One_Subtitle
+      story1_read_link: Content-Story-One_Read-Link
       story2_title: Content-Story-Two_Title
       story2_subtitle: Content-Story-Two_Subtitle
+      story2_read_link: Content-Story-Two_Read-Link
 
   # The layouts will live in the templates directory.
   metalsmith-jstransformer:

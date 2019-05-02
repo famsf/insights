@@ -3,15 +3,27 @@
   h3 {
     color: $black;
     text-align: center;
+    margin-bottom: .5rem;
   } 
+  
+  .large-up-2 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  button.cta {
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-bottom: 1.3rem;
+  }
   
   .hub-story {
     margin: 25px;
     @include breakpoint(medium) {
       display: inline-block;
       vertical-align: top;
-      width: 46%;
-      margin: 25px 1.5% 25px 1.5%;
+      width: 30%;
+      margin: 25px 1% 25px 1%;
     }
     .story-image {
       position: relative;
