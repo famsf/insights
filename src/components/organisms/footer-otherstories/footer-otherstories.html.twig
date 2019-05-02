@@ -6,22 +6,19 @@
   {% endif %}
     <div class="grid-container grid-container-padded">
       <div class="grid-x grid-margin-x grid-margin-y grid-padding-x grid-padding-y small-up-1 medium-up-2 large-up-2">
-         {% include "@organisms/hub/hub__story.html.twig" with {
-           image: content__image,
-           title: story1_title,
-           subtitle: story1_subtitle|default(''),
-           read_link: story1_read_link|default(''),
-           is_on_view: story.on_view.0|default('False'),
-           tags: story.tags|default('')
-          } only %}
           {% include "@organisms/hub/hub__story.html.twig" with {
-           image: content__image,
+            image: story1_image,
+            title: story1_title,
+            subtitle: story1_subtitle|default(''),
+            read_link: story1_read_link|default(''),
+            } only %}
+          
+          {% include "@organisms/hub/hub__story.html.twig" with {
+           image: story2_image,
            title: story2_title,
            subtitle: story2_subtitle|default(''),
            read_link: story2_read_link|default(''),
-           is_on_view: story.on_view.0|default('False'),
-           tags: story.tags|default('')
-          } only %}      
+          } only %}   
       </div>
     </div>
   </div>
