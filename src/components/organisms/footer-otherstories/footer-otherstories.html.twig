@@ -20,13 +20,20 @@
           </div>
         {% endif %}
         </div>
-          
-          {% include "@organisms/footer-otherstories/other__story.html.twig" with {
-           image: story2_image,
-           title: story2_title,
-           subtitle: story2_subtitle|default(''),
-           read_link: story2_read_link|default(''),
-          } only %}   
+        <div class="hub-story">
+          <div class="story-image">
+            {% include "@atoms/img/img.html.twig" with story2_image only %}
+          </div>
+        <h3 class="story-title">{{ story2_title }}</h3>
+        {% if story2_subtitle is not empty %}
+          <span class="story-subtitle">{{ story2_subtitle }}</span>
+        {% endif %}
+        {% if story2_read_link is not empty %}
+          <div class="read-link-wrapper">
+            {{ story2_read_link }}
+          </div>
+        {% endif %}
+        </div>
       </div>
     </div>
   </div>
