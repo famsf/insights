@@ -343,7 +343,6 @@ pluginOpts:
       story2_title: Content-Story-Two_Title
       story2_subtitle: Content-Story-Two_Subtitle
       story2_read_link: Content-Story-Two_Read-Link
-      story2_image: Content-Story-Two_Image
 
   # The layouts will live in the templates directory.
   metalsmith-jstransformer:

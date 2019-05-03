@@ -1,19 +1,27 @@
 <section class="theme--primary-light">
   <div class="footer__cta__wrapper other-stories">
     <h3>{{ otherstories_heading }}</h3>
-    {% if cta__button|striptags|length > 1 %}
-    {% include "@atoms/cta__button/cta__button.html.twig" with { link : cta__button } only %}
-  {% endif %}
+    {% if cta__button|striptags %}
+      {% include "@atoms/cta__button/cta__button.html.twig" with { link : cta__button } only %}
+    {% endif %}
     <div class="grid-container grid-container-padded">
       <div class="grid-x grid-margin-x grid-margin-y grid-padding-x grid-padding-y small-up-1 medium-up-2 large-up-2">
-          {% include "@organisms/hub/hub__story.html.twig" with {
-            image: story1_image,
-            title: story1_title,
-            subtitle: story1_subtitle|default(''),
-            read_link: story1_read_link|default(''),
-            } only %}
+        <div class="hub-story">
+          <div class="story-image">
+            {% include "@atoms/img/img.html.twig" with story1_image only %}
+          </div>
+        <h3 class="story-title">{{ story1_title }}</h3>
+        {% if story1_subtitle is not empty %}
+          <span class="story-subtitle">{{ story1_subtitle }}</span>
+        {% endif %}
+        {% if story1_read_link is not empty %}
+          <div class="read-link-wrapper">
+            {{ story1_read_link }}
+          </div>
+        {% endif %}
+        </div>
           
-          {% include "@organisms/hub/hub__story.html.twig" with {
+          {% include "@organisms/footer-otherstories/other__story.html.twig" with {
            image: story2_image,
            title: story2_title,
            subtitle: story2_subtitle|default(''),
