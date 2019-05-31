@@ -9,7 +9,7 @@
         <div class="hub-story">
           {% if story1__image %}
           <div class="story-image">
-            {% include "@molecules/picture/picture.html.twig" with story1__image|last only %}
+            {% include "@molecules/picture/picture.html.twig" with story1__image only %}
           </div>
           {% endif %}
         <h3 class="story-title">{{ story1_title }}</h3>
@@ -24,7 +24,7 @@
         </div>
         <div class="hub-story">
           <div class="story-image">
-            {% include "@molecules/picture/picture.html.twig" with story2__image|last only %}
+            {% include "@molecules/picture/picture.html.twig" with story2__image only %}
           </div>
         <h3 class="story-title">{{ story2_title }}</h3>
         {% if story2_subtitle is not empty %}
