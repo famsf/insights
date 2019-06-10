@@ -222,6 +222,7 @@ pluginOpts:
 
       # HTML Embed
       html_embed: Content_HTML-Code
+      hashtag: Content_Hashtag
 
       # In depth
       slideshow__title: Content_Slideshow-Title
