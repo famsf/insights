@@ -12,7 +12,8 @@
           <div class="story-image">
             {% include "@molecules/picture/picture--captioned.html.twig" with {
               picture: {
-                src: img.src
+                src: img.src,
+                alt: img.alt
               }
            } only %}
           </div>
@@ -28,9 +29,17 @@
         {% endif %}
         </div>
         <div class="hub-story">
+          {% if story2__image %}
+          {% set img = story2__image %}
           <div class="story-image">
-            {% include "@molecules/picture/picture--captioned.html.twig" with story2__image only %}
+            {% include "@molecules/picture/picture--captioned.html.twig" with {
+              picture: {
+                src: img.src,
+                alt: img.alt
+              }
+            } only %}
           </div>
+          {% endif %}
         <h3 class="story-title">{{ story2_title }}</h3>
         {% if story2_subtitle is not empty %}
           <span class="story-subtitle">{{ story2_subtitle }}</span>
