@@ -99,6 +99,7 @@ pluginOpts:
       1422908: '@kalastatic/components/organisms/hub/hub__story.html.twig'
       1390661: '@kalastatic/components/molecules/footer__navigation/footer__navigation.html.twig'
       1468595: '@kalastatic/components/molecules/html-embed/html-embed.html.twig'
+      1705853: '@kalastatic/components/organisms/footer-otherstories/footer-otherstories.html.twig'
       # dummy commit
     mappings:
       id: id
@@ -221,6 +222,7 @@ pluginOpts:
 
       # HTML Embed
       html_embed: Content_HTML-Code
+      hashtag: Content_Hashtag
 
       # In depth
       slideshow__title: Content_Slideshow-Title
@@ -332,6 +334,20 @@ pluginOpts:
       on_view: Content_Is-on-View
       tags: Content_Tags
       dates: Content_Dates
+      
+      # Other Stories
+      otherstories_heading: Content_Other-Stories-Title
+      story1_title: Content-Story-One_Title
+      story1_subtitle: Content-Story-One_Subtitle
+      story1_read_link: Content-Story-One_Read-Link
+      story1__image: Content-Story-One_Image
+      story1__image-alt: Content-Story-One_Image-Alt
+      story2_title: Content-Story-Two_Title
+      story2_subtitle: Content-Story-Two_Subtitle
+      story2_read_link: Content-Story-Two_Read-Link
+      story2__image: Content-Story-Two_Image
+      story2__image-alt: Content-Story-Two_Image-Alt
+
 
   # The layouts will live in the templates directory.
   metalsmith-jstransformer:
