@@ -54,6 +54,7 @@ pluginOpts:
       - 'gauguin.md'
       - 'for-testing.md'
       - 'late-monet.md'
+      - 'artists-books'
     # map template ids to components so we can handle defaults
     # we're also removing Meta_Component from "atom" GatherContent templates
     # Since they removed template defaults, and certain components —

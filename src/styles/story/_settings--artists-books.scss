@@ -1,0 +1,11 @@
+// Custom color palette:
+$foundation-palette: (
+  primary: #3a3a3a,
+  secondary: #6a6a6a,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #cc4b37
+);
+
+// Import common settings:
+@import "base/settings";
