@@ -83,6 +83,7 @@ $plyr-color-heather: #b7c5cd !default;
 @import 'plyr/src/sass/components/captions';
 @import 'plyr/src/sass/components/control';
 @import 'plyr/src/sass/components/controls';
+// TODO: plyr/src/sass/components/embed.scss has been removed in later versions of Plyr. Fix this.
 @import 'plyr/src/sass/components/embed';
 @import 'plyr/src/sass/components/menus';
 @import 'plyr/src/sass/components/sliders';
