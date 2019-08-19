@@ -12,6 +12,7 @@
   "scripts": {
     "install": "napa",
     "test": "[ \"${CONTEXT}\" = production ] && run-s play redirect || run-s play lint:js",
+    "posttest": "cp -f download/*.* build/assets/gathercontent",
     "play": "kalastatic build",
     "redirect": "cp _redirects build/",
     "prestart": "run-s lint:js",
@@ -50,7 +51,8 @@
     "kalastatic": "~4.2.0",
     "kalastatic-twig-filters": "^1.0.0",
     "kss-bootstrap": "^4.1.1",
-    "metalsmith-gathercontent": "^2.4.0",
+    "metalsmith-assets": "^0.1.0",
+    "metalsmith-gathercontent": "kalamuna/metalsmith-gathercontent#download",
     "metalsmith-include": "thiagodemellobueno/metalsmith-include#includeWholeObject",
     "motion-ui": "~1.2.2",
     "napa": "^3.0.0",
