@@ -53,7 +53,7 @@
     "kss-bootstrap": "^4.1.1",
     "metalsmith-assets": "^0.1.0",
     "metalsmith-gathercontent": "kalamuna/metalsmith-gathercontent#download",
-    "metalsmith-include": "thiagodemellobueno/metalsmith-include#includeWholeObject",
+    "metalsmith-include": "kalamuna/metalsmith-include#includeWholeObject",
     "motion-ui": "~1.2.2",
     "napa": "^3.0.0",
     "npm": "^6.4.1",
