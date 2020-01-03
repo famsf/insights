@@ -29,7 +29,7 @@
       console.log(':::::: Warning: Failed to initialize pages, check your selectors, but maybe you`re just prototyping isolated components');
       return;
     }
-    pages.populatePagesById();
+    pages.instantiatePages();
     pages.currentPage = pages.byId[pages.pages[0].id];
     pages.clearElement = doc.querySelector(clearElementSelector);
     pages.clearElementHeight = pages.clearElement.clientHeight;
@@ -54,6 +54,7 @@
       }
       else {
         startPage = pages.currentPage;
+        pages.oldCurrentPage = startPage;
       }
       if (pages.hashes.chapter) {
         initialChapter = document.getElementById(pages.hashes.chapter);
@@ -66,8 +67,10 @@
       if (pages.hashes.hasOwnProperty('componentSnap')) {
         Object.assign({ extraParams: '&componentSnap=' + pages.hashes.componentSnap }, scrollOptions);
       }
+      // console.log('deepLink', startPage.id);
       pages.snapScroll(startPage, scrollOptions);
       if (pages.hasOwnProperty('hashes') && pages.hashes.hasOwnProperty('componentSnap')) {
+        // console.log('has componentSnap', startPage);
         snapElem = startPage.el.querySelectorAll('[data-snap-id="' + pages.hashes.componentSnap + '"]');
         if (snapElem.length > 0) {
           if (snapElem[0].style['background-color'] === '' || snapElem[0].style['background-color'] === 'transparent') {
@@ -94,14 +97,12 @@
     fds.mobileNav.setActiveItem(initialChapter);
   };
 
-  pages.populatePagesById = function () {
+  pages.instantiatePages = function () {
     var i;
     var page;
     var pageEl;
     var chapter;
     var chapterIndex;
-    var ambientVideo;
-    var embeddedVideo;
     var count = pages.pages.length;
     var nextPage;
     var previousPage;
@@ -110,8 +111,6 @@
     for (i = 0; i < count; i++) {
       pageEl = pages.pages[i];
       chapter = pageEl.parentElement;
-      ambientVideo = pageEl.querySelector('.ambient_video .plyr_target');
-      embeddedVideo = pageEl.querySelector('.video--embed .plyr_target');
       if (pageEl.nextElementSibling) {
         nextPage = pageEl.nextElementSibling;
       }
@@ -134,16 +133,12 @@
         previousPage: previousPage,
         nextPage: nextPage,
         index: pageEl.dataset.pageIndex,
-        ambientVideoEl: ambientVideo,
-        embeddedVideoEl: embeddedVideo,
         isPinned: false,
         isCurrent: false,
         inView: false
       };
       pages.byId[pageEl.id] = page;
-      if (ambientVideo || embeddedVideo) {
-        pages.triggerVideo(page);
-      }
+      pages.instantiateComponents(page);
     }
     Object.keys(pages.byId).forEach(function (key) {
       pageArr = [];
@@ -152,6 +147,68 @@
       pageArr[1] = 'self';
       pageArr[2] = (pageRef.nextPage) ? pages.byId[pageRef.nextPage.id] : null;
       pages.byId[key].pageArr = pageArr;
+    });
+  };
+
+  pages.instantiateComponents = function (page) {
+    // Get components into vars
+    var pageEl = page.el;
+    var timeline = pageEl.querySelector('.timeline');
+    var ambientVideo = pageEl.querySelector('.ambient_video .plyr_target');
+    var embeddedVideo = pageEl.querySelector('.video--embed .plyr_target');
+    var zoomImageInline = pageEl.querySelector('.inline-image-zoom-wrapper');
+    var zoomImageFullbleed = pageEl.querySelector('.zoom-image--fullbleed');
+    var inDepthSlider = pageEl.querySelector('.in-depth-slider > .horizontal-image-slider');
+    // console.log('::::::', inDepthSlider, page.id);
+    // Populate the page object
+    page.components = {
+      ambientVideo: {
+        el: ambientVideo
+      },
+      embeddedVideo: {
+        el: embeddedVideo
+      },
+      timeline: {
+        el: timeline
+      },
+      zoomImageInline: {
+        el: zoomImageInline
+      },
+      zoomImageFullbleed: {
+        el: zoomImageFullbleed
+      },
+      inDepthSlider: {
+        el: inDepthSlider
+      }
+    };
+    // Loop through them and instantiate them
+    Object.entries(page.components).forEach(function (key) {
+      if (key[1].el) {
+        // console.log('»»»» instantiate', key[0], key[1].el, fds.components[key[0]]);
+        if (fds.components[key[0]]) {
+          fds.components[key[0]].instantiate(page);
+        }
+      }
+    });
+  };
+
+  pages.triggerComponents = function (page) {
+    // Stuff
+    Object.entries(page.components).forEach(function (key) {
+      if (key[1].el) {
+        // console.log('trigger', key[0]);
+        fds.components[key[0]].trigger(page);
+      }
+    });
+  };
+
+  pages.untriggerComponents = function (page) {
+    // Stuff
+    Object.entries(page.components).forEach(function (key) {
+      if (key[1].el) {
+        // console.log('untrigger', key[0]);
+        fds.components[key[0]].untrigger(page);
+      }
     });
   };
 
@@ -172,6 +229,8 @@
     var pageEl;
     var pageHash;
     if (page) {
+      // console.log('setCurrentPage to', page.id);
+      // console.log('oldCurrentPage is', pages.oldCurrentPage);
       pageEl = page.el;
       pages.oldCurrentPage = pages.currentPage;
       if (pages.oldCurrentPage && pages.oldCurrentPage.el) {
@@ -222,6 +281,7 @@
       scrollDir = 'up';
     }
     if (!scrollDiff) return;
+    // console.log('onScroll', scrollDiff);
     if (didResize) {
       // Only recalc if the window dimensions have changed.
       if (currentPage) {
@@ -272,10 +332,13 @@
     var pageEl = page.el;
     var chapter = page.chapter;
     var snapScrollDuration = fds.pages.snapScrollDuration;
+    // console.log('snapScroll', page.id);
     if (!scrollOptions.force && (fds.scrollLock || page === pages.getCurrentPage() || !page)) {
+      // console.log('skipping most of snapscroll');
       return;
     }
     if (scrollOptions.unpin) {
+      // console.log('unpin currentpage', pages.currentPage.el.id);
       pages.unpinPage(pages.currentPage);
     }
     if (scrollOptions.extraUrlParams) {
@@ -284,6 +347,7 @@
     else {
       pages.setCurrentPage(page);
     }
+    // console.log('currentPage', pages.currentPage.el.id);
     document.body.classList.add('scroll_lock');
     if (scrollOptions.scrollDir === 'down' || pages.isLastChapter(chapter.id)) {
       scrollTo = chapter.offsetTop + pageEl.offsetTop;
@@ -291,15 +355,18 @@
     else {
       scrollTo = chapter.offsetTop + pageEl.offsetTop + (pageEl.clientHeight - wh);
     }
+    // console.log('About to scroll', scrollOptions.scrollDir, 'to', scrollTo);
     fds.scrollLock = true;
     if (scrollOptions.instant) {
       snapScrollDuration = 0;
     }
     fds.performantScrollTo(scrollTo, function () {
+      // console.log('performantScrollTo to', scrollTo, page.id);
       pages.snapPoint = scrollTo;
       pages.pinPage(page, scrollOptions.scrollDir);
       pages.oldScrollY = win.pageYOffset;
       setTimeout(function () {
+        // console.log('removing scrollLock, and …');
         fds.scrollLock = false;
         doc.body.classList.remove('scroll_lock');
         pages.postSnap(page);
@@ -325,6 +392,7 @@
     if (pages.isLastChapter(page.chapter.id)) {
       return;
     }
+    // console.log('pinPage', page.el.id);
     pages.pinnedOffset = page.el.clientHeight;
     pages.lastPinned = null;
     pages.pinned = page;
@@ -343,6 +411,7 @@
     var scrollTo;
     var pageEl;
     var pageTop;
+    // console.log('unpinPage', page.el.id);
     if (page.isPinned) {
       pageEl = page.el;
       pages.lastPinned = page;
@@ -364,92 +433,26 @@
     page.el.classList.remove('triggered');
     page.el.classList.remove('inViewport');
     page.isTriggered = false;
-    pages.untriggerVideo(page);
+    // pages.untriggerVideo(page);
     // Fire off.page.triggered event
     $(document).trigger('off.page.triggered');
+    pages.untriggerComponents(page);
   };
 
   pages.triggerPage = function (page) {
     var pageEl = page.el;
-    // console.log('triggerTopBarEvents', page.id);
+    // console.log('triggerPage', page.id);
     page.istriggered = true;
     pageEl.classList.add('triggered');
-
     // Fire on.page.triggered event
     $(document).trigger('on.page.triggered');
-
     if (pageEl.classList.contains('hide-chapter-nav')) {
       fds.chapterNav.hideNav();
     }
     else if (fds.chapterNav.isHidden) {
       fds.chapterNav.showNav();
     }
-  };
-
-  pages.triggerVideo = function (page) {
-    var plyr;
-    var pageEl = page.el;
-    var poster;
-    var videoId;
-    var videoParent;
-    if (page.ambientVideoEl) {
-      if (!page.embeddedVideo) {
-        plyr = new Plyr(page.ambientVideoEl, {
-          hideControls: 'true'
-        });
-        plyr.on('ready', function (e) {
-          plyr.muted = true;
-          plyr.play();
-        });
-        page.ambientVideo = plyr;
-      }
-    }
-    if (page.embeddedVideoEl) {
-      if (!page.embeddedVideo) {
-        plyr = new Plyr(page.embeddedVideoEl, {
-          hideControls: 'false',
-          controls: ['play-large', 'play', 'progress', 'current-time', 'captions', 'settings', 'pip', 'fullscreen']
-        });
-
-        plyr.on('ready', function (e) {
-          poster = page.embeddedVideoEl.dataset.poster;
-          if (poster) {
-            plyr.poster = poster;
-          }
-          page.embeddedVideo = plyr;
-          plyr.pause();
-        });
-
-        plyr.on('playing', function (e) {
-          videoId = plyr.media.id;
-          videoParent = document.getElementById(videoId).parentElement.parentElement.parentElement;
-          videoParent.classList.add('playing');
-        });
-
-        plyr.on('pause', function (e) {
-          videoId = plyr.media.id;
-          videoParent = document.getElementById(videoId).parentElement.parentElement.parentElement;
-          videoParent.classList.remove('playing');
-        });
-      }
-    }
-  };
-
-  pages.untriggerVideo = function (page) {
-    var plyr;
-    var pageEl = page.el;
-    if (page.ambientVideo) {
-      plyr = page.ambientVideo;
-      if (plyr) {
-        plyr.pause();
-      }
-    }
-    if (page.embeddedVideo) {
-      plyr = page.embeddedVideo;
-      if (plyr) {
-        plyr.pause();
-      }
-    }
+    pages.triggerComponents(page);
   };
 
   pages.triggerTopBarEvents = function (page) {

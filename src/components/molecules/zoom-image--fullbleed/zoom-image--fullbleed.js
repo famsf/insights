@@ -1,36 +1,54 @@
 /* eslint-disable */
 // Disabling the linter because it can't detect ImageZoom's existence.
 // See https://www.cssscript.com/simple-image-hover-zoom-javascript-library-imagezoom-js/
-(function (document, window, $, ImageZoom) {
-  $(document).ready(function () {
-    $(document).foundation();
-    if (document.querySelectorAll('.img-zoom-drag') > 0) {
-      if (Foundation.MediaQuery.atLeast('large')) {
-        var zoomedImages = new ImageZoom('.img-zoom-drag', { maxZoom: 2, backgroundImageColor: '#000' });
-        $('.img-zoom-drag').mousemove(function (e) {
-          var offset = $(this).offset();
-          var finderBox = $(this).closest('.zoom-image--fullbleed').find('.finder-box');
-          var relX = e.pageX - offset.left;
-          var relY = e.pageY - offset.top;
-          var imgWidth = $(this).width();
-          var imgHeight = $(this).height();
-          var percentThroughWidth = (relX / imgWidth * 100) * .5;
-          var percentThroughHeight = (relY / imgHeight * 100)  * .5;
-          var windowWidth = window.innerWidth;
-          var windowHeight = window.innerHeight;
-          finderBox.css({
-            'top': percentThroughHeight + '%',
-            'left': percentThroughWidth + '%',
-            'height': (windowHeight - 64) / 19 + 'px',
-            'width': windowWidth / 19 + 'px'
-          });
+(function (components, window, $, ImageZoom) {
+  var finderBoxScaleFactor = 0.05;
+  components.zoomImageFullbleed = {};
+  $(document).foundation();
+
+  components.zoomImageFullbleed.instantiate = function (page) {
+    var $el = $(page.components.zoomImageFullbleed.el);
+    var $imgZoomDrag = $($el.find('.img-zoom-drag'));
+    $el.find('.scrooll-finder').hide();
+    page.components.zoomImageFullbleed.zoomedImages = new ImageZoom($imgZoomDrag, {
+      maxZoom: 2,
+      backgroundImageColor: '#000'
+    });
+  }
+
+  components.zoomImageFullbleed.trigger = function (page) {
+    var $el = $(page.components.zoomImageFullbleed.el);
+    var $imgZoomDrag = $($el.find('.img-zoom-drag'));
+    // if (Foundation.MediaQuery.atLeast('large')) {
+      $imgZoomDrag.on('mousemove.zoomImageFullbleed', function (e) {
+        var offset = $(this).offset();
+        var finderBox = $($el.find('.finder-box'));
+        var relX = e.pageX - offset.left;
+        var relY = e.pageY - offset.top;
+        var imgWidth = $el.width();
+        var imgHeight = $el.height();
+        var windowWidth = window.innerWidth;
+        var windowHeight = window.innerHeight;
+        var percentThroughWidth = (relX / windowWidth) * 100;
+        var percentThroughHeight = (relY / (windowHeight - $('.top-bar__wrapper').height())) * 100;
+        finderBox.css({
+          'top': Math.ceil(percentThroughHeight * 0.5)+ '%',
+          'left': Math.ceil(percentThroughWidth * 0.5) + '%',
+          'width': (windowWidth * finderBoxScaleFactor) + 'px',
+          'height': (windowHeight * finderBoxScaleFactor) + 'px'
         });
-      }
-      else {
-        // Can't show this section if we're on mobile devices.
-        $('.img-zoom-drag').closest('section.page').css('display', 'none');
-      }
-      var zoomedImages = new ImageZoom('.img-zoom-drag', { maxZoom: 3, backgroundImageColor: '#000' });
-    }
-  });
-}(document, window, jQuery, ImageZoom));
+        // $el.find('.scroll-finder').show();
+      });
+    // }
+        // This was causing terrible terrible problems in mobile.
+        // else {
+        //   $('.img-zoom-drag').closest('section.page').css('display', 'none');
+        // }
+  };
+
+  components.zoomImageFullbleed.untrigger = function (page) {
+    var $el = $(page.components.zoomImageFullbleed.el);
+    // $el.find('.scroll-finder').hide();
+    $el.off('mousemove.zoomImageFullbleed');
+  };
+}(window.fds.components = window.fds.components || {}, window, jQuery, ImageZoom));

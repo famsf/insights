@@ -9,28 +9,25 @@
       alt: Fubar
       style: horizontal
 #}
-{% set finderBoxClasses = "img-zoom-drag" %}
 {% set style = "zoom-bleed" %}
-
 <div class="zoom-image--fullbleed">
-  {% include "@molecules/picture/picture.html.twig" with {
+  {% include "@atoms/img/img.html.twig" with {
     type: 'horizontal',
-    classes: finderBoxClasses,
+    classes: 'img-zoom-drag',
     src: content__image.src
   } %}
   <div class="scroll-finder">
     <div class="finder-box"></div>
-    {% include "@molecules/picture/picture.html.twig" with {
+    {% include "@atoms/img/img.html.twig" with {
       type: 'small',
       classes: '',
       src: content__image.src
     } %}
   </div>
-
-  {% if credit is not empty %}
+  {% if credits is not empty %}
     {% include "@atoms/caption/caption.html.twig" with {
-      text: credit,
-      id: 'zoom-image-caption__' ~ id
+      text: credits,
+      id: 'zoom-img__credits_' ~ id
     } only %}
   {% endif %}
 </div>
