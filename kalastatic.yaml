@@ -10,6 +10,9 @@ destination: "build"
 # What BrowserSync will consider the start page.
 #bsIndex: kalastatic/browsersync-redirect.html
 
+# Clean the build directory
+cleanBuild: true
+
 # What BrowserSync will consider the web root.
 bsWebroot: build
 
