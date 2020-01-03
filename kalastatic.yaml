@@ -13,9 +13,6 @@ destination: "build"
 # What BrowserSync will consider the web root.
 bsWebroot: build
 
-# Clear the build directory?
-cleanBuild: false
-
 plugins:
   # Load information from the environment variables.
   - 'metalsmith-env'
