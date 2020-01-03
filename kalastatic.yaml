@@ -13,6 +13,9 @@ destination: "build"
 # What BrowserSync will consider the web root.
 bsWebroot: build
 
+# Clear the build directory?
+cleanBuild: false
+
 plugins:
   # Load information from the environment variables.
   - 'metalsmith-env'
@@ -335,7 +338,7 @@ pluginOpts:
       on_view: Content_Is-on-View
       tags: Content_Tags
       dates: Content_Dates
-      
+
       # Other Stories
       otherstories_heading: Content_Other-Stories-Title
       story1_title: Content-Story-One_Title
