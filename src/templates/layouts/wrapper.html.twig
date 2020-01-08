@@ -25,7 +25,10 @@
       {% include "@atoms/og_tag/og_tag.html.twig" with { property: "description", content: og__description } only %}
       {% include "@atoms/og_tag/og_tag.html.twig" with { property: "type", content: "website" } only %}
       {% include "@atoms/og_tag/og_tag.html.twig" with { property: "url", content: og__curl } only %}
-      {% include "@atoms/og_tag/og_tag.html.twig" with { property: "image", content: og__image.src ~ '.jpg' } only %}
+      {# Strip the ? params from the file names #}
+      {% set ogimagesrc = og__image.src|split("?") %}
+      {% set ogimagesrcfirst = ogimagesrc[0] %}
+      {% include "@atoms/og_tag/og_tag.html.twig" with { property: "image", content: ogimagesrcfirst ~ '.jpg' } only %}
 
       <title>
         {{ story__title }}
