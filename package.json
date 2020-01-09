@@ -14,6 +14,7 @@
     "test": "[ \"${CONTEXT}\" = production ] && run-s play redirect || run-s play lint:js",
     "posttest": "cp -f download/*.* build/assets/gathercontent",
     "play": "kalastatic build",
+    "postplay": "find . -type f -name '*[\\?]*' -delete",
     "redirect": "cp _redirects build/",
     "prestart": "run-s lint:js",
     "start": "kalastatic start",
