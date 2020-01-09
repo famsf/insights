@@ -10,15 +10,23 @@
 {% set titleSecondLine = titleArray[1]|trim %}
 {% if background__image[background__image|length - 1].src %}
   {% set background__image = background__image[background__image|length - 1] %}
+  {# Strip the ? params from the file names #}
+  {% set background__image__src = background__image.src|split("?") %}
+  {% set background__image__src = background__image__src[0] %}
 {% endif %}
-<div class="cover_page {% if use_video_hero|trim == "True" %}video_cover{% endif %}" id="CoverPage" data-bg-image="{% if use_video_hero|trim == "True" %}{{ video_bg__poster__image.src }}{% else %}{{ background__image.src }}{% endif %}.jpg" data-bg-image-alt="{{ background__image.alt }}">
+{% if video_bg__poster__image.src %}
+  {# Strip the ? params from the file names #}
+  {% set video_bg__poster__image__src = video_bg__poster__image.src|split("?") %}
+  {% set video_bg__poster__image__src = video_bg__poster__image__src[0] %}
+{% endif %}
+<div class="cover_page {% if use_video_hero|trim == "True" %}video_cover{% endif %}" id="CoverPage" data-bg-image="{% if use_video_hero|trim == "True" %}{{ video_bg__poster__image__src }}{% else %}{{ background__image__src }}{% endif %}.jpg" data-bg-image-alt="{{ background__image.alt }}">
   {% if use_video_hero|trim == "True" %}
     {#
      Video needs to be muted, since Chrome 66+ will not autoplay video with sound.
      WCAG general accessibility recommendation is that media such as background video play through only once.
      Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button
     #}
-    <video class="video_element video_player" poster="{{ video_bg__poster__image.src }}" playsinline autoplay muted loop>
+    <video class="video_element video_player" poster="{{ video_bg__poster__image__src }}" playsinline autoplay muted loop>
       <source src="{{ video_bg__file.src }}.mp4" type="video/mp4">
     </video>
   {% endif %}
@@ -31,7 +39,19 @@
   </div>
   <div class="cover_loader_container">
     <div class="top loaderpane">
-      <div class="headline mask" style="background-image: url({% if use_video_hero|trim == "True" %}{{ video_bg__poster__image.src }}{% else %}{{ background__image.src }}{% endif %}.jpg)"><span class="text">{{ titleFirstLine }}{% if titleArray|length > 1 %}<br>{{ titleSecondLine }}{% endif %}</span></div>
+
+      {% if video_bg__poster__image.src %}
+        {# Strip the ? params from the file names #}
+        {% set video_bg__poster__image_src = video_bg__poster__image.src|split("?") %}
+        {% set video_bg__poster__image_src = video_bg__poster__image_src[0] %}
+      {% endif %}
+      {% if background__image.src %}
+        {# Strip the ? params from the file names #}
+        {% set background__image_src = background__image.src|split("?") %}
+        {% set background__image_src = background__image_src[0] %}
+      {% endif %}
+
+      <div class="headline mask" style="background-image: url({% if use_video_hero|trim == "True" %}{{ video_bg__poster__image_src }}{% else %}{{ background__image_src }}{% endif %}.jpg)"><span class="text">{{ titleFirstLine }}{% if titleArray|length > 1 %}<br>{{ titleSecondLine }}{% endif %}</span></div>
     </div >
     <div id="mask_loader" class="mask_loader loader loaderpane">
       <div class="headline"><span class="text">{{ titleFirstLine }}{% if titleArray|length > 1 %}</span><br><span>{{ titleSecondLine }}{% endif %}</span></div>
