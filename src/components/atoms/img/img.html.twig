@@ -12,15 +12,19 @@
 
   {% set sizes = default_image_sizes %}
   {% set type = default_image_type %}
+
+  {# Strip the ? params from the file names #}
+  {% set newsrc = src|split("?") %}
+  {% set outsrc = newsrc[0] %}
   <img
     class="{{ classes }}"
     alt="{{ alt }}"
     width="{{ width }}"
     height="{{ height }}"
-    src="{{ src }}.jpg"
+    src="{{ outsrc }}.jpg"
     ci-responsive
-    ci-src="{{ src }}.jpg"
-    ci-params="{{ ci.quality(src, quality) }}"
+    ci-src="{{ outsrc }}.jpg"
+    ci-params="{{ ci.quality(outsrc, quality) }}"
     {% if type %}
       ci-type="{{ type }}"
     {% endif %}

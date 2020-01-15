@@ -4,7 +4,11 @@
    WCAG general accessibility recommendation is that media such as background video play through only once.
    Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button
   #}
-  <video class="video_element video_player" poster="{{ video__poster__image.src }}" playsinline autoplay muted loop>
+
+  {% set video__poster__imagesrc = video__poster__image.src|split("?") %}
+  {% set video__poster__imagesrc = video__poster__imagesrc[0] %}
+
+  <video class="video_element video_player" poster="{{ video__poster__imagesrc }}" playsinline autoplay muted loop>
     <source src="{{ video__file.src }}.mp4" type="video/mp4">
   </video>
   <div class=" grid-x grid-margin-x">

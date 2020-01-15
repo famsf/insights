@@ -10,6 +10,9 @@ destination: "build"
 # What BrowserSync will consider the start page.
 #bsIndex: kalastatic/browsersync-redirect.html
 
+# Clean the build directory
+cleanBuild: true
+
 # What BrowserSync will consider the web root.
 bsWebroot: build
 
@@ -335,7 +338,7 @@ pluginOpts:
       on_view: Content_Is-on-View
       tags: Content_Tags
       dates: Content_Dates
-      
+
       # Other Stories
       otherstories_heading: Content_Other-Stories-Title
       story1_title: Content-Story-One_Title
