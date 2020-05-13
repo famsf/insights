@@ -1,7 +1,7 @@
 {
   "name": "famsf-insights",
   "description": "FAMSF Insights: A series of free, in-depth looks into our exhibitions, enriched with multimedia experiences. Learn more about an exhibition's cultural context and artworks before you visit and discover details about the works that might otherwise go unnoticed.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "license": "MIT",
   "repository": {
