@@ -58,6 +58,7 @@ pluginOpts:
       - 'for-testing.md'
       - 'late-monet.md'
       - 'artists-books.md'
+      - 'iliaz.md'
     # map template ids to components so we can handle defaults
     # we're also removing Meta_Component from "atom" GatherContent templates
     # Since they removed template defaults, and certain components —
