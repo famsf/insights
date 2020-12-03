@@ -12,7 +12,7 @@
   "scripts": {
     "install": "napa",
     "test": "[ \"${CONTEXT}\" = production ] && run-s play redirect || run-s play lint:js",
-    "posttest": "cp -f download/*.* build/assets/gathercontent",
+    "posttest": "mkdir -p build/assets/gathercontent && cp -f download/*.* build/assets/gathercontent",
     "play": "kalastatic build",
     "postplay": "find . -type f -name '*[\\?]*' -delete",
     "redirect": "cp _redirects build/",
