@@ -1,0 +1,76 @@
+{% if auto_height != "" and auto_height is defined %}
+  {% set auto_height = "height-auto" %}
+{% endif %}
+
+{% if theme == "Theme Default Light" or theme == "" %}
+  {% set theme = "" %}
+{% elseif theme == "Theme Dark" %}
+  {% set theme = "theme--dark" %}
+{% elseif theme == "Theme Primary" %}
+  {% set theme = "theme--primary" %}
+{% elseif theme == "Theme Primary Light" %}
+  {% set theme = "theme--primary-light" %}
+{% elseif theme == "Theme Primary Dark"  %}
+  {% set theme = "theme--primary-dark" %}
+{% endif %}
+
+{# Don't assume that the section should be columns for the footer #}
+{% if 'footer' in slug %}
+
+  {% for component in children %}
+    {% include templateMap[component.template_id] with component|merge({
+      templateMap: templateMap
+    }) only %}
+  {% endfor %}
+
+{% else %}
+
+  <div class="two_up--primary fluid {{ auto_height }} {{ theme }}">
+    <div class="wrapper grid-x grid-margin-x " id="{{slug}}">
+      {% for column in children %}
+        {% if column.column_offset == "Offset 1" %}
+          {% set offset = "medium-offset-1" %}
+        {% elseif column.column_offset == "Offset 2" %}
+          {% set offset = "medium-offset-2" %}
+        {% endif %}
+        <div id="" class="cell medium-4 {{ offset }}" {% if "Left" in column._name  %} style="order: 1;{% else %} style="order: 2;{% endif %}">
+          {% for component in column.children %}
+            {% if 'picture--captioned' in templateMap[component.template_id] %}
+              {% set component = component|merge({
+                picture: component.content__image,
+                caption: {
+                  id: component.slug ~ '_caption',
+                  brief: component.caption__brief,
+                  text: component.caption__text
+                }
+              }) %}
+            {% elseif 'content--simple' in templateMap[component.template_id] %}
+              {% set component = component|merge({
+                title: component.content__title,
+                body: component.content__body,
+                quote: component.content__quote,
+                attribution: content.content__attribution,
+                cta: content.content__cta__button
+              }) %}
+            {% elseif 'commentary' in templateMap[component.template_id] %}
+              {% set component = component|merge({
+                image: component.author__image,
+                author__title: component.author__title,
+                author__name: component.author__name,
+                author__commentary: component.commentary
+              }) %}
+            {% elseif 'cliff-note' in templateMap[component.template_id] %}
+              {% set component = component|merge({
+                text: component.content__cliff_note
+              }) %}
+            {% endif %}
+            {% include templateMap[component.template_id] with component|merge({
+              templateMap: templateMap
+            }) only %}
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+{% endif %}

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+      <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/vnd.microsoft.icon">
+      <link rel="apple-touch-icon" href="/assets/images/favicon.png">
+      <link rel="icon" href="/assets/images/favicon.png">
+      <!--[if IE]><link rel="shortcut icon" href="images/favicon.ico"><![endif]-->
+      <!-- or, set /favicon.ico for IE10 win -->
+      <meta name="msapplication-TileColor" content="#f00">
+      <meta name="msapplication-TileImage" content="/images/favicon.png">
+
+      <!-- Google Tag Manager -->
+      <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-T73TW6V');</script>
+
+      <!-- End Google Tag Manager -->
+      <meta name="description" content="Insights are a series of free, in-depth looks into our exhibitions, enriched with multimedia experiences. Learn more about an exhibition's cultural context and artworks before you visit and discover details about the works that might otherwise go unnoticed.">
+      <meta property="og:title" content="" />
+      <meta property="og:description" content="" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="" />
+      
+                  <meta property="og:image" content=".jpg" />
+
+      <title>
+        
+      </title>
+
+      
+
+                    <script src="/js/cloudimage/cloudimage.responsive.min.js?1607011090"></script>
+              <script src="/js/cloudimage/cloudimage.custom.js?1607011090"></script>
+              <script src="/js/imagezoom/image_zoom.min.js?1607011090"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js?1607011090"></script>
+            
+
+              <link rel="stylesheet" type="text/css" href="https://use.typekit.net/bmv1rht.css?1607011090">
+              <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css?1607011090">
+      
+      <link rel="stylesheet" type="text/css" href="/styles/hub.css?1607011090">
+
+  </head>
+  <body class="  hub">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T73TW6V"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="main">
+      <div id="insights-hub" class="off-canvas-wrapper hub">
+  <div class="top-bar__wrapper">
+  <div id="top-bar" class="top-bar sticky invert">
+    <div class="top-bar-left">
+      <div class="menu-text">
+        <div class="logo">
+  <a href="/">
+    <?xml version="1.0" encoding="UTF-8"?>
+    <svg width="148px" height="17px" viewBox="0 0 148 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+      <title>INSIGHTS</title>
+      <desc>Created with Sketch.</desc>
+      <defs></defs>
+      <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="globalnav_white" transform="translate(-25.000000, -27.000000)" fill="#000000" fill-rule="nonzero">
+          <g id="Group-19">
+            <g id="nav---white" transform="translate(25.000000, 17.000000)">
+              <g id="INSIGHTS" transform="translate(0.000000, 10.000000)">
+                <polygon id="Shape" points="0 16 0 0 1 0 1 15.9973338"></polygon>
+                <path d="M22.4609665,15.998667 C21.3072381,14.2311089 20.3035207,12.6977145 19.4498141,11.3984837 C18.5961076,10.099253 17.8582987,8.98131023 17.2363875,8.0446555 C16.6144763,7.10800078 16.097529,6.31886473 15.6855456,5.67724735 L14.6359064,4.03365825 L13.8827903,2.86728318 C13.6728625,2.54203116 13.4782419,2.22077814 13.2989285,1.90352412 C13.2989285,2.13013413 13.2989285,2.38340415 13.3094249,2.66333417 C13.3199213,2.94326418 13.3212333,3.29784221 13.3212333,3.72973423 C13.3212333,4.16162626 13.3212333,4.70015829 13.3317297,5.34932933 C13.3422261,5.99850037 13.3435382,6.80763143 13.3435382,7.77405649 L13.3435382,16 L12,16 L12,0 L13.605948,0 C14.804286,1.83954011 15.8416794,3.42980921 16.7181281,4.7708073 L18.9761644,8.21527951 C19.605948,9.17326224 20.1228953,9.96995196 20.5270063,10.6053487 C20.9311174,11.2407454 21.2718128,11.7739454 21.5490925,12.2049488 C21.8263722,12.6350635 22.0511699,12.9905301 22.2234857,13.2713488 C22.3953641,13.5499458 22.5633064,13.8192119 22.7286245,14.0711489 C22.7128799,13.7698909 22.7063197,13.4486378 22.7063197,13.1087228 C22.7063197,12.7688078 22.7063197,12.3609098 22.6945113,11.8850287 C22.6827028,11.4091477 22.6840149,10.8426227 22.6840149,10.1854536 C22.6840149,9.5282846 22.6840149,8.72715155 22.6722064,7.78605349 C22.660398,6.84495543 22.66171,5.73456636 22.66171,4.46555028 L22.66171,0 L24,0 L24,15.996001 L22.4609665,15.998667 Z" id="Shape"></path>
+                <path d="M39.175229,17 C37.5541915,17 35.5479291,16.5124743 34,15.6994812 L34.9194783,11.6804325 L35.2091,11.7276995 C35.7166407,15.257872 36.8962162,16.5813491 39.3931482,16.5813491 C42.053168,16.5813491 43.0190421,15.0255883 43.0190421,13.3536856 C43.0190421,8.47572727 34.2896216,9.86942965 34.2896216,4.45667852 C34.2896216,1.99474107 36.1524791,7.20559619e-05 39.5857606,7.20559619e-05 C41.2946523,-0.00629546445 42.9765514,0.409456439 44.469962,1.20740726 L43.745908,4.69166323 L43.4759694,4.6430457 C43.1132394,1.85564093 41.590617,0.438980269 39.2680204,0.438980269 C36.9960372,0.438980269 35.5690181,1.64631548 35.5690181,3.24934332 C35.5690181,7.26704157 44.9999977,6.76060902 44.9999977,12.1220416 C45.0028095,14.9094464 42.4397988,17 39.175229,17 Z" id="Shape"></path>
+                <path d="M60,0.205980066 C59.0439276,0.297674419 58.1059432,0.640531561 58.1059432,2.12624585 L58.1059432,13.8750831 C58.1059432,15.3607973 59.0387597,15.7036545 59.994832,15.7940199 L59.994832,16 L54,16 L54,15.7940199 C54.9547804,15.7036545 55.8888889,15.3607973 55.8888889,13.8750831 L55.8888889,2.12624585 C55.8888889,0.640531561 54.9547804,0.297674419 54,0.205980066 L54,0 L60,0 L60,0.205980066 Z" id="Shape"></path>
+                <path d="M82.1114271,15.5586574 C80.867994,16.2347093 78.8428978,17 76.7482014,17 C71.5910992,17 68,13.0937724 68,8.53447864 C68,3.49248389 71.8668228,0 76.8860632,0 C79.1413753,0 81.1905638,0.558418834 82.1810273,1.11683767 L81.4903798,5.09337469 L81.1678099,5.04605106 C80.6150243,2.04708502 78.8656517,0.371828521 76.4028777,0.371828521 C72.8117785,0.371828521 70.647482,3.6047085 70.647482,8.0463692 C70.647482,13.1627297 73.2253639,16.6051857 76.8860632,16.6051857 C78.7960515,16.6051857 79.9243768,15.604629 79.9243768,13.9996819 L79.9243768,11.3955301 C79.9243768,9.95418754 78.3824661,9.53503539 77.4843567,9.44174024 L77.4843567,9.25650203 L84,9.25650203 L84,9.44174024 C82.9399364,9.53503539 82.1114271,9.95418754 82.1114271,11.3955301 L82.1114271,15.5586574 Z" id="Shape"></path>
+                <path d="M98.1597509,16 L92,16 L92,15.7940199 C92.9724537,15.7036545 93.923853,15.3607973 93.923853,13.8750831 L93.923853,2.12624585 C93.923853,0.640531561 92.9724537,0.297674419 92,0.205980066 L92,0 L98.1597509,0 L98.1597509,0.205980066 C97.1412405,0.297674419 96.1858935,0.685714286 96.1858935,2.17142857 L96.1858935,7.47508306 L102.818054,7.47508306 L102.818054,2.17142857 C102.818054,0.685714286 101.867971,0.297674419 100.844197,0.205980066 L100.844197,0 L107,0 L107,0.205980066 C106.027546,0.297674419 105.076147,0.640531561 105.076147,2.12624585 L105.076147,13.8750831 C105.076147,15.3607973 106.027546,15.7036545 107,15.7940199 L107,16 L100.84946,16 L100.84946,15.7940199 C101.867971,15.7036545 102.823318,15.3142857 102.823318,13.8285714 L102.823318,7.90830565 L96.1858935,7.90830565 L96.1858935,13.8312292 C96.1858935,15.3169435 97.1359768,15.7063123 98.1597509,15.7966777 L98.1597509,16 Z" id="Shape"></path>
+                <path d="M128.302299,0 L129,4.59211291 L128.698474,4.59211291 L128.137338,3.47364051 C127.023179,1.16629307 125.973923,0.342714819 123.559011,0.342714819 L123.185822,0.342714819 L123.185822,13.6926526 C123.185822,15.286675 124.140429,15.7037775 125.11667,15.7941054 L125.11667,16 L118.930655,16 L118.930655,15.7941054 C119.906896,15.7037775 120.861503,15.2919884 120.861503,13.6926526 L120.861503,0.342714819 L120.651922,0.342714819 C118.232953,0.342714819 116.865946,1.39476961 115.86131,3.44973018 L115.302878,4.59211291 L115,4.59211291 L115.832915,0 L128.302299,0 Z" id="Shape"></path>
+                <path d="M142.173163,17 C140.553738,17 138.546326,16.5124743 137,15.6994812 L137.917955,11.6804325 L138.208946,11.7276995 C138.716422,15.257872 139.895847,16.5813491 142.391054,16.5813491 C145.050735,16.5813491 146.017891,15.0255883 146.017891,13.3536856 C146.017891,8.47572727 137.289585,9.86942965 137.289585,4.45667852 C137.289585,1.99474107 139.150799,7.20559619e-05 142.585048,7.20559619e-05 C144.293722,-0.00629546445 145.975406,0.409456439 147.468626,1.20740726 L146.743259,4.69166323 L146.477572,4.64574668 C146.114888,1.8583419 144.591054,0.441681242 142.27016,0.441681242 C139.997061,0.441681242 138.571629,1.64901645 138.571629,3.25204429 C138.571629,7.26974255 148,6.76330999 148,12.1247426 C148,14.9094464 145.437316,17 142.173163,17 Z" id="Shape"></path>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </svg>
+  </a>
+</div>
+        <div class="tagline show-for-large">
+  From the de Young and Legion of Honor
+</div>
+      </div>
+    </div>
+    <div class="top-bar-right">
+      <div class="button-group hide-for-small-only">
+                                  <a href="https://tickets.famsf.org/events/283/list" class="button " id="" target="_blank">Buy Tickets</a>
+              </div>
+      <div class="cell shrink top-bar-hamburger text-right show-for-small-only">
+        <button class="hamburger" type="button" data-toggle="off-canvas"></button>
+      </div>
+    </div>
+  </div>
+</div>
+  <div id="app" class="chapters_container off-canvas-content" >
+    <div class="hub-section">
+  <div class="featured-story">
+    <div class="featured-story-wrapper">
+      
+
+    
+  
+      <img
+    class="featured-story-img"
+    alt=""
+    width=""
+    height=""
+    src=".jpg"
+    ci-responsive
+    ci-src=".jpg"
+    ci-params="q70"
+          >
+
+            <div class="overlay">
+        <div class="overlay__contents">
+          <h1></h1>
+                              <div class="button-wrapper">
+                                  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+        <div class="stories">
+      <div class="story-filter">
+        <span class="filter-label">Filter:</span>
+      </div>
+            </div>
+  </div>
+  </div>
+</div>
+<div class="off-canvas position-right show-for-small-only" id="off-canvas" data-off-canvas data-transition="push">
+<div class="cover_page">
+    <div class="underlay">
+      <div class="underlay_contents">
+        <h1 class="headline exhibit_logo">
+          
+        </h1>
+      </div>
+    </div>
+  </div>
+
+      <div class="off-canvas__buttons text-center">
+      <a href="https://tickets.famsf.org/events/283/list" class="button " id="" target="_blank">Buy Tickets</a>
+    </div>
+  
+  
+<nav id="mobile_nav">
+  <h3 title="mobile_nav__title">Chapters</h3>
+  <ul class="menu vertical menu--mobile">
+                <li>
+        <a href="#chapter_0" data-chapter="0" data-chapter-index="1">
+          <span class="menu--mobile__numeral"></span>
+          <span class="menu--mobile__title"></span>
+        </a>
+      </li>
+      </ul>
+</nav>
+  <footer class="footer" id="insights__footer">
+</footer>
+</div>
+
+    </div>
+                      <script src="/js/jquery/jquery.js?1607011090"></script>
+              <script src="/js/foundation/foundation.min.js?1607011090"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.1.2/flickity.pkgd.min.js?1607011090"></script>
+              <script src="/js/hubscripts.js?1607011090"></script>
+              <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js?1607011090"></script>
+            </body>
+</html>
