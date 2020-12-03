@@ -12,8 +12,8 @@
   "scripts": {
     "install": "napa",
     "test": "[ \"${CONTEXT}\" = production ] && run-s play redirect || run-s play lint:js",
-    "posttest": "cp -f download/*.* build/assets/gathercontent",
-    "play": "kalastatic build",
+    "posttest": "mkdir -p build/assets/gathercontent && cp -f download/*.* build/assets/gathercontent",
+    "play": "kalastatic build && kalastatic build",
     "postplay": "find . -type f -name '*[\\?]*' -delete",
     "redirect": "cp _redirects build/",
     "prestart": "run-s lint:js",
@@ -52,7 +52,6 @@
     "jquery-match-height": "^0.7.2",
     "kalastatic": "^4.2.2",
     "kalastatic-twig-filters": "^1.0.0",
-    "kss-bootstrap": "^4.1.1",
     "metalsmith-assets": "^0.1.0",
     "metalsmith-gathercontent": "github:kalamuna/metalsmith-gathercontent#download",
     "metalsmith-include": "github:kalamuna/metalsmith-include#includeWholeObject",
@@ -65,7 +64,7 @@
     "plyr": "3.5.2",
     "postcss-syntax": "^0.28.0",
     "read-chunk": "^3.0.0",
-    "twig-drupal-filters": "^2.0.0",
+    "twig-drupal-filters": "^3.1.2",
     "what-input": "^4.1.3"
   },
   "napa": {
