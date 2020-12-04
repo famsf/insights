@@ -1,17 +1,9 @@
 # FAMSF Insights [![(build status icon goes here)]()]()
 
 
-## Stack
-
-* [Metalsmith](http://www.metalsmith.io) is used for static site generation
-* [Gulp](http://gulpjs.com) is used as a development tool
-* [Swig](https://paularmstrong.github.io/swig/) for HTML templating
-* [SCSS](http://sass-lang.com/) for CSS pre-processing
-
-
 ## Requirements
 
-* [Node.js](http://nodejs.org/) >=4.2.1 though thats a bit old.
+* [Node.js](http://nodejs.org/) >= 11
 
 
 ## Usage
