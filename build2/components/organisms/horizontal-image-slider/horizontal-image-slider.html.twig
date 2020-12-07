@@ -1,0 +1,10 @@
+<div class="horizontal-image-slider owl-carousel owl-theme {{ classes }}">
+  {% for slide in children %}
+  <!-- {{ templateMap[slide.template_id] }} -->
+    {% set template = templateMap[slide.template_id] %}
+    {# TODO: Figure out which template is missing. #}
+    {# if template #}
+      {% include template with slide only %}
+    {# endif #}
+  {% endfor %}
+</div>

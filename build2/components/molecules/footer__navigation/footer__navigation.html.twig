@@ -1,0 +1,24 @@
+<div class="footer__navigation">
+  <div class="grid-container grid-container-padded">
+    <div class="grid-x">
+      <div class="cell large-6">
+        <ul class="menu menu--footer">
+          {% if footer__copyright__link_1 %}
+            <li>{{ footer__copyright__link_1|striptags('<a>') }}</li>
+          {% endif %}
+          {% if footer__copyright__link_2 %}
+            <li>{{ footer__copyright__link_2|striptags('<a>') }}</li>
+          {% endif %}
+          {% if footer__copyright__link_3 %}
+            <li>{{ footer__copyright__link_3|striptags('<a>') }}</li>
+          {% endif %}
+        </ul>
+      </div>
+      <div class="cell large-6">
+        <div class="copyright">
+          © {{ 'now'|date('Y') }} {{ footer__copyright__text|striptags }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

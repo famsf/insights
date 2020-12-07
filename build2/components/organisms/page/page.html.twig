@@ -1,0 +1,60 @@
+{# Theme Classes #}
+{% if theme == "Theme Default Light" or theme == "" %}
+  {% set theme = "" %}
+{% elseif theme == "Theme Dark" %}
+  {% set theme = "theme--dark" %}
+{% elseif theme == "Theme Primary" %}
+  {% set theme = "theme--primary" %}
+{% elseif theme == "Theme Primary Light" %}
+  {% set theme = "theme--primary-light" %}
+{% elseif theme == "Theme Primary Dark"  %}
+  {% set theme = "theme--primary-dark" %}
+{% endif %}
+
+{# Create classes sting if it doesn't exist #}
+{% if not classes %}
+  {% set classes = '' %}
+{% endif %}
+
+{# Page Classes #}
+{% if page__classes %}
+  {% for class in page__classes %}
+    {% set classes = classes ~ ' ' ~ class %}
+  {% endfor %}
+{% endif %}
+
+{# Override classes for the footer #}
+{% if 'footer' in slug %}
+  {% set classes = 'height-auto' %}
+{% endif %}
+
+{# Hide Chapter Nav Class #}
+{% if content__hide_chapter_nav %}
+  {% set classes = classes ~ ' ' ~ 'hide-chapter-nav' %}
+{% endif %}
+<section class="page {{ classes }} {{ theme }}" id="chapter_{{ id }}" data-page-index="{{ index }}">
+  <div class="frame">
+    {% set adenda = {} %}
+    {% if 'page/page.html.twig' in component %}
+      {% for child in children %}
+        <!-- {{ templateMap[child.template_id] }} -->
+        {% include templateMap[child.template_id] with child|merge({ templateMap: templateMap }) only %}
+      {% endfor %}
+    {% elseif component %}
+      {% if 'cover_page' in component %}
+        {% set adenda = {
+          exhibit__dates: exhibit__dates,
+          credits: credits
+        } %}
+      {% elseif 'chapter__title' in component %}
+        {% set adenda = {
+          chapter__title: chapter__title,
+          chapter__numeral: chapter__numeral,
+          credits: credits,
+          background__image: background__image
+        } %}
+      {% endif %}
+      {% include component with _context|merge(adenda) only %}
+    {% endif %}
+  </div>
+</section>

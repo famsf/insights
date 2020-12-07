@@ -1,0 +1,84 @@
+{% macro print(value, default) %}
+  {{- value is defined ? value : default -}}
+{% endmacro %}
+
+{% if theme == "Theme Default Light" or theme == "" %}
+  {% set theme = "" %}
+{% elseif theme == "Theme Dark" %}
+  {% set theme = "theme--dark" %}
+{% elseif theme == "Theme Primary" %}
+  {% set theme = "theme--primary" %}
+{% elseif theme == "Theme Primary Light" %}
+  {% set theme = "theme--primary-light" %}
+{% elseif theme == "Theme Primary Dark"  %}
+  {% set theme = "theme--primary-dark" %}
+{% endif %}
+
+<div class="scroll-comparison grid-x fluid {{ classes }} {{ theme }}" id="{{ id }}" data-snap-id="{{ snap_id }}">
+  <div class="cell small-12 large-8 large-offset-2 xlarge-6 xlarge-offset-3">
+    <div class="wrapper grid-x grid-margin-x">
+      <div class="cell active" {{ left.attributes }}>
+        {% set length = left__image|length - 1 %}
+        {% if left__image[length].src %}
+          {% set img = left__image[length] %}
+        {% else %}
+          {% set img = left__image %}
+        {% endif %}
+        {% include "@molecules/picture/picture--captioned.html.twig" with {
+          picture: {
+            src: img.src,
+            style: 'square',
+            alt: img.alt
+          },
+          caption: {
+            id: slug ~ '__left__caption',
+            brief: left__caption_brief,
+            text: left__caption
+          }
+        } only %}
+        {% include "@atoms/h3/h3.html.twig" with { text: left__title|striptags('<em><i><u><strong>') } only %}
+        <div class="content">
+          {{ left__body }}
+          {% if left__inline_quote__text %}
+            {% include "@molecules/inline-quote/inline-quote.html.twig" with {
+              text: left__inline_quote__text|striptags('<a><b><i><em><strong>'),
+              name: left__inline_quote__name|striptags('<a><b><i><em><strong>'),
+              date: left__inline_quote__date|striptags('<a><b><i><em><strong>')
+            } %}
+          {% endif %}
+        </div>
+      </div>
+      <div class="cell" {{ right.attributes }}>
+        {% set length = right__image|length - 1 %}
+        {% if right__image[length].src %}
+          {% set img = right__image[length] %}
+        {% else %}
+          {% set img = right__image %}
+        {% endif %}
+        {% include "@molecules/picture/picture--captioned.html.twig" with {
+          picture: {
+            src: img.src,
+            style: 'square',
+            alt: img.alt
+          },
+          caption: {
+            id: slug ~ '__right__caption',
+            brief: right__caption_brief,
+            text: right__caption
+          }
+        } only %}
+        {% include "@atoms/h3/h3.html.twig" with { text: right__title|striptags('<em><i><u><strong>') } only %}
+        <div class="content">
+        {{ right__body }}
+        {% if right__inline_quote__text %}
+          {% include "@molecules/inline-quote/inline-quote.html.twig" with {
+            text: right__inline_quote__text|striptags('<a><b><i><em><strong>'),
+            name: right__inline_quote__name|striptags('<a><b><i><em><strong>'),
+            date: right__inline_quote__date|striptags('<a><b><i><em><strong>')
+          } %}
+        {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

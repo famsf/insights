@@ -1,0 +1,36 @@
+{#
+  NOTE: Original image needs to be HUGE before being put through filters and ideally have an aspect ratio of 4:3.
+  See https://www.cssscript.com/demo/simple-image-hover-zoom-javascript-library-imagezoom-js/
+
+  Example Usage:
+  - components:
+    - template: "@molecules/zoom-image--fullbleed/zoom-image--fullbleed.html.twig"
+      url: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/16_stravinsky-diaghilev.jpg"
+      alt: Fubar
+      style: horizontal
+#}
+{% set finderBoxClasses = "img-zoom-drag" %}
+{% set style = "zoom-bleed" %}
+
+<div class="zoom-image--fullbleed">
+  {% include "@molecules/picture/picture.html.twig" with {
+    type: 'horizontal',
+    classes: finderBoxClasses,
+    src: content__image.src
+  } %}
+  <div class="scroll-finder">
+    <div class="finder-box"></div>
+    {% include "@molecules/picture/picture.html.twig" with {
+      type: 'small',
+      classes: '',
+      src: content__image.src
+    } %}
+  </div>
+
+  {% if credit is not empty %}
+    {% include "@atoms/caption/caption.html.twig" with {
+      text: credit,
+      id: 'zoom-image-caption__' ~ id
+    } only %}
+  {% endif %}
+</div>

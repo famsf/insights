@@ -1,0 +1,20 @@
+<div class="off-canvas position-right show-for-small-only" id="off-canvas" data-off-canvas data-transition="push">
+<div class="cover_page">
+    <div class="underlay">
+      <div class="underlay_contents">
+        <h1 class="headline exhibit_logo">
+          {{ title }}
+        </h1>
+      </div>
+    </div>
+  </div>
+
+  {% if tickets_url %}
+    <div class="off-canvas__buttons text-center">
+      {% include '@atoms/button/button.html.twig' with { text: 'Buy Tickets', href: tickets_url|striptags, target: '_blank' } only %}
+    </div>
+  {% endif %}
+
+  {% include '@molecules/menu--mobile/menu--mobile.html.twig' with { chapters: chapters } only %}
+  {% include '@organisms/footer/footer.html.twig' with { sections: sections, classes: classes } only %}
+</div>
