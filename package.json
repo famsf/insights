@@ -11,12 +11,11 @@
   "main": "build/index.html",
   "scripts": {
     "install": "napa",
-    "test": "[ \"${CONTEXT}\" = production ] && run-s play redirect || run-s play lint:js",
+    "test": "[ \"${CONTEXT}\" = production ] && run-s play redirect || run-s play",
     "posttest": "cp -f download/*.* build/assets/gathercontent",
     "play": "kalastatic build",
     "postplay": "find . -type f -name '*[\\?]*' -delete",
     "redirect": "cp _redirects build/",
-    "prestart": "run-s lint:js",
     "start": "http-server ./build",
     "start-no-lint": "kalastatic start",
     "lint:js": "node ./node_modules/eslint/bin/eslint.js --quiet .",
