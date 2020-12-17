@@ -1,0 +1,30 @@
+<div class="intro-text one_up--primary fluid {{ gridframe|default('grid-frame') }} {{ classes }} {% if intro__has_video_background|trim == "True" %} video-intro{% endif %}">
+  <div class="grid-x grid-margin-x {{ grid }}">
+    <div class="cell medium-8 medium-offset-2">
+      <div class="wrapper">
+        {% include '@atoms/h2/h2.html.twig' with { text: intro__title|striptags('<a><i><em><b><strong>') } %}
+        <div class="text">
+          {{ intro__text|striptags('<a><i><em><b><strong>') }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if intro__has_video_background|trim == "True" %}
+    {#
+     Video needs to be muted, since Chrome 66+ will not autoplay video with sound.
+     WCAG general accessibility recommendation is that media such as background video play through only once.
+     Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button
+    #}
+    {% set intro__video_bg__poster__imagesrc = intro__video_bg__poster__image.src|split("?") %}
+    {% set intro__video_bg__poster__imagesrc = intro__video_bg__poster__imagesrc[0] %}
+    <video class="video_element video_player" poster="{{ intro__video_bg__poster__imagesrc }}" playsinline autoplay muted loop>
+      <source src="{{ intro__video_bg__file.src }}.mp4" type="video/mp4">
+    </video>
+    {% if video_credits is not empty %}
+      {% include "@atoms/caption/caption.html.twig" with {
+        text: video_credits,
+        id: 'credits_' ~ id
+      } only %}
+    {% endif %}
+  {% endif %}
+</div>

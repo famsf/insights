@@ -1,0 +1,320 @@
+%timeline {
+  margin: 70px 35px 20px 30px;
+  @include breakpoint(medium) {
+    margin-left: 80px;
+  }
+  @include breakpoint(large) {
+    margin-left: 90px;
+  }
+  .timeline-item-title,
+  .timeline-item-subtitle,
+  .timeline-item-description,
+  .timeline-images {
+    transition-property: opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    @include breakpoint(large) {
+      opacity: 0;
+    }
+  }
+  .timeline--year.active {
+    .timeline-item-title,
+    .timeline-item-subtitle,
+    .timeline-item-description,
+    .timeline-images {
+      opacity: 1;
+    }
+  }
+  .timeline--year {
+    border-left: 1px solid $white;
+    padding-top: 80px;
+    @include breakpoint(large) {
+      border-left: none;
+      display: flex;
+      padding-top: 0;
+    }
+    &:first-of-type {
+      padding-top: 36px;
+    }
+  }
+  .timeline-title {
+    font-family: $alternate-header-font-family;
+    padding-bottom: 70px;
+    font-size: 1.8em;
+    @include breakpoint(large) {
+      visibility: hidden;
+      position: fixed;
+      top: 64px;
+      width: 100vw;
+      text-align: center;
+      z-index: 1;
+      left: 0;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+  & > h4 {
+    text-align: center;
+    @include breakpoint(large) {
+      margin-top: 100px;
+      margin-right: 85px;
+    }
+  }
+  .timeline-images {
+    @include breakpoint(large) {
+      display: inline-block;
+      width: 30%;
+      margin-left: 65px;
+    }
+  }
+  .timeline-item-image {
+    padding-bottom: 10px;
+    padding-left: 30px;
+    @include breakpoint(large) {
+      padding-left: 0;
+      &:first-of-type {
+        margin-top: 60px;
+      }
+    }
+    .caption__brief {
+      padding-top: 5px;
+    }
+  }
+
+  .theme--dark & {
+    .timeline-item-text {
+      color: white;
+    }
+  }
+
+  .timeline-item-text {
+    padding-left: 30px;
+    color: white;
+    @include breakpoint(large) {
+      display: inline-block;
+      width: 60%;
+      vertical-align: top;
+      padding-left: 10%;
+      padding-bottom: 80px;
+      margin-left: 12%;
+      border-left: none;
+      position: relative;
+    }
+  }
+  .timeline-item-title {
+    @include font-sizes(60, 160);
+    font-family: $body-font-family;
+    line-height: 1;
+
+    @include breakpoint(large) {
+      margin-top: -35px;
+    }
+
+    &.smaller-text {
+      font-size: 5.50em;
+      line-height: 1.1;
+      @include breakpoint(large) {
+        margin-top: 5px;
+      }
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      -moz-border-radius: 7.5px;
+      -webkit-border-radius: 7.5px;
+      border-radius: 7.5px;
+      background-color: $white;
+      position: absolute;
+      left: 23px;
+      @include breakpoint(medium) {
+        left: 73px;
+      }
+      @include breakpoint(large) {
+        height: 0;
+        width: 0;
+        margin-top: 0;
+      }
+    }
+  }
+  .timeline-item-subtitle {
+    font-family: $header-font-family;
+    font-size: 1.8em;
+        @include breakpoint(large) {
+      width: 80%;
+    }
+  }
+  .timeline-item-description {
+    font-size: 1.2em;
+    padding-bottom: 1em;
+    margin-bottom: 0;
+    @include breakpoint(large) {
+      width: 80%;
+    }
+  }
+  .timeline-year {
+    color: $white;
+    position: absolute;
+    font-size: 1.5em;
+    left: -65px;
+    top: 43px;
+  }
+  .timespan-scroller-inner,
+  .timespan-scroller-pos {
+    transition-property: top, height, opacity;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-out;
+  }
+
+  .timespan-scroller {
+    @include breakpoint(large) {
+      visibility: hidden;
+      height: 500px;
+      width: 200px;
+      position: fixed;
+      top: 215px;
+      left: 40vw;
+      color: white;
+      overflow: hidden;
+      transition-property: top, height, opacity;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-out;
+      opacity: 0;
+    }
+  }
+  .timespan-scroller-inner {
+    @include breakpoint(large) {
+      z-index: 0;
+      background-color: white;
+      width: 1px;
+      margin: auto;
+      position: relative;
+    }
+  }
+  .span-year {
+    @include breakpoint(large) {
+      display: block;
+      padding-bottom: 250px;
+      margin-left: -55px;
+      font-size: 1.25em;
+    }
+  }
+  .timespan-scroller-pos {
+    width: 3px;
+    min-height: 10px;
+    background: white;
+    position: absolute;
+    margin-left: -1px;
+  }
+  .timeline-item-text {
+    @include breakpoint(large) {
+      border-left: 0;
+      .timeline-year {
+        display: none;
+      }
+      &:before {
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+}
+%year-span-timeline {
+  @include breakpoint(large) {
+    margin: 220px 35px 20px 30px;
+  }
+  .timeline-item-title {
+    font-family: $body-font-family;
+  }
+}
+%no-year-span-timeline {
+  > div:first-of-type {
+    @include breakpoint(large) {
+      margin-top: 50px;
+    }
+  }
+  .timespan-scroller-pos {
+    min-height: 15px;
+    width: 15px;
+    border-radius: 15px;
+    margin-left: -7px;
+    margin-top: -5px;
+  }
+
+  .timeline-item-text {
+    @include breakpoint(large) {
+      border-left: 1px solid $white;
+    }
+  }
+  .timeline-item-title {
+    &.smaller-text {
+      &::before {
+        margin-top: 50px;
+        @include breakpoint(large) {
+          margin-top: 0;
+        }
+      }
+    }
+    &::before {
+      margin-top: 28px;
+      @include breakpoint(medium) {
+        margin-top: 90px;
+      }
+      @include breakpoint(large) {
+        width: 15px;
+        height: 15px;
+        top: 58px;
+        left: -8px;
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+%primary-theme-timeline {
+  .timeline--year {
+    border-left-color: $primary-color;
+  }
+  .timeline-item-text {
+    @include breakpoint(large) {
+      border-left-color: $primary-color;
+    }
+  }
+  .timeline-item-title {
+    &::before {
+      background-color: $primary-color;
+    }
+  }
+}
+
+.timeline {
+  @extend %timeline;
+  &.year-span {
+    @extend %year-span-timeline;
+  }
+  &.no-year-span {
+    @extend %no-year-span-timeline;
+  }
+}
+.inViewport {
+  .timeline {
+    .timespan-scroller {
+      @include breakpoint(large) {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+    h2 {
+      @include breakpoint(large) {
+        visibility: visible;
+      }
+    }
+  }
+}
+.theme--primary {
+  .timeline {
+    @extend %primary-theme-timeline;
+  }
+}

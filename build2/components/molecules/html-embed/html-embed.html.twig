@@ -1,0 +1,9 @@
+<section class="theme--primary-light">
+  {{ html_embed }}
+  <div class="embed--content-wrapper">
+    <h4 class="hashtag">{{ hashtag }}</h4>
+    {% if cta__button|striptags %}
+      {% include "@atoms/cta__button/cta__button.html.twig" with { link : cta__button } only %}
+    {% endif %}
+  </div>
+</section>

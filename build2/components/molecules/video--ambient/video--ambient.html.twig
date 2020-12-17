@@ -1,0 +1,40 @@
+ <div class="ambient_video two_up--primary fluid" style="background-image: url({{ video__poster__image.src }});">
+  {#
+   Video needs to be muted, since Chrome 66+ will not autoplay video with sound.
+   WCAG general accessibility recommendation is that media such as background video play through only once.
+   Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button
+  #}
+
+  {% set video__poster__imagesrc = video__poster__image.src|split("?") %}
+  {% set video__poster__imagesrc = video__poster__imagesrc[0] %}
+
+  <video class="video_element video_player" poster="{{ video__poster__imagesrc }}" playsinline autoplay muted loop>
+    <source src="{{ video__file.src }}.mp4" type="video/mp4">
+  </video>
+  <div class=" grid-x grid-margin-x">
+    <div class="cell medium-4 medium-offset-6">
+      <div class="centerv">
+        {% if video__body_copy and video__body_copy|length > 4 %}
+          <p>{{ video__body_copy }}</p>
+        {% endif %}
+        {% for component in children %}
+          {% if 'content--simple' in templateMap[component.template_id] %}
+            {% set component = component|merge({
+              title: component.content__title,
+              body: component.content__body,
+              quote: component.content__quote,
+              attribution: content.content__attribution,
+              cta: content.content__cta__button
+            }) %}
+          {% endif %}
+          {% include templateMap[component.template_id] with component only %}
+        {% endfor %}
+      </div>
+      {% if credits is not empty %}
+        {% include "@atoms/caption/caption.html.twig" with {
+          text: credits,
+          id: 'credits_' ~ id
+        } only %}
+      {% endif %}
+    </div>
+</div>
