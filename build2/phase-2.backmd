@@ -34,16 +34,16 @@
 
       
 
-                    <script src="/js/cloudimage/cloudimage.responsive.min.js?1607011090"></script>
-              <script src="/js/cloudimage/cloudimage.custom.js?1607011090"></script>
-              <script src="/js/imagezoom/image_zoom.min.js?1607011090"></script>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js?1607011090"></script>
+                    <script src="/js/cloudimage/cloudimage.responsive.min.js?1608308595"></script>
+              <script src="/js/cloudimage/cloudimage.custom.js?1608308595"></script>
+              <script src="/js/imagezoom/image_zoom.min.js?1608308595"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/instafeed.js/1.4.1/instafeed.min.js?1608308595"></script>
             
 
-              <link rel="stylesheet" type="text/css" href="https://use.typekit.net/bmv1rht.css?1607011090">
-              <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css?1607011090">
+              <link rel="stylesheet" type="text/css" href="https://use.typekit.net/bmv1rht.css?1608308595">
+              <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css?1608308595">
       
-      <link rel="stylesheet" type="text/css" href="/styles/.css?1607011090">
+      <link rel="stylesheet" type="text/css" href="/styles/.css?1608308595">
 
   </head>
   <body class="  ">
@@ -136,14 +136,14 @@
 </div>
 
     </div>
-                      <script src="/js/jquery/jquery.js?1607011090"></script>
-              <script src="/js/foundation/foundation.min.js?1607011090"></script>
-              <script src="/js/owl/owl.carousel.js?1607011090"></script>
-              <script src="/js/beerslider/beerslider.js?1607011090"></script>
-              <script src="/js/object-fit-images/ofi.min.js?1607011090"></script>
-              <script src="/js/clippath/background-clip-text-polyfill.js?1607011090"></script>
-              <script src="/js/plyr/plyr.js?1607011090"></script>
-              <script src="/js/scripts.js?1607011090"></script>
-              <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js?1607011090"></script>
+                      <script src="/js/jquery/jquery.js?1608308595"></script>
+              <script src="/js/foundation/foundation.min.js?1608308595"></script>
+              <script src="/js/owl/owl.carousel.js?1608308595"></script>
+              <script src="/js/beerslider/beerslider.js?1608308595"></script>
+              <script src="/js/object-fit-images/ofi.min.js?1608308595"></script>
+              <script src="/js/clippath/background-clip-text-polyfill.js?1608308595"></script>
+              <script src="/js/plyr/plyr.js?1608308595"></script>
+              <script src="/js/scripts.js?1608308595"></script>
+              <script src="https://use.fontawesome.com/releases/v5.0.13/js/all.js?1608308595"></script>
             </body>
 </html>
