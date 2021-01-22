@@ -1,0 +1,7 @@
+<div class="cell footer__cta {{ classes }}">
+  {% include "@atoms/h3/h3.html.twig" with { text: title } only %}
+  <p>{{ blurb }}</p>
+  {% if cta__button|striptags|length > 1 %}
+    {% include "@atoms/cta__button/cta__button.html.twig" with { link: cta__button } only %}
+  {% endif %}
+</div>

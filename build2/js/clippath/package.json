@@ -1,0 +1,11 @@
+{
+  "name": "background-clip-text-polyfill",
+  "version": "0.0.0",
+  "description": "-",
+  "repository": {
+    "type": "git",
+    "url": "-"
+  },
+  "readme": "-",
+  "_napaResolved": "git://github.com/TimPietrusky/background-clip-text-polyfill"
+}

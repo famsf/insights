@@ -1,0 +1,78 @@
+{#
+  Provides a timeline component.
+  Example Usage:
+    components:
+    - template: "@molecules/timeline/timeline.html.twig"
+      title: "The History of Art"
+      is_year_span: true
+      years:
+      - year: "1800"
+        year_title: "1800 - 1900"
+        year_subtitle: "Lorem Ipsum Dolor"
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam."
+        images:
+        - src: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
+          alt: "fubar"
+          caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+          style: "square"
+        - src: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
+          alt: "fubar"
+          caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+          style: "square"
+      - year: "1900"
+        year_title: "1900 - 2000"
+        year_subtitle: "Lorem Ipsum Dolor"
+        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequuntur distinctio, dolores earum, esse eveniet in inventore nemo optio soluta sunt, tempora totam! At, excepturi iusto laborum necessitatibus nesciunt veniam."
+        images:
+        - src: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
+          alt: "fubar"
+          caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+          style: "square"
+        - src: "https://live-famsf-insights.pantheonsite.io/sites/default/files/laprose/1_la-prose-section-introducing-book.jpg"
+          alt: "fubar"
+          caption: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+          style: "square"
+#}
+
+<div class="timeline {% if timeline__span|trim == "True" %}year-span {% else %}no-year-span{% endif %}">
+  <h2 class="timeline-title">{{ title }}</h2>
+  {% for year in children %}
+    {% set yr = {
+      year: year.name,
+      title: year.title,
+      subtitle: year.timeline__year__subtitle,
+      description: year.timeline__marker__description
+    } %}
+    {% if year.a__image.src %}
+    {% set yr = yr|merge({
+      img_a: {
+        src: year.a__image.src,
+        alt: year.a__image.alt
+      },
+      caption_a: year.a__caption,
+      brief_a: year.a__caption__brief
+    }) %}
+    {% endif %}
+    {% if year.b__image.src %}
+      {% set yr = yr|merge({
+        img_b: {
+          src: year.b__image.src,
+          alt: year.b__image.alt
+        },
+        caption_b: year.b__caption,
+        brief_b: year.b__caption__brief
+      }) %}
+    {% endif %}
+    {% if year.c__image.src %}
+      {% set yr = yr|merge({
+        img_c: {
+          src: year.c__image.src,
+          alt: year.c__image.alt
+        },
+        caption_c: year.c__caption,
+        brief_c: year.c__caption__brief
+      }) %}
+    {% endif %}
+    {% include '@molecules/timeline/timeline--year.html.twig' with yr only %}
+  {% endfor %}
+</div>

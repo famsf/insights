@@ -1,0 +1,16 @@
+<div class="image-modal">
+  <div class="base__image">
+    {% include "@atoms/img/img.html.twig" with {
+      class: image.class,
+      src: image.src,
+      url: image.src,
+      alt: image.alt,
+      style: 'vertical'
+    } %}
+
+   {% if caption %}
+     {% include "@atoms/caption/caption.html.twig" with caption only %}
+   {% endif %}
+  </div>
+  {% include "@molecules/modal/modal.html.twig" with modal|merge({id: button.id}) only %}
+</div>

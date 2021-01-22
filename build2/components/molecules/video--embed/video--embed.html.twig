@@ -1,0 +1,31 @@
+{% set style = 'full-screen' %}
+{% import "@macros/ci-size.html.twig" as ci %}
+{% import "@macros/ci-quality.html.twig" as ci %}
+
+{% if video__poster__image.0 %}
+  {% set video__poster__image = video__poster__image|last %}
+
+  {# Strip the ? params from the file names #}
+  {% set video__poster__src = video__poster__image.src|split("?") %}
+  {% set video__poster__src = video__poster__src[0] %}
+{% endif %}
+<div class="video--embed {{ classes }} video">
+  <div class="video--embed__wrapper"
+    data-embed-id="{{ video__id|trim }}"
+    ci-responsive ci-size="{{ ci.size('default') }}" ci-type="crop"
+    {% if video__poster__src %}
+      ci-img-background="{{ video__poster__src }}.jpg"
+      ci-params="{{ ci.quality(video__poster__src ~ '.jpg', 'default') }}"
+    {% endif %}
+  >
+    <div class="plyr_target video_player youtube" data-plyr-provider="youtube" id="{{ id }}_vid" data-plyr-embed-id="{{ video__id }}" data-poster="{{ video__poster__src }}.jpg"></div>
+      {% include "@molecules/video-overlay/video-overlay.html.twig" with {
+        caption: {
+          text: credits,
+          id: 'video--embeded__caption' ~ id
+        },
+        overlay__title: overlay__title,
+        overlay__text: overlay__text
+      } only %}
+  </div>
+</div>
