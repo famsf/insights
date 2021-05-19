@@ -10,7 +10,6 @@
   },
   "main": "build/index.html",
   "scripts": {
-    "buildall": "npm i;npm run play",
     "install": "napa",
     "test": "[ \"${CONTEXT}\" = production ] && run-s play redirect || run-s play",
     "posttest": "mkdir -p build/assets/gathercontent && cp -r download/. build/assets/gathercontent",
