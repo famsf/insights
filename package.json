@@ -54,7 +54,7 @@
     "metalsmith-assets": "^0.1.0",
     "metalsmith-gathercontent": "github:kalamuna/metalsmith-gathercontent#download",
     "metalsmith-include": "github:kalamuna/metalsmith-include#includeWholeObject",
-    "motion-ui": "~1.2.2",
+    "motion-ui": "~2.0.3",
     "napa": "^3.0.0",
     "npm": "^6.14.9",
     "npm-run-all": "^4.1.3",
