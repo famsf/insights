@@ -9,7 +9,7 @@
     {% if slide__image[slide__image|length - 1].src %}
       {% set slide__image = slide__image[0] %}
     {% endif %}
-    {% is slide__image %}
+    {% if slide__image %}
       {% include "@molecules/picture/picture.html.twig" with slide__image|merge({
       style: 'square'
       }) only %}

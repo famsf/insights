@@ -2,7 +2,7 @@
 _auth.json
 /flat.json
 /origin.json
-/src/assets/gathercontent
+# /src/assets/gathercontent
 
 # Built things
 build
