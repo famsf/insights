@@ -50,7 +50,8 @@
     for (let i = 0; i< imgs.length; i++) {
       let src = imgs[i].getAttribute('src');
       if (typeof src !== 'undefined' && src.indexOf('/resize/0/')) {
-        src = src.replace('/resize/0/', '/resize/1000/');
+        src =
+        src.replace('/resize/0/', '/resize/1000/');
         imgs[i].setAttribute('src', src);
       }
     }

@@ -50,7 +50,8 @@
     for (let i = 0; i< imgs.length; i++) {
       let src = imgs[i].getAttribute('src');
       if (typeof src !== 'undefined' && src.indexOf('/resize/0/')) {
-        src = 'https://google.com/logos/doodles/2021/uefa-euro-2020-6753651837109267-l.png';//src.replace('/resize/0/', '/resize/1000/');
+        src =
+        src.replace('/resize/0/', '/resize/1000/');
         imgs[i].setAttribute('src', src);
       }
     }
