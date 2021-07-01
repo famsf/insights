@@ -46,5 +46,14 @@
       DEFAULT_WIDTH: "{small: '320x320', medium:'512x512', large: '600",
       DEFAULT_HEIGHT: "600', xlarge:'720x720', xxlarge:'960x960'}"
     });
+    let imgs = document.querySelectorAll('img')
+    for (let i = 0; i< imgs.length; i++) {
+      let src = imgs[i].getAttribute('src');
+      if (typeof src !== 'undefined' && src.indexOf('/resize/0/')) {
+        src =
+        src.replace('/resize/0/', '/resize/1000/');
+        imgs[i].setAttribute('src', src);
+      }
+    }
   });
 }(window));
